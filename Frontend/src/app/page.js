@@ -1,4 +1,5 @@
 import HeroSection from '@/components/home/HeroSection';
+import QuickNavStrip from '@/components/home/QuickNavStrip';
 import StatsSection from '@/components/home/StatsSection';
 import RankingsSection from '@/components/home/RankingsSection';
 import PlacementSection from '@/components/home/PlacementSection';
@@ -14,6 +15,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <HeroSection />
+      <QuickNavStrip />
       <StatsSection />
       <RankingsSection />
       <EmpowermentBanner />

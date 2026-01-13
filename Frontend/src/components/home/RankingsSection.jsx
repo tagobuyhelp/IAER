@@ -15,24 +15,24 @@ export default function RankingsSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left: Awards List */}
           <div className="space-y-8">
-             <div className="bg-card p-6 rounded-lg border border-border shadow-sm">
-                <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                  <Award className="text-primary w-6 h-6" />
-                  National & Industry Recognitions
-                </h3>
-                <ul className="space-y-4">
-                  {[
-                    "IT Startup Excellence Award (2019)",
-                    "Virtual Education & Technology Award (2020)",
-                    "Startup & VC Award (2021)"
-                  ].map((award, i) => (
-                    <li key={i} className="flex items-center gap-3">
-                      <CheckCircle2 className="text-accent w-5 h-5 flex-shrink-0" />
-                      <span className="text-muted-foreground font-medium">{award}</span>
-                    </li>
-                  ))}
-                </ul>
-             </div>
+            <div className="bg-card p-6 rounded-lg border border-border shadow-sm">
+              <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                <Award className="text-primary w-6 h-6" />
+                National & Industry Recognitions
+              </h3>
+              <ul className="space-y-4">
+                {[
+                  "IT Startup Excellence Award (2019)",
+                  "Virtual Education & Technology Award (2020)",
+                  "Startup & VC Award (2021)"
+                ].map((award, i) => (
+                  <li key={i} className="flex items-center gap-3">
+                    <CheckCircle2 className="text-accent w-5 h-5 flex-shrink-0" />
+                    <span className="text-muted-foreground font-medium">{award}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           {/* Right: Affiliations */}
