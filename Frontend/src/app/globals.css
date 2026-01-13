@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Brand Colors - HSL values for opacity support */
+    
+    /* Primary: IAER Navy Blue #162D59 -> 219 60% 22% */
+    --primary: 219 60% 22%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: Muted Light Blue/Gray #E9E9E9 -> 0 0% 91% (or slightly tinted) */
+    /* Let's use a very light slate for secondary backgrounds */
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 219 60% 22%; /* Text on secondary is primary color */
+
+    /* Accent: IAER Bright Orange #F7941E -> 33 93% 54% */
+    --accent: 33 93% 54%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Destructive: Red #E60023 -> 351 100% 45% */
+    --destructive: 351 100% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Neutral/Backgrounds */
+    --background: 0 0% 100%;
+    --foreground: 219 60% 22%; /* Using Navy for main text for strong branding, or #333 */
+    /* Actually #333 (0 0 20) is safer for body text, but Navy is nice for headings. 
+       Let's stick to a dark slate for body: #334155 -> 215 28% 17% */
+    --foreground: 215 28% 17%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 28% 17%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    
+    /* Ring matches Accent (Orange) for focus states or Primary? Usually Primary. */
+    --ring: 219 60% 22%;
+
+    --radius: 0.5rem;
+    
+    /* Custom IAER Colors */
+    --iaer-navy: 219 60% 22%;
+    --iaer-orange: 33 93% 54%;
+    --iaer-light-blue: 205 81% 63%; /* #55ADED */
+  }
+ 
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+ 
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+ 
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+ 
+    --primary: 217 91% 60%; /* Light Blue for Dark Mode */
+    --primary-foreground: 222.2 47.4% 11.2%;
+ 
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+ 
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+ 
+    --accent: 33 93% 54%; /* Orange stays orange */
+    --accent-foreground: 0 0% 100%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+ 
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
