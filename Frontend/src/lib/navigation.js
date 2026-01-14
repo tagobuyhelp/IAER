@@ -4,6 +4,7 @@ export const navigationData = [
         href: "/about",
         icon: "Info",
         description: "Discover our legacy, leadership, and commitment to excellence.",
+        image: "/images/iaer-building.jpg",
         items: [
             { title: "Overview", href: "/about/overview", icon: "LayoutDashboard", description: "A brief introduction to IAER." },
             { title: "Our Identity", href: "/about/identity", icon: "Fingerprint", description: "Who we are and what we stand for." },
@@ -20,6 +21,7 @@ export const navigationData = [
         href: "/programs",
         icon: "GraduationCap",
         description: "Explore our diverse range of undergraduate and postgraduate courses.",
+        image: "/images/nav-2-img.jpg",
         items: [
             {
                 title: "Undergraduate",
@@ -66,6 +68,7 @@ export const navigationData = [
         href: "/academics",
         icon: "Library",
         description: "Detailed information about our academic structure and practices.",
+        image: "/images/nav-3-img.jpg",
         items: [
             { title: "Academics Overview", href: "/academics/overview", icon: "Layout" },
             { title: "Program (Courses)", href: "/academics/programs", icon: "List" },
@@ -82,6 +85,7 @@ export const navigationData = [
         href: "/admissions",
         icon: "FileText",
         description: "Start your journey with us. Application process, fees, and scholarships.",
+        image: "/images/nav-4-img.jpg",
         items: [
             { title: "Overview", href: "/admissions/overview", icon: "Info" },
             { title: "Course Fee", href: "/admissions/course-fee", icon: "Banknote" },
@@ -98,6 +102,7 @@ export const navigationData = [
         href: "/placements",
         icon: "Briefcase",
         description: "Our commitment to your career. Records, activities, and training.",
+        image: "/images/nav-5-img.jpg",
         items: [
             { title: "Highlights", href: "/placements/highlights", icon: "Star" },
             { title: "Placement Records", href: "/placements/records", icon: "FileBarChart" },
@@ -111,6 +116,7 @@ export const navigationData = [
         href: "/research-and-innovation",
         icon: "Microscope",
         description: "Fostering innovation and new ideas.",
+        image: "/images/iaer2.jpg",
         items: [
             { title: "IAER Launchpad", href: "/research-and-innovation/launchpad", icon: "Rocket", description: "Business Startup Incubation Centre" },
             { title: "IAER InnovateX", href: "/research-and-innovation/innovatex", icon: "Zap", description: "IAER Tech Innovation Lab" },

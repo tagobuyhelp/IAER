@@ -138,6 +138,8 @@ export default function Header() {
                   >
                     Visit {item.title} Page <ChevronRight className="w-4 h-4 ml-1" />
                   </Link>
+                  
+                  <img src={item.image} alt={item.title} className="w-full h-48 rounded-md mt-8" />
                 </div>
 
                 {/* Content Grid */}
