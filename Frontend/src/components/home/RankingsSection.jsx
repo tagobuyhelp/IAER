@@ -20,7 +20,7 @@ export default function RankingsSection() {
   return (
     <section
       ref={ref}
-      className="py-11 md:py-16 bg-gradient-to-br from-muted/70 via-muted/60 to-background border-t border-border/60"
+      className="py-11 md:py-16 bg-gradient-to-br from-primary/95 via-primary to-primary/90 border-t border-primary/40 text-primary-foreground relative overflow-hidden"
     >
       <div className="container  mx-auto px-4 md:px-6">
         <div
@@ -28,14 +28,14 @@ export default function RankingsSection() {
             inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
-          <span className="inline-flex items-center gap-2 text-[13px] md:text-[14px] font-semibold tracking-wide text-muted-foreground uppercase">
+          <span className="inline-flex items-center gap-2 text-[13px] md:text-[14px] font-semibold tracking-wide text-primary-foreground/80 uppercase">
             <Award className="w-4 h-4 text-accent" />
             Rankings &amp; Accreditations
           </span>
-          <h2 className="mt-2 text-[24px] md:text-[32px] lg:text-[36px] font-extrabold text-foreground leading-tight">
+          <h2 className="mt-2 text-[24px] md:text-[32px] lg:text-[36px] font-extrabold text-primary-foreground leading-tight">
             Proudly Distinguished
           </h2>
-          <p className="mt-2 text-[14px] md:text-[15px] text-muted-foreground">
+          <p className="mt-2 text-[14px] md:text-[15px] text-primary-foreground/80">
             National recognitions and statutory approvals that validate quality and outcomes.
           </p>
           <div className="mt-3 flex items-center justify-center md:justify-start gap-2">
@@ -51,18 +51,18 @@ export default function RankingsSection() {
         <div className="relative mt-4">
           <div className="pointer-events-none absolute -top-10 right-[-40px] w-44 h-44 rounded-full bg-accent/10 blur-3xl" />
           <div className="pointer-events-none absolute -bottom-16 left-[-40px] w-64 h-64 bg-dot-grid opacity-40" />
-          <div className="hidden lg:block pointer-events-none absolute inset-y-6 left-1/2 w-px bg-gradient-to-b from-transparent via-border/70 to-transparent" />
-          <div className="relative bg-card/80 backdrop-blur-sm border border-border/70 rounded-3xl p-4 md:p-6 shadow-sm">
+          <div className="hidden lg:block pointer-events-none absolute inset-y-6 left-1/2 w-px bg-gradient-to-b from-transparent via-primary/40 to-transparent" />
+          <div className="relative bg-[#0a0601]/80 backdrop-blur-sm border border-primary/40 rounded-3xl p-4 md:p-6 shadow-sm">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-stretch">
               <div
-                className="relative rounded-2xl p-5 md:p-6 transition-all duration-700 ease-out border border-border/60 shadow-sm hover:-translate-y-[3px] hover:border-primary/20 hover:shadow-xl/10"
+                className="relative rounded-2xl p-5 md:p-6 transition-all duration-700 ease-out border border-primary/25 shadow-sm hover:-translate-y-[3px] hover:border-accent/40 hover:shadow-xl/10"
                 style={{
                   opacity: inView ? 1 : 0,
                   transform: inView ? "translateY(0) scale-100" : "translateY(18px) scale-95",
                   transitionDelay: inView ? "80ms" : "0ms",
                 }}
               >
-                <h3 className="text-[16px] md:text-[18px] font-bold text-foreground mb-4 flex items-center gap-2">
+                <h3 className="text-[16px] md:text-[18px] font-bold text-primary-foreground mb-4 flex items-center gap-2">
                   <Medal className="w-5 h-5 text-accent" />
                   National &amp; Industry Recognitions
                 </h3>
@@ -81,12 +81,12 @@ export default function RankingsSection() {
                         transitionDelay: inView ? `${140 + index * 80}ms` : "0ms",
                       }}
                     >
-                      <span className="inline-flex items-center justify-center min-w-[72px] px-3 py-1 rounded-full bg-primary/5 text-[13px] font-semibold text-primary gap-1">
+                      <span className="inline-flex items-center justify-center min-w-[72px] px-3 py-1 rounded-full bg-primary/5 text-[13px] font-semibold text-white gap-1">
                         <Calendar className="w-3.5 h-3.5" />
                         {item.year}
                       </span>
                       <Medal className="w-4 h-4 text-accent/80 flex-shrink-0" />
-                      <span className="text-[14px] text-muted-foreground font-medium leading-snug group-hover:text-foreground">
+                      <span className="text-[14px] text-primary-foreground/80 font-medium leading-snug group-hover:text-primary-foreground">
                         {item.label}
                       </span>
                     </li>
@@ -95,7 +95,7 @@ export default function RankingsSection() {
               </div>
 
               <div
-                className="relative rounded-2xl p-5 md:p-6 transition-all duration-700 ease-out border border-border/60 shadow-sm flex flex-col justify-between hover:-translate-y-[3px] hover:border-primary/20 hover:shadow-xl/10"
+                className="relative rounded-2xl p-5 md:p-6 transition-all duration-700 ease-out border border-primary/25 shadow-sm flex flex-col justify-between hover:-translate-y-[3px] hover:border-accent/40 hover:shadow-xl/10"
                 style={{
                   opacity: inView ? 1 : 0,
                   transform: inView ? "translateY(0) scale-100" : "translateY(18px) scale-95",
@@ -104,7 +104,7 @@ export default function RankingsSection() {
               >
                 <div className="pointer-events-none absolute -bottom-10 -left-6 w-32 h-32 rounded-full bg-primary/5 blur-3xl" />
                 <div>
-                  <h3 className="text-[16px] md:text-[18px] font-bold text-foreground mb-4 flex items-center gap-2">
+                  <h3 className="text-[16px] md:text-[18px] font-bold text-primary-foreground mb-4 flex items-center gap-2">
                     <ShieldCheck className="w-5 h-5 text-primary" />
                     Affiliation &amp; Approval
                   </h3>
@@ -119,10 +119,10 @@ export default function RankingsSection() {
                           />
                         </div>
                         <div className="flex-1">
-                          <div className="text-[15px] font-semibold text-foreground">
+                          <div className="text-[15px] font-semibold text-primary-foreground">
                             MAKAUT
                           </div>
-                          <div className="text-[13px] text-muted-foreground">
+                          <div className="text-[13px] text-primary-foreground/80">
                             Affiliation
                           </div>
                         </div>
@@ -146,10 +146,10 @@ export default function RankingsSection() {
                           />
                         </div>
                         <div className="flex-1">
-                          <div className="text-[15px] font-semibold text-foreground">
+                          <div className="text-[15px] font-semibold text-primary-foreground">
                             AICTE
                           </div>
-                          <div className="text-[13px] text-muted-foreground">
+                          <div className="text-[13px] text-primary-foreground/80">
                             Approval
                           </div>
                         </div>
@@ -168,16 +168,16 @@ export default function RankingsSection() {
               </div>
             </div>
 
-            <div className="mt-4 md:mt-6 flex flex-wrap items-center gap-3 text-[12px] md:text-[13px] text-muted-foreground">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-background/60 border border-border/60">
+            <div className="mt-4 md:mt-6 flex flex-wrap items-center gap-3 text-[12px] md:text-[13px] text-primary-foreground/80">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 border border-primary/35">
                 <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
                 <span>AICTE Approved</span>
               </div>
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-background/60 border border-border/60">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 border border-primary/35">
                 <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
                 <span>MAKAUT Affiliated</span>
               </div>
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-background/60 border border-border/60">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 border border-primary/35">
                 <Medal className="w-3.5 h-3.5 text-accent" />
                 <span>Awarded 2019–2021</span>
               </div>
@@ -185,13 +185,13 @@ export default function RankingsSection() {
           </div>
         </div>
 
-        <div className="mt-8 md:mt-10 border-t border-border/60 pt-4 md:pt-5 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-          <p className="text-[13px] md:text-[14px] text-muted-foreground">
+        <div className="mt-8 md:mt-10 border-t border-primary/40 pt-4 md:pt-5 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+          <p className="text-[13px] md:text-[14px] text-primary-foreground/80">
             Detailed certificates, approvals and statutory documents are available for review.
           </p>
           <Link
             href="/about/awards"
-            className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-full border border-primary/25 text-primary hover:bg-primary/5 transition-colors"
+            className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-full border border-primary/40 text-primary-foreground hover:bg-primary/25 transition-colors"
           >
             View approvals &amp; documents
           </Link>
