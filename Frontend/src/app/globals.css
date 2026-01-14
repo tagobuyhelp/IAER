@@ -5,6 +5,9 @@
 @layer base {
   :root {
     /* Brand Colors - HSL values for opacity support */
+    --imas-dark-blue: 217 70% 26%; /* #143674 */
+    --imas-medium-blue: 205 59% 44%; /* #2e7bb3 */
+    --imas-teal: 187 69% 49%; /* #26c1d3 */
     
     /* Primary: IAER Navy Blue #162D59 -> 219 60% 22% */
     --primary: 219 60% 22%;
@@ -93,5 +96,9 @@
 @layer utilities {
   .fill-mode-both {
     animation-fill-mode: both;
+  }
+  .bg-dot-grid {
+    background-image: radial-gradient(circle at 1px 1px, hsl(var(--border)) 1px, transparent 0);
+    background-size: 14px 14px;
   }
 }
