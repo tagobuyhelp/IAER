@@ -11,29 +11,32 @@ const stories = [
     name: "Shardul J.",
     course: "BCA",
     highlight: "Top IT Recruiter",
-    quote: "IAER gave me industry-ready IT skills. The faculty, labs, and placement support helped me land a dream tech role.",
+    quote:
+      "IAER gave me industry-ready IT skills. The faculty, labs, and placement support helped me land a dream tech role.",
     image: "/images/students/arjun.jpg",
-    color: "bg-blue-50 border-blue-200",
-    category: "IT"
+    color: "bg-primary/20 border-primary/40",
+    category: "IT",
   },
   {
     name: "Anand B.",
     course: "BBA-AHSM",
     highlight: "International Aviation & Hospitality",
-    quote: "My hospitality journey transformed at IAER. The Airport visits, Cabin Crew exposure with global training set me up for success.",
+    quote:
+      "My hospitality journey transformed at IAER. The Airport visits, Cabin Crew exposure with global training set me up for success.",
     image: "/images/students/rohan.jpg",
-    color: "bg-orange-50 border-orange-200",
-    category: "Hospitality & Aviation"
+    color: "bg-accent/20 border-accent/40",
+    category: "Hospitality & Aviation",
   },
   {
     name: "Arshdeep S.",
     course: "BMLT",
     highlight: "Healthcare Placement",
-    quote: "From clinical labs to real hospital rotations, IAER shaped my confidence and competence in healthcare practice.",
+    quote:
+      "From clinical labs to real hospital rotations, IAER shaped my confidence and competence in healthcare practice.",
     image: "/images/students/Sharma-Arshdeep.jpg",
-    color: "bg-green-50 border-green-200",
-    category: "Healthcare"
-  }
+    color: "bg-emerald-900/40 border-emerald-400/60",
+    category: "Healthcare",
+  },
 ];
 
 export default function TestimonialsSection() {
@@ -44,7 +47,10 @@ export default function TestimonialsSection() {
     { key: "Healthcare", label: "Healthcare", Icon: HeartPulse },
   ];
   const [activeCategory, setActiveCategory] = useState("All");
-  const filteredStories = activeCategory === "All" ? stories : stories.filter(s => s.category === activeCategory);
+  const filteredStories =
+    activeCategory === "All"
+      ? stories
+      : stories.filter((s) => s.category === activeCategory);
   const [reduceMotion, setReduceMotion] = useState(false);
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
   const [isPaused, setIsPaused] = useState(false);
@@ -93,7 +99,7 @@ export default function TestimonialsSection() {
   }, [activeCategory]);
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gradient-to-br from-primary/95 via-primary to-primary/90 text-primary-foreground relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div
           ref={ref}
@@ -101,19 +107,35 @@ export default function TestimonialsSection() {
         >
           <div className="relative flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
             <div>
-              <span className="text-primary font-bold tracking-wider text-sm uppercase mb-2 block">Student Success Stories</span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">Students Speak</h2>
-              <p className="text-sm md:text-base text-muted-foreground mt-2 max-w-xl">Real outcomes from real students across disciplines at IAER.</p>
+              <span className="text-accent font-semibold tracking-wider text-sm uppercase mb-2 block">
+                Student Success Stories
+              </span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground">
+                Students Speak
+              </h2>
+              <p className="text-sm md:text-base text-primary-foreground/80 mt-2 max-w-xl">
+                Real outcomes from real students across disciplines at IAER.
+              </p>
             </div>
             <div className="flex flex-wrap items-center gap-2">
               {categories.map(({ key, label, Icon }) => (
                 <button
                   key={key}
                   onClick={() => setActiveCategory(key)}
-                  className={`inline-flex items-center gap-2 px-3 py-2 rounded-full border text-sm transition-all ${activeCategory === key ? "bg-primary text-primary-foreground border-primary" : "bg-background text-foreground border-border/60 hover:bg-muted"}`}
+                  className={`inline-flex items-center gap-2 px-3 py-2 rounded-full border text-sm transition-all ${
+                    activeCategory === key
+                      ? "bg-primary-foreground text-primary border-primary-foreground"
+                      : "bg-primary/20 text-primary-foreground/80 border-primary/40 hover:bg-primary/30"
+                  }`}
                   aria-pressed={activeCategory === key}
                 >
-                  <Icon className={`h-4 w-4 ${activeCategory === key ? "text-primary-foreground" : "text-primary"}`} />
+                  <Icon
+                    className={`h-4 w-4 ${
+                      activeCategory === key
+                        ? "text-primary"
+                        : "text-primary-foreground/80"
+                    }`}
+                  />
                   <span>{label}</span>
                 </button>
               ))}
@@ -122,8 +144,8 @@ export default function TestimonialsSection() {
         </div>
 
         <div className="relative">
-          <div className="pointer-events-none absolute -top-10 right-[-40px] w-56 h-56 rounded-full bg-primary/5 blur-3xl" />
-          <div className="pointer-events-none absolute inset-y-6 left-0 w-40 bg-dot-grid opacity-20" />
+          <div className="pointer-events-none absolute -top-10 right-[-40px] w-56 h-56 rounded-full bg-primary/20 blur-3xl" />
+          <div className="pointer-events-none absolute inset-y-6 left-0 w-40 bg-dot-grid opacity-25" />
 
           <div
             className="relative"
@@ -134,16 +156,16 @@ export default function TestimonialsSection() {
               <button
                 aria-label="Previous testimonial"
                 onClick={() => scrollBy("prev")}
-                className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-border/60 bg-background hover:bg-muted transition-colors"
+                className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-primary/40 bg-primary/40 hover:bg-primary/60 transition-colors"
               >
-                <ChevronLeft className="h-5 w-5 text-muted-foreground" />
+                <ChevronLeft className="h-5 w-5 text-primary-foreground" />
               </button>
               <button
                 aria-label="Next testimonial"
                 onClick={() => scrollBy("next")}
-                className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-border/60 bg-background hover:bg-muted transition-colors"
+                className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-primary/40 bg-primary/40 hover:bg-primary/60 transition-colors"
               >
-                <ChevronRight className="h-5 w-5 text-muted-foreground" />
+                <ChevronRight className="h-5 w-5 text-primary-foreground" />
               </button>
             </div>
 
@@ -163,10 +185,10 @@ export default function TestimonialsSection() {
                     transitionDuration: "600ms",
                   }}
                 >
-                  <Quote className="h-10 w-10 text-primary/20 absolute top-6 right-6" />
+                  <Quote className="h-10 w-10 text-primary-foreground/20 absolute top-6 right-6" />
 
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="w-16 h-16 rounded-full overflow-hidden bg-slate-200 border-2 border-white shadow-sm">
+                    <div className="w-16 h-16 rounded-full overflow-hidden bg-primary-foreground/10 border-2 border-primary-foreground/60 shadow-sm">
                       <Image
                         src={story.image}
                         alt={story.name}
@@ -176,18 +198,24 @@ export default function TestimonialsSection() {
                       />
                     </div>
                     <div>
-                      <h3 className="font-bold text-lg text-foreground">{story.name}</h3>
-                      <p className="text-sm font-medium text-primary">{story.course}</p>
+                      <h3 className="font-bold text-lg text-primary-foreground">
+                        {story.name}
+                      </h3>
+                      <p className="text-sm font-medium text-accent">
+                        {story.course}
+                      </p>
                     </div>
                   </div>
 
                   <div className="mb-4">
-                    <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white text-xs font-bold text-foreground border shadow-sm">
+                    <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-foreground text-xs font-bold text-primary border border-primary-foreground/60 shadow-sm">
                       {story.highlight}
                     </span>
                   </div>
 
-                  <p className="text-muted-foreground italic leading-relaxed">"{story.quote}"</p>
+                  <p className="text-primary-foreground/80 italic leading-relaxed">
+                    "{story.quote}"
+                  </p>
                 </div>
               ))}
             </div>
