@@ -9,7 +9,11 @@ export const metadata = {
 export default function AdmissionsOverviewPage() {
     return (
         <div className="bg-white min-h-screen">
-            <section className="relative bg-[#100902] text-white py-20 lg:py-28 overflow-hidden">
+            <section
+                id="admissions-overview"
+                data-section-id="overview"
+                className="relative bg-[#100902] text-white py-20 lg:py-28 overflow-hidden"
+            >
                 <div className="absolute inset-0 bg-gradient-to-tr from-orange-900/20 to-accent/10 opacity-50"></div>
                 <div className="absolute inset-0 bg-[url('/images/grid-pattern.png')] opacity-[0.03]"></div>
                 <div className="container mx-auto px-4 relative z-10 text-center">
@@ -25,7 +29,11 @@ export default function AdmissionsOverviewPage() {
                 </div>
             </section>
 
-            <section className="py-16 lg:py-24 bg-white">
+            <section
+                id="admissions-disciplines"
+                data-section-id="disciplines"
+                className="py-16 lg:py-24 bg-white"
+            >
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <div className="flex items-start gap-4 mb-8">
@@ -74,7 +82,11 @@ export default function AdmissionsOverviewPage() {
                 </div>
             </section>
 
-            <section className="py-16 lg:py-24 bg-gray-50">
+            <section
+                id="admissions-startup-research"
+                data-section-id="startup-research"
+                className="py-16 lg:py-24 bg-gray-50"
+            >
                 <div className="container mx-auto px-4">
                     <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
                         <div className="bg-[#100902] text-white rounded-2xl p-8 border border-white/10">

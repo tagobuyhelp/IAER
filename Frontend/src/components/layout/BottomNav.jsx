@@ -1,60 +1,198 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { Home, GraduationCap, BookOpen, Briefcase, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { 
+  Home, 
+  Link as LinkIcon, 
+  BarChart2, 
+  Trophy, 
+  Zap, 
+  HelpCircle, 
+  Quote, 
+  Microscope, 
+  Briefcase, 
+  Handshake, 
+  Globe, 
+  Video,
+  Info,
+  Layers,
+  Layout,
+  BookOpen,
+  Target,
+  ClipboardCheck,
+  Award,
+  FileText,
+  MessageCircle
+} from "lucide-react";
 
-const navItems = [
-  {
-    title: "Home",
-    href: "/",
-    icon: Home,
-  },
-  {
-    title: "Admissions",
-    href: "/admissions/overview",
-    icon: GraduationCap,
-  },
-  {
-    title: "Academics",
-    href: "/academics/overview",
-    icon: BookOpen,
-  },
-  {
-    title: "Placements",
-    href: "/placements/overview",
-    icon: Briefcase,
-  },
-  {
-    title: "Contact",
-    href: "/contact",
-    icon: Phone,
-  },
-];
+const sectionConfig = {
+  "/": [
+    { id: "hero", label: "Home", icon: Home },
+    { id: "quick-nav", label: "Quick Links", icon: LinkIcon },
+    { id: "stats", label: "Key Stats", icon: BarChart2 },
+    { id: "rankings", label: "Rankings", icon: Trophy },
+    { id: "empowerment", label: "Empowerment", icon: Zap },
+    { id: "why-choose", label: "Why Us", icon: HelpCircle },
+    { id: "testimonials", label: "Stories", icon: Quote },
+    { id: "research", label: "Research", icon: Microscope },
+    { id: "placements", label: "Placements", icon: Briefcase },
+    { id: "placement-partners", label: "Partners", icon: Handshake },
+    { id: "global-experience", label: "Global", icon: Globe },
+    { id: "virtual-tour", label: "Virtual Tour", icon: Video },
+  ],
+  "/admissions/overview": [
+    { id: "admissions-overview", label: "Overview", icon: Info },
+    { id: "admissions-disciplines", label: "Disciplines", icon: Layers },
+    { id: "admissions-startup-research", label: "Startup & Research", icon: Microscope },
+  ],
+  "/academics/overview": [
+    { id: "academics-overview", label: "Overview", icon: Layout },
+    { id: "academics-philosophy", label: "Philosophy", icon: BookOpen },
+    { id: "academics-focus", label: "Focus", icon: Target },
+    { id: "academics-curriculum", label: "Curriculum", icon: Layers },
+    { id: "academics-evaluation", label: "Evaluation", icon: ClipboardCheck },
+    { id: "academics-skills", label: "Skills", icon: Award },
+  ],
+};
+
+function getSectionsForPath(pathname) {
+  if (!pathname) return null;
+  if (sectionConfig[pathname]) return sectionConfig[pathname];
+  return null;
+}
 
 export default function BottomNav() {
   const pathname = usePathname();
+  const sections = getSectionsForPath(pathname);
+  const [activeSection, setActiveSection] = useState(
+    sections && sections.length ? sections[0].id : null
+  );
+
+  useEffect(() => {
+    if (!sections || !sections.length) {
+      setActiveSection(null);
+      return;
+    }
+    setActiveSection(sections[0].id);
+  }, [pathname]);
+
+  useEffect(() => {
+    if (!sections || !sections.length) return;
+    if (typeof window === "undefined") return;
+
+    const targets = sections
+      .map((s) =>
+        document.querySelector(
+          `[data-section-id="${s.id}"], #${CSS.escape(s.id)}`
+        )
+      )
+      .filter(Boolean);
+
+    if (!targets.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && entry.intersectionRatio > 0.4) {
+            const el = entry.target;
+            const dataId = el.getAttribute("data-section-id");
+            const id = dataId || el.id;
+            if (id) {
+              setActiveSection(id);
+            }
+          }
+        });
+      },
+      { threshold: [0.4, 0.6] }
+    );
+
+    targets.forEach((el) => observer.observe(el));
+
+    return () => {
+      targets.forEach((el) => observer.unobserve(el));
+      observer.disconnect();
+    };
+  }, [sections, pathname]);
+
+  if (!sections || !sections.length) {
+    return null;
+  }
+
+  const handleClick = (id) => {
+    if (typeof window === "undefined") return;
+    const target =
+      document.querySelector(`[data-section-id="${id}"]`) ||
+      document.getElementById(id);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
+  const whatsappNumber = "+919007030123";
+
+  const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/\+/g, "")}?text=${encodeURIComponent(
+    "Hi, I am interested in IAER programs."
+  )}`;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 bg-[#0a0601]/95 backdrop-blur-lg border-t border-white/10 lg:hidden safe-area-bottom">
-      <div className="flex items-center justify-around h-16 px-2">
-        {navItems.map((item) => {
-          const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
-          return (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={cn(
-                "flex flex-col items-center justify-center w-full h-full gap-1 transition-colors duration-200",
-                isActive ? "text-accent" : "text-gray-400 hover:text-gray-200"
-              )}
-            >
-              <item.icon className={cn("w-5 h-5", isActive && "fill-current")} />
-              <span className="text-[10px] font-medium">{item.title}</span>
-            </Link>
-          );
-        })}
+    <div className="fixed bottom-0 left-0 right-0 z-50 safe-area-bottom">
+      <div className="bg-white/95 border-t border-gray-200 backdrop-blur-lg">
+        <div className="max-w-6xl mx-auto px-3 py-2 flex items-center gap-2">
+          <div className="flex items-center text-xs text-gray-600 mr-auto">
+            <span className="font-semibold text-[#100902] mr-1">
+              Admissions Open 2026
+            </span>
+            <span className="hidden sm:inline">
+              Apply now or inquire about IAER programs.
+            </span>
+          </div>
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center px-3 py-1.5 rounded-full text-xs font-semibold bg-white text-[#100902] border border-gray-300 hover:border-accent hover:text-accent transition-colors"
+          >
+            <MessageCircle className="w-4 h-4 mr-1.5" />
+            Inquire Now
+          </a>
+          <Link
+            href="/admissions/how-to-apply"
+            className="inline-flex items-center justify-center px-3 py-1.5 rounded-full text-xs font-semibold bg-accent  hover:bg-accent/90 transition-colors"
+          >
+            <FileText className="w-4 h-4 mr-1.5" />
+            Apply Now
+          </Link>
+        </div>
+      </div>
+      <div className="bg-accent/95 backdrop-blur-lg border-t border-gray-200">
+        <div className="flex items-center lg:justify-center gap-4 overflow-x-auto px-4 h-16 no-scrollbar">
+          {sections.map((item) => {
+            const isActive = activeSection === item.id;
+            return (
+              <button
+                key={item.id}
+                type="button"
+                onClick={() => handleClick(item.id)}
+                className={cn(
+                  "flex flex-col items-center justify-center min-w-[64px] h-full gap-1 transition-colors  duration-200 text-xs shrink-0",
+                  isActive ? "text-white" : "text-gray-100/90 hover:text-white"
+                )}
+              >
+                {item.icon && (
+                  <item.icon
+                    className={cn("w-5 h-5 text-gray-700", isActive && "fill-current")}
+                  />
+                )}
+                <span className="text-[10px] text-gray-700 font-medium truncate max-w-[80px]">
+                  {item.label}
+                </span>
+              </button>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

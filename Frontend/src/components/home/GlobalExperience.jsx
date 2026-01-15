@@ -83,14 +83,7 @@ export default function GlobalExperience() {
       <div className="pointer-events-none absolute -top-24 -right-16 w-72 h-72 rounded-full bg-primary/10 blur-3xl" />
       <div className="pointer-events-none absolute bottom-[-80px] left-[-40px] w-80 h-80 bg-dot-grid opacity-20" />
       <div className="pointer-events-none absolute -top-6 right-[10%] w-24 h-24 opacity-70 hidden md:block">
-        <Image
-          src="/images/image (22).svg"
-          alt=""
-          aria-hidden="true"
-          width={96}
-          height={96}
-          className="w-full h-full object-contain"
-        />
+        
       </div>
 
       <div

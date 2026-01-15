@@ -122,9 +122,9 @@ export default function StatsSection() {
             </div>
 
             <div className="lg:col-span-8">
-              <div className="grid grid-cols-1 md:grid-cols-6 gap-[12px] md:gap-[18px]">
+              <div className="grid grid-cols-6 md:grid-cols-6 gap-[12px] md:gap-[18px]">
                 {stats.map((stat, index) => {
-                  const colSpanClass = index < 3 ? "md:col-span-2" : "md:col-span-3";
+                  const colSpanClass = index < 3 ? "md:col-span-2 col-span-2" : "md:col-span-3 col-span-3";
                   const delay = index * 100;
                   const isActive = index === 0;
                   const shouldAnimate = inView && !reduceMotion;
@@ -151,7 +151,7 @@ export default function StatsSection() {
                             <div className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-primary/5 text-primary group-hover:rotate-1 transition-transform duration-200">
                               <stat.icon className="w-4 h-4" />
                             </div>
-                            <span className="text-[36px] md:text-[44px] lg:text-[52px] font-extrabold leading-none text-foreground tracking-tight tabular-nums">
+                            <span className="text-[25px] md:text-[30px] lg:text-[40px] font-extrabold leading-none text-foreground tracking-tight tabular-nums">
                               {shouldAnimate ? (
                                 <CountUp
                                   start={0}

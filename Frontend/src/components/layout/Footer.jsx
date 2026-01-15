@@ -53,7 +53,7 @@ export default function Footer() {
         </div>
 
         {/* Links Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Quick Contact */}
           <div className="space-y-6">
             <h4 className="text-lg font-bold text-white border-b border-accent/30 pb-2 inline-block">Contact Us</h4>

@@ -8,8 +8,11 @@ export const metadata = {
 export default function AcademicOverviewPage() {
     return (
         <div className="bg-white min-h-screen">
-            {/* Hero Section */}
-            <section className="relative bg-[#100902] text-white py-20 lg:py-28 overflow-hidden">
+            <section
+                id="academics-overview"
+                data-section-id="overview"
+                className="relative bg-[#100902] text-white py-20 lg:py-28 overflow-hidden"
+            >
                 <div className="absolute inset-0 bg-gradient-to-tr from-orange-900/20 to-accent/10 opacity-50"></div>
                 <div className="absolute inset-0 bg-[url('/images/grid-pattern.png')] opacity-[0.03]"></div>
                 <div className="container mx-auto px-4 relative z-10 text-center">
@@ -25,8 +28,11 @@ export default function AcademicOverviewPage() {
                 </div>
             </section>
 
-            {/* Introduction Section */}
-            <section className="py-16 bg-white">
+            <section
+                id="academics-introduction"
+                data-section-id="introduction"
+                className="py-16 bg-white"
+            >
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto text-center">
                         <h2 className="text-3xl font-bold text-[#100902] mb-6">Building Foundations for Lifelong Success</h2>
@@ -40,8 +46,11 @@ export default function AcademicOverviewPage() {
                 </div>
             </section>
 
-            {/* Academic Philosophy Grid */}
-            <section className="py-16 lg:py-24 bg-gray-50">
+            <section
+                id="academics-philosophy"
+                data-section-id="philosophy"
+                className="py-16 lg:py-24 bg-gray-50"
+            >
                 <div className="container mx-auto px-4">
                     <div className="max-w-6xl mx-auto">
                         <div className="text-center mb-12">
@@ -87,8 +96,11 @@ export default function AcademicOverviewPage() {
                 </div>
             </section>
 
-            {/* Academic Focus Section */}
-            <section className="py-16 lg:py-24 bg-[#100902] text-white">
+            <section
+                id="academics-focus"
+                data-section-id="focus"
+                className="py-16 lg:py-24 bg-[#100902] text-white"
+            >
                 <div className="container mx-auto px-4">
                     <div className="max-w-6xl mx-auto">
                         <div className="flex flex-col lg:flex-row gap-16 items-center">
@@ -139,8 +151,11 @@ export default function AcademicOverviewPage() {
                 </div>
             </section>
 
-            {/* Outcome-Based Education (OBE) */}
-            <section className="py-16 lg:py-24 bg-white">
+            <section
+                id="academics-obe"
+                data-section-id="obe"
+                className="py-16 lg:py-24 bg-white"
+            >
                 <div className="container mx-auto px-4">
                     <div className="max-w-6xl mx-auto">
                         <div className="text-center mb-16">
@@ -171,8 +186,11 @@ export default function AcademicOverviewPage() {
                 </div>
             </section>
 
-            {/* Curriculum Structure */}
-            <section className="py-16 lg:py-24 bg-orange-50">
+            <section
+                id="academics-curriculum"
+                data-section-id="curriculum"
+                className="py-16 lg:py-24 bg-orange-50"
+            >
                 <div className="container mx-auto px-4">
                     <div className="max-w-5xl mx-auto">
                         <div className="text-center mb-12">
@@ -227,8 +245,11 @@ export default function AcademicOverviewPage() {
                 </div>
             </section>
 
-            {/* Evaluation System */}
-            <section className="py-16 lg:py-24 bg-[#100902] text-white">
+            <section
+                id="academics-evaluation"
+                data-section-id="evaluation"
+                className="py-16 lg:py-24 bg-[#100902] text-white"
+            >
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col lg:flex-row items-center gap-12">
                         <div className="lg:w-1/2">
@@ -286,8 +307,11 @@ export default function AcademicOverviewPage() {
                 </div>
             </section>
 
-            {/* Skill Certifications */}
-            <section className="py-16 lg:py-24 bg-white">
+            <section
+                id="academics-skills"
+                data-section-id="skills"
+                className="py-16 lg:py-24 bg-white"
+            >
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto text-center mb-16">
                         <span className="text-blue-600 font-semibold tracking-wide uppercase text-sm">Beyond Degrees</span>
