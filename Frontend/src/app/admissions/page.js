@@ -1,10 +1,28 @@
-export default function Admissions() {
+import AdmissionsHeroSection from "@/components/admissions/AdmissionsHeroSection";
+import AdmissionsOverviewSection from "@/components/admissions/AdmissionsOverviewSection";
+import EligibilitySection from "@/components/admissions/EligibilitySection";
+import HowToApplySection from "@/components/admissions/HowToApplySection";
+import CourseFeeSection from "@/components/admissions/CourseFeeSection";
+import ScholarshipsSection from "@/components/admissions/ScholarshipsSection";
+import EducationLoanSection from "@/components/admissions/EducationLoanSection";
+import CampusLifeSection from "@/components/admissions/CampusLifeSection";
+
+export const metadata = {
+  title: "Admissions | IAER",
+  description: "Join IAER to embark on a journey of academic excellence. Explore our programs, admission process, fees, and scholarships.",
+};
+
+export default function AdmissionsPage() {
   return (
-    <div className="container mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-6">Admissions</h1>
-      <p className="text-lg text-gray-700">
-        Find everything you need to know about the admission process, eligibility criteria, and important dates.
-      </p>
-    </div>
+    <main className="bg-white min-h-screen">
+      <AdmissionsHeroSection />
+      <AdmissionsOverviewSection />
+      <EligibilitySection />
+      <HowToApplySection />
+      <CourseFeeSection />
+      <ScholarshipsSection />
+      <EducationLoanSection />
+      <CampusLifeSection />
+    </main>
   );
 }

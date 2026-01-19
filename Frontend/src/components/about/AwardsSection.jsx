@@ -98,6 +98,7 @@ export default function AwardsSection() {
 
   return (
     <section className="py-12 bg-white relative overflow-hidden">
+      
       {/* Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-b from-gray-50 to-transparent rounded-bl-full opacity-50" />

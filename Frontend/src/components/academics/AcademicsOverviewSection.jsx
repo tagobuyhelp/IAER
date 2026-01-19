@@ -20,12 +20,22 @@ import {
   PenTool,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export default function AcademicsOverviewSection() {
   const [activeTab, setActiveTab] = useState("philosophy");
 
   return (
-    <div id="academics-overview" className="flex flex-col gap-16 py-16 bg-gray-50/50">
+    <div id="academics-overview" className="relative py-16 bg-gray-50/50 overflow-hidden">
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <Image
+          src="/images/academic/Classroom_discussion_with_engaged_students.png"
+          alt="Classroom Discussion"
+          fill
+          className="object-cover opacity-30"
+        />
+      </div>
+      <div className="relative z-10 flex flex-col gap-16">
       {/* SECTION 1: Strategic Framework (Tabs) */}
       <section className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
@@ -316,6 +326,7 @@ export default function AcademicsOverviewSection() {
            </div>
         </div>
       </section>
+      </div>
     </div>
   );
 }

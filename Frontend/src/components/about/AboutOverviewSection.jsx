@@ -31,6 +31,7 @@ import {
 import { useInView } from "react-intersection-observer";
 import { useState, useRef, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 // SVG Illustration Component for Education Excellence
 const EducationExcellenceSVG = ({ className }) => (
@@ -43,7 +44,7 @@ const EducationExcellenceSVG = ({ className }) => (
   >
     {/* Background gradient circle */}
     <circle cx="200" cy="150" r="140" fill="url(#educationGradient1)" opacity="0.1" />
-    
+
     {/* Central graduation cap */}
     <path
       d="M150 120 L200 100 L250 120 L250 140 L200 160 L150 140 Z"
@@ -51,14 +52,14 @@ const EducationExcellenceSVG = ({ className }) => (
       opacity="0.9"
     />
     <rect x="190" y="140" width="20" height="30" rx="2" fill="hsl(219, 60%, 22%)" />
-    
+
     {/* Books around cap */}
     <rect x="100" y="180" width="40" height="30" rx="2" fill="hsl(33, 93%, 54%)" opacity="0.8" />
     <rect x="105" y="185" width="30" height="20" fill="white" opacity="0.3" />
-    
+
     <rect x="260" y="180" width="40" height="30" rx="2" fill="hsl(205, 81%, 63%)" opacity="0.8" />
     <rect x="265" y="185" width="30" height="20" fill="white" opacity="0.3" />
-    
+
     {/* Lightbulb representing innovation */}
     <circle cx="200" cy="80" r="20" fill="hsl(33, 93%, 54%)" opacity="0.6" />
     <rect x="195" y="100" width="10" height="15" rx="2" fill="hsl(33, 93%, 54%)" opacity="0.6" />
@@ -67,7 +68,7 @@ const EducationExcellenceSVG = ({ className }) => (
       fill="hsl(33, 93%, 54%)"
       opacity="0.8"
     />
-    
+
     {/* Stars representing achievements */}
     <g opacity="0.7">
       <path
@@ -87,14 +88,14 @@ const EducationExcellenceSVG = ({ className }) => (
         fill="hsl(205, 81%, 63%)"
       />
     </g>
-    
+
     {/* Growth arrows */}
     <path
       d="M200 220 L200 250 L195 245 L200 250 L205 245 Z"
       fill="hsl(33, 93%, 54%)"
       opacity="0.7"
     />
-    
+
     <defs>
       <linearGradient id="educationGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
         <stop offset="0%" stopColor="hsl(219, 60%, 22%)" />
@@ -119,7 +120,7 @@ const MultiDisciplinarySVG = ({ className }) => (
   >
     {/* Central hub */}
     <circle cx="200" cy="150" r="40" fill="url(#multiGradient)" opacity="0.3" stroke="hsl(219, 60%, 22%)" strokeWidth="3" />
-    
+
     {/* Connecting lines to different domains */}
     <g stroke="hsl(33, 93%, 54%)" strokeWidth="3" opacity="0.5">
       <line x1="200" y1="110" x2="200" y2="50" />
@@ -131,7 +132,7 @@ const MultiDisciplinarySVG = ({ className }) => (
       <line x1="160" y1="190" x2="100" y2="220" />
       <line x1="240" y1="190" x2="300" y2="220" />
     </g>
-    
+
     {/* Domain icons */}
     <g opacity="0.8">
       {/* Technology */}
@@ -140,27 +141,27 @@ const MultiDisciplinarySVG = ({ className }) => (
       <rect x="102" y="70" width="8" height="8" fill="white" />
       <rect x="90" y="82" width="8" height="8" fill="white" />
       <rect x="102" y="82" width="8" height="8" fill="white" />
-      
+
       {/* Healthcare */}
       <circle cx="200" cy="45" r="15" fill="hsl(205, 81%, 63%)" />
       <path d="M200 35 L200 45 L195 50 L200 45 L205 50 Z" fill="white" />
-      
+
       {/* Management */}
       <rect x="285" y="65" width="30" height="30" rx="2" fill="hsl(33, 93%, 54%)" />
       <path d="M300 75 L305 80 L300 85 L295 80 Z" fill="white" />
-      
+
       {/* Hospitality */}
       <rect x="285" y="205" width="30" height="30" rx="2" fill="hsl(205, 81%, 63%)" />
       <rect x="290" y="210" width="20" height="20" rx="1" fill="white" opacity="0.5" />
-      
+
       {/* Aviation */}
       <path d="M200 235 L195 250 L200 245 L205 250 Z" fill="hsl(33, 93%, 54%)" />
-      
+
       {/* Business */}
       <rect x="85" y="205" width="30" height="30" rx="2" fill="hsl(219, 60%, 22%)" />
       <path d="M100 220 L105 225 L100 230 L95 225 Z" fill="white" />
     </g>
-    
+
     {/* Central icon */}
     <circle cx="200" cy="150" r="20" fill="hsl(33, 93%, 54%)" />
     <path
@@ -171,7 +172,7 @@ const MultiDisciplinarySVG = ({ className }) => (
       strokeLinejoin="round"
       fill="none"
     />
-    
+
     <defs>
       <radialGradient id="multiGradient" cx="50%" cy="50%">
         <stop offset="0%" stopColor="hsl(33, 93%, 54%)" />
@@ -427,7 +428,7 @@ export default function AboutOverviewSection() {
       const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
       setCanScrollLeft(scrollLeft > 10);
       setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
-      
+
       const newIndex = Math.round(scrollLeft / clientWidth);
       setActiveIndex(newIndex);
     }
@@ -461,12 +462,20 @@ export default function AboutOverviewSection() {
   };
 
   return (
-    <section 
+    <section
       className="h-screen lg:h-[600px] w-full bg-gradient-to-br from-white via-gray-50/80 to-white overflow-hidden flex flex-col lg:flex-row relative group"
       onKeyDown={handleKeyDown}
       tabIndex={0}
       aria-label="About IAER Overview Section"
     >
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <Image
+          src="/images/about/Students_approaching_modern_campus_entrance.png"
+          alt="Students Approaching Modern Campus Entrance"
+          fill
+          className="object-cover opacity-30"
+        />
+      </div>
       {/* Decorative background elements */}
       <div className="absolute inset-0 opacity-5 pointer-events-none">
         <div className="absolute top-20 right-10 w-96 h-96 bg-primary rounded-full blur-3xl" />
@@ -475,12 +484,12 @@ export default function AboutOverviewSection() {
 
       {/* Left Side: Scrollable Cards */}
       <div className="flex-1 h-full relative order-2 lg:order-1 overflow-hidden">
-        <div 
+        <div
           ref={scrollContainerRef}
           className="flex h-full overflow-x-auto snap-x snap-mandatory scrollbar-hide"
           style={{ scrollBehavior: 'smooth' }}
         >
-          
+
           {/* Card 1: Overview & Intro */}
           <div className="min-w-full h-full snap-center p-4 lg:p-8 flex items-start justify-center overflow-y-auto">
             <div className="max-w-2xl w-full space-y-8">
@@ -511,12 +520,12 @@ export default function AboutOverviewSection() {
 
           {/* Card 2: Stats & Impact */}
           <div className="min-w-full h-full snap-center p-4 lg:p-8 flex items-start justify-center overflow-y-auto">
-             <div className="max-w-3xl w-full">
-               <div className="mb-8">
-                  <span className="text-sm font-bold uppercase tracking-wider text-accent mb-2 block">Our Impact</span>
-                  <h3 className="text-3xl font-bold text-[#100902]">Numbers That Speak</h3>
-               </div>
-               <div className="grid gap-6 sm:grid-cols-2">
+            <div className="max-w-3xl w-full">
+              <div className="mb-8">
+                <span className="text-sm font-bold uppercase tracking-wider text-accent mb-2 block">Our Impact</span>
+                <h3 className="text-3xl font-bold text-[#100902]">Numbers That Speak</h3>
+              </div>
+              <div className="grid gap-6 sm:grid-cols-2">
                 {stats.map((stat, index) => (
                   <StatCard
                     key={stat.label}
@@ -552,8 +561,8 @@ export default function AboutOverviewSection() {
             </div>
           </div>
 
-           {/* Card 4: Multi-Disciplinary */}
-           <div className="min-w-full h-full snap-center p-4 lg:p-8 flex items-start justify-center overflow-y-auto">
+          {/* Card 4: Multi-Disciplinary */}
+          <div className="min-w-full h-full snap-center p-4 lg:p-8 flex items-start justify-center overflow-y-auto">
             <div className="max-w-2xl w-full text-center">
               <div className="inline-flex p-4 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 mb-8">
                 <Globe className="w-8 h-8 text-primary" />
@@ -570,7 +579,7 @@ export default function AboutOverviewSection() {
           </div>
 
         </div>
-        
+
         {/* Scroll Indicators (Mobile/Overlay) */}
         <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10 lg:hidden">
           {cards.map((_, idx) => (
@@ -594,23 +603,23 @@ export default function AboutOverviewSection() {
             <Sparkles className="w-3.5 h-3.5" />
             <span className="text-xs font-bold uppercase tracking-wider">Welcome to IAER</span>
           </div>
-          
+
           <h2 className="text-4xl lg:text-5xl font-bold text-[#100902] leading-tight">
             About <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
               Our Institute
             </span>
           </h2>
-          
+
           <p className="text-gray-600 leading-relaxed text-sm lg:text-base">
-            Discover our journey of excellence, innovation, and student success. 
+            Discover our journey of excellence, innovation, and student success.
             Swipe through to explore our legacy, impact, and vision.
           </p>
 
           {/* Navigation Controls (Desktop) */}
           <div className="hidden lg:flex flex-col gap-6 mt-8">
             <div className="flex items-center gap-3">
-               <button 
+              <button
                 onClick={() => scrollToCard(Math.max(activeIndex - 1, 0))}
                 disabled={!canScrollLeft}
                 className="p-3 rounded-full border border-gray-200 hover:border-primary hover:bg-primary/5 hover:text-primary transition-all disabled:opacity-30 disabled:cursor-not-allowed"
@@ -618,7 +627,7 @@ export default function AboutOverviewSection() {
               >
                 <ChevronLeft className="w-6 h-6" />
               </button>
-              <button 
+              <button
                 onClick={() => scrollToCard(Math.min(activeIndex + 1, cards.length - 1))}
                 disabled={!canScrollRight}
                 className="p-3 rounded-full border border-gray-200 hover:border-primary hover:bg-primary/5 hover:text-primary transition-all disabled:opacity-30 disabled:cursor-not-allowed"
@@ -627,7 +636,7 @@ export default function AboutOverviewSection() {
                 <ChevronRight className="w-6 h-6" />
               </button>
             </div>
-            
+
             <div className="space-y-2">
               {cards.map((card, idx) => (
                 <button

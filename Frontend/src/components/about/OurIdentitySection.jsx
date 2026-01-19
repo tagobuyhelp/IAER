@@ -87,6 +87,14 @@ export default function OurIdentitySection() {
 
   return (
     <section className="py-10 lg:py-12 bg-gradient-to-b from-white via-gray-50/50 to-white relative overflow-hidden">
+      <div className="absolute inset-0 z-0 pointer-events-none">
+              <Image
+                src="/images/about/Academic_leader_engaging_with_students.png"
+                alt="Students Approaching Modern Campus Entrance"
+                fill
+                className="object-cover opacity-30"
+              />
+            </div>
       <div className="container mx-auto px-4 relative z-10">
         <RevealOnScroll className="mb-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">

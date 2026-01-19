@@ -18,6 +18,7 @@ import {
 import RevealOnScroll from "@/components/RevealOnScroll";
 import { useInView } from "react-intersection-observer";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 // Compact Initiative Card Component
 function InitiativeCard({ icon: Icon, title, description, items, delay = 0, index }) {
@@ -153,6 +154,15 @@ export default function ISRSection() {
 
   return (
     <section className="py-12 bg-gray-50/50 relative overflow-hidden">
+      <div className="absolute inset-0 z-0 pointer-events-none">
+              <Image
+                src="/images/about/Community_interaction_in_a_neighbourhood_centre.png"
+                alt="Community Interaction in a Neighbourhood Centre"
+                fill
+                className="object-cover opacity-30"
+              />
+            </div>
+
       {/* Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-gradient-to-br from-white to-transparent rounded-br-full opacity-60" />

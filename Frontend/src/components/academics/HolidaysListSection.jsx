@@ -11,6 +11,8 @@ import {
   PartyPopper,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
+
 
 export default function HolidaysListSection() {
   const [activeTab, setActiveTab] = useState("even"); // 'even' (Jan-Jun) or 'odd' (Jul-Dec)
@@ -65,7 +67,15 @@ export default function HolidaysListSection() {
   };
 
   return (
-    <section id="holidays-list" className="py-16 bg-white">
+    <section id="holidays-list" className="relative py-16 bg-gray-50/50 overflow-hidden">
+      <div className="absolute inset-0 z-0 pointer-events-none">
+              <Image
+                src="/images/academic/Classroom_discussion_with_engaged_students.png"
+                alt="Classroom Discussion"
+                fill
+                className="object-cover opacity-30"
+              />
+            </div>
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           {/* Header */}

@@ -25,6 +25,7 @@ import { useInView } from "react-intersection-observer";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
+
 // SVG Illustration Component for Practical Learning
 const PracticalLearningSVG = ({ className }) => (
   <svg
@@ -231,8 +232,16 @@ export default function PracticalEducationSection() {
 
   return (
     <section className="relative py-14 lg:py-20 bg-[#100902] text-white overflow-hidden">
-      {/* Dark background with gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#100902] via-[#1a0f05] to-[#0d0502]" />
+      <div className="absolute inset-0 z-0 pointer-events-none">
+              <Image
+                src="/images/about/Hands-on_electronics_training_in_India.png"
+                alt="Hands-on Electronics Training in India"
+                fill
+                className="object-cover opacity-30"
+              />
+            </div>
+      
+      
       
       {/* Background pattern */}
       <div className="absolute inset-0 bg-[url('/images/grid-pattern.png')] opacity-[0.08]" />
@@ -318,78 +327,7 @@ export default function PracticalEducationSection() {
           ))}
         </div>
 
-        {/* Enhanced Image Section */}
-        <RevealOnScroll delay={400}>
-          <div className="mt-12 max-w-5xl mx-auto">
-            <div
-              className={cn(
-                "relative w-full rounded-3xl overflow-hidden border-2 border-white/20 bg-white/5 backdrop-blur-sm shadow-2xl transition-all duration-500",
-                "h-64 sm:h-80 lg:h-96",
-                imageHovered && "scale-[1.02] shadow-[0_0_50px_rgba(247,148,30,0.3)] border-accent/60 ring-4 ring-accent/30"
-              )}
-              onMouseEnter={() => setImageHovered(true)}
-              onMouseLeave={() => setImageHovered(false)}
-            >
-              <Image
-                src="/images/hero_images/slide4.jpg"
-                alt="Hands-on learning environment at IAER"
-                fill
-                className={cn(
-                  "object-cover transition-transform duration-500",
-                  imageHovered && "scale-110"
-                )}
-                sizes="(min-width:1024px) 896px, (min-width:640px) 80vw, 100vw"
-                priority
-              />
-              {/* Dark overlay for better contrast */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#100902]/60 via-[#100902]/40 to-[#100902]/60" />
-              {/* Gradient overlay on hover */}
-              <div
-                className={cn(
-                  "absolute inset-0 bg-gradient-to-br from-accent/30 via-primary/20 to-transparent transition-opacity duration-500",
-                  imageHovered ? "opacity-100" : "opacity-0"
-                )}
-              />
-              {/* Decorative corner accents */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-accent/40 to-transparent" />
-              <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-primary/40 to-transparent" />
-              {/* Floating badge */}
-              <div
-                className={cn(
-                  "absolute bottom-6 left-6 px-4 py-2 rounded-lg bg-white/90 backdrop-blur-sm border border-white/20 transition-all duration-500",
-                  imageHovered && "scale-105 shadow-lg"
-                )}
-              >
-                <div className="flex items-center gap-2">
-                  <GraduationCap className="w-4 h-4 text-accent" aria-hidden="true" />
-                  <span className="text-sm font-semibold text-[#100902]">Hands-On Learning</span>
-                </div>
-              </div>
-              {/* Stats overlay */}
-              <div
-                className={cn(
-                  "absolute top-6 right-6 flex flex-col gap-2 transition-all duration-500",
-                  imageHovered ? "opacity-100 translate-x-0" : "opacity-0 translate-x-4"
-                )}
-              >
-                {[
-                  { icon: CheckCircle2, text: "Industry Ready" },
-                  { icon: Star, text: "Practical Focus" },
-                  { icon: TrendingUp, text: "Career Growth" },
-                ].map((stat, index) => (
-                  <div
-                    key={stat.text}
-                    className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/90 backdrop-blur-sm border border-white/20"
-                    style={{ transitionDelay: `${index * 100}ms` }}
-                  >
-                    <stat.icon className="w-3.5 h-3.5 text-accent" aria-hidden="true" />
-                    <span className="text-xs font-medium text-[#100902]">{stat.text}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </RevealOnScroll>
+        
 
         {/* Additional Info Card */}
         <RevealOnScroll delay={500}>

@@ -30,7 +30,10 @@ import {
   HeartHandshake,
   Calendar,
   CalendarOff,
-  PenTool
+  PenTool,
+  Banknote,
+  GraduationCap,
+  Building2
 } from "lucide-react";
 
 const sectionConfig = {
@@ -77,6 +80,15 @@ const sectionConfig = {
     { id: "academics-curriculum", label: "Curriculum", icon: Layers },
     { id: "academics-evaluation", label: "Evaluation", icon: ClipboardCheck },
     { id: "academics-skills", label: "Skills", icon: Award },
+  ],
+  "/admissions": [
+    { id: "admissions-overview", label: "Overview", icon: Info },
+    { id: "admissions-eligibility", label: "Eligibility", icon: ClipboardCheck },
+    { id: "admissions-apply", label: "Apply", icon: FileText },
+    { id: "admissions-fee", label: "Fees", icon: Banknote },
+    { id: "admissions-scholarships", label: "Scholarships", icon: GraduationCap },
+    { id: "admissions-loan", label: "Loans", icon: Handshake },
+    { id: "admissions-campus", label: "Campus", icon: Building2 },
   ],
 };
 

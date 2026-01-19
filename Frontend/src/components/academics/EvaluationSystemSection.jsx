@@ -15,12 +15,21 @@ import {
   BookOpen,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export default function EvaluationSystemSection() {
   const [activeTab, setActiveTab] = useState("methodology");
 
   return (
-    <div id="academics-evaluation-system" className="flex flex-col gap-12 py-16 bg-gray-50/50">
+    <div id="academics-evaluation-system" className="relative py-16 bg-gray-50/50 overflow-hidden">
+      <div className="absolute inset-0 z-0 pointer-events-none">
+              <Image
+                src="/images/academic/Classroom_discussion_with_engaged_students.png"
+                alt="Classroom Discussion"
+                fill
+                className="object-cover opacity-10"
+              />
+            </div>
       {/* HEADER SECTION */}
       <section className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
