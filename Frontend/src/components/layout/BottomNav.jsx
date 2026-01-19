@@ -25,7 +25,9 @@ import {
   ClipboardCheck,
   Award,
   FileText,
-  MessageCircle
+  MessageCircle,
+  Users,
+  HeartHandshake
 } from "lucide-react";
 
 const sectionConfig = {
@@ -42,6 +44,16 @@ const sectionConfig = {
     { id: "placement-partners", label: "Partners", icon: Handshake },
     { id: "global-experience", label: "Global", icon: Globe },
     { id: "virtual-tour", label: "Virtual Tour", icon: Video },
+  ],
+  "/about": [
+    { id: "about-overview", label: "Overview", icon: Info },
+    { id: "about-practical", label: "Practical", icon: Zap },
+    { id: "about-industry", label: "Industry", icon: Handshake },
+    { id: "about-identity", label: "Identity", icon: Users },
+    { id: "about-vision", label: "Vision", icon: Target },
+    { id: "about-recognition", label: "Approvals", icon: ClipboardCheck },
+    { id: "about-awards", label: "Awards", icon: Trophy },
+    { id: "about-isr", label: "ISR", icon: HeartHandshake },
   ],
   "/admissions/overview": [
     { id: "admissions-overview", label: "Overview", icon: Info },

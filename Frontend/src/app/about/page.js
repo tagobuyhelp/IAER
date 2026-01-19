@@ -17,16 +17,33 @@ export const metadata = {
 export default function About() {
     return (
         <div className="bg-white min-h-screen">
-            <HeroSection />
-            <AboutOverviewSection />
-            <PracticalEducationSection />
-            <IndustryEngagementSection />
-            <OurIdentitySection />
-            <VisionMissionSection />
-            <RecognitionApprovalsSection />
-            <AwardsSection />
-            <ISRSection />
+            <div id="about-hero">
+                <HeroSection />
+            </div>
+            <div id="about-overview">
+                <AboutOverviewSection />
+            </div>
+            <div id="about-practical">
+                <PracticalEducationSection />
+            </div>
+            <div id="about-industry">
+                <IndustryEngagementSection />
+            </div>
+            <div id="about-identity">
+                <OurIdentitySection />
+            </div>
+            <div id="about-vision">
+                <VisionMissionSection />
+            </div>
+            <div id="about-recognition">
+                <RecognitionApprovalsSection />
+            </div>
+            <div id="about-awards">
+                <AwardsSection />
+            </div>
+            <div id="about-isr">
+                <ISRSection />
+            </div>
         </div>
     );
 }
-
