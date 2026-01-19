@@ -27,7 +27,10 @@ import {
   FileText,
   MessageCircle,
   Users,
-  HeartHandshake
+  HeartHandshake,
+  Calendar,
+  CalendarOff,
+  PenTool
 } from "lucide-react";
 
 const sectionConfig = {
@@ -54,6 +57,13 @@ const sectionConfig = {
     { id: "about-recognition", label: "Approvals", icon: ClipboardCheck },
     { id: "about-awards", label: "Awards", icon: Trophy },
     { id: "about-isr", label: "ISR", icon: HeartHandshake },
+  ],
+  "/academics": [
+    { id: "academics-overview", label: "Overview", icon: Info },
+    { id: "academics-teaching-practices", label: "Teaching", icon: PenTool },
+    { id: "academics-evaluation", label: "Evaluation", icon: ClipboardCheck },
+    { id: "academics-calendar", label: "Calendar", icon: Calendar },
+    { id: "academics-holidays", label: "Holidays", icon: CalendarOff },
   ],
   "/admissions/overview": [
     { id: "admissions-overview", label: "Overview", icon: Info },
