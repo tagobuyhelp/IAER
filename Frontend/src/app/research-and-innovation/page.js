@@ -1,10 +1,21 @@
+import HeroSection from "@/components/research-and-innovation/HeroSection";
+import ResearchOverviewSection from "@/components/research-and-innovation/ResearchOverviewSection";
+import StartupEntrepreneurshipSection from "@/components/research-and-innovation/StartupEntrepreneurshipSection";
+import InnovationResearchSection from "@/components/research-and-innovation/InnovationResearchSection";
+
+export const metadata = {
+  title: "Research & Innovation | IAER",
+  description:
+    "Explore our cutting-edge research initiatives, innovation labs, and startup incubation support at IAER.",
+};
+
 export default function ResearchAndInnovation() {
   return (
-    <div className="container mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-6">Research and Innovation</h1>
-      <p className="text-lg text-gray-700">
-        Explore our cutting-edge research initiatives and innovation labs driving global impact.
-      </p>
-    </div>
+    <main className="bg-white min-h-screen">
+      <HeroSection />
+      <ResearchOverviewSection />
+      <InnovationResearchSection />
+      <StartupEntrepreneurshipSection />
+    </main>
   );
 }

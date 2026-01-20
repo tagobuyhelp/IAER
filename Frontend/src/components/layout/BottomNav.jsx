@@ -33,7 +33,8 @@ import {
   PenTool,
   Banknote,
   GraduationCap,
-  Building2
+  Building2,
+  Rocket
 } from "lucide-react";
 
 const sectionConfig = {
@@ -89,6 +90,11 @@ const sectionConfig = {
     { id: "admissions-scholarships", label: "Scholarships", icon: GraduationCap },
     { id: "admissions-loan", label: "Loans", icon: Handshake },
     { id: "admissions-campus", label: "Campus", icon: Building2 },
+  ],
+  "/research-and-innovation": [
+    { id: "research-overview", label: "Overview", icon: Info },
+    { id: "innovation-research", label: "Research", icon: Microscope },
+    { id: "startup-entrepreneurship", label: "Startups", icon: Rocket },
   ],
 };
 
