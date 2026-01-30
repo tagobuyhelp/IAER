@@ -34,7 +34,9 @@ import {
   Banknote,
   GraduationCap,
   Building2,
-  Rocket
+  Rocket,
+  PieChart,
+  Image as ImageIcon
 } from "lucide-react";
 
 const sectionConfig = {
@@ -95,6 +97,20 @@ const sectionConfig = {
     { id: "research-overview", label: "Overview", icon: Info },
     { id: "innovation-research", label: "Research", icon: Microscope },
     { id: "startup-entrepreneurship", label: "Startups", icon: Rocket },
+  ],
+  "/placement": [
+    { id: "placement-overview", label: "Overview", icon: Info },
+    { id: "placement-cell", label: "TPC & CSD", icon: Users },
+    { id: "career-model", label: "Roadmap", icon: Target },
+    { id: "internships", label: "Internships", icon: Briefcase },
+    { id: "recruiters", label: "Recruiters", icon: Handshake },
+    { id: "sectors", label: "Sectors", icon: PieChart },
+  ],
+  "/campus-life": [
+    { id: "campus-overview", label: "Overview", icon: Info },
+    { id: "gallery", label: "Gallery", icon: ImageIcon },
+    { id: "events", label: "Events", icon: Calendar },
+    { id: "clubs", label: "Clubs", icon: Users },
   ],
 };
 

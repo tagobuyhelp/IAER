@@ -77,13 +77,7 @@ export default function Header() {
 
         {/* Right Actions */}
         <div className="flex items-center gap-2 lg:gap-4">
-          {/* Search - Visible on Desktop */}
-          <button
-            className="hidden lg:flex p-2 text-gray-300 hover:text-white transition-colors rounded-full hover:bg-white/5"
-            aria-label="Search"
-          >
-            <Search className="w-5 h-5" />
-          </button>
+          
 
           {/* Apply Now Button - Visible on Desktop */}
           <Link
