@@ -43,7 +43,7 @@ function HeroImageSlider() {
                         priority={index === 0}
                     />
                     {/* Gradient Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#100902]/80 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#100902]/50 via-transparent to-transparent" />
                 </div>
             ))}
             
@@ -155,18 +155,45 @@ export default function AdmissionsHeroSection() {
     const { ref: titleRef, inView: titleInView } = useInView({ threshold: 0.2, triggerOnce: true });
     const { ref: descRef, inView: descInView } = useInView({ threshold: 0.2, triggerOnce: true });
     
+    const [currentBgIndex, setCurrentBgIndex] = useState(0);
+
+    const bgImages = [
+        "/images/admissions/Assisting_with_online_applications_in_office.png",
+        "/images/admissions/College_admissions_reception_in_India.png",
+        "/images/admissions/Meeting_with_the_admissions_counselor.png",
+        "/images/admissions/Students_collaborating_in_bright_campus_space.png"
+    ];
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentBgIndex((prev) => (prev + 1) % bgImages.length);
+        }, 5000);
+        return () => clearInterval(timer);
+    }, []);
+
     return (
-        <section className="relative bg-[#100902] overflow-hidden min-h-[500px] flex items-center pt-20 pb-12 lg:pt-24 lg:pb-16">
+        <section className="relative  overflow-hidden min-h-[500px] flex items-center pt-20 pb-12 lg:pt-24 lg:pb-16">
             {/* Background Effects */}
             <div className="absolute inset-0 z-0">
-                <Image
-                    src="/images/iaer-building.jpg"
-                    alt="IAER Campus Building"
-                    fill
-                    className="object-cover opacity-20"
-                    priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-br from-gray-900/90 via-[#100902]/95 to-[#100902] opacity-90" />
+                {bgImages.map((img, index) => (
+                    <div
+                        key={index}
+                        className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                            currentBgIndex === index ? "opacity-100" : "opacity-0"
+                        }`}
+                    >
+                        <Image
+                            src={img}
+                            alt="Admissions Background"
+                            fill
+                            className="object-cover"
+                            priority={index === 0}
+                        />
+                        <div className="absolute inset-0 bg-[#100902]/90" />
+                    </div>
+                ))}
+                
+                <div className="absolute inset-0 " />
                 <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3" />
                 <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-900/10 rounded-full blur-[80px] translate-y-1/3 -translate-x-1/4" />
                 <div className="absolute inset-0 bg-[url('/images/grid-pattern.png')] opacity-[0.03]" />

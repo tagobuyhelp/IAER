@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import {
   Award,
   ShieldCheck,
@@ -20,9 +21,20 @@ export default function RankingsSection() {
   return (
     <section
       ref={ref}
-      className="py-11 md:py-16 bg-gradient-to-br from-primary/95 via-primary to-primary/90 border-t border-primary/40 text-primary-foreground relative overflow-hidden"
+      className="py-11 md:py-16 border-t border-primary/40 text-primary-foreground relative overflow-hidden"
     >
-      <div className="container  mx-auto px-4 md:px-6">
+      {/* Background Image & Overlay */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/iaer-campus.png"
+          alt="IAER Campus Background"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/90 to-primary/90" />
+      </div>
+
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div
           className={`max-w-3xl mx-auto md:mx-0 text-center md:text-left mb-5 md:mb-7 transition-all duration-700 ease-out ${
             inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"

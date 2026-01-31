@@ -145,6 +145,21 @@ export default function HeroSection() {
     const [imageHovered, setImageHovered] = useState(false);
     const [svgAnimated, setSvgAnimated] = useState(false);
 
+    const [currentBgIndex, setCurrentBgIndex] = useState(0);
+
+    const bgImages = [
+        "/images/academic/Classroom_discussion_with_engaged_students.png",
+        "/images/academic/Organised_workspace_with_planning_essentials.png",
+        "/images/academic/Professor_and_student_discussing_results.png"
+    ];
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentBgIndex((prev) => (prev + 1) % bgImages.length);
+        }, 5000);
+        return () => clearInterval(timer);
+    }, []);
+
     useEffect(() => {
         const timer = setTimeout(() => setSvgAnimated(true), 500);
         return () => clearTimeout(timer);
@@ -152,9 +167,31 @@ export default function HeroSection() {
 
     return (
         <section className="relative bg-[#100902] text-white min-h-[520px] md:min-h-[560px] flex items-center py-6 lg:py-8 overflow-hidden">
+            {/* Auto-changing Background Images */}
+            <div className="absolute inset-0 z-0">
+                {bgImages.map((img, index) => (
+                    <div
+                        key={index}
+                        className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                            currentBgIndex === index ? "opacity-100" : "opacity-0"
+                        }`}
+                    >
+                        <Image
+                            src={img}
+                            alt="Hero Background"
+                            fill
+                            className="object-cover"
+                            priority={index === 0}
+                        />
+                        {/* Overlay to ensure text readability */}
+                         <div className="absolute inset-0 bg-[#100902]/80" />
+                    </div>
+                ))}
+            </div>
+
             {/* Enhanced background gradients */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-[#3b1a05]/60 via-[#100902] to-accent/25 opacity-90" />
-            <div className="absolute inset-0 bg-[url('/images/grid-pattern.png')] opacity-[0.05]" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#3b1a05]/60 via-[#100902]/50 to-accent/25 opacity-90 z-0" />
+            <div className="absolute inset-0 bg-[url('/images/grid-pattern.png')] opacity-[0.05] z-0" />
 
             {/* Animated gradient blurs */}
             <div className="pointer-events-none absolute -top-24 -right-10 h-64 w-64 rounded-full bg-accent/15 blur-3xl animate-pulse" />

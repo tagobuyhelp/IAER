@@ -99,8 +99,19 @@ export default function TestimonialsSection() {
   }, [activeCategory]);
 
   return (
-    <section className="py-20 bg-gradient-to-br from-primary/95 via-primary to-primary/90 text-primary-foreground relative overflow-hidden">
-      <div className="container mx-auto px-4">
+    <section className="py-20 text-primary-foreground relative overflow-hidden">
+      {/* Background Image & Overlay */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/home/iaer-student-success-stories-header.png"
+          alt="IAER Student Success Stories Background"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/90 to-primary/90" />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <div
           ref={ref}
           className={`mb-12 transition-all duration-700 ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
