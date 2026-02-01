@@ -119,22 +119,29 @@ export default function ProgramClient({ program }) {
             </motion.div>
 
             {/* Content Tabs */}
-            <div className="mb-12">
-              <div className="flex flex-wrap gap-2 border-b border-white/10 pb-1 mb-8">
-                {['overview', 'curriculum', 'careers'].map((tab) => (
-                  <button
-                    key={tab}
-                    onClick={() => setActiveTab(tab)}
-                    className={cn(
-                      "px-4 py-2 md:px-6 md:py-3 text-xs md:text-sm font-medium rounded-t-lg transition-all relative",
-                      activeTab === tab 
-                        ? "text-accent bg-white/5 border-b-2 border-accent" 
-                        : "text-gray-400 hover:text-white hover:bg-white/5"
-                    )}
-                  >
-                    {tab.charAt(0).toUpperCase() + tab.slice(1)}
-                  </button>
-                ))}
+            <div className="mb-8 md:mb-12">
+              <div className="flex justify-start mb-6 md:mb-8 overflow-x-auto pb-2 md:pb-0 scrollbar-hide">
+                <div className="inline-flex flex-nowrap gap-1 p-1 bg-white/5 rounded-full border border-white/10 backdrop-blur-sm">
+                  {['overview', 'curriculum', 'careers'].map((tab) => (
+                    <button
+                      key={tab}
+                      onClick={() => setActiveTab(tab)}
+                      className={cn(
+                        "relative px-5 py-2 md:px-8 md:py-3 text-xs md:text-sm font-medium rounded-full transition-all duration-300 whitespace-nowrap",
+                        activeTab === tab ? "text-black font-bold" : "text-gray-400 hover:text-white"
+                      )}
+                    >
+                      {activeTab === tab && (
+                        <motion.div
+                          layoutId="activeProgramTab"
+                          className="absolute inset-0 bg-accent rounded-full shadow-lg shadow-accent/25"
+                          transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                        />
+                      )}
+                      <span className="relative z-10">{tab.charAt(0).toUpperCase() + tab.slice(1)}</span>
+                    </button>
+                  ))}
+                </div>
               </div>
 
               <div className="min-h-[300px]">
