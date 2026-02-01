@@ -31,11 +31,11 @@ export default function ProgramClient({ program }) {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white selection:bg-accent selection:text-white pb-24 lg:pb-0">
+    <div className=" bg-black lg-min-h-screen text-white selection:bg-accent selection:text-white pb-24 lg:pb-0">
       <InfiniteCall />
       
       {/* Hero Section */}
-      <section className="relative h-[60vh] min-h-[500px] flex items-end pb-20 overflow-hidden">
+      <section className="relative h-[40vh] min-h-[200px] lg:h-[60vh] lg:min-h-[500px] flex items-end pb-0 lg:pb-10 overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src={program.image || '/images/iaer-campus.png'}
