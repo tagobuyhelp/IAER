@@ -101,7 +101,7 @@ export default function Programs() {
       <InfiniteCall />
       
       {/* Hero Section with Parallax & Zoom Effect */}
-      <section className="relative h-[65vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[45vh] md:h-[65vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         {/* Background Slider */}
         <AnimatePresence mode='wait'>
           <motion.div 
@@ -143,7 +143,7 @@ export default function Programs() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-5xl md:text-8xl font-bold mb-6 tracking-tight leading-tight"
+            className="text-3xl md:text-8xl font-bold mb-4 md:mb-6 tracking-tight leading-tight"
           >
             Shape Your <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-orange-400 to-accent animate-gradient bg-[length:200%_auto]">
@@ -155,7 +155,7 @@ export default function Programs() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed font-light"
+            className="text-base md:text-2xl text-gray-300 mb-6 md:mb-10 max-w-3xl mx-auto leading-relaxed font-light"
           >
             Discover industry-aligned programs designed to launch your career in Management, Technology, and Healthcare.
           </motion.p>
@@ -164,12 +164,12 @@ export default function Programs() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-col sm:flex-row gap-5 justify-center"
+            className="flex flex-col sm:flex-row gap-3 md:gap-5 justify-center"
           >
-            <Button size="lg" className="bg-accent hover:bg-accent/90 text-white px-10 py-7 text-lg rounded-full shadow-[0_0_40px_-10px_rgba(255,107,0,0.5)] hover:shadow-[0_0_60px_-10px_rgba(255,107,0,0.6)] transition-all duration-300">
+            <Button size="lg" className="bg-accent hover:bg-accent/90 text-white px-6 py-4 md:px-10 md:py-7 text-base md:text-lg rounded-full shadow-[0_0_40px_-10px_rgba(255,107,0,0.5)] hover:shadow-[0_0_60px_-10px_rgba(255,107,0,0.6)] transition-all duration-300">
               Explore Programs
             </Button>
-            <Button variant="outline" size="lg" className="border-white/20 text-black hover:bg-white/10 px-10 py-7 text-lg rounded-full backdrop-blur-sm">
+            <Button variant="outline" size="lg" className="border-white/20 text-black hover:bg-white/10 px-6 py-4 md:px-10 md:py-7 text-base md:text-lg rounded-full backdrop-blur-sm">
               Download Brochure
             </Button>
           </motion.div>
@@ -188,20 +188,20 @@ export default function Programs() {
       </section>
 
       {/* Main Content - Split View */}
-      <section className="relative py-24 bg-black" id="programs-list">
+      <section className="relative py-12 md:py-24 bg-black" id="programs-list">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
         
         <div className="container mx-auto px-4">
           
           {/* Category Tabs */}
-          <div className="flex justify-center mb-20">
+          <div className="flex justify-center mb-10 md:mb-20">
             <div className="relative inline-flex p-1.5 bg-white/5 rounded-full border border-white/10 backdrop-blur-sm">
               {programCategories.map((cat) => (
                 <button
                   key={cat.id}
                   onClick={() => setActiveCategory(cat.id)}
                   className={cn(
-                    "relative px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 z-10",
+                    "relative px-4 py-2 md:px-8 md:py-3 rounded-full text-xs md:text-sm font-medium transition-all duration-300 z-10",
                     activeCategory === cat.id ? "text-white" : "text-gray-400 hover:text-white"
                   )}
                 >
@@ -283,7 +283,7 @@ export default function Programs() {
                     className="bg-zinc-900/50 border border-white/5 rounded-3xl overflow-hidden backdrop-blur-sm"
                   >
                     {/* Program Header Image */}
-                    <div className="relative h-64 md:h-80 w-full overflow-hidden group">
+                    <div className="relative h-48 md:h-80 w-full overflow-hidden group">
                       <Image
                         src={activeProgram.image || '/images/iaer-campus.png'} // Fallback image
                         alt={activeProgram.title}
@@ -292,17 +292,17 @@ export default function Programs() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/60 to-transparent" />
                       
-                      <div className="absolute bottom-0 left-0 p-8 w-full">
+                      <div className="absolute bottom-0 left-0 p-4 md:p-8 w-full">
                         <motion.div 
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.2 }}
-                          className="flex flex-wrap gap-3 mb-4"
+                          className="flex flex-wrap gap-2 md:gap-3 mb-2 md:mb-4"
                         >
-                          <span className="px-3 py-1 rounded-full bg-accent text-white text-xs font-bold tracking-wider uppercase">
+                          <span className="px-2 py-0.5 md:px-3 md:py-1 rounded-full bg-accent text-white text-[10px] md:text-xs font-bold tracking-wider uppercase">
                             {activeProgram.duration}
                           </span>
-                          <span className="px-3 py-1 rounded-full bg-white/10 text-white text-xs font-medium backdrop-blur-md border border-white/10">
+                          <span className="px-2 py-0.5 md:px-3 md:py-1 rounded-full bg-white/10 text-white text-[10px] md:text-xs font-medium backdrop-blur-md border border-white/10">
                             Full Time
                           </span>
                         </motion.div>
@@ -310,7 +310,7 @@ export default function Programs() {
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.3 }}
-                          className="text-3xl md:text-5xl font-bold text-white mb-2"
+                          className="text-2xl md:text-5xl font-bold text-white mb-1 md:mb-2"
                         >
                           {activeProgram.title}
                         </motion.h2>
@@ -318,49 +318,49 @@ export default function Programs() {
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           transition={{ delay: 0.4 }}
-                          className="text-gray-400 text-lg"
+                          className="text-gray-400 text-sm md:text-lg"
                         >
                           {activeProgram.description}
                         </motion.p>
                       </div>
                     </div>
 
-                    <div className="p-8 md:p-12 space-y-12">
+                    <div className="p-4 md:p-12 space-y-6 md:space-y-12">
                       {/* Overview */}
                       <div>
-                        <h3 className="text-2xl font-semibold mb-6 flex items-center gap-3">
-                          <BookOpen className="text-accent" /> Program Overview
+                        <h3 className="text-lg md:text-2xl font-semibold mb-3 md:mb-6 flex items-center gap-3">
+                          <BookOpen className="text-accent w-5 h-5 md:w-6 md:h-6" /> Program Overview
                         </h3>
-                        <p className="text-gray-400 leading-relaxed text-lg">
+                        <p className="text-gray-400 leading-relaxed text-sm md:text-lg">
                           {activeProgram.longDescription || activeProgram.description}
                         </p>
                       </div>
 
                       {/* Key Highlights Grid */}
-                      <div className="grid md:grid-cols-2 gap-6">
-                        <div className="p-6 rounded-2xl bg-black/40 border border-white/5 hover:border-accent/30 transition-colors group">
-                          <Globe className="w-8 h-8 text-accent mb-4 group-hover:scale-110 transition-transform" />
-                          <h4 className="text-xl font-semibold mb-2">Global Exposure</h4>
-                          <p className="text-gray-400 text-sm">International internships and study tours designed to give you a global perspective.</p>
+                      <div className="grid md:grid-cols-2 gap-4 md:gap-6">
+                        <div className="p-4 md:p-6 rounded-2xl bg-black/40 border border-white/5 hover:border-accent/30 transition-colors group">
+                          <Globe className="w-6 h-6 md:w-8 md:h-8 text-accent mb-3 md:mb-4 group-hover:scale-110 transition-transform" />
+                          <h4 className="text-base md:text-xl font-semibold mb-1 md:mb-2">Global Exposure</h4>
+                          <p className="text-gray-400 text-xs md:text-sm">International internships and study tours designed to give you a global perspective.</p>
                         </div>
-                        <div className="p-6 rounded-2xl bg-black/40 border border-white/5 hover:border-accent/30 transition-colors group">
-                          <Briefcase className="w-8 h-8 text-accent mb-4 group-hover:scale-110 transition-transform" />
-                          <h4 className="text-xl font-semibold mb-2">100% Placement Support</h4>
-                          <p className="text-gray-400 text-sm">Dedicated placement cell working with 500+ top recruiters worldwide.</p>
+                        <div className="p-4 md:p-6 rounded-2xl bg-black/40 border border-white/5 hover:border-accent/30 transition-colors group">
+                          <Briefcase className="w-6 h-6 md:w-8 md:h-8 text-accent mb-3 md:mb-4 group-hover:scale-110 transition-transform" />
+                          <h4 className="text-base md:text-xl font-semibold mb-1 md:mb-2">100% Placement Support</h4>
+                          <p className="text-gray-400 text-xs md:text-sm">Dedicated placement cell working with 500+ top recruiters worldwide.</p>
                         </div>
                       </div>
 
                       {/* Career Paths */}
                       {activeProgram.careers && (
                         <div>
-                          <h3 className="text-2xl font-semibold mb-6 flex items-center gap-3">
-                            <GraduationCap className="text-accent" /> Career Opportunities
+                          <h3 className="text-lg md:text-2xl font-semibold mb-3 md:mb-6 flex items-center gap-3">
+                            <GraduationCap className="text-accent w-5 h-5 md:w-6 md:h-6" /> Career Opportunities
                           </h3>
-                          <div className="flex flex-wrap gap-3">
+                          <div className="flex flex-wrap gap-2 md:gap-3">
                             {activeProgram.careers.map((career, i) => (
                               <span 
                                 key={i} 
-                                className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:bg-white/10 transition-colors cursor-default"
+                                className="px-3 py-1.5 md:px-4 md:py-2 rounded-lg bg-white/5 border border-white/10 text-xs md:text-base text-gray-300 hover:text-white hover:bg-white/10 transition-colors cursor-default"
                               >
                                 {career}
                               </span>
@@ -370,14 +370,14 @@ export default function Programs() {
                       )}
 
                       {/* CTA Section */}
-                      <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row gap-4">
+                      <div className="pt-6 md:pt-8 border-t border-white/10 flex flex-col sm:flex-row gap-3 md:gap-4">
                         <Link href={`/programs/${activeProgram.id}`} className="flex-1">
-                          <Button className="w-full bg-white text-black hover:bg-gray-200 py-6 text-lg rounded-xl">
-                            View Full Details <ArrowRight className="ml-2 w-5 h-5" />
+                          <Button className="w-full bg-white text-black hover:bg-gray-200 py-4 md:py-6 text-base md:text-lg rounded-xl">
+                            View Full Details <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5" />
                           </Button>
                         </Link>
                         <Link href="/admissions/apply" className="flex-1">
-                          <Button variant="outline" className="w-full border-accent text-accent hover:bg-accent hover:text-white py-6 text-lg rounded-xl">
+                          <Button variant="outline" className="w-full border-accent text-accent hover:bg-accent hover:text-white py-4 md:py-6 text-base md:text-lg rounded-xl">
                             Apply Now
                           </Button>
                         </Link>
@@ -397,16 +397,16 @@ export default function Programs() {
       </section>
 
       {/* Why Choose IAER - Feature Section */}
-      <section className="py-24 bg-zinc-950 border-t border-white/5">
+      <section className="py-12 md:py-24 bg-zinc-950 border-t border-white/5">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Why Choose IAER?</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+          <div className="text-center mb-8 md:mb-16">
+            <h2 className="text-2xl md:text-5xl font-bold mb-4 md:mb-6">Why Choose IAER?</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto text-sm md:text-base">
               We go beyond textbooks to provide practical, hands-on learning that prepares you for the real world.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {[
               {
                 title: "Industry Integrated Curriculum",
@@ -430,7 +430,7 @@ export default function Programs() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.2 }}
-                className="group relative overflow-hidden rounded-2xl aspect-[4/5] md:aspect-auto md:h-96"
+                className="group relative overflow-hidden rounded-2xl h-64 md:h-96"
               >
                 <Image
                   src={feature.image}
@@ -438,9 +438,9 @@ export default function Programs() {
                   fill
                   className="object-cover opacity-70 group-hover:scale-110 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent p-8 flex flex-col justify-end">
-                  <h3 className="text-2xl font-bold mb-3 group-hover:text-accent transition-colors">{feature.title}</h3>
-                  <p className="text-gray-400">{feature.desc}</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent p-4 md:p-8 flex flex-col justify-end">
+                  <h3 className="text-lg md:text-2xl font-bold mb-2 md:mb-3 group-hover:text-accent transition-colors">{feature.title}</h3>
+                  <p className="text-gray-400 text-xs md:text-base">{feature.desc}</p>
                 </div>
               </motion.div>
             ))}
