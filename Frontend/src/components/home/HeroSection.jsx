@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { ArrowLeft, ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { handleDownloadBrochure } from "@/lib/download";
 
 const students = [
   {
@@ -34,10 +35,10 @@ export default function HeroSection() {
   const [currentBgIndex, setCurrentBgIndex] = useState(0);
 
   const bgImages = [
-    "/images/home/iaer-future-ready-careers-hero.png",
-    "/images/home/iaer-global-exposure-professional-learning.png",
-    "/images/home/iaer-industry-driven-education-hands-on-training.png",
-    "/images/home/iaer-innovation-integrity-impact-values.png"
+    '/images/BBA.jpg',
+    '/images/BSCCS.jpg',
+    '/images/PGDMLAI.jpg',
+    '/images/BMLT.jpg'
   ];
 
   const nextStudent = () => {
@@ -69,9 +70,8 @@ export default function HeroSection() {
         {bgImages.map((img, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-              currentBgIndex === index ? "opacity-100" : "opacity-0"
-            }`}
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${currentBgIndex === index ? "opacity-100" : "opacity-0"
+              }`}
           >
             <Image
               src={img}
@@ -127,6 +127,7 @@ export default function HeroSection() {
               variant="outline"
               size="lg"
               className="border-white/30 bg-white/5 hover:bg-white/10 text-white px-8 py-6 text-base md:text-lg font-semibold rounded-full hover:-translate-y-1 transition-all duration-300 backdrop-blur-sm"
+              onClick={handleDownloadBrochure}
             >
               Download Brochure
             </Button>
@@ -135,15 +136,15 @@ export default function HeroSection() {
 
         {/* Right Content - Placement Highlight Card */}
         <div className="relative w-full max-w-md mx-auto lg:ml-auto">
-           {/* Decorative Elements */}
-           <div className="absolute -top-12 -right-12 w-32 h-32 bg-accent/30 rounded-full blur-3xl animate-pulse" />
-           <div className="absolute -bottom-12 -left-12 w-32 h-32 bg-blue-600/30 rounded-full blur-3xl animate-pulse delay-1000" />
-           
+          {/* Decorative Elements */}
+          <div className="absolute -top-12 -right-12 w-32 h-32 bg-accent/30 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute -bottom-12 -left-12 w-32 h-32 bg-blue-600/30 rounded-full blur-3xl animate-pulse delay-1000" />
+
           <div className="relative p-6 md:p-8 bg-[#0a0601]/60 backdrop-blur-xl rounded-3xl border border-white/10 shadow-2xl hover:border-accent/30 transition-all duration-500 group">
             <div className="absolute -top-4 -right-4 bg-accent text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-lg ring-4 ring-[#0a0601]/50">
               PLACEMENT HIGHLIGHT
             </div>
-            
+
             <div className="flex flex-col gap-6">
               <div className="flex items-start gap-5">
                 {/* Student Image */}
@@ -171,36 +172,36 @@ export default function HeroSection() {
               </div>
 
               <div className="flex items-center justify-between gap-4 pt-4 border-t border-white/10">
-                 <div className="flex flex-col gap-1.5">
-                    <span className="text-[10px] uppercase tracking-wider text-gray-400 font-semibold">
-                      Placed at
-                    </span>
-                    <div className="relative h-8 w-24 bg-white/90 rounded px-2 flex items-center justify-center shadow-sm">
-                      <Image
-                        src={students[currentStudent].companyLogo}
-                        alt="Company Logo"
-                        fill
-                        className="object-contain p-1.5"
-                      />
-                    </div>
-                 </div>
+                <div className="flex flex-col gap-1.5">
+                  <span className="text-[10px] uppercase tracking-wider text-gray-400 font-semibold">
+                    Placed at
+                  </span>
+                  <div className="relative h-8 w-24 bg-white/90 rounded px-2 flex items-center justify-center shadow-sm">
+                    <Image
+                      src={students[currentStudent].companyLogo}
+                      alt="Company Logo"
+                      fill
+                      className="object-contain p-1.5"
+                    />
+                  </div>
+                </div>
 
-                 <div className="flex items-center gap-2">
-                    <button
-                      onClick={prevStudent}
-                      className="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/20 border border-white/10 transition-colors text-white hover:text-accent"
-                      aria-label="Previous student"
-                    >
-                      <ArrowLeft className="w-5 h-5" />
-                    </button>
-                    <button
-                      onClick={nextStudent}
-                      className="w-10 h-10 flex items-center justify-center rounded-full bg-accent hover:bg-accent/90 shadow-lg transition-colors text-white"
-                      aria-label="Next student"
-                    >
-                      <ArrowRight className="w-5 h-5" />
-                    </button>
-                 </div>
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={prevStudent}
+                    className="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/20 border border-white/10 transition-colors text-white hover:text-accent"
+                    aria-label="Previous student"
+                  >
+                    <ArrowLeft className="w-5 h-5" />
+                  </button>
+                  <button
+                    onClick={nextStudent}
+                    className="w-10 h-10 flex items-center justify-center rounded-full bg-accent hover:bg-accent/90 shadow-lg transition-colors text-white"
+                    aria-label="Next student"
+                  >
+                    <ArrowRight className="w-5 h-5" />
+                  </button>
+                </div>
               </div>
             </div>
           </div>

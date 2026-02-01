@@ -12,56 +12,56 @@ const features = [
     title: "High-Impact Networking Connections",
     description: "IAER connects students with influential industry leaders, hospital administrators, IT specialists, hospitality veterans, aviation professionals, and corporate mentors. Through guest lectures, industrial visits, and expert-led workshops, students build meaningful industry relationships that expand career opportunities.",
     icon: Users,
-    image: "/images/9905060320.jpg"
+    image: "/images/placement/Professional_discussion_in_modern_workspace.png"
   },
   {
     id: 2,
     title: "Technology-Driven, Collaborative Learning Ecosystem",
     description: "IAER blends traditional academics with digital tools, simulation labs, smart classrooms, real-time case studies, and hands-on skill training. Students learn through collaborative projects and industry-aligned assignments that mirror real professional settings.",
     icon: MonitorCheck,
-    image: "/images/tech-learning.jpg"
+    image: "/images/academic/Organised_workspace_with_planning_essentials.png"
   },
   {
     id: 3,
     title: "360° Personal & Professional Development",
     description: "Beyond academics, IAER focuses on shaping confident professionals through leadership development, personality enhancement programs, communication training, corporate grooming sessions, and career mentoring.",
     icon: UserCircle,
-    image: "/images/development.jpg"
+    image: "/images/about/Academic_leader_engaging_with_students.png"
   },
   {
     id: 4,
     title: "A Truly Multi-Disciplinary Institution",
     description: "With four specialized schools (Management, IT, Health Science, and Hospitality) IAER offers a diverse academic ecosystem where students learn across disciplines. This multidisciplinary exposure equips them with broader perspectives.",
     icon: Layers,
-    image: "/images/multidisciplinary.jpg"
+    image: "/images/research-and-innovation/Collaborative_discussion_in_a_research_lab.png"
   },
   {
     id: 5,
     title: "Strong Global Vision & International Relevance",
     description: "IAER strengthens global readiness through international tie-ups, study tours, cultural exchange programs, and globally updated curricula. Students gain exposure to international standards in management, technology, healthcare, and hospitality.",
     icon: Globe2,
-    image: "/images/global-vision.jpg"
+    image: "/images/home/iaer-global-exposure-professional-learning.png"
   },
   {
     id: 6,
     title: "Innovation-Driven Teaching & Industry-Led Skill Development",
     description: "IAER integrates practical learning through labs, workshops, internships, and industry-curated modules. The institution encourages innovation, problem-solving, and entrepreneurship through applied training.",
     icon: Lightbulb,
-    image: "/images/innovation.jpg"
+    image: "/images/research-and-innovation/Students_working_in_advanced_research_lab.png"
   },
   {
     id: 7,
     title: "Career Advancement With 100% Placement Assistance",
     description: "IAER provides structured career mapping, industry internships, certification training, mock interviews, aptitude preparation, and placement assistance. Our strong recruiter network ensures students step confidently into high-potential career paths.",
     icon: TrendingUp,
-    image: "/images/career-advancement.jpg"
+    image: "/images/placement/mock_interviews.png"
   },
   {
     id: 8,
     title: "A Growing Alumni Network Creating Global Impact",
     description: "With over 5,000+ graduates placed across India and abroad, IAER’s alumni community represents success in hospitality chains, leading hospitals, IT companies, and corporate sectors. Students gain lifelong networking avenues.",
     icon: GraduationCap,
-    image: "/images/alumni.jpg"
+    image: "/images/programs/iaer-global-alumni-network.png"
   }
 ];
 

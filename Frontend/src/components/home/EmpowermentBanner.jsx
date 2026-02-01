@@ -3,6 +3,7 @@
 import { useInView } from "react-intersection-observer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, CheckCircle2 } from "lucide-react";
+import { handleDownloadBrochure } from "@/lib/download";
 
 export default function EmpowermentBanner() {
   return (
@@ -69,6 +70,7 @@ function EmpowermentBannerInner() {
             variant="outline"
             size="lg"
             className="h-11 md:h-[50px] rounded-[14px] border-white/40 text-white hover:bg-white/10 hover:text-white/90 bg-transparent px-6 text-sm md:text-[15px] font-semibold flex items-center justify-center"
+            onClick={handleDownloadBrochure}
           >
             Download Brochure
           </Button>
