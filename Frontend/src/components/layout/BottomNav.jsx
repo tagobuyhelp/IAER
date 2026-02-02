@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import LoadNpfScript from "../integrations/LoadNpfScript";
+import EnquiryPopupButton from "../integrations/EnquiryPopupButton";
 import { 
   Home, 
   Link as LinkIcon, 
@@ -195,6 +197,7 @@ export default function BottomNav() {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 safe-area-bottom">
+      <LoadNpfScript />
       <div className="bg-white/95 border-t border-gray-200 backdrop-blur-lg">
         <div className="max-w-6xl mx-auto px-3 py-2 flex items-center gap-2">
           <div className="flex items-center text-xs text-gray-600 mr-auto">
@@ -205,15 +208,12 @@ export default function BottomNav() {
               Apply now or inquire about IAER programs.
             </span>
           </div>
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+          <EnquiryPopupButton
             className="inline-flex items-center justify-center px-3 py-1.5 rounded-full text-xs font-semibold bg-white text-[#100902] border border-gray-300 hover:border-accent hover:text-accent transition-colors"
           >
             <MessageCircle className="w-4 h-4 mr-1.5" />
             Inquire Now
-          </a>
+          </EnquiryPopupButton>
           <Link
             href="https://admission.iaer.ac.in/"
             target="_blank"

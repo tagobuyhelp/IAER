@@ -1,16 +1,16 @@
 // components/EnquiryPopupButton.jsx
 import React, { useCallback } from "react";
 
-const WIDGET_ID = "550974b33503dfc785c6fbf5148e6d84";
+export const WIDGET_ID = "550974b33503dfc785c6fbf5148e6d84";
 /**
  * Try these patterns if one doesn't match the vendor
  * - https://widgets.in8.nopaperforms.com/widget/<id>
  * - https://in8.nopaperforms.com/embed/<id>
  * - ask vendor for "direct form URL"
  */
-const FORM_URL = `https://widgets.in8.nopaperforms.com/widget/${WIDGET_ID}`;
+export const FORM_URL = `https://widgets.in8.nopaperforms.com/widget/${WIDGET_ID}`;
 
-function openCenteredPopup(url, title = "Enquiry", w = 900, h = 700) {
+export function openCenteredPopup(url, title = "Enquiry", w = 900, h = 700) {
     const dualScreenLeft = window.screenLeft ?? window.screenX ?? 0;
     const dualScreenTop = window.screenTop ?? window.screenY ?? 0;
     const width = window.innerWidth ?? document.documentElement.clientWidth ?? screen.width;
@@ -29,7 +29,7 @@ function openCenteredPopup(url, title = "Enquiry", w = 900, h = 700) {
     return win;
 }
 
-export default function EnquiryPopupButton({ className = "", label = "Enquire Now" }) {
+export default function EnquiryPopupButton({ className = "", label = "Enquire Now", children }) {
     const onClick = useCallback(() => {
         // Add optional query params vendor might accept, e.g. styling/theme
         const url = `${FORM_URL}?widgetId=${WIDGET_ID}`;
@@ -43,7 +43,7 @@ export default function EnquiryPopupButton({ className = "", label = "Enquire No
             className={className}
             aria-label="Open enquiry form"
         >
-            {label}
+            {children || label}
         </button>
     );
 }
