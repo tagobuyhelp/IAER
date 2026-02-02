@@ -276,7 +276,7 @@ export default function ProgramClient({ program }) {
               </div>
 
               <div className="space-y-3 md:space-y-4 mb-6 md:mb-8">
-                <Link href="/admissions/how-to-apply" className="block">
+                <Link href="https://admission.iaer.ac.in/" target="_blank" className="block">
                   <Button className="w-full bg-accent hover:bg-accent/90 text-white py-4 md:py-6 text-base md:text-lg rounded-xl shadow-lg shadow-accent/20">
                     Apply Now
                   </Button>
@@ -333,7 +333,8 @@ export default function ProgramClient({ program }) {
             <span>Call</span>
           </a>
           <Link 
-            href="/admissions/how-to-apply" 
+            href="https://admission.iaer.ac.in/"
+            target="_blank" 
             className="flex-[2] flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-accent text-[#0a0601] font-bold hover:bg-accent/90 transition-colors"
           >
             <FileText className="w-4 h-4" />

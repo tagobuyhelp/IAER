@@ -9,7 +9,7 @@ export default function InstitutionalDetails() {
         { icon: Building2, label: "Name of the Institution", value: "Institute of Advance Education & Research (IAER)" },
         { icon: Award, label: "Affiliating University", value: "Maulana Abul Kalam Azad University of Technology (MAKAUT), West Bengal" },
         { icon: ShieldCheck, label: "Recognition", value: "UGC Recognised" },
-        { icon: MapPin, label: "Location", value: "Kolkata, West Bengal" },
+        { icon: MapPin, label: "Location", value: "Plot No 37, Block – Bhangar-II, Near St. Xavier’s University, Newtown Action Area - III, Kolkata, West Bengal, Pin Code - 700 160." },
         { icon: GraduationCap, label: "Mode of Study", value: "Full-Time, On-Campus Programs" },
     ];
 

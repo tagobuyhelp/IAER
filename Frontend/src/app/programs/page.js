@@ -376,7 +376,7 @@ export default function Programs() {
                             View Full Details <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5" />
                           </Button>
                         </Link>
-                        <Link href="/admissions/apply" className="flex-1">
+                        <Link href="https://admission.iaer.ac.in/" target="_blank" className="flex-1">
                           <Button variant="outline" className="w-full border-accent text-accent hover:bg-accent hover:text-white py-4 md:py-6 text-base md:text-lg rounded-xl">
                             Apply Now
                           </Button>

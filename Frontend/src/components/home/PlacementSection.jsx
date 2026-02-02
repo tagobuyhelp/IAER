@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp, Users, Building2, Globe, Sparkles } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 import { cn } from "@/lib/utils";
 
@@ -67,10 +68,13 @@ export default function PlacementSection() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Button
+                asChild
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-sm hover:shadow-lg transition-all duration-300"
               >
-                APPLY NOW <ArrowRight className="ml-2 h-4 w-4" />
+                <Link href="https://admission.iaer.ac.in/" target="_blank">
+                  APPLY NOW <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
               </Button>
               <Button
                 size="lg"

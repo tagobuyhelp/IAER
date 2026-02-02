@@ -241,7 +241,8 @@ export default function AdmissionsHeroSection() {
 
                         <div className="flex flex-wrap gap-4 mb-8">
                             <Link
-                                href="/admissions/apply"
+                                href="https://admission.iaer.ac.in/"
+                                target="_blank"
                                 className="px-8 py-4 bg-accent hover:bg-accent/90 text-white font-bold rounded-xl transition-all shadow-lg shadow-accent/20 hover:shadow-accent/30 hover:-translate-y-1"
                             >
                                 Apply Now

@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, CheckCircle2 } from "lucide-react";
 import { handleDownloadBrochure } from "@/lib/download";
+import Link from "next/link";
 
 export default function EmpowermentBanner() {
   return (
@@ -57,14 +58,17 @@ function EmpowermentBannerInner() {
 
         <div className="relative z-10 flex flex-col sm:flex-row items-center gap-3">
           <Button
+            asChild
             size="lg"
             className="relative overflow-hidden group h-12 md:h-[52px] rounded-[14px] px-7 md:px-9 text-[15px] md:text-base font-semibold tracking-wide bg-white text-primary hover:bg-white shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center"
           >
-            <span className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/60 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-full transition-all duration-700" />
-            <span className="relative inline-flex items-center">
-              Apply Now
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-0.5 transition-transform duration-200" />
-            </span>
+            <Link href="https://admission.iaer.ac.in/" target="_blank">
+              <span className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/60 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-full transition-all duration-700" />
+              <span className="relative inline-flex items-center">
+                Apply Now
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-0.5 transition-transform duration-200" />
+              </span>
+            </Link>
           </Button>
           <Button
             variant="outline"

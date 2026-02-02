@@ -215,7 +215,8 @@ export default function BottomNav() {
             Inquire Now
           </a>
           <Link
-            href="/admissions/how-to-apply"
+            href="https://admission.iaer.ac.in/"
+            target="_blank"
             className="inline-flex items-center justify-center px-3 py-1.5 rounded-full text-xs font-semibold bg-accent  hover:bg-accent/90 transition-colors"
           >
             <FileText className="w-4 h-4 mr-1.5" />

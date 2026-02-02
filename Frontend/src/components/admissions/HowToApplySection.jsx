@@ -3,6 +3,7 @@ import React from "react";
 import { UserPlus, Smartphone, FileText, CreditCard, Upload, Download, Info } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HowToApplySection() {
     const steps = [
@@ -107,14 +108,14 @@ export default function HowToApplySection() {
                                 <p>Applications can be saved and completed later. Keep your login credentials confidential. All updates will be sent to your registered email.</p>
                             </div>
                         </div>
-                        <a
-                            href="https://iaer.in/apply-now" // Assuming external link or internal route
+                        <Link
+                            href="https://admission.iaer.ac.in/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="shrink-0 px-8 py-3 bg-accent text-white font-bold rounded-lg hover:bg-accent/90 transition-all shadow-md hover:shadow-lg whitespace-nowrap shadow-accent/20"
+                            className="shrink-0 px-8 py-3 bg-accent text-white font-bold rounded-lg hover:bg-accent/90 transition-all shadow-md hover:shadow-lg whitespace-nowrap shadow-accent/20 flex items-center justify-center"
                         >
                             Apply Online Now
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

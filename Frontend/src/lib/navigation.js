@@ -7,6 +7,8 @@ export const navigationData = [
         image: "/images/iaer-building.jpg",
         items: [
             { title: "Overview", href: "/about#about-overview", icon: "LayoutDashboard", description: "A brief introduction to IAER." },
+            { title: "Board of Governors", href: "/about/board-of-governors", icon: "Users", description: "Strategic leadership and governance." },
+            { title: "Statutory Committees", href: "/about/statutory-committees", icon: "Gavel", description: "Ensuring compliance and student welfare." },
             { title: "Practical Education", href: "/about#about-practical", icon: "Zap", description: "Skill-based learning approach." },
             { title: "Industry Engagement", href: "/about#about-industry", icon: "Handshake", description: "Corporate connections & partnerships." },
             { title: "Our Identity", href: "/about#about-identity", icon: "Fingerprint", description: "Who we are and what we stand for." },

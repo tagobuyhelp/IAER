@@ -28,7 +28,8 @@ export default function ClosingCTA() {
                             Build Skills. Create Memories. Shape Your Future.
                         </p>
                         <Link 
-                            href="/admissions/apply" 
+                            href="https://admission.iaer.ac.in/"
+                            target="_blank"
                             className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-white rounded-xl font-bold hover:bg-accent/90 transition-all hover:scale-105 shadow-lg shadow-accent/25"
                         >
                             Apply Now <ArrowRight className="w-5 h-5" />

@@ -18,8 +18,9 @@ export default function PlacementCTA() {
                     
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                         <Link 
-                            href="/admissions"
-                            className="px-8 py-4 bg-accent text-white rounded-full font-bold text-lg hover:bg-accent-dark transition-all shadow-lg hover:shadow-xl flex items-center gap-2"
+                            href="https://admission.iaer.ac.in/"
+                            target="_blank"
+                            className="px-8 py-4 bg-accent text-white rounded-full font-bold text-lg hover:bg-accent-dark transition-all shadow-lg shadow-xl flex items-center gap-2"
                         >
                             Apply Now <ArrowRight className="w-5 h-5" />
                         </Link>

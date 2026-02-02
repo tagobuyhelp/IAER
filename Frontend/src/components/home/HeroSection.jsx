@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { ArrowLeft, ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 import { handleDownloadBrochure } from "@/lib/download";
 
 const students = [
@@ -118,10 +119,13 @@ export default function HeroSection() {
 
           <div className="flex flex-col sm:flex-row gap-4 pt-2">
             <Button
+              asChild
               size="lg"
               className="bg-accent hover:bg-accent/90 text-white px-8 py-6 text-base md:text-lg font-bold rounded-full shadow-[0_0_30px_-5px_rgba(247,148,30,0.4)] hover:shadow-[0_0_40px_-5px_rgba(247,148,30,0.6)] hover:-translate-y-1 transition-all duration-300"
             >
-              APPLY TODAY <ArrowRight className="ml-2 w-5 h-5" />
+              <Link href="https://admission.iaer.ac.in/">
+                APPLY TODAY <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
             </Button>
             <Button
               variant="outline"

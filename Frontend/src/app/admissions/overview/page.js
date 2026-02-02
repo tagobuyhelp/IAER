@@ -72,7 +72,8 @@ export default function AdmissionsOverviewPage() {
                                 View Course Fee
                             </Link>
                             <Link
-                                href="/admissions/apply"
+                                href="https://admission.iaer.ac.in/"
+                                target="_blank"
                                 className="inline-flex items-center gap-2 px-6 py-3 bg-[#100902] text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors"
                             >
                                 Apply Now
