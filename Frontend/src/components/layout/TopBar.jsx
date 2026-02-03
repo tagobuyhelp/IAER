@@ -17,22 +17,22 @@ const Pinterest = ({ className }) => (
 export default function TopBar() {
   return (
     <div className="bg-[#0a0601] text-gray-400 py-2 border-b border-white/5 text-xs font-medium relative z-[51]">
-      <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-2">
+      <div className="container mx-auto px-4 flex justify-between items-center h-8 md:h-auto">
         {/* Contact Info */}
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-4 md:gap-6">
           <a href="tel:+919007030123" className="flex items-center gap-2 hover:text-white transition-colors">
             <Phone className="w-3.5 h-3.5" />
             <span>+91 90070 30123</span>
           </a>
-          <a href="mailto:admissions@iaer.in" className="flex items-center gap-2 hover:text-white transition-colors">
+          <a href="mailto:admissions@iaer.in" className="hidden sm:flex items-center gap-2 hover:text-white transition-colors">
             <Mail className="w-3.5 h-3.5" />
             <span>admissions@iaer.in</span>
           </a>
         </div>
 
         {/* Socials & Quick Links */}
-        <div className="flex items-center gap-6">
-          <div className="flex items-center gap-4 border-r border-white/10 pr-6 mr-2">
+        <div className="flex items-center gap-4 md:gap-6">
+          <div className="hidden md:flex items-center gap-4 border-r border-white/10 pr-6 mr-2">
             <Link href="https://www.facebook.com/iaerindia/" target="_blank" aria-label="Facebook" className="hover:text-[#1877F2] transition-colors">
               <Facebook className="w-3.5 h-3.5" />
             </Link>
@@ -54,13 +54,14 @@ export default function TopBar() {
           </div>
 
           <div className="flex items-center gap-4">
-            <Link href="/student-login" className="hover:text-white transition-colors">
-              Student Login
+            <Link href="/student-login" className="hover:text-white transition-colors whitespace-nowrap">
+              <span className="hidden sm:inline">Student Login</span>
+              <span className="sm:hidden">Login</span>
             </Link>
-            <Link href="/alumni" className="hover:text-white transition-colors">
+            <Link href="/alumni" className="hidden md:inline-block hover:text-white transition-colors">
               Alumni
             </Link>
-            <Link href="/contact" className="hover:text-white transition-colors">
+            <Link href="/contact" className="hidden md:inline-block hover:text-white transition-colors">
               Contact
             </Link>
           </div>
