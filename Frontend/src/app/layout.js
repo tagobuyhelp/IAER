@@ -7,6 +7,7 @@ import Footer from "@/components/layout/Footer";
 import BottomNav from "@/components/layout/BottomNav";
 import BackToTop from "@/components/layout/BackToTop";
 import FloatingContactButtons from "@/components/layout/FloatingContactButtons";
+import LinkFixer from "@/components/utils/LinkFixer";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -95,6 +96,7 @@ export default function RootLayout({ children }) {
         <BottomNav />
         <BackToTop />
         <FloatingContactButtons />
+        <LinkFixer />
 
         {/* Google Tag Manager */}
         <Script id="gtm" strategy="afterInteractive">
