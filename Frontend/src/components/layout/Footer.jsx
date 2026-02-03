@@ -121,13 +121,14 @@ export default function Footer() {
   );
 }
 
-function SocialLink({ href, icon: Icon, color }) {
+function SocialLink({ href, icon: Icon, color, label }) {
   return (
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
       className="p-2 bg-white/5 rounded-full hover:bg-white/10 transition-all duration-300 group"
+      aria-label={label}
     >
       <Icon className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
     </a>

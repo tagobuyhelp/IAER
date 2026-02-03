@@ -28,6 +28,7 @@ export default function EvaluationSystemSection() {
                 alt="Classroom Discussion"
                 fill
                 className="object-cover opacity-10"
+                sizes="100vw"
               />
             </div>
       {/* HEADER SECTION */}

@@ -238,6 +238,7 @@ export default function PracticalEducationSection() {
                 alt="Hands-on Electronics Training in India"
                 fill
                 className="object-cover opacity-30"
+                sizes="100vw"
               />
             </div>
       

@@ -107,6 +107,7 @@ export default function TestimonialsSection() {
           alt="IAER Student Success Stories Background"
           fill
           className="object-cover"
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/90 to-primary/90" />
       </div>

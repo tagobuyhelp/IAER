@@ -30,39 +30,7 @@ const SECTION_IDS = [
 ];
 
 export default function Home() {
-  const [activeSection, setActiveSection] = useState("hero");
   const hasUserInteractedRef = useRef(false);
-
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const sections = Array.from(
-      document.querySelectorAll("[data-section-id]")
-    );
-    if (!sections.length) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.intersectionRatio > 0.4) {
-            const id = entry.target.getAttribute("data-section-id");
-            if (id) {
-              setActiveSection(id);
-            }
-          }
-        });
-      },
-      {
-        threshold: [0.4, 0.6],
-      }
-    );
-
-    sections.forEach((section) => observer.observe(section));
-
-    return () => {
-      sections.forEach((section) => observer.unobserve(section));
-      observer.disconnect();
-    };
-  }, []);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -79,7 +47,7 @@ export default function Home() {
     window.addEventListener("keydown", cancelTour, { once: true });
 
     const sections = SECTION_IDS.map((id) =>
-      document.querySelector(`[data-section-id=\"${id}\"]`)
+      document.querySelector(`[data-section-id="${id}"]`)
     ).filter(Boolean);
 
     if (!sections.length) return;
@@ -109,92 +77,40 @@ export default function Home() {
 
   return (
     <main className="min-h-screen">
-      <section
-        id="hero"
-        data-section-id="hero"
-        aria-current={activeSection === "hero" ? "true" : undefined}
-      >
+      <section id="hero" data-section-id="hero">
         <HeroSection />
       </section>
-      <section
-        id="quick-nav"
-        data-section-id="quick-nav"
-        aria-current={activeSection === "quick-nav" ? "true" : undefined}
-      >
+      <section id="quick-nav" data-section-id="quick-nav">
         <QuickNavStrip />
       </section>
-      <section
-        id="stats"
-        data-section-id="stats"
-        aria-current={activeSection === "stats" ? "true" : undefined}
-      >
+      <section id="stats" data-section-id="stats">
         <StatsSection />
       </section>
-      <section
-        id="rankings"
-        data-section-id="rankings"
-        aria-current={activeSection === "rankings" ? "true" : undefined}
-      >
+      <section id="rankings" data-section-id="rankings">
         <RankingsSection />
       </section>
-      <section
-        id="empowerment"
-        data-section-id="empowerment"
-        aria-current={activeSection === "empowerment" ? "true" : undefined}
-      >
+      <section id="empowerment" data-section-id="empowerment">
         <EmpowermentBanner />
       </section>
-      <section
-        id="why-choose"
-        data-section-id="why-choose"
-        aria-current={activeSection === "why-choose" ? "true" : undefined}
-      >
+      <section id="why-choose" data-section-id="why-choose">
         <WhyChooseSection />
       </section>
-      <section
-        id="testimonials"
-        data-section-id="testimonials"
-        aria-current={activeSection === "testimonials" ? "true" : undefined}
-      >
+      <section id="testimonials" data-section-id="testimonials">
         <TestimonialsSection />
       </section>
-      <section
-        id="research"
-        data-section-id="research"
-        aria-current={activeSection === "research" ? "true" : undefined}
-      >
+      <section id="research" data-section-id="research">
         <ResearchInnovationSection />
       </section>
-      <section
-        id="placements"
-        data-section-id="placements"
-        aria-current={activeSection === "placements" ? "true" : undefined}
-      >
+      <section id="placements" data-section-id="placements">
         <PlacementSection />
       </section>
-      <section
-        id="placement-partners"
-        data-section-id="placement-partners"
-        aria-current={
-          activeSection === "placement-partners" ? "true" : undefined
-        }
-      >
+      <section id="placement-partners" data-section-id="placement-partners">
         <PlacementPartners />
       </section>
-      <section
-        id="global-experience"
-        data-section-id="global-experience"
-        aria-current={
-          activeSection === "global-experience" ? "true" : undefined
-        }
-      >
+      <section id="global-experience" data-section-id="global-experience">
         <GlobalExperience />
       </section>
-      <section
-        id="virtual-tour"
-        data-section-id="virtual-tour"
-        aria-current={activeSection === "virtual-tour" ? "true" : undefined}
-      >
+      <section id="virtual-tour" data-section-id="virtual-tour">
         <VirtualTourSection />
       </section>
     </main>

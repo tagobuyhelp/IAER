@@ -41,6 +41,7 @@ function HeroImageSlider() {
                         fill
                         className="object-cover"
                         priority={index === 0}
+                        sizes="100vw"
                     />
                     {/* Gradient Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-[#100902]/50 via-transparent to-transparent" />
@@ -188,6 +189,7 @@ export default function AdmissionsHeroSection() {
                             fill
                             className="object-cover"
                             priority={index === 0}
+                            sizes="100vw"
                         />
                         <div className="absolute inset-0 bg-[#100902]/90" />
                     </div>

@@ -71,8 +71,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* Google Fonts (Material Symbols) */}
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400;600&display=swap" />
       </head>
       <body className={`${dmSans.variable} font-sans antialiased flex flex-col min-h-screen`}>
         {/* Google Tag Manager (noscript) */}

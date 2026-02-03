@@ -65,7 +65,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative text-white min-h-[600px] lg:min-h-[700px] flex items-center py-12 lg:py-20 overflow-hidden">
+    <section className="relative text-white min-h-[400px] lg:min-h-[450px] flex items-center py-12 lg:py-20 overflow-hidden">
       {/* Auto-changing Background Images */}
       <div className="absolute inset-0 z-0">
         {bgImages.map((img, index) => (
@@ -158,6 +158,7 @@ export default function HeroSection() {
                     alt={students[currentStudent].name}
                     fill
                     className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 </div>
 
@@ -186,6 +187,7 @@ export default function HeroSection() {
                       alt="Company Logo"
                       fill
                       className="object-contain p-1.5"
+                      sizes="(max-width: 768px) 100px, 150px"
                     />
                   </div>
                 </div>

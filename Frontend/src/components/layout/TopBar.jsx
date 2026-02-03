@@ -33,22 +33,22 @@ export default function TopBar() {
         {/* Socials & Quick Links */}
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-4 border-r border-white/10 pr-6 mr-2">
-            <Link href="https://www.facebook.com/iaerindia/" target="_blank" className="hover:text-[#1877F2] transition-colors">
+            <Link href="https://www.facebook.com/iaerindia/" target="_blank" aria-label="Facebook" className="hover:text-[#1877F2] transition-colors">
               <Facebook className="w-3.5 h-3.5" />
             </Link>
-            <Link href="https://www.pinterest.com/iaerindia/" target="_blank" className="hover:text-white transition-colors">
+            <Link href="https://www.pinterest.com/iaerindia/" target="_blank" aria-label="Pinterest" className="hover:text-white transition-colors">
               <Pinterest className="w-3.5 h-3.5" />
             </Link>
-            <Link href="https://www.instagram.com/iaerindia/" target="_blank" className="hover:text-[#E4405F] transition-colors">
+            <Link href="https://www.instagram.com/iaerindia/" target="_blank" aria-label="Instagram" className="hover:text-[#E4405F] transition-colors">
               <Instagram className="w-3.5 h-3.5" />
             </Link>
-            <Link href="https://www.linkedin.com/school/iaer/" target="_blank" className="hover:text-[#0A66C2] transition-colors">
+            <Link href="https://www.linkedin.com/school/iaer/" target="_blank" aria-label="LinkedIn" className="hover:text-[#0A66C2] transition-colors">
               <Linkedin className="w-3.5 h-3.5" />
             </Link>
-            <Link href="https://x.com/iaerindia" target="_blank" className="hover:text-[#1DA1F2] transition-colors">
+            <Link href="https://x.com/iaerindia" target="_blank" aria-label="Twitter" className="hover:text-[#1DA1F2] transition-colors">
               <Twitter className="w-3.5 h-3.5" />
             </Link>
-            <Link href="https://www.youtube.com/channel/UCzVuXEZ6EUykVF0qhHKcdfQ/featured" target="_blank" className="hover:text-[#FF0000] transition-colors">
+            <Link href="https://www.youtube.com/channel/UCzVuXEZ6EUykVF0qhHKcdfQ/featured" target="_blank" aria-label="YouTube" className="hover:text-[#FF0000] transition-colors">
               <Youtube className="w-3.5 h-3.5" />
             </Link>
           </div>

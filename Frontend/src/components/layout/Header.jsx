@@ -83,6 +83,7 @@ export default function Header() {
             <Link
               href="https://admission.iaer.ac.in/"
               target="_blank"
+              rel="noopener noreferrer"
               className="hidden lg:inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold text-white uppercase tracking-wider transition-all duration-200 bg-accent hover:bg-accent/90 rounded-full shadow-[0_0_20px_-5px_rgba(255,107,0,0.5)] hover:shadow-[0_0_25px_-5px_rgba(255,107,0,0.6)] hover:-translate-y-0.5"
             >
               Apply Now
@@ -222,6 +223,7 @@ export default function Header() {
           <button
             onClick={() => setIsOpen(false)}
             className="p-2 text-white hover:bg-white/10 rounded-md transition-colors"
+            aria-label="Close menu"
           >
             <X className="h-6 w-6" />
           </button>
