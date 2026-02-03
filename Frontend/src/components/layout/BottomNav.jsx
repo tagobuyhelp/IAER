@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import LoadNpfScript from "../integrations/LoadNpfScript";
 import EnquiryPopupButton from "../integrations/EnquiryPopupButton";
 import { 
   Home, 
@@ -197,7 +196,6 @@ export default function BottomNav() {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 safe-area-bottom">
-      <LoadNpfScript />
       <div className="bg-white/95 border-t border-gray-200 backdrop-blur-lg">
         <div className="max-w-6xl mx-auto px-3 py-2 flex items-center gap-2">
           <div className="flex items-center text-xs text-gray-600 mr-auto">
