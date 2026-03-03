@@ -4,6 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import HeroSection from "@/components/home/HeroSection";
 import QuickNavStrip from "@/components/home/QuickNavStrip";
 import StatsSection from "@/components/home/StatsSection";
+import ProgramsSection from "@/components/home/ProgramsSection";
 import RankingsSection from "@/components/home/RankingsSection";
 import PlacementSection from "@/components/home/PlacementSection";
 import PlacementPartners from "@/components/home/PlacementPartners";
@@ -18,6 +19,7 @@ const SECTION_IDS = [
   "hero",
   "quick-nav",
   "stats",
+  "programs",
   "rankings",
   "empowerment",
   "why-choose",
@@ -85,6 +87,9 @@ export default function Home() {
       </section>
       <section id="stats" data-section-id="stats">
         <StatsSection />
+      </section>
+      <section id="programs" data-section-id="programs">
+        <ProgramsSection />
       </section>
       <section id="rankings" data-section-id="rankings">
         <RankingsSection />
