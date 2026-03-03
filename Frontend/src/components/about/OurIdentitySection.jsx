@@ -140,7 +140,7 @@ export default function OurIdentitySection() {
                 </div>
                 <div className="text-center sm:text-left">
                   <h3 className="text-lg font-bold text-gray-900 mb-2">Symbol of Growth & Excellence</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">
+                  <p className="text-sm text-gray-600 leading-relaxed text-justify">
                     The IAER emblem is more than just a logo; it's a representation of our philosophy.
                     Rooted in tradition yet branching out to the future, it embodies our commitment to
                     holistic education where academic excellence, ethics, and innovation grow together.

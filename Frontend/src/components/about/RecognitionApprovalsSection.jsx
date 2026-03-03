@@ -6,56 +6,76 @@ import {
   Award,
   Building2,
   GraduationCap,
-  Users,
   FileCheck,
   BadgeCheck,
-  Sparkles,
-  Star,
   Shield,
   Check,
+  ExternalLink,
+  ChevronRight,
+  Landmark,
+  Globe,
+  Briefcase,
 } from "lucide-react";
 import Image from "next/image";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import { useInView } from "react-intersection-observer";
 import { cn } from "@/lib/utils";
 
-// Compact Recognition Item
-function RecognitionItem({ icon: Icon, text, delay = 0, index }) {
+// Infographic Card for Recognition
+function RecognitionInfographicCard({ icon: Icon, title, description, delay = 0, index }) {
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
 
   return (
     <div
       ref={ref}
       className={cn(
-        "flex gap-3 items-start p-3 rounded-lg border border-transparent hover:border-gray-100 hover:bg-gray-50 transition-all duration-300 group",
-        inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
+        "group relative p-6 rounded-2xl bg-white border border-gray-100 shadow-sm transition-all duration-500 hover:shadow-xl hover:-translate-y-1 overflow-hidden",
+        inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
       )}
-      style={{ transitionDelay: `${delay + index * 50}ms` }}
+      style={{ transitionDelay: `${delay + index * 100}ms` }}
     >
-      <div className="flex-shrink-0 mt-0.5 p-1.5 rounded-md bg-primary/5 text-primary group-hover:bg-primary/10 transition-colors">
-        <Icon className="w-4 h-4" />
+      {/* Decorative Background Shape */}
+      <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-bl-full -mr-12 -mt-12 transition-all duration-500 group-hover:bg-primary/10 group-hover:scale-150" />
+      
+      <div className="relative z-10">
+        <div className="inline-flex p-3 rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 text-primary mb-4 group-hover:scale-110 transition-transform duration-300">
+          <Icon className="w-6 h-6" />
+        </div>
+        <h3 className="text-base font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+          {title}
+        </h3>
+        <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+          {description}
+        </p>
       </div>
-      <p className="text-xs sm:text-sm text-gray-600 leading-relaxed group-hover:text-gray-900 transition-colors">
-        {text}
-      </p>
+      
+      {/* Bottom accent line */}
+      <div className="absolute bottom-0 left-0 h-1 w-0 bg-primary transition-all duration-500 group-hover:w-full" />
     </div>
   );
 }
 
-// Logo Component
-function LogoBox({ src, alt, index }) {
+// Circular Infographic Step
+function InfographicStep({ icon: Icon, label, subLabel, index }) {
   return (
     <div 
-      className="relative h-12 bg-white rounded-lg border border-gray-100 flex items-center justify-center p-2 hover:border-accent/30 hover:shadow-sm transition-all duration-300"
-      style={{ transitionDelay: `${index * 50}ms` }}
+      className="flex flex-col items-center text-center group"
+      style={{ transitionDelay: `${index * 100}ms` }}
     >
-      <Image
-        src={src}
-        alt={alt}
-        fill
-        className="object-contain p-1.5"
-        sizes="100px"
-      />
+      <div className="relative mb-3">
+        {/* Connection line for desktop */}
+        {index < 3 && (
+          <div className="hidden lg:block absolute top-1/2 left-full w-full h-0.5 bg-gray-100 -z-10" />
+        )}
+        <div className="w-14 h-14 rounded-full bg-white border-2 border-primary/20 flex items-center justify-center text-primary shadow-sm group-hover:border-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
+          <Icon className="w-6 h-6" />
+        </div>
+        <div className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-accent text-[10px] font-bold text-white flex items-center justify-center">
+          {index + 1}
+        </div>
+      </div>
+      <span className="text-xs font-bold text-gray-900 mb-1">{label}</span>
+      <span className="text-[10px] text-gray-500 uppercase tracking-tighter">{subLabel}</span>
     </div>
   );
 }
@@ -66,27 +86,34 @@ export default function RecognitionApprovalsSection() {
     triggerOnce: true,
   });
 
-  const recognitionItems = [
+  const recognitionCards = [
     {
-      text: "Affiliated to MAKAUT, West Bengal (formerly WBUT).",
+      title: "MAKAUT Affiliation",
+      description: "IAER is a constituent college of MAKAUT, West Bengal, ensuring your degree is recognized nationally.",
       icon: GraduationCap,
     },
     {
-      text: "Approved by AICTE for technical education programs.",
+      title: "AICTE Approval",
+      description: "Our technical and management programs are approved by the All India Council for Technical Education.",
       icon: FileCheck,
     },
     {
-      text: "Recognised by CII, NHRDN, and NSDC.",
-      icon: Building2,
+      title: "Industry Partnerships",
+      description: "Recognized and partnered with leading bodies like CII, NSDC, and NHRDN for skill excellence.",
+      icon: Briefcase,
     },
     {
-      text: "Compliant with state and national regulatory guidelines.",
-      icon: ShieldCheck,
+      title: "Global Standards",
+      description: "Our curriculum meets international quality benchmarks for higher education and professional training.",
+      icon: Globe,
     },
-    {
-      text: "Industry partnerships for curriculum and placement.",
-      icon: Users,
-    },
+  ];
+
+  const steps = [
+    { icon: Landmark, label: "MAKAUT", subLabel: "Affiliation" },
+    { icon: FileCheck, label: "AICTE", subLabel: "Approval" },
+    { icon: Briefcase, label: "CII/NHRD", subLabel: "Partnership" },
+    { icon: ShieldCheck, label: "NSDC", subLabel: "Certification" },
   ];
 
   const logos = [
@@ -99,131 +126,113 @@ export default function RecognitionApprovalsSection() {
   ];
 
   return (
-    <section className="py-10 lg:py-12 bg-gradient-to-b from-white via-gray-50/50 to-white relative overflow-hidden">
-      <div className="absolute inset-0 z-0 pointer-events-none">
-              <Image
-                src="/images/about/Regulatory_compliance_review_meeting.png"
-                alt="Academic Leader Engaging with Students"
-                fill
-                className="object-cover opacity-30"
-              />
-            </div>
+    <section className="py-16 lg:py-24 bg-white relative overflow-hidden">
+      {/* Decorative Background Pattern */}
+      <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+              <circle cx="2" cy="2" r="2" fill="currentColor" className="text-primary" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#dots)" />
+        </svg>
+      </div>
+
       <div className="container mx-auto px-4 relative z-10">
-        <RevealOnScroll className="mb-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-            <div className="max-w-2xl">
-              <div
-                ref={headerRef}
-                className={cn(
-                  "inline-flex items-center gap-2 mb-2 transition-all duration-500",
-                  headerInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
-                )}
-              >
-                <Shield className="w-4 h-4 text-primary" aria-hidden="true" />
-                <span className="text-xs font-bold tracking-wider uppercase text-primary">
-                  Official Recognition
-                </span>
-              </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight">
-                Approvals & <span className="text-primary">Affiliations</span>
-              </h2>
+        {/* Header Section */}
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <RevealOnScroll>
+            <div
+              ref={headerRef}
+              className={cn(
+                "inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 border border-primary/10 mb-6 transition-all duration-500",
+                headerInView ? "opacity-100 scale-100" : "opacity-0 scale-95"
+              )}
+            >
+              <Shield className="w-4 h-4 text-primary" aria-hidden="true" />
+              <span className="text-xs font-bold tracking-widest uppercase text-primary">
+                Trusted Credentials
+              </span>
             </div>
-            
-            <div className="hidden md:flex items-center gap-2 text-xs font-medium text-gray-500 bg-white px-3 py-1.5 rounded-full border border-gray-100 shadow-sm">
-              <BadgeCheck className="w-3.5 h-3.5 text-accent" />
-              <span>Govt. Approved</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
+              Approved, Affiliated & <span className="text-primary">Nationally Recognized</span>
+            </h2>
+            <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
+              IAER is fully compliant with national regulatory bodies, ensuring your education 
+              meets the highest standards of quality and credibility in the industry.
+            </p>
+          </RevealOnScroll>
+        </div>
+
+        {/* Horizontal Infographic Flow */}
+        <div className="max-w-5xl mx-auto mb-20 px-4">
+          <RevealOnScroll delay={100}>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 relative">
+              {steps.map((step, index) => (
+                <InfographicStep key={index} {...step} index={index} />
+              ))}
             </div>
-          </div>
-        </RevealOnScroll>
+          </RevealOnScroll>
+        </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-          {/* Left Column: Content (8 cols) */}
-          <div className="lg:col-span-8 space-y-6">
-            {/* Hero Card */}
-            <RevealOnScroll delay={100}>
-              <div className="rounded-xl bg-gradient-to-br from-primary/5 via-transparent to-accent/5 border border-primary/10 p-6 flex flex-col sm:flex-row items-center gap-6 relative overflow-hidden">
-                 <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-full blur-2xl -mr-10 -mt-10" />
-                 
-                 <div className="relative p-4 rounded-full bg-white shadow-sm border border-gray-100 flex-shrink-0">
-                    <ShieldCheck className="w-8 h-8 text-primary" />
-                 </div>
-                 <div className="text-center sm:text-left relative z-10">
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">Nationally Recognized</h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">
-                      IAER operates under established statutory frameworks. Our programs are aligned with 
-                      regulatory expectations to ensure credibility, quality education, and nationwide 
-                      acceptance of your degree.
-                    </p>
-                 </div>
+        {/* Infographic Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+          {recognitionCards.map((card, index) => (
+            <RecognitionInfographicCard key={index} {...card} index={index} />
+          ))}
+        </div>
+
+        {/* Logo Showcase Section */}
+        <div className="bg-gray-50/50 rounded-3xl p-8 lg:p-12 border border-gray-100">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div className="lg:col-span-4">
+              <div className="inline-flex p-2 rounded-lg bg-accent/10 text-accent mb-4">
+                <BadgeCheck className="w-5 h-5" />
               </div>
-            </RevealOnScroll>
-
-            {/* Recognition List */}
-            <RevealOnScroll delay={200}>
-              <div className="bg-white rounded-xl border border-gray-100 p-5 shadow-sm">
-                <div className="flex items-center gap-2 mb-4">
-                   <FileCheck className="w-5 h-5 text-accent" />
-                   <h3 className="font-bold text-gray-900 text-base">Key Approvals</h3>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                  {recognitionItems.map((item, index) => (
-                    <RecognitionItem
-                      key={index}
-                      icon={item.icon}
-                      text={item.text}
-                      index={index}
-                      delay={200}
-                    />
-                  ))}
-                </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Regulatory Compliance</h3>
+              <p className="text-sm text-gray-600 mb-6 leading-relaxed">
+                We take pride in our strict adherence to statutory guidelines, providing students 
+                with the peace of mind that their degrees and certifications are legitimate and valuable.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {["MAKAUT", "AICTE", "NSDC", "CII", "MSME"].map((tag) => (
+                  <span key={tag} className="px-3 py-1.5 rounded-full bg-white text-[10px] font-bold text-primary border border-gray-200 shadow-sm flex items-center gap-1.5">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-green-500" />
+                    {tag}
+                  </span>
+                ))}
               </div>
-            </RevealOnScroll>
-          </div>
+            </div>
 
-          {/* Right Column: Logos & Trust (4 cols) */}
-          <div className="lg:col-span-4 space-y-4">
-            {/* Affiliations Grid */}
-            <RevealOnScroll delay={300}>
-              <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-5 h-full">
-                <div className="flex items-center gap-2 mb-4">
-                   <Building2 className="w-4 h-4 text-primary" />
-                   <h3 className="font-bold text-gray-900 text-sm">Affiliated With</h3>
-                </div>
-                <div className="grid grid-cols-2 gap-3">
-                  {logos.map((logo, index) => (
-                    <LogoBox key={logo.alt} src={logo.src} alt={logo.alt} index={index} />
-                  ))}
-                </div>
-                
-                <div className="mt-4 pt-4 border-t border-gray-50">
-                  <div className="flex flex-wrap gap-2">
-                    {["MAKAUT", "AICTE", "NSDC", "CII"].map((tag) => (
-                      <span key={tag} className="px-2 py-1 rounded-md bg-gray-50 text-[10px] font-medium text-gray-600 border border-gray-100 flex items-center gap-1">
-                        <Check className="w-2.5 h-2.5 text-green-500" />
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </RevealOnScroll>
-
-            {/* Certified Badge */}
-            <RevealOnScroll delay={400}>
-               <div className="bg-primary rounded-xl p-5 text-white shadow-md relative overflow-hidden group">
-                  <div className="absolute top-0 right-0 w-20 h-20 bg-white/10 rounded-bl-full -mr-5 -mt-5 transition-transform group-hover:scale-110" />
-                  
-                  <div className="relative z-10">
-                    <div className="flex items-center gap-2 mb-3">
-                      <Award className="w-4 h-4 text-accent" />
-                      <h3 className="font-bold text-sm">Certified Excellence</h3>
+            <div className="lg:col-span-8">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+                {logos.map((logo, index) => (
+                  <RevealOnScroll key={index} delay={index * 100}>
+                    <div className="group relative h-32 sm:h-40 bg-white rounded-3xl border border-gray-100 flex items-center justify-center p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-xl overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <div className="relative w-full h-full z-10">
+                        <Image
+                          src={logo.src}
+                          alt={logo.alt}
+                          fill
+                          className="object-contain transition-transform duration-300 group-hover:scale-110"
+                          sizes="(max-width: 768px) 50vw, 33vw"
+                        />
+                      </div>
                     </div>
-                    <p className="text-xs leading-relaxed opacity-90">
-                      Fully compliant with national educational standards and quality benchmarks.
-                    </p>
-                  </div>
-               </div>
-            </RevealOnScroll>
+                  </RevealOnScroll>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Trust Bar */}
+        <div className="mt-16 text-center">
+          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-2xl bg-primary text-white shadow-xl shadow-primary/20">
+            <ShieldCheck className="w-5 h-5 text-accent" />
+            <span className="text-sm font-bold tracking-wide">100% Statutory & Regulatory Compliance Verified</span>
           </div>
         </div>
       </div>

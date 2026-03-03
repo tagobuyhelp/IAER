@@ -605,9 +605,9 @@ export default function AboutOverviewSection() {
           </div>
 
           <h2 className="text-4xl lg:text-5xl font-bold text-[#100902] leading-tight">
-            About <br />
+            
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-              Our Institute
+                About IAER
             </span>
           </h2>
 

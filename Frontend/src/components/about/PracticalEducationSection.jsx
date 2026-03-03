@@ -259,22 +259,25 @@ export default function PracticalEducationSection() {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header Section */}
-        <RevealOnScroll className="max-w-4xl mx-auto text-center">
-          <div
-            ref={headerRef}
-            className={cn(
-              "inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-accent/20 to-accent/10 border border-accent/40 backdrop-blur-sm mb-6 transition-all duration-500",
-              headerInView ? "opacity-100 scale-100" : "opacity-0 scale-95"
-            )}
-          >
-            <Award className="w-4 h-4 text-accent" aria-hidden="true" />
-            <span className="text-xs font-bold tracking-wide uppercase text-white">
-              Best Educational Institution for Skill-Based Learning
-            </span>
+        <RevealOnScroll className="max-w-4xl mx-auto">
+          <div className="text-center mb-6">
+            <div
+              ref={headerRef}
+              className={cn(
+                "inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-accent/20 to-accent/10 border border-accent/40 backdrop-blur-sm transition-all duration-500",
+                headerInView ? "opacity-100 scale-100" : "opacity-0 scale-95"
+              )}
+            >
+              <Award className="w-4 h-4 text-accent" aria-hidden="true" />
+              <span className="text-xs font-bold tracking-wide uppercase text-white">
+                Best Educational Institution for Skill-Based Learning
+              </span>
+            </div>
           </div>
+          
           <h2
             className={cn(
-              "text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6",
+              "text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 text-center",
               "bg-gradient-to-r from-white via-accent/90 to-white bg-clip-text text-transparent",
               headerInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             )}
@@ -284,7 +287,7 @@ export default function PracticalEducationSection() {
           </h2>
           <p
             className={cn(
-              "text-base sm:text-lg text-gray-200 leading-relaxed mb-3",
+              "text-sm sm:text-base text-gray-200 leading-relaxed mb-4 text-justify",
               headerInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             )}
             style={{ transition: "all 0.6s ease-out 0.4s" }}
@@ -296,7 +299,7 @@ export default function PracticalEducationSection() {
           </p>
           <p
             className={cn(
-              "text-sm sm:text-base text-gray-300 leading-relaxed",
+              "text-sm sm:text-base text-gray-300 leading-relaxed text-justify",
               headerInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             )}
             style={{ transition: "all 0.6s ease-out 0.6s" }}
@@ -339,7 +342,7 @@ export default function PracticalEducationSection() {
               </div>
               <h3 className="text-xl font-bold">Real-World Preparedness</h3>
             </div>
-            <p className="text-sm leading-relaxed text-gray-200 mb-4">
+            <p className="text-sm leading-relaxed text-gray-200 mb-4 text-justify">
               Our practical education approach ensures students are not just academically qualified
               but also industry-ready, equipped with hands-on experience and real-world problem-solving
               skills that employers value.

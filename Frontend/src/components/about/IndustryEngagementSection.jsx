@@ -270,7 +270,7 @@ export default function IndustryEngagementSection() {
                    <div>
                       <h3 className="text-lg font-bold text-gray-900 flex items-center gap-2">
                         <Star className="w-4 h-4 text-accent fill-accent" />
-                        Our Placement Partners
+                        Our Students are working with:
                       </h3>
                       <p className="text-xs text-gray-500 mt-0.5">Leading organisations across sectors</p>
                    </div>
@@ -280,12 +280,12 @@ export default function IndustryEngagementSection() {
                    </div>
                 </div>
 
-                <div className="space-y-4 relative z-10 flex-1 flex flex-col justify-center">
-                  <Marquee speed={35} autoFill gradient={true} gradientColor={[255, 255, 255]} className="overflow-y-hidden py-1">
+                <div className="space-y-6 relative z-10 flex-1 flex flex-col justify-center">
+                  <Marquee speed={35} autoFill gradient={true} gradientColor={[255, 255, 255]} className="overflow-y-hidden py-2">
                     {companies.slice(0, Math.ceil(companies.length / 2)).map((company, index) => (
                       <div 
                         key={`${company.name}-row1-${index}`} 
-                        className="w-[120px] h-[60px] mx-2 bg-white rounded-lg border border-gray-100 shadow-sm flex items-center justify-center p-3  hover:grayscale-0 hover:opacity-100 transition-all duration-300 hover:scale-105 hover:shadow-md cursor-pointer"
+                        className="w-[120px] h-[60px] md:w-[160px] md:h-[80px] mx-3 bg-white rounded-xl border border-gray-100 shadow-sm flex items-center justify-center p-4 hover:grayscale-0 hover:opacity-100 transition-all duration-300 hover:scale-105 hover:shadow-md cursor-pointer"
                       >
                         {company.logo ? (
                           <div className="relative w-full h-full">
@@ -293,22 +293,22 @@ export default function IndustryEngagementSection() {
                               src={company.logo}
                               alt={company.name}
                               fill
-                              className="object-contain"
-                              sizes="120px"
+                              className="object-contain transition-transform duration-300 hover:scale-110"
+                              sizes="(max-width: 768px) 120px, 160px"
                             />
                           </div>
                         ) : (
-                          <span className="text-xs font-semibold text-gray-600 text-center">{company.name}</span>
+                          <span className="text-xs md:text-sm font-semibold text-gray-600 text-center">{company.name}</span>
                         )}
                       </div>
                     ))}
                   </Marquee>
 
-                  <Marquee speed={35} autoFill direction="right" gradient={true} gradientColor={[255, 255, 255]} className="overflow-y-hidden py-1">
+                  <Marquee speed={35} autoFill direction="right" gradient={true} gradientColor={[255, 255, 255]} className="overflow-y-hidden py-2">
                     {companies.slice(Math.ceil(companies.length / 2)).map((company, index) => (
                       <div 
                         key={`${company.name}-row2-${index}`} 
-                        className="w-[120px] h-[60px] mx-2 bg-white rounded-lg border border-gray-100 shadow-sm flex items-center justify-center p-3  hover:grayscale-0 hover:opacity-100 transition-all duration-300 hover:scale-105 hover:shadow-md cursor-pointer"
+                        className="w-[120px] h-[60px] md:w-[160px] md:h-[80px] mx-3 bg-white rounded-xl border border-gray-100 shadow-sm flex items-center justify-center p-4 hover:grayscale-0 hover:opacity-100 transition-all duration-300 hover:scale-105 hover:shadow-md cursor-pointer"
                       >
                         {company.logo ? (
                           <div className="relative w-full h-full">
@@ -317,11 +317,11 @@ export default function IndustryEngagementSection() {
                               alt={company.name}
                               fill
                               className="object-contain"
-                              sizes="120px"
+                              sizes="(max-width: 768px) 120px, 160px"
                             />
                           </div>
                         ) : (
-                          <span className="text-xs font-semibold text-gray-600 text-center">{company.name}</span>
+                          <span className="text-xs md:text-sm font-semibold text-gray-600 text-center">{company.name}</span>
                         )}
                       </div>
                     ))}
