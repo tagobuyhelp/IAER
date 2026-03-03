@@ -121,10 +121,10 @@ export default function RankingsSection() {
                     <ShieldCheck className="w-5 h-5 text-primary" />
                     Affiliation &amp; Approval
                   </h3>
-                  <div className="space-y-4">
+                  <div className="space-y-4 grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="group flex items-center justify-between gap-4">
                       <div className="flex items-center gap-4">
-                        <div className="relative w-14 h-14 md:w-16 md:h-16 rounded-xl bg-primary/5 border border-primary/20 flex items-center justify-center overflow-hidden p-2 transition-all duration-200 group-hover:scale-[1.03] group-hover:saturate-125">
+                        <div className="relative w-20 h-20 md:w-40 md:h-40 rounded-xl bg-primary/5 border border-primary/20 flex items-center justify-center overflow-hidden p-3 transition-all duration-200 group-hover:scale-[1.03] group-hover:saturate-125">
                           <img
                             src="/images/MAKAUT-aff.png"
                             alt="MAKAUT Affiliation"
@@ -151,7 +151,7 @@ export default function RankingsSection() {
                     </div>
                     <div className="group flex items-center justify-between gap-4">
                       <div className="flex items-center gap-4">
-                        <div className="relative w-14 h-14 md:w-16 md:h-16 rounded-xl bg-accent/10 border border-accent/25 flex items-center justify-center overflow-hidden p-2 transition-all duration-200 group-hover:scale-[1.03] group-hover:saturate-125">
+                        <div className="relative w-20 h-20 md:w-36 md:h-36 rounded-xl bg-accent/10 border border-accent/25 flex items-center justify-center overflow-hidden p-3 transition-all duration-200 group-hover:scale-[1.03] group-hover:saturate-125">
                           <img
                             src="/images/AICTE-aff.png"
                             alt="AICTE Affiliation"
