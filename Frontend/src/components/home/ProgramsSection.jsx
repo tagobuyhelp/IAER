@@ -12,10 +12,13 @@ import {
   GraduationCap, 
   BookOpen,
   Sparkles,
-  ArrowUpRight
+  ArrowUpRight,
+  MapPin,
+  Download
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { handleDownloadBrochure } from "@/lib/download";
 
 export default function ProgramsSection() {
   const [activeTab, setActiveTab] = useState("All");
@@ -132,7 +135,7 @@ export default function ProgramsSection() {
         <div 
           ref={scrollRef}
           onScroll={checkScroll}
-          className="flex gap-6 overflow-x-auto pb-12 pt-4 scrollbar-hide no-scrollbar -mx-4 px-4 snap-x snap-mandatory"
+          className="flex gap-6 overflow-x-auto pb-12 pt-4 scrollbar-hide no-scrollbar  px-4 snap-x snap-mandatory"
         >
           {filteredPrograms.map((program) => (
             <div 
@@ -170,37 +173,54 @@ export default function ProgramsSection() {
                 </div>
 
                 {/* Content Section */}
-                <div className="flex-1 p-6 md:p-8 flex flex-col">
-                  <h3 className="text-xl md:text-2xl font-black text-gray-900 leading-tight mb-3 group-hover:text-primary transition-colors">
+                <div className="flex-1 p-5 md:p-6 flex flex-col">
+                  <h3 className="text-lg md:text-xl font-black text-gray-900 leading-tight mb-2 group-hover:text-primary transition-colors">
                     {program.title.replace(` (${program.code})`, "")}
                   </h3>
                   
-                  <p className="text-sm text-gray-500 leading-relaxed mb-6 line-clamp-2">
-                    {program.careerOutcomes.description}
+                  <p className="text-xs text-gray-500 font-medium mb-4">
+                    {program.subtitle}
                   </p>
 
-                  <div className="mt-auto space-y-4">
-                    <div className="flex flex-wrap gap-2">
-                      {program.curriculum.specializations?.slice(0, 2).map(spec => (
-                        <span key={spec} className="px-3 py-1 rounded-md bg-gray-50 text-[10px] font-bold text-gray-600 border border-gray-100 uppercase tracking-tighter">
-                          {spec}
-                        </span>
-                      ))}
+                  <div className="space-y-2 text-sm mb-5">
+                    <div className="flex items-start gap-2.5">
+                        <Clock className="w-3.5 h-3.5 text-accent mt-0.5 flex-shrink-0" />
+                        <p className="text-gray-600 text-xs"><span className="font-bold text-gray-800">Duration:</span> {program.overview.duration}</p>
                     </div>
+                    <div className="flex items-start gap-2.5">
+                      <GraduationCap className="w-3.5 h-3.5 text-accent mt-0.5 flex-shrink-0" />
+                      <p className="text-gray-600 text-xs"><span className="font-bold text-gray-800">Eligibility:</span> {program.overview.eligibility}</p>
+                    </div>
+                    <div className="flex items-start gap-2.5">
+                      <MapPin className="w-3.5 h-3.5 text-accent mt-0.5 flex-shrink-0" />
+                      <p className="text-gray-600 text-xs"><span className="font-bold text-gray-800">Mode:</span> {program.overview.mode}</p>
+                    </div>
+                  </div>
 
-                    <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                  <div className="mt-auto pt-3 border-t border-gray-100">
+                    <div className="flex items-center justify-between mb-4">
                       <div className="flex flex-col">
-                        <span className="text-[9px] uppercase tracking-widest text-gray-400 font-bold mb-0.5">Starting From</span>
+                        <span className="text-[9px] uppercase tracking-widest text-gray-400 font-bold mb-0.5">Course Fee</span>
                         <span className="text-lg font-black text-primary leading-none">{program.fees.total.split(",000")[0]},000</span>
                       </div>
-                      
-                      <Link 
-                        href={`/programs/${program.id}`}
-                        className="flex items-center gap-2 text-xs font-black text-primary hover:text-accent transition-colors group/btn uppercase tracking-widest"
-                      >
-                        Details
-                        <ArrowUpRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
-                      </Link>
+                      <div className="flex items-center gap-2">
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={handleDownloadBrochure}
+                          className="text-gray-500 hover:text-primary font-bold group px-3 py-1.5 h-auto text-xs hidden md:inline-flex"
+                        >
+                          <Download className="w-3.5 h-3.5 mr-1.5" />
+                          Brochure
+                        </Button>
+                        <Link 
+                          href={`/programs/${program.id}`}
+                          className="group/btn inline-flex items-center justify-center px-4 py-1.5 rounded-lg bg-primary/5 text-primary font-bold text-xs hover:bg-primary hover:text-white transition-all duration-300"
+                        >
+                          Explore
+                          <ArrowRight className="w-3.5 h-3.5 ml-1.5 transition-transform group-hover/btn:translate-x-1" />
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
