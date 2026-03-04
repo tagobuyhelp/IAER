@@ -14,6 +14,7 @@ import WhyChooseSection from "@/components/home/WhyChooseSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import ResearchInnovationSection from "@/components/home/ResearchInnovationSection";
 import VirtualTourSection from "@/components/home/VirtualTourSection";
+import InternationalImmersion from "@/components/home/InternationalImmersion";
 
 const SECTION_IDS = [
   "hero",
@@ -28,6 +29,7 @@ const SECTION_IDS = [
   "placements",
   "placement-partners",
   "global-experience",
+  "international-immersion",
   "virtual-tour",
 ];
 
@@ -114,6 +116,9 @@ export default function Home() {
       </section>
       <section id="global-experience" data-section-id="global-experience">
         <GlobalExperience />
+      </section>
+      <section id="international-immersion" data-section-id="international-immersion">
+        <InternationalImmersion />
       </section>
       <section id="virtual-tour" data-section-id="virtual-tour">
         <VirtualTourSection />

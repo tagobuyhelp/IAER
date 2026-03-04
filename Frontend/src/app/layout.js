@@ -149,9 +149,9 @@ export default function RootLayout({ children }) {
             },
             "contactPoint": {
               "@type": "ContactPoint",
-              "telephone": "+91-8001110000", // Replace with actual IAER phone if known, using placeholder or omitting
+              "telephone": "+91 800 111 0000",
               "contactType": "Admissions",
-              "email": "admission@iaer.in" // Replace with actual IAER email if known
+              "email": "admission@iaer.in"
             },
             "sameAs": [
               "https://www.facebook.com/iaer",

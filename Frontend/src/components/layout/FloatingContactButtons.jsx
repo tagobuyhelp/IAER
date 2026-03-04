@@ -16,8 +16,8 @@ const WhatsAppIcon = ({ className }) => (
 );
 
 export default function FloatingContactButtons() {
-  const phoneNumber = "+919007030123";
-  const whatsappNumber = "+919007030123";
+  const phoneNumber = "+918001110000";
+  const whatsappNumber = "+918100106665";
   const whatsappMessage = "Hi, I am interested in IAER programs.";
 
   return (

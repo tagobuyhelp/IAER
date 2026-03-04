@@ -45,6 +45,7 @@ const sectionConfig = {
     { id: "hero", label: "Home", icon: Home },
     { id: "quick-nav", label: "Quick Links", icon: LinkIcon },
     { id: "stats", label: "Key Stats", icon: BarChart2 },
+    { id: "programs", label: "Programs", icon: BookOpen },
     { id: "rankings", label: "Rankings", icon: Trophy },
     { id: "empowerment", label: "Empowerment", icon: Zap },
     { id: "why-choose", label: "Why Us", icon: HelpCircle },
@@ -53,6 +54,7 @@ const sectionConfig = {
     { id: "placements", label: "Placements", icon: Briefcase },
     { id: "placement-partners", label: "Partners", icon: Handshake },
     { id: "global-experience", label: "Global", icon: Globe },
+    { id: "international-immersion", label: "Immersion", icon: Globe },
     { id: "virtual-tour", label: "Virtual Tour", icon: Video },
   ],
   "/about": [
