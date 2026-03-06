@@ -142,7 +142,6 @@ export default function GlobalExperience() {
                   sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"
                 />
               </div>
-              <div className={cn("absolute inset-0 opacity-40", item.color)} />
               <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-black/80" />
 
               <div
@@ -173,7 +172,7 @@ export default function GlobalExperience() {
                 )}
               >
                 <div className="lg:-rotate-90 whitespace-nowrap">
-                  <h3 className="text-base md:text-xl font-bold text-foreground/80 lg:text-foreground/60 tracking-wider uppercase">
+                  <h3 className="text-base md:text-xl font-bold text-gray-300  tracking-wider uppercase">
                     {item.title}
                   </h3>
                 </div>
