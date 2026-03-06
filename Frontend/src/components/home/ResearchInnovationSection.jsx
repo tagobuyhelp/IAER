@@ -18,37 +18,37 @@ const infrastructure = [
     title: "IT Labs",
     desc: "Data Science, Cyber Security, Cloud Computing, AI",
     icon: Monitor,
-    image: "/images/nav-2-img.jpg"
+    image: "/images/programs/BCA-in-Data-Science-Cyber-Security.webp"
   },
   {
     title: "Hospitality LIVE Kitchen",
     desc: "Advanced Food Production Studio & Training Restaurants",
     icon: Utensils,
-    image: "/images/nav-3-img.jpg"
+    image: "/images/programs/B.Sc-in-Hospitality-&-Hotel-Administration.webp"
   },
   {
     title: "Medical Lab Tech",
     desc: "Advanced Diagnostic & Pathology Centres",
     icon: Stethoscope,
-    image: "/images/BMLT.jpg"
+    image: "/images/programs/Medical-Lab-Technology.webp"
   },
   {
     title: "Aviation Simulation",
     desc: "Mock Aircraft Cabins for Crew Training",
     icon: Plane,
-    image: "/images/nav-4-img.jpg"
+    image: "/images/programs/Bachelor-of-Aviation-Hospitality-Services-Management3.webp"
   },
   {
     title: "Startup Launchpad",
     desc: "Incubation Centre & Tech Innovation Labs",
     icon: Rocket,
-    image: "/images/PGDMLAI.jpg"
+    image: "/images/programs/iaer-industry-integrated-curriculum.webp"
   },
   {
     title: "Digital Classrooms",
     desc: "Smart Learning Hubs & Entrepreneurship Centers",
     icon: Presentation,
-    image: "/images/nav-5-img.jpg"
+    image: "/images/programs/iaer-global-alumni-network.webp"
   }
 ];
 
