@@ -4,7 +4,7 @@ export const programs = [
     code: "BBA",
     title: "Bachelor of Business Administration (BBA)",
     subtitle: "Undergraduate Degree | MAKAUT-Affiliated | UGC-Recognised",
-    image: "/images/BBA.jpg",
+    image: "/images/programs/Bachelor-of-Business-Administration.webp",
     overview: {
       duration: "4 Years (8 Semesters)",
       eligibility: "10+2 pass (any stream). Candidates appearing for Class 12 may apply.",
@@ -105,7 +105,7 @@ export const programs = [
     code: "BBA-GB",
     title: "BBA in Global Business (BBA-GB)",
     subtitle: "Undergraduate Degree | MAKAUT-Affiliated | UGC-Recognised",
-    image: "/images/BBA.jpg",
+    image: "/images/programs/Bachelor-of-Global-Business-Management.webp",
     overview: {
       duration: "4 Years (8 Semesters)",
       eligibility: "10+2 pass (any stream). Candidates appearing for Class 12 may apply",
@@ -203,7 +203,7 @@ export const programs = [
     code: "BBA-AO",
     title: "BBA in Aviation Operations (BBA-AO)",
     subtitle: "Undergraduate Degree | MAKAUT-Affiliated | UGC-Recognised",
-    image: "/images/BBA.jpg",
+    image: "/images/programs/Bachelor-of-Aviation-Hospitality-Services-Management2.webp",
     overview: {
       duration: "4 Years (8 Semesters)",
       eligibility: "10+2 pass (any stream). Candidates appearing for Class 12 may apply",
@@ -302,7 +302,7 @@ export const programs = [
     code: "BBA-AHSM",
     title: "BBA – Aviation, Hospitality Services & Management (BBA-AHSM)",
     subtitle: "Undergraduate Degree | MAKAUT-Affiliated | UGC-Recognised",
-    image: "/images/BSCHHA.jpg",
+    image: "/images/programs/Bachelor-of-Aviation-Hospitality-Services-Management.webp",
     overview: {
       duration: "4 Years (8 Semesters)",
       eligibility: "10+2 pass (any stream). Candidates appearing for Class 12 may apply.",
@@ -392,7 +392,7 @@ export const programs = [
     code: "BBA-HM",
     title: "BBA in Hospital Management (BBA-HM)",
     subtitle: "Undergraduate Degree | MAKAUT-Affiliated | UGC-Recognised",
-    image: "/images/BBAHM.jpg",
+    image: "/images/programs/Bachelor-of-Hospital-Management.webp",
     overview: {
       duration: "4 Years (8 Semesters)",
       eligibility: "10+2 pass (any stream). Candidates appearing for Class 12 may apply",
@@ -491,7 +491,7 @@ export const programs = [
     code: "BCA",
     title: "Bachelor of Computer Application (BCA)",
     subtitle: "Undergraduate Degree | MAKAUT-Affiliated | UGC-Recognised",
-    image: "/images/BSCCS.jpg",
+    image: "/images/programs/Bachelor-of-Computer-Application.webp",
     overview: {
       duration: "4 Years (8 Semesters)",
       eligibility: "10+2 pass with Mathematics. Candidates appearing for Class 12 may apply.",
@@ -582,7 +582,7 @@ export const programs = [
     code: "BSCDS",
     title: "B.Sc in Data Science (BSCDS)",
     subtitle: "Undergraduate Degree | MAKAUT-Affiliated | UGC-Recognised",
-    image: "/images/BSCDS.jpg",
+    image: "/images/programs/B.Sc-in-Data-Science.webp",
     overview: {
       duration: "4 Years (8 Semesters)",
       eligibility: "10+2 pass (any stream). Candidates appearing for Class 12 may apply",
@@ -675,7 +675,7 @@ export const programs = [
     code: "BSCCS",
     title: "B.Sc in Cyber Security (BSCCS)",
     subtitle: "Undergraduate Degree | MAKAUT-Affiliated | UGC-Recognised",
-    image: "/images/BSCCS.jpg",
+    image: "/images/programs/B.Sc-in-Cyber-Security.webp",
     overview: {
       duration: "4 Years (8 Semesters)",
       eligibility: "10+2 pass (any stream). Candidates appearing for Class 12 may apply",
@@ -767,7 +767,7 @@ export const programs = [
     code: "BMLT",
     title: "B.Sc in Medical Laboratory Technology (BMLT)",
     subtitle: "Undergraduate Degree | MAKAUT-Affiliated | UGC-Recognised",
-    image: "/images/BMLT.jpg",
+    image: "/images/programs/Medical-Lab-Technology.webp",
     overview: {
       duration: "4 Years (8 Semesters)",
       eligibility: "10+2 pass (any stream). Candidates appearing for Class 12 may apply",
@@ -858,7 +858,7 @@ export const programs = [
     code: "BSCHHA",
     title: "B.Sc in Hospitality & Hotel Administration (BSCHHA)",
     subtitle: "Undergraduate Degree | MAKAUT-Affiliated | UGC-Recognised",
-    image: "/images/BSCHHA.jpg",
+    image: "/images/programs/B.Sc-in-Hospitality-&-Hotel-Administration.webp",
     overview: {
       duration: "4 Years (Including Industrial Training)",
       eligibility: "10+2 pass (any stream). Candidates appearing for Class 12 may apply",
@@ -964,7 +964,7 @@ export const programs = [
     code: "PGDM",
     title: "Post Graduate Diploma in Management (PGDM)",
     subtitle: "Postgraduate Program | Industry-Oriented | Career-Focused",
-    image: "/images/PGDMLAI.jpg",
+    image: "/images/programs/Post-Graduate-Diploma-in-Management.webp",
     overview: {
       duration: "2 Years (4 Semesters)",
       eligibility: "Graduation in any discipline from a recognised university",
@@ -1066,7 +1066,7 @@ export const programs = [
     code: "MBA",
     title: "Master of Business Administration (MBA)",
     subtitle: "Postgraduate Degree | MAKAUT-Affiliated | UGC-Recognised",
-    image: "/images/BBA.jpg",
+    image: "/images/programs/MBA-Global.webp",
     overview: {
       duration: "2 Years (4 Semesters)",
       eligibility: "Graduation in any discipline from a recognised university",
@@ -1168,7 +1168,7 @@ export const programs = [
     code: "PGDM-AIADS",
     title: "PGDM in AI & Data Science (PGDM–AIADS)",
     subtitle: "Postgraduate Diploma | Industry-Integrated | Future-Tech Focused",
-    image: "/images/PGDMLAI.jpg",
+    image: "/images/programs/PGDM-in-AI-Data-Science.webp",
     overview: {
       duration: "2 Years (4 Semesters)",
       eligibility: "Graduation in any discipline from a recognised university",
@@ -1269,7 +1269,7 @@ export const programs = [
     code: "PGDM-BA",
     title: "PGDM in Business Analytics (PGDM–BA)",
     subtitle: "Postgraduate Diploma | Data-Driven Management | Industry-Focused",
-    image: "/images/PGDDS.jpg",
+    image: "/images/programs/PGDM-in-Business-Analytics.webp",
     overview: {
       duration: "2 Years (4 Semesters)",
       eligibility: "Graduation in any discipline from a recognised university",
@@ -1368,7 +1368,7 @@ export const programs = [
     code: "PGDM-FT",
     title: "PGDM in FinTech (PGDM–FT)",
     subtitle: "Postgraduate Diploma | Digital Finance | Industry-Integrated",
-    image: "/images/PGDDS.jpg",
+    image: "/images/programs/PGDM-in-Fintech.webp",
     overview: {
       duration: "2 Years (4 Semesters)",
       eligibility: "Graduation in any discipline from a recognised university",
@@ -1467,7 +1467,7 @@ export const programs = [
     code: "PGDM-HMHA",
     title: "PGDM in Hospital Management & Health Administration (PGDM–HMHA)",
     subtitle: "Postgraduate Diploma | Healthcare Leadership | Industry-Integrated",
-    image: "/images/BBAHM.jpg",
+    image: "/images/programs/PGDM-in-Hospital-Management-Health.webp",
     overview: {
       duration: "2 Years (4 Semesters)",
       eligibility: "Graduation in any discipline from a recognised university",
