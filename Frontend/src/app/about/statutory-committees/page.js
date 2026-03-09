@@ -39,6 +39,32 @@ export default function StatutoryCommitteesPage() {
                         <p className="text-xl md:text-2xl text-gray-300 font-light">
                             Institute of Advance Education & Research (IAER)
                         </p>
+
+                        <div className="mt-8">
+                            <p className="text-sm text-gray-300/90 mb-3 font-medium">
+                                Committee Documents
+                            </p>
+                            <div className="flex flex-wrap gap-3">
+                                {[
+                                    { label: "Anti-Ragging", href: "/files/Anti_Ragging_Committee_and_Squad.pdf" },
+                                    { label: "Grievance", href: "/files/Grievance_Redressal_Committee.pdf" },
+                                    { label: "Internal Committee", href: "/files/Internal_Committee.pdf" },
+                                    { label: "SC/ST", href: "/files/SC.ST_Committee.pdf" },
+                                ].map((doc) => (
+                                    <a
+                                        key={doc.href}
+                                        href={doc.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-2 rounded-full bg-white/10 hover:bg-white/15 border border-white/15 px-4 py-2 text-sm font-semibold text-white backdrop-blur-sm transition-colors"
+                                    >
+                                        <FileText className="w-4 h-4 text-white/90" />
+                                        <span>{doc.label}</span>
+                                        <ArrowRight className="w-4 h-4 text-white/80" />
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -266,6 +292,159 @@ export default function StatutoryCommitteesPage() {
                                     </li>
                                 ))}
                             </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Committee Documents */}
+            <section className="py-16 bg-gray-50">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-6xl mx-auto">
+                        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
+                            <div>
+                                <h2 className="text-3xl font-bold text-gray-900 mb-2">Committee Documents</h2>
+                                <p className="text-gray-600">
+                                    View official committee documents and orders published by IAER.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 hover:shadow-md transition-shadow">
+                                <div className="flex items-start gap-4">
+                                    <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <FileText className="w-6 h-6 text-accent" />
+                                    </div>
+                                    <div className="flex-1">
+                                        <h3 className="text-lg font-bold text-gray-900 leading-snug">
+                                            Anti-Ragging Committee &amp; Squad
+                                        </h3>
+                                        <p className="text-sm text-gray-600 mt-1">
+                                            Committee constitution and squad details (PDF).
+                                        </p>
+
+                                        <div className="mt-4 flex flex-wrap gap-3">
+                                            <a
+                                                href="/files/Anti_Ragging_Committee_and_Squad.pdf"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center justify-center px-4 py-2 rounded-full text-sm font-semibold bg-accent text-white hover:bg-accent/90 transition-colors"
+                                            >
+                                                View PDF <ArrowRight className="ml-2 w-4 h-4" />
+                                            </a>
+                                            <a
+                                                href="/files/Anti_Ragging_Committee_and_Squad.pdf"
+                                                download
+                                                className="inline-flex items-center justify-center px-4 py-2 rounded-full text-sm font-semibold bg-white text-gray-900 border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-colors"
+                                            >
+                                                Download
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 hover:shadow-md transition-shadow">
+                                <div className="flex items-start gap-4">
+                                    <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <FileText className="w-6 h-6 text-accent" />
+                                    </div>
+                                    <div className="flex-1">
+                                        <h3 className="text-lg font-bold text-gray-900 leading-snug">
+                                            Grievance Redressal Committee
+                                        </h3>
+                                        <p className="text-sm text-gray-600 mt-1">
+                                            Committee constitution and grievance process (PDF).
+                                        </p>
+
+                                        <div className="mt-4 flex flex-wrap gap-3">
+                                            <a
+                                                href="/files/Grievance_Redressal_Committee.pdf"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center justify-center px-4 py-2 rounded-full text-sm font-semibold bg-accent text-white hover:bg-accent/90 transition-colors"
+                                            >
+                                                View PDF <ArrowRight className="ml-2 w-4 h-4" />
+                                            </a>
+                                            <a
+                                                href="/files/Grievance_Redressal_Committee.pdf"
+                                                download
+                                                className="inline-flex items-center justify-center px-4 py-2 rounded-full text-sm font-semibold bg-white text-gray-900 border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-colors"
+                                            >
+                                                Download
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 hover:shadow-md transition-shadow">
+                                <div className="flex items-start gap-4">
+                                    <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <FileText className="w-6 h-6 text-accent" />
+                                    </div>
+                                    <div className="flex-1">
+                                        <h3 className="text-lg font-bold text-gray-900 leading-snug">
+                                            Internal Committee (ICC)
+                                        </h3>
+                                        <p className="text-sm text-gray-600 mt-1">
+                                            Internal Committee constitution (PDF).
+                                        </p>
+
+                                        <div className="mt-4 flex flex-wrap gap-3">
+                                            <a
+                                                href="/files/Internal_Committee.pdf"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center justify-center px-4 py-2 rounded-full text-sm font-semibold bg-accent text-white hover:bg-accent/90 transition-colors"
+                                            >
+                                                View PDF <ArrowRight className="ml-2 w-4 h-4" />
+                                            </a>
+                                            <a
+                                                href="/files/Internal_Committee.pdf"
+                                                download
+                                                className="inline-flex items-center justify-center px-4 py-2 rounded-full text-sm font-semibold bg-white text-gray-900 border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-colors"
+                                            >
+                                                Download
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 hover:shadow-md transition-shadow">
+                                <div className="flex items-start gap-4">
+                                    <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <FileText className="w-6 h-6 text-accent" />
+                                    </div>
+                                    <div className="flex-1">
+                                        <h3 className="text-lg font-bold text-gray-900 leading-snug">
+                                            SC/ST Committee
+                                        </h3>
+                                        <p className="text-sm text-gray-600 mt-1">
+                                            Committee constitution and details (PDF).
+                                        </p>
+
+                                        <div className="mt-4 flex flex-wrap gap-3">
+                                            <a
+                                                href="/files/SC.ST_Committee.pdf"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center justify-center px-4 py-2 rounded-full text-sm font-semibold bg-accent text-white hover:bg-accent/90 transition-colors"
+                                            >
+                                                View PDF <ArrowRight className="ml-2 w-4 h-4" />
+                                            </a>
+                                            <a
+                                                href="/files/SC.ST_Committee.pdf"
+                                                download
+                                                className="inline-flex items-center justify-center px-4 py-2 rounded-full text-sm font-semibold bg-white text-gray-900 border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-colors"
+                                            >
+                                                Download
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -2,6 +2,7 @@
 
 import RevealOnScroll from "@/components/RevealOnScroll";
 import Image from "next/image";
+import { ArrowRight, FileText } from "lucide-react";
 
 export default function HeroSection() {
     return (
@@ -32,6 +33,24 @@ export default function HeroSection() {
                     <p className="text-gray-300 font-medium tracking-wide uppercase text-sm">
                         (As per UGC / MAKAUT / Regulatory Requirements)
                     </p>
+
+                    <div className="mt-8 flex flex-col items-center">
+                        <p className="text-sm text-gray-200/90 mb-3 font-medium">
+                            Download Document
+                        </p>
+                        <div className="flex flex-wrap justify-center gap-3">
+                            <a
+                                href="/files/IMAS_Mandatoy_DIsclosure.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 rounded-full bg-white/10 hover:bg-white/15 border border-white/15 px-4 py-2 text-sm font-semibold text-white backdrop-blur-sm transition-colors"
+                            >
+                                <FileText className="w-4 h-4 text-white/90" />
+                                <span>Mandatory Disclosure PDF</span>
+                                <ArrowRight className="w-4 h-4 text-white/80" />
+                            </a>
+                        </div>
+                    </div>
                 </RevealOnScroll>
             </div>
         </section>
