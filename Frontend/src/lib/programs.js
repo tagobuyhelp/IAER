@@ -3,7 +3,7 @@ export const programs = [
     id: "bachelor-of-business-administration-bba",
     code: "BBA",
     title: "Bachelor of Business Administration (BBA)",
-    subtitle: "Undergraduate Degree | MAKAUT-Affiliated | UGC-Recognised",
+    subtitle: "Undergraduate Degree I MAKAUT Affiliated I AICTE Approved",
     image: "/images/programs/Bachelor-of-Business-Administration.webp",
     overview: {
       duration: "4 Years (8 Semesters)",
@@ -104,7 +104,7 @@ export const programs = [
     id: "bba-in-global-business",
     code: "BBA-GB",
     title: "BBA in Global Business (BBA-GB)",
-    subtitle: "Undergraduate Degree | MAKAUT-Affiliated | UGC-Recognised",
+    subtitle: "Undergraduate Degree I MAKAUT Affiliated I AICTE Approved",
     image: "/images/programs/Bachelor-of-Global-Business-Management.webp",
     overview: {
       duration: "4 Years (8 Semesters)",
@@ -202,7 +202,7 @@ export const programs = [
     id: "bba-in-aviation-operations",
     code: "BBA-AO",
     title: "BBA in Aviation Operations (BBA-AO)",
-    subtitle: "Undergraduate Degree | MAKAUT-Affiliated | UGC-Recognised",
+    subtitle: "Undergraduate Degree I MAKAUT Affiliated I AICTE Approved",
     image: "/images/programs/Bachelor-of-Aviation-Hospitality-Services-Management2.webp",
     overview: {
       duration: "4 Years (8 Semesters)",
@@ -301,7 +301,7 @@ export const programs = [
     id: "bba-ahsm",
     code: "BBA-AHSM",
     title: "BBA – Aviation, Hospitality Services & Management (BBA-AHSM)",
-    subtitle: "Undergraduate Degree | MAKAUT-Affiliated | UGC-Recognised",
+    subtitle: "Undergraduate Degree I MAKAUT Affiliated I AICTE Approved",
     image: "/images/programs/Bachelor-of-Aviation-Hospitality-Services-Management.webp",
     overview: {
       duration: "4 Years (8 Semesters)",
@@ -391,7 +391,7 @@ export const programs = [
     id: "bba-in-hospital-management",
     code: "BBA-HM",
     title: "BBA in Hospital Management (BBA-HM)",
-    subtitle: "Undergraduate Degree | MAKAUT-Affiliated | UGC-Recognised",
+    subtitle: "Undergraduate Degree I MAKAUT Affiliated I AICTE Approved",
     image: "/images/programs/Bachelor-of-Hospital-Management.webp",
     overview: {
       duration: "4 Years (8 Semesters)",
@@ -490,7 +490,7 @@ export const programs = [
     id: "bachelor-of-computer-application-bca",
     code: "BCA",
     title: "Bachelor of Computer Application (BCA)",
-    subtitle: "Undergraduate Degree | MAKAUT-Affiliated | UGC-Recognised",
+    subtitle: "Undergraduate Degree I MAKAUT Affiliated I AICTE Approved",
     image: "/images/programs/Bachelor-of-Computer-Application.webp",
     overview: {
       duration: "4 Years (8 Semesters)",
@@ -581,7 +581,7 @@ export const programs = [
     id: "bsc-in-data-science",
     code: "BSCDS",
     title: "B.Sc in Data Science (BSCDS)",
-    subtitle: "Undergraduate Degree | MAKAUT-Affiliated | UGC-Recognised",
+    subtitle: "Undergraduate Degree I MAKAUT Affiliated I AICTE Approved",
     image: "/images/programs/B.Sc-in-Data-Science.webp",
     overview: {
       duration: "4 Years (8 Semesters)",
@@ -674,7 +674,7 @@ export const programs = [
     id: "bsc-in-cyber-security",
     code: "BSCCS",
     title: "B.Sc in Cyber Security (BSCCS)",
-    subtitle: "Undergraduate Degree | MAKAUT-Affiliated | UGC-Recognised",
+    subtitle: "Undergraduate Degree I MAKAUT Affiliated I AICTE Approved",
     image: "/images/programs/B.Sc-in-Cyber-Security.webp",
     overview: {
       duration: "4 Years (8 Semesters)",
@@ -766,7 +766,7 @@ export const programs = [
     id: "bsc-in-medical-laboratory-technology-bmlt",
     code: "BMLT",
     title: "B.Sc in Medical Laboratory Technology (BMLT)",
-    subtitle: "Undergraduate Degree | MAKAUT-Affiliated | UGC-Recognised",
+    subtitle: "Undergraduate Degree I MAKAUT Affiliated I AICTE Approved",
     image: "/images/programs/Medical-Lab-Technology.webp",
     overview: {
       duration: "4 Years (8 Semesters)",
@@ -857,7 +857,7 @@ export const programs = [
     id: "bsc-in-hospitality-hotel-administration-bschha",
     code: "BSCHHA",
     title: "B.Sc in Hospitality & Hotel Administration (BSCHHA)",
-    subtitle: "Undergraduate Degree | MAKAUT-Affiliated | UGC-Recognised",
+    subtitle: "Undergraduate Degree I MAKAUT Affiliated I AICTE Approved",
     image: "/images/programs/B.Sc-in-Hospitality-&-Hotel-Administration.webp",
     overview: {
       duration: "4 Years (Including Industrial Training)",
@@ -1566,3 +1566,4 @@ export const programs = [
     ]
   }
 ];
+

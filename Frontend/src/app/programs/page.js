@@ -20,6 +20,7 @@ import {
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import InfiniteCall from '@/components/InfiniteCall';
+import OurHiringPartnersSection from '@/components/placement/OurHiringPartnersSection';
 
 // Helper to get program details
 const getProgramByCode = (code) => {
@@ -169,7 +170,7 @@ export default function Programs() {
             <Button size="lg" className="bg-accent hover:bg-accent/90 text-white px-6 py-4 md:px-10 md:py-7 text-base md:text-lg rounded-full shadow-[0_0_40px_-10px_rgba(255,107,0,0.5)] hover:shadow-[0_0_60px_-10px_rgba(255,107,0,0.6)] transition-all duration-300">
               Explore Programs
             </Button>
-            <Button variant="outline" size="lg" className="border-white/20 text-black hover:bg-white/10 px-6 py-4 md:px-10 md:py-7 text-base md:text-lg rounded-full backdrop-blur-sm">
+            <Button variant="outline" size="lg" className=" border-white/20 text-black hover:bg-white/10 px-6 py-4 md:px-10 md:py-7 text-base md:text-lg rounded-full backdrop-blur-sm">
               Download Brochure
             </Button>
           </motion.div>
@@ -395,6 +396,8 @@ export default function Programs() {
           </div>
         </div>
       </section>
+
+      <OurHiringPartnersSection />
 
       {/* Why Choose IAER - Feature Section */}
       <section className="py-12 md:py-24 bg-zinc-950 border-t border-white/5">

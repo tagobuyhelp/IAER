@@ -74,7 +74,7 @@ export default function AcademicCalendarSection() {
                         <p className="text-sm text-gray-500 mb-6">Jan - June Session</p>
                         
                         <ul className="space-y-3 mb-8">
-                            {["Classes Begin: Jan 15", "Mid-Terms: March", "End-Sem Exams: June"].map((item, i) =>(
+                            {["Classes Begin: Jan 15", "Internal Assessment: March - May", "End-Sem Exams: June"].map((item, i) =>(
                                 <li key={i} className="flex items-center gap-2 text-sm text-gray-700">
                                     <div className="w-1.5 h-1.5 rounded-full bg-red-400" />
                                     {item}
@@ -100,7 +100,7 @@ export default function AcademicCalendarSection() {
                         <p className="text-sm text-gray-500 mb-6">July - Dec Session</p>
 
                          <ul className="space-y-3 mb-8">
-                            {["Classes Begin: July 15", "Mid-Terms: Sept", "End-Sem Exams: Dec"].map((item, i) =>(
+                            {["Classes Begin: July 15", "Internal Assessment: Sept - Nov", "End-Sem Exams: Dec"].map((item, i) =>(
                                 <li key={i} className="flex items-center gap-2 text-sm text-gray-700">
                                     <div className="w-1.5 h-1.5 rounded-full bg-blue-400" />
                                     {item}
@@ -198,3 +198,4 @@ export default function AcademicCalendarSection() {
     </div>
   );
 }
+

@@ -18,11 +18,112 @@ import {
   Phone,
   FileText
 } from 'lucide-react';
-import { cn } from '@/lib/utils';
 import InfiniteCall from '@/components/InfiniteCall';
+import OurHiringPartnersSection from '@/components/placement/OurHiringPartnersSection';
+
+const VISUAL_FALLBACKS = [
+  '/images/programs/iaer-industry-integrated-curriculum.webp',
+  '/images/programs/iaer-global-alumni-network.webp',
+  '/images/iaer-campus.png',
+];
+
+function getProgramVisuals(program) {
+  const fromProgram = program?.visuals;
+  if (Array.isArray(fromProgram) && fromProgram.length) return fromProgram;
+  const img = program?.image ? [program.image, ...VISUAL_FALLBACKS] : VISUAL_FALLBACKS;
+  return img.slice(0, 3);
+}
+
+function VisualStrip({ programTitle, images }) {
+  return (
+    <div className="rounded-3xl border border-gray-200 bg-white overflow-hidden shadow-sm">
+      <div className="grid grid-cols-3 gap-[1px] bg-gray-200">
+        {images.map((src, idx) => (
+          <div key={`${src}-${idx}`} className="relative aspect-[4/3] bg-gray-50">
+            <Image
+              src={src}
+              alt={`${programTitle} visual ${idx + 1}`}
+              fill
+              className="object-cover opacity-90 hover:opacity-100 transition-opacity duration-300"
+              sizes="(max-width: 768px) 33vw, 20vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function getSectionImage(program, section) {
+  const visuals = getProgramVisuals(program);
+  const map = { overview: 0, curriculum: 1, careers: 2 };
+  const idx = map[section] ?? 0;
+  return visuals[idx] || visuals[0] || '/images/iaer-campus.png';
+}
+
+function SectionBlock({ id, title, subtitle, imageSrc, children }) {
+  return (
+    <section id={id} className="scroll-mt-28">
+      <div className="grid lg:grid-cols-12 gap-4 md:gap-6 items-start">
+        <div className="lg:col-span-5">
+          <div className="rounded-3xl border border-gray-200 bg-white shadow-sm overflow-hidden">
+            <div className="relative aspect-[4/3] bg-gray-50">
+              <Image
+                src={imageSrc}
+                alt={title}
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 40vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/5 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-transparent to-primary/20" />
+            </div>
+            <div className="p-4 md:p-5">
+              <div className="text-lg md:text-2xl font-black text-gray-900">{title}</div>
+              <div className="mt-1 text-sm text-gray-600">{subtitle}</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="lg:col-span-7">{children}</div>
+      </div>
+    </section>
+  );
+}
+
+function scrollToSection(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.scrollIntoView({ behavior: "smooth", block: "start" });
+}
 
 export default function ProgramClient({ program }) {
-  const [activeTab, setActiveTab] = useState('overview');
+  const [activeSection, setActiveSection] = useState("overview");
+
+  useEffect(() => {
+    const ids = ["overview", "curriculum", "careers"];
+    const els = ids
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
+
+    if (!els.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => (b.intersectionRatio || 0) - (a.intersectionRatio || 0))[0];
+        if (!visible) return;
+        const id = visible.target.getAttribute("id");
+        if (id) setActiveSection(id);
+      },
+      { root: null, threshold: [0.2, 0.35, 0.5] }
+    );
+
+    els.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
 
   const fadeIn = {
     initial: { opacity: 0, y: 20 },
@@ -31,7 +132,7 @@ export default function ProgramClient({ program }) {
   };
 
   return (
-    <div className=" bg-black lg-min-h-screen text-white selection:bg-accent selection:text-white pb-24 lg:pb-0">
+    <div className="min-h-screen bg-gray-100 text-white selection:bg-accent selection:text-white pb-40 lg:pb-24">
       <InfiniteCall />
       
       {/* Hero Section */}
@@ -41,10 +142,11 @@ export default function ProgramClient({ program }) {
             src={program.image || '/images/iaer-campus.png'}
             alt={program.title}
             fill
-            className="object-cover opacity-50"
+            className="object-cover opacity-65"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/10" />
+          <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-transparent to-primary/20" />
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.png')] opacity-10 mix-blend-overlay" />
         </div>
 
@@ -88,210 +190,251 @@ export default function ProgramClient({ program }) {
         </div>
       </section>
 
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid lg:grid-cols-12 gap-12">
+      <div className="fixed left-1/2 -translate-x-1/2 bottom-[84px] lg:bottom-5 z-40 px-4 w-full max-w-md">
+        <div className="rounded-full bg-white/90 backdrop-blur-xl border border-gray-200 shadow-lg px-2 py-1.5 flex items-center justify-between gap-2">
+          {[
+            { id: "overview", label: "Overview", Icon: Award },
+            { id: "curriculum", label: "Curriculum", Icon: BookOpen },
+            { id: "careers", label: "Careers", Icon: Briefcase },
+          ].map(({ id, label, Icon }) => {
+            const isActive = activeSection === id;
+            return (
+              <button
+                key={id}
+                onClick={() => scrollToSection(id)}
+                className={`flex-1 inline-flex items-center justify-center gap-2 px-2.5 py-1.5 rounded-full text-xs md:text-sm font-black transition-all ${
+                  isActive
+                    ? "bg-accent text-black shadow-sm"
+                    : "text-gray-700 hover:bg-gray-50"
+                }`}
+                aria-current={isActive ? "true" : "false"}
+              >
+                <Icon className={`w-4 h-4 ${isActive ? "text-black" : "text-accent"}`} />
+                <span className="hidden sm:inline">{label}</span>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      <section className="relative py-10 md:py-12">
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute -top-24 -right-24 w-[420px] h-[420px] rounded-full bg-accent/10 blur-3xl" />
+          <div className="absolute -bottom-24 -left-24 w-[420px] h-[420px] rounded-full bg-primary/10 blur-3xl" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.png')] opacity-[0.03] mix-blend-multiply" />
+        </div>
+        <div className="container mx-auto px-4 relative">
+          <div className="grid lg:grid-cols-12 gap-8">
           
           {/* Main Content */}
           <div className="lg:col-span-8">
+            <div className="rounded-[2rem] bg-white border border-gray-200 shadow-sm p-3 md:p-5">
             
             {/* Quick Info Grid */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 mb-12"
+              className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 mb-6"
             >
-              <div className="p-4 md:p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
-                <Clock className="w-5 h-5 md:w-6 md:h-6 text-accent mb-2 md:mb-3" />
-                <div className="text-xs md:text-sm text-gray-400">Duration</div>
-                <div className="text-base md:text-lg font-semibold">{program.overview.duration}</div>
+              <div className="group relative p-4 md:p-5 rounded-2xl bg-gradient-to-br from-white to-gray-50 border border-gray-200 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all overflow-hidden">
+                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-accent via-orange-400 to-accent opacity-70" />
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-2xl bg-accent/10 border border-accent/15 flex items-center justify-center mb-3">
+                  <Clock className="w-5 h-5 md:w-6 md:h-6 text-accent" />
+                </div>
+                <div className="text-xs md:text-sm text-gray-600">Duration</div>
+                <div className="text-base md:text-lg font-black text-gray-900">{program.overview.duration}</div>
               </div>
-              <div className="p-4 md:p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
-                <GraduationCap className="w-5 h-5 md:w-6 md:h-6 text-accent mb-2 md:mb-3" />
-                <div className="text-xs md:text-sm text-gray-400">Mode</div>
-                <div className="text-base md:text-lg font-semibold">{program.overview.mode}</div>
+              <div className="group relative p-4 md:p-5 rounded-2xl bg-gradient-to-br from-white to-gray-50 border border-gray-200 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all overflow-hidden">
+                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary/70 via-sky-500/50 to-primary/70 opacity-60" />
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-2xl bg-primary/10 border border-primary/15 flex items-center justify-center mb-3">
+                  <GraduationCap className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+                </div>
+                <div className="text-xs md:text-sm text-gray-600">Mode</div>
+                <div className="text-base md:text-lg font-black text-gray-900">{program.overview.mode}</div>
               </div>
-              <div className="p-4 md:p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors col-span-2 md:col-span-1">
-                <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-accent mb-2 md:mb-3" />
-                <div className="text-xs md:text-sm text-gray-400">Eligibility</div>
-                <div className="text-base md:text-lg font-semibold">{program.overview.eligibility}</div>
+              <div className="group relative p-4 md:p-5 rounded-2xl bg-gradient-to-br from-white to-gray-50 border border-gray-200 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all overflow-hidden col-span-2 md:col-span-1">
+                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-emerald-500/60 via-emerald-400/30 to-emerald-500/60 opacity-70" />
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/15 flex items-center justify-center mb-3">
+                  <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-emerald-600" />
+                </div>
+                <div className="text-xs md:text-sm text-gray-600">Eligibility</div>
+                <div className="text-base md:text-lg font-black text-gray-900">{program.overview.eligibility}</div>
               </div>
             </motion.div>
 
-            {/* Content Tabs */}
-            <div className="mb-8 md:mb-12">
-              <div className="flex justify-start mb-6 md:mb-8 overflow-x-auto pb-2 md:pb-0 scrollbar-hide">
-                <div className="inline-flex flex-nowrap gap-1 p-1 bg-white/5 rounded-full border border-white/10 backdrop-blur-sm">
-                  {['overview', 'curriculum', 'careers'].map((tab) => (
-                    <button
-                      key={tab}
-                      onClick={() => setActiveTab(tab)}
-                      className={cn(
-                        "relative px-5 py-2 md:px-8 md:py-3 text-xs md:text-sm font-medium rounded-full transition-all duration-300 whitespace-nowrap",
-                        activeTab === tab ? "text-black font-bold" : "text-gray-400 hover:text-white"
-                      )}
-                    >
-                      {activeTab === tab && (
-                        <motion.div
-                          layoutId="activeProgramTab"
-                          className="absolute inset-0 bg-accent rounded-full shadow-lg shadow-accent/25"
-                          transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                        />
-                      )}
-                      <span className="relative z-10">{tab.charAt(0).toUpperCase() + tab.slice(1)}</span>
-                    </button>
-                  ))}
-                </div>
-              </div>
+            <div className="mb-6">
+              <VisualStrip programTitle={program.title} images={getProgramVisuals(program)} />
+            </div>
 
-              <div className="min-h-[300px]">
-                {activeTab === 'overview' && (
-                  <motion.div 
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    className="space-y-6 md:space-y-8"
-                  >
-                    <div className="prose prose-invert max-w-none">
-                      <h3 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-white">Program Overview</h3>
-                      <p className="text-gray-400 leading-relaxed text-base md:text-lg">
-                        {program.longDescription || program.description}
-                      </p>
-                    </div>
+            <div className="space-y-8 md:space-y-10">
+              <SectionBlock
+                id="overview"
+                title="Overview"
+                subtitle="Program snapshot and key highlights"
+                imageSrc={getSectionImage(program, "overview")}
+              >
+                <div className="space-y-4 md:space-y-5">
+                  <div className="rounded-3xl border border-gray-200 bg-white p-4 md:p-6 shadow-sm">
+                    <h3 className="text-xl md:text-2xl font-black mb-3 md:mb-4 text-gray-900">Program Overview</h3>
+                    <p className="text-gray-700 leading-relaxed text-base md:text-lg">
+                      {program.longDescription || program.description}
+                    </p>
+                  </div>
 
-                    {program.highlights && (
-                      <div>
-                        <h3 className="text-xl md:text-2xl font-semibold mb-4 md:mb-6 text-white">Key Highlights</h3>
-                        <div className="grid md:grid-cols-2 gap-3 md:gap-4">
-                          {program.highlights.map((highlight, idx) => (
-                            <div key={idx} className="flex items-start p-3 md:p-4 rounded-xl bg-white/5 border border-white/10">
-                              <span className="w-1.5 h-1.5 md:w-2 md:h-2 mt-2 rounded-full bg-accent mr-3 shrink-0" />
-                              <span className="text-sm md:text-base text-gray-300">{highlight}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-                  </motion.div>
-                )}
-
-                {activeTab === 'curriculum' && (
-                  <motion.div 
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    className="space-y-6 md:space-y-8"
-                  >
-                    <div>
-                      <h3 className="text-xl md:text-2xl font-semibold mb-4 md:mb-6 text-white flex items-center gap-2">
-                        <BookOpen className="w-5 h-5 md:w-6 md:h-6 text-accent" /> Course Structure
+                  {program.whyStudy && (
+                    <div className="p-4 md:p-6 rounded-3xl bg-white border border-gray-200 shadow-sm">
+                      <h3 className="text-xl md:text-2xl font-black mb-4 md:mb-6 text-gray-900 flex items-center gap-2">
+                        <Award className="w-5 h-5 md:w-6 md:h-6 text-accent" /> Why this program?
                       </h3>
-                      <div className="space-y-3 md:space-y-4">
-                        {program.curriculum.structure.map((item, idx) => (
-                          <div key={idx} className="flex gap-3 md:gap-4 p-3 md:p-4 rounded-xl bg-white/5 border border-white/10 hover:border-accent/30 transition-colors">
-                            <div className="font-mono text-sm md:text-base text-accent font-bold whitespace-nowrap">
-                              {item.split(':')[0]}
-                            </div>
-                            <div className="text-sm md:text-base text-gray-300">
-                              {item.split(':')[1] || item}
-                            </div>
+                      <ul className="space-y-3 md:space-y-4">
+                        {program.whyStudy.map((reason, idx) => (
+                          <li key={idx} className="flex items-start gap-2 md:gap-3 text-gray-700 text-sm md:text-base">
+                            <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-accent shrink-0 mt-0.5" />
+                            {reason}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {program.highlights && (
+                    <div>
+                      <h3 className="text-xl md:text-2xl font-black mb-3 md:mb-5 text-gray-900">Key Highlights</h3>
+                      <div className="grid md:grid-cols-2 gap-3 md:gap-4">
+                        {program.highlights.map((highlight, idx) => (
+                          <div key={idx} className="flex items-start p-3 md:p-4 rounded-2xl bg-white border border-gray-200 shadow-sm">
+                            <span className="w-1.5 h-1.5 md:w-2 md:h-2 mt-2 rounded-full bg-accent mr-3 shrink-0" />
+                            <span className="text-sm md:text-base text-gray-700">{highlight}</span>
                           </div>
                         ))}
                       </div>
                     </div>
+                  )}
+                </div>
+              </SectionBlock>
 
-                    {program.curriculum.specializations && (
-                      <div>
-                        <h3 className="text-xl md:text-2xl font-semibold mb-4 md:mb-6 text-white">Specializations</h3>
-                        <div className="flex flex-wrap gap-2 md:gap-3">
-                          {program.curriculum.specializations.map((spec, idx) => (
-                            <span key={idx} className="px-3 py-1.5 md:px-4 md:py-2 rounded-lg bg-accent/10 border border-accent/20 text-accent text-xs md:text-sm">
-                              {spec}
-                            </span>
-                          ))}
+              <SectionBlock
+                id="curriculum"
+                title="Curriculum"
+                subtitle="Structure, subjects and specializations"
+                imageSrc={getSectionImage(program, "curriculum")}
+              >
+                <div className="space-y-4 md:space-y-5">
+                  <div className="rounded-3xl bg-white border border-gray-200 shadow-sm p-4 md:p-6">
+                    <h3 className="text-xl md:text-2xl font-black mb-4 md:mb-6 text-gray-900 flex items-center gap-2">
+                      <BookOpen className="w-5 h-5 md:w-6 md:h-6 text-accent" /> Course Structure
+                    </h3>
+                    <div className="space-y-3 md:space-y-4">
+                      {program.curriculum.structure.map((item, idx) => (
+                        <div key={idx} className="flex gap-3 md:gap-4 p-3 md:p-4 rounded-2xl bg-white border border-gray-200 hover:border-accent/30 transition-colors shadow-sm">
+                          <div className="font-mono text-sm md:text-base text-accent font-bold whitespace-nowrap">
+                            {item.split(':')[0]}
+                          </div>
+                          <div className="text-sm md:text-base text-gray-700">
+                            {item.split(':')[1] || item}
+                          </div>
                         </div>
-                      </div>
-                    )}
-                  </motion.div>
-                )}
-
-                {activeTab === 'careers' && (
-                  <motion.div 
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    className="space-y-6 md:space-y-8"
-                  >
-                    <div className="p-4 md:p-6 rounded-2xl bg-gradient-to-br from-accent/20 to-transparent border border-accent/20">
-                      <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-white">Career Outcomes</h3>
-                      <p className="text-sm md:text-base text-gray-300 leading-relaxed">
-                        {program.careerOutcomes.description}
-                      </p>
+                      ))}
                     </div>
+                  </div>
 
-                    <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-                      <div>
-                        <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4 text-white border-b border-white/10 pb-2">Job Roles</h4>
-                        <ul className="space-y-2 md:space-y-3">
-                          {program.careerOutcomes.roles.map((role, idx) => (
-                            <li key={idx} className="flex items-center text-sm md:text-base text-gray-400">
-                              <Briefcase className="w-3.5 h-3.5 md:w-4 md:h-4 text-accent mr-2 md:mr-3" />
-                              {role}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div>
-                        <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4 text-white border-b border-white/10 pb-2">Target Sectors</h4>
-                        <ul className="space-y-2 md:space-y-3">
-                          {program.careerOutcomes.sectors.map((sector, idx) => (
-                            <li key={idx} className="flex items-center text-sm md:text-base text-gray-400">
-                              <MapPin className="w-3.5 h-3.5 md:w-4 md:h-4 text-accent mr-2 md:mr-3" />
-                              {sector}
-                            </li>
-                          ))}
-                        </ul>
+                  {program.curriculum.specializations && (
+                    <div className="rounded-3xl bg-white border border-gray-200 shadow-sm p-4 md:p-6">
+                      <h3 className="text-xl md:text-2xl font-black mb-4 md:mb-6 text-gray-900">Specializations</h3>
+                      <div className="flex flex-wrap gap-2 md:gap-3">
+                        {program.curriculum.specializations.map((spec, idx) => (
+                          <span key={idx} className="px-3 py-1.5 md:px-4 md:py-2 rounded-lg bg-accent/10 border border-accent/20 text-accent text-xs md:text-sm font-semibold">
+                            {spec}
+                          </span>
+                        ))}
                       </div>
                     </div>
-                  </motion.div>
-                )}
-              </div>
+                  )}
+                </div>
+              </SectionBlock>
+
+              <SectionBlock
+                id="careers"
+                title="Careers"
+                subtitle="Outcomes, roles and target sectors"
+                imageSrc={getSectionImage(program, "careers")}
+              >
+                <div className="space-y-4 md:space-y-5">
+                  <div className="p-4 md:p-6 rounded-3xl bg-gradient-to-br from-emerald-50 via-white to-sky-50 border border-gray-200 shadow-sm">
+                    <h3 className="text-lg md:text-xl font-black mb-3 md:mb-4 text-gray-900">Career Outcomes</h3>
+                    <p className="text-sm md:text-base text-gray-700 text-justify leading-relaxed">
+                      {program.careerOutcomes.description}
+                    </p>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-4 md:gap-6">
+                    <div className="rounded-3xl bg-white border border-gray-200 shadow-sm p-4 md:p-6">
+                      <h4 className="text-base md:text-lg font-black mb-3 md:mb-4 text-gray-900 border-b border-gray-200 pb-2">Job Roles</h4>
+                      <ul className="space-y-2 md:space-y-3">
+                        {program.careerOutcomes.roles.map((role, idx) => (
+                          <li key={idx} className="flex items-center text-sm md:text-base text-gray-700">
+                            <Briefcase className="w-3.5 h-3.5 md:w-4 md:h-4 text-accent mr-2 md:mr-3" />
+                            {role}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="rounded-3xl bg-white border border-gray-200 shadow-sm p-4 md:p-6">
+                      <h4 className="text-base md:text-lg font-black mb-3 md:mb-4 text-gray-900 border-b border-gray-200 pb-2">Target Sectors</h4>
+                      <ul className="space-y-2 md:space-y-3">
+                        {program.careerOutcomes.sectors.map((sector, idx) => (
+                          <li key={idx} className="flex items-center text-sm md:text-base text-gray-700">
+                            <MapPin className="w-3.5 h-3.5 md:w-4 md:h-4 text-accent mr-2 md:mr-3" />
+                            {sector}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </SectionBlock>
+            </div>
             </div>
           </div>
 
           {/* Sidebar */}
-          <div className="lg:col-span-4 space-y-6 md:space-y-8">
+          <div className="lg:col-span-4 space-y-4 md:space-y-6">
             {/* Fee Card */}
             <motion.div 
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.6 }}
-              className="p-6 md:p-8 rounded-3xl bg-zinc-900 border border-white/10 sticky top-24"
+              className="p-5 md:p-6 rounded-3xl bg-white border border-gray-200 shadow-sm sticky top-24 text-gray-900 overflow-hidden"
             >
-              <div className="mb-6 md:mb-8">
-                <p className="text-gray-400 text-xs md:text-sm mb-2">Total Course Fee</p>
-                <div className="text-2xl md:text-4xl font-bold text-white mb-2">{program.fees.total}</div>
+              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-accent via-orange-400 to-primary opacity-70" />
+              <div className="mb-5 md:mb-6">
+                <p className="text-gray-600 text-xs md:text-sm mb-2 font-semibold">Total Course Fee</p>
+                <div className="text-2xl md:text-4xl font-black text-gray-900 mb-2">{program.fees.total}</div>
                 {program.fees.afterScholarship && (
-                  <div className="inline-block px-3 py-1 rounded-md bg-green-500/10 text-green-400 text-xs md:text-sm font-medium">
+                  <div className="inline-block px-3 py-1 rounded-md bg-emerald-500/10 text-emerald-700 text-xs md:text-sm font-semibold">
                     {program.fees.afterScholarship} with scholarship
                   </div>
                 )}
               </div>
 
-              <div className="space-y-3 md:space-y-4 mb-6 md:mb-8">
+              <div className="space-y-3 md:space-y-4 mb-5 md:mb-6">
                 <Link href="https://admission.iaer.ac.in/" target="_blank" className="block">
-                  <Button className="w-full bg-accent hover:bg-accent/90 text-white py-4 md:py-6 text-base md:text-lg rounded-xl shadow-lg shadow-accent/20">
+                  <Button className="w-full bg-accent hover:bg-accent/90 text-white py-3.5 md:py-5 text-base md:text-lg rounded-xl shadow-lg shadow-accent/20">
                     Apply Now
                   </Button>
                 </Link>
-                <Button variant="outline" className="w-full border-white/10 hover:bg-white/5 text-black py-4 md:py-6 rounded-xl text-sm md:text-base">
+                <Button variant="outline" className="w-full border-gray-200 hover:bg-gray-50 text-gray-900 py-3.5 md:py-5 rounded-xl text-sm md:text-base">
                   <Download className="w-3.5 h-3.5 md:w-4 md:h-4 mr-2" /> Download Brochure
                 </Button>
-                <div className="flex items-center justify-center gap-2 text-gray-500 text-xs md:text-sm pt-2 md:pt-4">
+                <div className="flex items-center justify-center gap-2 text-gray-600 text-xs md:text-sm pt-1.5 md:pt-3">
                   <Phone className="w-3.5 h-3.5 md:w-4 md:h-4" /> 
                   <span>Need help? Call +91 90070 30123</span>
                 </div>
               </div>
 
               {program.fees.notes && (
-                <div className="pt-4 md:pt-6 border-t border-white/10 space-y-1.5 md:space-y-2">
+                <div className="pt-4 md:pt-6 border-t border-gray-200 space-y-1.5 md:space-y-2">
                   {program.fees.notes.map((note, idx) => (
                     <p key={idx} className="text-[10px] md:text-xs text-gray-500">* {note}</p>
                   ))}
@@ -299,28 +442,12 @@ export default function ProgramClient({ program }) {
               )}
             </motion.div>
 
-            {/* Why Choose Card */}
-            <motion.div 
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.8 }}
-              className="p-6 md:p-8 rounded-3xl bg-white/5 border border-white/10"
-            >
-              <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6 text-white flex items-center gap-2">
-                <Award className="w-4 h-4 md:w-5 md:h-5 text-accent" /> Why this program?
-              </h3>
-              <ul className="space-y-3 md:space-y-4">
-                {program.whyStudy.map((reason, idx) => (
-                  <li key={idx} className="flex items-start gap-2 md:gap-3 text-gray-400 text-xs md:text-sm">
-                    <CheckCircle2 className="w-3.5 h-3.5 md:w-4 md:h-4 text-accent shrink-0 mt-0.5" />
-                    {reason}
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+          </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      <OurHiringPartnersSection />
 
       {/* Mobile Bottom CTA */}
       <div className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-[#0a0601]/95 backdrop-blur-lg border-t border-white/10 lg:hidden safe-area-bottom">
@@ -345,3 +472,4 @@ export default function ProgramClient({ program }) {
     </div>
   );
 }
+

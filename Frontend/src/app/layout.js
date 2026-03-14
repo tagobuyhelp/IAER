@@ -120,8 +120,33 @@ export default function RootLayout({ children }) {
           `}
         </Script>
 
-        {/* NPF Widget Script */}
-        <Script src="https://in8cdn.npfs.co/js/widget/npfwpopup.js" strategy="lazyOnload" />
+        {/* Meritto Enquiry Form Widget 1 - POP-UP (npfwpopup.js + NpfWidgetsInit) */}
+        <Script id="npf-widget-1" strategy="lazyOnload">
+          {`
+            (function(){
+              var s=document.createElement("script");
+              s.type="text/javascript";
+              s.async=true;
+              s.src="https://in8cdn.npfs.co/js/widget/npfwpopup.js";
+              s.onload=function(){
+                window.npfW29f961a6166cc94d1ae744a39fa1122f = new NpfWidgetsInit({
+                  widgetId: '29f961a6166cc94d1ae744a39fa1122f',
+                  baseurl: 'widgets.in8.nopaperforms.com',
+                  formTitle: 'Enquiry Form',
+                  titleColor: '#FF0033',
+                  backgroundColor: '#ddd',
+                  iframeHeight: '500px',
+                  buttonbgColor: '#4c79dc',
+                  buttonTextColor: '#FFF'
+                });
+              };
+              document.body.appendChild(s);
+            })();
+          `}
+        </Script>
+
+        {/* Meritto Enquiry Form Widget 2 - POP-UP (emwgts.js) */}
+        <Script src="https://widgets.in8.nopaperforms.com/emwgts.js" strategy="lazyOnload" />
 
         {/* NPF Chatbot Loader Script */}
         <Script 
