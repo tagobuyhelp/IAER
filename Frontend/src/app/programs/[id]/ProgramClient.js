@@ -98,8 +98,32 @@ function scrollToSection(id) {
   el.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
+function getCurriculumItems(program) {
+  const structure = program?.curriculum?.structure;
+  if (Array.isArray(structure) && structure.length) return structure;
+
+  const coreModules = program?.curriculum?.coreModules;
+  const electives = program?.curriculum?.electives;
+
+  const items = [];
+  if (Array.isArray(coreModules) && coreModules.length) {
+    items.push(...coreModules.map((m) => `Core: ${m}`));
+  }
+  if (Array.isArray(electives) && electives.length) {
+    items.push(...electives.map((m) => `Elective: ${m}`));
+  }
+  return items;
+}
+
 export default function ProgramClient({ program }) {
   const [activeSection, setActiveSection] = useState("overview");
+  const curriculumItems = getCurriculumItems(program);
+  const specializations = Array.isArray(program?.curriculum?.specializations)
+    ? program.curriculum.specializations
+    : [];
+  const careerOutcomes = program?.careerOutcomes;
+  const careerRoles = Array.isArray(careerOutcomes?.roles) ? careerOutcomes.roles : [];
+  const careerSectors = Array.isArray(careerOutcomes?.sectors) ? careerOutcomes.sectors : [];
 
   useEffect(() => {
     const ids = ["overview", "curriculum", "careers"];
@@ -325,32 +349,44 @@ export default function ProgramClient({ program }) {
                     <h3 className="text-xl md:text-2xl font-black mb-4 md:mb-6 text-gray-900 flex items-center gap-2">
                       <BookOpen className="w-5 h-5 md:w-6 md:h-6 text-accent" /> Course Structure
                     </h3>
-                    <div className="space-y-3 md:space-y-4">
-                      {program.curriculum.structure.map((item, idx) => (
-                        <div key={idx} className="flex gap-3 md:gap-4 p-3 md:p-4 rounded-2xl bg-white border border-gray-200 hover:border-accent/30 transition-colors shadow-sm">
-                          <div className="font-mono text-sm md:text-base text-accent font-bold whitespace-nowrap">
-                            {item.split(':')[0]}
-                          </div>
-                          <div className="text-sm md:text-base text-gray-700">
-                            {item.split(':')[1] || item}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
+                    {curriculumItems.length ? (
+                      <div className="space-y-3 md:space-y-4">
+                        {curriculumItems.map((item, idx) => {
+                          const [label, ...rest] = String(item).split(':');
+                          const value = rest.join(':').trim();
+                          const hasValue = Boolean(value);
+
+                          return (
+                            <div key={idx} className="flex gap-3 md:gap-4 p-3 md:p-4 rounded-2xl bg-white border border-gray-200 hover:border-accent/30 transition-colors shadow-sm">
+                              <div className="font-mono text-sm md:text-base text-accent font-bold whitespace-nowrap">
+                                {hasValue ? label : `Unit ${idx + 1}`}
+                              </div>
+                              <div className="text-sm md:text-base text-gray-700">
+                                {hasValue ? value : String(item)}
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    ) : (
+                      <div className="text-sm text-gray-600">
+                        Curriculum details will be updated soon.
+                      </div>
+                    )}
                   </div>
 
-                  {program.curriculum.specializations && (
+                  {specializations.length ? (
                     <div className="rounded-3xl bg-white border border-gray-200 shadow-sm p-4 md:p-6">
                       <h3 className="text-xl md:text-2xl font-black mb-4 md:mb-6 text-gray-900">Specializations</h3>
                       <div className="flex flex-wrap gap-2 md:gap-3">
-                        {program.curriculum.specializations.map((spec, idx) => (
+                        {specializations.map((spec, idx) => (
                           <span key={idx} className="px-3 py-1.5 md:px-4 md:py-2 rounded-lg bg-accent/10 border border-accent/20 text-accent text-xs md:text-sm font-semibold">
                             {spec}
                           </span>
                         ))}
                       </div>
                     </div>
-                  )}
+                  ) : null}
                 </div>
               </SectionBlock>
 
@@ -364,33 +400,37 @@ export default function ProgramClient({ program }) {
                   <div className="p-4 md:p-6 rounded-3xl bg-gradient-to-br from-emerald-50 via-white to-sky-50 border border-gray-200 shadow-sm">
                     <h3 className="text-lg md:text-xl font-black mb-3 md:mb-4 text-gray-900">Career Outcomes</h3>
                     <p className="text-sm md:text-base text-gray-700 text-justify leading-relaxed">
-                      {program.careerOutcomes.description}
+                      {careerOutcomes?.description || "Career outcomes will be updated soon."}
                     </p>
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-4 md:gap-6">
-                    <div className="rounded-3xl bg-white border border-gray-200 shadow-sm p-4 md:p-6">
-                      <h4 className="text-base md:text-lg font-black mb-3 md:mb-4 text-gray-900 border-b border-gray-200 pb-2">Job Roles</h4>
-                      <ul className="space-y-2 md:space-y-3">
-                        {program.careerOutcomes.roles.map((role, idx) => (
-                          <li key={idx} className="flex items-center text-sm md:text-base text-gray-700">
-                            <Briefcase className="w-3.5 h-3.5 md:w-4 md:h-4 text-accent mr-2 md:mr-3" />
-                            {role}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div className="rounded-3xl bg-white border border-gray-200 shadow-sm p-4 md:p-6">
-                      <h4 className="text-base md:text-lg font-black mb-3 md:mb-4 text-gray-900 border-b border-gray-200 pb-2">Target Sectors</h4>
-                      <ul className="space-y-2 md:space-y-3">
-                        {program.careerOutcomes.sectors.map((sector, idx) => (
-                          <li key={idx} className="flex items-center text-sm md:text-base text-gray-700">
-                            <MapPin className="w-3.5 h-3.5 md:w-4 md:h-4 text-accent mr-2 md:mr-3" />
-                            {sector}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                    {careerRoles.length ? (
+                      <div className="rounded-3xl bg-white border border-gray-200 shadow-sm p-4 md:p-6">
+                        <h4 className="text-base md:text-lg font-black mb-3 md:mb-4 text-gray-900 border-b border-gray-200 pb-2">Job Roles</h4>
+                        <ul className="space-y-2 md:space-y-3">
+                          {careerRoles.map((role, idx) => (
+                            <li key={idx} className="flex items-center text-sm md:text-base text-gray-700">
+                              <Briefcase className="w-3.5 h-3.5 md:w-4 md:h-4 text-accent mr-2 md:mr-3" />
+                              {role}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ) : null}
+                    {careerSectors.length ? (
+                      <div className="rounded-3xl bg-white border border-gray-200 shadow-sm p-4 md:p-6">
+                        <h4 className="text-base md:text-lg font-black mb-3 md:mb-4 text-gray-900 border-b border-gray-200 pb-2">Target Sectors</h4>
+                        <ul className="space-y-2 md:space-y-3">
+                          {careerSectors.map((sector, idx) => (
+                            <li key={idx} className="flex items-center text-sm md:text-base text-gray-700">
+                              <MapPin className="w-3.5 h-3.5 md:w-4 md:h-4 text-accent mr-2 md:mr-3" />
+                              {sector}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ) : null}
                   </div>
                 </div>
               </SectionBlock>
