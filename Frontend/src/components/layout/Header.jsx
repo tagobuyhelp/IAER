@@ -43,7 +43,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#0a0601]/80 backdrop-blur-md supports-[backdrop-filter]:bg-[#0a0601]/60 transition-all duration-300">
+      <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-primary transition-all duration-300">
         <div className="container mx-auto px-4 h-20 flex items-center justify-between">
           <Link href="/" className="flex items-center shrink-0 mr-auto lg:mr-0">
             <img src="/images/logos/iaer-logo-white.png" alt="IAER Logo" className="h-12 w-auto" />
@@ -64,7 +64,7 @@ export default function Header() {
                     "flex items-center px-4 py-2 text-sm font-bold tracking-wide rounded-full transition-all duration-200",
                     openDropdown === item.title
                       ? "text-accent bg-white/10"
-                      : "text-gray-300 hover:text-white hover:bg-white/5"
+                      : "text-white/80 hover:text-white hover:bg-white/10"
                   )}
                 >
                   {item.icon && <Icon name={item.icon} className="w-4 h-4 mr-2 opacity-70" />}
@@ -84,7 +84,7 @@ export default function Header() {
               href="https://admission.iaer.ac.in/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden lg:inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold text-white uppercase tracking-wider transition-all duration-200 bg-accent hover:bg-accent/90 rounded-full shadow-[0_0_20px_-5px_rgba(255,107,0,0.5)] hover:shadow-[0_0_25px_-5px_rgba(255,107,0,0.6)] hover:-translate-y-0.5"
+              className="hidden lg:inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold text-white uppercase tracking-wider transition-all duration-200 bg-accent hover:bg-accent/90 rounded-full shadow-[0_0_20px_-5px_rgba(247,148,30,0.45)] hover:shadow-[0_0_25px_-5px_rgba(247,148,30,0.55)] hover:-translate-y-0.5"
             >
               Apply Now
             </Link>
