@@ -414,7 +414,7 @@ export default function Programs() {
               {
                 title: "Industry Integrated Curriculum",
                 desc: "Our courses are designed in collaboration with industry leaders to ensure relevance.",
-                image: "/images/programs/iaer-industry-integrated-curriculum.png"
+                image: "/images/programs/iaer-industry-integrated-curriculum.webp"
               },
               {
                 title: "State-of-the-Art Campus",
@@ -424,7 +424,7 @@ export default function Programs() {
               {
                 title: "Global Alumni Network",
                 desc: "Join a network of successful professionals working in top companies globally.",
-                image: "/images/programs/iaer-global-alumni-network.png"
+                image: "/images/programs/iaer-global-alumni-network.webp"
               }
             ].map((feature, idx) => (
               <motion.div
