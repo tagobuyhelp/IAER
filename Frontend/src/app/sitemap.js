@@ -11,8 +11,10 @@ export default function sitemap() {
     '/about/statutory-committees',
     '/academics',
     '/admissions',
+    '/admissions/hostel-fee',
     '/campus-life',
     '/contact',
+    '/infrastructure',
     '/mandatory-disclosure',
     '/placement', // Note: 'placements' folder exists but seems to be a duplicate/placeholder
     '/programs',

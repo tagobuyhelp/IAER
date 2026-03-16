@@ -12,6 +12,17 @@ export default function CampusLifeSection() {
     triggerOnce: true,
   });
 
+  const campusGallery = [
+    { src: "/images/campus-life/iaer-campus-life-orientation-program.webp", alt: "Orientation Program", className: "col-span-2 row-span-2 md:col-span-2 md:row-span-2 lg:col-span-3 lg:row-span-3" },
+    { src: "/images/campus-life/iaer-campus-life-holi-celebration.webp", alt: "Holi Celebration", className: "col-span-2 row-span-1 md:col-span-2 md:row-span-1 lg:col-span-3 lg:row-span-2" },
+    { src: "/images/campus-life/iaer-campus-life-christmas-celebration.webp", alt: "Christmas Celebration", className: "col-span-1 row-span-1 md:col-span-1 md:row-span-1 lg:col-span-2 lg:row-span-2" },
+    { src: "/images/admissions/Students_collaborating_in_bright_campus_space.png", alt: "Student Collaboration", className: "col-span-1 row-span-1 md:col-span-1 md:row-span-1 lg:col-span-2 lg:row-span-1" },
+    { src: "/images/academic/Classroom_discussion_with_engaged_students.png", alt: "Classroom Discussion", className: "col-span-1 row-span-1 md:col-span-1 md:row-span-1 lg:col-span-2 lg:row-span-1" },
+    { src: "/images/about/Hands-on_electronics_training_in_India.png", alt: "Hands-on Training", className: "col-span-1 row-span-1 md:col-span-1 md:row-span-1 lg:col-span-2 lg:row-span-1" },
+    { src: "/images/students/riya.avif", alt: "Student Life", className: "col-span-1 row-span-1 md:col-span-1 md:row-span-1 lg:col-span-2 lg:row-span-1" },
+    { src: "/images/academic/Professor_and_student_discussing_results.png", alt: "Faculty Mentorship", className: "col-span-2 row-span-1 md:col-span-2 md:row-span-1 lg:col-span-4 lg:row-span-1" },
+  ];
+
   const features = [
     { 
       icon: Users, 
@@ -89,6 +100,39 @@ export default function CampusLifeSection() {
             )}>
               An enriching environment that promotes collaboration, innovation, and holistic development beyond the classroom.
             </p>
+          </div>
+
+          <div
+            className={cn(
+              "mb-10 md:mb-14 transition-all duration-700 delay-400",
+              sectionInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            )}
+          >
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3 auto-rows-[120px] md:auto-rows-[140px] lg:auto-rows-[150px]">
+              {campusGallery.map((item, idx) => (
+                <div
+                  key={idx}
+                  className={cn(
+                    "group relative rounded-2xl overflow-hidden border border-gray-200 bg-white shadow-sm hover:shadow-lg transition-shadow",
+                    item.className
+                  )}
+                >
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 20vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent opacity-70" />
+                  <div className="absolute bottom-3 left-3 right-3">
+                    <div className="text-white text-xs md:text-sm font-semibold drop-shadow line-clamp-1">
+                      {item.alt}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Features Grid */}

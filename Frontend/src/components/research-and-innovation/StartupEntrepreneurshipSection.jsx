@@ -12,6 +12,7 @@ export default function StartupEntrepreneurshipSection() {
             icon: Rocket,
             color: "text-orange-600",
             bg: "bg-orange-50",
+            image: "/images/research-and-innovation/Collaborative_brainstorming_in_a_study_hub.png",
             points: [
                 "Dedicated co-working spaces with high-speed internet.",
                 "Access to advanced prototyping labs and testing facilities.",
@@ -24,6 +25,7 @@ export default function StartupEntrepreneurshipSection() {
             icon: Users,
             color: "text-blue-600",
             bg: "bg-blue-50",
+            image: "/images/research-and-innovation/Mentoring_in_the_research_room.png",
             points: [
                 "1-on-1 sessions with successful startup founders.",
                 "Industry-specific guidance from corporate leaders.",
@@ -36,6 +38,7 @@ export default function StartupEntrepreneurshipSection() {
             icon: Coins,
             color: "text-emerald-600",
             bg: "bg-emerald-50",
+            image: "/images/research-and-innovation/Student_founders_presenting_to_mentors.png",
             points: [
                 "Access to seed funding and angel investor networks.",
                 "Assistance with government grant applications.",
@@ -76,20 +79,34 @@ export default function StartupEntrepreneurshipSection() {
                         {sections.map((section, idx) => (
                             <div
                                 key={idx}
-                                className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-gray-100 flex flex-col h-full group"
+                                className="bg-white rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-gray-100 flex flex-col h-full group overflow-hidden"
                             >
-                                <div className={cn("w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shrink-0 transition-transform group-hover:scale-110", section.bg)}>
-                                    <section.icon className={cn("w-7 h-7", section.color)} />
+                                <div className="relative h-56 md:h-72">
+                                    <Image
+                                        src={section.image}
+                                        alt={section.title}
+                                        fill
+                                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                        sizes="(max-width: 1024px) 100vw, 33vw"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                                    <div className="absolute left-6 bottom-6">
+                                        <div className={cn("w-14 h-14 rounded-2xl flex items-center justify-center border border-white/20 bg-white/10 backdrop-blur-md shadow-sm", section.bg)}>
+                                            <section.icon className={cn("w-7 h-7", section.color)} />
+                                        </div>
+                                    </div>
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-900 mb-4">{section.title}</h3>
-                                <ul className="space-y-4 flex-grow">
+                                <div className="p-8 flex flex-col h-full">
+                                    <h3 className="text-xl font-bold text-gray-900 mb-4">{section.title}</h3>
+                                    <ul className="space-y-4 flex-grow">
                                     {section.points.map((point, i) => (
                                         <li key={i} className="flex gap-3 text-sm text-gray-600 leading-relaxed">
                                             <span className={cn("mt-1.5 w-1.5 h-1.5 rounded-full shrink-0", section.bg.replace('bg-', 'bg-current text-').replace('50', '500'))} />
                                             <span>{point}</span>
                                         </li>
                                     ))}
-                                </ul>
+                                    </ul>
+                                </div>
                             </div>
                         ))}
                     </div>

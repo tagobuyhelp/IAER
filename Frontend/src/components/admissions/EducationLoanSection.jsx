@@ -3,6 +3,7 @@
 import { useInView } from "react-intersection-observer";
 import { Coins, CreditCard, FileText, CheckCircle2, AlertCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export default function EducationLoanSection() {
   const { ref: sectionRef, inView: sectionInView } = useInView({
@@ -16,6 +17,17 @@ export default function EducationLoanSection() {
     "Submit KYC, academic records, and income documents as required.",
     "Choose EMI tenure and repayment plan.",
     "Complete verification and disbursal as per provider policy.",
+  ];
+
+  const providers = [
+    { name: "Vidya Lakshmi", src: "/images/loan/VidyaLakshmiLogopng-1596436720712.png" },
+    { name: "WB Student Credit Card", src: "/images/loan/West-Bengal-Student-Credit-Card.png" },
+    { name: "SBI", src: "/images/loan/sbi.cms" },
+    { name: "Bank of India", src: "/images/loan/Bank-of-India.jpg" },
+    { name: "Canara Bank", src: "/images/loan/Canara-Bank-logo.png" },
+    { name: "Bank of Baroda", src: "/images/loan/BankOfBarodaLogo.svg" },
+    { name: "PNB", src: "/images/loan/pnb.jpg" },
+    { name: "Others", text: "Others" },
   ];
 
   return (
@@ -84,6 +96,39 @@ export default function EducationLoanSection() {
 
             {/* Additional Info Cards */}
             <div className="space-y-6">
+              <div className={cn(
+                "bg-white p-6 rounded-2xl border border-gray-100 shadow-sm transition-all duration-700 delay-450",
+                sectionInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
+              )}>
+                <div className="flex items-center justify-between gap-4 mb-4">
+                  <h3 className="text-lg font-bold text-[#100902]">Supported Providers</h3>
+                  <div className="text-xs text-gray-500">Subject to eligibility</div>
+                </div>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                  {providers.map((p) => (
+                    <div
+                      key={p.name}
+                      className="h-14 rounded-xl border border-gray-200 bg-gray-50 flex items-center justify-center px-3"
+                      title={p.name}
+                    >
+                      {"src" in p ? (
+                        <div className="relative w-full h-full">
+                          <Image
+                            src={p.src}
+                            alt={p.name}
+                            fill
+                            className="object-contain p-2"
+                            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 200px"
+                          />
+                        </div>
+                      ) : (
+                        <div className="text-sm font-extrabold text-gray-800 tracking-wide">{p.text}</div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
               <div className={cn(
                 "bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-700 delay-500",
                 sectionInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"

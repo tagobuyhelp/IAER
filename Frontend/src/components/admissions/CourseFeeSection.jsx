@@ -1,29 +1,38 @@
 "use client";
-import React from "react";
 import { Banknote, Table, Info, CheckCircle2 } from "lucide-react";
-import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 export default function CourseFeeSection() {
     const ugPrograms = [
-        { program: "Bachelor of Business Administration (BBA)", duration: "4 Years", fee: "4,12,000", scholarship: "50,000", net: "3,62,000" },
-        { program: "BBA (Hospital Management)", duration: "4 Years", fee: "4,12,000", scholarship: "50,000", net: "3,62,000" },
-        { program: "BBA (Business Analytics)", duration: "4 Years", fee: "5,04,000", scholarship: "50,000", net: "4,54,000" },
-        { program: "BBA (Global Business)", duration: "4 Years", fee: "5,04,000", scholarship: "50,000", net: "4,54,000" },
-        { program: "BBA (Aviation, Hospitality & Service Management)", duration: "4 Years", fee: "5,04,000", scholarship: "50,000", net: "4,54,000" },
-        { program: "Bachelor of Computer Application (BCA)", duration: "4 Years", fee: "4,12,000", scholarship: "50,000", net: "3,62,000" },
-        { program: "B.Sc in Data Science (BSCDS)", duration: "4 Years", fee: "4,12,000", scholarship: "50,000", net: "3,62,000" },
-        { program: "B.Sc in Cyber Security (BSCCS)", duration: "4 Years", fee: "4,12,000", scholarship: "50,000", net: "3,62,000" },
-        { program: "B.Sc in Medical Laboratory Technology (BMLT)", duration: "4 Years", fee: "4,12,000", scholarship: "50,000", net: "3,62,000" },
-        { program: "B.Sc in Hospitality & Hotel Administration (BSCHHA)", duration: "4 Years", fee: "4,12,000", scholarship: "50,000", net: "3,62,000" },
+        { program: "Bachelor Of Business Administration", code: "BBA", duration: "4 Years", fee: "4,12,000", scholarship: "50,000", net: "3,62,000" },
+        { program: "BBA in Hospital Management", code: "BBA-HM", duration: "4 Years", fee: "4,12,000", scholarship: "50,000", net: "3,62,000" },
+        { program: "BBA in Business Analytics", code: "BBA-BA", duration: "4 Years", fee: "5,04,000", scholarship: "50,000", net: "4,54,000" },
+        { program: "BBA in Global Business", code: "BBA-GB", duration: "4 Years", fee: "5,04,000", scholarship: "50,000", net: "4,54,000" },
+        { program: "BBA in Aviation, Hospitality Services and Management", code: "BBA-AHSM", duration: "4 Years", fee: "5,04,000", scholarship: "50,000", net: "4,54,000" },
+        { program: "BBA in Sports Management", code: "BBA-SM", duration: "4 Years", fee: "4,12,000", scholarship: "50,000", net: "3,62,000" },
+        { program: "Bachelor of Computer Application", code: "BCA", duration: "4 Years", fee: "4,12,000", scholarship: "50,000", net: "3,62,000" },
+        { program: "BCA in Data Science & Cyber Security", code: "BCA-BCADSCS", duration: "4 Years", fee: "4,12,000", scholarship: "50,000", net: "3,62,000" },
+        { program: "BCA in Artificial Intelligence & Machine Learning", code: "BCA-AIML", duration: "4 Years", fee: "4,12,000", scholarship: "50,000", net: "3,62,000" },
+        { program: "B.Sc in Data Science", code: "BSCDS", duration: "4 Years", fee: "4,12,000", scholarship: "50,000", net: "3,62,000" },
+        { program: "BSc in Cyber Security", code: "BSCCS", duration: "4 Years", fee: "4,12,000", scholarship: "50,000", net: "3,62,000" },
+        { program: "B.Sc in Medical Lab Technology", code: "BMLT", duration: "4 Years", fee: "4,12,000", scholarship: "50,000", net: "3,62,000" },
+        { program: "B.Sc in Hospitality & Hotel Administration", code: "BHHA", duration: "4 Years", fee: "4,12,000", scholarship: "50,000", net: "3,62,000" },
     ];
 
-    const pgDiploma = [
-        { program: "PG Diploma in Management", code: "PGDM", programFee: "5,45,000", totalPayable: "5,95,000" },
-        { program: "PGDM in AI & Data Science", code: "PGDMAIDS", programFee: "5,45,000", totalPayable: "5,95,000" },
-        { program: "PGDM in Fintech", code: "PGDMFINT", programFee: "5,45,000", totalPayable: "5,95,000" },
-        { program: "PGDM in Business Analytics", code: "PGDMBA", programFee: "5,45,000", totalPayable: "5,95,000" },
-        { program: "PGDM (For Working Executives)", code: "PGDMEX", programFee: "93,000", totalPayable: "1,08,000" },
+    const diplomaAndCertificationPrograms = [
+        { program: "Diploma In Medical Lab Technology", code: "DMLT", duration: "2 Years", fee: "1,20,000", scholarship: "20,000", net: "99,000" },
+        { program: "Diploma in Aviation & Hospitality Management", code: "DAHM", duration: "1 Year", fee: "1,20,000", scholarship: "20,000", net: "99,000" },
+        { program: "Advance Certification in Airline Cabin Crew", code: "ACAC", duration: "1 Year", fee: "1,00,000", scholarship: "20,000", net: "60,000" },
+        { program: "Advance Certification in Agentic AI", code: "ACAI", duration: "6 Months", fee: "50,000", scholarship: "15,000", net: "35,000" },
+        { program: "Advance Certification in Software Development", code: "ACSD", duration: "6 Months", fee: "50,000", scholarship: "15,000", net: "35,000" },
+        { program: "Advance Certification in Full Stack Development", code: "ACFD", duration: "6 Months", fee: "50,000", scholarship: "15,000", net: "35,000" },
+    ];
+
+    const pgPrograms = [
+        { program: "Post Graduate Diploma in Management (Marketing / HRM / Hospital Administration & Healthcare Management)", code: "PGDM", duration: "2 Years", fee: "5,95,000", scholarship: "50,000", net: "5,45,000" },
+        { program: "PGDM – Business Analytics", code: "PGDM-BA", duration: "2 Years", fee: "5,95,000", scholarship: "50,000", net: "5,45,000" },
+        { program: "PGDM – Artificial Intelligence & Data Science", code: "PGDM-AIADS", duration: "2 Years", fee: "5,95,000", scholarship: "50,000", net: "5,45,000" },
+        { program: "PGDM – Fintech", code: "PGDM-FNT", duration: "2 Years", fee: "5,95,000", scholarship: "50,000", net: "5,45,000" },
     ];
 
     return (
@@ -58,10 +67,11 @@ export default function CourseFeeSection() {
                         </div>
                         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
                             <div className="overflow-x-auto">
-                                <table className="w-full text-left border-collapse min-w-[800px]">
+                                <table className="w-full text-left border-collapse min-w-[900px]">
                                     <thead>
                                         <tr className="bg-[#100902] text-white">
                                             <th className="p-4 font-semibold text-sm tracking-wide">Program</th>
+                                            <th className="p-4 font-semibold text-sm tracking-wide">Code</th>
                                             <th className="p-4 font-semibold text-sm tracking-wide">Duration</th>
                                             <th className="p-4 font-semibold text-sm tracking-wide">Total Fee (₹)</th>
                                             <th className="p-4 font-semibold text-sm tracking-wide text-accent">Scholarship (₹)</th>
@@ -72,6 +82,7 @@ export default function CourseFeeSection() {
                                         {ugPrograms.map((p, i) => (
                                             <tr key={i} className="hover:bg-gray-50 transition-colors">
                                                 <td className="p-4 font-semibold text-gray-800 text-sm">{p.program}</td>
+                                                <td className="p-4 text-gray-600 text-sm font-mono bg-gray-50/50">{p.code}</td>
                                                 <td className="p-4 text-gray-600 text-sm">{p.duration}</td>
                                                 <td className="p-4 text-gray-600 text-sm font-medium">{p.fee}</td>
                                                 <td className="p-4 text-green-600 text-sm font-medium">-{p.scholarship}</td>
@@ -82,37 +93,86 @@ export default function CourseFeeSection() {
                                 </table>
                             </div>
                         </div>
+                        <div className="mt-3 text-xs text-gray-500">
+                            Early Bird Scholarship valid till 31st Jan 2026.
+                        </div>
+                    </div>
+
+                    {/* Diploma & Certification Table */}
+                    <div className="mb-12">
+                        <div className="flex items-center gap-3 mb-6">
+                            <Table className="w-6 h-6 text-[#100902]" />
+                            <h3 className="text-xl font-bold text-[#100902]">Diploma & Certification Programs</h3>
+                        </div>
+                        <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
+                            <div className="overflow-x-auto">
+                                <table className="w-full text-left border-collapse min-w-[900px]">
+                                    <thead>
+                                        <tr className="bg-[#100902] text-white">
+                                            <th className="p-4 font-semibold text-sm tracking-wide">Program</th>
+                                            <th className="p-4 font-semibold text-sm tracking-wide">Code</th>
+                                            <th className="p-4 font-semibold text-sm tracking-wide">Duration</th>
+                                            <th className="p-4 font-semibold text-sm tracking-wide">Total Fee (₹)</th>
+                                            <th className="p-4 font-semibold text-sm tracking-wide text-accent">Scholarship (₹)</th>
+                                            <th className="p-4 font-semibold text-sm tracking-wide">Net Fee (₹)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="divide-y divide-gray-100">
+                                        {diplomaAndCertificationPrograms.map((p, i) => (
+                                            <tr key={i} className="hover:bg-gray-50 transition-colors">
+                                                <td className="p-4 font-semibold text-gray-800 text-sm">{p.program}</td>
+                                                <td className="p-4 text-gray-600 text-sm font-mono bg-gray-50/50">{p.code}</td>
+                                                <td className="p-4 text-gray-600 text-sm">{p.duration}</td>
+                                                <td className="p-4 text-gray-600 text-sm font-medium">{p.fee}</td>
+                                                <td className="p-4 text-green-600 text-sm font-medium">-{p.scholarship}</td>
+                                                <td className="p-4 font-bold text-[#100902] text-sm">{p.net}</td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div className="mt-3 text-xs text-gray-500">
+                            Early Bird Scholarship valid till 30th Apr 2026.
+                        </div>
                     </div>
 
                     {/* PG Table */}
                     <div className="mb-12">
                         <div className="flex items-center gap-3 mb-6">
                             <Table className="w-6 h-6 text-[#100902]" />
-                            <h3 className="text-xl font-bold text-[#100902]">Postgraduate Diploma Programs</h3>
+                            <h3 className="text-xl font-bold text-[#100902]">Post Graduate Programs</h3>
                         </div>
                         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
                             <div className="overflow-x-auto">
-                                <table className="w-full text-left border-collapse min-w-[800px]">
+                                <table className="w-full text-left border-collapse min-w-[1000px]">
                                     <thead>
                                         <tr className="bg-[#100902] text-white">
                                             <th className="p-4 font-semibold text-sm tracking-wide">Program</th>
                                             <th className="p-4 font-semibold text-sm tracking-wide">Code</th>
-                                            <th className="p-4 font-semibold text-sm tracking-wide">Program Fee (₹)</th>
-                                            <th className="p-4 font-semibold text-sm tracking-wide">Total Payable (₹)</th>
+                                            <th className="p-4 font-semibold text-sm tracking-wide">Duration</th>
+                                            <th className="p-4 font-semibold text-sm tracking-wide">Gross Fee (₹)</th>
+                                            <th className="p-4 font-semibold text-sm tracking-wide text-accent">Scholarship (₹)</th>
+                                            <th className="p-4 font-semibold text-sm tracking-wide">Net Fee (₹)</th>
                                         </tr>
                                     </thead>
                                     <tbody className="divide-y divide-gray-100">
-                                        {pgDiploma.map((p, i) => (
+                                        {pgPrograms.map((p, i) => (
                                             <tr key={i} className="hover:bg-gray-50 transition-colors">
                                                 <td className="p-4 font-semibold text-gray-800 text-sm">{p.program}</td>
                                                 <td className="p-4 text-gray-600 text-sm font-mono bg-gray-50/50">{p.code}</td>
-                                                <td className="p-4 text-gray-600 text-sm">{p.programFee}</td>
-                                                <td className="p-4 font-bold text-[#100902] text-sm">{p.totalPayable}</td>
+                                                <td className="p-4 text-gray-600 text-sm">{p.duration}</td>
+                                                <td className="p-4 text-gray-600 text-sm font-medium">{p.fee}</td>
+                                                <td className="p-4 text-green-600 text-sm font-medium">-{p.scholarship}</td>
+                                                <td className="p-4 font-bold text-[#100902] text-sm">{p.net}</td>
                                             </tr>
                                         ))}
                                     </tbody>
                                 </table>
                             </div>
+                        </div>
+                        <div className="mt-3 text-xs text-gray-500">
+                            Early Bird Scholarship valid till 30th Apr 2026.
                         </div>
                     </div>
 
@@ -124,9 +184,12 @@ export default function CourseFeeSection() {
                                 <h4 className="text-lg font-bold text-[#100902]">Fee Details</h4>
                             </div>
                             <ul className="space-y-2 text-gray-700 text-sm list-disc list-inside marker:text-accent">
-                                <li>Security Deposit is refundable after program completion.</li>
-                                <li>Uniform Charges: ₹10,000/year (for BSCHHA & BSCASDT).</li>
-                                <li>University Registration & Exam Fees are extra.</li>
+                                <li>Undergraduate programs include University Application, Development & Registration Fee (one time) and other University charges.</li>
+                                <li>Undergraduate exam fee to be paid separately: ₹1,200 per semester.</li>
+                                <li>Fees include two T-shirts and one formal uniform (except shoes) every year.</li>
+                                <li>Post Graduate exam fee to be paid separately: ₹1,500 per semester.</li>
+                                <li>Post Graduate one-time uniform charge: ₹19,600 at admission.</li>
+                                <li>Post Graduate one-time sports & cultural fee: ₹2,000 at admission.</li>
                             </ul>
                         </div>
                         <div className="p-6 bg-blue-50/50 border border-blue-100 rounded-xl">
@@ -135,7 +198,7 @@ export default function CourseFeeSection() {
                                 <h4 className="text-lg font-bold text-[#100902]">Scholarship Policy</h4>
                             </div>
                             <ul className="space-y-2 text-gray-700 text-sm list-disc list-inside marker:text-blue-600">
-                                <li>10% Inaugural Discount on Program Fee.</li>
+                                <li>Early Bird Scholarship of ₹50,000 on every degree program.</li>
                                 <li>Scholarship adjusted against loan value for EMI plans.</li>
                                 <li>Early Bird offers are subject to limited seats.</li>
                             </ul>

@@ -88,6 +88,8 @@ export const navigationData = [
             { title: "IAER Scholarships", href: "/admissions#admissions-scholarships", icon: "GraduationCap" },
             { title: "Education Loan", href: "/admissions#admissions-loan", icon: "Coins" },
             { title: "Campus Life", href: "/admissions#admissions-campus", icon: "Smile" },
+            { title: "Infrastructure", href: "/infrastructure", icon: "Building2" },
+            { title: "Hostel & Student Accommodations", href: "/admissions/hostel-fee", icon: "Hotel" },
         ],
     },
     {

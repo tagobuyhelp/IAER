@@ -1,9 +1,6 @@
 "use client";
-import React from "react";
-import { Info, Briefcase, Stethoscope, Globe, Cpu, GraduationCap, ShieldCheck } from "lucide-react";
-import Link from "next/link";
+import { Briefcase, Stethoscope, Globe, Cpu, GraduationCap, ShieldCheck, Plane, Hotel, Brain, BarChart3 } from "lucide-react";
 import Image from "next/image";
-import { cn } from "@/lib/utils";
 
 export default function AdmissionsOverviewSection() {
     return (
@@ -36,10 +33,13 @@ export default function AdmissionsOverviewSection() {
                         {[
                             { icon: Briefcase, title: "Management", desc: "BBA & MBA programs focused on leadership.", image: "/images/BBA.jpg" },
                             { icon: Stethoscope, title: "Healthcare", desc: "Advanced medical lab & hospital management.", image: "/images/BMLT.jpg" },
-                            { icon: Globe, title: "Hospitality & Aviation", desc: "Global service industry training.", image: "/images/BSCHHA.jpg" },
-                            { icon: Cpu, title: "Information Technology", desc: "BCA & MCA with modern tech stacks.", image: "/images/PGDCC.jpg" },
+                            { icon: Hotel, title: "Hospitality", desc: "Professional hotel & service industry training.", image: "/images/programs/B.Sc-in-Hospitality-&-Hotel-Administration.webp" },
+                            { icon: Plane, title: "Aviation", desc: "Aviation & airport operations for global careers.", image: "/images/programs/Bachelor-of-Aviation-Hospitality-Services-Management.webp" },
+                            { icon: Cpu, title: "Information Technology", desc: "BCA & modern computing programs.", image: "/images/programs/Bachelor-of-Computer-Application.webp" },
                             { icon: GraduationCap, title: "Data Science", desc: "Analytics, AI, and Big Data mastery.", image: "/images/BSCDS.jpg" },
                             { icon: ShieldCheck, title: "Cyber Security", desc: "Network defense and ethical hacking.", image: "/images/BSCCS.jpg" },
+                            { icon: Brain, title: "Artificial Intelligence & Machine Learning", desc: "Build intelligent systems with modern AI/ML tools.", image: "/images/programs/BCA-in-Artificial-Intelligence-&-Machine-Learnng.webp" },
+                            { icon: BarChart3, title: "Business Analytics", desc: "Data-driven decision making for business impact.", image: "/images/programs/Bachelor-of-Business-Analytics.webp" },
                         ].map((item, i) => (
                             <div key={i} className="group bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col">
                                 <div className="relative h-48 overflow-hidden">
