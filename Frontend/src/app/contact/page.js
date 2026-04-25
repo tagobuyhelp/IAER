@@ -275,7 +275,7 @@ export default function ContactPage() {
                         <div className="flex-1 w-full h-[400px] relative rounded-2xl overflow-hidden shadow-xl">
                             {/* Map Placeholder or Image */}
                             <Image
-                                src="/images/iaer-campus.png"
+                                src="/images/campus/iaer-campus.png"
                                 alt="IAER Campus Location"
                                 fill
                                 className="object-cover"

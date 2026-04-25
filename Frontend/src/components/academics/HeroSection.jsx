@@ -208,7 +208,7 @@ export default function HeroSection() {
                 onMouseLeave={() => setImageHovered(false)}
             >
                 <Image
-                    src="/images/iaer-building.jpg"
+                    src="/images/campus/iaer-building.jpg"
                     alt="IAER campus building"
                     fill
                     className={cn(
@@ -329,7 +329,7 @@ export default function HeroSection() {
                         onMouseLeave={() => setImageHovered(false)}
                     >
                         <Image
-                            src="/images/iaer-building.jpg"
+                            src="/images/campus/iaer-building.jpg"
                             alt="IAER campus building"
                             fill
                             sizes="(min-width: 1024px) 50vw, 100vw"

@@ -33,10 +33,10 @@ const students = [
 ];
 
 const bgImages = [
-  '/images/BBA.jpg',
-  '/images/BSCCS.jpg',
-  '/images/PGDMLAI.jpg', 
-  '/images/BMLT.jpg'
+  '/images/programs/legacy/BBA.jpg',
+  '/images/programs/legacy/BSCCS.jpg',
+  '/images/programs/legacy/PGDMLAI.jpg', 
+  '/images/programs/legacy/BMLT.jpg'
 ];
 
 export default function HeroSection() {

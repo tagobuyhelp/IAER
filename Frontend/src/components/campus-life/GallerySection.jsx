@@ -21,7 +21,7 @@ const galleryImages = [
     { type: "image", src: "/images/admissions/College_admissions_reception_in_India.png", alt: "Warm Welcome" },
     { type: "image", src: "/images/research-and-innovation/Students_working_on_robotic_prototype.png", alt: "Innovation & Robotics" },
     { type: "image", src: "/images/students/riya.avif", alt: "Student Life" },
-    { type: "image", src: "/images/iaer-building.jpg", alt: "IAER Campus" },
+    { type: "image", src: "/images/campus/iaer-building.jpg", alt: "IAER Campus" },
     { type: "image", src: "/images/hero_images/slider-6.jpg", alt: "Vibrant Atmosphere" },
     { type: "image", src: "/images/students/arjun.jpg", alt: "Student Success" },
     { type: "image", src: "/images/about/Regulatory_compliance_review_meeting.png", alt: "Institutional Excellence" },

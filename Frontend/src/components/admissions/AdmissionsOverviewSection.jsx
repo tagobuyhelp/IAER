@@ -7,7 +7,7 @@ export default function AdmissionsOverviewSection() {
         <section id="admissions-overview" className="py-16 lg:py-24 bg-white relative">
             <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
                 <Image 
-                    src="/images/bgpattern.png" 
+                    src="/images/ui/backgrounds/bgpattern.png" 
                     alt="Background Pattern" 
                     fill 
                     className="object-cover"
@@ -31,13 +31,13 @@ export default function AdmissionsOverviewSection() {
                     {/* Disciplines Grid */}
                     <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
                         {[
-                            { icon: Briefcase, title: "Management", desc: "BBA & MBA programs focused on leadership.", image: "/images/BBA.jpg" },
-                            { icon: Stethoscope, title: "Healthcare", desc: "Advanced medical lab & hospital management.", image: "/images/BMLT.jpg" },
+                            { icon: Briefcase, title: "Management", desc: "BBA & MBA programs focused on leadership.", image: "/images/programs/legacy/BBA.jpg" },
+                            { icon: Stethoscope, title: "Healthcare", desc: "Advanced medical lab & hospital management.", image: "/images/programs/legacy/BMLT.jpg" },
                             { icon: Hotel, title: "Hospitality", desc: "Professional hotel & service industry training.", image: "/images/programs/B.Sc-in-Hospitality-&-Hotel-Administration.webp" },
                             { icon: Plane, title: "Aviation", desc: "Aviation & airport operations for global careers.", image: "/images/programs/Bachelor-of-Aviation-Hospitality-Services-Management.webp" },
                             { icon: Cpu, title: "Information Technology", desc: "BCA & modern computing programs.", image: "/images/programs/Bachelor-of-Computer-Application.webp" },
-                            { icon: GraduationCap, title: "Data Science", desc: "Analytics, AI, and Big Data mastery.", image: "/images/BSCDS.jpg" },
-                            { icon: ShieldCheck, title: "Cyber Security", desc: "Network defense and ethical hacking.", image: "/images/BSCCS.jpg" },
+                            { icon: GraduationCap, title: "Data Science", desc: "Analytics, AI, and Big Data mastery.", image: "/images/programs/legacy/BSCDS.jpg" },
+                            { icon: ShieldCheck, title: "Cyber Security", desc: "Network defense and ethical hacking.", image: "/images/programs/legacy/BSCCS.jpg" },
                             { icon: Brain, title: "Artificial Intelligence & Machine Learning", desc: "Build intelligent systems with modern AI/ML tools.", image: "/images/programs/BCA-in-Artificial-Intelligence-&-Machine-Learnng.webp" },
                             { icon: BarChart3, title: "Business Analytics", desc: "Data-driven decision making for business impact.", image: "/images/programs/Bachelor-of-Business-Analytics.webp" },
                         ].map((item, i) => (

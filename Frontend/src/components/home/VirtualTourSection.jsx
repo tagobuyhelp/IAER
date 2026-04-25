@@ -9,7 +9,7 @@ export default function VirtualTourSection() {
       {/* Background Image Placeholder */}
       <div
         className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105"
-        style={{ backgroundImage: "url('/images/iaer-campus.png')" }} // Needs real image
+        style={{ backgroundImage: "url('/images/campus/iaer-campus.png')" }} // Needs real image
       >
         <div className="absolute inset-0 bg-black/40" />
       </div>

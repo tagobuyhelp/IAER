@@ -117,12 +117,12 @@ export default function RecognitionApprovalsSection() {
   ];
 
   const logos = [
-    { src: "/images/MAKAUT-aff.png", alt: "MAKAUT" },
-    { src: "/images/AICTE-aff.png", alt: "AICTE" },
-    { src: "/images/NSDC.png", alt: "NSDC" },
-    { src: "/images/MSME.png", alt: "MSME" },
-    { src: "/images/confederation.png", alt: "CII" },
-    { src: "/images/NHRD.png", alt: "NHRD" },
+    { src: "/images/affiliations/MAKAUT-aff.png", alt: "MAKAUT" },
+    { src: "/images/affiliations/AICTE-aff.png", alt: "AICTE" },
+    { src: "/images/affiliations/NSDC.png", alt: "NSDC" },
+    { src: "/images/affiliations/MSME.png", alt: "MSME" },
+    { src: "/images/affiliations/confederation.png", alt: "CII" },
+    { src: "/images/affiliations/NHRD.png", alt: "NHRD" },
   ];
 
   return (

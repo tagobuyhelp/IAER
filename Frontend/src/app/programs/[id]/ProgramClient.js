@@ -24,7 +24,7 @@ import OurHiringPartnersSection from '@/components/placement/OurHiringPartnersSe
 const VISUAL_FALLBACKS = [
   '/images/programs/iaer-industry-integrated-curriculum.webp',
   '/images/programs/iaer-global-alumni-network.webp',
-  '/images/iaer-campus.png',
+  '/images/campus/iaer-campus.png',
 ];
 
 function getProgramVisuals(program) {
@@ -56,10 +56,19 @@ function VisualStrip({ programTitle, images }) {
 }
 
 function getSectionImage(program, section) {
+  const keyMap = {
+    overview: "overviewImage",
+    curriculum: "curriculumImage",
+    careers: "careersImage",
+  };
+  const explicitKey = keyMap[section];
+  const explicitSrc = explicitKey ? program?.[explicitKey] : undefined;
+  if (explicitSrc) return explicitSrc;
+
   const visuals = getProgramVisuals(program);
   const map = { overview: 0, curriculum: 1, careers: 2 };
   const idx = map[section] ?? 0;
-  return visuals[idx] || visuals[0] || '/images/iaer-campus.png';
+  return visuals[idx] || visuals[0] || '/images/campus/iaer-campus.png';
 }
 
 function SectionBlock({ id, title, subtitle, imageSrc, children }) {
@@ -163,7 +172,7 @@ export default function ProgramClient({ program }) {
       <section className="relative h-[40vh] min-h-[200px] lg:h-[60vh] lg:min-h-[500px] flex items-end pb-0 lg:pb-10 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src={program.image || '/images/iaer-campus.png'}
+            src={program.image || '/images/campus/iaer-campus.png'}
             alt={program.title}
             fill
             className="object-cover opacity-65"

@@ -9,7 +9,7 @@ const heroImages = [
     "/images/about/Community_interaction_in_a_neighbourhood_centre.png",
     "/images/about/Students_approaching_modern_campus_entrance.png",
     "/images/admissions/Students_collaborating_in_bright_campus_space.png",
-    "/images/iaer2.jpg"
+    "/images/campus/iaer2.jpg"
 ];
 
 export default function HeroSection() {

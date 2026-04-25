@@ -10,7 +10,7 @@ export default function InternshipSection() {
             {/* Background Texture */}
             <div className="absolute inset-0 opacity-10 pointer-events-none">
                 <Image
-                    src="/images/bgpattern.png"
+                    src="/images/ui/backgrounds/bgpattern.png"
                     alt="Pattern"
                     fill
                     className="object-cover"

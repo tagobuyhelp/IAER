@@ -72,10 +72,10 @@ const programCategories = [
 
 // Hero Background Images
 const heroImages = [
-  '/images/BBA.jpg',
-  '/images/BSCCS.jpg',
-  '/images/PGDMLAI.jpg',
-  '/images/BMLT.jpg'
+  '/images/programs/legacy/BBA.jpg',
+  '/images/programs/legacy/BSCCS.jpg',
+  '/images/programs/legacy/PGDMLAI.jpg',
+  '/images/programs/legacy/BMLT.jpg'
 ];
 
 export default function Programs() {
@@ -286,7 +286,7 @@ export default function Programs() {
                     {/* Program Header Image */}
                     <div className="relative h-48 md:h-80 w-full overflow-hidden group">
                       <Image
-                        src={activeProgram.image || '/images/iaer-campus.png'} // Fallback image
+                        src={activeProgram.image || '/images/campus/iaer-campus.png'} // Fallback image
                         alt={activeProgram.title}
                         fill
                         className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -419,7 +419,7 @@ export default function Programs() {
               {
                 title: "State-of-the-Art Campus",
                 desc: "Modern labs, smart classrooms, and a vibrant campus life await you.",
-                image: "/images/iaer-campus.png"
+                image: "/images/campus/iaer-campus.png"
               },
               {
                 title: "Global Alumni Network",

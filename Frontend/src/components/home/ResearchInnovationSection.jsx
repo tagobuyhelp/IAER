@@ -99,7 +99,7 @@ export default function ResearchInnovationSection() {
             <div className="pointer-events-none absolute inset-0 bg-gradient-radial from-white/40 via-transparent to-transparent opacity-60" />
             <div className="pointer-events-none absolute -bottom-10 -right-6 w-32 h-32 opacity-70">
               <Image
-                src="/images/BMLT.jpg"
+                src="/images/programs/legacy/BMLT.jpg"
                 alt=""
                 aria-hidden="true"
                 width={128}

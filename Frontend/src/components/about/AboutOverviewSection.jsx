@@ -470,7 +470,7 @@ export default function AboutOverviewSection() {
     >
       <div className="absolute inset-0 z-0 pointer-events-none">
         <Image
-          src="/images/about/Students_approaching_modern_campus_entrance.png"
+          src="/images/about/who-we-are-about-bg-image.webp"
           alt="Students Approaching Modern Campus Entrance"
           fill
           className="object-cover opacity-30"

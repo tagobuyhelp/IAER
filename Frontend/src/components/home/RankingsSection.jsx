@@ -26,7 +26,7 @@ export default function RankingsSection() {
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/iaer-campus.png"
+          src="/images/campus/iaer-campus.png"
           alt="IAER Campus Background"
           fill
           className="object-cover"
@@ -126,7 +126,7 @@ export default function RankingsSection() {
                       <div className="flex items-center gap-4">
                         <div className="relative w-20 h-20 md:w-40 md:h-40 rounded-xl bg-primary/5 border border-primary/20 flex items-center justify-center overflow-hidden p-3 transition-all duration-200 group-hover:scale-[1.03] group-hover:saturate-125">
                           <img
-                            src="/images/MAKAUT-aff.png"
+                            src="/images/affiliations/MAKAUT-aff.png"
                             alt="MAKAUT Affiliation"
                             className="w-full h-full object-contain"
                           />
@@ -153,7 +153,7 @@ export default function RankingsSection() {
                       <div className="flex items-center gap-4">
                         <div className="relative w-20 h-20 md:w-36 md:h-36 rounded-xl bg-accent/10 border border-accent/25 flex items-center justify-center overflow-hidden p-3 transition-all duration-200 group-hover:scale-[1.03] group-hover:saturate-125">
                           <img
-                            src="/images/AICTE-aff.png"
+                            src="/images/affiliations/AICTE-aff.png"
                             alt="AICTE Affiliation"
                             className="w-full h-full object-contain"
                           />

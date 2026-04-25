@@ -64,9 +64,9 @@ function AwardItem({ award, index, delay = 0 }) {
 
 export default function AwardsSection() {
   const awardBadges = [
-    { src: "/images/award-1.png", alt: "IAER award 1" },
-    { src: "/images/award-2.png", alt: "IAER award 2" },
-    { src: "/images/award-3.png", alt: "IAER award 3" },
+    { src: "/images/awards/award-1.png", alt: "IAER award 1" },
+    { src: "/images/awards/award-2.png", alt: "IAER award 2" },
+    { src: "/images/awards/award-3.png", alt: "IAER award 3" },
   ];
 
   const awards = [

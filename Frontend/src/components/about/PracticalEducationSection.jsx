@@ -234,7 +234,7 @@ export default function PracticalEducationSection() {
     <section className="relative py-14 lg:py-20 bg-[#100902] text-white overflow-hidden">
       <div className="absolute inset-0 z-0 pointer-events-none">
               <Image
-                src="/images/about/Hands-on_electronics_training_in_India.png"
+                src="/images/about/industry-about-bg-image.webp"
                 alt="Hands-on Electronics Training in India"
                 fill
                 className="object-cover opacity-30"

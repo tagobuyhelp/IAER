@@ -20,15 +20,15 @@ export default function EventsSection() {
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/images/iaer2.jpg"
+                    src="/images/campus/iaer2.jpg"
                     alt="Background"
                     fill
                     className="object-cover opacity-5"
                 />
             </div>
-             {/* Decorative Background */}
-             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4" />
-             <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/4" />
+            {/* Decorative Background */}
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4" />
+            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/4" />
 
             <div className="container mx-auto px-4 relative z-10">
                 <div className="text-center mb-16">

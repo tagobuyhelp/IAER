@@ -15,7 +15,7 @@ function HeroImageSlider() {
         "/images/students/arjun.jpg",
         "/images/students/riya.avif",
         "/images/hero_images/slider-6.jpg",
-        "/images/iaer-building.jpg"
+        "/images/campus/iaer-building.jpg"
     ];
 
     useEffect(() => {
