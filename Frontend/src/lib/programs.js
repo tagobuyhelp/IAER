@@ -7,189 +7,714 @@ const buildProgramSectionImages = (id, overrides = {}) => ({
 
 export const programs = [
   {
-    id: "bachelor-of-business-administration-bba",
+    id: "bba-college-kolkata",
     code: "BBA",
     title: "Bachelor of Business Administration (BBA)",
     subtitle: "Undergraduate Degree I MAKAUT Affiliated I AICTE Approved",
     image: "/images/programs/Bachelor-of-Business-Administration.webp",
     ...buildProgramSectionImages("bachelor-of-business-administration-bba"),
+    description: "The BBA course at IAER Kolkata is a career-oriented undergraduate programme designed for students who want to build successful careers in business management, corporate sectors, entrepreneurship, and leadership roles.",
+    longDescription: "The BBA course at IAER Kolkata is a career-oriented undergraduate programme designed for students who want to build successful careers in business management, corporate sectors, entrepreneurship, and leadership roles. IAER is recognized as one of the best BBA colleges in Kolkata, offering a strong foundation in business management, marketing, finance, and human resource management.",
+    seo: {
+      title: "Best BBA College in Kolkata | BBA Admission 2026 IAER",
+      description: "Apply for BBA at IAER Kolkata. Top BBA college with internship & 100% placement assistance. Admission open 2026. Limited seats.",
+      url: "/programs/bba-college-kolkata"
+    },
     overview: {
-      duration: "4 Years (8 Semesters)",
-      eligibility: "10+2 pass (any stream). Candidates appearing for Class 12 may apply.",
+      duration: "4 Years Undergraduate Degree Programme",
+      eligibility: "Students who have completed 10+2 (any stream) from a recognized board are eligible to apply. Students appearing for Class 12 examinations can also apply.",
       mode: "On-Campus (Kolkata)",
-      scholarship: "ICET Scholarship up to ₹50,000 (as applicable)"
+      scholarship: "Avail ₹ 50,000 Scholarship , Last Date to apply 31st May 2026."
     },
     careerOutcomes: {
-      description: "The BBA program at IAER is designed to create future-ready business professionals with strong managerial, analytical, and leadership capabilities. The curriculum balances theory, practical exposure, internships, and industry interaction, ensuring graduates are corporate-ready from day one. IAER provides structured training and 100% placement assistance through its Career Services Department.",
+      description: "IAER offers dedicated placement assistance to all students, helping them secure roles in leading companies across industries. Graduates can explore a wide range of roles, including some of the best BBA jobs in Kolkata.",
       roles: [
-        "Business Analyst",
-        "Marketing Executive / Manager",
-        "Financial Analyst",
-        "Human Resource Executive",
-        "Operations Manager",
-        "Sales Manager",
-        "Management Trainee",
         "Business Development Executive",
-        "Supply Chain Analyst",
-        "Customer Relationship Manager",
-        "Project Coordinator",
-        "Entrepreneur / Startup Founder"
+        "Marketing Executive",
+        "HR Executive",
+        "Operations Executive",
+        "Finance Executive",
+        "Management Trainee",
+        "Sales Executive",
+        "Customer Relationship Executive"
       ],
       sectors: [
-        "Corporate & Multinational Companies",
-        "Banking, Finance & Insurance",
-        "Consulting & Advisory Firms",
-        "FMCG & Retail",
-        "E-commerce & Digital Businesses",
-        "Startups & Entrepreneurial Ventures",
-        "Healthcare, Hospitality & Services"
+        "Corporate Companies",
+        "Banking & Financial Sector",
+        "Retail & E-commerce",
+        "Consulting Firms",
+        "Startups & Entrepreneurship"
       ]
     },
     whyStudy: [
-      "MAKAUT-approved industry-oriented management curriculum",
-      "Strong focus on business fundamentals and leadership development",
-      "Internship-driven learning with real corporate exposure",
-      "Faculty with academic excellence and industry experience",
-      "Soft skills, aptitude & personality development training",
-      "Dedicated placement and career mentoring support"
+      "Industry-aligned BBA curriculum",
+      "Strong foundation in business and management",
+      "Practical learning through case studies and projects",
+      "Internship opportunities in corporate sectors",
+      "Personality development and communication training",
+      "Career-oriented training with placement support",
+      "Pathway to MBA / PGDM"
     ],
     highlights: [
-      "Comprehensive foundation in management, finance, marketing & HR",
-      "Practical exposure through live projects, case studies & internships",
-      "Focus on communication, teamwork & leadership skills",
-      "Industry expert lectures and corporate interaction sessions",
-      "Career-focused training aligned with employer expectations",
-      "Entrepreneurial mindset development and startup exposure"
+      "Industry-aligned BBA curriculum",
+      "Strong foundation in business and management",
+      "Practical learning through case studies and projects",
+      "Internship opportunities in corporate sectors",
+      "Personality development and communication training",
+      "Career-oriented training with placement support",
+      "Pathway to MBA / PGDM"
     ],
     curriculum: {
       structure: [
-        "Year 1: Management principles, economics, accounting, communication",
-        "Year 2: Marketing, finance, HR management, operations",
-        "Year 3: Business analytics, strategy, specialization electives, internships",
-        "Year 4: Advanced management, leadership, capstone project"
-      ],
-      specializations: [
-        "Marketing",
-        "Finance",
-        "Human Resource Management",
-        "Entrepreneurship & Business Strategy"
+        "Core: Principles of Management",
+        "Core: Marketing Management",
+        "Core: Financial Management",
+        "Core: Human Resource Management",
+        "Core: Business Communication",
+        "Core: Entrepreneurship & Business Strategy",
+        "Practical: Business Case Studies",
+        "Practical: Communication & Presentation Skills",
+        "Practical: Leadership & Team Management",
+        "Practical: Problem-Solving & Decision Making"
       ]
     },
     internships: {
-      description: "Students gain practical exposure through internships in:",
+      description: "IAER provides structured internship opportunities to ensure students gain real-world corporate exposure before graduation.",
       areas: [
-        "Corporate organizations",
-        "Marketing & sales firms",
-        "Financial institutions",
-        "HR & talent management companies",
-        "Startups and SMEs",
-        "Consulting and research firms"
+        "Corporate Companies",
+        "Marketing & Sales Organizations",
+        "Financial Institutions",
+        "Startups & Business Firms",
+        "Consulting Companies"
       ],
-      note: "These internships bridge the gap between classroom learning and real-world business challenges."
+      note: "Roles include Business Development Intern, Marketing Intern, HR Intern, Finance Intern, and Operations Intern."
     },
     fees: {
-      total: "₹3,77,000",
-      afterScholarship: "₹3,27,000",
+      total: "₹4,12,000",
+      afterScholarship: "₹3,62,000",
       notes: [
+        "Scholarship : Avail ₹ 50,000 Scholarship , Last Date to apply 31st May 2026.",
         "Installment & EMI options available",
         "University examination fees (₹1,200 per semester) are payable separately as per MAKAUT norms."
       ]
     },
     admission: [
-      "Online application submission",
-      "Document upload & verification",
-      "Provisional admission confirmation",
-      "Fee payment & enrollment"
+      "Apply now",
+      "Book your seat",
+      "Get free counselling"
     ],
     studentExperience: [
       "Interactive classrooms & case-based learning",
       "Industry mentoring & guest lectures",
       "Leadership workshops & personality development",
       "Strong alumni and corporate network"
+    ],
+    faqs: [
+      {
+        question: "What is BBA?",
+        answer: "BBA (Bachelor of Business Administration) is a professional undergraduate degree focused on business management, leadership, and corporate skills."
+      },
+      {
+        question: "Which is the best BBA college in Kolkata?",
+        answer: "IAER is considered one of the best BBA colleges in Kolkata, offering industry-oriented training and placement support."
+      },
+      {
+        question: "Is BBA a good career option?",
+        answer: "Yes, BBA provides strong career opportunities in corporate jobs, management roles, and entrepreneurship."
+      },
+      {
+        question: "What are the best jobs after BBA?",
+        answer: "Popular roles include marketing executive, business development executive, HR executive, and management trainee."
+      },
+      {
+        question: "Can I do BBA after 12th?",
+        answer: "Yes, students from any stream can apply for BBA programmes."
+      }
     ]
   },
   {
-    id: "bba-in-global-business",
+    id: "agentic-ai-course-kolkata",
+    code: "ACAI",
+    title: "Advanced Certification in Agentic AI",
+    subtitle: "6 Months Certification Programme I Cutting-Edge",
+    image: "/images/programs/advanced-certification-in-agentic-ai-banner.webp",
+    ...buildProgramSectionImages("advanced-certification-in-agentic-ai"),
+    description: "The Advanced Certification in Agentic AI at IAER Kolkata is a cutting-edge programme designed for students who want to build careers in Artificial Intelligence, Generative AI, automation, and intelligent systems.",
+    longDescription: "The Advanced Certification in Agentic AI at IAER Kolkata is a cutting-edge programme designed for students who want to build careers in Artificial Intelligence, Generative AI, automation, and intelligent systems. IAER is emerging as one of the best AI institutes in Kolkata, offering practical training in Agentic AI, machine learning, and AI-driven applications. Students searching for AI course in Kolkata after 12th, Generative AI course with placement, or best artificial intelligence course in Kolkata will find this programme highly aligned with future industry demand.",
+    seo: {
+      title: "Best AI Course in Kolkata | Agentic AI & Generative AI Certification IAER",
+      description: "Join Advanced Agentic AI Certification at IAER Kolkata. Learn AI, Generative AI & automation with placement assistance. Apply now.",
+      url: "/programs/agentic-ai-course-kolkata"
+    },
+    overview: {
+      duration: "6 Months Certification Programme",
+      eligibility: "10+2 Pass or Graduate (any stream)",
+      mode: "On-Campus (Kolkata)",
+      scholarship: "Avail ₹ 15,000 Scholarship , Last Date to apply 31st May 2026."
+    },
+    careerOutcomes: {
+      description: "IAER offers dedicated placement assistance to all students, helping them secure roles in top tech companies and AI-driven organizations. Graduates can explore some of the best AI jobs in Kolkata and India.",
+      roles: [
+        "AI Developer",
+        "Machine Learning Engineer",
+        "Generative AI Specialist",
+        "AI Automation Engineer",
+        "Python Developer",
+        "Data Analyst",
+        "Software Developer"
+      ],
+      sectors: [
+        "Artificial Intelligence & Machine Learning",
+        "Data Science & Analytics",
+        "Automation & Business Intelligence",
+        "Startups & Tech Innovation"
+      ]
+    },
+    whyStudy: [
+      "Industry-aligned Agentic AI curriculum",
+      "Training in Generative AI and LLM-based systems",
+      "Practical learning through real-world AI projects",
+      "Exposure to modern AI tools and platforms",
+      "Short duration with high career impact",
+      "Career-oriented training with placement support"
+    ],
+    highlights: [
+      "Industry-aligned Agentic AI curriculum",
+      "Training in Generative AI and LLM-based systems",
+      "Practical learning through real-world AI projects",
+      "Exposure to modern AI tools and platforms",
+      "Short duration with high career impact",
+      "Career-oriented training with placement support"
+    ],
+    curriculum: {
+      structure: [
+        "Core: Fundamentals of Artificial Intelligence",
+        "Core: Generative AI & Large Language Models (LLMs)",
+        "Core: Agentic AI Systems & Autonomous Agents",
+        "Core: Prompt Engineering & AI Workflows",
+        "Core: Machine Learning Basics",
+        "Core: AI Tools & Automation Platforms"
+      ]
+    },
+    internships: {
+      description: "IAER provides structured internships to ensure students gain real-world exposure in AI-driven environments.",
+      areas: [
+        "IT & Software Companies",
+        "AI & Data Science Firms",
+        "Startups & Tech Companies",
+        "Automation & Digital Solution Providers"
+      ],
+      note: "Roles include AI Developer Intern, Machine Learning Intern, Generative AI Intern, Data Analyst Intern, and Automation & AI Tools Intern."
+    },
+    fees: {
+      total: "₹60,000",
+      afterScholarship: "₹45,000",
+      notes: [
+        "Scholarship : Avail ₹ 15,000 Scholarship , Last Date to apply 31st May 2026.",
+        "Installment & EMI options available"
+      ]
+    },
+    admission: [
+      "Apply Now",
+      "Book Your Seat",
+      "Get Free Counselling"
+    ],
+    studentExperience: [
+      "Building AI-powered Applications",
+      "Creating AI Agents & Automation Workflows",
+      "Working with Real Datasets",
+      "Developing Chatbots & Intelligent Systems"
+    ],
+    faqs: [
+      {
+        question: "What is Agentic AI?",
+        answer: "Agentic AI refers to AI systems that can independently make decisions, perform tasks, and automate processes."
+      },
+      {
+        question: "Which is the best AI course in Kolkata?",
+        answer: "IAER is among the best AI institutes in Kolkata, offering advanced training in Agentic AI and Generative AI."
+      },
+      {
+        question: "Is AI a good career option?",
+        answer: "Yes, AI is one of the highest-paying and fastest-growing career fields globally."
+      },
+      {
+        question: "What are the best jobs after AI course?",
+        answer: "Popular roles include AI developer, machine learning engineer, and data analyst."
+      },
+      {
+        question: "Can I learn AI after 12th?",
+        answer: "Yes, students from any stream can enroll in this certification programme."
+      }
+    ]
+  },
+  {
+    id: "full-stack-development-course-kolkata",
+    code: "ACFD",
+    title: "Advanced Certification in Full Stack Development",
+    subtitle: "6 Months Certification Programme I Job-Oriented",
+    image: "/images/programs/advanced-certification-in-full-stack-development-banner.webp",
+    ...buildProgramSectionImages("advanced-certification-in-full-stack-development"),
+    description: "The Advanced Certification in Full Stack Development at IAER Kolkata is a career-focused programme designed for students who want to build careers in web development, software engineering, and IT industry roles.",
+    longDescription: "The Advanced Certification in Full Stack Development at IAER Kolkata is a career-focused programme designed for students who want to build careers in web development, software engineering, and IT industry roles. IAER is emerging as one of the best full stack development institutes in Kolkata, offering practical training in frontend and backend development technologies. Students searching for full stack developer course in Kolkata, web development course after 12th, or coding course with placement in Kolkata will find this programme highly aligned with industry demand.",
+    seo: {
+      title: "Best Full Stack Development Course in Kolkata | Web Development Course IAER",
+      description: "Join Advanced Full Stack Development Certification at IAER Kolkata. Learn frontend & backend development with placement assistance. Apply now.",
+      url: "/programs/full-stack-development-course-kolkata"
+    },
+    overview: {
+      duration: "6 Months Certification Programme",
+      eligibility: "10+2 Pass (Any Stream) or Graduate. Basic computer knowledge preferred. Interest in coding and web development.",
+      mode: "On-Campus (Kolkata)",
+      scholarship: "Avail ₹ 25,000 Scholarship , Last Date to apply 31st May 2026."
+    },
+    careerOutcomes: {
+      description: "IAER offers dedicated placement assistance to all students, helping them secure roles in leading IT companies. Graduates can explore some of the best full stack developer jobs in Kolkata.",
+      roles: [
+        "Full Stack Developer",
+        "Web Developer",
+        "Software Engineer",
+        "Frontend Developer",
+        "Backend Developer",
+        "Application Developer",
+        "Technical Support Engineer",
+        "QA Tester"
+      ],
+      sectors: [
+        "IT & Software Companies",
+        "Startups & Tech Firms",
+        "E-commerce Platforms",
+        "Freelancing & Remote Jobs"
+      ]
+    },
+    whyStudy: [
+      "Industry-aligned full stack development curriculum",
+      "Strong foundation in frontend and backend technologies",
+      "Practical training through real-world projects",
+      "Exposure to modern development tools",
+      "Short duration with quick job opportunities",
+      "Career-oriented training with placement support"
+    ],
+    highlights: [
+      "Industry-aligned full stack development curriculum",
+      "Strong foundation in frontend and backend technologies",
+      "Practical training through real-world projects",
+      "Exposure to modern development tools",
+      "Short duration with quick job opportunities",
+      "Career-oriented training with placement support"
+    ],
+    curriculum: {
+      structure: [
+        "Frontend: HTML, CSS, JavaScript",
+        "Frontend: Responsive Web Design",
+        "Frontend: UI/UX Basics",
+        "Backend: Node.js / Python / Java",
+        "Backend: Server-side Programming",
+        "Backend: API Development",
+        "Database: SQL / MongoDB",
+        "Tools: Git & Version Control",
+        "Tools: Deployment & Hosting"
+      ]
+    },
+    internships: {
+      description: "IAER provides structured internships to ensure students gain real-world exposure in IT & Web Development Industry.",
+      areas: [
+        "IT & Software Companies",
+        "Web Development Agencies",
+        "Startups & Tech Firms",
+        "Digital Product Companies"
+      ],
+      note: "Roles include Full Stack Developer Intern, Web Developer Intern, Frontend / Backend Developer Intern, and Software Developer Intern."
+    },
+    fees: {
+      total: "₹60,000",
+      afterScholarship: "₹35,000",
+      notes: [
+        "Scholarship : Avail ₹ 25,000 Scholarship , Last Date to apply 31st May 2026.",
+        "Installment & EMI options available"
+      ]
+    },
+    admission: [
+      "Apply Now",
+      "Book Your Seat",
+      "Get Free Counselling"
+    ],
+    studentExperience: [
+      "Building Full Stack Web Applications",
+      "Creating Dynamic Websites",
+      "Developing APIs & Backend Systems",
+      "Deploying Live Projects"
+    ],
+    faqs: [
+      {
+        question: "What is Full Stack Development?",
+        answer: "Full stack development involves working on both frontend and backend of web applications."
+      },
+      {
+        question: "Which is the best full stack development course in Kolkata?",
+        answer: "IAER is among the best full stack development institutes in Kolkata, offering practical training and placement support."
+      },
+      {
+        question: "Is full stack development a good career option?",
+        answer: "Yes, it offers high salary opportunities and strong demand in the IT industry."
+      },
+      {
+        question: "What are the best jobs after full stack course?",
+        answer: "Popular roles include full stack developer, web developer, and software engineer."
+      },
+      {
+        question: "Can I learn full stack development after 12th?",
+        answer: "Yes, students from any stream can enroll in this course."
+      }
+    ]
+  },
+  {
+    id: "bba-sports-management-kolkata",
+    code: "BBA-SM",
+    title: "BBA in Sports Management (BBA-SM)",
+    subtitle: "Undergraduate Degree I MAKAUT Affiliated I AICTE Approved",
+    image: "/images/programs/bba-in-sports-management-banner.webp",
+    ...buildProgramSectionImages("bba-in-sports-management"),
+    description: "The BBA in Sports Management at IAER Kolkata is a career-oriented undergraduate programme designed for students who are passionate about sports and want to build careers in the sports industry, event management, sports marketing, and sports business management.",
+    longDescription: "The BBA in Sports Management at IAER Kolkata is a career-oriented undergraduate programme designed for students who are passionate about sports and want to build careers in the sports industry, event management, sports marketing, and sports business management. IAER is emerging as one of the best sports management colleges in Kolkata, offering a strong blend of business management education and sports industry training. Students will find this programme aligned with modern industry requirements.",
+    seo: {
+      title: "Best Sports Management College in Kolkata | BBA Sports Management IAER",
+      description: "Apply for BBA Sports Management at IAER Kolkata. Top sports management course with internship & 100% placement assistance. Admission open 2026.",
+      url: "/programs/bba-sports-management-kolkata"
+    },
+    overview: {
+      duration: "4 Years Undergraduate Degree Programme",
+      eligibility: "Students who have completed 10+2 (any stream) from a recognized board are eligible to apply. Students appearing for Class 12 examinations can also apply.",
+      mode: "On-Campus (Kolkata)",
+      scholarship: "Avail ₹ 50,000 Scholarship , Last Date to apply 31st May 2026."
+    },
+    careerOutcomes: {
+      description: "IAER offers dedicated placement assistance to all students, helping them secure roles in sports organizations, event companies, and corporate sectors. Graduates can explore exciting roles, including some of the best sports management jobs in Kolkata.",
+      roles: [
+        "Sports Manager",
+        "Team Manager",
+        "Sports Event Coordinator",
+        "Sports Marketing Executive",
+        "Event Manager",
+        "Sports Promotion Executive",
+        "Media & Broadcasting Coordinator",
+        "Sponsorship Manager",
+        "Business Development Executive (Sports Industry)"
+      ],
+      sectors: [
+        "Sports Leagues & Teams",
+        "Event Management Companies",
+        "Sports Marketing Agencies",
+        "Fitness & Training Industry",
+        "Media & Broadcasting"
+      ]
+    },
+    whyStudy: [
+      "Industry-aligned sports management curriculum",
+      "Strong foundation in business + sports management",
+      "Practical exposure through sports events and projects",
+      "Internship opportunities in sports organizations",
+      "Personality development and communication training",
+      "Career-oriented training with placement support",
+      "Pathway to MBA / PGDM in Sports Management"
+    ],
+    highlights: [
+      "Industry-aligned sports management curriculum",
+      "Strong foundation in business + sports management",
+      "Practical exposure through sports events and projects",
+      "Internship opportunities in sports organizations",
+      "Personality development and communication training",
+      "Career-oriented training with placement support",
+      "Pathway to MBA / PGDM in Sports Management"
+    ],
+    curriculum: {
+      structure: [
+        "Core: Sports Management & Administration",
+        "Core: Sports Marketing & Branding",
+        "Core: Event & Tournament Management",
+        "Core: Sponsorship & Sports Business",
+        "Core: Sports Analytics & Performance Management",
+        "Core: Media & Broadcasting in Sports",
+        "Practical: Organizing Sports Events & Tournaments",
+        "Practical: Managing Teams & Athletes",
+        "Practical: Sponsorship & Branding Activities",
+        "Practical: Sports Promotion & Media Coordination"
+      ]
+    },
+    internships: {
+      description: "IAER provides structured internships to ensure students gain real-world experience in the sports ecosystem.",
+      areas: [
+        "Sports Academies & Clubs",
+        "Event Management Companies",
+        "Sports Marketing Agencies",
+        "Fitness & Training Organizations",
+        "Media & Broadcasting Firms"
+      ],
+      note: "Roles include Sports Event Management Intern, Sports Marketing Intern, Team Management Intern, Sponsorship & Branding Intern, and Operations Intern."
+    },
+    fees: {
+      total: "₹4,12,000",
+      afterScholarship: "₹3,62,000",
+      notes: [
+        "Scholarship : Avail ₹ 50,000 Scholarship , Last Date to apply 31st May 2026.",
+        "Installment & EMI options available",
+        "University examination fees (₹1,200 per semester) are payable separately as per MAKAUT norms."
+      ]
+    },
+    admission: [
+      "Apply online",
+      "Upload required documents",
+      "Application verification & confirmation",
+      "Fee payment & enrollment"
+    ],
+    studentExperience: [
+      "Sports-focused professional learning environment",
+      "Exposure to sports events and team management",
+      "Career mentoring and placement preparation",
+      "Modern campus infrastructure and industry interaction"
+    ],
+    faqs: [
+      {
+        question: "What is BBA in Sports Management?",
+        answer: "It is a professional undergraduate programme that combines business management with sports industry knowledge and event management skills."
+      },
+      {
+        question: "Which is the best sports management college in Kolkata?",
+        answer: "IAER is among the best sports management colleges in Kolkata, offering industry-oriented training and placement support."
+      },
+      {
+        question: "Is sports management a good career option?",
+        answer: "Yes, it offers exciting career opportunities in sports events, marketing, team management, and media."
+      },
+      {
+        question: "What are the best sports management jobs in Kolkata?",
+        answer: "Top roles include sports manager, event coordinator, sports marketing executive, and team manager."
+      },
+      {
+        question: "Can I do sports management after 12th?",
+        answer: "Yes, students from any stream can apply for BBA Sports Management programmes."
+      }
+    ]
+  },
+  {
+    id: "bba-business-analytics-kolkata",
+    code: "BBA-BA",
+    title: "BBA in Business Analytics (BBA-BA)",
+    subtitle: "Undergraduate Degree I MAKAUT Affiliated I AICTE Approved",
+    image: "/images/programs/bba-in-business-analytics-banner.webp",
+    ...buildProgramSectionImages("bba-in-business-analytics"),
+    description: "The BBA in Business Analytics at IAER Kolkata is a future-focused undergraduate programme designed for students who want to build careers in data analytics, business intelligence, and decision-making roles.",
+    longDescription: "The BBA in Business Analytics at IAER Kolkata is a future-focused undergraduate programme designed for students who want to build careers in data analytics, business intelligence, and decision-making roles. IAER is recognized as one of the best business analytics colleges in Kolkata, offering a strong blend of management education and data analytics training. The programme focuses on equipping students with both business knowledge and analytical skills required in today’s digital economy.",
+    seo: {
+      title: "Best Business Analytics College in Kolkata | BBA Analytics IAER",
+      description: "Apply for BBA Business Analytics at IAER Kolkata. Learn data analytics, business intelligence & get 100% placement assistance. Admission open 2026.",
+      url: "/programs/bba-business-analytics-kolkata"
+    },
+    overview: {
+      duration: "4 Years Undergraduate Degree Programme",
+      eligibility: "Students who have completed 10+2 (any stream) from a recognized board are eligible to apply. Students appearing for Class 12 examinations can also apply.",
+      mode: "On-Campus (Kolkata)",
+      scholarship: "Avail ₹ 50,000 Scholarship , Last Date to apply 31st May 2026."
+    },
+    careerOutcomes: {
+      description: "IAER offers dedicated placement assistance to all students, helping them secure opportunities in leading companies across industries. Graduates can explore some of the best business analytics jobs in Kolkata, including roles in IT, consulting, finance, and digital business.",
+      roles: [
+        "Business Analyst",
+        "Data Analyst",
+        "MIS Executive",
+        "Reporting Analyst",
+        "Marketing Analyst",
+        "Financial Analyst",
+        "Operations Analyst",
+        "Digital Marketing Analyst",
+        "CRM Analyst",
+        "E-commerce Analyst"
+      ],
+      sectors: [
+        "IT & Technology Companies",
+        "E-commerce & Startups",
+        "Banking & Financial Institutions",
+        "Consulting & Research Firms",
+        "Digital Marketing Agencies"
+      ]
+    },
+    whyStudy: [
+      "Industry-aligned business analytics curriculum",
+      "Strong foundation in business + data analytics",
+      "Practical training using real datasets",
+      "Internship opportunities in analytics and corporate sectors",
+      "Exposure to modern analytics tools",
+      "Career-oriented training with placement support",
+      "Pathway to MBA / PGDM in Business Analytics or Data Science"
+    ],
+    highlights: [
+      "Industry-aligned business analytics curriculum",
+      "Strong foundation in business + data analytics",
+      "Practical training using real datasets",
+      "Internship opportunities in analytics and corporate sectors",
+      "Exposure to modern analytics tools",
+      "Career-oriented training with placement support",
+      "Pathway to MBA / PGDM in Business Analytics or Data Science"
+    ],
+    curriculum: {
+      structure: [
+        "Core: Data Analysis & Visualization",
+        "Core: Business Intelligence & Reporting",
+        "Core: Excel, SQL & Data Tools",
+        "Core: Marketing Analytics",
+        "Core: Financial Analytics",
+        "Core: Data-Driven Decision Making",
+        "Practical: Dashboard Creation & Data Visualization",
+        "Practical: Predictive Analytics Basics",
+        "Practical: Business Problem Solving Using Data",
+        "Practical: Digital Strategy & Analytics"
+      ]
+    },
+    internships: {
+      description: "IAER provides structured internship opportunities to ensure students gain real-world experience before graduation.",
+      areas: [
+        "Corporate Companies",
+        "IT & Analytics Firms",
+        "Digital Marketing Agencies",
+        "Financial & Consulting Firms",
+        "Startups & Business Organizations"
+      ],
+      note: "Roles include Business Analytics Intern, Data Analyst Intern, Marketing Analytics Intern, Financial Data Intern, and MIS & Reporting Intern."
+    },
+    fees: {
+      total: "₹5,04,000",
+      afterScholarship: "₹4,54,000",
+      notes: [
+        "Scholarship : Avail ₹ 50,000 Scholarship , Last Date to apply 31st May 2026.",
+        "Installment & EMI options available",
+        "University examination fees (₹1,200 per semester) are payable separately as per MAKAUT norms."
+      ]
+    },
+    admission: [
+      "Apply online",
+      "Upload academic documents",
+      "Application verification",
+      "Fee payment & enrollment confirmation"
+    ],
+    studentExperience: [
+      "Data-driven learning environment",
+      "Hands-on analytics workshops",
+      "Industry case studies & projects",
+      "Career mentoring & placement preparation"
+    ],
+    faqs: [
+      {
+        question: "What is BBA in Business Analytics?",
+        answer: "It is a professional undergraduate programme that combines business management with data analytics, tools, and decision-making techniques."
+      },
+      {
+        question: "Which is the best business analytics college in Kolkata?",
+        answer: "IAER is among the best business analytics colleges in Kolkata, offering industry-oriented training and placement support."
+      },
+      {
+        question: "Is Business Analytics a good career option?",
+        answer: "Yes, it offers excellent career opportunities in data analytics, consulting, finance, and digital business."
+      },
+      {
+        question: "What are the best business analytics jobs in Kolkata?",
+        answer: "Top roles include business analyst, data analyst, marketing analyst, and MIS executive."
+      },
+      {
+        question: "Can I do business analytics after 12th?",
+        answer: "Yes, students from any stream can apply for BBA Business Analytics programmes."
+      }
+    ]
+  },
+  {
+    id: "bba-global-business-kolkata",
     code: "BBA-GB",
     title: "BBA in Global Business (BBA-GB)",
     subtitle: "Undergraduate Degree I MAKAUT Affiliated I AICTE Approved",
     image: "/images/programs/bba-in-global-business-banner.webp",
     ...buildProgramSectionImages("bba-in-global-business"),
+    description: "The BBA in Global Business at IAER Kolkata is designed for students who aspire to build careers in international business, global trade, multinational companies, and cross-border management roles.",
+    longDescription: "The BBA in Global Business at IAER Kolkata is designed for students who aspire to build careers in international business, global trade, multinational companies, and cross-border management roles. IAER is emerging as one of the best global business colleges in Kolkata, offering a curriculum that blends business management with international exposure and global industry practices. Through strong focus on global learning, international immersion programmes and academic collaborations, students are prepared for high-growth roles in global business sectors.",
+    seo: {
+      title: "Best Global Business College in Kolkata | BBA Global Business IAER",
+      description: "Join BBA Global Business at IAER Kolkata with international immersion & foreign university collaborations. Admission open 2026. Apply now.",
+      url: "/programs/bba-global-business-kolkata"
+    },
     overview: {
-      duration: "4 Years (8 Semesters)",
-      eligibility: "10+2 pass (any stream). Candidates appearing for Class 12 may apply",
+      duration: "4 Years Undergraduate Degree Programme",
+      eligibility: "Students who have completed 10+2 (any stream) from a recognized board are eligible to apply. Students appearing for Class 12 examinations can also apply.",
       mode: "On-Campus (Kolkata)",
-      scholarship: "ICET Scholarship up to ₹50,000 (as applicable)"
+      scholarship: "Avail ₹ 50,000 Scholarship , Last Date to apply 31st May 2026."
     },
     careerOutcomes: {
-      description: "The BBA in Global Business program at IAER is designed for students aspiring to build careers in international business, global trade, multinational corporations, and cross-border operations. The program equips students with global perspectives, cultural intelligence, and strategic business skills. IAER offers structured internships, international exposure, and placement assistance through its Career Services Department.",
+      description: "IAER provides dedicated placement assistance to all students, helping them secure roles in leading national and multinational companies. Graduates are prepared for high-paying global business jobs in India and abroad.",
       roles: [
-        "International Business Analyst",
+        "International Business Executive",
+        "Export-Import Manager",
         "Global Marketing Executive",
-        "Export–Import Manager",
-        "International Sales & Business Development Executive",
-        "Global Supply Chain Coordinator",
-        "Trade Compliance Officer",
-        "Global Operations Manager",
-        "International Financial Analyst",
-        "Global HR Executive",
-        "Business Consultant (International Markets)"
+        "Business Development Executive",
+        "Supply Chain & Logistics Executive",
+        "Management Trainee (MNCs)"
       ],
       sectors: [
-        "Multinational Corporations (MNCs)",
-        "Export–Import & Trading Firms",
-        "Global Supply Chain & Logistics Companies",
-        "International Consulting Firms",
-        "Banking, Finance & Global Trade Institutions",
-        "FMCG & Retail (International Operations)",
-        "Startups with Global Expansion Focus"
+        "Multinational Corporations",
+        "International Trade Companies",
+        "Consulting Firms",
+        "E-commerce & Global Businesses",
+        "Logistics & Supply Chain Industry"
       ]
     },
     whyStudy: [
-      "MAKAUT-approved curriculum with strong global business orientation",
-      "Focus on international trade, cross-cultural management & global strategy",
-      "Exposure to global market dynamics and regulatory frameworks",
-      "International study tours and global industry interaction (subject to availability)",
-      "Faculty with international business and corporate experience",
-      "Career mentoring for overseas and multinational roles"
+      "Global business-focused curriculum",
+      "International immersion programmes",
+      "Collaboration with foreign universities",
+      "Strong foundation in business management",
+      "Internship opportunities in global companies",
+      "Personality development & communication training",
+      "Career-oriented training with placement support",
+      "Pathway to MBA / PGDM in International Business"
     ],
     highlights: [
-      "Strong foundation in international business & global economics",
-      "Practical exposure through case studies on global companies",
-      "Training in cross-cultural communication & global leadership",
-      "Internship opportunities aligned with international business domains",
-      "Industry expert lectures and global business workshops",
-      "Career support for multinational and export-oriented roles"
+      "International Immersion Programmes",
+      "Global Classroom Exposure",
+      "Cross-Cultural Learning",
+      "Industry Visits & Workshops",
+      "Networking with International Faculty",
+      "Partnership with University of Sunderland, UK",
+      "Partnership with University of South Wales, UK",
+      "Partnership with Lincoln University College, Malaysia",
+      "Partnership with SEGi University, Malaysia",
+      "Partnership with FPT University, Vietnam",
+      "Partnership with INTI International University, Malaysia",
+      "Partnership with MDIS, Singapore"
     ],
     curriculum: {
       structure: [
-        "Year 1: Business fundamentals, economics, communication skills",
-        "Year 2: International marketing, global trade practices, finance",
-        "Year 3: Cross-cultural management, global supply chain, internships",
-        "Year 4: Global strategy, international finance, capstone project"
-      ],
-      specializations: [
-        "International Marketing",
-        "Global Supply Chain Management",
-        "International Finance",
-        "Export–Import Management"
+        "Core: International Business Management",
+        "Core: Global Marketing & Trade",
+        "Core: Export-Import Management",
+        "Core: Cross-Cultural Communication",
+        "Core: International Finance",
+        "Core: Business Strategy & Leadership",
+        "Exposure: International Immersion Programmes",
+        "Exposure: Global Classroom & Industry Visits"
       ]
     },
     internships: {
-      description: "Students gain hands-on exposure through internships in:",
+      description: "IAER ensures students gain real-world experience through internships in both domestic and international business environments.",
       areas: [
-        "Export–import companies",
-        "Multinational corporations",
-        "Global logistics & supply chain firms",
-        "International sales & marketing teams",
-        "Consulting & research organizations"
+        "Multinational Companies (MNCs)",
+        "Export-Import Firms",
+        "Logistics & Supply Chain Companies",
+        "International Trade Organizations",
+        "Corporate & Consulting Firms"
       ],
-      note: "These experiences prepare students for international corporate environments."
+      note: "Roles include International Business Intern, Export-Import Executive Intern, Global Marketing Intern, Business Development Intern, and Operations & Supply Chain Intern."
     },
     fees: {
-      total: "₹4,99,000",
-      afterScholarship: "₹4,49,000",
+      total: "₹5,04,000",
+      afterScholarship: "₹4,54,000",
       notes: [
+        "Scholarship : Avail ₹ 50,000 Scholarship , Last Date to apply 31st May 2026.",
         "Installment & EMI options available",
         "University examination fees (₹1,200 per semester) are payable separately as per MAKAUT norms."
       ]
@@ -205,6 +730,28 @@ export const programs = [
       "International case-based learning",
       "Leadership & communication skill development",
       "Corporate and global alumni interaction"
+    ],
+    faqs: [
+      {
+        question: "What is BBA in Global Business?",
+        answer: "It is a professional undergraduate programme focused on international business, global trade, and cross-border management."
+      },
+      {
+        question: "Which is the best global business college in Kolkata?",
+        answer: "IAER is among the best global business colleges in Kolkata, offering international exposure and industry-oriented training."
+      },
+      {
+        question: "Does this course offer international exposure?",
+        answer: "Yes, IAER provides international immersion programmes through collaborations with global universities."
+      },
+      {
+        question: "What are the career opportunities after BBA Global Business?",
+        answer: "Students can work in multinational companies, export-import firms, global marketing, and international business roles."
+      },
+      {
+        question: "Can I study abroad during this course?",
+        answer: "Yes, students can participate in international immersion programmes and global exposure initiatives."
+      }
     ]
   },
   {
@@ -310,78 +857,97 @@ export const programs = [
     ]
   },
   {
-    id: "bba-ahsm",
+    id: "bba-aviation-hospitality-management-kolkata",
     code: "BBA-AHSM",
     title: "BBA – Aviation, Hospitality Services & Management (BBA-AHSM)",
     subtitle: "Undergraduate Degree I MAKAUT Affiliated I AICTE Approved",
-    image: "/images/programs/Bachelor-of-Aviation-Hospitality-Services-Management.webp",
+    image: "/images/programs/BBA–Aviation-Hospitality-Services-Management.webp",
     ...buildProgramSectionImages("bba-ahsm"),
+    description: "The BBA in Aviation, Hospitality Services & Management at IAER Kolkata is a career-oriented programme designed for students who aspire to work in aviation, airlines, airports, hospitality, and tourism industries.",
+    longDescription: "The BBA in Aviation, Hospitality Services & Management at IAER Kolkata is a career-oriented programme designed for students who aspire to work in aviation, airlines, airports, hospitality, and tourism industries. IAER is widely recognized as one of the best aviation management colleges in Kolkata, offering a practical and industry-aligned curriculum. By combining business management education with aviation operations and hospitality training, the programme ensures students are prepared for real-world industry roles.",
+    seo: {
+      title: "Best Aviation Management College in Kolkata | BBA Aviation IAER",
+      description: "Apply for BBA Aviation & Hospitality at IAER Kolkata. Top aviation college with internship, placement & scholarship. Admission open 2026.",
+      url: "/programs/bba-aviation-hospitality-management-kolkata"
+    },
     overview: {
-      duration: "4 Years (8 Semesters)",
-      eligibility: "10+2 pass (any stream). Candidates appearing for Class 12 may apply.",
+      duration: "4 Years Undergraduate Degree Programme",
+      eligibility: "Students who have completed 10+2 (any stream) from a recognized board are eligible to apply. Students appearing for Class 12 examinations can also apply for admission.",
       mode: "On-Campus (Kolkata)",
-      scholarship: "ICET Scholarship up to ₹50,000 (as applicable)"
+      scholarship: "Avail ₹ 50,000 Scholarship , Last Date to apply 31st May 2026."
     },
     careerOutcomes: {
-      description: "The BBA-AHSM program prepares students for service-led managerial roles across aviation, hospitality, and allied service industries. Students receive 100% placement assistance through IAER’s Training & Placement Cell.",
+      description: "Graduates of this programme can explore a wide range of career opportunities across aviation, hospitality, and service industries. Many students aim for some of the best aviation jobs in Kolkata, while others explore opportunities across India and globally.",
       roles: [
-        "Airport Services Executive",
-        "Airline Customer Experience Manager",
-        "Hospitality Operations Manager",
-        "Ground Services Supervisor",
-        "Guest Relations Manager",
-        "Travel & Tourism Operations Executive",
-        "Service Quality & Compliance Executive",
-        "Cabin Services Coordinator (non-flying roles)"
+        "Airport Operations Executive",
+        "Airline Customer Service Executive",
+        "Ground Staff / Passenger Handling Executive",
+        "Cabin Crew",
+        "Hotel Operations Executive",
+        "Front Office / Guest Relations Executive",
+        "Travel Consultant",
+        "Tourism Executive",
+        "Event & Hospitality Coordinator",
+        "Service Operations Supervisor",
+        "Management Trainee"
       ],
       sectors: [
-        "Airlines & Airports",
-        "Airport Ground Handling Companies",
-        "Hotels, Resorts & Hospitality Chains",
-        "Travel, Tourism & Event Management Firms",
-        "Corporate Services & Customer Experience Units",
-        "Luxury & Service-Driven Enterprises"
+        "Domestic and international airlines",
+        "Airport management companies",
+        "Hotel and resort chains",
+        "Cruise and luxury service industries",
+        "Travel and tourism sector"
       ]
     },
     whyStudy: [
-      "Integrated aviation + hospitality curriculum aligned to service industry needs",
-      "Focus on customer experience, operations, and service excellence",
-      "Internship opportunities across airports, airlines, hotels, and service organizations",
-      "Faculty with industry exposure in aviation and hospitality domains",
-      "Career mentoring tailored for service-sector leadership roles"
+      "Industry-aligned aviation and hospitality curriculum",
+      "Strong foundation in business and service management",
+      "Internship opportunities with airlines, airports, and hotels",
+      "Personality development and professional grooming",
+      "Industry interaction and expert sessions",
+      "Career-oriented training with placement support",
+      "Pathway to MBA / PGDM in Aviation, Hospitality, or Tourism"
     ],
     highlights: [
-      "Dual-domain focus on aviation operations and hospitality management",
-      "Practical exposure through service simulations, case studies, and projects",
-      "Training in communication, etiquette, leadership, and service quality",
-      "Internship-integrated learning model",
-      "Industry interaction through expert sessions, workshops, and visits",
-      "Portfolio-ready assignments for employability"
+      "Airport Operations & Management",
+      "Airline Ground Handling & Passenger Services",
+      "Aviation Safety & Service Standards",
+      "Customer Experience Management",
+      "Hospitality & Tourism Operations",
+      "Grooming & Professional Etiquette",
+      "Communication & Soft Skills",
+      "Airline Service Fundamentals",
+      "Customer Handling & Guest Experience"
     ],
     curriculum: {
       structure: [
-        "Year 1: Business fundamentals, communication, service management basics",
-        "Year 2: Aviation services, hospitality operations, customer experience",
-        "Year 3: Quality management, service leadership, internships",
-        "Year 4: Strategic service management, industry projects, career readiness"
+        "Core: Airport Operations & Management",
+        "Core: Airline Ground Handling & Passenger Services",
+        "Core: Aviation Safety & Service Standards",
+        "Core: Customer Experience Management",
+        "Core: Hospitality & Tourism Operations",
+        "Training: Grooming & Professional Etiquette",
+        "Training: Communication & Soft Skills",
+        "Training: Airline Service Fundamentals",
+        "Training: Customer Handling & Guest Experience"
       ]
     },
     internships: {
-      description: "Students gain hands-on experience through internships in areas such as:",
+      description: "Students gain real-world exposure through internships with leading organizations in aviation and hospitality sectors.",
       areas: [
-        "Airport & Airline Services",
-        "Hospitality Operations (Hotels & Resorts)",
-        "Guest Relations & Customer Experience",
-        "Travel & Tourism Operations",
-        "Event & Service Management",
-        "Quality Assurance & Service Excellence"
+        "Airlines and aviation service providers",
+        "Airports and ground handling companies",
+        "Hotels and hospitality chains",
+        "Travel and tourism organizations",
+        "Event and service industry firms"
       ],
-      note: "These internships help students develop professional service skills and operational confidence."
+      note: "Roles include Airport Operations Intern, Airline Ground Staff Intern, Cabin Services Intern, Hotel Operations Intern, Guest Relations Intern, Travel & Tourism Intern, and Event & Hospitality Intern."
     },
     fees: {
       total: "₹5,04,000",
       afterScholarship: "₹4,54,000",
       notes: [
+        "Scholarship : Avail ₹ 50,000 Scholarship , Last Date to apply 31st May 2026.",
         "Installment-based payment options available",
         "EMI facilities available",
         "University examination fees (₹1,200 per semester) are payable separately as per MAKAUT norms."
@@ -398,278 +964,624 @@ export const programs = [
       "Exposure to aviation and hospitality operations",
       "Career mentoring and placement preparation",
       "Modern campus infrastructure and industry interaction"
+    ],
+    faqs: [
+      {
+        question: "What is BBA in Aviation & Hospitality Management?",
+        answer: "It is a professional undergraduate programme that combines business management with aviation operations, hospitality services, and customer experience training."
+      },
+      {
+        question: "Which is the best aviation management college in Kolkata?",
+        answer: "IAER is considered one of the best aviation management colleges in Kolkata, offering industry-oriented training, internships, and placement support."
+      },
+      {
+        question: "Is BBA Aviation a good career option?",
+        answer: "Yes, it provides strong career opportunities in airlines, airports, hospitality, tourism, and global service industries."
+      },
+      {
+        question: "Does the programme include Internship in Airports?",
+        answer: "Yes, Students get apply opportunity to pursue their internships in Selected Airports and Airlines."
+      },
+      {
+        question: "What are the best aviation jobs in Kolkata?",
+        answer: "Popular roles include airport operations executive, airline customer service executive, ground staff, and cabin crew."
+      },
+      {
+        question: "Can I join aviation after 12th?",
+        answer: "Yes, students from any stream can apply for aviation and hospitality management programmes."
+      }
     ]
   },
   {
-    id: "bba-in-hospital-management",
+    id: "bba-hospital-management-kolkata",
     code: "BBA-HM",
     title: "BBA in Hospital Management (BBA-HM)",
     subtitle: "Undergraduate Degree I MAKAUT Affiliated I AICTE Approved",
     image: "/images/programs/Bachelor-of-Hospital-Management.webp",
     ...buildProgramSectionImages("bba-in-hospital-management"),
+    description: "The BBA in Hospital Management at IAER Kolkata is a career-oriented undergraduate programme designed for students who want to build careers in the healthcare and hospital administration sector.",
+    longDescription: "The BBA in Hospital Management at IAER Kolkata is a career-oriented undergraduate programme designed for students who want to build careers in the healthcare and hospital administration sector. IAER is recognized as one of the best hospital management colleges in Kolkata, offering a strong combination of business management and healthcare administration training. Through industry-focused training and practical learning, students are prepared for high-demand roles in healthcare institutions.",
+    seo: {
+      title: "Best Hospital Management College in Kolkata | BBA Hospital Management IAER",
+      description: "Apply for BBA Hospital Management at IAER Kolkata. Top healthcare management course with internship & 100% placement assistance. Admission open 2026.",
+      url: "/programs/bba-hospital-management-kolkata"
+    },
     overview: {
-      duration: "4 Years (8 Semesters)",
-      eligibility: "10+2 pass (any stream). Candidates appearing for Class 12 may apply",
+      duration: "4 Years Undergraduate Degree Programme",
+      eligibility: "Students who have completed 10+2 (any stream) from a recognized board are eligible to apply. Students appearing for Class 12 examinations can also apply.",
       mode: "On-Campus (Kolkata)",
-      scholarship: "ICET Scholarship up to ₹50,000 (as applicable)"
+      scholarship: "Avail ₹ 50,000 Scholarship , Last Date to apply 31st May 2026."
     },
     careerOutcomes: {
-      description: "The BBA in Hospital Management program at IAER prepares students for administrative, operational, and managerial roles in healthcare organizations. The program blends management fundamentals with healthcare-specific knowledge to develop professionals capable of managing modern hospitals and health systems. IAER offers internship-integrated learning and placement assistance through its Career Services Department.",
+      description: "IAER offers dedicated placement assistance to all students, helping them secure roles in hospitals, healthcare organizations, and corporate healthcare sectors. Graduates can explore a wide range of roles, including some of the best hospital management jobs in Kolkata.",
       roles: [
-        "Hospital Administrator / Manager",
-        "Healthcare Operations Executive",
-        "Clinical Operations Manager",
-        "Patient Services Manager",
-        "Health Information Manager",
-        "Quality & Compliance Officer",
-        "Medical Practice Manager",
-        "Healthcare Marketing Executive",
-        "Insurance & Claims Coordinator",
-        "Public Health Administrator"
+        "Hospital Administrator",
+        "Healthcare Manager",
+        "Patient Care Executive",
+        "Hospital Operations Executive",
+        "Front Office Manager",
+        "Medical Records Officer",
+        "Healthcare Coordinator",
+        "Clinic Manager",
+        "Diagnostic Center Executive",
+        "Healthcare Consultant"
       ],
       sectors: [
-        "Multi-specialty & Super-specialty Hospitals",
-        "Nursing Homes & Diagnostic Centres",
-        "Healthcare Consulting Firms",
-        "Health Insurance Companies",
-        "Public Health & Government Healthcare Agencies",
-        "Hospital Chains & Corporate Healthcare Groups",
-        "Medical Research & Healthcare Startups"
+        "Hospitals & Healthcare Chains",
+        "Clinics & Diagnostic Centers",
+        "Healthcare Startups",
+        "NGO & Public Health Organizations"
       ]
     },
     whyStudy: [
-      "MAKAUT-approved curriculum aligned with healthcare industry standards",
-      "Strong focus on hospital operations, patient care systems & compliance",
-      "Industry exposure through hospital internships and field visits",
-      "Faculty with experience in healthcare administration and management",
-      "Practical training in health information systems and hospital workflows",
-      "Career mentoring and placement-oriented training"
+      "Industry-aligned hospital management curriculum",
+      "Strong foundation in business + healthcare management",
+      "Practical exposure in hospitals and healthcare organizations",
+      "Internship opportunities in hospitals and clinics",
+      "Personality development and communication training",
+      "Career-oriented training with placement support",
+      "Pathway to MBA / MHA (Master of Hospital Administration)"
     ],
     highlights: [
-      "Comprehensive foundation in healthcare management and administration",
-      "Hands-on exposure to hospital operations & patient services",
-      "Training in medical ethics, healthcare laws & quality management",
-      "Internship opportunities in hospitals and healthcare organizations",
-      "Industry expert lectures and hospital visits",
-      "Development of leadership, communication & service management skills"
+      "Industry-aligned hospital management curriculum",
+      "Strong foundation in business + healthcare management",
+      "Practical exposure in hospitals and healthcare organizations",
+      "Internship opportunities in hospitals and clinics",
+      "Personality development and communication training",
+      "Career-oriented training with placement support",
+      "Pathway to MBA / MHA (Master of Hospital Administration)"
     ],
     curriculum: {
       structure: [
-        "Year 1: Management fundamentals, healthcare basics, communication",
-        "Year 2: Hospital operations, medical terminology, health systems",
-        "Year 3: Healthcare quality, health information systems, internships",
-        "Year 4: Healthcare strategy, policy, capstone project"
-      ],
-      coreSubjects: [
-        "Hospital Operations & Administration",
-        "Healthcare Laws & Medical Ethics",
-        "Health Information Management",
-        "Quality & Patient Safety",
-        "Public Health & Healthcare Planning",
-        "Healthcare Marketing & Finance"
+        "Core: Hospital Administration & Operations",
+        "Core: Healthcare Management Systems",
+        "Core: Medical Ethics & Patient Care Management",
+        "Core: Hospital HR & Staffing",
+        "Core: Healthcare Marketing & Finance",
+        "Core: Quality Management in Healthcare",
+        "Practical: Hospital Workflow & Operations",
+        "Practical: Patient Relationship Management",
+        "Practical: Medical Records & Administration",
+        "Practical: Healthcare Service Quality"
       ]
     },
     internships: {
-      description: "Students undergo internships in:",
+      description: "IAER provides structured internships to ensure students gain hands-on experience in real healthcare environments.",
       areas: [
-        "Multi-specialty hospitals",
-        "Diagnostic & healthcare service providers",
-        "Hospital administration departments",
-        "Health insurance & healthcare consulting firms"
+        "Hospitals & Multi-Speciality Clinics",
+        "Nursing Homes & Healthcare Centers",
+        "Diagnostic Labs & Healthcare Facilities",
+        "Healthcare NGOs & Organizations"
       ],
-      note: "These internships ensure real-world healthcare exposure and job readiness."
+      note: "Roles include Hospital Administration Intern, Patient Care Coordinator Intern, Front Office & Hospital Operations Intern, Medical Records Executive Intern, and Healthcare Support Executive Intern."
     },
     fees: {
-      total: "₹3,77,000",
-      afterScholarship: "₹3,27,000",
+      total: "₹4,12,000",
+      afterScholarship: "₹3,62,000",
       notes: [
+        "Scholarship : Avail ₹ 50,000 Scholarship , Last Date to apply 31st May 2026.",
         "Installment & EMI options available",
         "University examination fees (₹1,200 per semester) are payable separately as per MAKAUT norms."
       ]
     },
     admission: [
-      "Online application",
-      "Academic document upload & verification",
-      "Provisional admission confirmation",
-      "Fee payment & enrollment"
+      "Apply online",
+      "Upload academic documents",
+      "Application verification",
+      "Fee payment & enrollment confirmation"
     ],
     studentExperience: [
       "Healthcare-focused learning environment",
       "Hospital exposure and case-based learning",
       "Continuous assessment and skill development",
       "Career mentoring and placement preparation"
+    ],
+    faqs: [
+      {
+        question: "What is BBA in Hospital Management?",
+        answer: "It is a professional undergraduate programme that combines business management with healthcare administration and hospital operations."
+      },
+      {
+        question: "Which is the best hospital management college in Kolkata?",
+        answer: "IAER is among the best hospital management colleges in Kolkata, offering industry-oriented training and placement support."
+      },
+      {
+        question: "Is hospital management a good career option?",
+        answer: "Yes, it offers strong career opportunities in hospitals, healthcare organizations, and administration roles."
+      },
+      {
+        question: "What are the best hospital management jobs in Kolkata?",
+        answer: "Top roles include hospital administrator, patient care executive, healthcare manager, and operations executive."
+      },
+      {
+        question: "Can I do hospital management after 12th?",
+        answer: "Yes, students from any stream can apply for BBA Hospital Management programmes."
+      }
     ]
   },
   {
-    id: "bachelor-of-computer-application-bca",
+    id: "bca-college-kolkata",
     code: "BCA",
     title: "Bachelor of Computer Application (BCA)",
     subtitle: "Undergraduate Degree I MAKAUT Affiliated I AICTE Approved",
-    image: "/images/programs/Bachelor-of-Computer-Application.webp",
-    ...buildProgramSectionImages("bachelor-of-computer-application-bca"),
+    image: "/images/programs/bca-banner.webp",
+    ...buildProgramSectionImages("bca"),
+    description: "The BCA course at IAER Kolkata is a career-oriented undergraduate programme designed for students who want to build careers in the IT industry, software development, data analytics, and digital technology sectors.",
+    longDescription: "The BCA course at IAER Kolkata is a career-oriented undergraduate programme designed for students who want to build careers in the IT industry, software development, data analytics, and digital technology sectors. IAER is recognized as one of the best BCA colleges in Kolkata, offering a strong foundation in programming, software development, and computer applications.",
+    seo: {
+      title: "Best BCA College in Kolkata | BCA Admission 2026 IAER",
+      description: "Apply for BCA at IAER Kolkata. Top IT course with programming, internship & 100% placement assistance. Admission open 2026.",
+      url: "/programs/bca-college-kolkata"
+    },
     overview: {
-      duration: "4 Years (8 Semesters)",
-      eligibility: "10+2 pass with Mathematics. Candidates appearing for Class 12 may apply.",
+      duration: "4 Years Undergraduate Degree Programme",
+      eligibility: "Students who have completed 10+2 (any stream) from a recognized board are eligible to apply. Students appearing for Class 12 examinations can also apply.",
       mode: "On-Campus (Kolkata)",
-      scholarship: "ICET Scholarship up to ₹50,000 (as applicable)"
+      scholarship: "Avail ₹ 50,000 Scholarship , Last Date to apply 31st May 2026."
     },
     careerOutcomes: {
-      description: "The BCA program at IAER builds a strong foundation in computer applications, software development, and IT systems, preparing students for diverse technology-driven roles. Students receive 100% placement assistance through IAER’s Training & Placement Cell.",
+      description: "IAER offers dedicated placement assistance to all students, helping them secure roles in leading IT companies and tech-driven organizations. Graduates can explore a wide range of roles, including some of the best BCA jobs in Kolkata.",
       roles: [
-        "Software Developer / Programmer",
-        "Web Developer / Full-Stack Developer",
-        "System Analyst",
-        "Database Administrator",
-        "Network Administrator",
-        "IT Support & Technical Consultant",
-        "QA / Software Testing Analyst",
-        "Business Intelligence Executive"
+        "Software Developer",
+        "Web Developer",
+        "Application Developer",
+        "Technical Support Engineer",
+        "Data Analyst",
+        "MIS Executive",
+        "Digital Marketing Executive",
+        "SEO Analyst"
       ],
       sectors: [
-        "IT & Software Development Companies",
-        "Technology Consulting Firms",
-        "E-commerce & Digital Platforms",
-        "Banking, Finance & Insurance (IT roles)",
-        "Startups & Product Companies",
-        "Corporate IT Departments"
+        "IT & Software Companies",
+        "Startups & Tech Firms",
+        "Banking & Financial Technology (FinTech)",
+        "E-commerce Companies",
+        "Digital Service Industry"
       ]
     },
     whyStudy: [
-      "Industry-oriented IT curriculum under MAKAUT guidelines",
-      "Strong focus on programming, databases, and application development",
-      "Internship-integrated learning for real-world exposure",
-      "Faculty with technical expertise and industry experience",
-      "Career mentoring, aptitude training, and placement preparation",
-      "Access to modern computer labs and development tools"
+      "Industry-aligned BCA curriculum",
+      "Strong foundation in programming and software development",
+      "Practical learning through projects and coding labs",
+      "Internship opportunities in IT companies",
+      "Exposure to modern technologies",
+      "Career-oriented training with placement support",
+      "Pathway to MCA / MBA / Data Science programs"
     ],
     highlights: [
-      "Comprehensive foundation in computer science and applications",
-      "Hands-on learning through labs, projects, and coding assignments",
-      "Exposure to modern programming languages and technologies",
-      "Training in problem-solving, logic building, and system design",
-      "Internship opportunities aligned with IT career paths",
-      "Industry interaction through expert sessions and workshops"
+      "Industry-aligned BCA curriculum",
+      "Strong foundation in programming and software development",
+      "Practical learning through projects and coding labs",
+      "Internship opportunities in IT companies",
+      "Exposure to modern technologies",
+      "Career-oriented training with placement support",
+      "Pathway to MCA / MBA / Data Science programs"
     ],
     curriculum: {
       structure: [
-        "Year 1: Programming fundamentals, mathematics, computing basics",
-        "Year 2: Data structures, databases, object-oriented programming",
-        "Year 3: Web technologies, networking, software engineering, internships",
-        "Year 4: Advanced applications, electives, industry projects"
+        "Core: Programming Languages (C, C++, Java, Python)",
+        "Core: Web Development (HTML, CSS, JavaScript)",
+        "Core: Database Management (SQL)",
+        "Core: Software Development & Testing",
+        "Core: Operating Systems & Computer Networks",
+        "Core: Basics of Data Science & Analytics",
+        "Practical: Software Development Projects",
+        "Practical: Website & Application Development",
+        "Practical: Database Design & Management",
+        "Practical: Debugging & Testing"
       ]
     },
     internships: {
-      description: "Students gain practical exposure through internships in areas such as:",
+      description: "IAER provides structured internship opportunities to ensure students gain real-world exposure in the IT sector.",
       areas: [
-        "Software & Web Development",
-        "Database & Systems Administration",
-        "IT Support & Networking",
-        "Cybersecurity & QA Testing",
-        "Data Analytics & Business Intelligence",
-        "Startup & Product Development Environments"
+        "IT Companies & Software Firms",
+        "Web Development Agencies",
+        "Startups & Tech Companies",
+        "Digital & IT Service Providers"
       ],
-      note: "These internships strengthen technical skills and employability."
+      note: "Roles include Software Developer Intern, Web Developer Intern, Data Analyst Intern, Technical Support Intern, and QA & Testing Intern."
     },
     fees: {
       total: "₹4,12,000",
       afterScholarship: "₹3,62,000",
       notes: [
+        "Scholarship : Avail ₹ 50,000 Scholarship , Last Date to apply 31st May 2026.",
         "Installment-based payment options available",
         "EMI facilities available",
         "University examination fees (₹1,200 per semester) are payable separately as per MAKAUT norms."
       ]
     },
     admission: [
-      "Apply online",
-      "Upload required documents",
-      "Application verification & confirmation",
-      "Fee payment & enrollment"
+      "Apply now",
+      "Book your seat",
+      "Get free counselling"
     ],
     studentExperience: [
       "Technology-driven learning environment",
       "Access to modern computer laboratories",
       "Real-world project exposure",
       "Career mentoring and placement support"
+    ],
+    faqs: [
+      {
+        question: "What is BCA?",
+        answer: "BCA (Bachelor of Computer Applications) is a professional undergraduate degree focused on computer applications, programming, and IT skills."
+      },
+      {
+        question: "Which is the best BCA college in Kolkata?",
+        answer: "IAER is among the best BCA colleges in Kolkata, offering industry-oriented training and placement support."
+      },
+      {
+        question: "Is BCA a good career option?",
+        answer: "Yes, it offers excellent career opportunities in software development, IT services, and data analytics."
+      },
+      {
+        question: "What are the best jobs after BCA?",
+        answer: "Popular roles include software developer, web developer, data analyst, and IT support engineer."
+      },
+      {
+        question: "Can I do BCA after 12th?",
+        answer: "Yes, students from any stream can apply for BCA programmes."
+      }
     ]
   },
   {
-    id: "bsc-in-data-science",
-    code: "BSCDS",
-    title: "B.Sc in Data Science (BSCDS)",
+    id: "bca-ai-ml-kolkata",
+    code: "BCA-AIML",
+    title: "BCA in Artificial Intelligence & Machine Learning (BCA-AIML)",
     subtitle: "Undergraduate Degree I MAKAUT Affiliated I AICTE Approved",
-    image: "/images/programs/bsc-in-data-science-banner.webp",
-    ...buildProgramSectionImages("bsc-in-data-science"),
+    image: "/images/programs/bca-in-ai-ml-banner.webp",
+    ...buildProgramSectionImages("bca-in-ai-ml"),
+    description: "The BCA in Artificial Intelligence & Machine Learning at IAER Kolkata is a future-focused undergraduate programme designed for students who want to build careers in AI, machine learning, data science, and emerging technologies.",
+    longDescription: "The BCA in Artificial Intelligence & Machine Learning at IAER Kolkata is a future-focused undergraduate programme designed for students who want to build careers in AI, machine learning, data science, and emerging technologies. IAER is emerging as one of the best AI & ML colleges in Kolkata, offering a strong foundation in programming, artificial intelligence, and data-driven technologies.",
+    seo: {
+      title: "Best AI & ML College in Kolkata | BCA AI ML Admission 2026 IAER",
+      description: "Apply for BCA AI & ML at IAER Kolkata. Learn artificial intelligence, machine learning & data science with internship & 100% placement assistance.",
+      url: "/programs/bca-ai-ml-kolkata"
+    },
     overview: {
-      duration: "4 Years (8 Semesters)",
-      eligibility: "10+2 pass (any stream). Candidates appearing for Class 12 may apply",
+      duration: "4 Years Undergraduate Degree Programme",
+      eligibility: "Students who have completed 10+2 (any stream) from a recognized board are eligible to apply. Students appearing for Class 12 examinations can also apply.",
       mode: "On-Campus (Kolkata)",
-      scholarship: "ICET Scholarship up to ₹50,000 (as applicable)"
+      scholarship: "Avail ₹ 50,000 Scholarship , Last Date to apply 31st May 2026."
     },
     careerOutcomes: {
-      description: "The B.Sc in Data Science program at IAER is designed to meet the rapidly growing global demand for professionals skilled in data analytics, artificial intelligence, machine learning, and business intelligence. Students graduate with strong analytical, technical, and decision-making capabilities. IAER offers structured internship programs and 100% placement assistance through its Career Services Department.",
+      description: "IAER offers dedicated placement assistance to all students, helping them secure roles in top technology companies and data-driven organizations. Graduates can explore high-demand roles, including some of the best AI jobs in Kolkata.",
+      roles: [
+        "Machine Learning Engineer",
+        "AI Developer",
+        "Data Scientist",
+        "Data Analyst",
+        "Python Developer",
+        "Software Developer",
+        "Application Developer",
+        "Business Intelligence Analyst"
+      ],
+      sectors: [
+        "IT & Software Companies",
+        "Data Science & Analytics Firms",
+        "Startups & Tech Companies",
+        "Banking & FinTech",
+        "E-commerce & Digital Platforms"
+      ]
+    },
+    whyStudy: [
+      "Industry-aligned AI & ML curriculum",
+      "Strong foundation in programming + data science",
+      "Practical learning through projects and case studies",
+      "Internship opportunities in AI and tech companies",
+      "Exposure to modern tools and technologies",
+      "Career-oriented training with placement support",
+      "Pathway to MCA / MBA / Data Science & AI specializations"
+    ],
+    highlights: [
+      "Industry-aligned AI & ML curriculum",
+      "Strong foundation in programming + data science",
+      "Practical learning through projects and case studies",
+      "Internship opportunities in AI and tech companies",
+      "Exposure to modern tools and technologies",
+      "Career-oriented training with placement support",
+      "Pathway to MCA / MBA / Data Science & AI specializations"
+    ],
+    curriculum: {
+      structure: [
+        "Core: Programming (Python, Java, C++)",
+        "Core: Machine Learning Algorithms",
+        "Core: Artificial Intelligence Fundamentals",
+        "Core: Data Science & Analytics",
+        "Core: Deep Learning Basics",
+        "Core: Natural Language Processing (NLP)",
+        "Core: Computer Vision",
+        "Practical: Building Machine Learning Models",
+        "Practical: Data Analysis & Visualization",
+        "Practical: AI-based Application Development",
+        "Practical: Working with Real Datasets"
+      ]
+    },
+    internships: {
+      description: "IAER provides structured internships to ensure students gain real-world exposure in AI-driven environments.",
+      areas: [
+        "IT & Software Companies",
+        "AI & Data Science Firms",
+        "Startups & Tech Companies",
+        "Analytics & Research Organizations"
+      ],
+      note: "Roles include Machine Learning Intern, Data Analyst Intern, AI Developer Intern, Python Developer Intern, and Data Science Intern."
+    },
+    fees: {
+      total: "₹4,12,000",
+      afterScholarship: "₹3,62,000",
+      notes: [
+        "Scholarship : Avail ₹ 50,000 Scholarship , Last Date to apply 31st May 2026.",
+        "Installment & EMI options available",
+        "University examination fees (₹1,200 per semester) are payable separately as per MAKAUT norms."
+      ]
+    },
+    admission: [
+      "Apply now",
+      "Book your seat",
+      "Get free counselling"
+    ],
+    studentExperience: [
+      "AI-driven technology learning environment",
+      "Access to modern AI & ML laboratories",
+      "Real-world project exposure with datasets",
+      "Career mentoring and placement support"
+    ],
+    faqs: [
+      {
+        question: "What is BCA in AI & ML?",
+        answer: "It is a professional undergraduate programme focused on artificial intelligence, machine learning, and data science technologies."
+      },
+      {
+        question: "Which is the best AI college in Kolkata?",
+        answer: "IAER is among the best AI & ML colleges in Kolkata, offering industry-oriented training and placement support."
+      },
+      {
+        question: "Is AI & Machine Learning a good career option?",
+        answer: "Yes, it offers high-paying and future-ready career opportunities in technology and data-driven industries."
+      },
+      {
+        question: "What are the best AI jobs in Kolkata?",
+        answer: "Top roles include machine learning engineer, data scientist, AI developer, and data analyst."
+      },
+      {
+        question: "Can I do AI after 12th?",
+        answer: "Yes, students from any stream can apply for BCA AI & ML programmes."
+      }
+    ]
+  },
+  {
+    id: "bca-data-science-cyber-security-kolkata",
+    code: "BCA-DSCS",
+    title: "BCA in Data Science & Cyber Security (BCA – DSCS)",
+    subtitle: "Undergraduate Degree I MAKAUT Affiliated I AICTE Approved",
+    image: "/images/programs/bca-in-data-science-cyber-security-banner.webp",
+    ...buildProgramSectionImages("bca-in-data-science-cyber-security"),
+    description: "The BCA in Data Science & Cyber Security at IAER Kolkata is a future-focused undergraduate programme designed for students who want to build careers in data science, cyber security, ethical hacking, and IT security domains.",
+    longDescription: "The BCA in Data Science & Cyber Security at IAER Kolkata is a future-focused undergraduate programme designed for students who want to build careers in data science, cyber security, ethical hacking, and IT security domains. IAER is emerging as one of the best data science and cyber security colleges in Kolkata, offering a strong foundation in programming, analytics, and cyber security technologies.",
+    seo: {
+      title: "Best Data Science & Cyber Security College in Kolkata | BCA DSCS IAER",
+      description: "Apply for BCA Data Science & Cyber Security at IAER Kolkata. Learn analytics, ethical hacking & IT security with internship & 100% placement assistance.",
+      url: "/programs/bca-data-science-cyber-security-kolkata"
+    },
+    overview: {
+      duration: "4 Years Undergraduate Degree Programme",
+      eligibility: "Students who have completed 10+2 (any stream) from a recognized board are eligible to apply. Students appearing for Class 12 examinations can also apply.",
+      mode: "On-Campus (Kolkata)",
+      scholarship: "Avail ₹ 50,000 Scholarship , Last Date to apply 31st May 2026."
+    },
+    careerOutcomes: {
+      description: "IAER offers dedicated placement assistance to all students, helping them secure roles in top IT companies, analytics firms, and cyber security organizations. Graduates can explore high-growth roles, including some of the best data science and cyber security jobs in Kolkata.",
       roles: [
         "Data Analyst",
         "Data Scientist",
         "Business Intelligence Analyst",
-        "Machine Learning Engineer",
-        "Data Engineer",
-        "AI Analyst",
-        "Quantitative Analyst",
-        "Market Research Analyst",
-        "Financial & Risk Analyst",
-        "Healthcare Data Analyst",
-        "Cybersecurity Data Analyst"
+        "Cyber Security Analyst",
+        "Ethical Hacker",
+        "Network Security Engineer",
+        "SOC Analyst",
+        "Python Developer",
+        "Software Developer",
+        "IT Security Executive"
       ],
       sectors: [
         "IT & Software Companies",
-        "AI & Analytics Firms",
-        "Banking, Finance & FinTech",
-        "Healthcare & Bioinformatics",
-        "E-commerce & Digital Platforms",
-        "Consulting & Research Organizations",
-        "Startups & Product Companies"
+        "Cyber Security Firms",
+        "Banking & FinTech",
+        "E-commerce Platforms",
+        "Government & Defense Sectors"
       ]
     },
     whyStudy: [
-      "MAKAUT-approved, industry-aligned data science curriculum",
-      "Strong foundation in statistics, mathematics, and programming",
-      "Emphasis on AI, Machine Learning, and Big Data technologies",
-      "Hands-on learning with real-world datasets and live projects",
-      "Faculty with academic and industry data science experience",
-      "Dedicated career mentoring and placement preparation"
+      "Dual specialization in data science and cyber security",
+      "Industry-aligned curriculum with latest technologies",
+      "Strong foundation in programming and analytics",
+      "Practical learning through projects and labs",
+      "Internship opportunities in IT and security domains",
+      "Career-oriented training with placement support",
+      "Pathway to MCA / MBA / Data Science / Cyber Security specializations"
     ],
     highlights: [
-      "End-to-end training in Data Analytics, AI & Machine Learning",
-      "Programming focus on Python, R, SQL",
-      "Exposure to Big Data tools such as Hadoop & Spark",
-      "Advanced training in data visualization and business intelligence",
-      "Industry projects, internships, and research opportunities",
-      "Strong focus on problem-solving and data-driven decision making"
+      "Dual specialization in data science and cyber security",
+      "Industry-aligned curriculum with latest technologies",
+      "Strong foundation in programming and analytics",
+      "Practical learning through projects and labs",
+      "Internship opportunities in IT and security domains",
+      "Career-oriented training with placement support",
+      "Pathway to MCA / MBA / Data Science / Cyber Security specializations"
+    ],
+    curriculum: {
+      structure: [
+        "Data Science: Data Analysis & Visualization",
+        "Data Science: Python for Data Science",
+        "Data Science: Machine Learning Basics",
+        "Data Science: Data Mining & Statistics",
+        "Data Science: Business Intelligence",
+        "Cyber Security: Network Security",
+        "Cyber Security: Ethical Hacking",
+        "Cyber Security: Cyber Laws & Digital Forensics",
+        "Cyber Security: Information Security Management",
+        "Cyber Security: Cloud & Application Security",
+        "Practical: Working with real datasets and analytics tools",
+        "Practical: Building data-driven models",
+        "Practical: Cyber security simulations and testing",
+        "Practical: Ethical hacking fundamentals"
+      ]
+    },
+    internships: {
+      description: "IAER provides structured internship opportunities to ensure students gain real-world exposure in high-demand tech domains.",
+      areas: [
+        "IT & Software Companies",
+        "Cyber Security Firms",
+        "Data Analytics Companies",
+        "Startups & Tech Organizations",
+        "Digital Security & Consulting Firms"
+      ],
+      note: "Roles include Data Analyst Intern, Cyber Security Intern, Ethical Hacking Intern, SOC (Security Operations Centre) Intern, and IT Support & Security Intern."
+    },
+    fees: {
+      total: "₹4,12,000",
+      afterScholarship: "₹3,62,000",
+      notes: [
+        "Scholarship : Avail ₹ 50,000 Scholarship , Last Date to apply 31st May 2026.",
+        "Installment & EMI options available",
+        "University examination fees (₹1,200 per semester) are payable separately as per MAKAUT norms."
+      ]
+    },
+    admission: [
+      "Apply now",
+      "Book your seat",
+      "Get free counselling"
+    ],
+    studentExperience: [
+      "Dual domain technology learning environment",
+      "Access to modern analytics and security laboratories",
+      "Hands-on training with real-world security simulations",
+      "Career mentoring and placement support"
+    ],
+    faqs: [
+      {
+        question: "What is BCA in Data Science & Cyber Security?",
+        answer: "It is a professional undergraduate programme combining data analytics, machine learning basics, and cyber security technologies."
+      },
+      {
+        question: "Which is the best data science and cyber security college in Kolkata?",
+        answer: "IAER is among the best data science and cyber security colleges in Kolkata, offering industry-oriented training and placement support."
+      },
+      {
+        question: "Is data science and cyber security a good career option?",
+        answer: "Yes, both fields offer high-paying and future-proof career opportunities."
+      },
+      {
+        question: "What are the best jobs in data science and cyber security?",
+        answer: "Top roles include data analyst, data scientist, cyber security analyst, ethical hacker, and SOC analyst."
+      },
+      {
+        question: "Can I do cyber security after 12th?",
+        answer: "Yes, students from any stream can apply for BCA Data Science & Cyber Security programmes."
+      }
+    ]
+  },
+  {
+    id: "bsc-data-science-kolkata",
+    code: "BSCDS",
+    title: "B.Sc. in Data Science (BSCDS)",
+    subtitle: "4 Years Undergraduate Degree Programme | MAKAUT Affiliated | AICTE Approved",
+    image: "/images/programs/bsc-in-data-science-banner.webp",
+    ...buildProgramSectionImages("bsc-in-data-science"),
+    description: "A career-focused undergraduate programme designed to build strong foundations in statistics, programming, and data-driven decision-making for roles in analytics and AI.",
+    longDescription: "The B.Sc. in Data Science at IAER Kolkata is a career-focused undergraduate programme designed for students who want to build careers in data analytics, artificial intelligence, machine learning, and business intelligence. The programme combines core mathematics, programming, and analytics with real-world applications and hands-on projects to ensure graduates are job-ready.",
+    seo: {
+      title: "Best Data Science College in Kolkata | BSc Data Science Admission IAER",
+      description: "Apply for B.Sc. Data Science at IAER Kolkata. Learn AI, analytics & machine learning with internship & 100% placement assistance.",
+      url: "/programs/bsc-data-science-kolkata"
+    },
+    overview: {
+      duration: "4 Years Undergraduate Degree Programme",
+      eligibility: "Students who have completed 10+2 (any stream) from a recognized board are eligible to apply. Students appearing for Class 12 examinations can also apply.",
+      mode: "On-Campus (Kolkata)",
+      scholarship: "Scholarship: ₹50,000 valid till 31st May 2026."
+    },
+    careerOutcomes: {
+      description: "IAER offers dedicated placement assistance to help students secure roles in leading companies, supported by resume building, interview preparation, mock interviews, technical training, live project experience, and career guidance.",
+      roles: [
+        "Data Analyst",
+        "Business Intelligence Analyst",
+        "Data Scientist",
+        "Python Developer",
+        "Machine Learning Engineer",
+        "Data Engineer"
+      ],
+      sectors: [
+        "IT & Software Companies",
+        "Banking, Finance & FinTech",
+        "E-commerce & Digital Platforms",
+        "Healthcare & Analytics Firms"
+      ]
+    },
+    whyStudy: [
+      "Industry-aligned data science curriculum",
+      "Strong foundation in programming and statistics",
+      "Practical learning through projects and case studies",
+      "Internship opportunities in analytics and IT companies",
+      "Exposure to modern tools and technologies",
+      "Career-oriented training with placement support",
+      "Pathway to higher studies (M.Sc. Data Science / AI / Analytics)"
+    ],
+    highlights: [
+      "Python for Data Science",
+      "Data Analysis & Visualization",
+      "Machine Learning Basics",
+      "Statistics & Probability",
+      "Big Data Fundamentals",
+      "Business Intelligence Tools",
+      "Hands-on projects with real-world datasets"
     ],
     curriculum: {
       structure: [
         "Year 1: Mathematics, statistics, programming fundamentals, data basics",
-        "Year 2: Data structures, database management, Python & R programming",
-        "Year 3: Machine learning, data mining, big data technologies, internships",
-        "Year 4: AI applications, advanced analytics, capstone project"
+        "Year 2: Data analysis, visualization, database fundamentals, Python for Data Science",
+        "Year 3: Machine learning basics, big data fundamentals, business intelligence tools, internships",
+        "Year 4: Advanced analytics projects, dashboards, capstone project"
       ]
     },
     internships: {
-      description: "Students gain hands-on exposure through internships in:",
+      description: "IAER provides structured internships to ensure students gain real-world exposure.",
       areas: [
-        "Data Analytics & BI teams",
-        "AI & Machine Learning projects",
-        "Financial & Healthcare Analytics",
-        "Market Research & Consulting",
-        "Startup and product-based companies"
+        "IT & Software Companies",
+        "Data Analytics Firms",
+        "Startups & Tech Companies",
+        "Business Intelligence Organizations"
       ],
-      note: "Internships ensure practical competence and industry readiness."
+      note: "Internship roles can include Data Analyst Intern, Data Science Intern, Business Intelligence Intern, and Python Developer Intern."
     },
     fees: {
       total: "₹4,12,000",
       afterScholarship: "₹3,62,000",
       notes: [
         "Installment & EMI options available",
+        "Scholarship: ₹50,000 valid till 31st May 2026.",
         "University examination fees (₹1,200 per semester) are payable separately as per MAKAUT norms."
       ]
     },
@@ -687,81 +1599,90 @@ export const programs = [
     ]
   },
   {
-    id: "bsc-in-cyber-security",
+    id: "bsc-cyber-security-kolkata",
     code: "BSCCS",
     title: "B.Sc in Cyber Security (BSCCS)",
     subtitle: "Undergraduate Degree I MAKAUT Affiliated I AICTE Approved",
     image: "/images/programs/B.Sc-in-Cyber-Security.webp",
     ...buildProgramSectionImages("bsc-in-cyber-security"),
+    description: "The B.Sc. in Cyber Security at IAER Kolkata is a career-focused undergraduate programme designed for students who want to build careers in cyber security, ethical hacking, network security, and information security.",
+    longDescription: "The B.Sc. in Cyber Security at IAER Kolkata is a career-focused undergraduate programme designed for students who want to build careers in cyber security, ethical hacking, network security, and information security. IAER is emerging as one of the best cyber security colleges in Kolkata, offering a strong foundation in IT security, ethical hacking, and digital protection technologies. The programme focuses on protecting systems, networks, and data from cyber threats through hands-on learning and practical training.",
+    seo: {
+      title: "Best Cyber Security College in Kolkata | BSc Cyber Security IAER",
+      description: "Apply for B.Sc. Cyber Security at IAER Kolkata. Learn ethical hacking, network security & IT protection with placement assistance. Admission open 2026.",
+      url: "/programs/bsc-cyber-security-kolkata"
+    },
     overview: {
-      duration: "4 Years (8 Semesters)",
-      eligibility: "10+2 pass (any stream). Candidates appearing for Class 12 may apply",
+      duration: "4 Years Undergraduate Degree Programme",
+      eligibility: "Students who have completed 10+2 (any stream ) from a recognized board are eligible to apply. Students appearing for Class 12 examinations can also apply.",
       mode: "On-Campus (Kolkata)",
-      scholarship: "ICET Scholarship up to ₹50,000 (as applicable)"
+      scholarship: "Avail ₹ 50,000 Scholarship , Last Date to apply 31st May 2026."
     },
     careerOutcomes: {
-      description: "The B.Sc in Cyber Security program at IAER prepares students to protect digital infrastructure, networks, and data against evolving cyber threats. The course is designed to meet the global demand for ethical hackers, SOC analysts, and cyber defense professionals. IAER provides internship-driven learning and structured placement assistance through its Career Services Department.",
+      description: "IAER offers dedicated placement assistance to all students, helping them secure roles in top IT and security companies. Graduates can explore some of the best cyber security jobs in Kolkata and beyond.",
       roles: [
         "Cyber Security Analyst",
-        "Ethical Hacker / Penetration Tester",
+        "Ethical Hacker",
         "Network Security Engineer",
-        "Security Operations Center (SOC) Analyst",
-        "Incident Response Specialist",
-        "Digital Forensics Analyst",
-        "Cloud Security Specialist",
-        "Application Security Analyst",
-        "Risk & Compliance Analyst",
-        "Information Security Consultant"
+        "SOC Analyst",
+        "System Administrator",
+        "IT Security Executive",
+        "Security Consultant"
       ],
       sectors: [
         "IT & Software Companies",
         "Cyber Security Firms",
-        "Banking, Finance & FinTech",
-        "Government & Defense Organizations",
-        "Healthcare & Data-Driven Enterprises",
-        "Cloud Service Providers",
-        "Consulting & Audit Firms"
+        "Banking & Financial Sector",
+        "Government & Defense Organizations"
       ]
     },
     whyStudy: [
-      "MAKAUT-approved, industry-aligned cyber security curriculum",
-      "Strong foundation in networking, operating systems, and cryptography",
-      "Hands-on exposure to ethical hacking and penetration testing tools",
-      "Advanced training in SOC operations and incident handling",
-      "Modern cyber security labs with real-world simulations",
-      "Career mentoring and placement readiness programs"
+      "Industry-aligned cyber security curriculum",
+      "Strong foundation in ethical hacking and network security",
+      "Practical training through labs and simulations",
+      "Internship opportunities in IT and security companies",
+      "Exposure to modern cyber security tools",
+      "Career-oriented training with placement support",
+      "Pathway to higher studies (M.Sc. Cyber Security / IT Security)"
     ],
     highlights: [
-      "Training in Ethical Hacking, Vulnerability Assessment & Penetration Testing",
-      "Exposure to Cyber Threat Intelligence & Incident Response",
-      "Practical learning using real-world attack-defense scenarios",
-      "Coverage of Cloud, IoT & Application Security",
-      "Strong focus on compliance, governance & cyber law",
-      "Internship opportunities with cyber security firms and IT companies"
+      "Industry-aligned cyber security curriculum",
+      "Strong foundation in ethical hacking and network security",
+      "Practical training through labs and simulations",
+      "Internship opportunities in IT and security companies",
+      "Exposure to modern cyber security tools",
+      "Career-oriented training with placement support",
+      "Pathway to higher studies (M.Sc. Cyber Security / IT Security)"
     ],
     curriculum: {
       structure: [
-        "Year 1: Computing fundamentals, networking basics, programming",
-        "Year 2: Operating systems, cryptography, network security",
-        "Year 3: Ethical hacking, penetration testing, SOC operations, internships",
-        "Year 4: Advanced cyber security, cloud security, capstone project"
+        "Core: Ethical Hacking & Penetration Testing",
+        "Core: Network Security",
+        "Core: Cyber Laws & Digital Forensics",
+        "Core: Information Security Management",
+        "Core: Cryptography Basics",
+        "Core: Cloud & Application Security",
+        "Practical: Identifying Security Vulnerabilities",
+        "Practical: Ethical Hacking Techniques",
+        "Practical: Network Monitoring & Protection",
+        "Practical: Security Testing & Risk Assessment"
       ]
     },
     internships: {
-      description: "Students gain real-world exposure through internships in:",
+      description: "IAER provides structured internships to ensure students gain real-world exposure in IT security domains.",
       areas: [
-        "Cyber security consulting firms",
-        "Security Operations Centers (SOC)",
-        "IT infrastructure & network security teams",
-        "Digital forensics & cyber crime units",
-        "Cloud and application security environments"
+        "IT & Software Companies",
+        "Cyber Security Firms",
+        "Network & Security Organizations",
+        "Startups & Tech Companies"
       ],
-      note: "These internships ensure hands-on skills and job readiness."
+      note: "Roles include Cyber Security Intern, Ethical Hacking Intern, Network Security Intern, and SOC (Security Operations Center) Intern."
     },
     fees: {
       total: "₹4,12,000",
       afterScholarship: "₹3,62,000",
       notes: [
+        "Scholarship : Avail ₹ 50,000 Scholarship , Last Date to apply 31st May 2026.",
         "Installment & EMI options available",
         "University examination fees (₹1,200 per semester) are payable separately as per MAKAUT norms."
       ]
@@ -777,205 +1698,276 @@ export const programs = [
       "Live attack-defense simulations",
       "Industry expert sessions & workshops",
       "Career mentoring and placement training"
+    ],
+    faqs: [
+      {
+        question: "What is B.Sc. in Cyber Security?",
+        answer: "It is an undergraduate degree focused on protecting digital systems, networks, and data from cyber threats."
+      },
+      {
+        question: "Which is the best cyber security college in Kolkata?",
+        answer: "IAER is among the best cyber security colleges in Kolkata, offering practical training and placement support."
+      },
+      {
+        question: "Is cyber security a good career option?",
+        answer: "Yes, it offers high salary opportunities and strong demand globally."
+      },
+      {
+        question: "What are the best jobs after cyber security degree?",
+        answer: "Popular roles include cyber security analyst, ethical hacker, and network security engineer."
+      },
+      {
+        question: "Can I do cyber security after 12th?",
+        answer: "Yes, students from any stream can apply."
+      }
     ]
   },
   {
-    id: "bsc-in-medical-laboratory-technology-bmlt",
+    id: "bmlt-medical-lab-technology-kolkata",
     code: "BMLT",
-    title: "B.Sc in Medical Laboratory Technology (BMLT)",
+    title: "BMLT – Bachelor of Medical Laboratory Technology",
     subtitle: "Undergraduate Degree I MAKAUT Affiliated I AICTE Approved",
-    image: "/images/programs/Medical-Lab-Technology.webp",
+    image: "/images/programs/bsc-in-medical-laboratory-technology-bmlt-banner.webp",
     ...buildProgramSectionImages("bsc-in-medical-laboratory-technology-bmlt"),
+    description: "The BMLT / B.Sc. in Medical Laboratory Technology at IAER Kolkata is a career-focused undergraduate programme designed for students who want to work in the healthcare, diagnostic, and laboratory science sector.",
+    longDescription: "The BMLT / B.Sc. in Medical Laboratory Technology at IAER Kolkata is a career-focused undergraduate programme designed for students who want to work in the healthcare, diagnostic, and laboratory science sector. IAER is recognized as one of the best medical laboratory technology colleges in Kolkata, offering a strong foundation in clinical diagnostics, pathology, and laboratory techniques.",
+    seo: {
+      title: "Best BMLT College in Kolkata | Medical Lab Technology Course IAER",
+      description: "Apply for BMLT / B.Sc. Medical Lab Technology at IAER Kolkata. Top paramedical course with internship & 100% placement assistance. Admission open 2026.",
+      url: "/programs/bmlt-medical-lab-technology-kolkata"
+    },
     overview: {
-      duration: "4 Years (8 Semesters)",
-      eligibility: "10+2 pass (any stream). Candidates appearing for Class 12 may apply",
+      duration: "4 Years Undergraduate Degree Programme",
+      eligibility: "Students who have completed 10+2 (Science Stream with Biology preferred) from a recognized board are eligible to apply. Students appearing for Class 12 examinations can also apply.",
       mode: "On-Campus (Kolkata)",
-      scholarship: "ICET Scholarship up to ₹50,000 (as applicable)"
+      scholarship: "Avail ₹ 50,000 Scholarship , Last Date to apply 31st May 2026."
     },
     careerOutcomes: {
-      description: "The B.Sc in Medical Laboratory Technology (BMLT) program trains students to become skilled diagnostic professionals who play a critical role in modern healthcare systems. Graduates work closely with doctors and healthcare institutions to support accurate diagnosis, treatment planning, and disease monitoring. IAER provides structured internship support and placement assistance through its healthcare partnerships.",
+      description: "IAER offers dedicated placement assistance to all students, helping them secure roles in hospitals, diagnostic labs, and healthcare organizations. Graduates can explore a wide range of roles, including some of the best medical lab jobs in Kolkata.",
       roles: [
-        "Medical Laboratory Technologist",
-        "Clinical Laboratory Technician",
-        "Pathology Lab Technologist",
-        "Blood Bank Technologist",
-        "Microbiology Technologist",
-        "Biochemistry Technologist",
-        "Histopathology Technician",
-        "Quality Control Officer",
-        "Research Laboratory Assistant",
-        "Public Health Laboratory Officer"
+        "Medical Laboratory Technician",
+        "Lab Technologist",
+        "Pathology Lab Technician",
+        "Blood Bank Technician",
+        "Clinical Lab Executive",
+        "Diagnostic Lab Assistant",
+        "Healthcare Technician",
+        "Research Lab Assistant",
+        "Quality Control Technician"
       ],
       sectors: [
-        "Multi-specialty Hospitals",
-        "Diagnostic & Pathology Laboratories",
-        "Blood Banks",
-        "Research Institutions",
-        "Government Health Departments",
-        "Pharmaceutical & Biotech Companies",
+        "Hospitals & Healthcare Chains",
+        "Diagnostic & Pathology Labs",
+        "Research Laboratories",
         "Public Health Organizations"
       ]
     },
     whyStudy: [
-      "MAKAUT-approved curriculum aligned with healthcare industry standards",
-      "Strong emphasis on hands-on laboratory training",
-      "Collaboration with leading diagnostic centres and hospitals",
-      "Exposure to modern diagnostic equipment and techniques",
-      "Experienced faculty from healthcare and laboratory sciences",
-      "Guaranteed internship support and placement guidance"
+      "Industry-aligned BMLT curriculum",
+      "Strong foundation in medical diagnostics and laboratory science",
+      "Practical lab training and clinical exposure",
+      "Internship opportunities in hospitals and diagnostic labs",
+      "Exposure to modern diagnostic technologies",
+      "Career-oriented training with placement support",
+      "Pathway to higher studies (M.Sc. MLT / Healthcare specialization)"
     ],
     highlights: [
-      "In-depth training in clinical diagnostics and laboratory sciences",
-      "Hands-on exposure to pathology, microbiology & biochemistry labs",
-      "Practical learning through hospital-based internships",
-      "Focus on quality control, ethics & medical regulations",
-      "Skill development for hospital, lab & research careers",
-      "Industry-aligned assessment and project work"
+      "Industry-aligned BMLT curriculum",
+      "Strong foundation in medical diagnostics and laboratory science",
+      "Practical lab training and clinical exposure",
+      "Internship opportunities in hospitals and diagnostic labs",
+      "Exposure to modern diagnostic technologies",
+      "Career-oriented training with placement support",
+      "Pathway to higher studies (M.Sc. MLT / Healthcare specialization)"
     ],
     curriculum: {
       structure: [
-        "Year 1: Human anatomy, physiology, lab techniques, medical ethics",
-        "Year 2: Pathology, haematology, clinical biochemistry",
-        "Year 3: Microbiology, immunology, blood banking, diagnostics",
-        "Year 4: Advanced lab technology, hospital internship & project"
+        "Clinical Biochemistry",
+        "Microbiology & Immunology",
+        "Hematology",
+        "Pathology & Histopathology",
+        "Blood Banking & Transfusion Science",
+        "Diagnostic Techniques & Laboratory Equipment",
+        "Practical: Handling Diagnostic Equipment",
+        "Practical: Sample Collection & Testing",
+        "Practical: Blood Analysis & Clinical Testing",
+        "Practical: Laboratory Safety & Protocols"
       ]
     },
     internships: {
-      description: "Students undergo mandatory internships in:",
+      description: "IAER provides structured internships to ensure students gain real-world clinical experience.",
       areas: [
-        "Multi-specialty hospitals",
-        "Diagnostic & pathology laboratories",
-        "Blood banks",
-        "Research laboratories"
+        "Hospitals & Multi-Speciality Clinics",
+        "Diagnostic Laboratories",
+        "Pathology Labs",
+        "Healthcare Centers"
       ],
-      note: "Internships ensure real-world clinical exposure and practical competence before graduation."
+      note: "Roles include Lab Technician Intern, Pathology Lab Intern, Blood Bank Assistant Intern, Diagnostic Lab Intern, and Clinical Lab Assistant."
     },
     fees: {
       total: "₹4,12,000",
       afterScholarship: "₹3,62,000",
       notes: [
+        "Scholarship : Avail ₹ 50,000 Scholarship , Last Date to apply 31st May 2026.",
         "Installment & EMI options available",
         "University examination fees (₹1,200 per semester) are payable separately as per MAKAUT norms."
       ]
     },
     admission: [
-      "Online application submission",
-      "Academic document verification",
-      "Provisional admission confirmation",
-      "Fee payment & enrollment"
+      "Apply now",
+      "Book your seat",
+      "Get free counselling"
     ],
     studentExperience: [
       "Fully equipped medical laboratories",
       "Hospital training exposure",
       "Continuous practical assessments",
       "Career mentoring and placement preparation"
+    ],
+    faqs: [
+      {
+        question: "What is BMLT?",
+        answer: "BMLT (Bachelor in Medical Laboratory Technology) is a professional undergraduate programme focused on laboratory diagnostics and clinical testing."
+      },
+      {
+        question: "Which is the best BMLT college in Kolkata?",
+        answer: "IAER is among the best medical laboratory technology colleges in Kolkata, offering industry-oriented training and placement support."
+      },
+      {
+        question: "Is medical lab technology a good career option?",
+        answer: "Yes, it offers stable and high-demand career opportunities in hospitals and diagnostic centers."
+      },
+      {
+        question: "What are the best jobs after BMLT?",
+        answer: "Popular roles include lab technician, pathology technician, blood bank technician, and clinical lab technologist."
+      },
+      {
+        question: "Can I do BMLT after 12th?",
+        answer: "Yes, students from the science stream (preferably with Biology) can apply."
+      }
     ]
   },
   {
-    id: "bsc-in-hospitality-hotel-administration-bschha",
+    id: "bsc-hospitality-hotel-management-kolkata",
     code: "BSCHHA",
-    title: "B.Sc in Hospitality & Hotel Administration (BSCHHA)",
+    title: "B.Sc. in Hospitality & Hotel Administration (Hotel Management)",
     subtitle: "Undergraduate Degree I MAKAUT Affiliated I AICTE Approved",
-    image: "/images/programs/B.Sc-in-Hospitality-&-Hotel-Administration.webp",
-    ...buildProgramSectionImages("bsc-in-hospitality-hotel-administration-bschha"),
+    image: "/images/programs/bba-in-hotel-hospitality-administration-banner.webp",
+    ...buildProgramSectionImages("bba-in-hotel-hospitality-administration"),
+    description: "The B.Sc. in Hospitality & Hotel Administration at IAER Kolkata is a career-focused programme designed for students who want to build careers in the hospitality, hotel, tourism, and service industries.",
+    longDescription: "The B.Sc. in Hospitality & Hotel Administration at IAER Kolkata is a career-focused programme designed for students who want to build careers in the hospitality, hotel, tourism, and service industries. IAER is recognized as one of the best hotel management colleges in Kolkata, offering a strong blend of practical training, industry exposure, and business management education.",
+    seo: {
+      title: "Best Hotel Management College in Kolkata | IHM IIHM GNIHM Alternative IAER",
+      description: "Looking for IHM, IIHM or GNIHM alternative? Apply for B.Sc. Hospitality at IAER Kolkata with internship & 100% placement assistance.",
+      url: "/programs/bsc-hospitality-hotel-management-kolkata"
+    },
     overview: {
-      duration: "4 Years (Including Industrial Training)",
-      eligibility: "10+2 pass (any stream). Candidates appearing for Class 12 may apply",
+      duration: "4 Years Undergraduate Degree Programme",
+      eligibility: "Students who have completed 10+2 (any stream) from a recognized board are eligible to apply. Students appearing for Class 12 examinations can also apply.",
       mode: "On-Campus (Kolkata)",
-      scholarship: "ICET Scholarship available (as applicable)"
+      scholarship: "Avail ₹ 50,000 Scholarship , Last Date to apply 31st May 2026."
     },
     careerOutcomes: {
-      description: "The B.Sc in Hospitality & Hotel Administration program at IAER is designed to prepare students for leadership roles in the global hospitality, tourism, and service industry. The course blends classroom learning with extensive practical exposure, ensuring graduates are industry-ready. IAER provides structured internships, industrial training, and placement assistance with leading hospitality brands.",
+      description: "IAER offers dedicated placement assistance to all students, helping them secure roles in leading hospitality brands and service organizations. Graduates can explore exciting roles, including some of the best hotel management jobs in Kolkata.",
       roles: [
         "Hotel Manager",
-        "Front Office Manager",
-        "Food & Beverage Manager",
-        "Event & Banquet Manager",
-        "Housekeeping Manager",
+        "Front Office Executive",
         "Guest Relations Executive",
-        "Revenue Manager",
-        "Resort Operations Executive",
-        "Airline & Airport Hospitality Executive",
-        "Cruise Line Executive",
-        "Spa & Wellness Manager",
-        "Catering & Institutional Services Manager"
+        "Food & Beverage Executive",
+        "Restaurant Manager",
+        "Housekeeping Manager",
+        "Event Coordinator",
+        "Cruise Line Staff",
+        "International Hotel Chains",
+        "Tourism & Travel Industry"
       ],
       sectors: [
-        "Luxury & Business Hotels",
-        "International Hotel Chains",
-        "Resorts & Leisure Properties",
-        "Airlines & Airport Services",
-        "Cruise Lines",
-        "Event Management Companies",
-        "Travel & Tourism Organizations",
-        "Corporate Hospitality Services"
+        "Hotels & Resorts",
+        "Airlines & Cruise Industry",
+        "Tourism & Travel Companies",
+        "Event & Luxury Service Industry"
       ]
     },
     whyStudy: [
-      "MAKAUT-approved curriculum aligned with global hospitality standards",
-      "Strong emphasis on practical training and service excellence",
-      "Mandatory industrial training with top hotels & hospitality brands",
-      "Faculty with real-world hospitality and management experience",
-      "Soft skills, grooming, and leadership development",
-      "Career mentoring and global placement guidance"
+      "Industry-aligned hospitality and hotel management curriculum",
+      "Strong foundation in service and business management",
+      "Practical training in hotel operations and service delivery",
+      "Internship opportunities in hotels and hospitality brands",
+      "Personality development and grooming training",
+      "Career-oriented training with placement support",
+      "Pathway to MBA / PGDM in Hospitality or Tourism"
     ],
     highlights: [
-      "Comprehensive training in hotel, tourism & service management",
-      "Hands-on exposure to front office, food production & service",
-      "International hospitality practices and customer experience focus",
-      "Six-month industrial training internship",
-      "Industry expert sessions, hotel visits & live demonstrations",
-      "Strong placement and alumni network support"
+      "Industry-aligned hospitality and hotel management curriculum",
+      "Strong foundation in service and business management",
+      "Practical training in hotel operations and service delivery",
+      "Internship opportunities in hotels and hospitality brands",
+      "Personality development and grooming training",
+      "Career-oriented training with placement support",
+      "Pathway to MBA / PGDM in Hospitality or Tourism"
     ],
     curriculum: {
-      coreModules: [
-        "Introduction to Hospitality Management",
-        "Food Production & Culinary Arts",
+      structure: [
+        "Front Office Operations",
         "Food & Beverage Service",
-        "Accommodation & Housekeeping Operations",
-        "Front Office Management",
-        "Travel & Tourism Management",
-        "Hospitality Marketing & Revenue Management",
-        "Event & Banquet Operations"
-      ],
-      electives: [
-        "Culinary & Kitchen Management",
-        "Beverage & Bar Operations",
-        "Hotel Facilities Management",
-        "Hospitality Information Systems",
-        "Event & Wedding Management",
-        "Entrepreneurship in Hospitality"
+        "Housekeeping Management",
+        "Hotel Operations & Administration",
+        "Hospitality Marketing & Sales",
+        "Event & Tourism Management",
+        "Practical: Hotel Operations & Guest Services",
+        "Practical: Restaurant & Food Service Management",
+        "Practical: Event Planning & Coordination",
+        "Practical: Customer Experience Management"
       ]
     },
     internships: {
-      description: "Students undergo mandatory industrial training in:",
+      description: "IAER provides structured internships to ensure students gain real-world experience in the hospitality sector.",
       areas: [
-        "Star-category hotels",
-        "Luxury resorts",
-        "Airline catering & hospitality services",
-        "Event & convention centers"
+        "Hotels & Resorts",
+        "Restaurant Chains",
+        "Event Management Companies",
+        "Travel & Tourism Organizations",
+        "Cruise & Hospitality Services"
       ],
-      note: "This training ensures real-world exposure, professional grooming, and placement readiness."
+      note: "Roles include Hotel Operations Intern, Front Office Intern, Food & Beverage Service Intern, Housekeeping Intern, and Event Management Intern."
     },
     fees: {
-      total: "₹5,30,000",
+      total: "₹4,12,000",
+      afterScholarship: "₹3,62,000",
       notes: [
-        "Installment-based payment options available",
-        "Scholarship & financial assistance as per eligibility",
-        "University examination fees are payable separately as per MAKAUT norms."
+        "Scholarship : Avail ₹ 50,000 Scholarship , Last Date to apply 31st May 2026.",
+        "Installment & EMI options available",
+        "University examination fees (₹1,200 per semester) are payable separately as per MAKAUT norms."
       ]
     },
     admission: [
-      "Apply online",
-      "Upload academic documents",
-      "Application verification",
-      "Fee payment & enrollment confirmation"
+      "Apply now",
+      "Book your seat",
+      "Get free counselling"
     ],
     studentExperience: [
       "Fully equipped training kitchens & mock hotel setups",
       "Grooming, communication & personality development sessions",
-      "Continuous assessment through practical exams",
+      "Hands-on learning through practical training and simulations",
       "Industry-aligned projects and certifications"
+    ],
+    faqs: [
+      {
+        question: "Which is the best hotel management college in Kolkata?",
+        answer: "IAER is among the best hotel management colleges in Kolkata, offering industry-oriented training, internships, and placement support."
+      },
+      {
+        question: "How is IAER different from IHM, IIHM, or GNIHM?",
+        answer: "IAER focuses on practical training, industry exposure, and affordability, making it a strong alternative to institutions like Institute of Hotel Management, International Institute of Hotel Management, and Guru Nanak Institute of Hotel Management."
+      },
+      {
+        question: "Is hotel management a good career option?",
+        answer: "Yes, it offers exciting career opportunities in hotels, tourism, airlines, and global hospitality sectors."
+      },
+      {
+        question: "What are the best jobs after hotel management?",
+        answer: "Popular roles include hotel manager, front office executive, food & beverage executive, and event manager."
+      }
     ]
   },
   {
@@ -1082,106 +2074,134 @@ export const programs = [
     ]
   },
   {
-    id: "master-of-business-administration-mba",
+    id: "mba-college-kolkata",
     code: "MBA",
-    title: "Master of Business Administration (MBA)",
+    title: "MBA (Master of Business Administration)",
     subtitle: "Postgraduate Degree | MAKAUT-Affiliated | UGC-Recognised",
     image: "/images/programs/MBA-Global.webp",
     ...buildProgramSectionImages("master-of-business-administration-mba"),
+    description: "The MBA programme at IAER Kolkata is designed for students who want to build successful careers in business management, corporate leadership, and high-growth industries.",
+    longDescription: "The MBA programme at IAER Kolkata is designed for students who want to build successful careers in business management, corporate leadership, and high-growth industries. IAER is emerging as one of the best MBA colleges in Kolkata, offering a perfect combination of industry-oriented curriculum, practical training, and placement support.",
+    seo: {
+      title: "Best MBA College in Kolkata | MBA Admission 2026 | Low Fees & Placement IAER",
+      description: "Apply for MBA in Kolkata at IAER. Top MBA college with low fees, specialization, internship & 100% placement assistance. Admission open 2026.",
+      url: "/programs/mba-college-kolkata"
+    },
     overview: {
-      duration: "2 Years (4 Semesters)",
-      eligibility: "Graduation in any discipline from a recognised university",
+      duration: "2 Years Full-Time Postgraduate Programme",
+      eligibility: "Graduates from any recognized university (any stream) are eligible to apply. Final-year students can also apply for MBA admission in Kolkata 2026.",
       mode: "On-Campus (Kolkata)",
-      scholarship: "Merit-based & need-based scholarships available (as applicable)"
+      scholarship: "Affordable MBA Programme in Kolkata with Scholarship & EMI Options"
     },
     careerOutcomes: {
-      description: "The MBA program at IAER is designed to create strategic thinkers, business leaders, and decision-makers equipped to thrive in today’s competitive corporate environment. The program emphasizes managerial depth, leadership capability, and real-world business application. IAER provides 100% placement assistance, supported by structured training, internships, and corporate engagement through its Career Services Department.",
+      description: "Graduates can explore some of the best MBA jobs in Kolkata, including corporate careers, management roles, and high-growth opportunities. IAER offers 100% placement assistance through its Career Services Department.",
       roles: [
+        "Business Analyst",
         "Marketing Manager",
-        "Business Operations Manager",
-        "Financial Analyst / Advisor",
+        "Financial Analyst",
         "HR Manager",
-        "Strategy & Management Consultant",
-        "Product Manager",
-        "Investment & Banking Executive",
+        "Management Trainee",
+        "Operations Manager",
+        "Sales Manager",
         "Business Development Manager",
-        "Operations & Supply Chain Manager",
         "Entrepreneur / Startup Founder"
       ],
       sectors: [
-        "Multinational Corporations",
-        "Consulting & Advisory Firms",
-        "Banking, Finance & FinTech",
-        "FMCG, Retail & E-commerce",
-        "IT, Analytics & Technology Firms",
-        "Healthcare, Hospitality & Services",
-        "Startups & Growth-stage Enterprises"
+        "Corporate Companies",
+        "Banking & Financial Sector",
+        "Consulting Firms",
+        "E-commerce & Startups",
+        "Healthcare & Analytics Industries"
       ]
     },
     whyStudy: [
-      "MAKAUT-approved industry-aligned MBA curriculum",
-      "Focus on leadership, strategy & business transformation",
-      "Case-based and experiential learning approach",
-      "Faculty with academic excellence and corporate experience",
-      "Strong industry interaction through corporate lectures & live projects",
-      "Dedicated placement preparation and career mentoring"
+      "Industry-aligned MBA curriculum",
+      "Specialization-based career training",
+      "Practical learning with real-world projects",
+      "Internship opportunities in corporate sectors",
+      "Personality development & leadership training",
+      "Strong industry interaction and expert sessions"
     ],
     highlights: [
-      "Leadership development through role plays, simulations & management games",
-      "Case study methodology for strategic decision-making",
-      "Group discussions & debates to enhance communication skills",
-      "Live industry projects and summer internships",
-      "Outbound training for personality and team-building development",
-      "Corporate meets, CXO talks & CEO lecture series"
+      "Industry-oriented specializations: Marketing, Finance, HR, Business Analytics, Hospital Management, AI & Data Science",
+      "Hands-on experience through live projects and industry assignments",
+      "Case studies and business simulations for practical learning",
+      "Leadership and team management training",
+      "Communication and presentation skills development",
+      "Affordable fee structure with strong placement assistance"
     ],
     curriculum: {
-      coreSubjects: [
-        "Marketing Management",
-        "Financial Management",
-        "Human Resource Management",
-        "Operations & Supply Chain Management",
-        "Managerial Economics",
-        "Organizational Behaviour",
-        "Business Law & Corporate Governance",
-        "Business Strategy & Analytics"
+      specializations: [
+        "MBA in Marketing",
+        "MBA in Finance",
+        "MBA in Human Resource (HR)",
+        "MBA in Business Analytics",
+        "MBA in Hospital Management",
+        "MBA in AI & Data Science"
       ],
       teachingMethodology: [
         "Case studies",
-        "Role plays & simulations",
-        "Group discussions",
-        "Management games",
-        "Live projects & internships"
+        "Live projects & industry assignments",
+        "Business simulations",
+        "Leadership workshops",
+        "Corporate guest lectures"
       ]
     },
     internships: {
-      description: "Students undergo mandatory internships and participate in:",
+      description: "IAER provides structured internships to ensure students gain practical exposure before placement.",
       areas: [
-        "Corporate live projects",
-        "Consulting assignments",
-        "Industry visits & workshops",
-        "Leadership and strategy bootcamps"
+        "Corporate Companies",
+        "Marketing & Sales Organizations",
+        "Financial Institutions",
+        "Consulting Firms",
+        "Startups & Enterprises"
       ],
-      note: "These experiences ensure job readiness and leadership competence."
+      note: "Roles include Business Analyst Intern, Marketing Intern, Financial Analyst Intern, HR Intern, and Operations Intern."
     },
     fees: {
-      total: "₹5,45,000",
+      total: "₹5,95,000",
+      afterScholarship: "₹5,45,000",
       notes: [
-        "Year-wise payment options available",
-        "EMI & financial assistance available",
-        "University examination fees are payable separately as per MAKAUT norms."
+        "Total Programme Fee: ₹5,95,000. ₹5,45,000",
+        "Scholarship & EMI Options Available",
+        "Designed for students looking for a low cost MBA college in Kolkata with placement."
       ]
     },
     admission: [
       "Online application submission",
       "Academic document verification",
-      "Personal interaction (if applicable)",
+      "MBA admission without entrance exam based on eligibility",
+      "Personal interaction & selection process",
       "Admission confirmation & fee payment"
     ],
     studentExperience: [
-      "Corporate-style classrooms and case-based learning",
+      "Corporate-style learning environment",
       "Leadership labs and professional skill workshops",
       "Continuous assessment and mentoring",
+      "Industry networking and placement drives",
       "Strong alumni and recruiter network"
+    ],
+    faqs: [
+      {
+        question: "What is MBA?",
+        answer: "MBA (Master of Business Administration) is a postgraduate degree focused on business management, leadership, and corporate skills."
+      },
+      {
+        question: "Which is the best MBA college in Kolkata?",
+        answer: "IAER is among the best MBA colleges in Kolkata, offering strong placement support and industry-oriented training."
+      },
+      {
+        question: "Can I do MBA without entrance exam in Kolkata?",
+        answer: "Yes, IAER offers MBA admission without entrance exam in Kolkata based on eligibility and selection process."
+      },
+      {
+        question: "What are the best MBA jobs in Kolkata?",
+        answer: "Top roles include business analyst, marketing manager, HR manager, and operations manager."
+      },
+      {
+        question: "What is the MBA course fees in Kolkata?",
+        answer: "MBA fees vary across colleges, but IAER offers an affordable MBA course in Kolkata with scholarship options."
+      }
     ]
   },
   {
@@ -1189,7 +2209,7 @@ export const programs = [
     code: "PGDM-AIADS",
     title: "PGDM in AI & Data Science (PGDM–AIADS)",
     subtitle: "Postgraduate Diploma | Industry-Integrated | Future-Tech Focused",
-    image: "/images/programs/pgdm-in-ai-and-data-science-banner.webp",
+    image: "/images/programs/PGDM-in-AI-Data-Science.webp",
     ...buildProgramSectionImages("pgdm-in-ai-and-data-science"),
     overview: {
       duration: "2 Years (4 Semesters)",
@@ -1593,6 +2613,619 @@ export const programs = [
       "Continuous assessment and mentoring",
       "Strong hospital and healthcare recruiter network"
     ]
+  },
+  {
+    id: "mha-hospital-management-kolkata",
+    code: "MHA",
+    title: "Master of Hospital Administration (MHA)",
+    subtitle: "Postgraduate Degree Programme | MAKAUT Affiliated",
+    image: "/images/programs/master-of-hospital-administration-banner.webp",
+    ...buildProgramSectionImages("master-of-hospital-administration"),
+    description: "The Master of Hospital Administration (MHA) at IAER Kolkata is a specialized postgraduate programme designed for students and professionals who want to build leadership careers in the healthcare and hospital management sector.",
+    longDescription: "The Master of Hospital Administration (MHA) at IAER Kolkata is a specialized postgraduate programme designed for students and professionals who want to build leadership careers in the healthcare and hospital management sector. IAER is emerging as one of the best MHA colleges in Kolkata, offering advanced training in hospital administration, healthcare systems, and medical operations management.",
+    seo: {
+      title: "Best MHA College in Kolkata | Master of Hospital Administration IAER",
+      description: "Apply for MHA at IAER Kolkata. Top hospital management PG course with internship & 100% placement assistance. Admission open 2026.",
+      url: "/programs/mha-hospital-management-kolkata"
+    },
+    overview: {
+      duration: "2 Years Postgraduate Degree Programme",
+      eligibility: "Graduates from any recognized university (preferably in healthcare, life sciences, management, or allied fields) are eligible to apply.",
+      mode: "On-Campus (Kolkata)",
+      scholarship: "Scholarship Opportunities Available"
+    },
+    careerOutcomes: {
+      description: "IAER offers dedicated placement assistance to all students, helping them secure managerial and administrative roles in leading healthcare organizations. Graduates can explore high-growth roles, including some of the best hospital management jobs in Kolkata.",
+      roles: [
+        "Hospital Administrator",
+        "Healthcare Manager",
+        "Operations Manager (Hospital)",
+        "Medical Superintendent (with experience)",
+        "Patient Care Manager",
+        "Healthcare Consultant",
+        "Quality & Compliance Executive",
+        "Healthcare Policy & Administration",
+        "Hospital Planning & Development"
+      ],
+      sectors: [
+        "Hospitals & Healthcare Chains",
+        "Corporate Healthcare Organizations",
+        "NGO & Public Health Sector",
+        "Health Insurance & Consulting Firms"
+      ]
+    },
+    whyStudy: [
+      "Industry-aligned MHA curriculum",
+      "Strong focus on hospital administration and healthcare systems",
+      "Practical exposure through hospital training and projects",
+      "Internship opportunities in hospitals and healthcare institutions",
+      "Leadership and management skill development",
+      "Career-oriented training with placement support"
+    ],
+    highlights: [
+      "Industry-aligned MHA curriculum",
+      "Strong focus on hospital administration and healthcare systems",
+      "Practical exposure through hospital training and projects",
+      "Internship opportunities in hospitals and healthcare institutions",
+      "Leadership and management skill development",
+      "Career-oriented training with placement support"
+    ],
+    curriculum: {
+      structure: [
+        "Hospital Planning & Administration",
+        "Healthcare Systems & Policy",
+        "Hospital Operations Management",
+        "Healthcare Finance & Budgeting",
+        "Medical Ethics & Legal Aspects",
+        "Quality Management & Accreditation (NABH)",
+        "Health Information Systems",
+        "Practical: Hospital Workflow & Operations",
+        "Practical: Patient Care & Service Management",
+        "Practical: Healthcare Administration Systems",
+        "Practical: Quality & Safety Standards in Hospitals"
+      ]
+    },
+    internships: {
+      description: "IAER provides structured internships to ensure students gain hands-on experience in healthcare environments.",
+      areas: [
+        "Multi-Speciality Hospitals",
+        "Healthcare Chains",
+        "Clinics & Diagnostic Centers",
+        "Healthcare Consulting Firms"
+      ],
+      note: "Roles include Hospital Administration Intern, Operations Management Intern, Patient Care Coordinator Intern, and Healthcare Executive Intern."
+    },
+    fees: {
+      total: "₹2,90,000",
+      afterScholarship: "₹2,40,000",
+      notes: [
+        "Total Programme Fee: ₹ 2,90,000. ₹ 2,40,000.",
+        "Installment & EMI options available",
+        "University examination fees are payable separately as per MAKAUT norms."
+      ]
+    },
+    admission: [
+      "Apply now",
+      "Book your seat",
+      "Get free counselling"
+    ],
+    studentExperience: [
+      "Healthcare-focused classrooms and case-based learning",
+      "Hospital exposure and operational training",
+      "Hands-on learning through case studies and hospital visits",
+      "Mentorship by healthcare administration professionals"
+    ],
+    faqs: [
+      {
+        question: "What is MHA (Master of Hospital Administration)?",
+        answer: "It is a postgraduate degree focused on hospital management, healthcare systems, and administration."
+      },
+      {
+        question: "Which is the best MHA college in Kolkata?",
+        answer: "IAER is among the best MHA colleges in Kolkata, offering industry-oriented training and placement support."
+      },
+      {
+        question: "Is MHA a good career option?",
+        answer: "Yes, it offers excellent career growth in hospital administration and healthcare management roles."
+      },
+      {
+        question: "What are the best jobs after MHA?",
+        answer: "Top roles include hospital administrator, healthcare manager, operations manager, and consultant."
+      },
+      {
+        question: "Who can apply for MHA?",
+        answer: "Graduates from any stream (preferably healthcare or management) can apply."
+      }
+    ]
+  },
+  {
+    id: "dmlt-course-kolkata",
+    code: "DMLT",
+    title: "Diploma in Medical Laboratory Technology (DMLT)",
+    subtitle: "2 Years Diploma Programme I Industry-Aligned",
+    image: "/images/programs/diploma-in-medical-laboratory-technology-banner.webp",
+    ...buildProgramSectionImages("diploma-in-medical-laboratory-technology"),
+    description: "The Diploma in Medical Laboratory Technology (DMLT) at IAER Kolkata is a job-oriented programme designed for students who want to build careers in the healthcare, diagnostic, and laboratory sector.",
+    longDescription: "The Diploma in Medical Laboratory Technology (DMLT) at IAER Kolkata is a job-oriented programme designed for students who want to build careers in the healthcare, diagnostic, and laboratory sector. IAER is recognized as one of the best DMLT colleges in Kolkata, offering a strong foundation in clinical diagnostics, pathology, and laboratory techniques.",
+    seo: {
+      title: "Best DMLT College in Kolkata | Medical Lab Technician Course IAER",
+      description: "Apply for DMLT in Kolkata at IAER. Top paramedical course with internship & 100% placement assistance. Admission open 2026.",
+      url: "/programs/dmlt-course-kolkata"
+    },
+    overview: {
+      duration: "2 Years Diploma Programme",
+      eligibility: "Students who have completed 10+2 (Science preferred – Biology) from a recognized board are eligible to apply. Students appearing for Class 12 examinations can also apply.",
+      mode: "On-Campus (Kolkata)",
+      scholarship: "Affordable Fees with Scholarship Opportunities"
+    },
+    careerOutcomes: {
+      description: "IAER offers dedicated placement assistance to all students, helping them secure jobs in healthcare organizations. Graduates can explore some of the best DMLT jobs in Kolkata.",
+      roles: [
+        "Medical Lab Technician",
+        "Lab Assistant",
+        "Pathology Technician",
+        "Blood Collection Technician",
+        "Diagnostic Lab Executive",
+        "Clinical Lab Assistant"
+      ],
+      sectors: [
+        "Hospitals & Healthcare Chains",
+        "Diagnostic & Pathology Labs",
+        "Clinics & Nursing Homes",
+        "Research Labs"
+      ]
+    },
+    whyStudy: [
+      "Industry-aligned DMLT curriculum",
+      "Strong foundation in medical diagnostics",
+      "Practical lab training and clinical exposure",
+      "Internship opportunities in hospitals and labs",
+      "Short duration with quick job opportunities",
+      "Career-oriented training with placement support"
+    ],
+    highlights: [
+      "Industry-aligned DMLT curriculum",
+      "Strong foundation in medical diagnostics",
+      "Practical lab training and clinical exposure",
+      "Internship opportunities in hospitals and labs",
+      "Short duration with quick job opportunities",
+      "Career-oriented training with placement support"
+    ],
+    curriculum: {
+      structure: [
+        "Clinical Biochemistry",
+        "Microbiology",
+        "Hematology",
+        "Pathology",
+        "Blood Collection & Testing",
+        "Laboratory Equipment Handling",
+        "Practical: Sample Collection & Testing",
+        "Practical: Blood Analysis & Diagnostic Procedures",
+        "Practical: Lab Safety & Hygiene Protocols",
+        "Practical: Handling Modern Diagnostic Equipment"
+      ]
+    },
+    internships: {
+      description: "IAER provides structured internships to ensure students gain real-world healthcare experience.",
+      areas: [
+        "Hospitals & Clinics",
+        "Diagnostic Laboratories",
+        "Pathology Labs",
+        "Healthcare Centers"
+      ],
+      note: "Roles include Lab Technician Intern, Pathology Lab Assistant, Blood Collection Technician, and Diagnostic Lab Intern."
+    },
+    fees: {
+      total: "₹1,20,000",
+      afterScholarship: "₹99,000",
+      notes: [
+        "Total Programme Fee: ₹ 1,20,000. ₹ 99,000",
+        "Affordable Fees with Scholarship Opportunities",
+        "Installment & EMI options available"
+      ]
+    },
+    admission: [
+      "Apply now",
+      "Book your seat",
+      "Get free counselling"
+    ],
+    studentExperience: [
+      "Hands-on laboratory training",
+      "Hospital visits and clinical exposure",
+      "Real-world diagnostic procedures",
+      "Career guidance and placement preparation"
+    ],
+    faqs: [
+      {
+        question: "What is DMLT?",
+        answer: "DMLT (Diploma in Medical Laboratory Technology) is a paramedical course focused on diagnostic testing and laboratory techniques."
+      },
+      {
+        question: "Which is the best DMLT college in Kolkata?",
+        answer: "IAER is among the best DMLT colleges in Kolkata, offering practical training and placement support."
+      },
+      {
+        question: "Is DMLT a good career option?",
+        answer: "Yes, it offers quick job opportunities in hospitals and diagnostic labs."
+      },
+      {
+        question: "What are the best jobs after DMLT?",
+        answer: "Popular roles include lab technician, pathology assistant, and diagnostic lab technician."
+      },
+      {
+        question: "Can I do DMLT after 12th?",
+        answer: "Yes, students from the science stream (preferably Biology) can apply."
+      }
+    ]
+  },
+  {
+    id: "software-development-course-kolkata",
+    code: "ACSD",
+    title: "Advanced Certification in Software Development",
+    subtitle: "6 Months Certification Programme I Job-Oriented",
+    image: "/images/programs/advanced-certification-in-software-development-banner.webp",
+    ...buildProgramSectionImages("advanced-certification-in-software-development"),
+    description: "The Advanced Certification in Software Development at IAER Kolkata is a career-focused programme designed for students who want to build careers in the IT industry, software development, web development, and tech-driven roles.",
+    longDescription: "The Advanced Certification in Software Development at IAER Kolkata is a career-focused programme designed for students who want to build careers in the IT industry, software development, web development, and tech-driven roles. IAER is emerging as one of the best software development institutes in Kolkata, offering practical training in programming, web technologies, and application development.",
+    seo: {
+      title: "Best Software Development Course in Kolkata | Coding Course IAER",
+      description: "Join Advanced Software Development Certification at IAER Kolkata. Learn coding, web development & get placement assistance. Apply now.",
+      url: "/programs/software-development-course-kolkata"
+    },
+    overview: {
+      duration: "6 Months Certification Programme",
+      eligibility: "10+2 Pass (Any Stream) or Graduate",
+      mode: "On-Campus (Kolkata)",
+      scholarship: "Affordable Fees with Flexible Payment Options"
+    },
+    careerOutcomes: {
+      description: "IAER offers dedicated placement assistance to all students, helping them secure roles in leading IT companies. Graduates can explore some of the best software development jobs in Kolkata.",
+      roles: [
+        "Software Developer",
+        "Web Developer",
+        "Application Developer",
+        "Frontend / Backend Developer",
+        "Technical Support Engineer",
+        "QA Tester",
+        "IT Executive"
+      ],
+      sectors: [
+        "IT & Software Companies",
+        "Startups & Tech Firms",
+        "E-commerce & Digital Platforms",
+        "Freelancing & Remote Work"
+      ]
+    },
+    whyStudy: [
+      "Industry-aligned software development curriculum",
+      "Strong foundation in programming and web technologies",
+      "Practical training through projects and coding labs",
+      "Exposure to real-world development tools",
+      "Short duration with quick job opportunities",
+      "Career-oriented training with placement support"
+    ],
+    highlights: [
+      "Industry-aligned software development curriculum",
+      "Strong foundation in programming and web technologies",
+      "Practical training through projects and coding labs",
+      "Exposure to real-world development tools",
+      "Short duration with quick job opportunities",
+      "Career-oriented training with placement support"
+    ],
+    curriculum: {
+      structure: [
+        "Programming Languages (Python, Java, C++)",
+        "Web Development (HTML, CSS, JavaScript)",
+        "Frontend & Backend Development",
+        "Database Management (SQL)",
+        "Software Development Life Cycle (SDLC)",
+        "Basics of App Development",
+        "Practical: Building Websites & Applications",
+        "Practical: Developing Software Projects",
+        "Practical: Debugging & Testing Code",
+        "Practical: Working on Live Development Scenarios"
+      ]
+    },
+    internships: {
+      description: "IAER provides structured internships to ensure students gain real-world exposure in the tech industry.",
+      areas: [
+        "IT Companies & Software Firms",
+        "Web Development Agencies",
+        "Startups & Tech Companies",
+        "Digital & IT Service Providers"
+      ],
+      note: "Roles include Software Developer Intern, Web Developer Intern, Frontend / Backend Developer Intern, QA & Testing Intern, and IT Support Intern."
+    },
+    fees: {
+      total: "₹60,000",
+      afterScholarship: "₹35,000",
+      notes: [
+        "Total Programme Fee: ₹60,000. ₹ 35,000",
+        "Affordable Fees with Flexible Payment Options",
+        "Ideal for students looking for a low cost coding course in Kolkata with placement."
+      ]
+    },
+    admission: [
+      "Apply now",
+      "Book your seat",
+      "Get free counselling"
+    ],
+    studentExperience: [
+      "Hands-on learning through real-world projects",
+      "Coding practice in modern labs",
+      "Project-based training and debugging sessions",
+      "Career guidance and placement preparation"
+    ],
+    faqs: [
+      {
+        question: "What is software development certification?",
+        answer: "It is a professional course focused on programming, coding, and building software applications."
+      },
+      {
+        question: "Which is the best coding institute in Kolkata?",
+        answer: "IAER is among the best software development institutes in Kolkata, offering practical training and placement support."
+      },
+      {
+        question: "Is software development a good career option?",
+        answer: "Yes, it offers high salary opportunities and strong career growth in the IT industry."
+      },
+      {
+        question: "What are the best jobs after software development course?",
+        answer: "Popular roles include software developer, web developer, and application developer."
+      },
+      {
+        question: "Can I learn coding after 12th?",
+        answer: "Yes, students from any stream can enroll in this course."
+      }
+    ]
+  },
+  {
+    id: "cabin-crew-training-kolkata",
+    code: "ACAC",
+    title: "Advanced Certification in Airline Cabin Crew",
+    subtitle: "6 Months Certification Programme I Airline-Integrated",
+    image: "/images/programs/advanced-certification-in-aviation-cabin-crew-banner.JPG",
+    ...buildProgramSectionImages("advanced-certification-in-aviation-cabin-crew", {
+      overviewImage: "/images/programs/advanced-certification-in-aviation-cabin-crew-overview.JPG",
+      curriculumImage: "/images/programs/advanced-certification-in-aviation-cabin-crew-curriculum.JPG",
+      careersImage: "/images/programs/advanced-certification-in-aviation-cabin-crew-careers.webp",
+    }),
+    description: "The Advanced Certification in Airline Cabin Crew at IAER Kolkata is a specialized programme designed for students who want to build careers as air hostesses, flight stewards, and airline cabin crew professionals.",
+    longDescription: "The Advanced Certification in Airline Cabin Crew at IAER Kolkata is a specialized programme designed for students who want to build careers as air hostesses, flight stewards, and airline cabin crew professionals. IAER is emerging as one of the best cabin crew training institutes in Kolkata, offering industry-oriented training in aviation service, in-flight operations, and passenger handling.",
+    seo: {
+      title: "Best Cabin Crew Training Institute in Kolkata | Air Hostess Course IAER",
+      description: "Join Advanced Cabin Crew Certification at IAER Kolkata. Top air hostess training with grooming, placement & airline career support. Apply now.",
+      url: "/programs/cabin-crew-training-kolkata"
+    },
+    overview: {
+      duration: "6 Months Certification Programme",
+      eligibility: "10+2 Pass (Any Stream) from a recognized board, Good communication skills and personality, Passion for aviation and customer service",
+      mode: "On-Campus (Kolkata)",
+      scholarship: "Affordable Fees with Flexible Payment Options"
+    },
+    careerOutcomes: {
+      description: "IAER offers dedicated placement assistance to all students, helping them secure roles in airlines and aviation service companies. Graduates can explore some of the best cabin crew jobs in Kolkata and India.",
+      roles: [
+        "Cabin Crew (Air Hostess / Flight Steward)",
+        "Airline Customer Service Executive",
+        "Ground Staff",
+        "Airport Customer Service Executive",
+        "Passenger Handling Executive",
+        "Hospitality & Luxury Service Roles"
+      ],
+      sectors: [
+        "Domestic & International Airlines",
+        "Airport Services & Ground Handling",
+        "Hospitality & Luxury Service Industry"
+      ]
+    },
+    whyStudy: [
+      "Industry-aligned cabin crew training curriculum",
+      "Focus on airline service and safety procedures",
+      "Practical training through simulations",
+      "Personality development and grooming sessions",
+      "Short duration with quick job opportunities",
+      "Career-oriented training with placement support"
+    ],
+    highlights: [
+      "Industry-aligned cabin crew training curriculum",
+      "Focus on airline service and safety procedures",
+      "Practical training through simulations",
+      "Personality development and grooming sessions",
+      "Short duration with quick job opportunities",
+      "Career-oriented training with placement support"
+    ],
+    curriculum: {
+      structure: [
+        "In-Flight Service & Cabin Operations",
+        "Passenger Handling & Safety Procedures",
+        "Emergency & Safety Training",
+        "Grooming & Personality Development",
+        "Communication & Soft Skills",
+        "Aviation Etiquette & Customer Experience",
+        "Professional Grooming & Styling",
+        "Communication & Accent Training",
+        "Confidence Building & Interview Skills",
+        "Body Language & Presentation"
+      ]
+    },
+    internships: {
+      description: "IAER provides exposure to real-world aviation environments through training and industry interaction.",
+      areas: [
+        "Airline & Airport Exposure Sessions",
+        "Practical Training Simulations",
+        "Customer Service Scenarios"
+      ],
+      note: "Prepares students for airline cabin crew careers in India and abroad."
+    },
+    fees: {
+      total: "₹1,00,000",
+      afterScholarship: "₹60,000",
+      notes: [
+        "Total Programme Fee: ₹1,00,000. ₹ 60,000",
+        "Affordable Certification Programme with Flexible Payment Options",
+        "Ideal for students looking for a low cost cabin crew training course in Kolkata."
+      ]
+    },
+    admission: [
+      "Apply now",
+      "Book your seat",
+      "Get free counselling"
+    ],
+    studentExperience: [
+      "Specialized grooming and personality development sessions",
+      "Aviation industry exposure and mock interviews",
+      "Practical training through simulations",
+      "Mentorship by aviation industry professionals"
+    ],
+    faqs: [
+      {
+        question: "What is cabin crew training?",
+        answer: "Cabin crew training prepares students for roles as air hostesses and flight stewards, focusing on safety, service, and passenger handling."
+      },
+      {
+        question: "Which is the best cabin crew training institute in Kolkata?",
+        answer: "IAER is among the best cabin crew training institutes in Kolkata, offering industry-oriented training and placement support."
+      },
+      {
+        question: "Is air hostess a good career option?",
+        answer: "Yes, it offers exciting career opportunities, travel exposure, and attractive salary packages."
+      },
+      {
+        question: "What are the eligibility criteria for cabin crew?",
+        answer: "Students must complete 10+2 and have good communication skills and personality."
+      },
+      {
+        question: "How to become an air hostess after 12th?",
+        answer: "You can enroll in a cabin crew training course like this certification programme at IAER Kolkata."
+      }
+    ]
+  },
+  {
+    id: "diploma-aviation-hospitality-kolkata",
+    code: "DAHM",
+    title: "Diploma in Aviation & Hospitality Management",
+    subtitle: "1–2 Years Diploma Programme I Industry-Oriented",
+    image: "/images/programs/diploma-in-aviation-hospitality-management-banner.webp",
+    ...buildProgramSectionImages("diploma-in-aviation-hospitality-management", {
+      careersImage: "/images/programs/diploma-in-aviation-hospitality-management-overview.webp",
+    }),
+    description: "The Diploma in Aviation & Hospitality Management at IAER Kolkata is a career-oriented programme designed for students who want to build careers in the aviation, airlines, airports, hospitality, tourism, and service industries.",
+    longDescription: "The Diploma in Aviation & Hospitality Management at IAER Kolkata is a career-oriented programme designed for students who want to build careers in the aviation, airlines, airports, hospitality, tourism, and service industries. IAER is emerging as one of the best aviation and hospitality colleges in Kolkata, offering a strong blend of aviation training, hospitality management, and customer service skills.",
+    seo: {
+      title: "Best Aviation & Hospitality Course in Kolkata | Cabin Crew Training IAER",
+      description: "Apply for Diploma in Aviation & Hospitality at IAER Kolkata. Top course with cabin crew training, internship & 100% placement assistance.",
+      url: "/programs/diploma-aviation-hospitality-kolkata"
+    },
+    overview: {
+      duration: "1–2 Years Diploma Programme",
+      eligibility: "Students who have completed 10+2 (any stream) from a recognized board are eligible to apply. Students appearing for Class 12 examinations can also apply.",
+      mode: "On-Campus (Kolkata)",
+      scholarship: "Affordable Diploma Programme with Easy Payment Options"
+    },
+    careerOutcomes: {
+      description: "IAER offers dedicated placement assistance to all students, helping them secure roles in leading aviation and hospitality organizations. Graduates can explore some of the best aviation and hospitality jobs in Kolkata.",
+      roles: [
+        "Airport Ground Staff",
+        "Airline Customer Service Executive",
+        "Passenger Handling Executive",
+        "Hotel Operations Executive",
+        "Front Office Executive",
+        "Guest Relations Executive",
+        "Travel Consultant",
+        "Event & Hospitality Coordinator"
+      ],
+      sectors: [
+        "Airlines & Airports",
+        "Hotels & Resorts",
+        "Travel & Tourism Industry",
+        "Event & Service Sector"
+      ]
+    },
+    whyStudy: [
+      "Industry-aligned aviation and hospitality curriculum",
+      "Strong focus on customer service and operations",
+      "Practical training through simulations and case studies",
+      "Internship opportunities in airlines, airports, and hotels",
+      "Personality development and grooming training",
+      "Short duration with quick job opportunities",
+      "Career-oriented training with placement support"
+    ],
+    highlights: [
+      "Industry-aligned aviation and hospitality curriculum",
+      "Strong focus on customer service and operations",
+      "Practical training through simulations and case studies",
+      "Internship opportunities in airlines, airports, and hotels",
+      "Personality development and grooming training",
+      "Short duration with quick job opportunities",
+      "Career-oriented training with placement support"
+    ],
+    curriculum: {
+      structure: [
+        "Airport Operations & Ground Handling",
+        "Airline Customer Service",
+        "Cabin Crew Training & In-Flight Service",
+        "Hospitality & Hotel Operations",
+        "Travel & Tourism Management",
+        "Customer Experience & Service Excellence",
+        "Grooming & Personality Development",
+        "Communication & Soft Skills",
+        "Airline Service Etiquette",
+        "Passenger Handling & Customer Interaction"
+      ]
+    },
+    internships: {
+      description: "IAER provides structured internships to ensure students gain real-world experience.",
+      areas: [
+        "Airlines & Airport Service Providers",
+        "Ground Handling Companies",
+        "Hotels & Hospitality Chains",
+        "Travel & Tourism Companies",
+        "Event & Service Organizations"
+      ],
+      note: "Roles include Airport Operations Intern, Airline Ground Staff Intern, Cabin Crew Training Intern, Hotel Operations Intern, and Guest Relations Intern."
+    },
+    fees: {
+      total: "₹1,20,000",
+      afterScholarship: "₹99,000",
+      notes: [
+        "Total Programme Fee: ₹ 1,20,000 ₹ 99,000",
+        "Affordable Diploma Programme with Easy Payment Options",
+        "Ideal for students looking for a low cost aviation and hospitality course in Kolkata."
+      ]
+    },
+    admission: [
+      "Apply now",
+      "Book your seat",
+      "Get free counselling"
+    ],
+    studentExperience: [
+      "Professional grooming and personality development sessions",
+      "Aviation and hospitality industry exposure",
+      "Hands-on learning through simulations and case studies",
+      "Mentorship by industry experts"
+    ],
+    faqs: [
+      {
+        question: "What is Diploma in Aviation & Hospitality Management?",
+        answer: "It is a professional diploma programme focused on aviation operations, hospitality services, and customer experience training."
+      },
+      {
+        question: "Which is the best aviation institute in Kolkata?",
+        answer: "IAER is among the best aviation and hospitality institutes in Kolkata, offering practical training and placement support."
+      },
+      {
+        question: "Is aviation and hospitality a good career option?",
+        answer: "Yes, it offers exciting career opportunities in airlines, airports, hotels, and global service industries."
+      },
+      {
+        question: "What are the best jobs after aviation diploma?",
+        answer: "Popular roles include airport ground staff, airline customer service, cabin crew, and hotel operations executive."
+      },
+      {
+        question: "Can I join aviation after 12th?",
+        answer: "Yes, students from any stream can apply for aviation and hospitality diploma programmes."
+      }
+    ]
   }
 ];
-

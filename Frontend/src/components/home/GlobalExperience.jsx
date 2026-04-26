@@ -13,7 +13,7 @@ const experienceItems = [
     title: "Multicultural Campus",
     description: "Experience a dynamic campus culture enriched by students from across India and growing international participation.",
     icon: Users,
-    image: "/images/campus/iaer2.jpg",
+    image: "/images/home/GlobalExp/Multicultural-Campus.webp",
     color: "bg-blue-600"
   },
   {
@@ -21,7 +21,7 @@ const experienceItems = [
     title: "Global Collaborations",
     description: "IAER collaborates with prestigious international institutions to promote global learning, research exposure, and academic articulation opportunities.",
     icon: Globe,
-    image: "/images/ui/illustrations/out-2.png",
+    image: "/images/home/GlobalExp/Global-Collaborations.webp",
     color: "bg-indigo-600"
   },
   {
@@ -29,7 +29,7 @@ const experienceItems = [
     title: "Dual-Degree & Twinning Programs",
     description: "Students get access to global pathways, study-abroad modules, and articulation opportunities with partner universities.",
     icon: GraduationCap,
-    image: "/images/programs/legacy/PGDMLAI.jpg",
+    image: "/images/home/GlobalExp/Dual-Degree-Twinning-Programs.webp",
     color: "bg-purple-600"
   },
   {
@@ -37,7 +37,7 @@ const experienceItems = [
     title: "Language & Intercultural Learning",
     description: "Specialized language labs support communication skills, cultural understanding, and global adaptability.",
     icon: BookOpen,
-    image: "/images/programs/legacy/BSCHHA.jpg",
+    image: "/images/home/GlobalExp/Language-Intercultural-Learning.webp",
     color: "bg-pink-600"
   },
   {
@@ -45,7 +45,7 @@ const experienceItems = [
     title: "International Research Projects",
     description: "IAER fosters innovation through industry-aligned and international research partnerships in healthcare, IT, management, and hospitality.",
     icon: Microscope,
-    image: "/images/programs/legacy/BSCDS.jpg",
+    image: "/images/home/GlobalExp/International-Research-Projects.webp",
     color: "bg-teal-600"
   },
   {
@@ -53,7 +53,7 @@ const experienceItems = [
     title: "International Faculty Exposure",
     description: "Students learn from globally experienced faculty members, industry practitioners, and academic leaders.",
     icon: UserCheck,
-    image: "/images/ui/illustrations/out-1.png",
+    image: "/images/home/GlobalExp/International-Faculty-Exposure.webp",
     color: "bg-orange-600"
   },
   {
@@ -61,7 +61,7 @@ const experienceItems = [
     title: "Career Pathways Abroad",
     description: "IAER’s international network gives students access to global internships, cross-border job markets, and international placements.",
     icon: Briefcase,
-    image: "/images/navigation/nav-5-img.jpg",
+    image: "/images/home/GlobalExp/Career-Pathways-Abroad.webp",
     color: "bg-green-600"
   }
 ];

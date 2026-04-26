@@ -11,28 +11,30 @@ export default function CourseFeeSection() {
         { program: "BBA in Aviation, Hospitality Services and Management", code: "BBA-AHSM", duration: "4 Years", fee: "5,04,000", scholarship: "50,000", net: "4,54,000" },
         { program: "BBA in Sports Management", code: "BBA-SM", duration: "4 Years", fee: "4,12,000", scholarship: "50,000", net: "3,62,000" },
         { program: "Bachelor of Computer Application", code: "BCA", duration: "4 Years", fee: "4,12,000", scholarship: "50,000", net: "3,62,000" },
-        { program: "BCA in Data Science & Cyber Security", code: "BCA-BCADSCS", duration: "4 Years", fee: "4,12,000", scholarship: "50,000", net: "3,62,000" },
+        { program: "BCA in Data Science & Cyber Security", code: "BCA-DSCS", duration: "4 Years", fee: "4,12,000", scholarship: "50,000", net: "3,62,000" },
         { program: "BCA in Artificial Intelligence & Machine Learning", code: "BCA-AIML", duration: "4 Years", fee: "4,12,000", scholarship: "50,000", net: "3,62,000" },
         { program: "B.Sc in Data Science", code: "BSCDS", duration: "4 Years", fee: "4,12,000", scholarship: "50,000", net: "3,62,000" },
         { program: "BSc in Cyber Security", code: "BSCCS", duration: "4 Years", fee: "4,12,000", scholarship: "50,000", net: "3,62,000" },
-        { program: "B.Sc in Medical Lab Technology", code: "BMLT", duration: "4 Years", fee: "4,12,000", scholarship: "50,000", net: "3,62,000" },
-        { program: "B.Sc in Hospitality & Hotel Administration", code: "BHHA", duration: "4 Years", fee: "4,12,000", scholarship: "50,000", net: "3,62,000" },
+        { program: "BMLT – Bachelor of Medical Laboratory Technology", code: "BMLT", duration: "4 Years", fee: "4,12,000", scholarship: "50,000", net: "3,62,000" },
+        { program: "B.Sc. in Hospitality & Hotel Administration (Hotel Management)", code: "BHHA", duration: "4 Years", fee: "4,12,000", scholarship: "50,000", net: "3,62,000" },
     ];
 
     const diplomaAndCertificationPrograms = [
-        { program: "Diploma In Medical Lab Technology", code: "DMLT", duration: "2 Years", fee: "1,20,000", scholarship: "20,000", net: "99,000" },
-        { program: "Diploma in Aviation & Hospitality Management", code: "DAHM", duration: "1 Year", fee: "1,20,000", scholarship: "20,000", net: "99,000" },
-        { program: "Advance Certification in Airline Cabin Crew", code: "ACAC", duration: "1 Year", fee: "1,00,000", scholarship: "20,000", net: "60,000" },
-        { program: "Advance Certification in Agentic AI", code: "ACAI", duration: "6 Months", fee: "50,000", scholarship: "15,000", net: "35,000" },
-        { program: "Advance Certification in Software Development", code: "ACSD", duration: "6 Months", fee: "50,000", scholarship: "15,000", net: "35,000" },
-        { program: "Advance Certification in Full Stack Development", code: "ACFD", duration: "6 Months", fee: "50,000", scholarship: "15,000", net: "35,000" },
+        { program: "Diploma In Medical Lab Technology", code: "DMLT", duration: "2 Years", fee: "1,20,000", scholarship: "21,000", net: "99,000" },
+        { program: "Diploma in Aviation & Hospitality Management", code: "DAHM", duration: "1–2 Years", fee: "1,20,000", scholarship: "21,000", net: "99,000" },
+        { program: "Advance Certification in Airline Cabin Crew", code: "ACAC", duration: "6 Months", fee: "1,00,000", scholarship: "40,000", net: "60,000" },
+        { program: "Advance Certification in Agentic AI", code: "ACAI", duration: "6 Months", fee: "60,000", scholarship: "15,000", net: "45,000" },
+        { program: "Advance Certification in Software Development", code: "ACSD", duration: "6 Months", fee: "60,000", scholarship: "25,000", net: "35,000" },
+        { program: "Advance Certification in Full Stack Development", code: "ACFD", duration: "6 Months", fee: "60,000", scholarship: "25,000", net: "35,000" },
     ];
 
     const pgPrograms = [
+        { program: "MBA (Master of Business Administration)", code: "MBA", duration: "2 Years", fee: "5,95,000", scholarship: "50,000", net: "5,45,000" },
         { program: "Post Graduate Diploma in Management (Marketing / HRM / Hospital Administration & Healthcare Management)", code: "PGDM", duration: "2 Years", fee: "5,95,000", scholarship: "50,000", net: "5,45,000" },
         { program: "PGDM – Business Analytics", code: "PGDM-BA", duration: "2 Years", fee: "5,95,000", scholarship: "50,000", net: "5,45,000" },
         { program: "PGDM – Artificial Intelligence & Data Science", code: "PGDM-AIADS", duration: "2 Years", fee: "5,95,000", scholarship: "50,000", net: "5,45,000" },
         { program: "PGDM – Fintech", code: "PGDM-FNT", duration: "2 Years", fee: "5,95,000", scholarship: "50,000", net: "5,45,000" },
+        { program: "Master of Hospital Administration (MHA)", code: "MHA", duration: "2 Years", fee: "2,90,000", scholarship: "50,000", net: "2,40,000" },
     ];
 
     return (
@@ -94,7 +96,7 @@ export default function CourseFeeSection() {
                             </div>
                         </div>
                         <div className="mt-3 text-xs text-gray-500">
-                            Early Bird Scholarship valid till 31st Jan 2026.
+                            Early Bird Scholarship valid till 31st May 2026.
                         </div>
                     </div>
 

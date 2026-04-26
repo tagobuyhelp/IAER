@@ -16,7 +16,10 @@ import {
   Award,
   Download,
   Phone,
-  FileText
+  FileText,
+  Plus,
+  Minus,
+  HelpCircle
 } from 'lucide-react';
 import InfiniteCall from '@/components/InfiniteCall';
 import OurHiringPartnersSection from '@/components/placement/OurHiringPartnersSection';
@@ -124,6 +127,57 @@ function getCurriculumItems(program) {
   return items;
 }
 
+function FAQSection({ faqs }) {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  if (!faqs || !faqs.length) return null;
+
+  return (
+    <section id="faqs" className="py-12 md:py-16">
+      <div className="container mx-auto px-4">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-4xl font-black mb-8 md:mb-10 text-gray-900 text-center">
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-4">
+            {faqs.map((faq, idx) => {
+              const isOpen = openIndex === idx;
+              return (
+                <div 
+                  key={idx} 
+                  className="rounded-2xl border border-gray-200 bg-white overflow-hidden shadow-sm transition-all hover:border-accent/30"
+                >
+                  <button
+                    onClick={() => setOpenIndex(isOpen ? null : idx)}
+                    className="w-full flex items-center justify-between p-5 md:p-6 text-left group"
+                  >
+                    <span className="text-base md:text-lg font-bold text-gray-900 group-hover:text-accent transition-colors">
+                      {faq.question}
+                    </span>
+                    <div className={`shrink-0 ml-4 p-1.5 rounded-full transition-colors ${isOpen ? 'bg-accent/10 text-accent' : 'bg-gray-100 text-gray-500'}`}>
+                      {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+                    </div>
+                  </button>
+                  <motion.div
+                    initial={false}
+                    animate={{ height: isOpen ? 'auto' : 0, opacity: isOpen ? 1 : 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="overflow-hidden"
+                  >
+                    <div className="p-5 md:p-6 pt-0 text-sm md:text-base text-gray-600 leading-relaxed border-t border-gray-50">
+                      {faq.answer}
+                    </div>
+                  </motion.div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function ProgramClient({ program }) {
   const [activeSection, setActiveSection] = useState("overview");
   const curriculumItems = getCurriculumItems(program);
@@ -135,7 +189,7 @@ export default function ProgramClient({ program }) {
   const careerSectors = Array.isArray(careerOutcomes?.sectors) ? careerOutcomes.sectors : [];
 
   useEffect(() => {
-    const ids = ["overview", "curriculum", "careers"];
+    const ids = ["overview", "curriculum", "careers", "faqs"];
     const els = ids
       .map((id) => document.getElementById(id))
       .filter(Boolean);
@@ -229,6 +283,7 @@ export default function ProgramClient({ program }) {
             { id: "overview", label: "Overview", Icon: Award },
             { id: "curriculum", label: "Curriculum", Icon: BookOpen },
             { id: "careers", label: "Careers", Icon: Briefcase },
+            ...(program.faqs && program.faqs.length ? [{ id: "faqs", label: "FAQs", Icon: HelpCircle }] : [])
           ].map(({ id, label, Icon }) => {
             const isActive = activeSection === id;
             return (
@@ -275,24 +330,24 @@ export default function ProgramClient({ program }) {
                 <div className="w-10 h-10 md:w-12 md:h-12 rounded-2xl bg-accent/10 border border-accent/15 flex items-center justify-center mb-3">
                   <Clock className="w-5 h-5 md:w-6 md:h-6 text-accent" />
                 </div>
-                <div className="text-xs md:text-sm text-gray-600">Duration</div>
-                <div className="text-base md:text-lg font-black text-gray-900">{program.overview.duration}</div>
+                <div className="text-xs md:text-lg font-bold text-gray-600">Duration</div>
+                <div className="text-[12px] md:text-xs  text-gray-900">{program.overview.duration}</div>
               </div>
               <div className="group relative p-4 md:p-5 rounded-2xl bg-gradient-to-br from-white to-gray-50 border border-gray-200 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all overflow-hidden">
                 <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary/70 via-sky-500/50 to-primary/70 opacity-60" />
                 <div className="w-10 h-10 md:w-12 md:h-12 rounded-2xl bg-primary/10 border border-primary/15 flex items-center justify-center mb-3">
                   <GraduationCap className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                 </div>
-                <div className="text-xs md:text-sm text-gray-600">Mode</div>
-                <div className="text-base md:text-lg font-black text-gray-900">{program.overview.mode}</div>
+                <div className="text-xs md:text-lg font-bold text-gray-600">Mode</div>
+                <div className="text-[12px] md:text-xs  text-gray-900">{program.overview.mode}</div>
               </div>
               <div className="group relative p-4 md:p-5 rounded-2xl bg-gradient-to-br from-white to-gray-50 border border-gray-200 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all overflow-hidden col-span-2 md:col-span-1">
                 <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-emerald-500/60 via-emerald-400/30 to-emerald-500/60 opacity-70" />
                 <div className="w-10 h-10 md:w-12 md:h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/15 flex items-center justify-center mb-3">
                   <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-emerald-600" />
                 </div>
-                <div className="text-xs md:text-sm text-gray-600">Eligibility</div>
-                <div className="text-base md:text-lg font-black text-gray-900">{program.overview.eligibility}</div>
+                <div className="text-xs md:text-lg font-bold text-gray-600">Eligibility</div>
+                <div className="text-[12px] md:text-xs  text-gray-900">{program.overview.eligibility}</div>
               </div>
             </motion.div>
 
@@ -496,6 +551,7 @@ export default function ProgramClient({ program }) {
         </div>
       </section>
 
+      <FAQSection faqs={program.faqs} />
       <OurHiringPartnersSection />
 
       {/* Mobile Bottom CTA */}

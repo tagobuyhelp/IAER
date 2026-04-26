@@ -47,7 +47,7 @@ const programCategories = [
       {
         name: "Healthcare & Hospitality",
         icon: <Stethoscope className="w-5 h-5" />,
-        programs: ["BMLT", "BSCHHA"]
+        programs: ["BMLT", "DMLT", "BSCHHA"]
       }
     ]
   },
@@ -59,12 +59,29 @@ const programCategories = [
       {
         name: "Management Degrees",
         icon: <Award className="w-5 h-5" />,
-        programs: ["MBA", "PGDM"]
+        programs: ["MBA", "MHA", "PGDM"]
       },
       {
         name: "Specialised PGDM",
         icon: <LineChart className="w-5 h-5" />,
         programs: ["PGDM-AIADS", "PGDM-BA", "PGDM-FT", "PGDM-HMHA"]
+      }
+    ]
+  },
+  {
+    id: 'cert',
+    title: "Certifications & Diplomas",
+    description: "Short-term Professional Courses",
+    groups: [
+      {
+        name: "Professional Certifications",
+        icon: <Award className="w-5 h-5" />,
+        programs: ["ACSD", "ACAC", "ACAI", "ACFD", "ACSC"]
+      },
+      {
+        name: "Diploma Programs",
+        icon: <BookOpen className="w-5 h-5" />,
+        programs: ["DMLT", "DAHM"]
       }
     ]
   }

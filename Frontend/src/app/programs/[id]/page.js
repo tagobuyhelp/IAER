@@ -18,12 +18,19 @@ export async function generateMetadata({ params }) {
     };
   }
 
+  const title = program?.seo?.title || `${program.title} | IAER`;
+  const description =
+    program?.seo?.description ||
+    program.subtitle ||
+    `Enroll in ${program.title} at IAER. ${program.overview?.duration} course with ${program.overview?.mode} mode.`;
+
   return {
-    title: `${program.title} | IAER`,
-    description: program.subtitle || `Enroll in ${program.title} at IAER. ${program.overview?.duration} course with ${program.overview?.mode} mode.`,
+    title,
+    description,
+    alternates: program?.seo?.url ? { canonical: program.seo.url } : undefined,
     openGraph: {
-      title: `${program.title} | IAER`,
-      description: program.subtitle || `Enroll in ${program.title} at IAER.`,
+      title,
+      description,
       images: program.image ? [{ url: program.image }] : [],
     },
   };

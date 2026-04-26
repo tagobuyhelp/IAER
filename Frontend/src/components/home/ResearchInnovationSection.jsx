@@ -18,37 +18,37 @@ const infrastructure = [
     title: "IT Labs",
     desc: "Data Science, Cyber Security, Cloud Computing, AI",
     icon: Monitor,
-    image: "/images/programs/BCA-in-Data-Science-Cyber-Security.webp"
+    image: "/images/home/Research-Innovation/IT-Labs.webp"
   },
   {
     title: "Hospitality LIVE Kitchen",
     desc: "Advanced Food Production Studio & Training Restaurants",
     icon: Utensils,
-    image: "/images/programs/B.Sc-in-Hospitality-&-Hotel-Administration.webp"
+    image: "/images/home/Research-Innovation/Hospitality-LIVE-Kitchen.webp"
   },
   {
     title: "Medical Lab Tech",
     desc: "Advanced Diagnostic & Pathology Centres",
     icon: Stethoscope,
-    image: "/images/programs/Medical-Lab-Technology.webp"
+    image: "/images/home/Research-Innovation/Medical-Lab-Tech.webp"
   },
   {
     title: "Aviation Simulation",
     desc: "Mock Aircraft Cabins for Crew Training",
     icon: Plane,
-    image: "/images/programs/Bachelor-of-Aviation-Hospitality-Services-Management3.webp"
+    image: "/images/home/Research-Innovation/Aviation-Simulation.webp"
   },
   {
     title: "Startup Launchpad",
     desc: "Incubation Centre & Tech Innovation Labs",
     icon: Rocket,
-    image: "/images/programs/iaer-industry-integrated-curriculum.webp"
+    image: "/images/home/Research-Innovation/Startup-Launchpad.webp"
   },
   {
     title: "Digital Classrooms",
     desc: "Smart Learning Hubs & Entrepreneurship Centers",
     icon: Presentation,
-    image: "/images/programs/iaer-global-alumni-network.webp"
+    image: "/images/home/Research-Innovation/Digital-Classrooms.webp"
   }
 ];
 
