@@ -6,10 +6,8 @@ import RevealOnScroll from "@/components/RevealOnScroll";
 import { useState, useEffect } from "react";
 
 const heroImages = [
-    "/images/about/Regulatory_compliance_review_meeting.png",
-    "/images/about/Community_interaction_in_a_neighbourhood_centre.png",
-    "/images/research-and-innovation/Student_founders_presenting_to_mentors.png",
-    "/images/academic/Classroom_discussion_with_engaged_students.png"
+    "/images/placement/placement-hero-banner-1.webp",
+    "/images/placement/placement-hero-banner-2.webp",
 ];
 
 export default function HeroSection() {

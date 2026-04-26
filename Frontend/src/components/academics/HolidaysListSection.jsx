@@ -67,13 +67,13 @@ export default function HolidaysListSection() {
   };
 
   return (
-    <section id="holidays-list" className="relative py-16 bg-gray-50/50 overflow-hidden">
+    <section id="holidays-list" className="relative py-16 bg-gray-300/50 overflow-hidden">
       <div className="absolute inset-0 z-0 pointer-events-none">
               <Image
-                src="/images/academic/Classroom_discussion_with_engaged_students.png"
-                alt="Classroom Discussion"
+                src="/images/academic/gazetted-holidays-2026.webp"
+                alt="Gazetted Holidays 2026"
                 fill
-                className="object-cover opacity-30"
+                className="object-cover opacity-30 object-center-right"
               />
             </div>
       <div className="container mx-auto px-4">

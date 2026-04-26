@@ -23,7 +23,7 @@ export default function InternshipSection() {
                     <RevealOnScroll>
                         <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl">
                             <Image
-                                src="/images/about/Hands-on_electronics_training_in_India.png"
+                                src="/images/placement/placement-Internships-Live-Projects.webp"
                                 alt="Internships at IAER"
                                 fill
                                 className="object-cover"
@@ -86,7 +86,7 @@ export default function InternshipSection() {
                         <RevealOnScroll delay={200}>
                             <div className="relative h-64 rounded-xl overflow-hidden">
                                 <Image
-                                    src="/images/research-and-innovation/Students_working_on_robotic_prototype.png"
+                                    src="/images/placement/Placement-Industrial-Visits-Corporate-Exposure.webp"
                                     alt="Industrial Visit"
                                     fill
                                     className="object-cover"

@@ -431,18 +431,39 @@ export default function Programs() {
               {
                 title: "Industry Integrated Curriculum",
                 desc: "Our courses are designed in collaboration with industry leaders to ensure relevance.",
-                image: "/images/programs/iaer-industry-integrated-curriculum.webp"
+                image: "/images/programs/Industry-Integrated-Curriculum.webp"
               },
               {
                 title: "State-of-the-Art Campus",
                 desc: "Modern labs, smart classrooms, and a vibrant campus life await you.",
-                image: "/images/campus/iaer-campus.png"
+                image: "/images/programs/State-of-the-Art-Campus.webp"
               },
               {
                 title: "Global Alumni Network",
                 desc: "Join a network of successful professionals working in top companies globally.",
-                image: "/images/programs/iaer-global-alumni-network.webp"
-              }
+                image: "/images/programs/Global-Alumni-Network.webp"
+              },
+              {
+                title: "State-of-the-Art Infrastructure",
+                desc: "Fully equipped labs designed for practical, hands-on learning.",
+                image: "/images/programs/State-of-the-Art-Campus.webp"
+              },
+              {
+                title: "Fully Digital Classrooms & Online Library",
+                desc: "Smart classrooms and easy access to learning resources anytime.",
+                image: "/images/programs/Fully-Digital-Classroom-Online-Library.webp"
+              },
+              {
+                title: "Robust Industry Interface",
+                desc: "Industry mentorship, internships, and real-world projects for career readiness.",
+                image: "/images/programs/Robust-Industry-Interface.webp"
+              },
+              {
+                title: "Study Tours in India & Abroad",
+                desc: "Learning beyond the campus through exposure visits and immersive study tours.",
+                image: "/images/programs/Study-Tour-in-India-Abroad.webp"
+              },
+              
             ].map((feature, idx) => (
               <motion.div
                 key={idx}
@@ -456,7 +477,7 @@ export default function Programs() {
                   src={feature.image}
                   alt={feature.title}
                   fill
-                  className="object-cover opacity-70 group-hover:scale-110 transition-transform duration-700"
+                  className="object-cover opacity-100 group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent p-4 md:p-8 flex flex-col justify-end">
                   <h3 className="text-lg md:text-2xl font-bold mb-2 md:mb-3 group-hover:text-accent transition-colors">{feature.title}</h3>

@@ -8,10 +8,10 @@ import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
 const sliderImages = [
-    "/images/research-and-innovation/Collaborative_brainstorming_in_a_study_hub.png",
-    "/images/research-and-innovation/Collaborative_discussion_in_a_research_lab.png",
-    "/images/research-and-innovation/Students_working_in_advanced_research_lab.png",
-    "/images/research-and-innovation/Students_working_on_robotic_prototype.png"
+    "/images/research-and-innovation/research-and-innovation-hero-banner-1.webp",
+    "/images/research-and-innovation/research-and-innovation-hero-banner-2.webp",
+    "/images/research-and-innovation/research-and-innovation-hero-banner-3.webp",
+    "/images/research-and-innovation/research-and-innovation-hero-banner-4.webp"
 ];
 
 const HeroSection = () => {

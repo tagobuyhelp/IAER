@@ -23,7 +23,7 @@ export const navigationData = [
         href: "/programs",
         icon: "GraduationCap",
         description: "Find the right program for your career goals.",
-        image: "/images/navigation/nav-2-img.jpg",
+        image: "/images/programs/iaer-program-mega-menu.webp",
         items: [
             {
                 title: "Undergraduate Degrees",
@@ -80,7 +80,7 @@ export const navigationData = [
         href: "/academics",
         icon: "Library",
         description: "How learning works at IAER: curriculum, calendar, and evaluation.",
-        image: "/images/navigation/nav-3-img.jpg",
+        image: "/images/academic/academic-mega-menu-image.webp",
         items: [
             { title: "Academics Overview", href: "/academics#academics-overview", icon: "Layout" },
             { title: "All Programs", href: "/programs", icon: "List" },
@@ -97,7 +97,7 @@ export const navigationData = [
         href: "/admissions",
         icon: "FileText",
         description: "Start your journey with us. Application process, fees, and scholarships.",
-        image: "/images/navigation/nav-4-img.jpg",
+        image: "/images/admissions/iaer-admission-mega-menu-image.webp",
         items: [
             { title: "Overview", href: "/admissions#admissions-overview", icon: "Info" },
             { title: "Admission Criteria", href: "/admissions#admissions-eligibility", icon: "CheckSquare" },
@@ -115,7 +115,7 @@ export const navigationData = [
         href: "/placement",
         icon: "Briefcase",
         description: "Internships, career support, and placement assistance.",
-        image: "/images/navigation/nav-5-img.jpg",
+        image: "/images/placement/placement-mega-menu-photo.webp",
         items: [
             { title: "Overview", href: "/placement#placement-overview", icon: "Info", description: "Placement philosophy and approach." },
             { title: "Placement Cell (TPC/CSD)", href: "/placement#placement-cell", icon: "Users", description: "Training & Placement Cell and Career Services." },
@@ -130,7 +130,7 @@ export const navigationData = [
         href: "/research-and-innovation",
         icon: "Microscope",
         description: "Fostering innovation, research, and entrepreneurship.",
-        image: "/images/research-and-innovation/Students_working_on_robotic_prototype.png",
+        image: "/images/research-and-innovation/research-and-innovation-hero-mega-menu.webp",
         items: [
             { title: "Overview", href: "/research-and-innovation#research-overview", icon: "Info", description: "Research philosophy and impact." },
             { title: "Research Areas", href: "/research-and-innovation#innovation-research", icon: "Microscope", description: "Key domains of inquiry." },

@@ -29,10 +29,10 @@ export default function AcademicsOverviewSection() {
     <div id="academics-overview" className="relative py-16 bg-gray-50/50 overflow-hidden">
       <div className="absolute inset-0 z-0 pointer-events-none">
         <Image
-          src="/images/academic/Classroom_discussion_with_engaged_students.png"
-          alt="Classroom Discussion"
+          src="/images/academic/our-academic-framework.webp"
+          alt="Our Academic Framework"
           fill
-          className="object-cover opacity-30"
+          className="object-cover opacity-60"
         />
       </div>
       <div className="relative z-10 flex flex-col gap-16">
@@ -77,7 +77,7 @@ export default function AcademicsOverviewSection() {
           </div>
 
           {/* Tab Content Area */}
-          <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-xl shadow-gray-100 border border-gray-100 min-h-[400px]">
+          <div className="bg-white rounded-3xl p-8 lg:p-12   border border-gray-100 min-h-[400px]">
             {/* Philosophy Content */}
             {activeTab === "philosophy" && (
               <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">

@@ -13,14 +13,14 @@ export default function CampusLifeSection() {
   });
 
   const campusGallery = [
-    { src: "/images/campus-life/iaer-campus-life-orientation-program.webp", alt: "Orientation Program", className: "col-span-2 row-span-2 md:col-span-2 md:row-span-2 lg:col-span-3 lg:row-span-3" },
-    { src: "/images/campus-life/iaer-campus-life-holi-celebration.webp", alt: "Holi Celebration", className: "col-span-2 row-span-1 md:col-span-2 md:row-span-1 lg:col-span-3 lg:row-span-2" },
-    { src: "/images/campus-life/iaer-campus-life-christmas-celebration.webp", alt: "Christmas Celebration", className: "col-span-1 row-span-1 md:col-span-1 md:row-span-1 lg:col-span-2 lg:row-span-2" },
-    { src: "/images/admissions/Students_collaborating_in_bright_campus_space.png", alt: "Student Collaboration", className: "col-span-1 row-span-1 md:col-span-1 md:row-span-1 lg:col-span-2 lg:row-span-1" },
-    { src: "/images/academic/Classroom_discussion_with_engaged_students.png", alt: "Classroom Discussion", className: "col-span-1 row-span-1 md:col-span-1 md:row-span-1 lg:col-span-2 lg:row-span-1" },
-    { src: "/images/about/Hands-on_electronics_training_in_India.png", alt: "Hands-on Training", className: "col-span-1 row-span-1 md:col-span-1 md:row-span-1 lg:col-span-2 lg:row-span-1" },
-    { src: "/images/students/riya.avif", alt: "Student Life", className: "col-span-1 row-span-1 md:col-span-1 md:row-span-1 lg:col-span-2 lg:row-span-1" },
-    { src: "/images/academic/Professor_and_student_discussing_results.png", alt: "Faculty Mentorship", className: "col-span-2 row-span-1 md:col-span-2 md:row-span-1 lg:col-span-4 lg:row-span-1" },
+    { src: "/images/admissions/Orientation-Program.webp", alt: "Orientation Program", className: "col-span-2 row-span-2 md:col-span-2 md:row-span-2 lg:col-span-3 lg:row-span-3" },
+    { src: "/images/admissions/Holi-Celebration.webp", alt: "Holi Celebration", className: "col-span-2 row-span-1 md:col-span-2 md:row-span-1 lg:col-span-3 lg:row-span-2" },
+    { src: "/images/admissions/Christmas-Celebration.webp", alt: "Christmas Celebration", className: "col-span-1 row-span-1 md:col-span-1 md:row-span-1 lg:col-span-2 lg:row-span-2" },
+    { src: "/images/admissions/Student-Collaboration.webp", alt: "Student Collaboration", className: "col-span-1 row-span-2 md:col-span-1 md:row-span-2 lg:col-span-2 lg:row-span-2" },
+    { src: "/images/admissions/Classroom-Discussion.webp", alt: "Classroom Discussion", className: "col-span-1 row-span-2 md:col-span-1 md:row-span-2 lg:col-span-2 lg:row-span-2" },
+    { src: "/images/admissions/Hands-on-Training.webp", alt: "Hands-on Training", className: "col-span-1 row-span-2 md:col-span-1 md:row-span-2 lg:col-span-2 lg:row-span-2" },
+    { src: "/images/admissions/Student-Life.webp", alt: "Student Life", className: "col-span-1 row-span-2 md:col-span-1 md:row-span-2 lg:col-span-2 lg:row-span-2" },
+    { src: "/images/admissions/Faculty-Mentorship.webp", alt: "Faculty Mentorship", className: "col-span-2 row-span-2 md:col-span-2 md:row-span-2 lg:col-span-4 lg:row-span-2" },
   ];
 
   const features = [

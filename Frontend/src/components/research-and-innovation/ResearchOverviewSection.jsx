@@ -21,7 +21,7 @@ export default function ResearchOverviewSection() {
                         <RevealOnScroll>
                             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                                 <Image
-                                    src="/images/research-and-innovation/Mentoring_in_the_research_room.png"
+                                    src="/images/research-and-innovation/research-and-innovation-hero-about.webp"
                                     alt="Research Discussion"
                                     width={800}
                                     height={600}

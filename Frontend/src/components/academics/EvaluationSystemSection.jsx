@@ -24,8 +24,8 @@ export default function EvaluationSystemSection() {
     <div id="academics-evaluation-system" className="relative py-16 bg-gray-50/50 overflow-hidden">
       <div className="absolute inset-0 z-0 pointer-events-none">
               <Image
-                src="/images/academic/Classroom_discussion_with_engaged_students.png"
-                alt="Classroom Discussion"
+                src="/images/academic/system-of-evaluation.webp"
+                alt="System of Evaluation"
                 fill
                 className="object-cover opacity-10"
                 sizes="100vw"
