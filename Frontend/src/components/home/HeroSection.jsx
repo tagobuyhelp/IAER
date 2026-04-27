@@ -136,11 +136,11 @@ export default function HeroSection() {
             </div>
 
             {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-start gap-2.5 sm:gap-3 pt-1 sm:pt-2 lg:px-0">
+            <div className="flex flex-row items-center justify-start gap-2.5 sm:gap-3 pt-1 sm:pt-2 lg:px-0">
               <Button
                 asChild
                 size="lg"
-                className="w-full sm:w-auto h-11 sm:h-12 md:h-14 px-8 sm:px-10 bg-accent hover:bg-accent/90 text-white rounded-full font-bold text-xs sm:text-sm md:text-lg shadow-xl shadow-accent/20 transition-all duration-300 hover:-translate-y-1"
+                className="flex-1 sm:flex-none h-11 sm:h-12 md:h-14 px-4 sm:px-10 bg-accent hover:bg-accent/90 text-white rounded-full font-bold text-[11px] sm:text-sm md:text-lg shadow-xl shadow-accent/20 transition-all duration-300 hover:-translate-y-1 whitespace-nowrap"
               >
                 <Link href="https://admission.iaer.ac.in/">
                   APPLY NOW <ArrowRight className="ml-2 w-5 h-5" />
@@ -150,7 +150,7 @@ export default function HeroSection() {
                 variant="outline"
                 size="lg"
                 onClick={handleDownloadBrochure}
-                className="w-full sm:w-auto h-11 sm:h-12 md:h-14 px-8 sm:px-10 border-white/20 bg-white/5 hover:bg-white/10 text-white rounded-full font-bold text-xs sm:text-sm md:text-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-1"
+                className="flex-1 sm:flex-none h-11 sm:h-12 md:h-14 px-4 sm:px-10 border-white/20 bg-white/5 hover:bg-white/10 text-white rounded-full font-bold text-[11px] sm:text-sm md:text-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 whitespace-nowrap"
               >
                 BROCHURE
               </Button>
