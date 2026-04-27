@@ -54,34 +54,6 @@ export default function HeroSection() {
     const studentTimer = setInterval(() => {
       setCurrentStudent((prev) => (prev + 1) % students.length);
     }, 5000);
-    let mobileTimer = null;
-    let mq = null;
-    if (typeof window !== "undefined") {
-      mq = window.matchMedia("(max-width: 1023px)");
-      const startMobileTimer = () => {
-        if (!mq.matches) return;
-        mobileTimer = setInterval(() => {
-          setMobileStudentIndex((prev) => (prev + 1) % students.length);
-        }, 4000);
-      };
-      const handleChange = () => {
-        if (mobileTimer) clearInterval(mobileTimer);
-        mobileTimer = null;
-        startMobileTimer();
-      };
-      startMobileTimer();
-      if (mq.addEventListener) mq.addEventListener("change", handleChange);
-      else mq.addListener(handleChange);
-      return () => {
-        clearInterval(bgTimer);
-        clearInterval(studentTimer);
-        if (mobileTimer) clearInterval(mobileTimer);
-        if (mq) {
-          if (mq.removeEventListener) mq.removeEventListener("change", handleChange);
-          else mq.removeListener(handleChange);
-        }
-      };
-    }
     return () => {
       clearInterval(bgTimer);
       clearInterval(studentTimer);
