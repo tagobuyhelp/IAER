@@ -112,14 +112,14 @@ export default function PlacementPartners() {
   }, []);
 
   return (
-    <section className="py-16 bg-gradient-to-br from-primary/95 via-primary to-primary/90 text-primary-foreground relative overflow-hidden">
+    <section className="py-10 sm:py-14 md:py-16 bg-gradient-to-br from-primary/95 via-primary to-primary/90 text-primary-foreground relative overflow-hidden">
       <div className="pointer-events-none absolute inset-x-0 -top-24 h-32 bg-dot-grid opacity-20" />
       <div className="pointer-events-none absolute -bottom-20 -right-16 w-64 h-64 rounded-full bg-accent/40 blur-3xl" />
 
       <div
         ref={ref}
         className={cn(
-          "container mx-auto px-4 mb-4 text-center",
+          "container mx-auto px-4 mb-3 sm:mb-4 text-center",
           reduceMotion
             ? "opacity-100 translate-y-0"
             : inView
@@ -127,24 +127,24 @@ export default function PlacementPartners() {
               : "opacity-0 translate-y-4"
         )}
       >
-        <div className="inline-flex items-center gap-2 rounded-full bg-primary-foreground/10 px-3 py-1 text-xs font-semibold mb-3">
-          <Sparkles className="h-3.5 w-3.5" />
+        <div className="inline-flex items-center gap-2 rounded-full bg-primary-foreground/10 px-2.5 py-0.5 sm:px-3 sm:py-1 text-[10px] sm:text-xs font-semibold mb-3">
+          <Sparkles className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
           <span>Trusted by Leading Recruiters</span>
         </div>
-        <h2 className="text-2xl lg:text-3xl font-bold">
+        <h2 className="text-[20px] sm:text-2xl lg:text-3xl font-bold">
           Our Students are Working With
         </h2>
-        <p className="text-xs md:text-sm text-primary-foreground/80 mt-2 max-w-xl mx-auto">
+        <p className="text-[12px] sm:text-xs md:text-sm text-primary-foreground/80 mt-2 max-w-xl mx-auto">
           A growing network of recruiters across IT, healthcare, hospitality, aviation, and consulting.
         </p>
       </div>
 
-      <div className="relative flex overflow-x-hidden py-4 group">
-        <div className="flex gap-12 whitespace-nowrap animate-[marquee_40s_linear_infinite] group-hover:[animation-play-state:paused]">
+      <div className="relative flex overflow-x-hidden py-3 sm:py-4 group">
+        <div className="flex gap-8 sm:gap-12 whitespace-nowrap animate-[marquee_40s_linear_infinite] group-hover:[animation-play-state:paused]">
           {companies.map((company, index) => (
             <div
               key={`c1-${index}`}
-              className="flex items-center justify-center min-w-[120px]"
+              className="flex items-center justify-center min-w-[96px] sm:min-w-[120px]"
             >
               {company.logo ? (
                 <Image
@@ -152,10 +152,10 @@ export default function PlacementPartners() {
                   alt={company.name}
                   width={140}
                   height={60}
-                  className="h-10 md:h-12 w-auto object-contain brightness-0 invert"
+                  className="h-8 sm:h-10 md:h-12 w-auto object-contain brightness-0 invert"
                 />
               ) : (
-                <span className="text-lg lg:text-2xl font-semibold text-primary-foreground/90 hover:text-accent transition-colors cursor-default">
+                <span className="text-base sm:text-lg lg:text-2xl font-semibold text-primary-foreground/90 hover:text-accent transition-colors cursor-default">
                   {company.name}
                 </span>
               )}
@@ -164,7 +164,7 @@ export default function PlacementPartners() {
           {companies.map((company, index) => (
             <div
               key={`c2-${index}`}
-              className="flex items-center justify-center min-w-[120px]"
+              className="flex items-center justify-center min-w-[96px] sm:min-w-[120px]"
             >
               {company.logo ? (
                 <Image
@@ -172,10 +172,10 @@ export default function PlacementPartners() {
                   alt={company.name}
                   width={140}
                   height={60}
-                  className="h-10 md:h-12 w-auto object-contain brightness-0 invert"
+                  className="h-8 sm:h-10 md:h-12 w-auto object-contain brightness-0 invert"
                 />
               ) : (
-                <span className="text-lg lg:text-2xl font-semibold text-primary-foreground/90 hover:text-accent transition-colors cursor-default">
+                <span className="text-base sm:text-lg lg:text-2xl font-semibold text-primary-foreground/90 hover:text-accent transition-colors cursor-default">
                   {company.name}
                 </span>
               )}

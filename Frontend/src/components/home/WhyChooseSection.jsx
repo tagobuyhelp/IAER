@@ -92,22 +92,22 @@ export default function WhyChooseSection() {
   }, [inView, reduceMotion, isPaused]);
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-10 sm:py-14 md:py-20 bg-background">
       <div className="container  mx-auto px-4">
         <div
           ref={ref}
           className={cn(
-            "mb-12 max-w-3xl transition-all duration-700 ease-out",
+            "mb-6 sm:mb-10 md:mb-12 max-w-3xl transition-all duration-700 ease-out",
             inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           )}
         >
-          <p className="text-sm font-semibold tracking-[0.18em] uppercase text-primary/80 mb-2">
+          <p className="text-[10px] sm:text-sm font-semibold tracking-[0.18em] uppercase text-primary/80 mb-2">
             Why Choose IAER
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-foreground">
+          <h2 className="text-[24px] sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-foreground">
             A Career-First Learning Experience
           </h2>
-          <p className="text-sm md:text-base text-muted-foreground max-w-2xl">
+          <p className="text-[12px] sm:text-sm md:text-base text-muted-foreground max-w-2xl">
             From industry-linked curricula to global exposure and lifelong networks, IAER is built to move students from classrooms into high-impact careers.
           </p>
         </div>
@@ -117,7 +117,7 @@ export default function WhyChooseSection() {
           <div className="pointer-events-none absolute -top-10 right-[-40px] w-56 h-56 rounded-full bg-primary/5 blur-3xl" />
 
           <div
-            className="relative flex flex-col lg:flex-row gap-10 lg:gap-12"
+            className="relative flex flex-col lg:flex-row gap-6 sm:gap-10 lg:gap-12"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
@@ -144,15 +144,15 @@ export default function WhyChooseSection() {
                       <button
                         onClick={() => setActiveId(feature.id)}
                         className={cn(
-                          "w-full flex items-center justify-between px-3 py-4 rounded-2xl border border-border/70 bg-background/80 hover:bg-muted/60 text-left group focus:outline-none transition-all duration-300",
+                          "w-full flex items-center justify-between px-3 py-3 sm:py-4 rounded-2xl border border-border/70 bg-background/80 hover:bg-muted/60 text-left group focus:outline-none transition-all duration-300",
                           isActive && "border-primary/40 bg-primary/5 shadow-sm"
                         )}
                       >
-                        <div className="flex items-center gap-4">
+                        <div className="flex items-center gap-3 sm:gap-4">
                           <div className="relative flex items-center">
                             <span
                               className={cn(
-                                "inline-flex items-center justify-center w-9 h-9 rounded-full text-sm font-semibold transition-colors border border-border/70 bg-background",
+                                "inline-flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-full text-[12px] sm:text-sm font-semibold transition-colors border border-border/70 bg-background",
                                 isActive && "bg-primary text-primary-foreground border-primary/60"
                               )}
                             >
@@ -162,7 +162,7 @@ export default function WhyChooseSection() {
                           <div>
                             <h3
                               className={cn(
-                                "text-base md:text-lg font-semibold transition-colors",
+                                "text-[13px] sm:text-base md:text-lg font-semibold transition-colors",
                                 isActive
                                   ? "text-foreground"
                                   : "text-muted-foreground group-hover:text-foreground"
@@ -179,7 +179,7 @@ export default function WhyChooseSection() {
                         </div>
                         <ChevronRight
                           className={cn(
-                            "h-5 w-5 transition-transform duration-300",
+                            "h-4 w-4 sm:h-5 sm:w-5 transition-transform duration-300",
                             isActive ? "rotate-90 text-primary" : "text-muted-foreground"
                           )}
                         />
@@ -195,10 +195,10 @@ export default function WhyChooseSection() {
                       >
                         <div className="overflow-hidden">
                           <div className="pl-3 pr-1 pt-2 lg:hidden">
-                            <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                            <p className="text-[12px] sm:text-sm text-muted-foreground leading-relaxed mb-3">
                               {feature.description}
                             </p>
-                            <div className="relative w-full h-44 rounded-xl overflow-hidden shadow-sm">
+                            <div className="relative w-full h-36 sm:h-44 rounded-xl overflow-hidden shadow-sm">
                               <Image
                                 src={feature.image}
                                 alt={feature.title}

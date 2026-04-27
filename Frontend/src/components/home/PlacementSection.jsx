@@ -35,7 +35,7 @@ export default function PlacementSection() {
   }, []);
 
   return (
-    <section className="py-20 bg-gradient-to-br from-muted/40 via-background to-background relative overflow-hidden">
+    <section className="py-10 sm:py-14 md:py-20 bg-gradient-to-br from-muted/40 via-background to-background relative overflow-hidden">
       <div className="pointer-events-none absolute -top-24 -right-16 w-72 h-72 rounded-full bg-primary/10 blur-3xl" />
       <div className="pointer-events-none absolute bottom-[-80px] left-[-40px] w-80 h-80 bg-dot-grid opacity-20" />
 
@@ -43,7 +43,7 @@ export default function PlacementSection() {
         <div
           ref={headerRef}
           className={cn(
-            "flex flex-col lg:flex-row gap-12 mb-16 items-stretch",
+            "flex flex-col lg:flex-row gap-8 sm:gap-12 mb-8 sm:mb-12 md:mb-16 items-stretch",
             reduceMotion
               ? "opacity-100 translate-y-0"
               : headerInView
@@ -52,25 +52,25 @@ export default function PlacementSection() {
           )}
         >
           <div className="flex-1 max-w-xl">
-            <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 text-primary px-3 py-1 text-xs font-semibold mb-3">
-              <Sparkles className="h-3.5 w-3.5" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 text-primary px-2.5 py-0.5 sm:px-3 sm:py-1 text-[10px] sm:text-xs font-semibold mb-3">
+              <Sparkles className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
               <span>Career Outcomes & Global Placements</span>
             </div>
-            <span className="text-primary font-bold tracking-wider text-xs md:text-sm uppercase mb-2 block">
+            <span className="text-primary font-bold tracking-wider text-[10px] sm:text-xs md:text-sm uppercase mb-2 block">
               Placements Overview
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
+            <h2 className="text-[24px] sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-foreground">
               The Future’s Leading <br />
               <span className="text-accent">Companies Hire IAER Talent</span>
             </h2>
-            <p className="text-sm md:text-base text-muted-foreground mb-6 max-w-md">
+            <p className="text-[12px] sm:text-sm md:text-base text-muted-foreground mb-4 sm:mb-6 max-w-md">
               From top domestic recruiters to global brands, IAER students step into roles that match their ambition.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-3 sm:gap-4">
               <Button
                 asChild
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-sm hover:shadow-lg transition-all duration-300"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-sm hover:shadow-lg transition-all duration-300 h-10 px-4 text-sm sm:h-11 sm:px-6 sm:text-base"
               >
                 <Link href="https://admission.iaer.ac.in/" target="_blank">
                   APPLY NOW <ArrowRight className="ml-2 h-4 w-4" />
@@ -79,7 +79,7 @@ export default function PlacementSection() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-primary text-primary hover:bg-primary/5 hover:shadow-md transition-all duration-300"
+                className="border-primary text-primary hover:bg-primary/5 hover:shadow-md transition-all duration-300 h-10 px-4 text-sm sm:h-11 sm:px-6 sm:text-base"
               >
                 VIEW PLACEMENTS <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -101,7 +101,7 @@ export default function PlacementSection() {
               {placementStats.map((stat, i) => (
                 <div
                   key={stat.label}
-                  className="bg-card p-6 rounded-xl shadow-sm border border-border/70 hover:shadow-lg hover:border-primary/40 hover:-translate-y-1 transition-all duration-300"
+                  className="bg-card p-4 sm:p-6 rounded-xl shadow-sm border border-border/70 hover:shadow-lg hover:border-primary/40 hover:-translate-y-1 transition-all duration-300"
                   style={
                     reduceMotion
                       ? undefined
@@ -110,13 +110,13 @@ export default function PlacementSection() {
                         }
                   }
                 >
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                      <stat.icon className="h-5 w-5 text-primary" aria-hidden="true" />
+                  <div className="flex items-center gap-3 mb-2 sm:mb-3">
+                    <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                      <stat.icon className="h-4 w-4 sm:h-5 sm:w-5 text-primary" aria-hidden="true" />
                     </div>
-                    <div className="text-lg lg:text-xl font-bold text-foreground">{stat.value}</div>
+                    <div className="text-base sm:text-lg lg:text-xl font-bold text-foreground">{stat.value}</div>
                   </div>
-                  <div className="text-xs md:text-sm text-muted-foreground font-medium">
+                  <div className="text-[11px] sm:text-xs md:text-sm text-muted-foreground font-medium">
                     {stat.label}
                   </div>
                 </div>
@@ -128,7 +128,7 @@ export default function PlacementSection() {
         <div
           ref={packagesRef}
           className={cn(
-            "grid grid-cols-2 md:grid-cols-4 gap-6",
+            "grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6",
             reduceMotion
               ? "opacity-100 translate-y-0"
               : packagesInView
@@ -139,7 +139,7 @@ export default function PlacementSection() {
           {packageStats.map((stat, i) => (
             <div
               key={stat.amount}
-              className="text-center p-6 bg-white rounded-xl shadow-sm border border-border/70 border-t-4 border-accent/80 hover:-translate-y-1 hover:shadow-lg hover:border-accent transition-all duration-300"
+              className="text-center p-4 sm:p-6 bg-white rounded-xl shadow-sm border border-border/70 border-t-4 border-accent/80 hover:-translate-y-1 hover:shadow-lg hover:border-accent transition-all duration-300"
               style={
                 reduceMotion
                   ? undefined
@@ -148,10 +148,10 @@ export default function PlacementSection() {
                     }
               }
             >
-              <div className="text-xl lg:text-2xl font-bold text-foreground mb-1">{stat.amount}</div>
-              <div className="text-xs md:text-sm text-muted-foreground mb-2">Package Offered by</div>
-              <div className="text-3xl font-extrabold text-primary mb-1">{stat.count}</div>
-              <div className="text-xs md:text-sm font-medium text-muted-foreground">{stat.label}</div>
+              <div className="text-base sm:text-xl lg:text-2xl font-bold text-foreground mb-1">{stat.amount}</div>
+              <div className="text-[11px] sm:text-xs md:text-sm text-muted-foreground mb-2">Package Offered by</div>
+              <div className="text-2xl sm:text-3xl font-extrabold text-primary mb-1">{stat.count}</div>
+              <div className="text-[11px] sm:text-xs md:text-sm font-medium text-muted-foreground">{stat.label}</div>
             </div>
           ))}
         </div>

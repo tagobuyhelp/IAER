@@ -82,28 +82,28 @@ const clubs = [
 
 export default function ClubsSection() {
     return (
-        <section className="py-20 bg-gray-50">
+        <section className="py-12 md:py-20 bg-gray-50">
             <div className="container mx-auto px-4">
-                <div className="text-center mb-16">
+                <div className="text-center mb-10 md:mb-16">
                     <RevealOnScroll>
-                        <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6">
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4 md:mb-6">
                             Clubs & Societies
                         </h2>
-                        <p className="text-gray-600 max-w-3xl mx-auto text-lg">
+                        <p className="text-gray-600 max-w-3xl mx-auto text-sm sm:text-base lg:text-lg">
                             Student clubs and societies are the heartbeat of campus life at IAER. They provide platforms for students to explore interests, develop talents, and engage in collaborative learning outside academic boundaries.
                         </p>
                     </RevealOnScroll>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
                     {clubs.map((club, index) => (
                         <RevealOnScroll key={index} delay={index * 100}>
-                            <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-gray-100 h-full flex flex-col">
-                                <div className={cn("w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shrink-0", club.bg)}>
-                                    <club.icon className={cn("w-7 h-7", club.color)} />
+                            <div className="bg-white p-5 md:p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-gray-100 h-full flex flex-col">
+                                <div className={cn("w-12 h-12 md:w-14 md:h-14 rounded-2xl flex items-center justify-center mb-4 md:mb-6 shrink-0", club.bg)}>
+                                    <club.icon className={cn("w-6 h-6 md:w-7 md:h-7", club.color)} />
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-900 mb-3">{club.title}</h3>
-                                <p className="text-gray-600 text-sm leading-relaxed flex-grow">
+                                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">{club.title}</h3>
+                                <p className="text-gray-600 text-xs sm:text-sm leading-relaxed flex-grow">
                                     {club.desc}
                                 </p>
                             </div>

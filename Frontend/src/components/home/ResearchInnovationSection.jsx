@@ -65,7 +65,7 @@ export default function ResearchInnovationSection() {
   }, []);
 
   return (
-    <section className="py-20 bg-gradient-to-br from-muted/40 via-background to-background relative overflow-hidden">
+    <section className="py-10 sm:py-14 md:py-20 bg-gradient-to-br from-muted/40 via-background to-background relative overflow-hidden">
       <div className="pointer-events-none absolute -top-24 -right-16 w-72 h-72 rounded-full bg-primary/10 blur-3xl" />
       <div className="pointer-events-none absolute bottom-[-80px] left-[-40px] w-80 h-80 bg-dot-grid opacity-20" />
 
@@ -73,7 +73,7 @@ export default function ResearchInnovationSection() {
         <div
           ref={headerRef}
           className={cn(
-            "mb-16 grid gap-10 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] items-center",
+            "mb-8 sm:mb-12 md:mb-16 grid gap-6 sm:gap-10 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] items-center",
             reduceMotion
               ? "opacity-100 translate-y-0"
               : headerInView
@@ -82,20 +82,20 @@ export default function ResearchInnovationSection() {
           )}
         >
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 text-primary px-3 py-1 text-xs font-semibold mb-3">
-              <Sparkles className="h-3.5 w-3.5" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 text-primary px-2.5 py-0.5 sm:px-3 sm:py-1 text-[10px] sm:text-xs font-semibold mb-3">
+              <Sparkles className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
               <span>Research, Innovation & Future-ready Infrastructure</span>
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
+            <h2 className="text-[24px] sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-foreground">
               Pioneering Research & <br />
               <span className="text-primary">Innovation at IAER</span>
             </h2>
-            <p className="text-sm md:text-base text-muted-foreground max-w-xl">
+            <p className="text-[12px] sm:text-sm md:text-base text-muted-foreground max-w-xl">
               From high-impact publications and patents to industry-powered labs, IAER gives students a hands-on environment to experiment, build, and launch ideas that matter.
             </p>
           </div>
 
-          <div className="relative rounded-3xl border border-border/60 bg-gradient-to-br from-primary/15 via-primary/5 to-accent/10 p-6 lg:p-7 overflow-hidden">
+          <div className="relative rounded-2xl sm:rounded-3xl border border-border/60 bg-gradient-to-br from-primary/15 via-primary/5 to-accent/10 p-4 sm:p-6 lg:p-7 overflow-hidden">
             <div className="pointer-events-none absolute inset-0 bg-gradient-radial from-white/40 via-transparent to-transparent opacity-60" />
             <div className="pointer-events-none absolute -bottom-10 -right-6 w-32 h-32 opacity-70">
               <Image
@@ -110,30 +110,30 @@ export default function ResearchInnovationSection() {
             <div className="relative flex flex-col gap-4">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-xs font-semibold tracking-[0.18em] uppercase text-primary/80">Impact Snapshot</p>
-                  <p className="text-sm text-muted-foreground mt-1">Innovation, labs and industry projects under one roof.</p>
+                  <p className="text-[10px] sm:text-xs font-semibold tracking-[0.18em] uppercase text-primary/80">Impact Snapshot</p>
+                  <p className="text-[11px] sm:text-sm text-muted-foreground mt-1">Innovation, labs and industry projects under one roof.</p>
                 </div>
-                <div className="w-10 h-10 rounded-xl bg-background/70 flex items-center justify-center border border-border/60">
-                  <Lightbulb className="h-5 w-5 text-primary" />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-3 gap-3 text-xs">
-                <div className="rounded-2xl bg-background/70 border border-border/50 px-3 py-2.5">
-                  <p className="text-[11px] text-muted-foreground mb-1">Publications</p>
-                  <p className="text-lg font-bold text-foreground">100+</p>
-                </div>
-                <div className="rounded-2xl bg-background/70 border border-border/50 px-3 py-2.5">
-                  <p className="text-[11px] text-muted-foreground mb-1">Centres of Excellence</p>
-                  <p className="text-lg font-bold text-foreground">10+</p>
-                </div>
-                <div className="rounded-2xl bg-background/70 border border-border/50 px-3 py-2.5">
-                  <p className="text-[11px] text-muted-foreground mb-1">Specialized Labs</p>
-                  <p className="text-lg font-bold text-foreground">15+</p>
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-background/70 flex items-center justify-center border border-border/60">
+                  <Lightbulb className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                 </div>
               </div>
 
-              <div className="flex items-center justify-between text-[11px] text-muted-foreground mt-1">
+              <div className="grid grid-cols-3 gap-2.5 sm:gap-3 text-xs">
+                <div className="rounded-2xl bg-background/70 border border-border/50 px-2.5 sm:px-3 py-2">
+                  <p className="text-[10px] sm:text-[11px] text-muted-foreground mb-1">Publications</p>
+                  <p className="text-base sm:text-lg font-bold text-foreground">100+</p>
+                </div>
+                <div className="rounded-2xl bg-background/70 border border-border/50 px-2.5 sm:px-3 py-2">
+                  <p className="text-[10px] sm:text-[11px] text-muted-foreground mb-1">Centres of Excellence</p>
+                  <p className="text-base sm:text-lg font-bold text-foreground">10+</p>
+                </div>
+                <div className="rounded-2xl bg-background/70 border border-border/50 px-2.5 sm:px-3 py-2">
+                  <p className="text-[10px] sm:text-[11px] text-muted-foreground mb-1">Specialized Labs</p>
+                  <p className="text-base sm:text-lg font-bold text-foreground">15+</p>
+                </div>
+              </div>
+
+              <div className="flex items-center justify-between text-[10px] sm:text-[11px] text-muted-foreground mt-1">
                 <span>Guided by industry mentors & faculty researchers.</span>
                 <span className="inline-flex items-center gap-1 text-primary font-medium">
                   Explore labs
@@ -147,7 +147,7 @@ export default function ResearchInnovationSection() {
         <div
           ref={statsRef}
           className={cn(
-            "grid grid-cols-2 lg:grid-cols-4 gap-8 mb-20 border-b border-border/50 pb-12",
+            "grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 mb-10 sm:mb-16 md:mb-20 border-b border-border/50 pb-6 sm:pb-10 md:pb-12",
             reduceMotion
               ? "opacity-100 translate-y-0"
               : statsInView
@@ -168,11 +168,11 @@ export default function ResearchInnovationSection() {
                     }
               }
             >
-              <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm group-hover:shadow-md group-hover:-translate-y-1 group-hover:bg-primary/5 transition-all duration-300">
-                <stat.icon className="h-8 w-8 text-primary" aria-hidden="true" />
+              <div className="bg-white w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-sm group-hover:shadow-md group-hover:-translate-y-1 group-hover:bg-primary/5 transition-all duration-300">
+                <stat.icon className="h-6 w-6 sm:h-8 sm:w-8 text-primary" aria-hidden="true" />
               </div>
-              <div className="text-3xl lg:text-4xl font-extrabold text-foreground mb-1">{stat.value}</div>
-              <div className="text-xs md:text-sm text-muted-foreground font-medium max-w-[220px] mx-auto">
+              <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-foreground mb-1">{stat.value}</div>
+              <div className="text-[11px] sm:text-xs md:text-sm text-muted-foreground font-medium max-w-[220px] mx-auto">
                 {stat.label}
               </div>
             </div>
@@ -189,10 +189,10 @@ export default function ResearchInnovationSection() {
                 : "opacity-0 translate-y-4"
           )}
         >
-          <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+          <h3 className="text-[20px] sm:text-2xl md:text-3xl font-bold text-foreground">
             IAER&apos;s State-of-the-Art Infrastructure Includes
           </h3>
-          <p className="text-sm md:text-base text-muted-foreground mt-2 max-w-2xl mx-auto">
+          <p className="text-[12px] sm:text-sm md:text-base text-muted-foreground mt-2 max-w-2xl mx-auto">
             Immersive labs, simulation studios and digital classrooms designed to turn curiosity into real-world projects.
           </p>
         </div>
@@ -200,7 +200,7 @@ export default function ResearchInnovationSection() {
         <div
           ref={infraRef}
           className={cn(
-            "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
+            "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6",
             reduceMotion
               ? "opacity-100 translate-y-0"
               : infraInView
@@ -211,7 +211,7 @@ export default function ResearchInnovationSection() {
           {infrastructure.map((item, index) => (
             <div
               key={item.title}
-              className="group relative overflow-hidden rounded-xl bg-white shadow-sm border border-border/60 hover:shadow-lg hover:border-primary/40 transition-all h-64"
+              className="group relative overflow-hidden rounded-xl bg-white shadow-sm border border-border/60 hover:shadow-lg hover:border-primary/40 transition-all h-52 sm:h-64"
               style={
                 reduceMotion
                   ? undefined
@@ -232,14 +232,14 @@ export default function ResearchInnovationSection() {
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10" />
 
-              <div className="absolute bottom-0 left-0 w-full p-5 md:p-6 text-white transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+              <div className="absolute bottom-0 left-0 w-full p-4 sm:p-5 md:p-6 text-white transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                 <div className="flex items-center gap-3 mb-2">
                   <div className="p-2 bg-primary/25 backdrop-blur-md rounded-lg border border-white/20">
                     <item.icon className="h-5 w-5 text-primary-foreground" aria-hidden="true" />
                   </div>
-                  <h4 className="text-lg md:text-xl font-semibold">{item.title}</h4>
+                  <h4 className="text-base sm:text-lg md:text-xl font-semibold">{item.title}</h4>
                 </div>
-                <p className="text-white/80 text-xs md:text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75">
+                <p className="text-white/80 text-[11px] sm:text-xs md:text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75">
                   {item.desc}
                 </p>
               </div>

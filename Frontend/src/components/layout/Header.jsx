@@ -216,7 +216,7 @@ export default function Header() {
           isOpen ? "translate-x-0" : "-translate-x-full"
         )}
       >
-        <div className="flex items-center justify-between p-4 border-b border-white/10">
+        <div className="flex items-center justify-between p-3 border-b border-white/10">
           <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center">
             <img src="/images/logos/iaer-logo-white.png" alt="IAER Logo" className="h-10 w-auto" />
           </Link>
@@ -229,14 +229,14 @@ export default function Header() {
           </button>
         </div>
 
-        <div className="flex-1 overflow-y-auto p-4 space-y-6">
+        <div className="flex-1 overflow-y-auto p-3 space-y-4">
           {navigationData.map((item) => (
-            <div key={item.title} className="border-b border-white/10 pb-4 last:border-0">
-              <div className="flex items-center gap-3 mb-3">
+            <div key={item.title} className="border-b border-white/10 pb-3 last:border-0">
+              <div className="flex items-center gap-2 mb-2">
                 {item.icon && <Icon name={item.icon} className="w-5 h-5 text-accent" />}
                 <Link
                   href={item.href}
-                  className="font-bold text-lg text-white"
+                  className="font-bold text-base text-white"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.title}
@@ -244,12 +244,12 @@ export default function Header() {
               </div>
 
               {item.items && (
-                <div className="pl-4 space-y-4">
+                <div className="pl-3 space-y-3">
                   {item.items.map((subItem) => (
                     <div key={subItem.title}>
                       <Link
                         href={subItem.href}
-                        className="flex items-center gap-2 font-medium text-gray-300 py-1"
+                        className="flex items-center gap-2 font-medium text-sm text-gray-300 py-1"
                         onClick={() => !subItem.subItems && setIsOpen(false)}
                       >
                         {subItem.icon && <Icon name={subItem.icon} className="w-4 h-4 text-gray-500" />}
@@ -261,7 +261,7 @@ export default function Header() {
                             <Link
                               key={deepItem.title}
                               href={deepItem.href}
-                              className="flex items-center gap-2 text-sm text-gray-500 py-1"
+                              className="flex items-center gap-2 text-xs text-gray-500 py-1"
                               onClick={() => setIsOpen(false)}
                             >
                               {deepItem.icon && <Icon name={deepItem.icon} className="w-3 h-3 text-gray-600" />}
@@ -278,12 +278,12 @@ export default function Header() {
           ))}
         </div>
 
-        <div className="p-4 border-t border-white/10">
+        <div className="p-3 border-t border-white/10">
           <Link
             href="https://admission.iaer.ac.in/"
             target="_blank"
             onClick={() => setIsOpen(false)}
-            className="flex items-center justify-center w-full px-6 py-3 text-sm font-bold text-white uppercase tracking-wider transition-all duration-200 bg-accent hover:bg-accent/90 rounded-lg shadow-lg"
+            className="flex items-center justify-center w-full px-5 py-2.5 text-xs font-bold text-white uppercase tracking-wider transition-all duration-200 bg-accent hover:bg-accent/90 rounded-lg shadow-lg"
           >
             Apply Now
           </Link>

@@ -199,33 +199,33 @@ export default function BottomNav() {
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 safe-area-bottom">
       <div className="bg-white/95 border-t border-gray-200 backdrop-blur-lg">
-        <div className="max-w-6xl mx-auto px-3 py-2 flex items-center gap-2">
-          <div className="flex items-center text-xs text-gray-600 mr-auto">
-            <span className="font-semibold text-[#100902] mr-1">
+        <div className="max-w-6xl mx-auto px-3 py-1.5 flex items-center gap-2 overflow-hidden">
+          <div className="flex items-center text-[10px] sm:text-xs text-gray-600 min-w-0 flex-1">
+            <span className="font-semibold text-[#100902] mr-1 truncate">
               Admissions Open 2026
             </span>
-            <span className="hidden sm:inline">
+            <span className="hidden sm:inline truncate">
               Apply now or inquire about IAER programs.
             </span>
           </div>
           <EnquiryPopupButton
-            className="inline-flex items-center justify-center px-3 py-1.5 rounded-full text-xs font-semibold bg-white text-[#100902] border border-gray-300 hover:border-accent hover:text-accent transition-colors"
+            className="inline-flex items-center justify-center px-2.5 py-1 rounded-full text-[10px] sm:text-xs font-semibold bg-white text-[#100902] border border-gray-300 hover:border-accent hover:text-accent transition-colors whitespace-nowrap shrink-0"
           >
-            <MessageCircle className="w-4 h-4 mr-1.5" />
+            <MessageCircle className="w-3.5 h-3.5 mr-1" />
             Inquire Now
           </EnquiryPopupButton>
           <Link
             href="https://admission.iaer.ac.in/"
             target="_blank"
-            className="inline-flex items-center justify-center px-3 py-1.5 rounded-full text-xs font-semibold bg-accent  hover:bg-accent/90 transition-colors"
+            className="inline-flex items-center justify-center px-2.5 py-1 rounded-full text-[10px] sm:text-xs font-semibold bg-accent hover:bg-accent/90 transition-colors whitespace-nowrap shrink-0"
           >
-            <FileText className="w-4 h-4 mr-1.5" />
+            <FileText className="w-3.5 h-3.5 mr-1" />
             Apply Now
           </Link>
         </div>
       </div>
       <div className="bg-accent/95 backdrop-blur-lg border-t border-gray-200">
-        <div className="flex items-center lg:justify-center gap-4 overflow-x-auto px-4 h-16 no-scrollbar">
+        <div className="flex items-center lg:justify-center gap-2.5 md:gap-4 overflow-x-auto px-3 md:px-4 h-14 md:h-16 no-scrollbar">
           {sections.map((item) => {
             const isActive = activeSection === item.id;
             return (
@@ -234,16 +234,16 @@ export default function BottomNav() {
                 type="button"
                 onClick={() => handleClick(item.id)}
                 className={cn(
-                  "flex flex-col items-center justify-center min-w-[64px] h-full gap-1 transition-colors  duration-200 text-xs shrink-0",
+                  "flex flex-col items-center justify-center min-w-[56px] md:min-w-[64px] h-full gap-1 transition-colors duration-200 text-xs shrink-0",
                   isActive ? "text-white" : "text-gray-100/90 hover:text-white"
                 )}
               >
                 {item.icon && (
                   <item.icon
-                    className={cn("w-5 h-5 text-gray-700", isActive && "fill-current")}
+                    className={cn("w-4 h-4 md:w-5 md:h-5 text-gray-700", isActive && "fill-current")}
                   />
                 )}
-                <span className="text-[10px] text-gray-700 font-medium truncate max-w-[80px]">
+                <span className="text-[9px] md:text-[10px] text-gray-700 font-medium truncate max-w-[68px] md:max-w-[80px]">
                   {item.label}
                 </span>
               </button>

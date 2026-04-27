@@ -57,26 +57,26 @@ const navItems = [
 
 export default function QuickNavStrip() {
   return (
-    <section className="relative z-30 -mt-8 mb-0 container mx-auto  px-4">
-      <div className="bg-[#0a0601]/80 backdrop-blur-xl border border-t-2  border-white rounded-2xl shadow-2xl p-4 md:p-6">
-        <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
+    <section className="relative z-30 -mt-6 sm:-mt-8 mb-0 container mx-auto px-4">
+      <div className="bg-[#0a0601]/80 backdrop-blur-xl border border-t-2 border-white rounded-2xl shadow-2xl p-3 sm:p-4 md:p-6 overflow-hidden">
+        <div className="grid grid-cols-3 md:grid-cols-6 gap-2.5 sm:gap-4">
           {navItems.map((item) => (
             <Link
               key={item.title}
               href={item.href}
               className={cn(
-                "group flex flex-col items-center justify-center gap-3 p-4 rounded-xl transition-all duration-300 hover:bg-white/5 border border-transparent",
+                "group flex flex-col items-center justify-center gap-2 sm:gap-3 p-2.5 sm:p-4 rounded-xl transition-all duration-300 hover:bg-white/5 border border-transparent",
                 "hover:border-white/10"
               )}
             >
               <div className={cn(
-                "p-3 rounded-full transition-transform duration-300 group-hover:scale-110",
+                "p-2 sm:p-3 rounded-full transition-transform duration-300 group-hover:scale-110",
                 item.bg,
                 item.color
               )}>
-                <item.icon className="w-6 h-6" />
+                <item.icon className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
-              <span className="text-[12px] font-bold text-gray-300 group-hover:text-white text-center ">
+              <span className="text-[10px] sm:text-[12px] font-bold text-gray-300 group-hover:text-white text-center leading-tight">
                 {item.title}
               </span>
             </Link>

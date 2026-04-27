@@ -79,7 +79,7 @@ export default function GlobalExperience() {
   }, []);
 
   return (
-    <section className="py-20 bg-gradient-to-br from-muted/40 via-background to-background relative overflow-hidden">
+    <section className="py-10 sm:py-14 md:py-20 bg-gradient-to-br from-muted/40 via-background to-background relative overflow-hidden">
       <div className="pointer-events-none absolute -top-24 -right-16 w-72 h-72 rounded-full bg-primary/10 blur-3xl" />
       <div className="pointer-events-none absolute bottom-[-80px] left-[-40px] w-80 h-80 bg-dot-grid opacity-20" />
       <div className="pointer-events-none absolute -top-6 right-[10%] w-24 h-24 opacity-70 hidden md:block">
@@ -89,7 +89,7 @@ export default function GlobalExperience() {
       <div
         ref={headerRef}
         className={cn(
-          "container mx-auto px-4 mb-12 text-center",
+          "container mx-auto px-4 mb-6 sm:mb-10 md:mb-12 text-center",
           reduceMotion
             ? "opacity-100 translate-y-0"
             : headerInView
@@ -97,15 +97,15 @@ export default function GlobalExperience() {
               : "opacity-0 translate-y-4"
         )}
       >
-        <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 text-primary px-3 py-1 text-xs font-semibold mb-3">
-          <Sparkles className="h-3.5 w-3.5" />
+        <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 text-primary px-2.5 py-0.5 sm:px-3 sm:py-1 text-[10px] sm:text-xs font-semibold mb-3">
+          <Sparkles className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
           <span>Global Exposure, Culture & Opportunities</span>
         </div>
-        <h2 className="text-3xl lg:text-5xl font-bold uppercase tracking-tight mb-4">
+        <h2 className="text-[24px] sm:text-3xl lg:text-5xl font-bold uppercase tracking-tight mb-3 sm:mb-4">
           Immerse Yourself in a <br />
           <span className="text-primary">Global Educational Experience</span>
         </h2>
-        <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+        <p className="text-muted-foreground text-[12px] sm:text-base md:text-lg max-w-2xl mx-auto">
           Join a vibrant community of learners and innovators from around the world.
         </p>
       </div>
@@ -121,7 +121,7 @@ export default function GlobalExperience() {
               : "opacity-0 translate-y-4"
         )}
       >
-        <div className="flex flex-col lg:flex-row h-[600px] gap-2 lg:gap-4 overflow-hidden rounded-2xl">
+        <div className="flex flex-col lg:flex-row h-[440px] sm:h-[520px] lg:h-[600px] gap-2 lg:gap-4 overflow-hidden rounded-2xl">
           {experienceItems.map((item) => (
             <div
               key={item.id}
@@ -146,20 +146,20 @@ export default function GlobalExperience() {
 
               <div
                 className={cn(
-                  "absolute inset-0 p-6 md:p-8 flex flex-col justify-end transition-opacity duration-500",
+                  "absolute inset-0 p-4 sm:p-6 md:p-8 flex flex-col justify-end transition-opacity duration-500",
                   activeId === item.id ? "opacity-100 delay-200" : "opacity-0"
                 )}
               >
-                <div className="bg-primary/10 w-fit p-3 rounded-lg mb-4 backdrop-blur-sm border border-white/10">
-                  <item.icon className="h-7 w-7 text-white" aria-hidden="true" />
+                <div className="bg-primary/10 w-fit p-2 sm:p-3 rounded-lg mb-3 sm:mb-4 backdrop-blur-sm border border-white/10">
+                  <item.icon className="h-5 w-5 sm:h-7 sm:w-7 text-white" aria-hidden="true" />
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{item.title}</h3>
-                <p className="text-white/90 text-sm md:text-lg mb-6 max-w-xl">
+                <h3 className="text-lg sm:text-2xl md:text-3xl font-bold text-white mb-3 sm:mb-4">{item.title}</h3>
+                <p className="text-white/90 text-[12px] sm:text-sm md:text-lg mb-4 sm:mb-6 max-w-xl">
                   {item.description}
                 </p>
                 <Button
                   variant="default"
-                  className="w-fit bg-accent hover:bg-accent/90 text-accent-foreground shadow-sm hover:shadow-lg transition-all duration-300"
+                  className="w-fit bg-accent hover:bg-accent/90 text-accent-foreground shadow-sm hover:shadow-lg transition-all duration-300 h-10 px-4 text-sm sm:h-11 sm:px-6 sm:text-base"
                 >
                   VIEW MORE <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -172,7 +172,7 @@ export default function GlobalExperience() {
                 )}
               >
                 <div className="lg:-rotate-90 whitespace-nowrap">
-                  <h3 className="text-base md:text-xl font-bold text-gray-300  tracking-wider uppercase">
+                  <h3 className="text-[12px] sm:text-base md:text-xl font-bold text-gray-300 tracking-wider uppercase">
                     {item.title}
                   </h3>
                 </div>

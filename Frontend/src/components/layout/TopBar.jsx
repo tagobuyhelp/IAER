@@ -16,7 +16,7 @@ const Pinterest = ({ className }) => (
 
 export default function TopBar() {
   return (
-    <div className="bg-[#0a0601] text-gray-400 py-2 border-b border-white/5 text-xs font-medium relative z-[51]">
+    <div className="hidden md:block bg-[#0a0601] text-gray-400 py-2 border-b border-white/5 text-xs font-medium relative z-[51]">
       <div className="container mx-auto px-4 flex justify-between items-center h-8 md:h-auto">
         {/* Contact Info */}
         <div className="flex items-center gap-4 md:gap-6">

@@ -6,10 +6,10 @@ import RevealOnScroll from "@/components/RevealOnScroll";
 import { useState, useEffect } from "react";
 
 const heroImages = [
-    "/images/about/Community_interaction_in_a_neighbourhood_centre.png",
-    "/images/about/Students_approaching_modern_campus_entrance.png",
-    "/images/admissions/Students_collaborating_in_bright_campus_space.png",
-    "/images/campus/iaer2.jpg"
+    "/images/campus-life/campus-life-hero-1.webp",
+    "/images/campus-life/campus-life-hero-2.webp",
+    "/images/campus-life/campus-life-hero-3.webp",
+    "/images/campus-life/campus-life-hero-4.webp"
 ];
 
 export default function HeroSection() {
@@ -23,7 +23,7 @@ export default function HeroSection() {
     }, []);
 
     return (
-        <section className="relative h-[60vh] lg:h-[70vh] flex items-center justify-center overflow-hidden">
+        <section className="relative h-[50vh] sm:h-[60vh] lg:h-[70vh] flex items-center justify-center overflow-hidden">
             {/* Background Image Slider */}
             {heroImages.map((src, index) => (
                 <div
@@ -47,36 +47,36 @@ export default function HeroSection() {
             <div className="container mx-auto px-4 relative z-10">
                 <div className="max-w-3xl">
                     <RevealOnScroll>
-                        <span className="inline-block px-4 py-1.5 rounded-full bg-accent/20 text-accent font-semibold text-sm mb-6 border border-accent/30 backdrop-blur-sm">
+                        <span className="inline-block px-3 py-1 rounded-full bg-accent/20 text-accent font-semibold text-xs sm:text-sm mb-4 sm:mb-6 border border-accent/30 backdrop-blur-sm">
                             Experience the Vibration
                         </span>
                     </RevealOnScroll>
 
                     <RevealOnScroll delay={200}>
-                        <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                        <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
                             Campus Life at <span className="text-accent">IAER</span>
                         </h1>
                     </RevealOnScroll>
 
                     <RevealOnScroll delay={400}>
-                        <p className="text-lg lg:text-xl text-gray-200 mb-8 leading-relaxed max-w-2xl">
+                        <p className="text-base sm:text-lg lg:text-xl text-gray-200 mb-6 sm:mb-8 leading-relaxed max-w-2xl">
                             A vibrant campus where learning meets life. Discover a dynamic blend of academic engagement, cultural expression, and lifelong friendships.
                         </p>
                     </RevealOnScroll>
 
                     <RevealOnScroll delay={600}>
-                        <div className="flex flex-wrap gap-4 text-white/80">
-                            <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg backdrop-blur-sm border border-white/10">
-                                <Users className="w-5 h-5 text-accent" />
-                                <span className="text-sm font-medium">Student Community</span>
+                        <div className="flex flex-wrap gap-2 sm:gap-4 text-white/80">
+                            <div className="flex items-center gap-2 bg-white/10 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg backdrop-blur-sm border border-white/10">
+                                <Users className="w-4 h-4 sm:w-5 sm:h-5 text-accent" />
+                                <span className="text-xs sm:text-sm font-medium">Student Community</span>
                             </div>
-                            <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg backdrop-blur-sm border border-white/10">
-                                <Music className="w-5 h-5 text-accent" />
-                                <span className="text-sm font-medium">Cultural Events</span>
+                            <div className="flex items-center gap-2 bg-white/10 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg backdrop-blur-sm border border-white/10">
+                                <Music className="w-4 h-4 sm:w-5 sm:h-5 text-accent" />
+                                <span className="text-xs sm:text-sm font-medium">Cultural Events</span>
                             </div>
-                            <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg backdrop-blur-sm border border-white/10">
-                                <Trophy className="w-5 h-5 text-accent" />
-                                <span className="text-sm font-medium">Sports & Fitness</span>
+                            <div className="flex items-center gap-2 bg-white/10 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg backdrop-blur-sm border border-white/10">
+                                <Trophy className="w-4 h-4 sm:w-5 sm:h-5 text-accent" />
+                                <span className="text-xs sm:text-sm font-medium">Sports & Fitness</span>
                             </div>
                         </div>
                     </RevealOnScroll>

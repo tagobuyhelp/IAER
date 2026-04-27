@@ -7,25 +7,31 @@ import { cn } from "@/lib/utils";
 import RevealOnScroll from "@/components/RevealOnScroll";
 
 const galleryImages = [
-    { type: "image", src: "/images/campus-life/iaer-campus-life-orientation-program.webp", alt: "Orientation Program" },
+    { type: "image", src: "/images/campus-life/campus-life-hero-1.webp", alt: "Campus Life" },
+    { type: "image", src: "/images/campus-life/campus-life-hero-2.webp", alt: "Campus Life" },
+    { type: "image", src: "/images/campus-life/campus-life-orientation-program-1.webp", alt: "Orientation Program" },
+    { type: "image", src: "/images/campus-life/campus-life-orientation-program-2.webp", alt: "Orientation Program" },
     { type: "image", src: "/images/campus-life/iaer-campus-life-holi-celebration.webp", alt: "Holi Celebration" },
-    { type: "image", src: "/images/campus-life/iaer-campus-life-christmas-celebration.webp", alt: "Christmas Celebration" },
-    { type: "image", src: "/images/about/Academic_leader_engaging_with_students.png", alt: "Academic Engagement" },
-    { type: "image", src: "/images/about/Students_approaching_modern_campus_entrance.png", alt: "Campus Entrance" },
-    { type: "image", src: "/images/academic/Classroom_discussion_with_engaged_students.png", alt: "Classroom Discussion" },
-    { type: "image", src: "/images/admissions/Students_collaborating_in_bright_campus_space.png", alt: "Student Collaboration" },
-    { type: "image", src: "/images/research-and-innovation/Collaborative_discussion_in_a_research_lab.png", alt: "Research Lab" },
-    { type: "image", src: "/images/research-and-innovation/Student_founders_presenting_to_mentors.png", alt: "Student Presentation" },
-    { type: "image", src: "/images/about/Hands-on_electronics_training_in_India.png", alt: "Technical Training" },
-    { type: "image", src: "/images/academic/Professor_and_student_discussing_results.png", alt: "Faculty Mentorship" },
-    { type: "image", src: "/images/admissions/College_admissions_reception_in_India.png", alt: "Warm Welcome" },
-    { type: "image", src: "/images/research-and-innovation/Students_working_on_robotic_prototype.png", alt: "Innovation & Robotics" },
-    { type: "image", src: "/images/students/riya.avif", alt: "Student Life" },
-    { type: "image", src: "/images/campus/iaer-building.jpg", alt: "IAER Campus" },
-    { type: "image", src: "/images/hero_images/slider-6.jpg", alt: "Vibrant Atmosphere" },
-    { type: "image", src: "/images/students/arjun.jpg", alt: "Student Success" },
-    { type: "image", src: "/images/about/Regulatory_compliance_review_meeting.png", alt: "Institutional Excellence" },
-    { type: "image", src: "/images/academic/Organised_workspace_with_planning_essentials.png", alt: "Focused Learning" },
+    { type: "image", src: "/images/campus-life/campus-life-christmas-event-1.webp", alt: "Christmas Celebration" },
+    { type: "image", src: "/images/campus-life/campus-life-christmas-event-2.webp", alt: "Christmas Celebration" },
+    { type: "image", src: "/images/campus-life/campus-life-academic-engagement-1.webp", alt: "Academic Engagement" },
+    { type: "image", src: "/images/campus-life/campus-life-academic-engagement-2.webp", alt: "Academic Engagement" },
+    { type: "image", src: "/images/campus-life/campus-life-campus-entrance-1.webp", alt: "Campus Entrance" },
+    { type: "image", src: "/images/campus-life/campus-life-campus-entrance-2.webp", alt: "Campus Entrance" },
+    { type: "image", src: "/images/campus-life/campus-life-classroom-discussion-1.webp", alt: "Classroom Discussion" },
+    { type: "image", src: "/images/campus-life/campus-life-classroom-discussion-2.webp", alt: "Classroom Discussion" },
+    { type: "image", src: "/images/campus-life/campus-life-student-collaboration-1.webp", alt: "Student Collaboration" },
+    { type: "image", src: "/images/campus-life/campus-life-student-collaboration-2.webp", alt: "Student Collaboration" },
+    { type: "image", src: "/images/campus-life/campus-life-research-lab-1.webp", alt: "Research Lab" },
+    { type: "image", src: "/images/campus-life/campus-life-research-lab-2.webp", alt: "Research Lab" },
+    { type: "image", src: "/images/campus-life/campus-life-technical-training-1.webp", alt: "Hands-on Training" },
+    { type: "image", src: "/images/campus-life/campus-life-technical-training-2.webp", alt: "Hands-on Training" },
+    { type: "image", src: "/images/campus-life/campus-life-faculty-mentorship-1.webp", alt: "Faculty Mentorship" },
+    { type: "image", src: "/images/campus-life/campus-life-faculty-mentorship-2.webp", alt: "Faculty Mentorship" },
+    { type: "image", src: "/images/campus-life/campus-life-student-life-1.webp", alt: "Student Life" },
+    { type: "image", src: "/images/campus-life/campus-life-student-life-2.webp", alt: "Student Life" },
+    { type: "image", src: "/images/campus-life/campus-life-iaer-campus-1.webp", alt: "IAER Campus" },
+    { type: "image", src: "/images/campus-life/campus-life-iaer-campus-2.webp", alt: "IAER Campus" },
 ];
 
 function toYouTubeId(url) {
@@ -119,12 +125,12 @@ export default function GallerySection() {
     }, [activeTab]);
 
     return (
-        <section className="py-20 bg-gray-50">
+        <section className="py-12 md:py-20 bg-gray-50">
             <div className="container mx-auto px-4">
-                <div className="text-center mb-12">
+                <div className="text-center mb-8 md:mb-12">
                     <RevealOnScroll>
-                        <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">Life at IAER Gallery</h2>
-                        <p className="text-gray-600 max-w-2xl mx-auto mb-8">
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-3 md:mb-4">Life at IAER Gallery</h2>
+                        <p className="text-gray-600 max-w-2xl mx-auto mb-6 md:mb-8 text-sm sm:text-base">
                             A visual journey through life at IAER—capturing academic moments, cultural celebrations, student activities, and campus events.
                         </p>
                     </RevealOnScroll>
@@ -134,7 +140,7 @@ export default function GallerySection() {
                             <button
                                 onClick={() => setActiveTab("image")}
                                 className={cn(
-                                    "px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 flex items-center gap-2",
+                                    "px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 flex items-center gap-2",
                                     activeTab === "image"
                                         ? "bg-accent text-white shadow-md"
                                         : "text-gray-600 hover:text-accent"
@@ -145,7 +151,7 @@ export default function GallerySection() {
                             <button
                                 onClick={() => setActiveTab("video")}
                                 className={cn(
-                                    "px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 flex items-center gap-2",
+                                    "px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 flex items-center gap-2",
                                     activeTab === "video"
                                         ? "bg-accent text-white shadow-md"
                                         : "text-gray-600 hover:text-accent"
@@ -157,11 +163,11 @@ export default function GallerySection() {
                     </RevealOnScroll>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                     {activeTab === "image" ? (
                         galleryImages.map((item, index) => (
                             <RevealOnScroll key={index} delay={index * 100}>
-                                <div className="group relative h-64 rounded-2xl overflow-hidden shadow-md cursor-pointer">
+                                <div className="group relative h-44 sm:h-56 md:h-64 rounded-2xl overflow-hidden shadow-md cursor-pointer">
                                     <Image
                                         src={item.src}
                                         alt={item.alt}
@@ -169,7 +175,7 @@ export default function GallerySection() {
                                         className="object-cover transition-transform duration-500 group-hover:scale-110"
                                     />
                                     <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                        <p className="text-white font-semibold text-lg">{item.alt}</p>
+                                        <p className="text-white font-semibold text-base md:text-lg">{item.alt}</p>
                                     </div>
                                 </div>
                             </RevealOnScroll>
@@ -209,9 +215,9 @@ export default function GallerySection() {
                                                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                                                     <div className="absolute inset-0 bg-gradient-to-br from-accent/25 via-transparent to-primary/25" />
 
-                                                    <div className="absolute inset-x-0 bottom-0 p-4 text-left">
+                                                    <div className="absolute inset-x-0 bottom-0 p-3 md:p-4 text-left">
                                                         {title ? (
-                                                            <div className="text-white font-semibold leading-snug line-clamp-2">
+                                                            <div className="text-white font-semibold leading-snug line-clamp-2 text-sm md:text-base">
                                                                 {title}
                                                             </div>
                                                         ) : (
@@ -220,9 +226,9 @@ export default function GallerySection() {
                                                     </div>
 
                                                     <div className="absolute inset-0 flex items-center justify-center">
-                                                        <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center shadow-[0_10px_30px_-10px_rgba(0,0,0,0.6)] group-hover:scale-105 transition-transform">
-                                                            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent to-orange-400 flex items-center justify-center shadow-lg">
-                                                                <Play className="w-6 h-6 text-white translate-x-[1px]" />
+                                                        <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center shadow-[0_10px_30px_-10px_rgba(0,0,0,0.6)] group-hover:scale-105 transition-transform">
+                                                            <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-accent to-orange-400 flex items-center justify-center shadow-lg">
+                                                                <Play className="w-4 h-4 sm:w-6 sm:h-6 text-white translate-x-[1px]" />
                                                             </div>
                                                         </div>
                                                     </div>
