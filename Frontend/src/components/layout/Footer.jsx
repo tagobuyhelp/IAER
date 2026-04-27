@@ -37,7 +37,7 @@ export default function Footer() {
               Empowering the future through industry-driven education, global research, and innovation. Join us to shape your career with world-class opportunities.
             </p>
             <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-2 sm:pt-4">
-              <SocialLink href="https://www.facebook.com/iaerindia/" icon={Facebook} color="#1877F2" />
+              <SocialLink href="https://www.facebook.com/iaerindia/" icon={Facebook} color="#1877F2"  />
               <SocialLink href="https://www.pinterest.com/iaerindia/" icon={Pinterest} color="#E60023" />
               <SocialLink href="https://www.instagram.com/iaerindia/" icon={Instagram} color="#E4405F" />
               <SocialLink href="https://www.linkedin.com/school/iaer/" icon={Linkedin} color="#0A66C2" />
@@ -129,10 +129,15 @@ function SocialLink({ href, icon: Icon, color, label }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="p-1.5 sm:p-2 bg-white/5 rounded-full hover:bg-white/10 transition-all duration-300 group"
+      className="p-1.5 sm:p-2 bg-white hover:bg-[var(--social-bg-hover)] rounded-full transition-all duration-300 group"
+      style={
+        color
+          ? { "--social-bg": `${color}1A`, "--social-bg-hover": `${color}33` }
+          : undefined
+      }
       aria-label={label}
     >
-      <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 group-hover:text-white transition-colors" />
+      <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-gray-800 group-hover:text-white transition-colors" />
     </a>
   );
 }

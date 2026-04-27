@@ -23,7 +23,7 @@ export default function InnovationResearchSection() {
   const [activeTab, setActiveTab] = useState("focus");
 
   return (
-    <div id="innovation-research" className="flex flex-col gap-12 py-16 bg-white relative overflow-hidden">
+    <div id="innovation-research" className="flex flex-col gap-8 sm:gap-12 py-10 sm:py-14 md:py-16 bg-white relative overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <Image
@@ -36,13 +36,13 @@ export default function InnovationResearchSection() {
       {/* HEADER SECTION */}
       <section className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <span className="text-accent font-semibold tracking-wide uppercase text-sm mb-2 block">
+          <span className="text-accent font-semibold tracking-wide uppercase text-[11px] sm:text-sm mb-2 block">
             Cutting-Edge
           </span>
-          <h2 className="text-3xl lg:text-4xl font-bold text-[#100902] mb-6">
+          <h2 className="text-[22px] sm:text-3xl lg:text-4xl font-bold text-[#100902] mb-4 sm:mb-6">
             Innovation & Research
           </h2>
-          <p className="text-lg text-gray-600 leading-relaxed font-light mb-8">
+          <p className="text-[12px] sm:text-sm md:text-base lg:text-lg text-gray-600 leading-relaxed font-light mb-6 sm:mb-8">
             Driving technological advancements and addressing global challenges through interdisciplinary research and state-of-the-art innovation labs.
           </p>
 
@@ -57,7 +57,7 @@ export default function InnovationResearchSection() {
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={cn(
-                  "flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 border",
+                  "flex items-center gap-2 px-4 sm:px-6 h-10 sm:h-11 rounded-full text-[12px] sm:text-sm font-semibold transition-all duration-300 border",
                   activeTab === tab.id
                     ? "bg-[#100902] text-white border-[#100902] shadow-lg scale-105"
                     : "bg-gray-50 text-gray-600 border-gray-200 hover:bg-white hover:border-gray-300"
@@ -73,12 +73,12 @@ export default function InnovationResearchSection() {
 
       {/* CONTENT SECTION */}
       <section className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto min-h-[400px]">
+        <div className="max-w-6xl mx-auto min-h-[320px] sm:min-h-[380px]">
 
           {/* RESEARCH FOCUS TAB */}
           {activeTab === "focus" && (
             <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                 {[
                   {
                     icon: Bot,
@@ -130,7 +130,7 @@ export default function InnovationResearchSection() {
                   },
                 ].map((item, idx) => (
                   <div key={idx} className="group rounded-2xl border border-gray-100 hover:border-gray-200 hover:shadow-lg transition-all duration-300 bg-white overflow-hidden">
-                    <div className="relative h-56 md:h-60">
+                    <div className="relative h-44 sm:h-52 md:h-60">
                       <Image
                         src={item.image}
                         alt={item.title}
@@ -139,15 +139,15 @@ export default function InnovationResearchSection() {
                         sizes="(max-width: 1024px) 100vw, 33vw"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-transparent" />
-                      <div className="absolute left-4 bottom-4">
-                        <div className={cn("w-12 h-12 rounded-xl flex items-center justify-center border border-white/20 bg-white/10 backdrop-blur-md shadow-sm", item.bg)}>
-                          <item.icon className={cn("w-6 h-6", item.color)} />
+                      <div className="absolute left-3 bottom-3 sm:left-4 sm:bottom-4">
+                        <div className={cn("w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center border border-white/20 bg-white/10 backdrop-blur-md shadow-sm", item.bg)}>
+                          <item.icon className={cn("w-5 h-5 sm:w-6 sm:h-6", item.color)} />
                         </div>
                       </div>
                     </div>
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
-                      <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+                    <div className="p-4 sm:p-6">
+                      <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
+                      <p className="text-gray-600 text-[12px] sm:text-sm leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -158,7 +158,7 @@ export default function InnovationResearchSection() {
           {/* INNOVATION LABS TAB */}
           {activeTab === "labs" && (
             <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8">
                 {[
                   {
                     icon: Wifi,
@@ -190,7 +190,7 @@ export default function InnovationResearchSection() {
                   }
                 ].map((lab, idx) => (
                   <div key={idx} className="rounded-2xl bg-gray-50 border border-gray-100 hover:bg-white hover:shadow-md transition-all overflow-hidden">
-                    <div className="relative h-60 md:h-80">
+                    <div className="relative h-48 sm:h-60 md:h-80">
                       <Image
                         src={lab.image}
                         alt={lab.title}
@@ -199,18 +199,18 @@ export default function InnovationResearchSection() {
                         sizes="(max-width: 1024px) 100vw, 50vw"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-transparent" />
-                      <div className="absolute left-4 bottom-4">
-                        <div className="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white shadow-sm">
-                          <lab.icon className="w-6 h-6" />
+                      <div className="absolute left-3 bottom-3 sm:left-4 sm:bottom-4">
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white shadow-sm">
+                          <lab.icon className="w-5 h-5 sm:w-6 sm:h-6" />
                         </div>
                       </div>
                     </div>
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">{lab.title}</h3>
-                      <p className="text-gray-600 text-sm mb-4 leading-relaxed">{lab.desc}</p>
+                    <div className="p-4 sm:p-6">
+                      <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-2">{lab.title}</h3>
+                      <p className="text-gray-600 text-[12px] sm:text-sm mb-3 sm:mb-4 leading-relaxed">{lab.desc}</p>
                       <div className="flex flex-wrap gap-2">
                         {lab.tags.map((tag, tIdx) => (
-                          <span key={tIdx} className="px-3 py-1 bg-white border border-gray-200 rounded-full text-xs font-medium text-gray-600">
+                          <span key={tIdx} className="px-3 py-1 bg-white border border-gray-200 rounded-full text-[11px] sm:text-xs font-medium text-gray-600">
                             {tag}
                           </span>
                         ))}
@@ -225,7 +225,7 @@ export default function InnovationResearchSection() {
           {/* ACHIEVEMENTS TAB */}
           {activeTab === "achievements" && (
             <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
                 {[
                   {
                     value: "8+",
@@ -250,7 +250,7 @@ export default function InnovationResearchSection() {
                   }
                 ].map((stat, idx) => (
                   <div key={idx} className="rounded-2xl bg-gradient-to-br from-white to-gray-50 border border-gray-100 hover:shadow-lg transition-all overflow-hidden">
-                    <div className="relative h-56 md:h-60">
+                    <div className="relative h-44 sm:h-52 md:h-60">
                       <Image
                         src={stat.image}
                         alt={stat.label}
@@ -259,16 +259,16 @@ export default function InnovationResearchSection() {
                         sizes="(max-width: 1024px) 100vw, 33vw"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                      <div className="absolute left-4 bottom-4">
-                        <div className="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white shadow-sm">
-                          <stat.icon className="w-6 h-6" />
+                      <div className="absolute left-3 bottom-3 sm:left-4 sm:bottom-4">
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white shadow-sm">
+                          <stat.icon className="w-5 h-5 sm:w-6 sm:h-6" />
                         </div>
                       </div>
                     </div>
-                    <div className="text-center p-6">
-                      <div className="text-4xl font-bold text-gray-900 mb-2">{stat.value}</div>
-                      <div className="text-lg font-semibold text-gray-800 mb-3">{stat.label}</div>
-                      <p className="text-sm text-gray-500">{stat.desc}</p>
+                    <div className="text-center p-4 sm:p-6">
+                      <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-2">{stat.value}</div>
+                      <div className="text-sm sm:text-base md:text-lg font-semibold text-gray-800 mb-2 sm:mb-3">{stat.label}</div>
+                      <p className="text-[12px] sm:text-sm text-gray-500">{stat.desc}</p>
                     </div>
                   </div>
                 ))}

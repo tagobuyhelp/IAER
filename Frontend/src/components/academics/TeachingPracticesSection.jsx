@@ -23,17 +23,17 @@ export default function TeachingPracticesSection() {
   const [activeTab, setActiveTab] = useState("pedagogy");
 
   return (
-    <div id="academics-teaching-practices" className="flex flex-col gap-12 py-16 bg-white">
+    <div id="academics-teaching-practices" className="flex flex-col gap-8 sm:gap-10 lg:gap-12 py-10 sm:py-14 lg:py-16 bg-white">
       {/* HEADER SECTION */}
       <section className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <span className="text-accent font-semibold tracking-wide uppercase text-sm mb-2 block">
+          <span className="text-accent font-semibold tracking-wide uppercase text-[11px] sm:text-sm mb-2 block">
             Teaching Methodology
           </span>
-          <h2 className="text-3xl lg:text-4xl font-bold text-[#100902] mb-6">
+          <h2 className="text-[22px] sm:text-3xl lg:text-4xl font-bold text-[#100902] mb-4 sm:mb-6">
             Real-World Aligned Education
           </h2>
-          <p className="text-lg text-gray-600 leading-relaxed font-light mb-8">
+          <p className="text-[12px] sm:text-sm md:text-base lg:text-lg text-gray-600 leading-relaxed font-light mb-6 sm:mb-8">
             We focus on conceptual clarity, ethical reasoning, and professional behavior. Our goal is to bridge the gap between classroom theory and industry reality.
           </p>
           
@@ -48,7 +48,7 @@ export default function TeachingPracticesSection() {
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={cn(
-                  "flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 border",
+                  "flex items-center gap-2 px-4 sm:px-6 h-10 sm:h-11 rounded-full text-[12px] sm:text-sm font-semibold transition-all duration-300 border",
                   activeTab === tab.id
                     ? "bg-[#100902] text-white border-[#100902] shadow-lg scale-105"
                     : "bg-gray-50 text-gray-600 border-gray-200 hover:bg-white hover:border-gray-300"
@@ -64,12 +64,12 @@ export default function TeachingPracticesSection() {
 
       {/* CONTENT SECTION */}
       <section className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto min-h-[400px]">
+        <div className="max-w-6xl mx-auto min-h-[340px] sm:min-h-[400px]">
           
           {/* PEDAGOGY TAB */}
           {activeTab === "pedagogy" && (
             <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                 {[
                   {
                     icon: Zap,
@@ -116,16 +116,16 @@ export default function TeachingPracticesSection() {
                 ].map((item, index) => (
                   <div
                     key={index}
-                    className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all group flex items-start gap-4"
+                    className="bg-white p-4 sm:p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all group flex items-start gap-3 sm:gap-4"
                   >
-                    <div className={cn("w-12 h-12 rounded-xl flex items-center justify-center shrink-0 transition-colors", item.bg)}>
-                      <item.icon className={cn("w-6 h-6", item.color)} />
+                    <div className={cn("w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center shrink-0 transition-colors", item.bg)}>
+                      <item.icon className={cn("w-5 h-5 sm:w-6 sm:h-6", item.color)} />
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-[#100902] mb-1 group-hover:text-primary transition-colors">
+                      <h3 className="text-[13px] sm:text-base md:text-lg font-bold text-[#100902] mb-1 group-hover:text-primary transition-colors">
                         {item.title}
                       </h3>
-                      <p className="text-sm text-gray-500 leading-relaxed">
+                      <p className="text-[11px] sm:text-sm text-gray-500 leading-relaxed">
                         {item.desc}
                       </p>
                     </div>
@@ -138,28 +138,28 @@ export default function TeachingPracticesSection() {
           {/* EXPERIENTIAL TAB */}
           {activeTab === "experiential" && (
             <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-              <div className="bg-[#100902] rounded-3xl p-8 lg:p-12 text-white overflow-hidden relative shadow-2xl">
+              <div className="bg-[#100902] rounded-3xl p-4 sm:p-6 lg:p-12 text-white overflow-hidden relative shadow-2xl">
                 {/* Background Elements */}
                 <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none" />
                 
-                <div className="flex flex-col lg:flex-row gap-12 relative z-10">
+                <div className="flex flex-col lg:flex-row gap-6 sm:gap-10 lg:gap-12 relative z-10">
                   {/* Left Column: Intro */}
                   <div className="lg:w-1/3">
                     <span className="text-accent font-semibold uppercase text-xs tracking-wider mb-2 block">
                       Hands-On Approach
                     </span>
-                    <h2 className="text-3xl font-bold mb-4">Experiential Learning</h2>
-                    <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                    <h2 className="text-[22px] sm:text-3xl font-bold mb-3 sm:mb-4">Experiential Learning</h2>
+                    <p className="text-gray-400 text-[12px] sm:text-sm leading-relaxed mb-4 sm:mb-6">
                       Experience is the best teacher. From simulations to live industry projects, we ensure every concept is reinforced with practical application.
                     </p>
-                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-lg border border-white/10 backdrop-blur-sm">
-                      <GraduationCap className="w-5 h-5 text-accent" />
-                      <span className="text-sm font-medium">Theory meets Practice</span>
+                    <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-white/10 rounded-lg border border-white/10 backdrop-blur-sm">
+                      <GraduationCap className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-accent" />
+                      <span className="text-[12px] sm:text-sm font-medium">Theory meets Practice</span>
                     </div>
                   </div>
 
                   {/* Right Column: Grid */}
-                  <div className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                     {[
                       { icon: BookOpen, title: "Case Studies", desc: "Real scenario analysis" },
                       { icon: PenTool, title: "Labs & Sims", desc: "Hands-on practice" },
@@ -168,11 +168,11 @@ export default function TeachingPracticesSection() {
                       { icon: Network, title: "Internships", desc: "Professional exposure" },
                       { icon: Users, title: "Workshops", desc: "Industry interaction" },
                     ].map((item, i) => (
-                      <div key={i} className="flex items-center gap-3 bg-white/5 p-4 rounded-xl border border-white/5 hover:bg-white/10 transition-colors">
+                      <div key={i} className="flex items-center gap-3 bg-white/5 p-3 sm:p-4 rounded-xl border border-white/5 hover:bg-white/10 transition-colors">
                         <item.icon className="w-5 h-5 text-accent shrink-0" />
                         <div>
                           <h4 className="font-bold text-sm text-white">{item.title}</h4>
-                          <p className="text-xs text-gray-400">{item.desc}</p>
+                          <p className="text-[11px] sm:text-xs text-gray-400">{item.desc}</p>
                         </div>
                       </div>
                     ))}
@@ -185,21 +185,21 @@ export default function TeachingPracticesSection() {
           {/* TECHNOLOGY TAB */}
           {activeTab === "technology" && (
             <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-              <div className="bg-blue-50/50 rounded-3xl p-8 lg:p-12 border border-blue-100 relative overflow-hidden">
+              <div className="bg-blue-50/50 rounded-3xl p-4 sm:p-6 lg:p-12 border border-blue-100 relative overflow-hidden">
                  <div className="absolute top-0 left-0 w-64 h-64 bg-blue-100/50 rounded-full blur-3xl -ml-10 -mt-10 pointer-events-none" />
                  
-                 <div className="flex flex-col lg:flex-row items-center gap-10 relative z-10">
+                 <div className="flex flex-col lg:flex-row items-center gap-7 sm:gap-10 relative z-10">
                     <div className="lg:w-1/2">
-                        <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
-                            <Cpu className="w-6 h-6 text-blue-600" />
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4 sm:mb-6">
+                            <Cpu className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
                         </div>
-                        <h3 className="text-3xl font-bold text-[#100902] mb-4">Tech-Driven Ecosystem</h3>
-                        <p className="text-gray-600 leading-relaxed mb-6">
+                        <h3 className="text-[22px] sm:text-3xl font-bold text-[#100902] mb-3 sm:mb-4">Tech-Driven Ecosystem</h3>
+                        <p className="text-gray-600 leading-relaxed mb-4 sm:mb-6 text-[12px] sm:text-sm md:text-base">
                             We integrate Information and Communication Technology (ICT) into every aspect of learning. Our campuses are future-ready, ensuring students are comfortable with the tools of tomorrow.
                         </p>
-                        <div className="flex flex-wrap gap-3">
+                        <div className="flex flex-wrap gap-2 sm:gap-3">
                             {["Blended Learning", "E-Assessments", "Virtual Labs"].map((tag, i) => (
-                                <span key={i} className="px-3 py-1.5 bg-white text-blue-700 text-xs font-semibold rounded-full border border-blue-200 shadow-sm">
+                                <span key={i} className="px-3 py-1.5 bg-white text-blue-700 text-[11px] sm:text-xs font-semibold rounded-full border border-blue-200 shadow-sm">
                                     {tag}
                                 </span>
                             ))}
@@ -207,24 +207,24 @@ export default function TeachingPracticesSection() {
                     </div>
                     <div className="lg:w-1/2 w-full">
                         <div className="grid grid-cols-2 gap-4">
-                            <div className="bg-white p-5 rounded-2xl shadow-sm border border-blue-100">
-                                <Monitor className="w-8 h-8 text-blue-500 mb-3" />
-                                <h4 className="font-bold text-[#100902]">Smart Classrooms</h4>
+                            <div className="bg-white p-4 sm:p-5 rounded-2xl shadow-sm border border-blue-100">
+                                <Monitor className="w-7 h-7 sm:w-8 sm:h-8 text-blue-500 mb-2 sm:mb-3" />
+                                <h4 className="font-bold text-[#100902] text-sm sm:text-base">Smart Classrooms</h4>
                                 <p className="text-xs text-gray-500 mt-1">Interactive displays & digital aids</p>
                             </div>
-                            <div className="bg-white p-5 rounded-2xl shadow-sm border border-blue-100">
-                                <Network className="w-8 h-8 text-indigo-500 mb-3" />
-                                <h4 className="font-bold text-[#100902]">LMS Integration</h4>
+                            <div className="bg-white p-4 sm:p-5 rounded-2xl shadow-sm border border-blue-100">
+                                <Network className="w-7 h-7 sm:w-8 sm:h-8 text-indigo-500 mb-2 sm:mb-3" />
+                                <h4 className="font-bold text-[#100902] text-sm sm:text-base">LMS Integration</h4>
                                 <p className="text-xs text-gray-500 mt-1">24/7 access to resources</p>
                             </div>
-                            <div className="bg-white p-5 rounded-2xl shadow-sm border border-blue-100">
-                                <Laptop className="w-8 h-8 text-cyan-500 mb-3" />
-                                <h4 className="font-bold text-[#100902]">Digital Library</h4>
+                            <div className="bg-white p-4 sm:p-5 rounded-2xl shadow-sm border border-blue-100">
+                                <Laptop className="w-7 h-7 sm:w-8 sm:h-8 text-cyan-500 mb-2 sm:mb-3" />
+                                <h4 className="font-bold text-[#100902] text-sm sm:text-base">Digital Library</h4>
                                 <p className="text-xs text-gray-500 mt-1">E-books & research journals</p>
                             </div>
-                             <div className="bg-white p-5 rounded-2xl shadow-sm border border-blue-100">
-                                <Globe className="w-8 h-8 text-teal-500 mb-3" />
-                                <h4 className="font-bold text-[#100902]">Global Connect</h4>
+                             <div className="bg-white p-4 sm:p-5 rounded-2xl shadow-sm border border-blue-100">
+                                <Globe className="w-7 h-7 sm:w-8 sm:h-8 text-teal-500 mb-2 sm:mb-3" />
+                                <h4 className="font-bold text-[#100902] text-sm sm:text-base">Global Connect</h4>
                                 <p className="text-xs text-gray-500 mt-1">Virtual guest lectures</p>
                             </div>
                         </div>

@@ -45,7 +45,7 @@ export default function EligibilitySection() {
     ];
 
     return (
-        <section id="admissions-eligibility" className="py-16 lg:py-24 bg-gray-50 relative overflow-hidden">
+        <section id="admissions-eligibility" className="py-10 sm:py-14 lg:py-24 bg-gray-50 relative overflow-hidden">
             <div className="absolute inset-0 z-0 pointer-events-none">
                 <Image
                     src="/images/admissions/College_admissions_reception_in_India.png"
@@ -56,32 +56,32 @@ export default function EligibilitySection() {
             </div>
             <div className="container mx-auto px-4 relative z-10">
                 <div className="max-w-6xl mx-auto">
-                    <div className="text-center mb-12">
-                        <span className="text-accent font-semibold tracking-wide uppercase text-sm mb-2 block">
+                    <div className="text-center mb-7 sm:mb-10 md:mb-12">
+                        <span className="text-accent font-semibold tracking-wide uppercase text-[11px] sm:text-sm mb-2 block">
                             Requirements
                         </span>
-                        <h2 className="text-3xl lg:text-4xl font-bold text-[#100902] mb-6">
+                        <h2 className="text-[22px] sm:text-3xl lg:text-4xl font-bold text-[#100902] mb-4 sm:mb-6">
                             Admission Eligibility Criteria
                         </h2>
-                        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                        <p className="text-[12px] sm:text-sm md:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
                             Ensure you meet the academic and documentation requirements for your chosen program before applying.
                         </p>
                     </div>
 
                     {/* Mobile: Horizontal Scroll, Desktop: Grid */}
-                    <div className="flex items-stretch md:grid md:grid-cols-3 gap-4 md:gap-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-6 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 scroll-smooth scrollbar-none">
+                    <div className="flex items-stretch md:grid md:grid-cols-3 gap-3 sm:gap-4 md:gap-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-4 sm:pb-6 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 scroll-smooth scrollbar-none">
                         {sections.map((section, idx) => (
                             <div 
                                 key={idx} 
-                                className="min-w-[85vw] md:min-w-0 snap-center md:snap-align-none bg-white rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 flex flex-col h-full"
+                                className="min-w-[82vw] md:min-w-0 snap-center md:snap-align-none bg-white rounded-2xl p-4 sm:p-6 md:p-8 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 flex flex-col h-full"
                             >
-                                <div className={cn("w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shrink-0", section.bg)}>
-                                    <section.icon className={cn("w-7 h-7", section.color)} />
+                                <div className={cn("w-11 h-11 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center mb-4 sm:mb-6 shrink-0", section.bg)}>
+                                    <section.icon className={cn("w-5 h-5 sm:w-7 sm:h-7", section.color)} />
                                 </div>
-                                <h3 className="text-xl font-bold text-[#100902] mb-4">{section.title}</h3>
-                                <ul className="space-y-3 flex-grow">
+                                <h3 className="text-base sm:text-lg md:text-xl font-bold text-[#100902] mb-3 sm:mb-4">{section.title}</h3>
+                                <ul className="space-y-2.5 sm:space-y-3 flex-grow text-[12px] sm:text-sm md:text-base">
                                     {section.points.map((point, i) => (
-                                        <li key={i} className="flex gap-3 text-sm text-gray-600 leading-relaxed">
+                                        <li key={i} className="flex gap-3 text-gray-600 leading-relaxed">
                                             <span className={cn("mt-1.5 w-1.5 h-1.5 rounded-full shrink-0", section.bg.replace('bg-', 'bg-current text-').replace('50', '500'))} />
                                             <span>{point}</span>
                                         </li>
@@ -91,12 +91,12 @@ export default function EligibilitySection() {
                         ))}
                     </div>
 
-                    <div className="mt-12 p-6 bg-white border-l-4 border-accent shadow-sm rounded-r-xl max-w-4xl mx-auto">
-                        <div className="flex items-start gap-4">
-                            <ShieldCheck className="w-6 h-6 text-accent shrink-0 mt-1" />
+                    <div className="mt-7 sm:mt-10 md:mt-12 p-4 sm:p-6 bg-white border-l-4 border-accent shadow-sm rounded-r-xl max-w-4xl mx-auto">
+                        <div className="flex items-start gap-3 sm:gap-4">
+                            <ShieldCheck className="w-5 h-5 sm:w-6 sm:h-6 text-accent shrink-0 mt-1" />
                             <div>
-                                <h4 className="text-lg font-bold text-[#100902] mb-1">Important Note</h4>
-                                <p className="text-sm text-gray-600">
+                                <h4 className="text-sm sm:text-base md:text-lg font-bold text-[#100902] mb-1">Important Note</h4>
+                                <p className="text-[12px] sm:text-sm md:text-base text-gray-600">
                                     Program-specific eligibility may vary. Refer to individual program pages for detailed criteria. The institute reserves the right to update eligibility norms as per regulatory guidelines.
                                 </p>
                             </div>

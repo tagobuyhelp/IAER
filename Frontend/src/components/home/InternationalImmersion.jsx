@@ -53,7 +53,7 @@ export default function InternationalImmersion() {
                                     <span className="text-[10px] font-black uppercase tracking-[0.25em] text-neutral-700">
                                         International Immersion
                                     </span>
-                                    <h2 className="text-lg md:text-xl font-black tracking-tight uppercase">
+                                    <h2 className="text-[14px] md:text-xl font-black tracking-tight uppercase">
                                         Global Experiences With IAER
                                     </h2>
                                 </div>

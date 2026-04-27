@@ -30,13 +30,13 @@ function PolicyItem({ icon: Icon, text, delay = 0, index }) {
     <div
       ref={ref}
       className={cn(
-        "flex gap-3 items-start p-3 rounded-lg border border-transparent hover:border-gray-100 hover:bg-gray-50 transition-all duration-300 group",
+        "flex gap-3 items-start p-2.5 sm:p-3 rounded-lg border border-transparent hover:border-gray-100 hover:bg-gray-50 transition-all duration-300 group",
         inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
       )}
       style={{ transitionDelay: `${delay + index * 50}ms` }}
     >
       <div className="flex-shrink-0 mt-0.5 p-1.5 rounded-md bg-primary/5 text-primary group-hover:bg-primary/10 transition-colors">
-        <Icon className="w-4 h-4" />
+        <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
       </div>
       <p className="text-xs sm:text-sm text-gray-600 leading-relaxed group-hover:text-gray-900 transition-colors">
         {text}
@@ -106,10 +106,10 @@ export default function VisionMissionSection() {
   ];
 
   return (
-    <section className="py-10 lg:py-12 bg-gradient-to-b from-white via-gray-50/50 to-white relative overflow-hidden">
+    <section className="py-8 sm:py-10 lg:py-12 bg-gradient-to-b from-white via-gray-50/50 to-white relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <RevealOnScroll className="mb-8">
+        <RevealOnScroll className="mb-6 sm:mb-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div className="max-w-2xl">
               <div
@@ -120,7 +120,7 @@ export default function VisionMissionSection() {
                 )}
               >
                 <Eye className="w-4 h-4 text-primary" aria-hidden="true" />
-                <span className="text-xs font-bold tracking-wider uppercase text-primary">
+                <span className="text-[11px] sm:text-xs font-bold tracking-wider uppercase text-primary">
                   Our Foundation
                 </span>
               </div>
@@ -141,15 +141,15 @@ export default function VisionMissionSection() {
           <div className="lg:col-span-8 space-y-6">
             {/* Vision Hero Card */}
             <RevealOnScroll delay={100}>
-              <div className="rounded-xl bg-gradient-to-br from-primary/5 via-transparent to-accent/5 border border-primary/10 p-6 flex flex-col sm:flex-row items-center gap-6 relative overflow-hidden">
+              <div className="rounded-xl bg-gradient-to-br from-primary/5 via-transparent to-accent/5 border border-primary/10 p-4 sm:p-6 flex flex-col sm:flex-row items-center gap-4 sm:gap-6 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-2xl -mr-10 -mt-10" />
 
-                <div className="relative p-4 rounded-full bg-white shadow-sm border border-gray-100 flex-shrink-0">
-                  <Eye className="w-8 h-8 text-primary" />
+                <div className="relative p-3 sm:p-4 rounded-full bg-white shadow-sm border border-gray-100 flex-shrink-0">
+                  <Eye className="w-7 h-7 sm:w-8 sm:h-8 text-primary" />
                 </div>
                 <div className="text-center sm:text-left relative z-10">
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">Our Vision</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">
+                  <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2">Our Vision</h3>
+                  <p className="text-[12px] sm:text-sm text-gray-600 leading-relaxed">
                     To emerge as a nationally and globally respected institution of higher learning that
                     fosters academic excellence, research-driven innovation, employability, and
                     entrepreneurship, while developing responsible professionals committed to societal
@@ -161,10 +161,10 @@ export default function VisionMissionSection() {
 
             {/* Mission Grid */}
             <RevealOnScroll delay={200}>
-              <div className="bg-white rounded-xl border border-gray-100 p-5 shadow-sm">
-                <div className="flex items-center gap-2 mb-4">
-                  <Target className="w-5 h-5 text-accent" />
-                  <h3 className="font-bold text-gray-900 text-base">Our Mission</h3>
+              <div className="bg-white rounded-xl border border-gray-100 p-4 sm:p-5 shadow-sm">
+                <div className="flex items-center gap-2 mb-3 sm:mb-4">
+                  <Target className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-accent" />
+                  <h3 className="font-bold text-gray-900 text-sm sm:text-base">Our Mission</h3>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {missionItems.map((item, index) => (
@@ -185,10 +185,10 @@ export default function VisionMissionSection() {
           <div className="lg:col-span-4 space-y-4">
             {/* Quality Policy */}
             <RevealOnScroll delay={300}>
-              <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-5 h-full">
-                <div className="flex items-center gap-2 mb-4">
-                  <ShieldCheck className="w-5 h-5 text-primary" />
-                  <h3 className="font-bold text-gray-900 text-base">Quality Policy</h3>
+              <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 sm:p-5 h-full">
+                <div className="flex items-center gap-2 mb-3 sm:mb-4">
+                  <ShieldCheck className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-primary" />
+                  <h3 className="font-bold text-gray-900 text-sm sm:text-base">Quality Policy</h3>
                 </div>
                 <div className="space-y-1">
                   {qualityItems.map((item, index) => (
@@ -206,7 +206,7 @@ export default function VisionMissionSection() {
 
             {/* Quote Compact */}
             <RevealOnScroll delay={400}>
-              <div className="bg-primary rounded-xl p-5 text-white shadow-md relative overflow-hidden group">
+              <div className="bg-primary rounded-xl p-4 sm:p-5 text-white shadow-md relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-bl-full -mr-6 -mt-6 transition-transform group-hover:scale-110" />
 
                 <div className="relative z-10">
@@ -214,7 +214,7 @@ export default function VisionMissionSection() {
                     <Sparkles className="w-4 h-4 text-accent" />
                     <h3 className="font-bold text-sm">Our Promise</h3>
                   </div>
-                  <p className="text-xs leading-relaxed opacity-90 italic">
+                  <p className="text-[11px] sm:text-xs leading-relaxed opacity-90 italic">
                     "We are committed to creating an environment where every student can achieve
                     their full potential, guided by excellence, innovation, and ethical values."
                   </p>

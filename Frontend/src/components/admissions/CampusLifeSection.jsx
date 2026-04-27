@@ -65,7 +65,7 @@ export default function CampusLifeSection() {
     <section 
       id="admissions-campus" 
       ref={sectionRef}
-      className="py-16 lg:py-24 bg-white relative overflow-hidden"
+      className="py-10 sm:py-14 lg:py-24 bg-white relative overflow-hidden"
     >
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
@@ -81,21 +81,21 @@ export default function CampusLifeSection() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-8 sm:mb-12 lg:mb-16">
             <span className={cn(
-              "text-accent font-semibold tracking-wide uppercase text-sm mb-2 block transition-all duration-700 delay-100",
+              "text-accent font-semibold tracking-wide uppercase text-[11px] sm:text-sm mb-2 block transition-all duration-700 delay-100",
               sectionInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             )}>
               Life at IAER
             </span>
             <h2 className={cn(
-              "text-3xl lg:text-4xl font-bold text-[#100902] mb-6 transition-all duration-700 delay-200",
+              "text-[22px] sm:text-3xl lg:text-4xl font-bold text-[#100902] mb-4 sm:mb-6 transition-all duration-700 delay-200",
               sectionInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             )}>
               Campus Life & Experience
             </h2>
             <p className={cn(
-              "text-lg text-gray-600 max-w-2xl mx-auto transition-all duration-700 delay-300",
+              "text-[12px] sm:text-sm md:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto transition-all duration-700 delay-300",
               sectionInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             )}>
               An enriching environment that promotes collaboration, innovation, and holistic development beyond the classroom.
@@ -104,11 +104,11 @@ export default function CampusLifeSection() {
 
           <div
             className={cn(
-              "mb-10 md:mb-14 transition-all duration-700 delay-400",
+              "mb-7 sm:mb-10 md:mb-14 transition-all duration-700 delay-400",
               sectionInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             )}
           >
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3 auto-rows-[120px] md:auto-rows-[140px] lg:auto-rows-[150px]">
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2 sm:gap-3 auto-rows-[92px] sm:auto-rows-[110px] md:auto-rows-[140px] lg:auto-rows-[150px]">
               {campusGallery.map((item, idx) => (
                 <div
                   key={idx}
@@ -126,7 +126,7 @@ export default function CampusLifeSection() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent opacity-70" />
                   <div className="absolute bottom-3 left-3 right-3">
-                    <div className="text-white text-xs md:text-sm font-semibold drop-shadow line-clamp-1">
+                    <div className="text-white text-[11px] sm:text-xs md:text-sm font-semibold drop-shadow line-clamp-1">
                       {item.alt}
                     </div>
                   </div>
@@ -136,7 +136,7 @@ export default function CampusLifeSection() {
           </div>
 
           {/* Features Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-10 sm:mb-14 md:mb-16">
             {features.map((feature, idx) => (
               <div 
                 key={idx} 
@@ -146,26 +146,26 @@ export default function CampusLifeSection() {
                 )}
                 style={{ transitionDelay: `${400 + (idx * 100)}ms` }}
               >
-                <div className={cn("w-14 h-14 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300", feature.bg)}>
-                  <feature.icon className={cn("w-7 h-7", feature.color)} />
+                <div className={cn("w-11 h-11 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300", feature.bg)}>
+                  <feature.icon className={cn("w-5 h-5 sm:w-7 sm:h-7", feature.color)} />
                 </div>
-                <h3 className="text-xl font-bold text-[#100902] mb-3 group-hover:text-accent transition-colors">{feature.title}</h3>
-                <p className="text-sm text-gray-600 leading-relaxed">{feature.desc}</p>
+                <h3 className="text-[13px] sm:text-base md:text-lg font-bold text-[#100902] mb-2 sm:mb-3 group-hover:text-accent transition-colors">{feature.title}</h3>
+                <p className="text-[11px] sm:text-sm text-gray-600 leading-relaxed">{feature.desc}</p>
               </div>
             ))}
             
             {/* CTA Card */}
             <div 
               className={cn(
-                "bg-[#100902] p-8 rounded-2xl shadow-lg flex flex-col justify-center items-center text-center transition-all duration-700 delay-900",
+                "bg-[#100902] p-5 sm:p-6 md:p-8 rounded-2xl shadow-lg flex flex-col justify-center items-center text-center transition-all duration-700 delay-900",
                 sectionInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               )}
             >
-              <h3 className="text-xl font-bold text-white mb-4">Want to see more?</h3>
-              <p className="text-gray-300 text-sm mb-6">Explore our vibrant campus culture and student activities.</p>
+              <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-2 sm:mb-4">Want to see more?</h3>
+              <p className="text-gray-300 text-[12px] sm:text-sm md:text-base mb-4 sm:mb-6">Explore our vibrant campus culture and student activities.</p>
               <Link 
                 href="/campus-life" 
-                className="inline-flex items-center justify-center w-full py-3 px-6 bg-accent text-white font-semibold rounded-lg hover:bg-accent/90 transition-all hover:gap-2 group"
+                className="inline-flex items-center justify-center w-full h-10 sm:h-11 px-5 sm:px-6 bg-accent text-white font-semibold rounded-lg hover:bg-accent/90 transition-all hover:gap-2 group text-sm sm:text-base"
               >
                 Explore Campus
                 <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
@@ -180,16 +180,16 @@ export default function CampusLifeSection() {
           )}>
             <Link 
               href="/placements/highlights" 
-              className="inline-flex items-center px-8 py-4 bg-white border border-gray-200 text-[#100902] font-semibold rounded-xl hover:bg-gray-50 hover:border-accent hover:text-accent transition-all shadow-sm hover:shadow-md"
+              className="inline-flex items-center px-5 sm:px-8 h-11 sm:h-12 bg-white border border-gray-200 text-[#100902] font-semibold rounded-xl hover:bg-gray-50 hover:border-accent hover:text-accent transition-all shadow-sm hover:shadow-md text-sm sm:text-base"
             >
-              <Trophy className="w-5 h-5 mr-2" />
+              <Trophy className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
               Explore Placements
             </Link>
             <Link 
               href="/admissions/hostel-fee" 
-              className="inline-flex items-center px-8 py-4 bg-accent text-white font-semibold rounded-xl hover:bg-accent/90 transition-all shadow-lg hover:shadow-accent/25"
+              className="inline-flex items-center px-5 sm:px-8 h-11 sm:h-12 bg-accent text-white font-semibold rounded-xl hover:bg-accent/90 transition-all shadow-lg hover:shadow-accent/25 text-sm sm:text-base"
             >
-              <Utensils className="w-5 h-5 mr-2" />
+              <Utensils className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
               Check Hostel Fees
             </Link>
           </div>

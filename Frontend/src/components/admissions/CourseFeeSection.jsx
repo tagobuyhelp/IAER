@@ -38,7 +38,7 @@ export default function CourseFeeSection() {
     ];
 
     return (
-        <section id="admissions-fee" className="py-16 lg:py-24 bg-gray-50 relative overflow-hidden">
+        <section id="admissions-fee" className="py-10 sm:py-14 lg:py-24 bg-gray-50 relative overflow-hidden">
             <div className="absolute inset-0 z-0 pointer-events-none">
                 <Image
                     src="/images/admissions/Meeting_with_the_admissions_counselor.png"
@@ -49,143 +49,143 @@ export default function CourseFeeSection() {
             </div>
             <div className="container mx-auto px-4 relative z-10">
                 <div className="max-w-6xl mx-auto">
-                    <div className="text-center mb-12">
-                        <span className="text-accent font-semibold tracking-wide uppercase text-sm mb-2 block">
+                    <div className="text-center mb-7 sm:mb-10 md:mb-12">
+                        <span className="text-accent font-semibold tracking-wide uppercase text-[11px] sm:text-sm mb-2 block">
                             Financial Information
                         </span>
-                        <h2 className="text-3xl lg:text-4xl font-bold text-[#100902] mb-6">
+                        <h2 className="text-[22px] sm:text-3xl lg:text-4xl font-bold text-[#100902] mb-4 sm:mb-6">
                             Course Fee Structure
                         </h2>
-                        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                        <p className="text-[12px] sm:text-sm md:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
                             Transparent fee structure with Early Bird Scholarships to make quality education accessible.
                         </p>
                     </div>
 
                     {/* UG Table */}
-                    <div className="mb-12">
-                        <div className="flex items-center gap-3 mb-6">
-                            <Banknote className="w-6 h-6 text-accent" />
-                            <h3 className="text-xl font-bold text-[#100902]">Undergraduate Programs</h3>
+                    <div className="mb-10 sm:mb-12">
+                        <div className="flex items-center gap-3 mb-4 sm:mb-6">
+                            <Banknote className="w-5 h-5 sm:w-6 sm:h-6 text-accent" />
+                            <h3 className="text-base sm:text-lg md:text-xl font-bold text-[#100902]">Undergraduate Programs</h3>
                         </div>
                         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
                             <div className="overflow-x-auto">
                                 <table className="w-full text-left border-collapse min-w-[900px]">
                                     <thead>
                                         <tr className="bg-[#100902] text-white">
-                                            <th className="p-4 font-semibold text-sm tracking-wide">Program</th>
-                                            <th className="p-4 font-semibold text-sm tracking-wide">Code</th>
-                                            <th className="p-4 font-semibold text-sm tracking-wide">Duration</th>
-                                            <th className="p-4 font-semibold text-sm tracking-wide">Total Fee (₹)</th>
-                                            <th className="p-4 font-semibold text-sm tracking-wide text-accent">Scholarship (₹)</th>
-                                            <th className="p-4 font-semibold text-sm tracking-wide">Net Fee (₹)</th>
+                                            <th className="p-3 sm:p-4 font-semibold text-[11px] sm:text-sm tracking-wide">Program</th>
+                                            <th className="p-3 sm:p-4 font-semibold text-[11px] sm:text-sm tracking-wide">Code</th>
+                                            <th className="p-3 sm:p-4 font-semibold text-[11px] sm:text-sm tracking-wide">Duration</th>
+                                            <th className="p-3 sm:p-4 font-semibold text-[11px] sm:text-sm tracking-wide">Total Fee (₹)</th>
+                                            <th className="p-3 sm:p-4 font-semibold text-[11px] sm:text-sm tracking-wide text-accent">Scholarship (₹)</th>
+                                            <th className="p-3 sm:p-4 font-semibold text-[11px] sm:text-sm tracking-wide">Net Fee (₹)</th>
                                         </tr>
                                     </thead>
                                     <tbody className="divide-y divide-gray-100">
                                         {ugPrograms.map((p, i) => (
                                             <tr key={i} className="hover:bg-gray-50 transition-colors">
-                                                <td className="p-4 font-semibold text-gray-800 text-sm">{p.program}</td>
-                                                <td className="p-4 text-gray-600 text-sm font-mono bg-gray-50/50">{p.code}</td>
-                                                <td className="p-4 text-gray-600 text-sm">{p.duration}</td>
-                                                <td className="p-4 text-gray-600 text-sm font-medium">{p.fee}</td>
-                                                <td className="p-4 text-green-600 text-sm font-medium">-{p.scholarship}</td>
-                                                <td className="p-4 font-bold text-[#100902] text-sm">{p.net}</td>
+                                                <td className="p-3 sm:p-4 font-semibold text-gray-800 text-[11px] sm:text-sm">{p.program}</td>
+                                                <td className="p-3 sm:p-4 text-gray-600 text-[11px] sm:text-sm font-mono bg-gray-50/50">{p.code}</td>
+                                                <td className="p-3 sm:p-4 text-gray-600 text-[11px] sm:text-sm">{p.duration}</td>
+                                                <td className="p-3 sm:p-4 text-gray-600 text-[11px] sm:text-sm font-medium">{p.fee}</td>
+                                                <td className="p-3 sm:p-4 text-green-600 text-[11px] sm:text-sm font-medium">-{p.scholarship}</td>
+                                                <td className="p-3 sm:p-4 font-bold text-[#100902] text-[11px] sm:text-sm">{p.net}</td>
                                             </tr>
                                         ))}
                                     </tbody>
                                 </table>
                             </div>
                         </div>
-                        <div className="mt-3 text-xs text-gray-500">
+                        <div className="mt-2 sm:mt-3 text-[11px] sm:text-xs text-gray-500">
                             Early Bird Scholarship valid till 31st May 2026.
                         </div>
                     </div>
 
                     {/* Diploma & Certification Table */}
-                    <div className="mb-12">
-                        <div className="flex items-center gap-3 mb-6">
-                            <Table className="w-6 h-6 text-[#100902]" />
-                            <h3 className="text-xl font-bold text-[#100902]">Diploma & Certification Programs</h3>
+                    <div className="mb-10 sm:mb-12">
+                        <div className="flex items-center gap-3 mb-4 sm:mb-6">
+                            <Table className="w-5 h-5 sm:w-6 sm:h-6 text-[#100902]" />
+                            <h3 className="text-base sm:text-lg md:text-xl font-bold text-[#100902]">Diploma & Certification Programs</h3>
                         </div>
                         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
                             <div className="overflow-x-auto">
                                 <table className="w-full text-left border-collapse min-w-[900px]">
                                     <thead>
                                         <tr className="bg-[#100902] text-white">
-                                            <th className="p-4 font-semibold text-sm tracking-wide">Program</th>
-                                            <th className="p-4 font-semibold text-sm tracking-wide">Code</th>
-                                            <th className="p-4 font-semibold text-sm tracking-wide">Duration</th>
-                                            <th className="p-4 font-semibold text-sm tracking-wide">Total Fee (₹)</th>
-                                            <th className="p-4 font-semibold text-sm tracking-wide text-accent">Scholarship (₹)</th>
-                                            <th className="p-4 font-semibold text-sm tracking-wide">Net Fee (₹)</th>
+                                            <th className="p-3 sm:p-4 font-semibold text-[11px] sm:text-sm tracking-wide">Program</th>
+                                            <th className="p-3 sm:p-4 font-semibold text-[11px] sm:text-sm tracking-wide">Code</th>
+                                            <th className="p-3 sm:p-4 font-semibold text-[11px] sm:text-sm tracking-wide">Duration</th>
+                                            <th className="p-3 sm:p-4 font-semibold text-[11px] sm:text-sm tracking-wide">Total Fee (₹)</th>
+                                            <th className="p-3 sm:p-4 font-semibold text-[11px] sm:text-sm tracking-wide text-accent">Scholarship (₹)</th>
+                                            <th className="p-3 sm:p-4 font-semibold text-[11px] sm:text-sm tracking-wide">Net Fee (₹)</th>
                                         </tr>
                                     </thead>
                                     <tbody className="divide-y divide-gray-100">
                                         {diplomaAndCertificationPrograms.map((p, i) => (
                                             <tr key={i} className="hover:bg-gray-50 transition-colors">
-                                                <td className="p-4 font-semibold text-gray-800 text-sm">{p.program}</td>
-                                                <td className="p-4 text-gray-600 text-sm font-mono bg-gray-50/50">{p.code}</td>
-                                                <td className="p-4 text-gray-600 text-sm">{p.duration}</td>
-                                                <td className="p-4 text-gray-600 text-sm font-medium">{p.fee}</td>
-                                                <td className="p-4 text-green-600 text-sm font-medium">-{p.scholarship}</td>
-                                                <td className="p-4 font-bold text-[#100902] text-sm">{p.net}</td>
+                                                <td className="p-3 sm:p-4 font-semibold text-gray-800 text-[11px] sm:text-sm">{p.program}</td>
+                                                <td className="p-3 sm:p-4 text-gray-600 text-[11px] sm:text-sm font-mono bg-gray-50/50">{p.code}</td>
+                                                <td className="p-3 sm:p-4 text-gray-600 text-[11px] sm:text-sm">{p.duration}</td>
+                                                <td className="p-3 sm:p-4 text-gray-600 text-[11px] sm:text-sm font-medium">{p.fee}</td>
+                                                <td className="p-3 sm:p-4 text-green-600 text-[11px] sm:text-sm font-medium">-{p.scholarship}</td>
+                                                <td className="p-3 sm:p-4 font-bold text-[#100902] text-[11px] sm:text-sm">{p.net}</td>
                                             </tr>
                                         ))}
                                     </tbody>
                                 </table>
                             </div>
                         </div>
-                        <div className="mt-3 text-xs text-gray-500">
+                        <div className="mt-2 sm:mt-3 text-[11px] sm:text-xs text-gray-500">
                             Early Bird Scholarship valid till 30th Apr 2026.
                         </div>
                     </div>
 
                     {/* PG Table */}
-                    <div className="mb-12">
-                        <div className="flex items-center gap-3 mb-6">
-                            <Table className="w-6 h-6 text-[#100902]" />
-                            <h3 className="text-xl font-bold text-[#100902]">Post Graduate Programs</h3>
+                    <div className="mb-10 sm:mb-12">
+                        <div className="flex items-center gap-3 mb-4 sm:mb-6">
+                            <Table className="w-5 h-5 sm:w-6 sm:h-6 text-[#100902]" />
+                            <h3 className="text-base sm:text-lg md:text-xl font-bold text-[#100902]">Post Graduate Programs</h3>
                         </div>
                         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
                             <div className="overflow-x-auto">
                                 <table className="w-full text-left border-collapse min-w-[1000px]">
                                     <thead>
                                         <tr className="bg-[#100902] text-white">
-                                            <th className="p-4 font-semibold text-sm tracking-wide">Program</th>
-                                            <th className="p-4 font-semibold text-sm tracking-wide">Code</th>
-                                            <th className="p-4 font-semibold text-sm tracking-wide">Duration</th>
-                                            <th className="p-4 font-semibold text-sm tracking-wide">Gross Fee (₹)</th>
-                                            <th className="p-4 font-semibold text-sm tracking-wide text-accent">Scholarship (₹)</th>
-                                            <th className="p-4 font-semibold text-sm tracking-wide">Net Fee (₹)</th>
+                                            <th className="p-3 sm:p-4 font-semibold text-[11px] sm:text-sm tracking-wide">Program</th>
+                                            <th className="p-3 sm:p-4 font-semibold text-[11px] sm:text-sm tracking-wide">Code</th>
+                                            <th className="p-3 sm:p-4 font-semibold text-[11px] sm:text-sm tracking-wide">Duration</th>
+                                            <th className="p-3 sm:p-4 font-semibold text-[11px] sm:text-sm tracking-wide">Gross Fee (₹)</th>
+                                            <th className="p-3 sm:p-4 font-semibold text-[11px] sm:text-sm tracking-wide text-accent">Scholarship (₹)</th>
+                                            <th className="p-3 sm:p-4 font-semibold text-[11px] sm:text-sm tracking-wide">Net Fee (₹)</th>
                                         </tr>
                                     </thead>
                                     <tbody className="divide-y divide-gray-100">
                                         {pgPrograms.map((p, i) => (
                                             <tr key={i} className="hover:bg-gray-50 transition-colors">
-                                                <td className="p-4 font-semibold text-gray-800 text-sm">{p.program}</td>
-                                                <td className="p-4 text-gray-600 text-sm font-mono bg-gray-50/50">{p.code}</td>
-                                                <td className="p-4 text-gray-600 text-sm">{p.duration}</td>
-                                                <td className="p-4 text-gray-600 text-sm font-medium">{p.fee}</td>
-                                                <td className="p-4 text-green-600 text-sm font-medium">-{p.scholarship}</td>
-                                                <td className="p-4 font-bold text-[#100902] text-sm">{p.net}</td>
+                                                <td className="p-3 sm:p-4 font-semibold text-gray-800 text-[11px] sm:text-sm">{p.program}</td>
+                                                <td className="p-3 sm:p-4 text-gray-600 text-[11px] sm:text-sm font-mono bg-gray-50/50">{p.code}</td>
+                                                <td className="p-3 sm:p-4 text-gray-600 text-[11px] sm:text-sm">{p.duration}</td>
+                                                <td className="p-3 sm:p-4 text-gray-600 text-[11px] sm:text-sm font-medium">{p.fee}</td>
+                                                <td className="p-3 sm:p-4 text-green-600 text-[11px] sm:text-sm font-medium">-{p.scholarship}</td>
+                                                <td className="p-3 sm:p-4 font-bold text-[#100902] text-[11px] sm:text-sm">{p.net}</td>
                                             </tr>
                                         ))}
                                     </tbody>
                                 </table>
                             </div>
                         </div>
-                        <div className="mt-3 text-xs text-gray-500">
+                        <div className="mt-2 sm:mt-3 text-[11px] sm:text-xs text-gray-500">
                             Early Bird Scholarship valid till 30th Apr 2026.
                         </div>
                     </div>
 
                     {/* Notes */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div className="p-6 bg-orange-50/50 border border-orange-100 rounded-xl">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                        <div className="p-4 sm:p-6 bg-orange-50/50 border border-orange-100 rounded-xl">
                             <div className="flex items-center gap-3 mb-3">
                                 <Info className="w-5 h-5 text-accent" />
-                                <h4 className="text-lg font-bold text-[#100902]">Fee Details</h4>
+                                <h4 className="text-sm sm:text-base md:text-lg font-bold text-[#100902]">Fee Details</h4>
                             </div>
-                            <ul className="space-y-2 text-gray-700 text-sm list-disc list-inside marker:text-accent">
+                            <ul className="space-y-2 text-gray-700 text-[12px] sm:text-sm md:text-base list-disc list-inside marker:text-accent">
                                 <li>Undergraduate programs include University Application, Development & Registration Fee (one time) and other University charges.</li>
                                 <li>Undergraduate exam fee to be paid separately: ₹1,200 per semester.</li>
                                 <li>Fees include two T-shirts and one formal uniform (except shoes) every year.</li>
@@ -194,12 +194,12 @@ export default function CourseFeeSection() {
                                 <li>Post Graduate one-time sports & cultural fee: ₹2,000 at admission.</li>
                             </ul>
                         </div>
-                        <div className="p-6 bg-blue-50/50 border border-blue-100 rounded-xl">
+                        <div className="p-4 sm:p-6 bg-blue-50/50 border border-blue-100 rounded-xl">
                             <div className="flex items-center gap-3 mb-3">
                                 <CheckCircle2 className="w-5 h-5 text-blue-600" />
-                                <h4 className="text-lg font-bold text-[#100902]">Scholarship Policy</h4>
+                                <h4 className="text-sm sm:text-base md:text-lg font-bold text-[#100902]">Scholarship Policy</h4>
                             </div>
-                            <ul className="space-y-2 text-gray-700 text-sm list-disc list-inside marker:text-blue-600">
+                            <ul className="space-y-2 text-gray-700 text-[12px] sm:text-sm md:text-base list-disc list-inside marker:text-blue-600">
                                 <li>Early Bird Scholarship of ₹50,000 on every degree program.</li>
                                 <li>Scholarship adjusted against loan value for EMI plans.</li>
                                 <li>Early Bird offers are subject to limited seats.</li>

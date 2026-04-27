@@ -32,7 +32,7 @@ function StatCard({ icon: Icon, label, value, delay = 0, index }) {
     <div
       ref={ref}
       className={cn(
-        "group relative overflow-hidden rounded-xl border border-gray-100 bg-white p-4 transition-all duration-300",
+        "group relative overflow-hidden rounded-xl border border-gray-100 bg-white p-3 sm:p-4 transition-all duration-300",
         "hover:shadow-lg hover:border-accent/30 hover:-translate-y-1",
         inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
       )}
@@ -47,10 +47,10 @@ function StatCard({ icon: Icon, label, value, delay = 0, index }) {
       </div>
       
       <div className="relative z-10 flex flex-col gap-1">
-        <div className="text-2xl font-bold text-gray-900 leading-tight">
+        <div className="text-xl sm:text-2xl font-bold text-gray-900 leading-tight">
           {value}
         </div>
-        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide">
+        <div className="text-[10px] sm:text-xs font-semibold text-gray-500 uppercase tracking-wide">
           {label}
         </div>
       </div>
@@ -184,7 +184,7 @@ export default function IndustryEngagementSection() {
 
 
   return (
-    <section className="py-10 lg:py-12 bg-gradient-to-b from-white via-gray-50/50 to-white relative overflow-hidden">
+    <section className="py-8 sm:py-10 lg:py-12 bg-gradient-to-b from-white via-gray-50/50 to-white relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <RevealOnScroll className="mb-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
@@ -197,7 +197,7 @@ export default function IndustryEngagementSection() {
                 )}
               >
                 <Handshake className="w-4 h-4 text-accent" aria-hidden="true" />
-                <span className="text-xs font-bold tracking-wider uppercase text-accent">
+                <span className="text-[11px] sm:text-xs font-bold tracking-wider uppercase text-accent">
                   Industry Partnerships
                 </span>
               </div>
@@ -232,8 +232,8 @@ export default function IndustryEngagementSection() {
 
             {/* Engagement Activities Compact List */}
             <RevealOnScroll delay={200} className="flex-1">
-              <div className="bg-white rounded-xl border border-gray-100 p-4 shadow-sm h-full flex flex-col">
-                <div className="flex items-center gap-2 mb-3">
+              <div className="bg-white rounded-xl border border-gray-100 p-3 sm:p-4 shadow-sm h-full flex flex-col">
+                <div className="flex items-center gap-2 mb-2 sm:mb-3">
                    <div className="p-1.5 rounded-md bg-accent/10">
                      <Zap className="w-4 h-4 text-accent" />
                    </div>
@@ -250,7 +250,7 @@ export default function IndustryEngagementSection() {
                       <div className="w-6 h-6 rounded-full bg-gray-50 flex items-center justify-center flex-shrink-0 text-gray-400">
                         <activity.icon className="w-3.5 h-3.5" />
                       </div>
-                      <span className="text-xs font-medium text-gray-700">{activity.label}</span>
+                      <span className="text-[11px] sm:text-xs font-medium text-gray-700">{activity.label}</span>
                       <CheckCircle2 className="w-3 h-3 text-green-500 ml-auto" />
                     </div>
                   ))}
@@ -262,7 +262,7 @@ export default function IndustryEngagementSection() {
           {/* Right Column: Marquee (Visual Impact) */}
           <div className="lg:col-span-8 h-full">
             <RevealOnScroll delay={300} className="h-full">
-              <div className="h-full rounded-xl border border-gray-100 bg-white p-5 shadow-lg flex flex-col justify-center relative overflow-hidden group">
+              <div className="h-full rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-lg flex flex-col justify-center relative overflow-hidden group">
                 {/* Decorative background */}
                 <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-primary/5 to-transparent rounded-bl-[100px] -mr-10 -mt-10 transition-transform group-hover:scale-110" />
                 
@@ -272,7 +272,7 @@ export default function IndustryEngagementSection() {
                         <Star className="w-4 h-4 text-accent fill-accent" />
                         Our Students are working with:
                       </h3>
-                      <p className="text-xs text-gray-500 mt-0.5">Leading organisations across sectors</p>
+                      <p className="text-[11px] sm:text-xs text-gray-500 mt-0.5">Leading organisations across sectors</p>
                    </div>
                    <div className="hidden sm:block text-right">
                       <span className="text-2xl font-bold text-primary block leading-none">3000+</span>
@@ -280,12 +280,12 @@ export default function IndustryEngagementSection() {
                    </div>
                 </div>
 
-                <div className="space-y-6 relative z-10 flex-1 flex flex-col justify-center">
+                <div className="space-y-5 sm:space-y-6 relative z-10 flex-1 flex flex-col justify-center">
                   <Marquee speed={35} autoFill gradient={true} gradientColor={[255, 255, 255]} className="overflow-y-hidden py-2">
                     {companies.slice(0, Math.ceil(companies.length / 2)).map((company, index) => (
                       <div 
                         key={`${company.name}-row1-${index}`} 
-                        className="w-[120px] h-[60px] md:w-[160px] md:h-[80px] mx-3 bg-white rounded-xl border border-gray-100 shadow-sm flex items-center justify-center p-4 hover:grayscale-0 hover:opacity-100 transition-all duration-300 hover:scale-105 hover:shadow-md cursor-pointer"
+                        className="w-[104px] h-[52px] sm:w-[120px] sm:h-[60px] md:w-[160px] md:h-[80px] mx-2 sm:mx-3 bg-white rounded-xl border border-gray-100 shadow-sm flex items-center justify-center p-3 sm:p-4 hover:grayscale-0 hover:opacity-100 transition-all duration-300 hover:scale-105 hover:shadow-md cursor-pointer"
                       >
                         {company.logo ? (
                           <div className="relative w-full h-full">
@@ -294,11 +294,11 @@ export default function IndustryEngagementSection() {
                               alt={company.name}
                               fill
                               className="object-contain transition-transform duration-300 hover:scale-110"
-                              sizes="(max-width: 768px) 120px, 160px"
+                              sizes="(max-width: 640px) 104px, (max-width: 768px) 120px, 160px"
                             />
                           </div>
                         ) : (
-                          <span className="text-xs md:text-sm font-semibold text-gray-600 text-center">{company.name}</span>
+                          <span className="text-[11px] sm:text-xs md:text-sm font-semibold text-gray-600 text-center">{company.name}</span>
                         )}
                       </div>
                     ))}
@@ -308,7 +308,7 @@ export default function IndustryEngagementSection() {
                     {companies.slice(Math.ceil(companies.length / 2)).map((company, index) => (
                       <div 
                         key={`${company.name}-row2-${index}`} 
-                        className="w-[120px] h-[60px] md:w-[160px] md:h-[80px] mx-3 bg-white rounded-xl border border-gray-100 shadow-sm flex items-center justify-center p-4 hover:grayscale-0 hover:opacity-100 transition-all duration-300 hover:scale-105 hover:shadow-md cursor-pointer"
+                        className="w-[104px] h-[52px] sm:w-[120px] sm:h-[60px] md:w-[160px] md:h-[80px] mx-2 sm:mx-3 bg-white rounded-xl border border-gray-100 shadow-sm flex items-center justify-center p-3 sm:p-4 hover:grayscale-0 hover:opacity-100 transition-all duration-300 hover:scale-105 hover:shadow-md cursor-pointer"
                       >
                         {company.logo ? (
                           <div className="relative w-full h-full">
@@ -317,11 +317,11 @@ export default function IndustryEngagementSection() {
                               alt={company.name}
                               fill
                               className="object-contain"
-                              sizes="(max-width: 768px) 120px, 160px"
+                              sizes="(max-width: 640px) 104px, (max-width: 768px) 120px, 160px"
                             />
                           </div>
                         ) : (
-                          <span className="text-xs md:text-sm font-semibold text-gray-600 text-center">{company.name}</span>
+                          <span className="text-[11px] sm:text-xs md:text-sm font-semibold text-gray-600 text-center">{company.name}</span>
                         )}
                       </div>
                     ))}

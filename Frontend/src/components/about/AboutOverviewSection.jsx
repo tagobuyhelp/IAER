@@ -194,7 +194,7 @@ function StatCard({ icon: Icon, label, value, description, delay = 0, index }) {
     <div
       ref={ref}
       className={cn(
-        "rounded-2xl border-2 border-gray-200 bg-gradient-to-br from-white to-gray-50/50 px-5 py-5 transition-all duration-500",
+        "rounded-2xl border-2 border-gray-200 bg-gradient-to-br from-white to-gray-50/50 px-4 sm:px-5 py-4 sm:py-5 transition-all duration-500",
         "hover:-translate-y-2 hover:shadow-xl hover:border-accent/60 hover:bg-gradient-to-br hover:from-accent/5 hover:to-primary/5",
         inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
       )}
@@ -207,13 +207,13 @@ function StatCard({ icon: Icon, label, value, description, delay = 0, index }) {
       <div className="flex items-center gap-3 mb-3">
         <div
           className={cn(
-            "flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-accent/20 to-accent/10 transition-all duration-300",
+            "flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-xl bg-gradient-to-br from-accent/20 to-accent/10 transition-all duration-300",
             isHovered && "scale-110 rotate-3 shadow-lg"
           )}
         >
           <Icon
             className={cn(
-              "h-6 w-6 text-accent transition-all duration-300",
+              "h-5 w-5 sm:h-6 sm:w-6 text-accent transition-all duration-300",
               isHovered && "text-primary scale-110"
             )}
             aria-hidden="true"
@@ -225,7 +225,7 @@ function StatCard({ icon: Icon, label, value, description, delay = 0, index }) {
           </div>
           <div
             className={cn(
-              "text-2xl font-bold text-[#100902] transition-colors duration-300",
+              "text-xl sm:text-2xl font-bold text-[#100902] transition-colors duration-300",
               isHovered && "text-primary"
             )}
           >
@@ -233,7 +233,7 @@ function StatCard({ icon: Icon, label, value, description, delay = 0, index }) {
           </div>
         </div>
       </div>
-      <p className="text-xs text-gray-600 leading-relaxed">{description}</p>
+      <p className="text-[11px] sm:text-xs text-gray-600 leading-relaxed">{description}</p>
     </div>
   );
 }
@@ -255,13 +255,13 @@ function AutoScrollingDomains() {
   ];
 
   return (
-    <div className="relative overflow-hidden rounded-xl bg-gradient-to-r from-primary/5 to-accent/5 border border-primary/10 p-4 w-full">
-      <div className="flex items-center gap-2 mb-3">
-        <Sparkles className="w-4 h-4 text-accent" aria-hidden="true" />
-        <span className="text-xs font-semibold text-[#100902] uppercase tracking-wide">Our Programs</span>
+    <div className="relative overflow-hidden rounded-xl bg-gradient-to-r from-primary/5 to-accent/5 border border-primary/10 p-3 sm:p-4 w-full">
+      <div className="flex items-center gap-2 mb-2 sm:mb-3">
+        <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accent" aria-hidden="true" />
+        <span className="text-[11px] sm:text-xs font-semibold text-[#100902] uppercase tracking-wide">Our Programs</span>
       </div>
       <div
-        className={cn("flex gap-4", !isPaused && "animate-scroll")}
+        className={cn("flex gap-3 sm:gap-4", !isPaused && "animate-scroll")}
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
         style={isPaused ? { animationPlayState: "paused" } : {}}
@@ -270,20 +270,20 @@ function AutoScrollingDomains() {
         {domains.map((domain, index) => (
           <div
             key={`first-${index}`}
-            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white border border-gray-200 shadow-sm whitespace-nowrap hover:shadow-md hover:border-accent/40 transition-all duration-300"
+            className="flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-white border border-gray-200 shadow-sm whitespace-nowrap hover:shadow-md hover:border-accent/40 transition-all duration-300"
           >
-            <domain.icon className="w-4 h-4 text-accent flex-shrink-0" aria-hidden="true" />
-            <span className="text-xs font-medium text-gray-700">{domain.text}</span>
+            <domain.icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accent flex-shrink-0" aria-hidden="true" />
+            <span className="text-[11px] sm:text-xs font-medium text-gray-700">{domain.text}</span>
           </div>
         ))}
         {/* Duplicate set for seamless loop */}
         {domains.map((domain, index) => (
           <div
             key={`second-${index}`}
-            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white border border-gray-200 shadow-sm whitespace-nowrap hover:shadow-md hover:border-accent/40 transition-all duration-300"
+            className="flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-white border border-gray-200 shadow-sm whitespace-nowrap hover:shadow-md hover:border-accent/40 transition-all duration-300"
           >
-            <domain.icon className="w-4 h-4 text-accent flex-shrink-0" aria-hidden="true" />
-            <span className="text-xs font-medium text-gray-700">{domain.text}</span>
+            <domain.icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accent flex-shrink-0" aria-hidden="true" />
+            <span className="text-[11px] sm:text-xs font-medium text-gray-700">{domain.text}</span>
           </div>
         ))}
       </div>
@@ -337,7 +337,7 @@ function AnimatedListItem({ children, index, delay = 0, icon: Icon }) {
           />
         )}
       </div>
-      <span className={cn("text-sm text-gray-700 leading-relaxed group-hover:text-[#100902] transition-colors", isHovered && "font-medium")}>
+      <span className={cn("text-[12px] sm:text-sm text-gray-700 leading-relaxed group-hover:text-[#100902] transition-colors", isHovered && "font-medium")}>
         {children}
       </span>
     </li>
@@ -463,7 +463,7 @@ export default function AboutOverviewSection() {
 
   return (
     <section
-      className="h-screen lg:h-[600px] w-full bg-gradient-to-br from-white via-gray-50/80 to-white overflow-hidden flex flex-col lg:flex-row relative group"
+      className="h-[92svh] sm:h-screen lg:h-[600px] w-full bg-gradient-to-br from-white via-gray-50/80 to-white overflow-hidden flex flex-col lg:flex-row relative group"
       onKeyDown={handleKeyDown}
       tabIndex={0}
       aria-label="About IAER Overview Section"
@@ -491,27 +491,27 @@ export default function AboutOverviewSection() {
         >
 
           {/* Card 1: Overview & Intro */}
-          <div className="min-w-full h-full snap-center p-4 lg:p-8 flex items-start justify-center overflow-y-auto">
-            <div className="max-w-2xl w-full space-y-8">
-              <div className="space-y-6">
-                <div className="flex items-center gap-3 text-primary/80 mb-4">
-                  <Sparkles className="w-5 h-5" />
-                  <span className="text-sm font-bold uppercase tracking-wider">Who We Are</span>
+          <div className="min-w-full h-full snap-center p-3 sm:p-4 lg:p-8 flex items-start justify-center overflow-y-auto">
+            <div className="max-w-2xl w-full space-y-6 sm:space-y-8">
+              <div className="space-y-4 sm:space-y-6">
+                <div className="flex items-center gap-2 sm:gap-3 text-primary/80 mb-3 sm:mb-4">
+                  <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <span className="text-[12px] sm:text-sm font-bold uppercase tracking-wider">Who We Are</span>
                 </div>
-                <h3 className="text-3xl lg:text-4xl font-bold text-[#100902]">
+                <h3 className="text-[22px] sm:text-3xl lg:text-4xl font-bold text-[#100902]">
                   Bridging Academic Excellence with <span className="text-primary">Real-World Success</span>
                 </h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-[13px] sm:text-lg text-gray-700 leading-relaxed">
                   IAER (Institute of Advance Education & Research) has grown into a respected
                   multi-disciplinary institution known for its commitment to skill development, industry
                   integration, and practical learning.
                 </p>
-                <p className="text-base text-gray-600 leading-relaxed">
+                <p className="text-[12px] sm:text-base text-gray-600 leading-relaxed">
                   Since its inception, IAER has focused on delivering education that aligns with
                   real-world demands, ensuring that students graduate not only with academic
                   knowledge but also with hands-on competence.
                 </p>
-                <div className="pt-4">
+                <div className="pt-3 sm:pt-4">
                   <AutoScrollingDomains />
                 </div>
               </div>
@@ -519,13 +519,13 @@ export default function AboutOverviewSection() {
           </div>
 
           {/* Card 2: Stats & Impact */}
-          <div className="min-w-full h-full snap-center p-4 lg:p-8 flex items-start justify-center overflow-y-auto">
+          <div className="min-w-full h-full snap-center p-3 sm:p-4 lg:p-8 flex items-start justify-center overflow-y-auto">
             <div className="max-w-3xl w-full">
-              <div className="mb-8">
-                <span className="text-sm font-bold uppercase tracking-wider text-accent mb-2 block">Our Impact</span>
-                <h3 className="text-3xl font-bold text-[#100902]">Numbers That Speak</h3>
+              <div className="mb-5 sm:mb-8">
+                <span className="text-[12px] sm:text-sm font-bold uppercase tracking-wider text-accent mb-2 block">Our Impact</span>
+                <h3 className="text-[22px] sm:text-3xl font-bold text-[#100902]">Numbers That Speak</h3>
               </div>
-              <div className="grid gap-6 sm:grid-cols-2">
+              <div className="grid gap-4 sm:gap-6 sm:grid-cols-2">
                 {stats.map((stat, index) => (
                   <StatCard
                     key={stat.label}
@@ -542,16 +542,16 @@ export default function AboutOverviewSection() {
           </div>
 
           {/* Card 3: Highlights */}
-          <div className="min-w-full h-full snap-center p-4 lg:p-8 flex items-start justify-center overflow-y-auto">
+          <div className="min-w-full h-full snap-center p-3 sm:p-4 lg:p-8 flex items-start justify-center overflow-y-auto">
             <div className="max-w-3xl w-full">
-              <div className="mb-8 flex items-center justify-between">
+              <div className="mb-5 sm:mb-8 flex items-center justify-between">
                 <div>
-                  <span className="text-sm font-bold uppercase tracking-wider text-accent mb-2 block">Key Features</span>
-                  <h3 className="text-3xl font-bold text-[#100902]">Why Choose IAER?</h3>
+                  <span className="text-[12px] sm:text-sm font-bold uppercase tracking-wider text-accent mb-2 block">Key Features</span>
+                  <h3 className="text-[22px] sm:text-3xl font-bold text-[#100902]">Why Choose IAER?</h3>
                 </div>
                 <EducationExcellenceSVG className="w-32 h-32 hidden sm:block opacity-80" />
               </div>
-              <div className="grid sm:grid-cols-2 gap-4">
+              <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
                 {highlights.map((item, index) => (
                   <AnimatedListItem key={index} index={index} icon={item.icon}>
                     {item.text}
@@ -562,13 +562,13 @@ export default function AboutOverviewSection() {
           </div>
 
           {/* Card 4: Multi-Disciplinary */}
-          <div className="min-w-full h-full snap-center p-4 lg:p-8 flex items-start justify-center overflow-y-auto">
+          <div className="min-w-full h-full snap-center p-3 sm:p-4 lg:p-8 flex items-start justify-center overflow-y-auto">
             <div className="max-w-2xl w-full text-center">
-              <div className="inline-flex p-4 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 mb-8">
-                <Globe className="w-8 h-8 text-primary" />
+              <div className="inline-flex p-3 sm:p-4 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 mb-5 sm:mb-8">
+                <Globe className="w-7 h-7 sm:w-8 sm:h-8 text-primary" />
               </div>
-              <h3 className="text-3xl font-bold text-[#100902] mb-4">Multi-Disciplinary Excellence</h3>
-              <p className="text-lg text-gray-600 mb-8 max-w-xl mx-auto">
+              <h3 className="text-[22px] sm:text-3xl font-bold text-[#100902] mb-3 sm:mb-4">Multi-Disciplinary Excellence</h3>
+              <p className="text-[13px] sm:text-lg text-gray-600 mb-5 sm:mb-8 max-w-xl mx-auto">
                 IAER offers diverse programs across multiple domains, creating a rich learning
                 ecosystem where students can explore interdisciplinary opportunities.
               </p>
@@ -581,7 +581,7 @@ export default function AboutOverviewSection() {
         </div>
 
         {/* Scroll Indicators (Mobile/Overlay) */}
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10 lg:hidden">
+        <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10 lg:hidden">
           {cards.map((_, idx) => (
             <button
               key={idx}
@@ -597,21 +597,21 @@ export default function AboutOverviewSection() {
       </div>
 
       {/* Right Side: Static Header & Nav (Desktop) */}
-      <div className="w-full lg:w-[35%] xl:w-[30%] h-auto lg:h-full bg-white border-l border-gray-100 flex flex-col justify-center p-6 lg:p-10 relative z-20 shadow-[0_0_40px_-10px_rgba(0,0,0,0.1)] order-1 lg:order-2 shrink-0">
-        <div className="space-y-6">
+      <div className="w-full lg:w-[35%] xl:w-[30%] h-auto lg:h-full bg-white border-l border-gray-100 flex flex-col justify-center p-4 sm:p-6 lg:p-10 relative z-20 shadow-[0_0_40px_-10px_rgba(0,0,0,0.1)] order-1 lg:order-2 shrink-0">
+        <div className="space-y-4 sm:space-y-6">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 border border-primary/10 text-primary w-fit">
             <Sparkles className="w-3.5 h-3.5" />
             <span className="text-xs font-bold uppercase tracking-wider">Welcome to IAER</span>
           </div>
 
-          <h2 className="text-4xl lg:text-5xl font-bold text-[#100902] leading-tight">
+          <h2 className="text-[26px] sm:text-4xl lg:text-5xl font-bold text-[#100902] leading-tight">
             
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
                 About IAER
             </span>
           </h2>
 
-          <p className="text-gray-600 leading-relaxed text-sm lg:text-base">
+          <p className="text-gray-600 leading-relaxed text-[12px] sm:text-sm lg:text-base">
             Discover our journey of excellence, innovation, and student success.
             Swipe through to explore our legacy, impact, and vision.
           </p>

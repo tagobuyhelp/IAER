@@ -67,6 +67,12 @@ const sectionConfig = {
     { id: "about-awards", label: "Awards", icon: Trophy },
     { id: "about-isr", label: "ISR", icon: HeartHandshake },
   ],
+  "/programs": [
+    { id: "programs-hero", label: "Top", icon: Home },
+    { id: "programs-list", label: "Programs", icon: BookOpen },
+    { id: "programs-partners", label: "Partners", icon: Handshake },
+    { id: "programs-why", label: "Why IAER", icon: HelpCircle },
+  ],
   "/academics": [
     { id: "academics-overview", label: "Overview", icon: Info },
     { id: "academics-teaching-practices", label: "Teaching", icon: PenTool },

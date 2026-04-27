@@ -21,7 +21,7 @@ export default function HeroSection() {
     }, []);
 
     return (
-        <section className="relative h-[60vh] lg:h-[70vh] flex items-center justify-center overflow-hidden">
+        <section className="relative h-[44vh] min-h-[280px] sm:h-[52vh] lg:h-[70vh] flex items-center justify-center overflow-hidden">
             {/* Background Image Slider */}
             {heroImages.map((src, index) => (
                 <div
@@ -45,36 +45,36 @@ export default function HeroSection() {
             <div className="container mx-auto px-4 relative z-10">
                 <div className="max-w-4xl">
                     <RevealOnScroll>
-                        <span className="inline-block px-4 py-1.5 rounded-full bg-accent/20 text-accent font-semibold text-sm mb-6 border border-accent/30 backdrop-blur-sm">
+                        <span className="inline-block px-3 py-1 rounded-full bg-accent/20 text-accent font-semibold text-[11px] sm:text-sm mb-4 sm:mb-6 border border-accent/30 backdrop-blur-sm">
                             Career First Academic Model
                         </span>
                     </RevealOnScroll>
 
                     <RevealOnScroll delay={200}>
-                        <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                        <h1 className="text-[28px] sm:text-4xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
                             PLACEMENTS AT <span className="text-accent">IAER</span>
                         </h1>
                     </RevealOnScroll>
 
                     <RevealOnScroll delay={400}>
-                        <p className="text-xl lg:text-2xl text-gray-200 mb-8 font-light">
+                        <p className="text-[13px] sm:text-xl lg:text-2xl text-gray-200 mb-6 sm:mb-8 font-light">
                             Career Readiness • Industry Exposure • Placement Assistance
                         </p>
                     </RevealOnScroll>
 
                     <RevealOnScroll delay={600}>
-                        <div className="flex flex-wrap gap-4 text-white/80">
-                            <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg backdrop-blur-sm border border-white/10">
-                                <Briefcase className="w-5 h-5 text-accent" />
-                                <span className="text-sm font-medium">100% Assistance</span>
+                        <div className="flex flex-wrap gap-2 sm:gap-4 text-white/80">
+                            <div className="flex items-center gap-2 bg-white/10 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg backdrop-blur-sm border border-white/10">
+                                <Briefcase className="w-4 h-4 sm:w-5 sm:h-5 text-accent" />
+                                <span className="text-[11px] sm:text-sm font-medium">100% Assistance</span>
                             </div>
-                            <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg backdrop-blur-sm border border-white/10">
-                                <TrendingUp className="w-5 h-5 text-accent" />
-                                <span className="text-sm font-medium">Skill Training</span>
+                            <div className="flex items-center gap-2 bg-white/10 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg backdrop-blur-sm border border-white/10">
+                                <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 text-accent" />
+                                <span className="text-[11px] sm:text-sm font-medium">Skill Training</span>
                             </div>
-                            <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg backdrop-blur-sm border border-white/10">
-                                <Handshake className="w-5 h-5 text-accent" />
-                                <span className="text-sm font-medium">Industry Mentors</span>
+                            <div className="flex items-center gap-2 bg-white/10 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg backdrop-blur-sm border border-white/10">
+                                <Handshake className="w-4 h-4 sm:w-5 sm:h-5 text-accent" />
+                                <span className="text-[11px] sm:text-sm font-medium">Industry Mentors</span>
                             </div>
                         </div>
                     </RevealOnScroll>

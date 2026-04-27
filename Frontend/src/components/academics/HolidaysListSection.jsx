@@ -67,7 +67,7 @@ export default function HolidaysListSection() {
   };
 
   return (
-    <section id="holidays-list" className="relative py-16 bg-gray-300/50 overflow-hidden">
+    <section id="holidays-list" className="relative py-10 sm:py-14 lg:py-16 bg-gray-300/50 overflow-hidden">
       <div className="absolute inset-0 z-0 pointer-events-none">
               <Image
                 src="/images/academic/gazetted-holidays-2026.webp"
@@ -79,11 +79,11 @@ export default function HolidaysListSection() {
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-10">
-            <span className="text-accent font-semibold tracking-wide uppercase text-sm mb-2 block">
+          <div className="text-center mb-7 sm:mb-10">
+            <span className="text-accent font-semibold tracking-wide uppercase text-[11px] sm:text-sm mb-2 block">
               Annual Calendar
             </span>
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#100902] mb-6">
+            <h2 className="text-[22px] sm:text-3xl lg:text-4xl font-bold text-[#100902] mb-4 sm:mb-6">
               Gazetted Holidays 2026
             </h2>
 
@@ -97,7 +97,7 @@ export default function HolidaysListSection() {
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
                   className={cn(
-                    "px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 relative z-10",
+                    "px-4 sm:px-6 py-2 rounded-full text-[12px] sm:text-sm font-semibold transition-all duration-300 relative z-10",
                     activeTab === tab.id
                       ? "bg-white text-[#100902] shadow-sm"
                       : "text-gray-500 hover:text-gray-700"
@@ -110,30 +110,30 @@ export default function HolidaysListSection() {
           </div>
 
           {/* Content Grid */}
-          <div className="min-h-[400px]">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 animate-in fade-in slide-in-from-bottom-4 duration-500">
+          <div className="min-h-[340px] sm:min-h-[400px]">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 animate-in fade-in slide-in-from-bottom-4 duration-500">
               {holidays[activeTab].map((holiday) => (
                 <div
                   key={holiday.id}
-                  className="group bg-white border border-gray-100 rounded-xl p-5 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 relative overflow-hidden"
+                  className="group bg-white border border-gray-100 rounded-xl p-4 sm:p-5 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 relative overflow-hidden"
                 >
                   {/* Decorative Background Element */}
                   <div className={cn("absolute top-0 right-0 w-24 h-24 rounded-bl-full opacity-10 transition-transform group-hover:scale-110", holiday.bg.replace("bg-", "bg-current text-"))} />
                   
-                  <div className="flex items-start justify-between mb-4 relative z-10">
-                    <div className={cn("w-10 h-10 rounded-lg flex items-center justify-center", holiday.bg)}>
-                      <holiday.icon className={cn("w-5 h-5", holiday.color)} />
+                  <div className="flex items-start justify-between mb-3 sm:mb-4 relative z-10">
+                    <div className={cn("w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center", holiday.bg)}>
+                      <holiday.icon className={cn("w-4.5 h-4.5 sm:w-5 sm:h-5", holiday.color)} />
                     </div>
-                    <span className="text-xs font-medium px-2 py-1 bg-gray-50 text-gray-500 rounded-md border border-gray-100">
+                    <span className="text-[11px] sm:text-xs font-medium px-2 py-1 bg-gray-50 text-gray-500 rounded-md border border-gray-100">
                       {holiday.day}
                     </span>
                   </div>
                   
                   <div className="relative z-10">
-                    <h3 className="font-bold text-[#100902] text-lg mb-1 group-hover:text-accent transition-colors">
+                    <h3 className="font-bold text-[#100902] text-[13px] sm:text-base md:text-lg mb-1 group-hover:text-accent transition-colors">
                       {holiday.event}
                     </h3>
-                    <div className="flex items-center gap-2 text-sm text-gray-500">
+                    <div className="flex items-center gap-2 text-[12px] sm:text-sm text-gray-500">
                       <CalendarDays className="w-4 h-4" />
                       <span>{holiday.date}</span>
                     </div>
@@ -144,7 +144,7 @@ export default function HolidaysListSection() {
           </div>
 
           {/* Footer Note */}
-          <div className="mt-10 flex items-start gap-3 p-4 bg-orange-50/50 border border-orange-100 rounded-lg text-sm text-gray-600 max-w-2xl mx-auto">
+          <div className="mt-7 sm:mt-10 flex items-start gap-3 p-3 sm:p-4 bg-orange-50/50 border border-orange-100 rounded-lg text-[12px] sm:text-sm text-gray-600 max-w-2xl mx-auto">
             <Info className="w-5 h-5 text-orange-500 shrink-0 mt-0.5" />
             <p>
               <strong>Note:</strong> * Dates may change subject to the appearance of the moon. All other dates are subject to government notifications or institutional requirements.

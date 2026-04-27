@@ -117,13 +117,13 @@ function AutoScrollingLearningMethods() {
   ];
 
   return (
-    <div className="relative overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 p-4">
-      <div className="flex items-center gap-2 mb-3">
-        <Sparkles className="w-4 h-4 text-accent" aria-hidden="true" />
-        <span className="text-xs font-semibold text-white uppercase tracking-wide">Learning Methods</span>
+    <div className="relative overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 p-3 sm:p-4">
+      <div className="flex items-center gap-2 mb-2 sm:mb-3">
+        <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accent" aria-hidden="true" />
+        <span className="text-[11px] sm:text-xs font-semibold text-white uppercase tracking-wide">Learning Methods</span>
       </div>
       <div
-        className={cn("flex gap-4", !isPaused && "animate-scroll")}
+        className={cn("flex gap-3 sm:gap-4", !isPaused && "animate-scroll")}
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
         style={isPaused ? { animationPlayState: "paused" } : {}}
@@ -132,20 +132,20 @@ function AutoScrollingLearningMethods() {
         {methods.map((method, index) => (
           <div
             key={`first-${index}`}
-            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 shadow-sm whitespace-nowrap hover:shadow-md hover:border-accent/40 hover:bg-white/15 transition-all duration-300"
+            className="flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 shadow-sm whitespace-nowrap hover:shadow-md hover:border-accent/40 hover:bg-white/15 transition-all duration-300"
           >
-            <method.icon className="w-4 h-4 text-accent flex-shrink-0" aria-hidden="true" />
-            <span className="text-xs font-medium text-white">{method.text}</span>
+            <method.icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accent flex-shrink-0" aria-hidden="true" />
+            <span className="text-[11px] sm:text-xs font-medium text-white">{method.text}</span>
           </div>
         ))}
         {/* Duplicate set for seamless loop */}
         {methods.map((method, index) => (
           <div
             key={`second-${index}`}
-            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 shadow-sm whitespace-nowrap hover:shadow-md hover:border-accent/40 hover:bg-white/15 transition-all duration-300"
+            className="flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 shadow-sm whitespace-nowrap hover:shadow-md hover:border-accent/40 hover:bg-white/15 transition-all duration-300"
           >
-            <method.icon className="w-4 h-4 text-accent flex-shrink-0" aria-hidden="true" />
-            <span className="text-xs font-medium text-white">{method.text}</span>
+            <method.icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accent flex-shrink-0" aria-hidden="true" />
+            <span className="text-[11px] sm:text-xs font-medium text-white">{method.text}</span>
           </div>
         ))}
       </div>
@@ -165,7 +165,7 @@ function FeatureCard({ icon: Icon, title, description, delay = 0, index }) {
     <div
       ref={ref}
       className={cn(
-        "rounded-2xl border-2 border-white/10 bg-white/5 backdrop-blur-sm p-6 text-left transition-all duration-500",
+        "rounded-2xl border-2 border-white/10 bg-white/5 backdrop-blur-sm p-4 sm:p-6 text-left transition-all duration-500",
         "hover:-translate-y-2 hover:border-accent/60 hover:bg-white/10 hover:shadow-[0_0_30px_rgba(247,148,30,0.2)]",
         inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
       )}
@@ -177,13 +177,13 @@ function FeatureCard({ icon: Icon, title, description, delay = 0, index }) {
     >
       <div
         className={cn(
-          "flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-accent/30 to-accent/20 mb-4 transition-all duration-300",
+          "flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-xl bg-gradient-to-br from-accent/30 to-accent/20 mb-3 sm:mb-4 transition-all duration-300",
           isHovered && "scale-110 rotate-3 shadow-lg shadow-accent/30"
         )}
       >
         <Icon
           className={cn(
-            "h-6 w-6 text-accent transition-all duration-300",
+            "h-5 w-5 sm:h-6 sm:w-6 text-accent transition-all duration-300",
             isHovered && "text-white scale-110"
           )}
           aria-hidden="true"
@@ -191,13 +191,13 @@ function FeatureCard({ icon: Icon, title, description, delay = 0, index }) {
       </div>
       <h3
         className={cn(
-          "text-base font-bold text-white mb-2 transition-colors duration-300",
+          "text-[13px] sm:text-base font-bold text-white mb-2 transition-colors duration-300",
           isHovered && "text-accent"
         )}
       >
         {title}
       </h3>
-      <p className="text-sm text-gray-300 leading-relaxed">{description}</p>
+      <p className="text-[12px] sm:text-sm text-gray-300 leading-relaxed">{description}</p>
     </div>
   );
 }
@@ -231,7 +231,7 @@ export default function PracticalEducationSection() {
   ];
 
   return (
-    <section className="relative py-14 lg:py-20 bg-[#100902] text-white overflow-hidden">
+    <section className="relative py-10 sm:py-14 lg:py-20 bg-[#100902] text-white overflow-hidden">
       <div className="absolute inset-0 z-0 pointer-events-none">
               <Image
                 src="/images/about/industry-about-bg-image.webp"
@@ -264,12 +264,12 @@ export default function PracticalEducationSection() {
             <div
               ref={headerRef}
               className={cn(
-                "inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-accent/20 to-accent/10 border border-accent/40 backdrop-blur-sm transition-all duration-500",
+                "inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-gradient-to-r from-accent/20 to-accent/10 border border-accent/40 backdrop-blur-sm transition-all duration-500",
                 headerInView ? "opacity-100 scale-100" : "opacity-0 scale-95"
               )}
             >
-              <Award className="w-4 h-4 text-accent" aria-hidden="true" />
-              <span className="text-xs font-bold tracking-wide uppercase text-white">
+              <Award className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accent" aria-hidden="true" />
+              <span className="text-[11px] sm:text-xs font-bold tracking-wide uppercase text-white">
                 Best Educational Institution for Skill-Based Learning
               </span>
             </div>
@@ -277,7 +277,7 @@ export default function PracticalEducationSection() {
           
           <h2
             className={cn(
-              "text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 text-center",
+              "text-[22px] sm:text-3xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 text-center",
               "bg-gradient-to-r from-white via-accent/90 to-white bg-clip-text text-transparent",
               headerInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             )}
@@ -287,7 +287,7 @@ export default function PracticalEducationSection() {
           </h2>
           <p
             className={cn(
-              "text-sm sm:text-base text-gray-200 leading-relaxed mb-4 text-justify",
+              "text-[12px] sm:text-sm md:text-base text-gray-200 leading-relaxed mb-3 sm:mb-4 text-justify",
               headerInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             )}
             style={{ transition: "all 0.6s ease-out 0.4s" }}
@@ -299,7 +299,7 @@ export default function PracticalEducationSection() {
           </p>
           <p
             className={cn(
-              "text-sm sm:text-base text-gray-300 leading-relaxed text-justify",
+              "text-[12px] sm:text-sm md:text-base text-gray-300 leading-relaxed text-justify",
               headerInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             )}
             style={{ transition: "all 0.6s ease-out 0.6s" }}
@@ -312,13 +312,13 @@ export default function PracticalEducationSection() {
 
         {/* Auto-scrolling Learning Methods */}
         <RevealOnScroll delay={100}>
-          <div className="mt-10 max-w-5xl mx-auto">
+          <div className="mt-7 sm:mt-10 max-w-5xl mx-auto">
             <AutoScrollingLearningMethods />
           </div>
         </RevealOnScroll>
 
         {/* Features Grid */}
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
+        <div className="mt-7 sm:mt-10 grid gap-4 sm:gap-6 md:grid-cols-3">
           {features.map((feature, index) => (
             <FeatureCard
               key={feature.title}
@@ -335,21 +335,21 @@ export default function PracticalEducationSection() {
 
         {/* Additional Info Card */}
         <RevealOnScroll delay={500}>
-          <div className="mt-10 max-w-4xl mx-auto rounded-2xl bg-gradient-to-br from-accent/20 via-accent/10 to-primary/20 backdrop-blur-sm border-2 border-accent/30 p-6 lg:p-8 text-white shadow-xl hover:shadow-2xl hover:border-accent/50 transition-all duration-500">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 rounded-xl bg-white/20 backdrop-blur-sm border border-white/20">
-                <Rocket className="w-6 h-6 text-accent" aria-hidden="true" />
+          <div className="mt-7 sm:mt-10 max-w-4xl mx-auto rounded-2xl bg-gradient-to-br from-accent/20 via-accent/10 to-primary/20 backdrop-blur-sm border-2 border-accent/30 p-4 sm:p-6 lg:p-8 text-white shadow-xl hover:shadow-2xl hover:border-accent/50 transition-all duration-500">
+            <div className="flex items-center gap-3 mb-3 sm:mb-4">
+              <div className="p-2.5 sm:p-3 rounded-xl bg-white/20 backdrop-blur-sm border border-white/20">
+                <Rocket className="w-5 h-5 sm:w-6 sm:h-6 text-accent" aria-hidden="true" />
               </div>
-              <h3 className="text-xl font-bold">Real-World Preparedness</h3>
+              <h3 className="text-base sm:text-xl font-bold">Real-World Preparedness</h3>
             </div>
-            <p className="text-sm leading-relaxed text-gray-200 mb-4 text-justify">
+            <p className="text-[12px] sm:text-sm leading-relaxed text-gray-200 mb-3 sm:mb-4 text-justify">
               Our practical education approach ensures students are not just academically qualified
               but also industry-ready, equipped with hands-on experience and real-world problem-solving
               skills that employers value.
             </p>
             <div className="flex items-center gap-2 pt-4 border-t border-white/20">
               <Star className="w-4 h-4 text-accent" aria-hidden="true" />
-              <span className="text-xs text-gray-300">Building Tomorrow&apos;s Professionals</span>
+              <span className="text-[11px] sm:text-xs text-gray-300">Building Tomorrow&apos;s Professionals</span>
             </div>
           </div>
         </RevealOnScroll>

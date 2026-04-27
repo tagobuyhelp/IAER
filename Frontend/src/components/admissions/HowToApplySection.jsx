@@ -52,7 +52,7 @@ export default function HowToApplySection() {
     ];
 
     return (
-        <section id="admissions-apply" className="py-16 lg:py-24 bg-[#100902] relative overflow-hidden">
+        <section id="admissions-apply" className="py-10 sm:py-14 lg:py-24 bg-[#100902] relative overflow-hidden">
             <div className="absolute inset-0 z-0 pointer-events-none">
                 <Image
                     src="/images/admissions/Assisting_with_online_applications_in_office.png"
@@ -64,46 +64,46 @@ export default function HowToApplySection() {
             </div>
             <div className="container mx-auto px-4 relative z-10">
                 <div className="max-w-6xl mx-auto">
-                    <div className="text-center mb-16">
-                        <span className="text-accent font-semibold tracking-wide uppercase text-sm mb-2 block">
+                    <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+                        <span className="text-accent font-semibold tracking-wide uppercase text-[11px] sm:text-sm mb-2 block">
                             Application Process
                         </span>
-                        <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+                        <h2 className="text-[22px] sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6">
                             How to Apply
                         </h2>
-                        <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+                        <p className="text-[12px] sm:text-sm md:text-base lg:text-lg text-gray-400 max-w-3xl mx-auto">
                             IAER follows a simple, secure, and fully online application process. Follow these 6 steps to start your journey.
                         </p>
                     </div>
 
                     {/* Mobile: Horizontal Scroll, Desktop: Grid */}
-                    <div className="flex items-stretch md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-6 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 scroll-smooth scrollbar-none relative">
+                    <div className="flex items-stretch md:grid md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-4 sm:pb-6 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 scroll-smooth scrollbar-none relative">
                         {/* Connecting Line (Desktop Only) */}
                         <div className="hidden lg:block absolute top-12 left-[16%] right-[16%] h-0.5 bg-white/10 -z-10 dashed-line"></div>
 
                         {steps.map((step, idx) => (
                             <div 
                                 key={idx} 
-                                className="min-w-[85vw] md:min-w-0 snap-center md:snap-align-none relative bg-white/5 backdrop-blur-sm p-6 md:p-8 rounded-2xl border border-white/10 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group flex flex-col h-full hover:bg-white/10"
+                                className="min-w-[82vw] md:min-w-0 snap-center md:snap-align-none relative bg-white/5 backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-2xl border border-white/10 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group flex flex-col h-full hover:bg-white/10"
                             >
-                                <div className={cn("w-16 h-16 rounded-2xl flex items-center justify-center mb-6 mx-auto transition-transform group-hover:scale-110 shadow-sm shrink-0 bg-white/10", step.color)}>
-                                    <step.icon className={cn("w-8 h-8", step.color)} />
+                                <div className={cn("w-12 h-12 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center mb-4 sm:mb-6 mx-auto transition-transform group-hover:scale-110 shadow-sm shrink-0 bg-white/10", step.color)}>
+                                    <step.icon className={cn("w-6 h-6 sm:w-8 sm:h-8", step.color)} />
                                 </div>
                                 <div className="text-center flex-grow flex flex-col">
-                                    <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-accent text-white text-sm font-bold mb-4 shadow-md mx-auto">
+                                    <div className="inline-flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-accent text-white text-[12px] sm:text-sm font-bold mb-3 sm:mb-4 shadow-md mx-auto">
                                         {idx + 1}
                                     </div>
-                                    <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
-                                    <p className="text-sm text-gray-400 leading-relaxed">{step.desc}</p>
+                                    <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-2 sm:mb-3">{step.title}</h3>
+                                    <p className="text-[12px] sm:text-sm text-gray-400 leading-relaxed">{step.desc}</p>
                                 </div>
                             </div>
                         ))}
                     </div>
 
-                    <div className="mt-12 bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 flex flex-col md:flex-row items-center justify-between gap-6">
-                        <div className="flex items-start gap-4">
-                            <Info className="w-6 h-6 text-accent shrink-0 mt-1" />
-                            <div className="text-sm text-gray-300">
+                    <div className="mt-7 sm:mt-10 md:mt-12 bg-white/5 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6">
+                        <div className="flex items-start gap-3 sm:gap-4">
+                            <Info className="w-5 h-5 sm:w-6 sm:h-6 text-accent shrink-0 mt-1" />
+                            <div className="text-[12px] sm:text-sm text-gray-300">
                                 <p className="font-semibold text-white mb-1">Important Note:</p>
                                 <p>Applications can be saved and completed later. Keep your login credentials confidential. All updates will be sent to your registered email.</p>
                             </div>
@@ -112,7 +112,7 @@ export default function HowToApplySection() {
                             href="https://admission.iaer.ac.in/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="shrink-0 px-8 py-3 bg-accent text-white font-bold rounded-lg hover:bg-accent/90 transition-all shadow-md hover:shadow-lg whitespace-nowrap shadow-accent/20 flex items-center justify-center"
+                            className="shrink-0 px-6 sm:px-8 h-10 sm:h-11 bg-accent text-white font-bold rounded-lg hover:bg-accent/90 transition-all shadow-md hover:shadow-lg whitespace-nowrap shadow-accent/20 flex items-center justify-center text-sm sm:text-base"
                         >
                             Apply Online Now
                         </Link>

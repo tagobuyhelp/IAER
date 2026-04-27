@@ -36,45 +36,45 @@ export default function ScholarshipsSection() {
     ];
 
     return (
-        <section id="admissions-scholarships" className="py-16 lg:py-24 bg-white relative overflow-hidden">
+        <section id="admissions-scholarships" className="py-10 sm:py-14 lg:py-24 bg-white relative overflow-hidden">
              {/* Decorative Background */}
              <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3 pointer-events-none" />
 
             <div className="container mx-auto px-4 relative z-10">
                 <div className="max-w-6xl mx-auto">
-                    <div className="text-center mb-16">
-                        <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-semibold mb-4">
-                            <Sparkles className="w-4 h-4" />
+                    <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+                        <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-[11px] sm:text-sm font-semibold mb-3 sm:mb-4">
+                            <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                             Financial Aid
                         </span>
-                        <h2 className="text-3xl lg:text-4xl font-bold text-[#100902] mb-6">
+                        <h2 className="text-[22px] sm:text-3xl lg:text-4xl font-bold text-[#100902] mb-4 sm:mb-6">
                             IAER Scholarships
                         </h2>
-                        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                        <p className="text-[12px] sm:text-sm md:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
                             We believe financial constraints should not hinder talent. IAER offers various scholarship programs to recognize merit and support deserving students.
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                         {scholarships.map((s, i) => (
-                            <div key={i} className="group bg-white p-4 rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                                <div className={cn("w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:rotate-6", s.bg)}>
-                                    <s.icon className={cn("w-7 h-7", s.color)} />
+                            <div key={i} className="group bg-white p-4 sm:p-5 rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                                <div className={cn("w-11 h-11 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center mb-4 sm:mb-6 transition-transform group-hover:rotate-6", s.bg)}>
+                                    <s.icon className={cn("w-5 h-5 sm:w-7 sm:h-7", s.color)} />
                                 </div>
-                                <h3 className="text-xl font-bold text-[#100902] mb-3 group-hover:text-accent transition-colors">{s.title}</h3>
-                                <p className="text-sm text-gray-600 leading-relaxed">{s.desc}</p>
+                                <h3 className="text-[13px] sm:text-base md:text-lg font-bold text-[#100902] mb-2 sm:mb-3 group-hover:text-accent transition-colors">{s.title}</h3>
+                                <p className="text-[11px] sm:text-sm text-gray-600 leading-relaxed">{s.desc}</p>
                             </div>
                         ))}
                     </div>
 
-                    <div className="mt-12 p-8 bg-[#100902] rounded-2xl text-white text-center relative overflow-hidden">
+                    <div className="mt-7 sm:mt-10 md:mt-12 p-4 sm:p-6 md:p-8 bg-[#100902] rounded-2xl text-white text-center relative overflow-hidden">
                          <div className="absolute inset-0 bg-[url('/images/grid-pattern.png')] opacity-[0.05]"></div>
                          <div className="relative z-10">
-                            <h4 className="text-xl font-bold mb-3">Check Your Eligibility</h4>
-                            <p className="text-gray-400 max-w-2xl mx-auto text-sm mb-6">
+                            <h4 className="text-base sm:text-lg md:text-xl font-bold mb-2 sm:mb-3">Check Your Eligibility</h4>
+                            <p className="text-gray-400 max-w-2xl mx-auto text-[12px] sm:text-sm md:text-base mb-4 sm:mb-6">
                                 Scholarship availability and amounts are subject to institute policy and intake cycles. Contact our admissions office for the latest details.
                             </p>
-                            <a href="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-white font-semibold rounded-lg hover:bg-accent/90 transition-all">
+                            <a href="/contact" className="inline-flex items-center gap-2 px-5 sm:px-6 h-10 sm:h-11 bg-accent text-white font-semibold rounded-lg hover:bg-accent/90 transition-all text-sm sm:text-base">
                                 Contact Admissions
                             </a>
                          </div>

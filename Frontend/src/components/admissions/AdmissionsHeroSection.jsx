@@ -81,7 +81,7 @@ function AutoScrollingStats() {
     return (
         <div className="relative overflow-hidden">
             <div
-                className={cn("flex gap-6", !isPaused && "animate-scroll")}
+                className={cn("flex gap-3 sm:gap-6", !isPaused && "animate-scroll")}
                 onMouseEnter={() => setIsPaused(true)}
                 onMouseLeave={() => setIsPaused(false)}
                 style={isPaused ? { animationPlayState: "paused" } : {}}
@@ -90,20 +90,20 @@ function AutoScrollingStats() {
                 {stats.map((stat, index) => (
                     <div
                         key={`first-${index}`}
-                        className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 whitespace-nowrap"
+                        className="flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 whitespace-nowrap"
                     >
-                        <stat.icon className="w-4 h-4 text-accent flex-shrink-0" aria-hidden="true" />
-                        <span className="text-xs font-medium text-gray-300">{stat.text}</span>
+                        <stat.icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accent flex-shrink-0" aria-hidden="true" />
+                        <span className="text-[11px] sm:text-xs font-medium text-gray-300">{stat.text}</span>
                     </div>
                 ))}
                 {/* Duplicate set for seamless loop */}
                 {stats.map((stat, index) => (
                     <div
                         key={`second-${index}`}
-                        className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 whitespace-nowrap"
+                        className="flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 whitespace-nowrap"
                     >
-                        <stat.icon className="w-4 h-4 text-accent flex-shrink-0" aria-hidden="true" />
-                        <span className="text-xs font-medium text-gray-300">{stat.text}</span>
+                        <stat.icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accent flex-shrink-0" aria-hidden="true" />
+                        <span className="text-[11px] sm:text-xs font-medium text-gray-300">{stat.text}</span>
                     </div>
                 ))}
             </div>
@@ -173,7 +173,7 @@ export default function AdmissionsHeroSection() {
     }, []);
 
     return (
-        <section className="relative  overflow-hidden min-h-[500px] flex items-center pt-20 pb-12 lg:pt-24 lg:pb-16">
+        <section className="relative overflow-hidden min-h-[380px] sm:min-h-[460px] flex items-center pt-16 sm:pt-20 pb-8 sm:pb-12 lg:pt-24 lg:pb-16">
             {/* Background Effects */}
             <div className="absolute inset-0 z-0">
                 {bgImages.map((img, index) => (
@@ -202,13 +202,13 @@ export default function AdmissionsHeroSection() {
             </div>
 
             <div className="container mx-auto px-4 relative z-10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-7 sm:gap-12 lg:gap-20 items-center">
                     {/* Left Content */}
                     <div className="max-w-2xl">
                         <div
                             ref={badgeRef}
                             className={cn(
-                                "inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-6 transition-all duration-700 transform",
+                                "inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-4 sm:mb-6 transition-all duration-700 transform",
                                 badgeInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                             )}
                         >
@@ -221,7 +221,7 @@ export default function AdmissionsHeroSection() {
                         <h1
                             ref={titleRef}
                             className={cn(
-                                "text-4xl lg:text-6xl font-bold text-white leading-[1.1] mb-6 transition-all duration-700 delay-100 transform",
+                                "text-[28px] sm:text-4xl lg:text-6xl font-bold text-white leading-[1.1] mb-4 sm:mb-6 transition-all duration-700 delay-100 transform",
                                 titleInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                             )}
                         >
@@ -234,32 +234,32 @@ export default function AdmissionsHeroSection() {
                         <p
                             ref={descRef}
                             className={cn(
-                                "text-lg text-gray-400 mb-6 leading-relaxed max-w-xl transition-all duration-700 delay-200 transform",
+                                "text-[12px] sm:text-base lg:text-lg text-gray-400 mb-5 sm:mb-6 leading-relaxed max-w-xl transition-all duration-700 delay-200 transform",
                                 descInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                             )}
                         >
                             Join a community of innovators and leaders. Our industry-aligned programs are designed to launch your career on a global trajectory.
                         </p>
 
-                        <div className="flex flex-wrap gap-4 mb-8">
+                        <div className="flex flex-wrap gap-3 sm:gap-4 mb-6 sm:mb-8">
                             <Link
                                 href="https://admission.iaer.ac.in/"
                                 target="_blank"
-                                className="px-8 py-4 bg-accent hover:bg-accent/90 text-white font-bold rounded-xl transition-all shadow-lg shadow-accent/20 hover:shadow-accent/30 hover:-translate-y-1"
+                                className="px-5 sm:px-8 h-11 sm:h-12 bg-accent hover:bg-accent/90 text-white font-bold rounded-xl transition-all shadow-lg shadow-accent/20 hover:shadow-accent/30 hover:-translate-y-1 text-sm sm:text-base inline-flex items-center"
                             >
                                 Apply Now
                             </Link>
                             <Link
                                 href="#admissions-overview"
-                                className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-semibold rounded-xl border border-white/10 transition-all hover:-translate-y-1"
+                                className="px-5 sm:px-8 h-11 sm:h-12 bg-white/5 hover:bg-white/10 text-white font-semibold rounded-xl border border-white/10 transition-all hover:-translate-y-1 text-sm sm:text-base inline-flex items-center"
                             >
                                 Learn More
                             </Link>
                         </div>
 
                         {/* Stats Carousel */}
-                        <div className="border-t border-white/10 pt-6">
-                            <p className="text-xs text-gray-500 font-medium uppercase tracking-wider mb-3">
+                        <div className="border-t border-white/10 pt-4 sm:pt-6">
+                            <p className="text-[11px] sm:text-xs text-gray-500 font-medium uppercase tracking-wider mb-2 sm:mb-3">
                                 Why Choose IAER
                             </p>
                             <AutoScrollingStats />

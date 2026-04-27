@@ -36,7 +36,7 @@ const HeroSection = () => {
     ];
 
     return (
-        <section className="relative py-12 lg:py-28 overflow-hidden bg-[#100902]">
+        <section className="relative py-8 sm:py-10 lg:py-28 overflow-hidden bg-[#100902]">
             {/* Background Elements */}
             <div className="absolute inset-0 z-0 pointer-events-none">
                 <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4" />
@@ -45,48 +45,48 @@ const HeroSection = () => {
             </div>
 
             <div className="container mx-auto px-4 relative z-10">
-                <div className="grid lg:grid-cols-2 gap-8 lg:gap-20 items-center">
+                <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-20 items-center">
                     {/* Text Content */}
                     <div ref={ref} className="max-w-3xl">
                         <RevealOnScroll>
-                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent font-medium text-sm mb-4 lg:mb-6 border border-accent/20">
-                                <Sparkles className="w-4 h-4" />
+                            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/10 text-accent font-medium text-[11px] sm:text-sm mb-3 sm:mb-4 lg:mb-6 border border-accent/20">
+                                <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                                 <span>Innovating for the Future</span>
                             </div>
                         </RevealOnScroll>
 
                         <RevealOnScroll delay={200}>
-                            <h1 className="text-3xl lg:text-5xl font-bold text-white leading-tight mb-4 lg:mb-6">
+                            <h1 className="text-[26px] sm:text-3xl lg:text-5xl font-bold text-white leading-tight mb-3 sm:mb-4 lg:mb-6">
                                 Research & <span className="text-accent">Innovation</span> at IAER
                             </h1>
                         </RevealOnScroll>
 
                         <RevealOnScroll delay={400}>
-                            <p className="text-base lg:text-lg text-gray-300 leading-relaxed mb-6 lg:mb-8 max-w-xl">
+                            <p className="text-[12px] sm:text-base lg:text-lg text-gray-300 leading-relaxed mb-4 sm:mb-6 lg:mb-8 max-w-xl">
                                 Fostering a dynamic ecosystem of discovery, entrepreneurship, and technological advancement. We empower minds to solve global challenges through cutting-edge research and incubation.
                             </p>
                         </RevealOnScroll>
 
                         <RevealOnScroll delay={600}>
-                            <div className="flex flex-wrap gap-3 lg:gap-4 mb-8 lg:mb-12">
-                                <button className="px-6 py-3 lg:px-8 lg:py-4 bg-accent text-white rounded-xl font-bold shadow-lg shadow-accent/20 hover:bg-accent/90 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center gap-2 text-sm lg:text-base">
+                            <div className="flex flex-wrap gap-2.5 sm:gap-3 lg:gap-4 mb-6 sm:mb-8 lg:mb-12">
+                                <button className="px-4 sm:px-6 lg:px-8 h-10 sm:h-11 lg:h-12 bg-accent text-white rounded-xl font-bold shadow-lg shadow-accent/20 hover:bg-accent/90 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center gap-2 text-xs sm:text-sm lg:text-base">
                                     Explore Projects <TrendingUp className="w-4 h-4 lg:w-5 lg:h-5" />
                                 </button>
-                                <button className="px-6 py-3 lg:px-8 lg:py-4 bg-transparent text-white border-2 border-white/10 rounded-xl font-bold hover:bg-white/5 hover:border-white/20 hover:-translate-y-1 transition-all duration-300 text-sm lg:text-base">
+                                <button className="px-4 sm:px-6 lg:px-8 h-10 sm:h-11 lg:h-12 bg-transparent text-white border-2 border-white/10 rounded-xl font-bold hover:bg-white/5 hover:border-white/20 hover:-translate-y-1 transition-all duration-300 text-xs sm:text-sm lg:text-base">
                                     Incubation Center
                                 </button>
                             </div>
                         </RevealOnScroll>
 
                         <RevealOnScroll delay={800}>
-                            <div className="grid grid-cols-3 gap-4 lg:gap-6 pt-6 lg:pt-8 border-t border-white/10">
+                            <div className="grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6 pt-4 sm:pt-6 lg:pt-8 border-t border-white/10">
                                 {stats.map((stat, index) => (
                                     <div key={index} className="group">
                                         <div className="flex items-center gap-2 mb-1 lg:mb-2 text-gray-400 group-hover:text-accent transition-colors">
                                             <stat.icon className="w-4 h-4 lg:w-5 lg:h-5" />
                                             <span className="text-xs lg:text-sm font-medium">{stat.label}</span>
                                         </div>
-                                        <div className="text-xl lg:text-3xl font-bold text-white group-hover:scale-105 origin-left transition-transform">
+                                        <div className="text-lg sm:text-xl lg:text-3xl font-bold text-white group-hover:scale-105 origin-left transition-transform">
                                             {stat.value}
                                         </div>
                                     </div>
@@ -97,7 +97,7 @@ const HeroSection = () => {
 
                     {/* Image Slider */}
                     <div className={cn(
-                        "relative h-[280px] lg:h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 transition-all duration-1000 delay-300",
+                        "relative h-[220px] sm:h-[280px] lg:h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 transition-all duration-1000 delay-300",
                         inView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"
                     )}>
                         {sliderImages.map((src, index) => (
@@ -120,7 +120,7 @@ const HeroSection = () => {
                         ))}
                         
                         {/* Slider Indicators */}
-                        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+                        <div className="absolute bottom-3 sm:bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
                             {sliderImages.map((_, index) => (
                                 <button
                                     key={index}

@@ -37,7 +37,7 @@ function AwardItem({ award, index, delay = 0 }) {
     <div
       ref={ref}
       className={cn(
-        "group relative flex flex-col p-4 rounded-xl border border-gray-100 bg-white transition-all duration-300",
+        "group relative flex flex-col p-3 sm:p-4 rounded-xl border border-gray-100 bg-white transition-all duration-300",
         "hover:shadow-md hover:border-accent/30 hover:-translate-y-1",
         inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
       )}
@@ -45,17 +45,17 @@ function AwardItem({ award, index, delay = 0 }) {
     >
       <div className="flex justify-between items-start mb-3">
         <div className="p-2 rounded-lg bg-accent/5 text-accent group-hover:bg-accent/10 group-hover:scale-110 transition-all duration-300">
-          <Icon className="w-5 h-5" />
+          <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
         </div>
         <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full bg-gray-50 text-gray-500 border border-gray-100 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-colors">
           {award.year}
         </span>
       </div>
       
-      <h3 className="text-sm font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+      <h3 className="text-[13px] sm:text-sm font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
         {award.title}
       </h3>
-      <p className="text-xs text-gray-600 leading-relaxed flex-1">
+      <p className="text-[11px] sm:text-xs text-gray-600 leading-relaxed flex-1">
         {award.description}
       </p>
     </div>
@@ -97,7 +97,7 @@ export default function AwardsSection() {
   ];
 
   return (
-    <section className="py-12 bg-white relative overflow-hidden">
+    <section className="py-10 sm:py-12 bg-white relative overflow-hidden">
       
       {/* Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
@@ -112,24 +112,24 @@ export default function AwardsSection() {
           <div className="lg:col-span-8 space-y-6">
             {/* Header Section */}
             <RevealOnScroll>
-              <div className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm relative overflow-hidden">
+              <div className="bg-white rounded-xl border border-gray-100 p-4 sm:p-6 shadow-sm relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-full blur-2xl -mr-10 -mt-10" />
                 
                 <div className="flex flex-col sm:flex-row gap-5 items-start">
-                  <div className="flex-shrink-0 p-3 rounded-xl bg-gradient-to-br from-accent/10 to-primary/5 border border-accent/10">
-                    <Trophy className="w-8 h-8 text-accent" />
+                  <div className="flex-shrink-0 p-2.5 sm:p-3 rounded-xl bg-gradient-to-br from-accent/10 to-primary/5 border border-accent/10">
+                    <Trophy className="w-7 h-7 sm:w-8 sm:h-8 text-accent" />
                   </div>
                   <div className="relative z-10">
                     <div className="flex items-center gap-2 mb-2">
                       <Sparkles className="w-4 h-4 text-accent" />
-                      <span className="text-xs font-bold tracking-wide uppercase text-accent">
+                      <span className="text-[11px] sm:text-xs font-bold tracking-wide uppercase text-accent">
                         Awards & Rankings
                       </span>
                     </div>
-                    <h2 className="text-2xl font-bold text-gray-900 mb-3">
+                    <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 sm:mb-3">
                       Recognised for Excellence
                     </h2>
-                    <p className="text-sm text-gray-600 leading-relaxed max-w-2xl">
+                    <p className="text-[12px] sm:text-sm text-gray-600 leading-relaxed max-w-2xl">
                       IAER has been acknowledged by various platforms for its efforts in skill-based
                       learning, technology-enabled education, and industry-focused outcomes. These
                       recognitions reflect our consistent work towards employability and student success.
@@ -140,7 +140,7 @@ export default function AwardsSection() {
             </RevealOnScroll>
 
             {/* Awards Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               {awards.map((award, index) => (
                 <AwardItem
                   key={index}
@@ -156,7 +156,7 @@ export default function AwardsSection() {
           <div className="lg:col-span-4 space-y-4">
             {/* Stats Card */}
             <RevealOnScroll delay={300}>
-              <div className="bg-primary rounded-xl p-6 text-white shadow-md relative overflow-hidden">
+              <div className="bg-primary rounded-xl p-4 sm:p-6 text-white shadow-md relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-bl-full -mr-6 -mt-6" />
                 <div className="absolute bottom-0 left-0 w-20 h-20 bg-accent/20 rounded-tr-full -ml-6 -mb-6" />
                 
@@ -166,20 +166,20 @@ export default function AwardsSection() {
                     <h3 className="font-bold text-base">Key Achievements</h3>
                   </div>
                   
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-2 gap-3 sm:gap-4">
                     <div className="p-3 rounded-lg bg-white/10 backdrop-blur-sm border border-white/10">
-                      <div className="text-2xl font-bold text-accent mb-1">4+</div>
+                      <div className="text-xl sm:text-2xl font-bold text-accent mb-1">4+</div>
                       <div className="text-[10px] text-white/80 uppercase tracking-wide">Major Awards</div>
                     </div>
                     <div className="p-3 rounded-lg bg-white/10 backdrop-blur-sm border border-white/10">
-                      <div className="text-2xl font-bold text-accent mb-1">5+</div>
+                      <div className="text-xl sm:text-2xl font-bold text-accent mb-1">5+</div>
                       <div className="text-[10px] text-white/80 uppercase tracking-wide">Years Excellence</div>
                     </div>
                   </div>
                   
                   <div className="mt-4 pt-4 border-t border-white/10 flex items-center gap-2">
                      <Medal className="w-4 h-4 text-accent" />
-                     <p className="text-xs text-white/90 italic">
+                     <p className="text-[11px] sm:text-xs text-white/90 italic">
                        "Building Tomorrow's Leaders Today"
                      </p>
                   </div>
@@ -189,13 +189,13 @@ export default function AwardsSection() {
 
             {/* Badges/Images Grid */}
             <RevealOnScroll delay={400}>
-              <div className="bg-white rounded-xl border border-gray-100 p-5 shadow-sm">
+              <div className="bg-white rounded-xl border border-gray-100 p-4 sm:p-5 shadow-sm">
                 <div className="flex items-center gap-2 mb-4">
                   <Star className="w-4 h-4 text-primary" />
                   <h3 className="font-bold text-gray-900 text-sm">Media Recognition</h3>
                 </div>
                 
-                <div className="grid grid-cols-3 gap-3">
+                <div className="grid grid-cols-3 gap-2 sm:gap-3">
                   {awardBadges.map((badge, idx) => (
                     <div 
                       key={idx} 

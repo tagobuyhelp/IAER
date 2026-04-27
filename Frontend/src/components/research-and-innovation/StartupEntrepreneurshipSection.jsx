@@ -49,7 +49,7 @@ export default function StartupEntrepreneurshipSection() {
     ];
 
     return (
-        <section id="startup-entrepreneurship" className="py-20 bg-gray-50 relative overflow-hidden">
+        <section id="startup-entrepreneurship" className="py-10 sm:py-14 md:py-20 bg-gray-50 relative overflow-hidden">
             <div className="absolute inset-0 z-0 pointer-events-none">
                 <Image
                     src="/images/research-and-innovation/Student_founders_presenting_to_mentors.png"
@@ -63,25 +63,25 @@ export default function StartupEntrepreneurshipSection() {
 
             <div className="container mx-auto px-4 relative z-10">
                 <div className="max-w-6xl mx-auto">
-                    <div className="text-center mb-16">
-                        <span className="text-accent font-semibold tracking-wide uppercase text-sm mb-2 block">
+                    <div className="text-center mb-8 sm:mb-12 md:mb-16">
+                        <span className="text-accent font-semibold tracking-wide uppercase text-[11px] sm:text-sm mb-2 block">
                             Entrepreneurship
                         </span>
-                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                        <h2 className="text-[22px] sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
                             Startup & Entrepreneurship
                         </h2>
-                        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                        <p className="text-[12px] sm:text-sm md:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
                             We empower aspiring entrepreneurs to turn their innovative ideas into successful ventures through comprehensive support and resources.
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-3 gap-8">
+                    <div className="grid md:grid-cols-3 gap-5 sm:gap-8">
                         {sections.map((section, idx) => (
                             <div
                                 key={idx}
                                 className="bg-white rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-gray-100 flex flex-col h-full group overflow-hidden"
                             >
-                                <div className="relative h-56 md:h-72">
+                                <div className="relative h-44 sm:h-52 md:h-72">
                                     <Image
                                         src={section.image}
                                         alt={section.title}
@@ -90,17 +90,17 @@ export default function StartupEntrepreneurshipSection() {
                                         sizes="(max-width: 1024px) 100vw, 33vw"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                                    <div className="absolute left-6 bottom-6">
-                                        <div className={cn("w-14 h-14 rounded-2xl flex items-center justify-center border border-white/20 bg-white/10 backdrop-blur-md shadow-sm", section.bg)}>
-                                            <section.icon className={cn("w-7 h-7", section.color)} />
+                                    <div className="absolute left-4 bottom-4 sm:left-6 sm:bottom-6">
+                                        <div className={cn("w-11 h-11 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center border border-white/20 bg-white/10 backdrop-blur-md shadow-sm", section.bg)}>
+                                            <section.icon className={cn("w-5 h-5 sm:w-7 sm:h-7", section.color)} />
                                         </div>
                                     </div>
                                 </div>
-                                <div className="p-8 flex flex-col h-full">
-                                    <h3 className="text-xl font-bold text-gray-900 mb-4">{section.title}</h3>
-                                    <ul className="space-y-4 flex-grow">
+                                <div className="p-4 sm:p-6 md:p-8 flex flex-col h-full">
+                                    <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-3 sm:mb-4">{section.title}</h3>
+                                    <ul className="space-y-3 sm:space-y-4 flex-grow text-[12px] sm:text-sm md:text-base">
                                     {section.points.map((point, i) => (
-                                        <li key={i} className="flex gap-3 text-sm text-gray-600 leading-relaxed">
+                                        <li key={i} className="flex gap-3 text-gray-600 leading-relaxed">
                                             <span className={cn("mt-1.5 w-1.5 h-1.5 rounded-full shrink-0", section.bg.replace('bg-', 'bg-current text-').replace('50', '500'))} />
                                             <span>{point}</span>
                                         </li>
