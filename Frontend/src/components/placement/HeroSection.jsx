@@ -6,8 +6,8 @@ import RevealOnScroll from "@/components/RevealOnScroll";
 import { useState, useEffect } from "react";
 
 const heroImages = [
-    "/images/placement/placement-hero-banner-1.webp",
-    "/images/placement/placement-hero-banner-2.webp",
+    "/images/placement/placement-hero-banner-1.jpg",
+    "/images/placement/placement-hero-banner-2.jpg",
     "/images/placement/placement-mega-menu-photo.webp",
 ];
 
@@ -35,7 +35,6 @@ export default function HeroSection() {
                         src={src}
                         alt="Placements at IAER"
                         fill
-                        className="object-cover"
                         priority={index === 0}
                         sizes="100vw"
                     />
