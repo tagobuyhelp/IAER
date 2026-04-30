@@ -2,6 +2,7 @@
 
 import { Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
 
 // Custom WhatsApp Icon Component since Lucide doesn't have it
 const WhatsAppIcon = ({ className }) => (
@@ -16,12 +17,16 @@ const WhatsAppIcon = ({ className }) => (
 );
 
 export default function FloatingContactButtons() {
+  const pathname = usePathname();
+  const hideOnProgramDetail = pathname?.startsWith("/programs/") && pathname !== "/programs";
+  if (hideOnProgramDetail) return null;
+
   const phoneNumber = "+918001110000";
   const whatsappNumber = "+918100106665";
   const whatsappMessage = "Hi, I am interested in IAER programs.";
 
   return (
-    <div className="fixed left-4 bottom-20 lg:bottom-8 z-50 flex flex-col gap-4">
+    <div className="fixed left-4 bottom-32 lg:bottom-8 z-50 flex flex-col gap-4">
       {/* WhatsApp Button */}
       <a
         href={`https://wa.me/${whatsappNumber.replace(/\+/g, "")}?text=${encodeURIComponent(whatsappMessage)}`}

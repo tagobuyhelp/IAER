@@ -4,9 +4,13 @@ import { useState, useEffect } from "react";
 import { ArrowUp } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { usePathname } from "next/navigation";
 
 export default function BackToTop() {
   const [isVisible, setIsVisible] = useState(false);
+  const pathname = usePathname();
+  const hideOnProgramDetail = pathname?.startsWith("/programs/") && pathname !== "/programs";
+  if (hideOnProgramDetail) return null;
 
   useEffect(() => {
     const toggleVisibility = () => {
@@ -34,7 +38,7 @@ export default function BackToTop() {
       size="icon"
       onClick={scrollToTop}
       className={cn(
-        "fixed bottom-20 right-4 lg:bottom-8 lg:right-8 z-50 rounded-full bg-accent text-white border-none shadow-lg hover:bg-accent/90 hover:scale-110 transition-all duration-300",
+        "fixed bottom-32 right-4 lg:bottom-8 lg:right-8 z-50 rounded-full bg-accent text-white border-none shadow-lg hover:bg-accent/90 hover:scale-110 transition-all duration-300",
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"
       )}
       aria-label="Back to top"

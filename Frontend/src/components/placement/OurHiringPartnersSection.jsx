@@ -52,7 +52,7 @@ function LogoCard({ name, logo, tone = "light" }) {
   );
 }
 
-export default function OurHiringPartnersSection() {
+export default function OurHiringPartnersSection({ compact = false, className }) {
   const [reduceMotion, setReduceMotion] = useState(false);
 
   useEffect(() => {
@@ -69,9 +69,15 @@ export default function OurHiringPartnersSection() {
   }, []);
 
   return (
-    <section className="py-10 sm:py-12 md:py-16 bg-gradient-to-b from-white via-gray-50 to-white border-t border-gray-100 overflow-hidden">
+    <section
+      className={cn(
+        "bg-gradient-to-b from-white via-gray-50 to-white border-t border-gray-100 overflow-hidden",
+        compact ? "py-6 sm:py-8 md:py-10" : "py-10 sm:py-12 md:py-16",
+        className
+      )}
+    >
       <div className="container mx-auto px-4">
-        <div className="text-center mb-7 sm:mb-10 md:mb-12">
+        <div className={cn("text-center", compact ? "mb-5 sm:mb-6 md:mb-7" : "mb-7 sm:mb-10 md:mb-12")}>
           <div className="inline-flex items-center gap-2 rounded-full bg-white border border-gray-200 px-3 py-1 text-xs font-semibold text-gray-700 mb-3 shadow-sm">
             <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
             Trusted Network
@@ -90,7 +96,7 @@ export default function OurHiringPartnersSection() {
 
       <div className="relative">
 
-        <div className="space-y-4 sm:space-y-6 md:space-y-8">
+        <div className={cn(compact ? "space-y-3 sm:space-y-4 md:space-y-5" : "space-y-4 sm:space-y-6 md:space-y-8")}>
           <Marquee
             speed={reduceMotion ? 0 : 35}
             autoFill

@@ -34,7 +34,7 @@ export default function CareerModel() {
             year: "Final Phase",
             title: "Industry Immersion",
             icon: Briefcase,
-            image: "/images/placement/placement-Internships-Live-Projects.webp",
+            image: "/images/placement/File-338.webp",
             imageAlt: "Internships and live projects for industry immersion",
             items: [
                 "Structured internships & live projects",
