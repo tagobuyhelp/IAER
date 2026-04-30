@@ -10,9 +10,13 @@ export default function BackToTop() {
   const [isVisible, setIsVisible] = useState(false);
   const pathname = usePathname();
   const hideOnProgramDetail = pathname?.startsWith("/programs/") && pathname !== "/programs";
-  if (hideOnProgramDetail) return null;
 
   useEffect(() => {
+    if (hideOnProgramDetail) {
+      setIsVisible(false);
+      return;
+    }
+
     const toggleVisibility = () => {
       if (window.scrollY > 300) {
         setIsVisible(true);
@@ -21,9 +25,12 @@ export default function BackToTop() {
       }
     };
 
+    toggleVisibility();
     window.addEventListener("scroll", toggleVisibility);
     return () => window.removeEventListener("scroll", toggleVisibility);
-  }, []);
+  }, [hideOnProgramDetail]);
+
+  if (hideOnProgramDetail) return null;
 
   const scrollToTop = () => {
     window.scrollTo({
