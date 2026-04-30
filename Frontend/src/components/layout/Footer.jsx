@@ -31,7 +31,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 mb-10 sm:mb-14 md:mb-16 border-b border-white/5 pb-8 sm:pb-10 md:pb-12">
           <div className="lg:col-span-5 space-y-5 sm:space-y-6">
             <Link href="/" className="inline-block">
-              <img src="/images/logos/iaer-logo-white.png" alt="IAER Logo" className="h-12 sm:h-14 md:h-16 w-auto" />
+              <img src="/images/logos/iaer-new-logo-dark-bg-supported.png" alt="IAER Logo" className="h-12 sm:h-14 md:h-16 w-auto" />
             </Link>
             <p className="text-gray-400 leading-relaxed max-w-md text-[12px] sm:text-sm">
               Empowering the future through industry-driven education, global research, and innovation. Join us to shape your career with world-class opportunities.

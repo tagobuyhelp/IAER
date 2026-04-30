@@ -12,7 +12,7 @@ export default function StartupEntrepreneurshipSection() {
             icon: Rocket,
             color: "text-orange-600",
             bg: "bg-orange-50",
-            image: "/images/research-and-innovation/Collaborative_brainstorming_in_a_study_hub.png",
+            image: "/images/research-and-innovation/Incubation-Support.webp",
             points: [
                 "Dedicated co-working spaces with high-speed internet.",
                 "Access to advanced prototyping labs and testing facilities.",
@@ -25,7 +25,7 @@ export default function StartupEntrepreneurshipSection() {
             icon: Users,
             color: "text-blue-600",
             bg: "bg-blue-50",
-            image: "/images/research-and-innovation/Mentoring_in_the_research_room.png",
+            image: "/images/research-and-innovation/Mentorship-Network.webp",
             points: [
                 "1-on-1 sessions with successful startup founders.",
                 "Industry-specific guidance from corporate leaders.",
@@ -38,7 +38,7 @@ export default function StartupEntrepreneurshipSection() {
             icon: Coins,
             color: "text-emerald-600",
             bg: "bg-emerald-50",
-            image: "/images/research-and-innovation/Student_founders_presenting_to_mentors.png",
+            image: "/images/research-and-innovation/Funding-Opportunities.webp",
             points: [
                 "Access to seed funding and angel investor networks.",
                 "Assistance with government grant applications.",
@@ -52,7 +52,7 @@ export default function StartupEntrepreneurshipSection() {
         <section id="startup-entrepreneurship" className="py-10 sm:py-14 md:py-20 bg-gray-50 relative overflow-hidden">
             <div className="absolute inset-0 z-0 pointer-events-none">
                 <Image
-                    src="/images/research-and-innovation/Student_founders_presenting_to_mentors.png"
+                    src="/images/research-and-innovation/Entrepreneurship.webp"
                     alt="Student Founders Presenting"
                     fill
                     className="object-cover opacity-5"

@@ -72,7 +72,7 @@ export default function HeroSection() {
   }, [mobileStudentIndex]);
 
   return (
-    <section className="relative min-h-[520px] sm:min-h-[600px] lg:h-[calc(100vh-190px)] max-h-[900px] flex items-center py-4 sm:py-6 md:py-12 lg:py-16 overflow-hidden bg-[#0a0601]">
+    <section className="relative min-h-[520px] sm:min-h-[600px] lg:h-[calc(100vh-190px)] max-h-[900px] flex items-center py-4 sm:py-6 md:py-12 lg:py-16 overflow-hidden bg-[#143674]">
       {/* Dynamic Background System */}
       <div className="absolute inset-0 z-0">
         {bgImages.map((img, index) => (
@@ -94,8 +94,8 @@ export default function HeroSection() {
           </div>
         ))}
         {/* Overlays for readability and depth */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0a0601] via-[#0a0601]/80 to-transparent z-[1]" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0601] via-transparent to-transparent z-[1]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#143674] via-[#143674]/80 to-transparent z-[1]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#143674] via-transparent to-transparent z-[1]" />
         <div className="absolute inset-0 backdrop-blur-[2px] z-[0]" />
       </div>
 

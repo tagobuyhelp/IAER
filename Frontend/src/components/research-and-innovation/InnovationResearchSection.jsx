@@ -27,7 +27,7 @@ export default function InnovationResearchSection() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <Image
-          src="/images/research-and-innovation/Students_working_on_robotic_prototype.png"
+          src="/images/research-and-innovation/AI-Robotics.webp"
           alt="Innovation Lab Background"
           fill
           className="object-cover opacity-5"
@@ -86,7 +86,7 @@ export default function InnovationResearchSection() {
                     desc: "Developing intelligent systems and autonomous robots.",
                     color: "text-blue-600",
                     bg: "bg-blue-50",
-                    image: "/images/research-and-innovation/Students_working_on_robotic_prototype.png",
+                    image: "/images/research-and-innovation/AI-Robotics.webp",
                   },
                   {
                     icon: Leaf,
@@ -94,7 +94,7 @@ export default function InnovationResearchSection() {
                     desc: "Green energy solutions and eco-friendly materials.",
                     color: "text-green-600",
                     bg: "bg-green-50",
-                    image: "/images/research-and-innovation/Collaborative_brainstorming_in_a_study_hub.png",
+                    image: "/images/research-and-innovation/SustainableTech.webp",
                   },
                   {
                     icon: Cpu,
@@ -102,7 +102,7 @@ export default function InnovationResearchSection() {
                     desc: "Smart devices and connected infrastructure.",
                     color: "text-purple-600",
                     bg: "bg-purple-50",
-                    image: "/images/research-and-innovation/Research_revie_in_a_collaborative_workspace.png",
+                    image: "/images/research-and-innovation/IoT-Embedded.webp",
                   },
                   {
                     icon: FlaskConical,
@@ -110,7 +110,7 @@ export default function InnovationResearchSection() {
                     desc: "Advanced research in genetics and healthcare.",
                     color: "text-red-600",
                     bg: "bg-red-50",
-                    image: "/images/research-and-innovation/Students_working_in_advanced_research_lab.png",
+                    image: "/images/research-and-innovation/Biotechnology.webp",
                   },
                   {
                     icon: Globe,
@@ -118,7 +118,7 @@ export default function InnovationResearchSection() {
                     desc: "Big data analytics and predictive modeling.",
                     color: "text-cyan-600",
                     bg: "bg-cyan-50",
-                    image: "/images/research-and-innovation/Collaborative_discussion_in_a_research_lab.png",
+                    image: "/images/research-and-innovation/Data-Science.webp",
                   },
                   {
                     icon: Lightbulb,
@@ -126,7 +126,7 @@ export default function InnovationResearchSection() {
                     desc: "Business model innovation and market research.",
                     color: "text-yellow-600",
                     bg: "bg-yellow-50",
-                    image: "/images/research-and-innovation/Student_founders_presenting_to_mentors.png",
+                    image: "/images/research-and-innovation/Entrepreneurship.webp",
                   },
                 ].map((item, idx) => (
                   <div key={idx} className="group rounded-2xl border border-gray-100 hover:border-gray-200 hover:shadow-lg transition-all duration-300 bg-white overflow-hidden">
@@ -165,28 +165,28 @@ export default function InnovationResearchSection() {
                     title: "IoT & Smart Systems Lab",
                     desc: "Equipped with sensors, microcontrollers, and communication modules for building smart city solutions.",
                     tags: ["Arduino", "Raspberry Pi", "LoRaWAN"],
-                    image: "/images/research-and-innovation/Research_revie_in_a_collaborative_workspace.png",
+                    image: "/images/research-and-innovation/IoT-Embedded.webp",
                   },
                   {
                     icon: Printer,
                     title: "Makerspace & 3D Printing",
                     desc: "A creative space for rapid prototyping using 3D printers, laser cutters, and CNC machines.",
                     tags: ["Prototyping", "CAD Design", "Fabrication"],
-                    image: "/images/research-and-innovation/Students_working_on_robotic_prototype.png",
+                    image: "/images/research-and-innovation/SustainableTech.webp",
                   },
                   {
                     icon: Cpu,
                     title: "Advanced Computing Lab",
                     desc: "High-performance computing clusters for simulation, modeling, and AI training.",
                     tags: ["HPC", "GPU Clusters", "Simulation"],
-                    image: "/images/research-and-innovation/Collaborative_discussion_in_a_research_lab.png",
+                    image: "/images/research-and-innovation/Data-Science.webp",
                   },
                   {
                     icon: Bot,
                     title: "Robotics & Automation",
                     desc: "Industrial arms, drones, and mobile robots for research in automation and control.",
                     tags: ["ROS", "Automation", "Drones"],
-                    image: "/images/research-and-innovation/Students_working_in_advanced_research_lab.png",
+                    image: "/images/research-and-innovation/AI-Robotics.webp",
                   }
                 ].map((lab, idx) => (
                   <div key={idx} className="rounded-2xl bg-gray-50 border border-gray-100 hover:bg-white hover:shadow-md transition-all overflow-hidden">

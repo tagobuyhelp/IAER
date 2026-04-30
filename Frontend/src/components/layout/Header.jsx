@@ -43,10 +43,10 @@ export default function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-primary transition-all duration-300">
+      <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#143674] transition-all duration-300">
         <div className="container mx-auto px-4 h-20 flex items-center justify-between">
           <Link href="/" className="flex items-center shrink-0 mr-auto lg:mr-0">
-            <img src="/images/logos/iaer-logo-white.png" alt="IAER Logo" className="h-12 w-auto" />
+            <img src="/images/logos/iaer-new-logo-dark-bg-supported.png" alt="IAER Logo" className="h-12 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -61,7 +61,7 @@ export default function Header() {
                 <Link
                   href={item.href}
                   className={cn(
-                    "flex items-center px-4 py-2 text-sm font-bold tracking-wide rounded-full transition-all duration-200",
+                    "flex items-center px-2 py-2 text-sm font-bold tracking-wide rounded-full transition-all duration-200",
                     openDropdown === item.title
                       ? "text-accent bg-white/10"
                       : "text-white/80 hover:text-white hover:bg-white/10"
@@ -105,7 +105,7 @@ export default function Header() {
         {/* Mega Menu Container */}
         <div
           className={cn(
-            "absolute top-full left-0 w-full bg-[#0a0601]/95 backdrop-blur-xl border-t border-white/5 border-b border-white/10 shadow-2xl transition-all duration-300 ease-in-out overflow-hidden text-white",
+            "absolute top-full left-0 w-full bg-[#143674]/95 backdrop-blur-xl border-t border-white/5 border-b border-white/10 shadow-2xl transition-all duration-300 ease-in-out overflow-hidden text-white",
             openDropdown ? "max-h-[80vh] opacity-100 visible" : "max-h-0 opacity-0 invisible"
           )}
           onMouseEnter={() => {
@@ -218,7 +218,7 @@ export default function Header() {
       >
         <div className="flex items-center justify-between p-3 border-b border-white/10">
           <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center">
-            <img src="/images/logos/iaer-logo-white.png" alt="IAER Logo" className="h-10 w-auto" />
+            <img src="/images/logos/iaer-new-logo-dark-bg-supported.png" alt="IAER Logo" className="h-10 w-auto" />
           </Link>
           <button
             onClick={() => setIsOpen(false)}

@@ -533,7 +533,7 @@ export default function ProgramClient({ program }) {
                 </Button>
                 <div className="flex items-center justify-center gap-2 text-gray-600 text-[11px] sm:text-xs md:text-sm pt-1.5 md:pt-3">
                   <Phone className="w-3.5 h-3.5 md:w-4 md:h-4" /> 
-                  <span>Need help? Call +91 90070 30123</span>
+                  <span>Need help? Call 800 111 0000</span>
                 </div>
               </div>
 
@@ -558,7 +558,7 @@ export default function ProgramClient({ program }) {
       <div className="fixed bottom-0 left-0 right-0 z-50 p-3 sm:p-4 bg-[#0a0601]/95 backdrop-blur-lg border-t border-white/10 lg:hidden safe-area-bottom">
         <div className="flex gap-3">
           <a 
-            href={`tel:${program.contact?.phone || '+919007030123'}`}
+            href={`tel:${program.contact?.phone || '8001110000'}`}
             className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 sm:py-3 rounded-xl bg-white/5 border border-white/10 text-white font-medium active:bg-white/10 transition-colors"
           >
             <Phone className="w-4 h-4" />

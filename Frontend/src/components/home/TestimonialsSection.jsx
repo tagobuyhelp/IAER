@@ -7,32 +7,62 @@ import { useInView } from "react-intersection-observer";
 
 const stories = [
   {
-    name: "Shardul J.",
+    name: "Prayag Sarkar",
     course: "BCA",
-    highlight: "Top IT Recruiter",
+    highlight: "IT Career Launch",
     quote:
-      "IAER gave me industry-ready IT skills. The faculty, labs, and placement support helped me land a dream tech role.",
-    image: "/images/students/arjun.jpg",
+      "IAER helped me build strong fundamentals and project skills that translated directly into interviews and internships.",
+    image: "/images/students/Prayag-Sarkar.jpg",
     color: "bg-primary/20 border-primary/40",
     category: "IT",
   },
   {
-    name: "Anand B.",
-    course: "BBA-AHSM",
+    name: "Joyce Prerona Bose",
+    course: "BBA-HM",
     highlight: "International Aviation & Hospitality",
     quote:
-      "My hospitality journey transformed at IAER. The Airport visits, Cabin Crew exposure with global training set me up for success.",
-    image: "/images/students/rohan.jpg",
+      "The practical exposure, industry visits, and soft-skill training at IAER made me confident and job-ready.",
+    image: "/images/students/Joyce-Prerona-Bose.JPG",
     color: "bg-accent/20 border-accent/40",
     category: "Hospitality & Aviation",
   },
   {
-    name: "Arshdeep S.",
+    name: "Wasim Akram",
     course: "BMLT",
     highlight: "Healthcare Placement",
     quote:
-      "From clinical labs to real hospital rotations, IAER shaped my confidence and competence in healthcare practice.",
-    image: "/images/students/Sharma-Arshdeep.jpg",
+      "From lab sessions to hands-on training, IAER helped me develop real clinical confidence and discipline.",
+    image: "/images/students/Wasim-Akram.jpg",
+    color: "bg-emerald-900/40 border-emerald-400/60",
+    category: "Healthcare",
+  },
+  {
+    name: "Surajit Basak",
+    course: "BCA",
+    highlight: "Hands-on Learning",
+    quote:
+      "The assignments and real projects pushed me to learn beyond the syllabus and build a portfolio I could show employers.",
+    image: "/images/students/Surajit-Basak.jpg",
+    color: "bg-primary/20 border-primary/40",
+    category: "IT",
+  },
+  {
+    name: "Amanjit Singh",
+    course: "BBA-HM",
+    highlight: "Industry Exposure",
+    quote:
+      "IAER’s training and industry engagement helped me understand how hospitality works in real settings, not just in classrooms.",
+    image: "/images/students/Amanjit-Singn.jpg",
+    color: "bg-accent/20 border-accent/40",
+    category: "Hospitality & Aviation",
+  },
+  {
+    name: "Priyanka S.",
+    course: "BMLT",
+    highlight: "Practical Training",
+    quote:
+      "The lab infrastructure and guided practice sessions helped me build accuracy and confidence in healthcare workflows.",
+    image: "/images/students/DSC_7936.JPG",
     color: "bg-emerald-900/40 border-emerald-400/60",
     category: "Healthcare",
   },
@@ -205,7 +235,7 @@ export default function TestimonialsSection() {
                       src={story.image}
                       alt={story.name}
                       fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      className=" transition-transform duration-700 group-hover:scale-110"
                       sizes="(max-width: 640px) 280px, (max-width: 768px) 320px, 360px"
                     />
                     {/* Overlays */}

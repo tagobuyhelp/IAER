@@ -35,7 +35,7 @@ function LogoCard({ name, logo, tone = "light" }) {
   return (
     <div
       className={cn(
-        "mx-3 md:mx-4 w-[140px] h-[70px] md:w-[170px] md:h-[85px]   flex items-center justify-center overflow-hidden transition-all duration-300",
+        "mx-3 md:mx-4 w-[130px] h-[64px] md:w-[160px] md:h-[78px] flex items-center justify-center overflow-hidden transition-all duration-300",
         
       )}
     >
@@ -69,20 +69,20 @@ export default function OurHiringPartnersSection() {
   }, []);
 
   return (
-    <section className="py-14 md:py-20 bg-gradient-to-b from-white via-gray-50 to-white border-t border-gray-100 overflow-hidden">
+    <section className="py-10 sm:py-12 md:py-16 bg-gradient-to-b from-white via-gray-50 to-white border-t border-gray-100 overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-10 md:mb-14">
+        <div className="text-center mb-7 sm:mb-10 md:mb-12">
           <div className="inline-flex items-center gap-2 rounded-full bg-white border border-gray-200 px-3 py-1 text-xs font-semibold text-gray-700 mb-3 shadow-sm">
             <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
             Trusted Network
           </div>
-          <h2 className="text-2xl md:text-4xl font-black text-gray-900 flex items-center justify-center gap-3">
+          <h2 className="text-xl sm:text-2xl md:text-4xl font-black text-gray-900 flex items-center justify-center gap-3">
             <span className="inline-flex items-center justify-center w-10 h-10 rounded-2xl bg-emerald-50 border border-emerald-100">
               <Handshake className="w-5 h-5 text-emerald-700" />
             </span>
             Our Hiring Partner&apos;s
           </h2>
-          <p className="text-sm md:text-base text-gray-600 mt-3 max-w-3xl mx-auto">
+          <p className="text-[12px] sm:text-sm md:text-base text-gray-600 mt-2.5 sm:mt-3 max-w-3xl mx-auto">
             Recruiters across IT, Consulting, Healthcare, Hospitality, Aviation, and Corporate sectors.
           </p>
         </div>
@@ -90,7 +90,7 @@ export default function OurHiringPartnersSection() {
 
       <div className="relative">
 
-        <div className="space-y-6 md:space-y-8">
+        <div className="space-y-4 sm:space-y-6 md:space-y-8">
           <Marquee
             speed={reduceMotion ? 0 : 35}
             autoFill

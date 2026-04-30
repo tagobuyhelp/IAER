@@ -1,11 +1,12 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { Children, useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { programs } from '@/lib/programs';
 import { Button } from '@/components/ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
+import useEmblaCarousel from 'embla-carousel-react';
 import { 
   ChevronLeft,
   ChevronRight,
@@ -15,6 +16,7 @@ import {
   Briefcase, 
   Award, 
   ArrowRight,
+  Plane,
   Stethoscope,
   Cpu,
   LineChart
@@ -41,58 +43,73 @@ function getDurationLabel(duration) {
 }
 
 function HorizontalCardScroller({ children }) {
-  const scrollerRef = useRef(null);
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    align: "start",
+    containScroll: "trimSnaps",
+    dragFree: false,
+    loop: false,
+    skipSnaps: false,
+    slidesToScroll: 1,
+  });
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [snapCount, setSnapCount] = useState(0);
 
-  function updateScrollState() {
-    const el = scrollerRef.current;
-    if (!el) return;
-    const maxScrollLeft = el.scrollWidth - el.clientWidth;
-    setCanScrollLeft(el.scrollLeft > 4);
-    setCanScrollRight(el.scrollLeft < maxScrollLeft - 4);
-  }
+  const updateStates = useCallback(() => {
+    if (!emblaApi) return;
+    setCanScrollLeft(emblaApi.canScrollPrev());
+    setCanScrollRight(emblaApi.canScrollNext());
+    setActiveIndex(emblaApi.selectedScrollSnap());
+    setSnapCount(emblaApi.scrollSnapList().length);
+  }, [emblaApi]);
 
   useEffect(() => {
-    updateScrollState();
-    const el = scrollerRef.current;
-    if (!el) return;
-
-    const onScroll = () => updateScrollState();
-    el.addEventListener("scroll", onScroll, { passive: true });
-
-    const ro = new ResizeObserver(() => updateScrollState());
-    ro.observe(el);
-
+    if (!emblaApi) return;
+    updateStates();
+    emblaApi.on("select", updateStates);
+    emblaApi.on("reInit", updateStates);
     return () => {
-      el.removeEventListener("scroll", onScroll);
-      ro.disconnect();
+      emblaApi.off("select", updateStates);
+      emblaApi.off("reInit", updateStates);
     };
-  }, []);
+  }, [emblaApi, updateStates]);
 
-  function scrollByAmount(direction) {
-    const el = scrollerRef.current;
-    if (!el) return;
-    const amount = Math.max(260, Math.floor(el.clientWidth * 0.9));
-    el.scrollBy({ left: direction * amount, behavior: "smooth" });
-  }
+  const scrollPrev = useCallback(() => {
+    if (!emblaApi) return;
+    emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (!emblaApi) return;
+    emblaApi.scrollNext();
+  }, [emblaApi]);
 
   return (
     <div className="relative">
       <div
-        ref={scrollerRef}
-        className="flex gap-4 md:gap-6 overflow-x-auto no-scrollbar -mx-4 px-4 pb-2 snap-x snap-mandatory scroll-px-4"
+        ref={emblaRef}
+        className="overflow-hidden px-4 sm:px-12 py-2"
       >
-        {children}
+        <div className="flex items-stretch -ml-4 md:-ml-6">
+          {Children.toArray(children).map((child, idx) => (
+            <div
+              key={idx}
+              className="pl-4 md:pl-6 flex-[0_0_auto] min-w-0 self-stretch flex"
+            >
+              {child}
+            </div>
+          ))}
+        </div>
       </div>
 
       <div
-        className={`pointer-events-none absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-black to-transparent transition-opacity ${
+        className={`pointer-events-none absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-black to-transparent transition-opacity hidden sm:block ${
           canScrollLeft ? "opacity-100" : "opacity-0"
         }`}
       />
       <div
-        className={`pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-black to-transparent transition-opacity ${
+        className={`pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-black to-transparent transition-opacity hidden sm:block ${
           canScrollRight ? "opacity-100" : "opacity-0"
         }`}
       />
@@ -101,8 +118,8 @@ function HorizontalCardScroller({ children }) {
         <button
           type="button"
           aria-label="Scroll left"
-          onClick={() => scrollByAmount(-1)}
-          className="absolute left-2 top-1/2 -translate-y-1/2 inline-flex items-center justify-center w-9 h-9 rounded-full bg-white/10 border border-white/15 text-white hover:bg-white/15 transition-colors backdrop-blur-md"
+          onClick={scrollPrev}
+          className="absolute left-3 top-1/2 -translate-y-1/2 hidden sm:inline-flex items-center justify-center w-9 h-9 rounded-full bg-white/10 border border-white/15 text-white hover:bg-white/15 transition-colors backdrop-blur-md z-10"
         >
           <ChevronLeft className="w-5 h-5" />
         </button>
@@ -112,12 +129,23 @@ function HorizontalCardScroller({ children }) {
         <button
           type="button"
           aria-label="Scroll right"
-          onClick={() => scrollByAmount(1)}
-          className="absolute right-2 top-1/2 -translate-y-1/2 inline-flex items-center justify-center w-9 h-9 rounded-full bg-white/10 border border-white/15 text-white hover:bg-white/15 transition-colors backdrop-blur-md"
+          onClick={scrollNext}
+          className="absolute right-3 top-1/2 -translate-y-1/2 hidden sm:inline-flex items-center justify-center w-9 h-9 rounded-full bg-white/10 border border-white/15 text-white hover:bg-white/15 transition-colors backdrop-blur-md z-10"
         >
           <ChevronRight className="w-5 h-5" />
         </button>
       ) : null}
+
+      <div className="mt-2 hidden sm:flex items-center justify-center gap-1.5">
+        {Array.from({ length: snapCount }).map((_, idx) => (
+          <span
+            key={idx}
+            className={`h-1.5 rounded-full transition-all ${
+              idx === activeIndex ? "w-6 bg-accent" : "w-1.5 bg-white/20"
+            }`}
+          />
+        ))}
+      </div>
     </div>
   );
 }
@@ -128,11 +156,12 @@ function ProgramCard({ program, index }) {
 
   return (
     <motion.div
+      data-carousel-card
       initial={{ opacity: 0, y: 18 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ delay: Math.min(index, 10) * 0.04, duration: 0.45 }}
-      className="group relative flex flex-col flex-none w-[280px] sm:w-[320px] md:w-[360px] snap-start rounded-2xl bg-zinc-900/60 border border-white/10 overflow-hidden hover:border-accent/30 hover:bg-zinc-900/70 transition-colors"
+      className="group relative flex flex-col flex-none w-[280px] sm:w-[320px] md:w-[360px] h-full snap-start [scroll-snap-stop:always] rounded-2xl bg-zinc-900/60 border border-white/10 overflow-hidden hover:border-accent/30 hover:bg-zinc-900/70 transition-colors"
     >
       <div className="relative h-40 sm:h-44 md:h-48 overflow-hidden">
         <Image
@@ -206,57 +235,45 @@ function ProgramCard({ program, index }) {
 const programCategories = [
   {
     id: 'ug',
-    title: "Undergraduate Programs",
-    description: "Bachelor's Degrees for High School Graduates",
+    title: "Undergraduate Programmes",
+    description: "Explore programmes available after 10+2 across IAER schools.",
     groups: [
       {
-        name: "Management & Business",
-        icon: <Briefcase className="w-5 h-5" />,
-        programs: ["BBA", "BBA-GB", "BBA-AO", "BBA-HM"]
-      },
-      {
-        name: "Technology & Data",
+        name: "School of Information Technology",
         icon: <Cpu className="w-5 h-5" />,
-        programs: ["BCA", "BSCDS", "BSCCS"]
+        programs: ["BCA", "BCA-DSCS", "BCA-AIML", "BSCDS", "BSCCS", "ACAI", "ACSD", "ACFD"]
       },
       {
-        name: "Healthcare & Hospitality",
+        name: "School of Management",
+        icon: <Briefcase className="w-5 h-5" />,
+        programs: ["BBA", "BBA-BA", "BBA-GB", "BBA-SM"]
+      },
+      {
+        name: "School of Health Science",
         icon: <Stethoscope className="w-5 h-5" />,
-        programs: ["BMLT", "DMLT", "BSCHHA"]
+        programs: ["BBA-HM", "BMLT", "DMLT"]
+      },
+      {
+        name: "Institute of Aviation & Hospitality Management (IAHM)",
+        icon: <Plane className="w-5 h-5" />,
+        programs: ["BBA-AHSM", "BBA-AO", "BSCHHA", "DAHM", "ACAC"]
       }
     ]
   },
   {
     id: 'pg',
-    title: "Postgraduate Programs",
-    description: "Master's Degrees for Graduates",
+    title: "Post Graduate Programmes",
+    description: "Programmes available after graduation.",
     groups: [
       {
-        name: "Management Degrees",
+        name: "Post Graduate Programmes",
         icon: <Award className="w-5 h-5" />,
-        programs: ["MBA", "MHA", "PGDM"]
+        programs: ["PGDM", "MBA", "MHA"]
       },
       {
         name: "Specialised PGDM",
         icon: <LineChart className="w-5 h-5" />,
         programs: ["PGDM-AIADS", "PGDM-BA", "PGDM-FT", "PGDM-HMHA"]
-      }
-    ]
-  },
-  {
-    id: 'cert',
-    title: "Certifications & Diplomas",
-    description: "Short-term Professional Courses",
-    groups: [
-      {
-        name: "Professional Certifications",
-        icon: <Award className="w-5 h-5" />,
-        programs: ["ACSD", "ACAC", "ACAI", "ACFD", "ACSC"]
-      },
-      {
-        name: "Diploma Programs",
-        icon: <BookOpen className="w-5 h-5" />,
-        programs: ["DMLT", "DAHM"]
       }
     ]
   }
@@ -304,7 +321,7 @@ export default function Programs() {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white selection:bg-accent selection:text-white overflow-x-hidden">
+    <div className="min-h-screen bg-black text-white selection:bg-accent selection:text-white">
       <InfiniteCall />
       
       {/* Hero Section with Parallax & Zoom Effect */}
