@@ -26,20 +26,63 @@ export default function ProgramsSection() {
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
 
-  // Extract unique categories (using 'code' as a proxy or manual grouping)
-  const categories = ["All", "Management", "Technology", "Healthcare", "Hospitality"];
-  
-  const getCategory = (code) => {
-    if (code.includes("BBA") || code.includes("MBA")) return "Management";
-    if (code.includes("B.Sc") || code.includes("CS") || code.includes("IT")) return "Technology";
-    if (code.includes("BMLT") || code.includes("Hospital")) return "Healthcare";
-    if (code.includes("Aviation") || code.includes("Hotel")) return "Hospitality";
-    return "Management";
+  const categories = [
+    "All",
+    "Undergraduate Degrees",
+    "Certificates & Diplomas",
+    "Postgraduate Degrees",
+  ];
+
+  const groupByProgramCode = {
+    BBA: "Undergraduate Degrees",
+    "BBA-BA": "Undergraduate Degrees",
+    "BBA-SM": "Undergraduate Degrees",
+    "BBA-HM": "Undergraduate Degrees",
+    "BBA-GB": "Undergraduate Degrees",
+    "BBA-AO": "Undergraduate Degrees",
+    "BBA-AHSM": "Undergraduate Degrees",
+
+    BCA: "Undergraduate Degrees",
+    "BCA-AIML": "Undergraduate Degrees",
+    "BCA-DSCS": "Undergraduate Degrees",
+    BSCDS: "Undergraduate Degrees",
+    BSCCS: "Undergraduate Degrees",
+    BSCHHA: "Undergraduate Degrees",
+    BMLT: "Undergraduate Degrees",
+
+    ACSD: "Certificates & Diplomas",
+    ACFD: "Certificates & Diplomas",
+    ACAI: "Certificates & Diplomas",
+    ACAC: "Certificates & Diplomas",
+    DAHM: "Certificates & Diplomas",
+    DMLT: "Certificates & Diplomas",
+
+    MBA: "Postgraduate Degrees",
+    PGDM: "Postgraduate Degrees",
+    "PGDM-AIADS": "Postgraduate Degrees",
+    "PGDM-BA": "Postgraduate Degrees",
+    "PGDM-FT": "Postgraduate Degrees",
+    "PGDM-HMHA": "Postgraduate Degrees",
+    MHA: "Postgraduate Degrees",
+  };
+
+  const resolveGroup = (program) => {
+    if (!program) return "Undergraduate Degrees";
+    const code = typeof program.code === "string" ? program.code : "";
+
+    const mapped = groupByProgramCode[code];
+    if (mapped) return mapped;
+
+    if (code === "DMLT" || code === "DAHM" || code.startsWith("AC")) return "Certificates & Diplomas";
+    if (code === "MBA" || code === "MHA" || code.startsWith("PGDM")) return "Postgraduate Degrees";
+    return "Undergraduate Degrees";
   };
 
   const filteredPrograms = activeTab === "All" 
     ? programs 
-    : programs.filter(p => getCategory(p.code) === activeTab);
+    : programs.filter((p) => {
+        return resolveGroup(p) === activeTab;
+      });
 
   const checkScroll = () => {
     if (scrollRef.current) {
@@ -53,7 +96,7 @@ export default function ProgramsSection() {
     checkScroll();
     window.addEventListener("resize", checkScroll);
     return () => window.removeEventListener("resize", checkScroll);
-  }, [filteredPrograms]);
+  }, [activeTab]);
 
   const scroll = (direction) => {
     if (scrollRef.current) {

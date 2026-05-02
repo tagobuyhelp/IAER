@@ -56,16 +56,6 @@ const stories = [
     color: "bg-accent/20 border-accent/40",
     category: "Hospitality & Aviation",
   },
-  {
-    name: "Priyanka S.",
-    course: "BMLT",
-    highlight: "Practical Training",
-    quote:
-      "The lab infrastructure and guided practice sessions helped me build accuracy and confidence in healthcare workflows.",
-    image: "/images/students/DSC_7936.JPG",
-    color: "bg-emerald-900/40 border-emerald-400/60",
-    category: "Healthcare",
-  },
 ];
 
 export default function TestimonialsSection() {

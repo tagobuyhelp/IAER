@@ -21,7 +21,7 @@ const experienceItems = [
     title: "Global Collaborations",
     description: "IAER collaborates with prestigious international institutions to promote global learning, research exposure, and academic articulation opportunities.",
     icon: Globe,
-    image: "/images/home/GlobalExp/Global-Collaborations.webp",
+    image: "/images/universities/University-of-Suderland.jpeg",
     color: "bg-indigo-600"
   },
   {

@@ -27,7 +27,7 @@ const countries = [
         image: "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=400&h=500&q=80"
     },
     {
-        name: "England",
+        name: "United Kingdom",
         image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=400&h=500&q=80"
     },
 ];

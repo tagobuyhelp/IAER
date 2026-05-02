@@ -18,7 +18,7 @@ const infrastructure = [
     title: "IT Labs",
     desc: "Data Science, Cyber Security, Cloud Computing, AI",
     icon: Monitor,
-    image: "/images/home/Research-Innovation/IT-Labs.webp"
+    image: "/images/programs/advanced-certification-in-agentic-ai-overview.webp"
   },
   {
     title: "Hospitality LIVE Kitchen",

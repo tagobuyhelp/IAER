@@ -5,11 +5,11 @@ import { PlayCircle } from "lucide-react";
 
 export default function VirtualTourSection() {
   return (
-    <section className="relative w-full h-[360px] sm:h-[420px] lg:h-[600px] bg-black overflow-hidden group">
+    <section className="relative w-full h-[560px] sm:h-[420px] lg:h-[600px] bg-black overflow-hidden group">
       {/* Background Image Placeholder */}
       <div
-        className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105"
-        style={{ backgroundImage: "url('/images/campus/iaer-campus.png')" }} // Needs real image
+        className="absolute inset-0  bg-center transition-transform duration-1000 group-hover:scale-105"
+        style={{ backgroundImage: "url('/images/about/building-image-about-hero.webp')" }} // Needs real image
       >
         <div className="absolute inset-0 bg-black/40" />
       </div>
