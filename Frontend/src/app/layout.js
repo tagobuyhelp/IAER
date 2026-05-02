@@ -85,7 +85,11 @@ export default function RootLayout({ children }) {
         </noscript>
 
         {/* NPF Chatbot Placeholder */}
-        <div className="npf_chatbots" data-w="71289f36cb7f4d1aa57ea9599d67b976" style={{ display: "none" }}></div>
+        <div
+          className="npf_chatbots"
+          data-w="71289f36cb7f4d1aa57ea9599d67b976"
+          style={{ position: "relative", zIndex: 2147483647 }}
+        ></div>
 
         <TopBar />
         <Header />
@@ -127,11 +131,21 @@ export default function RootLayout({ children }) {
               var s=document.createElement("script");
               s.type="text/javascript";
               s.async=true;
-              s.src="https://in8cdn.npfs.co/js/widget/npfwpopup.js";
+              s.src="https://cdn.npfs.co/js/widget/npfwpopup.js";
               s.onload=function(){
-                window.npfW29f961a6166cc94d1ae744a39fa1122f = new NpfWidgetsInit({
-                  widgetId: '29f961a6166cc94d1ae744a39fa1122f',
-                  baseurl: 'widgets.in8.nopaperforms.com',
+                try {
+                  if (!document.querySelector('.npfWidget-ee13b8b13cddfc1bfec07deacefd996b')) {
+                    var btn = document.createElement('button');
+                    btn.type = 'button';
+                    btn.className = 'npfWidgetButton npfWidget-ee13b8b13cddfc1bfec07deacefd996b';
+                    btn.style.display = 'none';
+                    btn.textContent = 'Enquire Now';
+                    document.body.appendChild(btn);
+                  }
+                } catch (e) {}
+                window['npfWee13b8b13cddfc1bfec07deacefd996b'] = new NpfWidgetsInit({
+                  widgetId: 'ee13b8b13cddfc1bfec07deacefd996b',
+                  baseurl: 'widgets.nopaperforms.com',
                   formTitle: 'Enquiry Form',
                   titleColor: '#FF0033',
                   backgroundColor: '#ddd',
@@ -146,13 +160,109 @@ export default function RootLayout({ children }) {
         </Script>
 
         {/* Meritto Enquiry Form Widget 2 - POP-UP (emwgts.js) */}
-        <Script src="https://widgets.in8.nopaperforms.com/emwgts.js" strategy="lazyOnload" />
+        <Script src="https://widgets.nopaperforms.com/emwgts.js" strategy="lazyOnload" />
 
-        {/* NPF Chatbot Loader Script */}
-        <Script 
-          src="https://chatbot.in8.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/f66854412785432ea1d2c2257fe7861f/71289f36cb7f4d1aa57ea9599d67b976" 
-          strategy="lazyOnload" 
-        />
+        <Script id="npf-helpers" strategy="lazyOnload">
+          {`
+            (function(){
+              try {
+                var mainId = 'ee13b8b13cddfc1bfec07deacefd996b';
+                var ensureTrigger = function(id){
+                  try {
+                    if (document.querySelector('.npfWidget-' + id)) return;
+                    var btn = document.createElement('button');
+                    btn.type = 'button';
+                    btn.className = 'npfWidgetButton npfWidget-' + id;
+                    btn.style.display = 'none';
+                    btn.textContent = 'Enquire Now';
+                    document.body.appendChild(btn);
+                  } catch (e) {}
+                };
+
+                if (!window.openNpfPopup) {
+                  window.openNpfPopup = function(id){
+                    var targetId = id || mainId;
+                    ensureTrigger(targetId);
+
+                    try {
+                      var trigger = document.querySelector('.npfWidget-' + targetId);
+                      if (trigger) trigger.click();
+                    } catch (e) {}
+
+                    try {
+                      setTimeout(function(){
+                        try {
+                          var has = !!document.querySelector('iframe[src*="nopaperforms.com"]');
+                          if (!has) {
+                            var url = 'https://widgets.nopaperforms.com/widget/' + targetId;
+                            var w = 920, h = 700;
+                            var left = Math.max(0, (window.innerWidth - w) / 2);
+                            var top = Math.max(0, (window.innerHeight - h) / 2);
+                            var features = 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=' + w + ',height=' + h + ',top=' + top + ',left=' + left;
+                            var win = window.open(url, 'Enquiry Form', features);
+                            if (!win) window.open(url, '_blank', 'noopener,noreferrer');
+                          }
+                        } catch (e) {}
+                      }, 800);
+                    } catch (e) {}
+                  };
+                }
+
+                ensureTrigger(mainId);
+              } catch (e) {}
+            })();
+          `}
+        </Script>
+
+        <Script id="npf-chatbot-loader" strategy="beforeInteractive">
+          {`
+            (function(){
+              var init = function(){
+                try {
+                  var placeholder = document.querySelector('.npf_chatbots');
+                  if (!placeholder) {
+                    placeholder = document.createElement('div');
+                    placeholder.className = 'npf_chatbots';
+                    placeholder.setAttribute('data-w', '71289f36cb7f4d1aa57ea9599d67b976');
+                    document.body.appendChild(placeholder);
+                  } else {
+                    placeholder.setAttribute('data-w', '71289f36cb7f4d1aa57ea9599d67b976');
+                  }
+                  placeholder.style.position = 'relative';
+                  placeholder.style.zIndex = '2147483647';
+
+                  if (window.__npfChatbotLoaded) return;
+                  window.__npfChatbotLoaded = true;
+
+                  var urls = [
+                    'https://chatbot.in8.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/f66854412785432ea1d2c2257fe7861f/71289f36cb7f4d1aa57ea9599d67b976',
+                    'https://chatbot.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/f66854412785432ea1d2c2257fe7861f/71289f36cb7f4d1aa57ea9599d67b976'
+                  ];
+
+                  var loadAt = function(i){
+                    if (i >= urls.length) return;
+                    var s = document.createElement('script');
+                    s.type = 'text/javascript';
+                    s.src = urls[i];
+                    s.onload = function(){};
+                    s.onerror = function(){ loadAt(i + 1); };
+                    document.body.appendChild(s);
+                  };
+
+                  loadAt(0);
+                } catch (e) {}
+              };
+
+              try {
+                if (document.readyState === 'loading') {
+                  document.addEventListener('DOMContentLoaded', init);
+                } else {
+                  init();
+                }
+              } catch (e) {}
+            })();
+          `}
+        </Script>
 
         {/* Structured Data (JSON-LD) */}
         <Script id="json-ld" type="application/ld+json" strategy="afterInteractive">

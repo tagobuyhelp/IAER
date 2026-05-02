@@ -1,14 +1,14 @@
 // components/EnquiryPopupButton.jsx
 import React, { useCallback } from "react";
 
-export const WIDGET_ID = "550974b33503dfc785c6fbf5148e6d84";
+export const WIDGET_ID = "ee13b8b13cddfc1bfec07deacefd996b";
 /**
  * Try these patterns if one doesn't match the vendor
- * - https://widgets.in8.nopaperforms.com/widget/<id>
- * - https://in8.nopaperforms.com/embed/<id>
+ * - https://widgets.nopaperforms.com/widget/<id>
+ * - https://widgets.nopaperforms.com/embed/<id>
  * - ask vendor for "direct form URL"
  */
-export const FORM_URL = `https://widgets.in8.nopaperforms.com/widget/${WIDGET_ID}`;
+export const FORM_URL = `https://widgets.nopaperforms.com/widget/${WIDGET_ID}`;
 
 export function openCenteredPopup(url, title = "Enquiry", w = 900, h = 700) {
     const dualScreenLeft = window.screenLeft ?? window.screenX ?? 0;
@@ -31,9 +31,24 @@ export function openCenteredPopup(url, title = "Enquiry", w = 900, h = 700) {
 
 export default function EnquiryPopupButton({ className = "", label = "Enquire Now", children }) {
     const onClick = useCallback(() => {
-        // Add optional query params vendor might accept, e.g. styling/theme
-        const url = `${FORM_URL}?widgetId=${WIDGET_ID}`;
-        openCenteredPopup(url, "Enquiry Form", 920, 700);
+        try {
+            let trigger = document.querySelector(`.npfWidget-${WIDGET_ID}`);
+            if (!trigger) {
+                trigger = document.createElement("button");
+                trigger.type = "button";
+                trigger.className = `npfWidgetButton npfWidget-${WIDGET_ID}`;
+                trigger.style.display = "none";
+                trigger.textContent = "Enquire Now";
+                document.body.appendChild(trigger);
+            }
+            trigger.click();
+            return;
+        } catch {}
+
+        try {
+            const url = `${FORM_URL}?widgetId=${WIDGET_ID}`;
+            openCenteredPopup(url, "Enquiry Form", 920, 700);
+        } catch {}
     }, []);
 
     return (
