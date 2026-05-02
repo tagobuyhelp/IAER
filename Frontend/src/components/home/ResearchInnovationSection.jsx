@@ -97,16 +97,16 @@ export default function ResearchInnovationSection() {
 
           <div className="relative rounded-2xl sm:rounded-3xl border border-border/60 bg-gradient-to-br from-primary/15 via-primary/5 to-accent/10 p-4 sm:p-6 lg:p-7 overflow-hidden">
             <div className="pointer-events-none absolute inset-0 bg-gradient-radial from-white/40 via-transparent to-transparent opacity-60" />
-            <div className="pointer-events-none absolute -bottom-10 -right-6 w-32 h-32 opacity-70">
+            <div className="pointer-events-none absolute inset-0 opacity-25">
               <Image
                 src="/images/programs/legacy/BMLT.jpg"
                 alt=""
                 aria-hidden="true"
-                width={128}
-                height={128}
-                className="w-full h-full object-contain"
+                fill
+                sizes="(max-width: 1024px) 100vw, 480px"
               />
             </div>
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/60 via-white/20 to-transparent opacity-60" />
             <div className="relative flex flex-col gap-4">
               <div className="flex items-center justify-between">
                 <div>

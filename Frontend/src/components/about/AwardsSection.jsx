@@ -72,27 +72,51 @@ export default function AwardsSection() {
   const awards = [
     {
       year: "2019",
-      title: "IT Startup Excellence",
+      title: "Best Innovative IT College in Eastern India",
       description:
-        "Honoured for integrating technology, innovation, and startup culture into higher education.",
+        "IT Startup Excellence Awards — Recognised for integrating technology, innovation, and startup culture into higher education.",
     },
     {
       year: "2020",
-      title: "Virtual Education Tech",
+      title: "Best Emerging e-Business School of the Year",
       description:
-        "Recognised for pioneering use of virtual platforms and blended learning methodologies.",
+        "Virtual Education & Technology Awards — Recognised for pioneering use of virtual platforms and blended learning methodologies.",
     },
     {
       year: "2021",
-      title: "Startup & VC Excellence",
+      title: "Best Startup Education College in Eastern India",
       description:
-        "Acknowledged for promoting entrepreneurial thinking, incubation support, and industry linkages.",
+        "StartUp & VC Award for Excellence — Acknowledged for promoting entrepreneurial thinking, incubation support, and industry linkages.",
     },
     {
-      year: "2023",
-      title: "Knowledge Review",
+      year: "2024",
+      title: "Top 10 Best College for Data Science in India",
       description:
-        "Featured among emerging institutions focused on skill-based, employability-driven education.",
+        "Knowledge Review — Ranked among the Top 10 Best Colleges for Data Science in India.",
+    },
+    {
+      year: "2025",
+      title: "Top 10 Best College for Cyber Security in India",
+      description:
+        "Knowledge Review — Ranked among the Top 10 Best Colleges for Cyber Security in India.",
+    },
+    {
+      year: "2024",
+      title: "Best Emerging Information Technology Award",
+      description:
+        "Edulite Excellence Award — Recognised for strong academic delivery, innovation, and industry readiness in IT education.",
+    },
+    {
+      year: "2025",
+      title: "Best College for Innovation in Eastern India",
+      description:
+        "Edulite Excellence Award — Recognised for innovation-focused education and impactful institutional initiatives.",
+    },
+    {
+      year: "2024",
+      title: "Excellence in Information Technology Education",
+      description:
+        "Collegedunia — Recognised for excellence in IT education and employability outcomes.",
     },
   ];
 

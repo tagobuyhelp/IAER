@@ -82,7 +82,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-accent shrink-0" />
-                <a href="mailto:admissions@iaer.in" className="hover:text-white transition-colors">admissions@iaer.in</a>
+                <a href="mailto:admission@iaer.ac.in" className="hover:text-white transition-colors">admission@iaer.ac.in</a>
               </li>
             </ul>
           </div>
