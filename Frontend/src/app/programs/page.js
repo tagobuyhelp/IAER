@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { programs } from '@/lib/programs';
 import { Button } from '@/components/ui/button';
+import { handleDownloadBrochure } from '@/lib/download';
 import { motion, AnimatePresence } from 'framer-motion';
 import useEmblaCarousel from 'embla-carousel-react';
 import { 
@@ -397,7 +398,12 @@ export default function Programs() {
             >
               Explore Programs
             </Button>
-            <Button variant="outline" size="lg" className=" border-white/20 text-black hover:bg-white/10 px-5 py-3 sm:px-6 sm:py-4 md:px-10 md:py-7 text-sm sm:text-base md:text-lg rounded-full backdrop-blur-sm">
+            <Button
+              variant="outline"
+              size="lg"
+              onClick={handleDownloadBrochure}
+              className=" border-white/20 text-black hover:bg-white/10 px-5 py-3 sm:px-6 sm:py-4 md:px-10 md:py-7 text-sm sm:text-base md:text-lg rounded-full backdrop-blur-sm"
+            >
               Download Brochure
             </Button>
           </motion.div>

@@ -11,21 +11,21 @@ import { cn } from "@/lib/utils";
 const students = [
   {
     name: "Riya Chakraborty",
-    course: "B.Sc Cyber Security",
+    course: "",
     package: "₹7.5 LPA",
     companyLogo: "/images/company_logos/Tata_Consultancy_Services_old_logo.svg.png",
     image: "/images/students/riya.avif",
   },
   {
     name: "Arjun Saha",
-    course: "B.Sc IT (Data Science)",
+    course: "",
     package: "₹9.5 LPA",
     companyLogo: "/images/company_logos/Amazon_logo.svg.png",
     image: "/images/students/arjun.jpg",
   },
   {
     name: "Rohan Singh",
-    course: "BBA",
+    course: "",
     package: "₹6 LPA",
     companyLogo: "/images/company_logos/Hindustan_Unilever_Logo.svg",
     image: "/images/students/rohan.jpg",

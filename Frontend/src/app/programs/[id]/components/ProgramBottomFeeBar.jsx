@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Download, FileText, Phone } from 'lucide-react';
+import { handleDownloadBrochure } from '@/lib/download';
 
 export default function ProgramBottomFeeBar({ fees, phone }) {
   const [feeDetailsOpen, setFeeDetailsOpen] = useState(false);
@@ -78,6 +79,7 @@ export default function ProgramBottomFeeBar({ fees, phone }) {
             <Button
               variant="outline"
               className="h-10 rounded-xl border-white/15 bg-white/10 hover:bg-white/15 text-white font-bold text-[12px] sm:text-sm"
+              onClick={handleDownloadBrochure}
             >
               <Download className="w-4 h-4 mr-2" />
               Download

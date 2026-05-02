@@ -85,11 +85,7 @@ export default function RootLayout({ children }) {
         </noscript>
 
         {/* NPF Chatbot Placeholder */}
-        <div
-          className="npf_chatbots"
-          data-w="71289f36cb7f4d1aa57ea9599d67b976"
-          style={{ position: "relative", zIndex: 2147483647 }}
-        ></div>
+        <div className="npf_chatbots" data-w="3c4b3f825de24faa9996d7548d31a0ce" style={{ display: "none" }}></div>
 
         <TopBar />
         <Header />
@@ -167,6 +163,9 @@ export default function RootLayout({ children }) {
             (function(){
               try {
                 var mainId = 'ee13b8b13cddfc1bfec07deacefd996b';
+                if (!window.__IAER_BROCHURE_WIDGET_ID) {
+                  window.__IAER_BROCHURE_WIDGET_ID = mainId;
+                }
                 var ensureTrigger = function(id){
                   try {
                     if (document.querySelector('.npfWidget-' + id)) return;
@@ -208,56 +207,58 @@ export default function RootLayout({ children }) {
                   };
                 }
 
+                if (!window.openBrochurePopup) {
+                  window.openBrochurePopup = function(){
+                    try {
+                      var id = window.__IAER_BROCHURE_WIDGET_ID || mainId;
+                      if (typeof window.openNpfPopup === 'function') {
+                        window.openNpfPopup(id);
+                        return;
+                      }
+                      ensureTrigger(id);
+                      var trigger = document.querySelector('.npfWidget-' + id);
+                      if (trigger) trigger.click();
+                    } catch (e) {}
+                  };
+                }
+
                 ensureTrigger(mainId);
               } catch (e) {}
             })();
           `}
         </Script>
 
-        <Script id="npf-chatbot-loader" strategy="beforeInteractive">
+        <Script id="npf-chatbot-loader" strategy="afterInteractive">
           {`
             (function(){
-              var init = function(){
-                try {
-                  var placeholder = document.querySelector('.npf_chatbots');
-                  if (!placeholder) {
-                    placeholder = document.createElement('div');
-                    placeholder.className = 'npf_chatbots';
-                    placeholder.setAttribute('data-w', '71289f36cb7f4d1aa57ea9599d67b976');
-                    document.body.appendChild(placeholder);
-                  } else {
-                    placeholder.setAttribute('data-w', '71289f36cb7f4d1aa57ea9599d67b976');
-                  }
-                  placeholder.style.position = 'relative';
-                  placeholder.style.zIndex = '2147483647';
-
-                  if (window.__npfChatbotLoaded) return;
-                  window.__npfChatbotLoaded = true;
-
-                  var urls = [
-                    'https://chatbot.in8.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/f66854412785432ea1d2c2257fe7861f/71289f36cb7f4d1aa57ea9599d67b976',
-                    'https://chatbot.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/f66854412785432ea1d2c2257fe7861f/71289f36cb7f4d1aa57ea9599d67b976'
-                  ];
-
-                  var loadAt = function(i){
-                    if (i >= urls.length) return;
-                    var s = document.createElement('script');
-                    s.type = 'text/javascript';
-                    s.src = urls[i];
-                    s.onload = function(){};
-                    s.onerror = function(){ loadAt(i + 1); };
-                    document.body.appendChild(s);
-                  };
-
-                  loadAt(0);
-                } catch (e) {}
-              };
-
               try {
-                if (document.readyState === 'loading') {
-                  document.addEventListener('DOMContentLoaded', init);
-                } else {
-                  init();
+                var s=document.createElement('script');
+                s.type='text/javascript';
+                s.async=true;
+                s.src='https://chatbot.in1.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/655602525fe21a6b/3c4b3f825de24faa9996d7548d31a0ce';
+                document.body.appendChild(s);
+              } catch (e) {}
+            })();
+          `}
+        </Script>
+
+        <Script id="npf-chatbot-instrumentation" strategy="afterInteractive">
+          {`
+            (function() {
+              try {
+                var placeholder = document.querySelector('.npf_chatbots');
+                var loader = Array.from(document.scripts).find(function(s){
+                  return s.src && s.src.indexOf('niaachtbtscpt.js') !== -1;
+                });
+
+                if (loader) {
+                  loader.addEventListener('load', function(){});
+                  loader.addEventListener('error', function(){});
+                }
+
+                if (placeholder) {
+                  var obs = new MutationObserver(function(){});
+                  obs.observe(placeholder, { childList: true, subtree: true });
                 }
               } catch (e) {}
             })();
