@@ -85,7 +85,7 @@ export default function RootLayout({ children }) {
         </noscript>
 
         {/* NPF Chatbot Placeholder */}
-        <div className="npf_chatbots" data-w="3c4b3f825de24faa9996d7548d31a0ce" style={{ display: "none" }}></div>
+        <div className="npf_chatbots" data-w="71289f36cb7f4d1aa57ea9599d67b976" style={{ display: "none" }}></div>
 
         <TopBar />
         <Header />
@@ -235,7 +235,7 @@ export default function RootLayout({ children }) {
                 var s=document.createElement('script');
                 s.type='text/javascript';
                 s.async=true;
-                s.src='https://chatbot.in1.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/655602525fe21a6b/3c4b3f825de24faa9996d7548d31a0ce';
+                s.src='https://chatbot.in8.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/f66854412785432ea1d2c2257fe7861f/71289f36cb7f4d1aa57ea9599d67b976';
                 document.body.appendChild(s);
               } catch (e) {}
             })();
@@ -287,7 +287,7 @@ export default function RootLayout({ children }) {
               "@type": "ContactPoint",
               "telephone": "+91 800 111 0000",
               "contactType": "Admissions",
-              "email": "admission@iaer.in"
+              "email": "admission@iaer.ac.in"
             },
             "sameAs": [
               "https://www.facebook.com/iaer",
