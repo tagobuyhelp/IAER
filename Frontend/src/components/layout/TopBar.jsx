@@ -20,13 +20,13 @@ export default function TopBar() {
       <div className="container mx-auto px-4 flex justify-between items-center h-8 md:h-auto">
         {/* Contact Info */}
         <div className="flex items-center gap-4 md:gap-6">
-          <a href="tel:+919007030123" className="flex items-center gap-2 hover:text-white transition-colors">
+          <a href="tel:8001110000" className="flex items-center gap-2 hover:text-white transition-colors">
             <Phone className="w-3.5 h-3.5" />
-            <span>+91 90070 30123</span>
+            <span>8001110000</span>
           </a>
-          <a href="mailto:admissions@iaer.in" className="hidden sm:flex items-center gap-2 hover:text-white transition-colors">
+          <a href="mailto:admission@iaer.ac.in" className="hidden sm:flex items-center gap-2 hover:text-white transition-colors">
             <Mail className="w-3.5 h-3.5" />
-            <span>admissions@iaer.in</span>
+            <span>admission@iaer.ac.in</span>
           </a>
         </div>
 

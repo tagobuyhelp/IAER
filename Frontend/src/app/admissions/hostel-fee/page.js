@@ -84,16 +84,16 @@ export default function HostelFeePage() {
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <a
-                href="tel:+919007030123"
+                href="tel:8001110000"
                 className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-[#100902] text-white font-bold hover:bg-[#100902]/90 transition-colors"
               >
-                Call +91 90070 30123
+                Call 8001110000
               </a>
               <a
-                href="mailto:admissions@iaer.in"
+                href="mailto:admission@iaer.ac.in"
                 className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-white text-[#100902] font-bold border border-gray-200 hover:bg-gray-50 transition-colors"
               >
-                Email admissions@iaer.in
+                Email admission@iaer.ac.in
               </a>
             </div>
           </div>
