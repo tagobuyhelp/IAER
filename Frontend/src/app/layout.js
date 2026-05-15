@@ -85,7 +85,7 @@ export default function RootLayout({ children }) {
         </noscript>
 
         {/* NPF Chatbot Placeholder */}
-        <div className="npf_chatbots" data-w="71289f36cb7f4d1aa57ea9599d67b976"></div>
+
 
         <TopBar />
         <Header />
@@ -96,7 +96,7 @@ export default function RootLayout({ children }) {
         <BottomNav />
         <BackToTop />
         <FloatingContactButtons />
-        <LinkFixer />
+        {/* <LinkFixer /> */}
 
         {/* Google Tag Manager */}
         <Script id="gtm" strategy="afterInteractive">
@@ -236,13 +236,24 @@ export default function RootLayout({ children }) {
           `}
         </Script>
 
-        <Script id="npf-chatbot-loader" strategy="afterInteractive">
+        <div className="npf_chatbots" data-w="71289f36cb7f4d1aa57ea9599d67b976"></div>
+        <Script id="npf-chatbot-loader" strategy="lazyOnload">
           {`
             var initChatbot = function() {
               console.log("[NPF-Chatbot] Initializing loader...");
               var placeholder = document.querySelector('.npf_chatbots');
               console.log("[NPF-Chatbot] Placeholder found:", !!placeholder, placeholder ? placeholder.getAttribute('data-w') : "N/A");
               
+              if (placeholder) {
+                var observer = new MutationObserver(function(mutations) {
+                  console.log("[NPF-Chatbot] DOM mutated! Content added?", placeholder.innerHTML.length > 0);
+                  if (placeholder.innerHTML.length > 0) {
+                    console.log("[NPF-Chatbot] Content snippet:", placeholder.innerHTML.substring(0, 100));
+                  }
+                });
+                observer.observe(placeholder, { childList: true, subtree: true });
+              }
+
               var s=document.createElement("script");
               s.type="text/javascript";
               s.async=true;
