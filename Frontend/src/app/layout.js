@@ -85,7 +85,7 @@ export default function RootLayout({ children }) {
         </noscript>
 
         {/* NPF Chatbot Placeholder */}
-        <div className="npf_chatbots" data-w="71289f36cb7f4d1aa57ea9599d67b976" style={{ display: "none" }}></div>
+        <div className="npf_chatbots" data-w="71289f36cb7f4d1aa57ea9599d67b976"></div>
 
         <TopBar />
         <Header />
@@ -230,40 +230,15 @@ export default function RootLayout({ children }) {
 
         <Script id="npf-chatbot-loader" strategy="afterInteractive">
           {`
-            (function(){
-              try {
-                var s=document.createElement('script');
-                s.type='text/javascript';
-                s.async=true;
-                s.src='https://chatbot.in8.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/f66854412785432ea1d2c2257fe7861f/71289f36cb7f4d1aa57ea9599d67b976';
-                document.body.appendChild(s);
-              } catch (e) {}
-            })();
+            var s=document.createElement("script");
+            s.type="text/javascript";
+            s.async=true;
+            s.src="https://chatbot.in8.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/f66854412785432ea1d2c2257fe7861f/71289f36cb7f4d1aa57ea9599d67b976";
+            document.body.appendChild(s);
           `}
         </Script>
 
-        <Script id="npf-chatbot-instrumentation" strategy="afterInteractive">
-          {`
-            (function() {
-              try {
-                var placeholder = document.querySelector('.npf_chatbots');
-                var loader = Array.from(document.scripts).find(function(s){
-                  return s.src && s.src.indexOf('niaachtbtscpt.js') !== -1;
-                });
 
-                if (loader) {
-                  loader.addEventListener('load', function(){});
-                  loader.addEventListener('error', function(){});
-                }
-
-                if (placeholder) {
-                  var obs = new MutationObserver(function(){});
-                  obs.observe(placeholder, { childList: true, subtree: true });
-                }
-              } catch (e) {}
-            })();
-          `}
-        </Script>
 
         {/* Structured Data (JSON-LD) */}
         <Script id="json-ld" type="application/ld+json" strategy="afterInteractive">
