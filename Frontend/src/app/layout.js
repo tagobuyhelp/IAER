@@ -124,11 +124,13 @@ export default function RootLayout({ children }) {
         <Script id="npf-widget-1" strategy="lazyOnload">
           {`
             (function(){
+              console.log("[NPF-Widget] Initializing loader...");
               var s=document.createElement("script");
               s.type="text/javascript";
               s.async=true;
               s.src="https://in8cdn.npfs.co/js/widget/npfwpopup.js";
               s.onload=function(){
+                console.log("[NPF-Widget] Script loaded successfully");
                 try {
                   if (!document.querySelector('.npfWidget-29f961a6166cc94d1ae744a39fa1122f')) {
                     var btn = document.createElement('button');
@@ -138,7 +140,9 @@ export default function RootLayout({ children }) {
                     btn.textContent = 'Enquire Now';
                     document.body.appendChild(btn);
                   }
-                } catch (e) {}
+                } catch (e) {
+                  console.error("[NPF-Widget] Error creating button:", e);
+                }
                 window['npfW29f961a6166cc94d1ae744a39fa1122f'] = new NpfWidgetsInit({
                   widgetId: '29f961a6166cc94d1ae744a39fa1122f',
                   baseurl: 'widgets.in8.nopaperforms.com',
@@ -149,6 +153,10 @@ export default function RootLayout({ children }) {
                   buttonbgColor: '#4c79dc',
                   buttonTextColor: '#FFF'
                 });
+                console.log("[NPF-Widget] NpfWidgetsInit called");
+              };
+              s.onerror = function() {
+                console.error("[NPF-Widget] Failed to load script from in8cdn.npfs.co");
               };
               document.body.appendChild(s);
             })();
@@ -230,11 +238,29 @@ export default function RootLayout({ children }) {
 
         <Script id="npf-chatbot-loader" strategy="afterInteractive">
           {`
-            var s=document.createElement("script");
-            s.type="text/javascript";
-            s.async=true;
-            s.src="https://chatbot.in8.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/f66854412785432ea1d2c2257fe7861f/71289f36cb7f4d1aa57ea9599d67b976";
-            document.body.appendChild(s);
+            var initChatbot = function() {
+              console.log("[NPF-Chatbot] Initializing loader...");
+              var placeholder = document.querySelector('.npf_chatbots');
+              console.log("[NPF-Chatbot] Placeholder found:", !!placeholder, placeholder ? placeholder.getAttribute('data-w') : "N/A");
+              
+              var s=document.createElement("script");
+              s.type="text/javascript";
+              s.async=true;
+              s.src="https://chatbot.in8.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/f66854412785432ea1d2c2257fe7861f/71289f36cb7f4d1aa57ea9599d67b976";
+              s.onload = function() {
+                console.log("[NPF-Chatbot] Script loaded successfully");
+              };
+              s.onerror = function() {
+                console.error("[NPF-Chatbot] Failed to load script from chatbot.in8.nopaperforms.com");
+              };
+              document.body.appendChild(s);
+            };
+
+            if (document.readyState === 'loading') {
+              document.addEventListener('DOMContentLoaded', initChatbot);
+            } else {
+              initChatbot();
+            }
           `}
         </Script>
 
