@@ -127,21 +127,21 @@ export default function RootLayout({ children }) {
               var s=document.createElement("script");
               s.type="text/javascript";
               s.async=true;
-              s.src="https://cdn.npfs.co/js/widget/npfwpopup.js";
+              s.src="https://in8cdn.npfs.co/js/widget/npfwpopup.js";
               s.onload=function(){
                 try {
-                  if (!document.querySelector('.npfWidget-ee13b8b13cddfc1bfec07deacefd996b')) {
+                  if (!document.querySelector('.npfWidget-29f961a6166cc94d1ae744a39fa1122f')) {
                     var btn = document.createElement('button');
                     btn.type = 'button';
-                    btn.className = 'npfWidgetButton npfWidget-ee13b8b13cddfc1bfec07deacefd996b';
+                    btn.className = 'npfWidgetButton npfWidget-29f961a6166cc94d1ae744a39fa1122f';
                     btn.style.display = 'none';
                     btn.textContent = 'Enquire Now';
                     document.body.appendChild(btn);
                   }
                 } catch (e) {}
-                window['npfWee13b8b13cddfc1bfec07deacefd996b'] = new NpfWidgetsInit({
-                  widgetId: 'ee13b8b13cddfc1bfec07deacefd996b',
-                  baseurl: 'widgets.nopaperforms.com',
+                window['npfW29f961a6166cc94d1ae744a39fa1122f'] = new NpfWidgetsInit({
+                  widgetId: '29f961a6166cc94d1ae744a39fa1122f',
+                  baseurl: 'widgets.in8.nopaperforms.com',
                   formTitle: 'Enquiry Form',
                   titleColor: '#FF0033',
                   backgroundColor: '#ddd',
@@ -156,13 +156,13 @@ export default function RootLayout({ children }) {
         </Script>
 
         {/* Meritto Enquiry Form Widget 2 - POP-UP (emwgts.js) */}
-        <Script src="https://widgets.nopaperforms.com/emwgts.js" strategy="lazyOnload" />
+        <Script src="https://widgets.in8.nopaperforms.com/emwgts.js" strategy="lazyOnload" />
 
         <Script id="npf-helpers" strategy="lazyOnload">
           {`
             (function(){
               try {
-                var mainId = 'ee13b8b13cddfc1bfec07deacefd996b';
+                var mainId = '29f961a6166cc94d1ae744a39fa1122f';
                 if (!window.__IAER_BROCHURE_WIDGET_ID) {
                   window.__IAER_BROCHURE_WIDGET_ID = mainId;
                 }
@@ -193,7 +193,7 @@ export default function RootLayout({ children }) {
                         try {
                           var has = !!document.querySelector('iframe[src*="nopaperforms.com"]');
                           if (!has) {
-                            var url = 'https://widgets.nopaperforms.com/widget/' + targetId;
+                            var url = 'https://widgets.in8.nopaperforms.com/widget/' + targetId;
                             var w = 920, h = 700;
                             var left = Math.max(0, (window.innerWidth - w) / 2);
                             var top = Math.max(0, (window.innerHeight - h) / 2);
@@ -235,7 +235,7 @@ export default function RootLayout({ children }) {
                 var s=document.createElement('script');
                 s.type='text/javascript';
                 s.async=true;
-                s.src='https://chatbot.in1.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/655602525fe21a6b/71289f36cb7f4d1aa57ea9599d67b976';
+                s.src='https://chatbot.in8.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/f66854412785432ea1d2c2257fe7861f/71289f36cb7f4d1aa57ea9599d67b976';
                 document.body.appendChild(s);
               } catch (e) {}
             })();
