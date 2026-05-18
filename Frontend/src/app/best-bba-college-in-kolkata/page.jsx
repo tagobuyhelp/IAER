@@ -651,7 +651,7 @@ export default function BBALandingPage() {
 
             <div className="grid md:grid-cols-2 gap-6">
                {/* Student Testimonials */}
-               <div>
+               <div className="min-w-0">
                   <h3 className="text-lg font-semibold text-[#143674] flex items-center gap-2 mb-4"><GraduationCap className="w-5 h-5 text-primary" /> Student Testimonials</h3>
                   <div className="flex gap-4 overflow-x-auto pb-4 pt-1 snap-x snap-mandatory no-scrollbar">
                      {[
@@ -674,7 +674,7 @@ export default function BBALandingPage() {
                </div>
 
                {/* Industry Testimonials */}
-               <div>
+               <div className="min-w-0">
                   <h3 className="text-lg font-semibold text-[#143674] flex items-center gap-2 mb-4"><Briefcase className="w-5 h-5 text-primary" /> Industry Testimonials</h3>
                   <div className="flex gap-4 overflow-x-auto pb-4 pt-1 snap-x snap-mandatory no-scrollbar">
                      {[
