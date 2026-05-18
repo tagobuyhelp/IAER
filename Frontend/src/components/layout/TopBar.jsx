@@ -14,7 +14,12 @@ const Pinterest = ({ className }) => (
   </svg>
 );
 
+import { usePathname } from "next/navigation";
+
 export default function TopBar() {
+  const pathname = usePathname();
+  if (pathname?.startsWith("/lp") || pathname === "/best-bba-college-in-kolkata") return null;
+
   return (
     <div className="hidden md:block bg-[#143674] text-gray-200 py-2 border-b border-white/10 text-xs font-medium relative z-[51]">
       <div className="container mx-auto px-4 flex justify-between items-center h-8 md:h-auto">

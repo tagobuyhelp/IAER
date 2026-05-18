@@ -6,6 +6,7 @@ import * as LucideIcons from "lucide-react";
 import { Menu, X, ChevronDown, ChevronRight, Search } from "lucide-react";
 import { navigationData } from "@/lib/navigation";
 import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
 
 const Icon = ({ name, className }) => {
   const IconComponent = LucideIcons[name];
@@ -16,6 +17,9 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
   const timeoutRef = useRef(null);
+  const pathname = usePathname();
+
+  if (pathname?.startsWith("/lp") || pathname === "/best-bba-college-in-kolkata") return null;
 
   const toggleMenu = () => setIsOpen(!isOpen);
 

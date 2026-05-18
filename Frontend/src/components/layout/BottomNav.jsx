@@ -131,6 +131,9 @@ function getSectionsForPath(pathname) {
 
 export default function BottomNav() {
   const pathname = usePathname();
+
+  if (pathname?.startsWith("/lp") || pathname === "/best-bba-college-in-kolkata") return null;
+
   const sections = getSectionsForPath(pathname);
   const [activeSection, setActiveSection] = useState(
     sections && sections.length ? sections[0].id : null

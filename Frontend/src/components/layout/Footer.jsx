@@ -4,6 +4,7 @@ import Link from "next/link";
 import { navigationData } from "@/lib/navigation";
 import { Facebook, Twitter, Instagram, Linkedin, Youtube, Mail, MapPin, Phone, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { usePathname } from "next/navigation";
 
 const Pinterest = ({ className }) => (
   <svg 
@@ -18,6 +19,9 @@ const Pinterest = ({ className }) => (
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const pathname = usePathname();
+
+  if (pathname?.startsWith("/lp") || pathname === "/best-bba-college-in-kolkata") return null;
 
   return (
     <footer className="bg-[#050301] text-gray-300 border-t border-white/10 relative overflow-hidden font-sans">
