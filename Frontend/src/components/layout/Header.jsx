@@ -19,7 +19,7 @@ export default function Header() {
   const timeoutRef = useRef(null);
   const pathname = usePathname();
 
-  if (pathname?.startsWith("/lp") || pathname === "/best-bba-college-in-kolkata") return null;
+  if (pathname?.startsWith("/lp") || pathname === "/best-bba-college-in-kolkata" || pathname === "/best-bca-college-in-kolkata") return null;
 
   const toggleMenu = () => setIsOpen(!isOpen);
 

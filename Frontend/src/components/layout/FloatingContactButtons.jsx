@@ -19,7 +19,7 @@ const WhatsAppIcon = ({ className }) => (
 export default function FloatingContactButtons() {
   const pathname = usePathname();
   const hideOnProgramDetail = pathname?.startsWith("/programs/") && pathname !== "/programs";
-  if (hideOnProgramDetail || pathname?.startsWith("/lp") || pathname === "/best-bba-college-in-kolkata") return null;
+  if (hideOnProgramDetail || pathname?.startsWith("/lp") || pathname === "/best-bba-college-in-kolkata" || pathname === "/best-bca-college-in-kolkata") return null;
 
   const phoneNumber = "+918001110000";
   const whatsappNumber = "+918100106665";

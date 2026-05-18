@@ -21,7 +21,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   const pathname = usePathname();
 
-  if (pathname?.startsWith("/lp") || pathname === "/best-bba-college-in-kolkata") return null;
+  if (pathname?.startsWith("/lp") || pathname === "/best-bba-college-in-kolkata" || pathname === "/best-bca-college-in-kolkata") return null;
 
   return (
     <footer className="bg-[#050301] text-gray-300 border-t border-white/10 relative overflow-hidden font-sans">
