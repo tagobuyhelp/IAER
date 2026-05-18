@@ -126,7 +126,7 @@ export default function BBALandingPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 scroll-smooth font-sans">
+    <div className="min-h-screen bg-slate-50 text-slate-900 scroll-smooth font-sans pb-20 sm:pb-0">
       <style dangerouslySetInnerHTML={{ __html: `
         .animate-fade-in-up {
           animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -826,6 +826,31 @@ export default function BBALandingPage() {
           </div>
         </div>
       </footer>
+
+      {/* --- FLOATING BOTTOM CTA BAR --- */}
+      <div className="fixed bottom-0 left-0 right-0 z-[60] bg-white/95 backdrop-blur-lg border-t border-slate-200 shadow-[0_-10px_30px_rgba(0,0,0,0.1)] sm:bottom-6 sm:left-1/2 sm:right-auto sm:-translate-x-1/2 sm:rounded-full sm:border sm:px-3 sm:py-2 flex items-center justify-between px-2 py-2 gap-1.5 sm:gap-3 transition-all duration-300 w-full sm:w-max">
+         <nav className="flex items-center justify-between sm:justify-start gap-1 flex-1 sm:flex-none">
+            {[
+              { name: 'About', href: '#about', icon: BookOpen },
+              { name: 'Programs', href: '#specializations', icon: Target },
+              { name: 'Why Us', href: '#why-iaer', icon: Building2 },
+              { name: 'Placements', href: '#placements', icon: Briefcase }
+            ].map(link => (
+               <a key={link.name} href={link.href} className="flex flex-col sm:flex-row items-center justify-center sm:px-4 sm:py-2 text-slate-500 sm:text-slate-600 hover:text-[#143674] sm:hover:bg-slate-100 rounded-full transition-colors flex-1 sm:flex-none">
+                  <link.icon className="w-5 h-5 sm:hidden mb-0.5" />
+                  <span className="text-[9px] sm:text-sm font-bold sm:font-semibold uppercase sm:capitalize tracking-tighter sm:tracking-normal leading-none text-center">{link.name}</span>
+               </a>
+            ))}
+         </nav>
+
+         <div className="h-8 w-px bg-slate-200 hidden sm:block mx-1" />
+
+         <div className="flex items-center flex-shrink-0">
+            <Button onClick={onApplyNow} className="bg-primary hover:bg-primary/90 text-white font-bold rounded-full px-3 py-2.5 sm:px-5 sm:py-2 text-[11px] sm:text-sm shadow-lg shadow-primary/30 active:scale-95 transition-all whitespace-nowrap">
+               Apply Now <ArrowRight className="w-4 h-4 ml-1.5 hidden sm:inline" />
+            </Button>
+         </div>
+      </div>
     </div>
   );
 }
