@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import {
-  BookOpen, Briefcase, CheckCircle, Download, ExternalLink,
+  BookOpen, Briefcase, CheckCircle, Download, ExternalLink, FileText, BadgeCheck,
   Globe, Phone, Star, Trophy, Users, Mail,
   Award, TrendingUp, Lightbulb, Building2, Wifi, HeartHandshake,
   ShieldCheck, Rocket, Landmark, CreditCard,
@@ -759,58 +759,121 @@ export default function BCALandingPage() {
       </section>
 
       {/* --- ELIGIBILITY & ADMISSION --- */}
-      <section id="eligibility" className="py-8 sm:py-12 bg-slate-50 border-b border-slate-200">
+      <section id="eligibility" className="py-12 sm:py-16 bg-slate-50 border-b border-slate-200">
          <div className="mx-auto max-w-[1550px] px-4">
-            <div className="text-center mb-8 sm:mb-10">
-               <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-primary mb-2 block">Quick & Simple Admission</span>
-               <h2 className="text-2xl sm:text-4xl font-extrabold text-[#143674] tracking-tight">
-                  Eligibility & <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-teal-500">Admission Process</span>
+            <div className="text-center mb-10 sm:mb-14">
+               <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#0f9f68] mb-2 block">Quick & Simple Admission</span>
+               <h2 className="text-3xl sm:text-5xl font-extrabold text-[#143674] tracking-tight">
+                  Eligibility & <span className="text-[#0f9f68]">Admission Process</span>
                </h2>
-               <div className="mt-4 h-1.5 w-16 bg-accent mx-auto rounded-full" />
+               <div className="mt-4 h-1.5 w-14 bg-orange-500 mx-auto rounded-full" />
             </div>
 
             <div className="grid lg:grid-cols-12 gap-6 sm:gap-8 items-stretch">
-               {/* Left Column: Eligibility (4 cols) */}
-               <div className="lg:col-span-4 flex flex-col">
-                  <div className="bg-gradient-to-br from-[#143674] to-[#0b1c3a] text-white rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-xl h-full relative overflow-hidden group">
+               {/* Left Column: Eligibility Criteria Card (3 cols) */}
+               <div className="lg:col-span-3 flex flex-col">
+                  <div className="bg-gradient-to-b from-[#0a387c] to-[#042459] text-white rounded-[2rem] p-7 flex flex-col justify-between shadow-[0_10px_30px_rgba(4,36,89,0.15)] h-full relative overflow-hidden group">
                      <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-3xl -mr-10 -mt-10 group-hover:scale-120 transition-transform duration-500" />
-                     <GraduationCap className="w-12 h-12 text-accent mb-6" />
+                     
+                     <div className="w-16 h-16 rounded-full bg-blue-900/60 border border-blue-800/40 flex items-center justify-center mb-8 shadow-inner">
+                        <GraduationCap className="w-8 h-8 text-orange-500" />
+                     </div>
+
                      <div>
-                        <h3 className="text-xl font-bold mb-3">Eligibility Criteria</h3>
-                        <p className="text-blue-100 text-sm leading-relaxed mb-6">
+                        <h3 className="text-2xl font-bold mb-3 tracking-tight">Eligibility Criteria</h3>
+                        <p className="text-blue-100/70 text-xs sm:text-sm leading-relaxed mb-8">
                            Simple and direct admission criteria for aspiring tech professionals.
                         </p>
-                        <div className="bg-white/10 rounded-2xl p-4 border border-white/10">
-                           <div className="text-xs uppercase tracking-wider text-accent font-bold mb-1">Academic Requirement</div>
-                           <div className="text-base sm:text-lg font-bold">10+2 from any recognized board</div>
+                        
+                        <div className="bg-white/10 rounded-2xl p-5 border border-white/5 shadow-inner">
+                           <div className="text-[10px] uppercase tracking-wider text-orange-400 font-bold mb-1.5">Academic Requirement</div>
+                           <div className="text-base sm:text-[1.1rem] font-bold leading-snug">10+2 from any recognized board</div>
                         </div>
                      </div>
-                     <div className="mt-8 text-xs text-blue-200/60">
+
+                     <div className="mt-8 text-[11px] text-blue-200/50">
                         * Open to all streams (Science, Commerce, Arts)
                      </div>
                   </div>
                </div>
 
-               {/* Right Column: Steps (8 cols) */}
-               <div className="lg:col-span-8 flex flex-col justify-center">
-                  <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 h-full">
+               {/* Right Column: Step Cards (9 cols) */}
+               <div className="lg:col-span-9 flex flex-col justify-center">
+                  <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-5 h-full">
                      {[
-                        { step: '01', title: 'Apply Online', desc: 'Fill the quick registration form online.' },
-                        { step: '02', title: 'Get Offer Letter', desc: 'Receive your official admission offer.' },
-                        { step: '03', title: 'Pay Enrollment Fee', desc: 'Secure your seat by paying enrollment fees.' },
-                        { step: '04', title: 'Confirm Admission', desc: 'Complete documentation and welcome aboard!' }
+                        { 
+                           step: '01', 
+                           num: '1', 
+                           title: 'Apply Online', 
+                           desc: 'Fill the quick registration form online.',
+                           colorClass: 'text-blue-500',
+                           bgClass: 'bg-blue-50',
+                           iconColor: 'text-blue-600',
+                           icon: FileText,
+                           dotIdx: 0
+                        },
+                        { 
+                           step: '02', 
+                           num: '2', 
+                           title: 'Get Offer Letter', 
+                           desc: 'Receive your official admission offer.',
+                           colorClass: 'text-emerald-500',
+                           bgClass: 'bg-[#e6f7ed]',
+                           iconColor: 'text-[#0f9f68]',
+                           icon: Mail,
+                           dotIdx: 1
+                        },
+                        { 
+                           step: '03', 
+                           num: '3', 
+                           title: 'Pay Enrollment Fee', 
+                           desc: 'Secure your seat by paying enrollment fees.',
+                           colorClass: 'text-purple-500',
+                           bgClass: 'bg-[#f3effc]',
+                           iconColor: 'text-purple-600',
+                           icon: CreditCard,
+                           dotIdx: 2
+                        },
+                        { 
+                           step: '04', 
+                           num: '4', 
+                           title: 'Confirm Admission', 
+                           desc: 'Complete documentation and welcome aboard!',
+                           colorClass: 'text-orange-500',
+                           bgClass: 'bg-[#fff7ed]',
+                           iconColor: 'text-orange-500',
+                           icon: BadgeCheck,
+                           dotIdx: 3
+                        }
                      ].map((item, i) => (
-                        <div key={i} className="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm flex flex-col justify-between hover:shadow-md hover:-translate-y-0.5 transition-all relative group overflow-hidden">
-                           <div className="absolute top-0 right-0 w-16 h-16 bg-primary/5 rounded-full blur-xl group-hover:scale-125 transition-transform" />
-                           <div className="flex justify-between items-center mb-4">
-                              <span className="text-2xl font-black text-[#143674]/15 group-hover:text-accent/25 transition-colors">{item.step}</span>
-                              <div className="w-8 h-8 rounded-full bg-blue-50 text-[#143674] flex items-center justify-center font-bold text-xs group-hover:bg-[#143674] group-hover:text-white transition-colors">
-                                 {i + 1}
-                              </div>
+                        <div key={i} className="bg-white rounded-[2rem] p-6 sm:p-7 border border-slate-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center relative group overflow-hidden">
+                           {/* Step Cards Top Header */}
+                           <div className="w-full flex justify-between items-center mb-6">
+                              <span className={`text-lg sm:text-xl font-extrabold ${item.colorClass}`}>{item.step}</span>
+                              <span className={`w-6 h-6 rounded-full ${item.bgClass} ${item.colorClass} font-bold text-xs flex items-center justify-center shadow-sm`}>
+                                 {item.num}
+                              </span>
                            </div>
-                           <div>
-                              <h4 className="font-bold text-[#143674] text-base mb-1.5 group-hover:text-primary transition-colors">{item.title}</h4>
-                              <p className="text-xs text-slate-500 leading-relaxed">{item.desc}</p>
+
+                           {/* Card Icon Shape */}
+                           <div className={`w-20 h-20 sm:w-22 sm:h-22 rounded-full ${item.bgClass} flex items-center justify-center mb-6 transition-transform duration-500 group-hover:scale-110 shadow-inner`}>
+                              <item.icon className={`w-9 h-9 ${item.iconColor}`} />
+                           </div>
+
+                           {/* Title & Description */}
+                           <h4 className="font-extrabold text-[#143674] text-lg mb-2 tracking-tight group-hover:text-[#0f9f68] transition-colors">{item.title}</h4>
+                           <p className="text-xs sm:text-sm text-slate-500 leading-relaxed max-w-[200px] mb-8">{item.desc}</p>
+
+                           {/* Visual Dots Indicator at the Bottom */}
+                           <div className="flex gap-1.5 mt-auto">
+                              {[0, 1, 2, 3].map((dot) => (
+                                 <span 
+                                    key={dot} 
+                                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                                       dot === item.dotIdx ? `w-2 ${item.colorClass.replace('text-', 'bg-')}` : 'bg-slate-200'
+                                    }`} 
+                                 />
+                              ))}
                            </div>
                         </div>
                      ))}
