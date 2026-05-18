@@ -343,43 +343,7 @@ export default function BBALandingPage() {
         </div>
       </section>
 
-      {/* --- AWARDS --- */}
-      <section className="relative bg-[#143674] py-8 sm:py-10 border-b border-white/10 overflow-hidden">
-        <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05)_1px,transparent_1px)] [background-size:24px_24px]" />
-        <div className="absolute inset-0 bg-gradient-to-br from-[#143674]/95 via-[#0b1c3a]/80 to-[#143674]/95 mix-blend-multiply z-0" />
-        
-        <div className="relative z-10 mx-auto max-w-[1550px] px-4">
-          <div className="text-center mb-6 sm:mb-8">
-            <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-accent mb-2 block">Recognized Excellence</span>
-            <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight flex items-center justify-center gap-3">
-              <Trophy className="h-8 w-8 sm:h-10 sm:w-10 text-accent" />
-              Our Achievements
-            </h2>
-            <div className="mt-4 h-1.5 w-16 bg-accent mx-auto rounded-full" />
-          </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
-               {[
-                 { title: 'Best Innovative IT College in Eastern India', source: '(IT Startup Excellence Awards, 2019)' },
-                 { title: 'Best Emerging e-Business School of the Year', source: '(Virtual Education & Technology Awards, 2020)' },
-                 { title: 'Best Startup Education College in Eastern India', source: '(StartUp & VC Award for Excellence, 2021)' },
-                 { title: 'Top 10 Best College for Data Science in India', source: '(Knowledge Review, 2024)' },
-                 { title: 'Top 10 Best College for Cyber Security in India', source: '(Knowledge Review, 2025)' },
-                 { title: 'Best Emerging Information Technology Award', source: '(Edulite Excellence Award, 2024)' },
-                 { title: 'Best College for Innovation in Eastern India', source: '(Edulite Excellence Award, 2025)' },
-                 { title: 'Excellence in Information Technology Education', source: '(Collegedunia, 2024)' }
-               ].map((ach, i) => (
-                 <div key={i} className="group bg-white/5 border border-white/10 rounded-2xl p-5 hover:bg-white/10 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-accent/10 flex flex-col justify-between backdrop-blur-sm">
-                   <div className="mb-4 bg-white/10 w-10 h-10 rounded-full flex items-center justify-center group-hover:bg-accent group-hover:scale-110 transition-all shadow-inner">
-                     <Award className="w-5 h-5 text-accent group-hover:text-white transition-colors" />
-                   </div>
-                   <h4 className="text-sm sm:text-base font-bold text-white mb-2 leading-snug">{ach.title}</h4>
-                   <p className="text-[10px] sm:text-[11px] text-blue-200/70 font-medium tracking-wide uppercase">{ach.source}</p>
-                 </div>
-               ))}
-          </div>
-        </div>
-      </section>
 
       {/* --- ABOUT --- */}
       <section id="about" className="relative border-b border-slate-200 bg-slate-50 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
@@ -549,6 +513,44 @@ export default function BBALandingPage() {
                 <p className="text-[10px] sm:text-xs text-blue-200/80 leading-relaxed">{item.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* --- AWARDS / ACHIEVEMENTS --- */}
+      <section className="relative bg-[#143674] py-8 sm:py-10 border-b border-white/10 overflow-hidden">
+        <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05)_1px,transparent_1px)] [background-size:24px_24px]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#143674]/95 via-[#0b1c3a]/80 to-[#143674]/95 mix-blend-multiply z-0" />
+        
+        <div className="relative z-10 mx-auto max-w-[1550px] px-4">
+          <div className="text-center mb-6 sm:mb-8">
+            <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-accent mb-2 block">Recognized Excellence</span>
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight flex items-center justify-center gap-3">
+              <Trophy className="h-8 w-8 sm:h-10 sm:w-10 text-accent" />
+              Our Achievements
+            </h2>
+            <div className="mt-4 h-1.5 w-16 bg-accent mx-auto rounded-full" />
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
+               {[
+                 { title: 'Best Innovative IT College in Eastern India', source: '(IT Startup Excellence Awards, 2019)' },
+                 { title: 'Best Emerging e-Business School of the Year', source: '(Virtual Education & Technology Awards, 2020)' },
+                 { title: 'Best Startup Education College in Eastern India', source: '(StartUp & VC Award for Excellence, 2021)' },
+                 { title: 'Top 10 Best College for Data Science in India', source: '(Knowledge Review, 2024)' },
+                 { title: 'Top 10 Best College for Cyber Security in India', source: '(Knowledge Review, 2025)' },
+                 { title: 'Best Emerging Information Technology Award', source: '(Edulite Excellence Award, 2024)' },
+                 { title: 'Best College for Innovation in Eastern India', source: '(Edulite Excellence Award, 2025)' },
+                 { title: 'Excellence in Information Technology Education', source: '(Collegedunia, 2024)' }
+               ].map((ach, i) => (
+                 <div key={i} className="group bg-white/5 border border-white/10 rounded-2xl p-5 hover:bg-white/10 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-accent/10 flex flex-col justify-between backdrop-blur-sm">
+                   <div className="mb-4 bg-white/10 w-10 h-10 rounded-full flex items-center justify-center group-hover:bg-accent group-hover:scale-110 transition-all shadow-inner">
+                     <Award className="w-5 h-5 text-accent group-hover:text-white transition-colors" />
+                   </div>
+                   <h4 className="text-sm sm:text-base font-bold text-white mb-2 leading-snug">{ach.title}</h4>
+                   <p className="text-[10px] sm:text-[11px] text-blue-200/70 font-medium tracking-wide uppercase">{ach.source}</p>
+                 </div>
+               ))}
           </div>
         </div>
       </section>
