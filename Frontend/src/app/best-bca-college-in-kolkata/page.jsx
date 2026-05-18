@@ -29,7 +29,9 @@ export default function BCALandingPage() {
   const [heroImgIdx, setHeroImgIdx] = useState(0);
   const heroImages = [
     '/images/about/building-image-about-hero.webp',
-    '/images/campus/iaer-campus.png'
+    '/images/programs/bca-overview.webp',
+    '/images/programs/bca-in-data-science-cyber-security-overview.webp',
+    '/images/programs/bca-in-ai-ml-overview.webp'
   ];
 
   useEffect(() => {
@@ -102,7 +104,7 @@ export default function BCALandingPage() {
       icon: Lightbulb, 
       desc: 'Perfect for students searching BCA AI ML course in Kolkata, AI ML course after 12th Kolkata, artificial intelligence degree Kolkata. Career Roles: AI Engineer | ML Engineer | Data Scientist',
       highlights: ['Machine Learning', 'Deep Learning', 'NLP', 'AI Tools'],
-      image: '/images/programs/bca-in-ai-ml-overview.webp'
+      image: '/images/programs/BCA-in-Artificial-Intelligence-&-Machine-Learnng.webp'
     },
     { 
       name: 'BCA Cyber Security & Data Science', 
