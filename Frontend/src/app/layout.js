@@ -230,6 +230,19 @@ export default function RootLayout({ children }) {
                   };
                 }
 
+                // Intercept admission link clicks and open the popup instead
+                document.addEventListener('click', function(e) {
+                  try {
+                    var target = e.target.closest('a');
+                    if (target && target.href && (target.href.indexOf('admission.iaer.ac.in') !== -1 || target.href.indexOf('admission.iaer.in') !== -1)) {
+                      e.preventDefault();
+                      if (typeof window.openNpfPopup === 'function') {
+                        window.openNpfPopup(mainId);
+                      }
+                    }
+                  } catch (err) {}
+                });
+
                 ensureTrigger(mainId);
               } catch (e) {}
             })();

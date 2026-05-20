@@ -11,7 +11,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 
-export default function BCALandingPage() {
+export default function MBALandingPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const marqueeRef = useRef(null);
   const specScrollRef = useRef(null);
@@ -29,9 +29,9 @@ export default function BCALandingPage() {
   const [heroImgIdx, setHeroImgIdx] = useState(0);
   const heroImages = [
     '/images/about/building-image-about-hero.webp',
-    '/images/programs/bca-overview.webp',
-    '/images/programs/bca-in-data-science-cyber-security-overview.webp',
-    '/images/programs/bca-in-ai-ml-overview.webp'
+    '/images/programs/master-of-business-administration-mba-overview.webp',
+    '/images/programs/master-of-business-administration-mba-curriculum.webp',
+    '/images/programs/master-of-business-administration-mba-careers.webp'
   ];
 
   useEffect(() => {
@@ -93,25 +93,39 @@ export default function BCALandingPage() {
 
   const specializations = [
     { 
-      name: 'BCA (General)', 
-      icon: Building2, 
-      desc: 'Strong foundation for students looking for BCA colleges near me, BCA course fees in Kolkata, direct admission BCA Kolkata. Career Roles: Software Developer | Web Developer | IT Executive',
-      highlights: ['Programming (Python, Java, C++)', 'Web & App Development', 'Software Engineering', 'Database Management'],
-      image: '/images/programs/bca-overview.webp'
+      name: 'Marketing', 
+      icon: Target, 
+      desc: 'Understand how brands grow, how markets function, and how businesses engage customers in today’s digital world.',
+      highlights: ['Digital Marketing & Branding', 'Consumer Behavior', 'Sales & Market Strategy'],
+      image: '/images/programs/master-of-business-administration-mba-overview.webp'
     },
     { 
-      name: 'BCA AI & ML', 
-      icon: Lightbulb, 
-      desc: 'Perfect for students searching BCA AI ML course in Kolkata, AI ML course after 12th Kolkata, artificial intelligence degree Kolkata. Career Roles: AI Engineer | ML Engineer | Data Scientist',
-      highlights: ['Machine Learning', 'Deep Learning', 'NLP', 'AI Tools'],
-      image: '/images/programs/BCA-in-Artificial-Intelligence-&-Machine-Learnng.webp'
+      name: 'Finance', 
+      icon: Banknote, 
+      desc: 'Builds a strong understanding of financial systems, investments, and how businesses manage money and growth.',
+      highlights: ['Financial Analysis', 'Investment & Banking Concepts', 'Corporate Finance'],
+      image: '/images/programs/master-of-business-administration-mba-curriculum.webp'
     },
     { 
-      name: 'BCA Cyber Security & Data Science', 
-      icon: ShieldCheck, 
-      desc: 'Designed for high-demand domains like cyber security course Kolkata, data science course after 12th Kolkata, ethical hacking course Kolkata. Career Roles: Cyber Security Analyst | Data Analyst | SOC Analyst',
-      highlights: ['Ethical Hacking', 'Network Security', 'Data Analytics', 'Python for Data Science'],
-      image: '/images/programs/bca-in-data-science-cyber-security-overview.webp'
+      name: 'Human Resource (HR)', 
+      icon: Users, 
+      desc: 'Focuses on managing people, building teams, and understanding workplace behavior in modern organizations.',
+      highlights: ['Talent Management', 'HR Analytics', 'Organizational Behavior'],
+      image: '/images/programs/master-of-business-administration-mba-careers.webp'
+    },
+    { 
+      name: 'Logistics & Supply Chain', 
+      icon: Globe, 
+      desc: 'Focuses on how goods and services move efficiently from production to customers in today’s fast-paced economy.',
+      highlights: ['Supply Chain Operations', 'Inventory & Distribution', 'E-commerce Logistics'],
+      image: '/images/programs/pgdm-ba-overview.webp'
+    },
+    { 
+      name: 'Hospital Management', 
+      icon: Hotel, 
+      desc: 'Introduces students to the functioning of hospitals and healthcare systems, focusing on management and operations.',
+      highlights: ['Hospital Operations', 'Healthcare Systems', 'Patient Management'],
+      image: '/images/programs/master-of-hospital-administration-overview.webp'
     }
   ];
 
@@ -233,20 +247,20 @@ export default function BCALandingPage() {
           <div data-animate-on-scroll className="relative z-10 mx-auto grid max-w-[1550px] grid-cols-1 gap-3 sm:gap-4 px-4 py-3 sm:py-4 md:grid-cols-12 md:gap-6 md:py-6 transition-all duration-700 ease-out">
             <div className="flex-1 md:col-span-7 space-y-1.5 sm:space-y-3">
               <div className="text-[10px] sm:text-xs font-bold text-accent uppercase tracking-wider mb-2">
-                BCA | General | AI & ML | Cyber Security & Data Science
+                MBA | PGDM (AICTE Approved)
               </div>
               <div className="inline-flex items-center gap-1.5 sm:gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-2.5 py-0.5 sm:px-3 sm:py-1 text-[11px] sm:text-xs font-medium text-white shadow-sm">
                 <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-accent rounded-full animate-pulse" />
-                <span>Best BCA College in Kolkata with Placement</span>
+                <span>Best MBA College in Kolkata with Placement</span>
               </div>
 
               <div className="space-y-1 sm:space-y-2">
                 <h1 className="text-xl sm:text-3xl lg:text-[2.75rem] font-extrabold tracking-tighter text-white drop-shadow-lg leading-tight sm:leading-[1.1]">
-                  Build a Future-Proof Tech Career with <br className="hidden sm:block" />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-teal-300 to-white">BCA, AI & Cyber Security at IAER Kolkata</span>
+                  Build a High-Paying Career with <br className="hidden sm:block" />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-teal-300 to-white">MBA in Kolkata – Placement Focused Program</span>
                 </h1>
                 <p className="text-[10px] sm:text-base lg:text-lg font-medium text-blue-100/90 drop-shadow max-w-full sm:max-w-3xl leading-tight sm:leading-relaxed">
-                  Looking for BCA admission in Kolkata? Join IAER—one of the top BCA colleges in Kolkata offering Artificial Intelligence, Machine Learning, Cyber Security & Data Science programs with strong placement support.
+                  Looking for MBA admission in Kolkata? IAER is one of the best MBA colleges in Kolkata offering strong job outcomes, internships, and corporate exposure.
                 </p>
                 <div className="flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-xs font-semibold text-white mt-1 sm:mt-2" aria-label="Student rating">
                   {[...Array(5)].map((_, i) => (
@@ -268,9 +282,9 @@ export default function BCALandingPage() {
               <div className="mt-3 flex flex-wrap items-center gap-2 sm:mt-6 sm:gap-4">
                 {[
                   { label: 'Internship from Year 1', icon: Briefcase },
-                  { label: 'Industry-Aligned Curriculum', icon: BookOpen },
-                  { label: '350+ Placement Offers', icon: Target },
-                  { label: 'Future-Ready Specializations in AI, ML & Data Science', icon: Layers },
+                  { label: 'Industry-Aligned MBA Curriculum', icon: BookOpen },
+                  { label: 'Dual Specialization + Certifications', icon: Target },
+                  { label: 'Strong Placement Support', icon: Layers },
                 ].map((b) => (
                   <div key={b.label} className="flex items-center gap-1 sm:gap-2 rounded-full bg-white/5 border border-white/10 px-2 sm:px-4 py-1 sm:py-2 text-[9px] sm:text-xs font-medium text-white/90 backdrop-blur-sm shadow-inner transition-all hover:bg-white/10 hover:-translate-y-0.5 cursor-default">
                     <b.icon className="h-2.5 w-2.5 sm:h-4 sm:w-4 text-accent" />
@@ -316,13 +330,13 @@ export default function BCALandingPage() {
                          <Award className="h-3.5 w-3.5 text-accent" /> AICTE Approved
                        </span>
                        <span className="inline-flex items-center gap-1.5 text-[11px] lg:text-xs font-semibold text-white/90 whitespace-nowrap">
-                         <Briefcase className="h-3.5 w-3.5 text-primary" /> ₹4.50+ LPA Avg Package
+                         <Briefcase className="h-3.5 w-3.5 text-primary" /> ₹6.50+ LPA Avg Package
                        </span>
                        <span className="inline-flex items-center gap-1.5 text-[11px] lg:text-xs font-semibold text-white/90 whitespace-nowrap">
-                         <Globe className="h-3.5 w-3.5 text-teal-400" /> Global Exposure
+                         <Globe className="h-3.5 w-3.5 text-teal-400" /> Corporate Readiness
                        </span>
                        <span className="inline-flex items-center gap-1.5 text-[11px] lg:text-xs font-semibold text-white/90 whitespace-nowrap">
-                         <Building2 className="h-3.5 w-3.5 text-blue-400" /> Affiliated to MAKAUT
+                         <Building2 className="h-3.5 w-3.5 text-blue-400" /> ₹15.20 LPA Highest Package
                        </span>
                      </React.Fragment>
                    ))}
@@ -348,19 +362,18 @@ export default function BCALandingPage() {
                 <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#143674] text-white">
                   <BookOpen className="h-4 w-4" />
                 </span>
-                <h2 className="text-xl sm:text-2xl font-bold font-sans text-[#143674]">About BCA at IAER</h2>
+                <h2 className="text-xl sm:text-2xl font-bold font-sans text-[#143674]">About MBA at IAER</h2>
               </div>
               <div className="mb-4 h-1 w-20 rounded-full bg-primary" />
               <div className="prose prose-sm max-w-none text-slate-700">
                 <p className="leading-relaxed text-base">
-                  IAER is ranked among the best IT colleges in Kolkata, offering BCA courses after 12th designed for real-world careers.
-                  We provide a perfect blend of theoretical knowledge and practical technical learning.
+                  IAER offers a placement-focused MBA program in Kolkata that combines academic learning with real industry exposure. It is widely considered among the top MBA colleges in Kolkata and West Bengal.
                 </p>
 
                 <div className="mt-4 text-sm font-medium text-slate-600">
                   <p className="mb-2 uppercase tracking-widest text-[10px] text-[#143674] font-bold">If you're searching for:</p>
                   <div className="flex flex-wrap gap-2">
-                    {['BCA course in Kolkata', 'private BCA colleges in Kolkata', 'BCA colleges with internship Kolkata', 'BCA with placement in Kolkata'].map((tag) => (
+                    {['MBA placement in Kolkata', 'top MBA colleges in West Bengal', 'MBA colleges near Jharkhand', 'MBA with internship'].map((tag) => (
                       <span key={tag} className="inline-flex items-center bg-white border border-slate-200 shadow-sm px-3 py-1.5 rounded-full text-[11px] font-semibold text-slate-700 hover:border-primary hover:text-primary transition-colors cursor-default">
                         <Search className="w-3 h-3 mr-1.5 text-slate-400" /> {tag}
                       </span>
@@ -370,13 +383,13 @@ export default function BCALandingPage() {
                 
                 <div className="mt-5 bg-gradient-to-br from-[#143674] to-[#0b1c3a] rounded-2xl p-5 shadow-lg relative overflow-hidden group">
                   <div className="absolute -right-4 -bottom-4 w-32 h-32 bg-primary/20 rounded-full blur-3xl opacity-50 group-hover:scale-150 transition-transform duration-700" />
-                  <h3 className="text-sm font-bold text-white mb-4 flex items-center gap-2"><Target className="w-4 h-4 text-accent" /> IAER Provides:</h3>
+                  <h3 className="text-sm font-bold text-white mb-4 flex items-center gap-2"><Target className="w-4 h-4 text-accent" /> Curriculum Focuses On:</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 relative z-10">
                     {[
-                      { label: 'Industry-integrated curriculum' },
-                      { label: 'Project-based learning' },
-                      { label: 'Internship opportunities from early semesters' },
-                      { label: '100% Placement Support' }
+                      { label: 'Corporate readiness' },
+                      { label: 'Practical business knowledge' },
+                      { label: 'Live projects and internships' },
+                      { label: 'Skill-based learning' }
                     ].map((i) => (
                       <div key={i.label} className="group/item flex items-center gap-2 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 px-3 py-2.5 shadow-sm hover:bg-white/20 transition-all cursor-default hover:-translate-y-0.5">
                         <CheckCircle className="h-4 w-4 text-accent flex-shrink-0 group-hover/item:scale-110 transition-transform" />
@@ -397,9 +410,9 @@ export default function BCALandingPage() {
           <div className="flex flex-col gap-1 mb-6 text-center sm:text-left">
             <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-primary">Choose Your Path</span>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-[#143674] tracking-tight">
-              BCA <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-teal-500">Specializations</span>
+              MBA <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-teal-500">Specializations</span>
             </h2>
-            <p className="text-sm sm:text-base font-medium text-slate-600 mt-2">Best BCA Specializations in Kolkata with Placement & Industry Exposure</p>
+            <p className="text-sm sm:text-base font-medium text-slate-600 mt-2">Choose from industry-relevant MBA specializations aligned with job market demand</p>
             <div className="mx-auto sm:mx-0 mt-4 h-1.5 w-24 rounded-full bg-accent shadow-sm" />
           </div>
 
@@ -473,6 +486,24 @@ export default function BCALandingPage() {
         </div>
       </section>
 
+      {/* --- ADD-ON CERTIFICATIONS --- */}
+      <section className="bg-slate-50 py-8 sm:py-10 border-b border-slate-200">
+        <div data-animate-on-scroll className="mx-auto max-w-[1550px] px-4 text-center">
+          <h2 className="text-xl sm:text-3xl font-bold text-[#143674] mb-3">Add-On Certifications (Future Skills)</h2>
+          <p className="text-sm sm:text-base text-slate-600 mb-6">Enhance your MBA with in-demand certifications that increase employability.</p>
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
+            {['Business Analytics', 'Fintech', 'AI & Data Science'].map((cert) => (
+              <div key={cert} className="bg-white border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 rounded-xl px-6 py-4 flex items-center gap-3 transition-all">
+                <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-[#143674]">
+                  <Award className="w-5 h-5" />
+                </div>
+                <span className="font-bold text-slate-800 text-sm sm:text-base">{cert}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* --- WHY IAER --- */}
       <section id="why-iaer" className="relative border-b border-slate-200 bg-[#143674] overflow-hidden">
         <div className="absolute inset-0 z-0 flex opacity-10 saturate-0 mix-blend-screen">
@@ -488,11 +519,11 @@ export default function BCALandingPage() {
 
           <div className="grid grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4">
             {[
-              { icon: Briefcase, title: 'Internship-Driven Curriculum', desc: 'Top choice for BCA colleges with internship in Kolkata' },
-              { icon: Building2, title: 'Industry Integration', desc: 'Best for students seeking BCA with placement in Kolkata' },
-              { icon: Globe, title: 'Global Exposure', desc: 'International Immersion Programs (Thailand, Malaysia, Vietnam, UAE)' },
-              { icon: Award, title: 'Skill-Based Training', desc: 'Communication + technical expertise' },
-              { icon: Lightbulb, title: 'Startup Ecosystem', desc: 'Mentorship, incubation & funding support' },
+              { icon: Target, title: 'Presentation & Personality Dev.', desc: '20+ structured presentations across semesters' },
+              { icon: Award, title: 'Industry Certifications', desc: 'Six Sigma Green Belt & Advanced Excel' },
+              { icon: BookOpen, title: 'Business Communication', desc: 'Advanced business communication training' },
+              { icon: Building2, title: 'Corporate Connect', desc: 'Industry visits & corporate mentorship' },
+              { icon: Globe, title: 'International Immersion', desc: 'Sunderland, Lincoln, SEGi & more' },
             ].map((item, idx) => (
               <div key={item.title} className={`group flex flex-col items-center text-center bg-white/5 border border-white/10 p-4 sm:p-5 rounded-2xl backdrop-blur-md hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 hover:border-accent/30 shadow-lg relative overflow-hidden ${idx === 4 ? 'col-span-2 lg:col-span-1' : 'col-span-1'}`}>
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -553,7 +584,7 @@ export default function BCALandingPage() {
             <h2 className="text-2xl sm:text-4xl font-extrabold text-[#143674] tracking-tight">
               Placement <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-teal-500">Highlights</span>
             </h2>
-            <p className="text-sm sm:text-base font-medium text-slate-600 mt-2">Start Your Career with One of the Best BBA Colleges in Kolkata</p>
+            <p className="text-sm sm:text-base font-medium text-slate-600 mt-2">Start Your Career with One of the Best MBA Colleges in Kolkata</p>
             <div className="mt-4 h-1.5 w-24 rounded-full bg-accent shadow-sm" />
           </div>
 
@@ -572,18 +603,18 @@ export default function BCALandingPage() {
                       <div className="grid grid-cols-3 gap-2 sm:gap-4 flex-grow">
                  <div className="rounded-2xl bg-white p-3 sm:p-5 ring-1 ring-slate-200 shadow-sm flex flex-col items-center justify-center text-center hover:shadow-md transition-shadow relative overflow-hidden group">
                    <div className="absolute top-0 left-0 right-0 h-1 bg-primary transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
-                   <div className="text-2xl sm:text-4xl font-extrabold text-[#143674] mb-1">₹4.30</div>
+                   <div className="text-2xl sm:text-4xl font-extrabold text-[#143674] mb-1">₹6.50+</div>
                    <div className="text-slate-500 text-[10px] sm:text-xs font-semibold uppercase tracking-wider">LPA Average</div>
                  </div>
                  <div className="rounded-2xl bg-white p-3 sm:p-5 ring-1 ring-slate-200 shadow-sm flex flex-col items-center justify-center text-center hover:shadow-md transition-shadow relative overflow-hidden group">
                    <div className="absolute top-0 left-0 right-0 h-1 bg-accent transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
-                   <div className="text-2xl sm:text-4xl font-extrabold text-[#143674] mb-1">354+</div>
+                   <div className="text-2xl sm:text-4xl font-extrabold text-[#143674] mb-1">300+</div>
                    <div className="text-slate-500 text-[10px] sm:text-xs font-semibold uppercase tracking-wider">Placement Offers</div>
                  </div>
                  <div className="rounded-2xl bg-white p-3 sm:p-5 ring-1 ring-slate-200 shadow-sm flex flex-col items-center justify-center text-center hover:shadow-md transition-shadow relative overflow-hidden group">
                    <div className="absolute top-0 left-0 right-0 h-1 bg-teal-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
-                   <div className="text-2xl sm:text-4xl font-extrabold text-[#143674] mb-1">626+</div>
-                   <div className="text-slate-500 text-[10px] sm:text-xs font-semibold uppercase tracking-wider">Internships</div>
+                   <div className="text-2xl sm:text-4xl font-extrabold text-[#143674] mb-1">100%</div>
+                   <div className="text-slate-500 text-[10px] sm:text-xs font-semibold uppercase tracking-wider">Internship Opportunities</div>
                  </div>
               </div>
             </div>
@@ -595,13 +626,12 @@ export default function BCALandingPage() {
                  {/* Top Recruiters */}
                  <div>
                     <h4 className="text-sm font-bold text-[#143674] mb-3 uppercase tracking-wider flex items-center gap-2"><Briefcase className="w-4 h-4 text-primary" /> Top Recruiters</h4>
-                    <div className="flex flex-wrap items-center gap-4 sm:gap-6 bg-slate-50 p-4 rounded-2xl border border-slate-100 justify-center">
-                       <img src="/images/company_logos/Amazon_logo.svg.png" alt="Amazon" className="h-6 sm:h-7 object-contain" />
-                       <img src="/images/company_logos/Tata_Consultancy_Services_old_logo.svg.png" alt="TCS" className="h-6 sm:h-7 object-contain" />
-                       <img src="/images/company_logos/Infosys_logo.png" alt="Infosys" className="h-6 sm:h-7 object-contain" />
-                       <img src="/images/company_logos/Capgemini.png" alt="Capgemini" className="h-6 sm:h-7 object-contain" />
-                       <img src="/images/company_logos/deloitte.svg" alt="Deloitte" className="h-5 sm:h-6 object-contain" />
-                       <img src="/images/company_logos/Hindustan_Unilever_Logo.svg" alt="HUL" className="h-8 sm:h-10 object-contain" />
+                    <div className="flex flex-wrap items-center gap-2 sm:gap-3 bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                       {['IT & Tech Companies', 'BFSI Sector', 'Consulting Firms', 'FMCG & E-commerce'].map((recruiter) => (
+                         <span key={recruiter} className="inline-flex items-center justify-center bg-white text-slate-700 shadow-sm border border-slate-200 rounded-lg px-4 py-2 text-xs sm:text-sm font-bold">
+                           {recruiter}
+                         </span>
+                       ))}
                     </div>
                  </div>
 
@@ -609,7 +639,7 @@ export default function BCALandingPage() {
                  <div>
                    <h4 className="text-sm font-bold text-[#143674] mb-3 uppercase tracking-wider flex items-center gap-2"><Target className="w-4 h-4 text-primary" /> Career Opportunities</h4>
                    <div className="flex flex-wrap gap-2 sm:gap-2.5">
-                     {['Software Developer', 'Data Analyst', 'Cyber Security Analyst', 'AI Engineer', 'Web Developer', 'Database Administrator'].map((role) => (
+                     {['Business Analyst', 'Marketing Manager', 'Financial Analyst', 'HR Manager', 'Supply Chain Manager', 'Healthcare Administrator'].map((role) => (
                        <span key={role} className="inline-flex items-center gap-1.5 bg-[#143674]/5 text-[#143674] rounded-full px-3 py-1.5 text-[11px] sm:text-xs font-semibold border border-[#143674]/10 hover:bg-[#143674] hover:text-white transition-colors cursor-default">
                          <CheckCircle className="w-3 h-3" /> {role}
                        </span>
@@ -649,9 +679,8 @@ export default function BCALandingPage() {
                   <h3 className="text-lg font-semibold text-[#143674] flex items-center gap-2 mb-4"><GraduationCap className="w-5 h-5 text-primary" /> Student Testimonials</h3>
                   <div className="flex gap-4 overflow-x-auto pb-4 pt-1 snap-x snap-mandatory no-scrollbar">
                      {[
-                       { name: 'Jayesh Sarkar', company: 'QSpiders', quote: 'I was searching for the best BCA college in Kolkata with placement, and IAER gave me both internship and job opportunities.' },
-                       { name: 'Rohit Biswas', company: 'Skynis Technologies', quote: 'Before joining IAER, I wanted a BCA college with strong practical training. With internship support, I secured a job before completing my course.' },
-                       { name: 'Apurva Ganguly', company: 'PwC', quote: 'The BCA AI ML course in Kolkata here helped me build real-world projects and gain confidence in AI tools.' }
+                       { name: 'Amit Kumar', title: 'Alumni MBA/PGDM – BA 2025', company: 'Business Analyst, KPMG', quote: 'The presentation training and certifications helped me crack interviews and secure placement.' },
+                       { name: 'Priyanka Banik', title: 'Alumni MBA/PGDM- Marketing 2025', company: 'Marketing Executive, PayTM', quote: 'The internship exposure and corporate connect gave me confidence for my career.' }
                      ].map((t, i) => (
                        <div key={i} className="group relative flex-shrink-0 w-[290px] sm:w-[340px] snap-start bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
                           <Quote className="absolute top-4 right-4 w-12 h-12 text-slate-100 group-hover:text-primary/10 transition-colors" />
@@ -660,6 +689,7 @@ export default function BCALandingPage() {
                              <img src="/images/logos/IAER_ICON.jpg" alt={t.name} className="w-10 h-10 rounded-full object-cover ring-2 ring-slate-100 group-hover:ring-primary/30 transition-all" />
                              <div>
                                 <div className="text-sm font-bold text-slate-900">{t.name}</div>
+                                <div className="text-[11px] font-semibold tracking-wider text-slate-500">{t.title}</div>
                                 <div className="text-[11px] font-semibold uppercase tracking-wider text-primary">{t.company}</div>
                              </div>
                           </div>
@@ -673,8 +703,8 @@ export default function BCALandingPage() {
                   <h3 className="text-lg font-semibold text-[#143674] flex items-center gap-2 mb-4"><Briefcase className="w-5 h-5 text-primary" /> Industry Testimonials</h3>
                   <div className="flex gap-4 overflow-x-auto pb-4 pt-1 snap-x snap-mandatory no-scrollbar">
                      {[
-                       { name: 'Meghna Roy Chowdhury', company: 'Skynis Technologies', quote: 'IAER students are well-trained in AI, ML, and cyber security domains.' },
-                       { name: 'T. Ravi Kumar', company: 'Techsoft Information Technologies', quote: 'The curriculum is aligned with industry needs and future technologies.' }
+                       { name: 'Mr. Avijit Basu', company: 'NHRD', quote: 'IAER MBA & PGDM students are well-trained and industry-ready.' },
+                       { name: 'Mr. Sounak Sen', company: 'KPMG', quote: 'Their curriculum focuses on real business skills and employability.' }
                      ].map((t, i) => (
                        <div key={i} className="group relative flex-shrink-0 w-[290px] sm:w-[340px] snap-start bg-gradient-to-br from-blue-50/50 to-white border border-blue-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
                           <Quote className="absolute top-4 right-4 w-12 h-12 text-blue-100 group-hover:text-blue-200/50 transition-colors" />
@@ -701,11 +731,11 @@ export default function BCALandingPage() {
                
                <div>
                   <h2 className="text-2xl font-bold text-[#143674] mb-4 flex items-center gap-2"><Video className="w-6 h-6 text-accent" /> Campus & Learning Experience</h2>
-                  <p className="text-sm text-slate-600 mb-4">Watch How IAER Builds Future Business Leaders</p>
+                  <p className="text-sm text-slate-600 mb-4">Watch How IAER Transforms Students into Corporate Professionals</p>
                   <div className="aspect-video rounded-2xl overflow-hidden shadow-md">
                      <iframe
                         className="w-full h-full border-0"
-                        src="https://www.youtube.com/embed/nH-sSyq_2OM?start=44"
+                        src="https://www.youtube.com/embed/nH-sSyq_2OM?start=58"
                         title="Campus Video"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
@@ -783,7 +813,7 @@ export default function BCALandingPage() {
                      <div>
                         <h3 className="text-2xl font-bold mb-3 tracking-tight">Eligibility Criteria</h3>
                         <p className="text-blue-100/70 text-xs sm:text-sm leading-relaxed mb-8">
-                           Simple and direct admission criteria for aspiring tech professionals.
+                           Simple and direct admission criteria for aspiring management professionals.
                         </p>
                         
                         <div className="bg-white/10 rounded-2xl p-5 border border-white/5 shadow-inner">
@@ -893,18 +923,16 @@ export default function BCALandingPage() {
           </div>
           <div className="grid md:grid-cols-2 gap-4">
             {[
-              { q: 'Which is the best BCA college in Kolkata?', a: 'IAER is among the top BCA colleges offering AI, ML, Cyber Security & Data Science.' },
-              { q: 'What is the scope of BCA AI ML course in Kolkata?', a: 'High demand in AI, automation, and data science industries.' },
-              { q: 'Is cyber security a good career after 12th?', a: 'Yes, it is one of the fastest-growing global careers.' },
-              { q: 'Which BCA specialization has the highest career scope?', a: 'AI & ML and Cyber Security & Data Science offer the highest growth and salary potential.' },
-              { q: 'Does IAER provide placement support?', a: 'Yes, IAER provides structured internship support and access to a wide recruiter network.' },
-              { q: 'What is the average salary after BCA in Kolkata?', a: '₹4.30 LPA average, with higher potential in specialized fields.' },
-              { q: 'Are certifications included in BCA programs?', a: 'Yes, industry-relevant certifications are included.' },
-              { q: 'Does IAER provide international exposure?', a: 'Yes, international immersion programs are available.' },
-              { q: 'Are scholarships available for BCA students?', a: 'Yes, multiple scholarship options are available.' },
-              { q: 'Does IAER help with education loans?', a: 'Yes, IAER assists with documentation and loan processing.' },
-              { q: 'Can I get direct admission in BCA in Kolkata?', a: 'Yes, students can apply directly through IAER.' },
-              { q: 'Which is better: BCA or B.Tech for IT careers?', a: 'BCA with AI/ML or Cyber Security specialization offers faster, skill-focused career entry.' }
+              { q: 'Does IAER provide placement support for MBA students?', a: 'Yes, IAER provides structured placement support with internships and recruiter connections.' },
+              { q: 'Are internships included in MBA programs?', a: 'Yes, students get internship opportunities during the program.' },
+              { q: 'What is the average salary after MBA?', a: 'The average package is ₹6.50+ LPA.' },
+              { q: 'What is the highest package offered?', a: 'The highest package goes up to ₹15.20 LPA.' },
+              { q: 'Does IAER provide hostel facilities?', a: 'Yes, hostel facilities are available for boys and girls.' },
+              { q: 'Does IAER provide education loan assistance?', a: 'Yes, full support for loans and documentation is provided.' },
+              { q: 'Are scholarships available for MBA students?', a: 'Yes, merit-based and government scholarships are available.' },
+              { q: 'Does IAER provide corporate exposure?', a: 'Yes, through industry visits, mentorship, and live projects.' },
+              { q: 'Which MBA specialization has the best scope?', a: 'Marketing, Finance, Analytics, and Logistics are highly in demand.' },
+              { q: 'Is IAER a good MBA college for students from Jharkhand?', a: 'Yes, IAER is a preferred choice due to strong placement support and accessibility.' }
             ].map((faq, i) => (
               <div key={i} className="group bg-white border border-slate-200 hover:border-primary/30 rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-all">
                 <h4 className="text-sm sm:text-base font-bold text-[#143674] mb-2 flex items-start gap-2.5">
@@ -922,10 +950,10 @@ export default function BCALandingPage() {
       <footer className="bg-[#143674] border-t border-white/10 pt-8 sm:pt-10 pb-6">
         <div className="mx-auto max-w-[1550px] px-4 text-center">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mb-3">
-            Secure Your Seat in One of the Best BCA Colleges in Kolkata
+            Secure Your Seat in One of the Best MBA Colleges in Kolkata
           </h2>
           <p className="text-blue-200 mb-6 sm:mb-8 max-w-2xl mx-auto text-sm sm:text-base">
-            Admissions Open | Limited Seats | High-Demand Programs
+            Admissions Open  | Limited Seats | High Placement Programs
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-10">
             <Button onClick={onApplyNow} size="lg" className="w-full sm:w-auto rounded-full bg-accent hover:bg-accent/90 text-white font-bold px-6 sm:px-8 py-5 text-base shadow-lg flex justify-center items-center">

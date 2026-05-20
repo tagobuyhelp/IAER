@@ -7,11 +7,11 @@ import {
   Globe, Phone, Star, Trophy, Users, Mail,
   Award, TrendingUp, Lightbulb, Building2, Wifi, HeartHandshake,
   ShieldCheck, Rocket, Landmark, CreditCard,
-  Banknote, ClipboardCheck, School, Hotel, Quote, CircleDollarSign, Target, Video, GraduationCap, MapPin, BarChart, Settings, MonitorPlay, ArrowRight, Menu, X, Facebook, Linkedin, Instagram, Twitter, Youtube, Layers, Search
+  Banknote, ClipboardCheck, School, Hotel, Quote, CircleDollarSign, Target, Video, GraduationCap, MapPin, BarChart, Settings, MonitorPlay, ArrowRight, Menu, X, Facebook, Linkedin, Instagram, Twitter, Youtube, Layers, Search, Plane, Wine, Utensils
 } from 'lucide-react';
 import Link from 'next/link';
 
-export default function BCALandingPage() {
+export default function AviationLandingPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const marqueeRef = useRef(null);
   const specScrollRef = useRef(null);
@@ -29,9 +29,9 @@ export default function BCALandingPage() {
   const [heroImgIdx, setHeroImgIdx] = useState(0);
   const heroImages = [
     '/images/about/building-image-about-hero.webp',
-    '/images/programs/bca-overview.webp',
-    '/images/programs/bca-in-data-science-cyber-security-overview.webp',
-    '/images/programs/bca-in-ai-ml-overview.webp'
+    '/images/programs/Bachelor-of-Aviation-Hospitality-Services-Management.webp',
+    '/images/programs/bsc-in-hospitality-hotel-administration-bschha-overview.webp',
+    '/images/programs/B.Sc-in-Hospitality-&-Hotel-Administration.webp'
   ];
 
   useEffect(() => {
@@ -93,25 +93,18 @@ export default function BCALandingPage() {
 
   const specializations = [
     { 
-      name: 'BCA (General)', 
-      icon: Building2, 
-      desc: 'Strong foundation for students looking for BCA colleges near me, BCA course fees in Kolkata, direct admission BCA Kolkata. Career Roles: Software Developer | Web Developer | IT Executive',
-      highlights: ['Programming (Python, Java, C++)', 'Web & App Development', 'Software Engineering', 'Database Management'],
-      image: '/images/programs/bca-overview.webp'
+      name: 'BBA Aviation, Hospitality Services & Management', 
+      icon: Plane, 
+      desc: 'Ideal for students aiming to build careers in aviation and hospitality industries with real-world exposure and global training. Career Roles: Cabin Crew | Airport Executive | Ground Staff',
+      highlights: ['Aviation & Airport Operations', 'Airline Customer Service & Ground Handling', 'Hospitality & Service Management', '3-Day Airline Immersion Programme', 'Grooming & Personality Development'],
+      image: '/images/programs/Bachelor-of-Aviation-Hospitality-Services-Management.webp'
     },
     { 
-      name: 'BCA AI & ML', 
-      icon: Lightbulb, 
-      desc: 'Perfect for students searching BCA AI ML course in Kolkata, AI ML course after 12th Kolkata, artificial intelligence degree Kolkata. Career Roles: AI Engineer | ML Engineer | Data Scientist',
-      highlights: ['Machine Learning', 'Deep Learning', 'NLP', 'AI Tools'],
-      image: '/images/programs/BCA-in-Artificial-Intelligence-&-Machine-Learnng.webp'
-    },
-    { 
-      name: 'BCA Cyber Security & Data Science', 
-      icon: ShieldCheck, 
-      desc: 'Designed for high-demand domains like cyber security course Kolkata, data science course after 12th Kolkata, ethical hacking course Kolkata. Career Roles: Cyber Security Analyst | Data Analyst | SOC Analyst',
-      highlights: ['Ethical Hacking', 'Network Security', 'Data Analytics', 'Python for Data Science'],
-      image: '/images/programs/bca-in-data-science-cyber-security-overview.webp'
+      name: 'B.Sc. in Hospitality & Hotel Administration', 
+      icon: Hotel, 
+      desc: 'A specialized program focused on hotel operations and hospitality management with strong practical exposure. Career Roles: Hotel Manager | Front Office Executive | F&B Manager',
+      highlights: ['Food Production & Culinary Skills', 'Front Office & Housekeeping Operations', 'Food & Beverage Service', 'Hotel Operations Management', 'Internship in hotels & hospitality sector'],
+      image: '/images/programs/bsc-in-hospitality-hotel-administration-bschha-overview.webp'
     }
   ];
 
@@ -233,20 +226,20 @@ export default function BCALandingPage() {
           <div data-animate-on-scroll className="relative z-10 mx-auto grid max-w-[1550px] grid-cols-1 gap-3 sm:gap-4 px-4 py-3 sm:py-4 md:grid-cols-12 md:gap-6 md:py-6 transition-all duration-700 ease-out">
             <div className="flex-1 md:col-span-7 space-y-1.5 sm:space-y-3">
               <div className="text-[10px] sm:text-xs font-bold text-accent uppercase tracking-wider mb-2">
-                BCA | General | AI & ML | Cyber Security & Data Science
+                BBA Aviation | B.Sc Hospitality & Hotel Administration
               </div>
               <div className="inline-flex items-center gap-1.5 sm:gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-2.5 py-0.5 sm:px-3 sm:py-1 text-[11px] sm:text-xs font-medium text-white shadow-sm">
                 <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-accent rounded-full animate-pulse" />
-                <span>Best BCA College in Kolkata with Placement</span>
+                <span>Best Aviation & Hospitality College in Kolkata</span>
               </div>
 
               <div className="space-y-1 sm:space-y-2">
                 <h1 className="text-xl sm:text-3xl lg:text-[2.75rem] font-extrabold tracking-tighter text-white drop-shadow-lg leading-tight sm:leading-[1.1]">
-                  Build a Future-Proof Tech Career with <br className="hidden sm:block" />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-teal-300 to-white">BCA, AI & Cyber Security at IAER Kolkata</span>
+                  Build a Global Career in Aviation, <br className="hidden sm:block" />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-teal-300 to-white">Hospitality & Hotel Management</span>
                 </h1>
                 <p className="text-[10px] sm:text-base lg:text-lg font-medium text-blue-100/90 drop-shadow max-w-full sm:max-w-3xl leading-tight sm:leading-relaxed">
-                  Looking for BCA admission in Kolkata? Join IAER—one of the top BCA colleges in Kolkata offering Artificial Intelligence, Machine Learning, Cyber Security & Data Science programs with strong placement support.
+                  Looking for an aviation or hospitality course in Kolkata after 12th? Join IAER—offering industry-focused training, international exposure, and strong placement support.
                 </p>
                 <div className="flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-xs font-semibold text-white mt-1 sm:mt-2" aria-label="Student rating">
                   {[...Array(5)].map((_, i) => (
@@ -267,10 +260,10 @@ export default function BCALandingPage() {
 
               <div className="mt-3 flex flex-wrap items-center gap-2 sm:mt-6 sm:gap-4">
                 {[
-                  { label: 'Internship from Year 1', icon: Briefcase },
-                  { label: 'Industry-Aligned Curriculum', icon: BookOpen },
-                  { label: '350+ Placement Offers', icon: Target },
-                  { label: 'Future-Ready Specializations in AI, ML & Data Science', icon: Layers },
+                  { label: '5-Star Hotel Immersion Program', icon: Hotel },
+                  { label: 'International Airline Training', icon: Plane },
+                  { label: 'Internship from Year 2', icon: Briefcase },
+                  { label: 'Global Career Opportunities', icon: Globe },
                 ].map((b) => (
                   <div key={b.label} className="flex items-center gap-1 sm:gap-2 rounded-full bg-white/5 border border-white/10 px-2 sm:px-4 py-1 sm:py-2 text-[9px] sm:text-xs font-medium text-white/90 backdrop-blur-sm shadow-inner transition-all hover:bg-white/10 hover:-translate-y-0.5 cursor-default">
                     <b.icon className="h-2.5 w-2.5 sm:h-4 sm:w-4 text-accent" />
@@ -316,7 +309,7 @@ export default function BCALandingPage() {
                          <Award className="h-3.5 w-3.5 text-accent" /> AICTE Approved
                        </span>
                        <span className="inline-flex items-center gap-1.5 text-[11px] lg:text-xs font-semibold text-white/90 whitespace-nowrap">
-                         <Briefcase className="h-3.5 w-3.5 text-primary" /> ₹4.50+ LPA Avg Package
+                         <Briefcase className="h-3.5 w-3.5 text-primary" /> ₹4.00+ LPA Avg Package
                        </span>
                        <span className="inline-flex items-center gap-1.5 text-[11px] lg:text-xs font-semibold text-white/90 whitespace-nowrap">
                          <Globe className="h-3.5 w-3.5 text-teal-400" /> Global Exposure
@@ -348,19 +341,18 @@ export default function BCALandingPage() {
                 <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#143674] text-white">
                   <BookOpen className="h-4 w-4" />
                 </span>
-                <h2 className="text-xl sm:text-2xl font-bold font-sans text-[#143674]">About BCA at IAER</h2>
+                <h2 className="text-xl sm:text-2xl font-bold font-sans text-[#143674]">About Aviation & Hospitality at IAER</h2>
               </div>
               <div className="mb-4 h-1 w-20 rounded-full bg-primary" />
               <div className="prose prose-sm max-w-none text-slate-700">
                 <p className="leading-relaxed text-base">
-                  IAER is ranked among the best IT colleges in Kolkata, offering BCA courses after 12th designed for real-world careers.
-                  We provide a perfect blend of theoretical knowledge and practical technical learning.
+                  IAER offers two of the most in-demand aviation and hospitality management courses in Kolkata, designed for careers in airlines, airports, hotels, and global service industries.
                 </p>
 
                 <div className="mt-4 text-sm font-medium text-slate-600">
                   <p className="mb-2 uppercase tracking-widest text-[10px] text-[#143674] font-bold">If you're searching for:</p>
                   <div className="flex flex-wrap gap-2">
-                    {['BCA course in Kolkata', 'private BCA colleges in Kolkata', 'BCA colleges with internship Kolkata', 'BCA with placement in Kolkata'].map((tag) => (
+                    {['aviation management course Kolkata', 'hospitality management course after 12th', 'hotel management college in Kolkata'].map((tag) => (
                       <span key={tag} className="inline-flex items-center bg-white border border-slate-200 shadow-sm px-3 py-1.5 rounded-full text-[11px] font-semibold text-slate-700 hover:border-primary hover:text-primary transition-colors cursor-default">
                         <Search className="w-3 h-3 mr-1.5 text-slate-400" /> {tag}
                       </span>
@@ -370,13 +362,13 @@ export default function BCALandingPage() {
                 
                 <div className="mt-5 bg-gradient-to-br from-[#143674] to-[#0b1c3a] rounded-2xl p-5 shadow-lg relative overflow-hidden group">
                   <div className="absolute -right-4 -bottom-4 w-32 h-32 bg-primary/20 rounded-full blur-3xl opacity-50 group-hover:scale-150 transition-transform duration-700" />
-                  <h3 className="text-sm font-bold text-white mb-4 flex items-center gap-2"><Target className="w-4 h-4 text-accent" /> IAER Provides:</h3>
+                  <h3 className="text-sm font-bold text-white mb-4 flex items-center gap-2"><Target className="w-4 h-4 text-accent" /> These programs provide:</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 relative z-10">
                     {[
-                      { label: 'Industry-integrated curriculum' },
-                      { label: 'Project-based learning' },
-                      { label: 'Internship opportunities from early semesters' },
-                      { label: '100% Placement Support' }
+                      { label: 'Practical industry training' },
+                      { label: 'Real-world exposure' },
+                      { label: 'Strong placement support' },
+                      { label: 'International immersion experience' }
                     ].map((i) => (
                       <div key={i.label} className="group/item flex items-center gap-2 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 px-3 py-2.5 shadow-sm hover:bg-white/20 transition-all cursor-default hover:-translate-y-0.5">
                         <CheckCircle className="h-4 w-4 text-accent flex-shrink-0 group-hover/item:scale-110 transition-transform" />
@@ -395,11 +387,11 @@ export default function BCALandingPage() {
       <section id="specializations" className="relative border-b border-slate-200 bg-white">
         <div data-animate-on-scroll className="mx-auto max-w-[1200px] px-4 py-6 sm:py-8">
           <div className="flex flex-col gap-1 mb-6 text-center sm:text-left">
-            <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-primary">Choose Your Path</span>
+            <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-primary">Choose Your Program</span>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-[#143674] tracking-tight">
-              BCA <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-teal-500">Specializations</span>
+              Aviation & Hospitality <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-teal-500">Programs</span>
             </h2>
-            <p className="text-sm sm:text-base font-medium text-slate-600 mt-2">Best BCA Specializations in Kolkata with Placement & Industry Exposure</p>
+            <p className="text-sm sm:text-base font-medium text-slate-600 mt-2">Specialized degrees with real-world exposure and strong placement support.</p>
             <div className="mx-auto sm:mx-0 mt-4 h-1.5 w-24 rounded-full bg-accent shadow-sm" />
           </div>
 
@@ -488,11 +480,11 @@ export default function BCALandingPage() {
 
           <div className="grid grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4">
             {[
-              { icon: Briefcase, title: 'Internship-Driven Curriculum', desc: 'Top choice for BCA colleges with internship in Kolkata' },
-              { icon: Building2, title: 'Industry Integration', desc: 'Best for students seeking BCA with placement in Kolkata' },
+              { icon: Hotel, title: '5-Star Hotel Immersion', desc: 'Students stay in a luxury hotel and train across departments' },
+              { icon: Plane, title: 'Airline Immersion', desc: 'Real airline training at Malaysia Airlines Academy, Kuala Lumpur' },
+              { icon: Wine, title: 'Wine Tour Exposure', desc: 'Students participate in wine tours and beverage training' },
               { icon: Globe, title: 'Global Exposure', desc: 'International Immersion Programs (Thailand, Malaysia, Vietnam, UAE)' },
-              { icon: Award, title: 'Skill-Based Training', desc: 'Communication + technical expertise' },
-              { icon: Lightbulb, title: 'Startup Ecosystem', desc: 'Mentorship, incubation & funding support' },
+              { icon: Briefcase, title: 'Career-Focused Learning', desc: 'Internship-driven, industry-integrated grooming & training' },
             ].map((item, idx) => (
               <div key={item.title} className={`group flex flex-col items-center text-center bg-white/5 border border-white/10 p-4 sm:p-5 rounded-2xl backdrop-blur-md hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 hover:border-accent/30 shadow-lg relative overflow-hidden ${idx === 4 ? 'col-span-2 lg:col-span-1' : 'col-span-1'}`}>
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -553,7 +545,7 @@ export default function BCALandingPage() {
             <h2 className="text-2xl sm:text-4xl font-extrabold text-[#143674] tracking-tight">
               Placement <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-teal-500">Highlights</span>
             </h2>
-            <p className="text-sm sm:text-base font-medium text-slate-600 mt-2">Start Your Career with One of the Best BBA Colleges in Kolkata</p>
+            <p className="text-sm sm:text-base font-medium text-slate-600 mt-2">Start Your Career in Aviation & Hospitality with Strong Placement Support</p>
             <div className="mt-4 h-1.5 w-24 rounded-full bg-accent shadow-sm" />
           </div>
 
@@ -566,13 +558,13 @@ export default function BCALandingPage() {
                  <CircleDollarSign className="absolute -right-4 -bottom-4 w-40 h-40 opacity-10" />
                  <div className="relative z-10 flex flex-col justify-center w-full">
                     <div className="text-sm font-medium text-blue-200 mb-1 uppercase tracking-wider">Highest Package</div>
-                    <div className="text-5xl sm:text-6xl font-extrabold drop-shadow-lg text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-200">₹15.20<span className="text-2xl sm:text-3xl text-white/80">LPA</span></div>
+                    <div className="text-5xl sm:text-6xl font-extrabold drop-shadow-lg text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-200">₹12.00<span className="text-2xl sm:text-3xl text-white/80">LPA+</span></div>
                  </div>
               </div>
                       <div className="grid grid-cols-3 gap-2 sm:gap-4 flex-grow">
                  <div className="rounded-2xl bg-white p-3 sm:p-5 ring-1 ring-slate-200 shadow-sm flex flex-col items-center justify-center text-center hover:shadow-md transition-shadow relative overflow-hidden group">
                    <div className="absolute top-0 left-0 right-0 h-1 bg-primary transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
-                   <div className="text-2xl sm:text-4xl font-extrabold text-[#143674] mb-1">₹4.30</div>
+                   <div className="text-2xl sm:text-4xl font-extrabold text-[#143674] mb-1">₹4.00+</div>
                    <div className="text-slate-500 text-[10px] sm:text-xs font-semibold uppercase tracking-wider">LPA Average</div>
                  </div>
                  <div className="rounded-2xl bg-white p-3 sm:p-5 ring-1 ring-slate-200 shadow-sm flex flex-col items-center justify-center text-center hover:shadow-md transition-shadow relative overflow-hidden group">
@@ -595,13 +587,12 @@ export default function BCALandingPage() {
                  {/* Top Recruiters */}
                  <div>
                     <h4 className="text-sm font-bold text-[#143674] mb-3 uppercase tracking-wider flex items-center gap-2"><Briefcase className="w-4 h-4 text-primary" /> Top Recruiters</h4>
-                    <div className="flex flex-wrap items-center gap-4 sm:gap-6 bg-slate-50 p-4 rounded-2xl border border-slate-100 justify-center">
-                       <img src="/images/company_logos/Amazon_logo.svg.png" alt="Amazon" className="h-6 sm:h-7 object-contain" />
-                       <img src="/images/company_logos/Tata_Consultancy_Services_old_logo.svg.png" alt="TCS" className="h-6 sm:h-7 object-contain" />
-                       <img src="/images/company_logos/Infosys_logo.png" alt="Infosys" className="h-6 sm:h-7 object-contain" />
-                       <img src="/images/company_logos/Capgemini.png" alt="Capgemini" className="h-6 sm:h-7 object-contain" />
-                       <img src="/images/company_logos/deloitte.svg" alt="Deloitte" className="h-5 sm:h-6 object-contain" />
-                       <img src="/images/company_logos/Hindustan_Unilever_Logo.svg" alt="HUL" className="h-8 sm:h-10 object-contain" />
+                    <div className="flex flex-wrap items-center gap-2 sm:gap-3 bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                       {['Airlines & Airports', '5-Star Hotels', 'Hospitality Brands'].map((recruiter) => (
+                         <span key={recruiter} className="inline-flex items-center justify-center bg-white text-slate-700 shadow-sm border border-slate-200 rounded-lg px-4 py-2 text-xs sm:text-sm font-bold">
+                           {recruiter}
+                         </span>
+                       ))}
                     </div>
                  </div>
 
@@ -609,7 +600,7 @@ export default function BCALandingPage() {
                  <div>
                    <h4 className="text-sm font-bold text-[#143674] mb-3 uppercase tracking-wider flex items-center gap-2"><Target className="w-4 h-4 text-primary" /> Career Opportunities</h4>
                    <div className="flex flex-wrap gap-2 sm:gap-2.5">
-                     {['Software Developer', 'Data Analyst', 'Cyber Security Analyst', 'AI Engineer', 'Web Developer', 'Database Administrator'].map((role) => (
+                     {['Cabin Crew', 'Airport Executive', 'Ground Staff', 'Hotel Manager', 'Front Office Executive', 'F&B Manager', 'Guest Relations Executive'].map((role) => (
                        <span key={role} className="inline-flex items-center gap-1.5 bg-[#143674]/5 text-[#143674] rounded-full px-3 py-1.5 text-[11px] sm:text-xs font-semibold border border-[#143674]/10 hover:bg-[#143674] hover:text-white transition-colors cursor-default">
                          <CheckCircle className="w-3 h-3" /> {role}
                        </span>
@@ -649,9 +640,8 @@ export default function BCALandingPage() {
                   <h3 className="text-lg font-semibold text-[#143674] flex items-center gap-2 mb-4"><GraduationCap className="w-5 h-5 text-primary" /> Student Testimonials</h3>
                   <div className="flex gap-4 overflow-x-auto pb-4 pt-1 snap-x snap-mandatory no-scrollbar">
                      {[
-                       { name: 'Jayesh Sarkar', company: 'QSpiders', quote: 'I was searching for the best BCA college in Kolkata with placement, and IAER gave me both internship and job opportunities.' },
-                       { name: 'Rohit Biswas', company: 'Skynis Technologies', quote: 'Before joining IAER, I wanted a BCA college with strong practical training. With internship support, I secured a job before completing my course.' },
-                       { name: 'Apurva Ganguly', company: 'PwC', quote: 'The BCA AI ML course in Kolkata here helped me build real-world projects and gain confidence in AI tools.' }
+                       { name: 'Priya Sen', company: '3rd Year BBA -AO', quote: 'The Malaysia airline immersion program gave me real exposure to airline operations.' },
+                       { name: 'Arjun Singh', company: 'JW Marriott New Delhi', quote: 'The hotel immersion and wine training helped me understand hospitality standards.' }
                      ].map((t, i) => (
                        <div key={i} className="group relative flex-shrink-0 w-[290px] sm:w-[340px] snap-start bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
                           <Quote className="absolute top-4 right-4 w-12 h-12 text-slate-100 group-hover:text-primary/10 transition-colors" />
@@ -673,8 +663,8 @@ export default function BCALandingPage() {
                   <h3 className="text-lg font-semibold text-[#143674] flex items-center gap-2 mb-4"><Briefcase className="w-5 h-5 text-primary" /> Industry Testimonials</h3>
                   <div className="flex gap-4 overflow-x-auto pb-4 pt-1 snap-x snap-mandatory no-scrollbar">
                      {[
-                       { name: 'Meghna Roy Chowdhury', company: 'Skynis Technologies', quote: 'IAER students are well-trained in AI, ML, and cyber security domains.' },
-                       { name: 'T. Ravi Kumar', company: 'Techsoft Information Technologies', quote: 'The curriculum is aligned with industry needs and future technologies.' }
+                       { name: 'Ms Shanti M Pai', company: 'Novotel', quote: 'IAER students are well-groomed and ready for aviation and hospitality roles.' },
+                       { name: 'Mr. Umashankar Patil', company: 'Spice Jet', quote: 'Their training aligns with global industry expectations. Had a good interactions with them, Best of Luck.' }
                      ].map((t, i) => (
                        <div key={i} className="group relative flex-shrink-0 w-[290px] sm:w-[340px] snap-start bg-gradient-to-br from-blue-50/50 to-white border border-blue-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
                           <Quote className="absolute top-4 right-4 w-12 h-12 text-blue-100 group-hover:text-blue-200/50 transition-colors" />
@@ -701,7 +691,7 @@ export default function BCALandingPage() {
                
                <div>
                   <h2 className="text-2xl font-bold text-[#143674] mb-4 flex items-center gap-2"><Video className="w-6 h-6 text-accent" /> Campus & Learning Experience</h2>
-                  <p className="text-sm text-slate-600 mb-4">Watch How IAER Builds Future Business Leaders</p>
+                  <p className="text-sm text-slate-600 mb-4">Watch How IAER Prepares Students for Aviation & Hospitality Careers</p>
                   <div className="aspect-video rounded-2xl overflow-hidden shadow-md">
                      <iframe
                         className="w-full h-full border-0"
@@ -893,18 +883,16 @@ export default function BCALandingPage() {
           </div>
           <div className="grid md:grid-cols-2 gap-4">
             {[
-              { q: 'Which is the best BCA college in Kolkata?', a: 'IAER is among the top BCA colleges offering AI, ML, Cyber Security & Data Science.' },
-              { q: 'What is the scope of BCA AI ML course in Kolkata?', a: 'High demand in AI, automation, and data science industries.' },
-              { q: 'Is cyber security a good career after 12th?', a: 'Yes, it is one of the fastest-growing global careers.' },
-              { q: 'Which BCA specialization has the highest career scope?', a: 'AI & ML and Cyber Security & Data Science offer the highest growth and salary potential.' },
-              { q: 'Does IAER provide placement support?', a: 'Yes, IAER provides structured internship support and access to a wide recruiter network.' },
-              { q: 'What is the average salary after BCA in Kolkata?', a: '₹4.30 LPA average, with higher potential in specialized fields.' },
-              { q: 'Are certifications included in BCA programs?', a: 'Yes, industry-relevant certifications are included.' },
-              { q: 'Does IAER provide international exposure?', a: 'Yes, international immersion programs are available.' },
-              { q: 'Are scholarships available for BCA students?', a: 'Yes, multiple scholarship options are available.' },
-              { q: 'Does IAER help with education loans?', a: 'Yes, IAER assists with documentation and loan processing.' },
-              { q: 'Can I get direct admission in BCA in Kolkata?', a: 'Yes, students can apply directly through IAER.' },
-              { q: 'Which is better: BCA or B.Tech for IT careers?', a: 'BCA with AI/ML or Cyber Security specialization offers faster, skill-focused career entry.' }
+              { q: 'Does IAER provide placement support for aviation and hospitality programs?', a: 'Yes, IAER provides structured placement support with internships and recruiter connections.' },
+              { q: 'Are internships included in these programs?', a: 'Yes, students get internships in airlines, hotels, and hospitality organizations.' },
+              { q: 'What is the Airlines Immersion Programme?', a: 'A 5-day training at Malaysia Airlines Academy, Kuala Lumpur, covering airline operations and cabin crew exposure.' },
+              { q: 'What is the Hotelier Familiarisation Programme?', a: 'Students train across hotel departments like Front Office, Housekeeping, Food Production, and F&B services.' },
+              { q: 'Does IAER provide wine tours?', a: 'Yes, students participate in wine tours and beverage training for hospitality exposure.' },
+              { q: 'What is the average salary after these programs?', a: '₹4.00+ LPA average, with higher global opportunities.' },
+              { q: 'What career options are available?', a: 'Cabin crew, airport roles, hotel management, and hospitality careers.' },
+              { q: 'Does IAER provide hostel facilities?', a: 'Yes, safe and comfortable hostels are available.' },
+              { q: 'Does IAER provide education loan support?', a: 'Yes, assistance for loans and student credit card schemes is available.' },
+              { q: 'Does IAER provide international exposure?', a: 'Yes, through International Immersion programs in Malaysia, Thailand, Vietnam, and UAE.' }
             ].map((faq, i) => (
               <div key={i} className="group bg-white border border-slate-200 hover:border-primary/30 rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-all">
                 <h4 className="text-sm sm:text-base font-bold text-[#143674] mb-2 flex items-start gap-2.5">
@@ -922,7 +910,7 @@ export default function BCALandingPage() {
       <footer className="bg-[#143674] border-t border-white/10 pt-8 sm:pt-10 pb-6">
         <div className="mx-auto max-w-[1550px] px-4 text-center">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mb-3">
-            Secure Your Seat in One of the Best BCA Colleges in Kolkata
+            Start Your Global Career in Aviation & Hospitality Today
           </h2>
           <p className="text-blue-200 mb-6 sm:mb-8 max-w-2xl mx-auto text-sm sm:text-base">
             Admissions Open | Limited Seats | High-Demand Programs

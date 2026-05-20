@@ -19,7 +19,7 @@ export default function Header() {
   const timeoutRef = useRef(null);
   const pathname = usePathname();
 
-  if (pathname?.startsWith("/lp") || pathname === "/best-bba-college-in-kolkata" || pathname === "/best-bca-college-in-kolkata") return null;
+  if (pathname?.startsWith("/lp") || pathname === "/best-bba-college-in-kolkata" || pathname === "/best-bca-college-in-kolkata" || pathname === "/best-aviation-and-hospitality-college-in-kolkata" || pathname === "/best-mba-college-in-kolkata" || pathname === "/best-mha-college-in-kolkata" || pathname === "/best-bba-business-analytics-college-in-kolkata" || pathname === "/best-bmlt-and-hospital-management-college-in-kolkata") return null;
 
   const toggleMenu = () => setIsOpen(!isOpen);
 

@@ -18,7 +18,7 @@ import { usePathname } from "next/navigation";
 
 export default function TopBar() {
   const pathname = usePathname();
-  if (pathname?.startsWith("/lp") || pathname === "/best-bba-college-in-kolkata" || pathname === "/best-bca-college-in-kolkata") return null;
+  if (pathname?.startsWith("/lp") || pathname === "/best-bba-college-in-kolkata" || pathname === "/best-bca-college-in-kolkata" || pathname === "/best-aviation-and-hospitality-college-in-kolkata" || pathname === "/best-mba-college-in-kolkata" || pathname === "/best-mha-college-in-kolkata" || pathname === "/best-bba-business-analytics-college-in-kolkata" || pathname === "/best-bmlt-and-hospital-management-college-in-kolkata") return null;
 
   return (
     <div className="hidden md:block bg-[#143674] text-gray-200 py-2 border-b border-white/10 text-xs font-medium relative z-[51]">

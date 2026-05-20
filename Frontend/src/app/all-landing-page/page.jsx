@@ -15,6 +15,36 @@ export default function AllLandingPages() {
       path: '/best-bba-college-in-kolkata',
       description: 'High-conversion landing page for BBA General and all specialized tracks.',
       color: 'from-indigo-500 to-purple-500',
+    },
+    {
+      title: 'Aviation & Hospitality Landing Page',
+      path: '/best-aviation-and-hospitality-college-in-kolkata',
+      description: 'High-conversion landing page for BBA Aviation and B.Sc. Hospitality programs.',
+      color: 'from-emerald-500 to-teal-500',
+    },
+    {
+      title: 'MBA / PGDM',
+      path: '/best-mba-college-in-kolkata',
+      description: 'High-conversion landing page for MBA programs.',
+      color: 'from-amber-500 to-orange-500',
+    },
+    {
+      title: 'MHA',
+      path: '/best-mha-college-in-kolkata',
+      description: 'High-conversion landing page for MHA programs.',
+      color: 'from-blue-500 to-indigo-500',
+    },
+    {
+      title: 'BBA Business Analytics',
+      path: '/best-bba-business-analytics-college-in-kolkata',
+      description: 'High-conversion landing page for BBA in Business Analytics program.',
+      color: 'from-fuchsia-500 to-purple-600',
+    },
+    {
+      title: 'BMLT & BBA Hospital Management',
+      path: '/best-bmlt-and-hospital-management-college-in-kolkata',
+      description: 'High-conversion landing page for BMLT and Hospital Management programs.',
+      color: 'from-emerald-500 to-teal-600',
     }
   ];
 

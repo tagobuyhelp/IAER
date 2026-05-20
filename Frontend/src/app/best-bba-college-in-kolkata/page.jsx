@@ -28,8 +28,15 @@ export default function BBALandingPage() {
 
   const [heroImgIdx, setHeroImgIdx] = useState(0);
   const heroImages = [
-    '/images/about/building-image-about-hero.webp',
-    '/images/campus/iaer-campus.png'
+    '/images/programs/bachelor-of-business-administration-bba-overview.webp',
+    '/images/programs/bba-in-sports-management-banner.webp',
+    '/images/programs/bba-in-hotel-hospitality-administration-banner.webp',
+    '/images/programs/bba-in-business-analytics-alt-careers.webp',
+    '/images/programs/bba-in-global-business-careers.webp',
+    '/images/programs/bba-in-global-business-overview.webp',
+    
+    
+    
   ];
 
   useEffect(() => {
@@ -39,15 +46,60 @@ export default function BBALandingPage() {
     return () => clearInterval(timer);
   }, [heroImages.length]);
 
+  useEffect(() => {
+    const btnId = 'c4af7a13a0ce4880aa5e45e7e28e4d7e';
+    let btn = document.querySelector('.npfWidget-' + btnId);
+    if (!btn) {
+      btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'npfWidgetButton npfWidget-' + btnId;
+      btn.style.display = 'none';
+      btn.textContent = 'Enquire Now!';
+      document.body.appendChild(btn);
+    }
+
+    let popScript = document.querySelector('script[src*="npfwpopup.js"]');
+    if (!popScript) {
+      popScript = document.createElement("script");
+      popScript.src = "https://cdn.npfs.co/js/widget/npfwpopup.js";
+      popScript.async = true;
+      document.body.appendChild(popScript);
+    }
+
+    const initWidget = () => {
+      if (typeof window.NpfWidgetsInit === 'function') {
+        new window.NpfWidgetsInit({
+          "widgetId": "c4af7a13a0ce4880aa5e45e7e28e4d7e",
+          "baseurl": "widgets.nopaperforms.com",
+          "formTitle": "Enquiry Form",
+          "titleColor": "#FF0033",
+          "backgroundColor": "#ddd",
+          "iframeHeight": "500px",
+          "buttonbgColor": "#4c79dc",
+          "buttonTextColor": "#FFF"
+        });
+      }
+    };
+
+    if (popScript.complete || typeof window.NpfWidgetsInit === 'function') {
+      initWidget();
+    } else {
+      popScript.addEventListener('load', initWidget);
+    }
+
+    return () => {
+      if (btn && btn.parentNode) {
+        btn.parentNode.removeChild(btn);
+      }
+    };
+  }, []);
+
   const onDownload = () => {
     try {
       if (typeof window.openBrochurePopup === 'function') {
         window.openBrochurePopup();
-      } else if (typeof window.openNpfPopup === 'function') {
-        window.openNpfPopup('29f961a6166cc94d1ae744a39fa1122f');
       } else {
-        const trigger = document.querySelector('.npfWidgetButton');
-        if (trigger) trigger.click();
+        onApplyNow();
       }
     } catch (e) {
       console.error("Popup not found", e);
@@ -56,11 +108,9 @@ export default function BBALandingPage() {
 
   const onApplyNow = () => {
     try {
-      if (typeof window.openNpfPopup === 'function') {
-        window.openNpfPopup('29f961a6166cc94d1ae744a39fa1122f');
-      } else {
-        const trigger = document.querySelector('.npfWidgetButton');
-        if (trigger) trigger.click();
+      const trigger = document.querySelector('.npfWidget-c4af7a13a0ce4880aa5e45e7e28e4d7e');
+      if (trigger) {
+        trigger.click();
       }
     } catch (e) {
       console.error("Popup not found", e);
@@ -102,7 +152,7 @@ export default function BBALandingPage() {
       icon: Globe, 
       desc: 'BBA in Global Business is ideal for students aiming for careers in international markets and multinational companies. It is among the most sought-after international business courses after 12th in Kolkata.',
       highlights: ['International Business & Export-Import Management', 'Global Marketing & Trade Strategies', 'Perfect for BBA Global Business course Kolkata searches', 'Cross-cultural business exposure'],
-      image: '/images/programs/bba-in-global-business-overview.webp'
+      image: '/images/programs/bba-global-malaysia.png'
     },
     { 
       name: 'BBA Business Analytics', 
@@ -130,7 +180,7 @@ export default function BBALandingPage() {
       icon: HeartHandshake, 
       desc: 'A specialized program designed for careers in healthcare administration, aligned with the growing demand for hospital management courses in Kolkata.',
       highlights: ['Hospital Operations & Administration', 'Healthcare Systems & Patient Management', 'Ideal for healthcare management degree Kolkata', 'Internship in hospitals & healthcare setups'],
-      image: '/images/programs/bba-in-hospital-management-overview.webp'
+      image: '/images/programs/bba-in-hotel-hospitality-administration-banner.webp'
     }
   ];
 
@@ -173,9 +223,9 @@ export default function BBALandingPage() {
             <CheckCircle className="h-4 w-4 animate-pulse flex-shrink-0 text-accent" />
             <span className="truncate">Admissions Open 2026 • MAKAUT Affiliated • AICTE Approved</span>
           </p>
-          <a href="tel:+918001110000" className="hidden items-center gap-1 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs text-white/95 hover:bg-white/15 md:inline-flex">
+          <a href="tel:+916292004641" className="hidden items-center gap-1 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs text-white/95 hover:bg-white/15 md:inline-flex">
             <Phone className="h-4 w-4" />
-            <span>800 111 0000</span>
+            <span>6292004641</span>
           </a>
         </div>
       </div>
@@ -202,9 +252,9 @@ export default function BBALandingPage() {
                 <span className="pointer-events-none absolute -bottom-1 left-1.5 right-1.5 h-[2px] origin-left scale-x-0 rounded-full bg-accent transition-transform duration-200 group-hover:scale-x-100" />
               </a>
             ))}
-            <a href="tel:+918001110000" className="ml-1 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-semibold text-white/95 hover:bg-white/15">
+            <a href="tel:+916292004641" className="ml-1 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-semibold text-white/95 hover:bg-white/15">
               <Phone className="h-3.5 w-3.5" />
-              <span>8001110000</span>
+              <span>6292004641</span>
             </a>
             <Button onClick={onApplyNow} className="ml-2 rounded-full bg-accent px-5 py-2 text-sm font-semibold text-white shadow-lg ring-1 ring-white/10 transition-all hover:-translate-y-0.5 hover:bg-accent/90 hover:shadow-accent/20 flex items-center">
               Apply Now <ArrowRight className="ml-1.5 h-4 w-4" />
@@ -236,9 +286,9 @@ export default function BBALandingPage() {
       </header>
 
       {/* --- HERO --- */}
-      <section className="relative overflow-hidden bg-[#143674] pt-4 sm:pt-6 pb-6 sm:pb-10 border-b border-white/10">
+      <section className="relative overflow-hidden bg-[#143674] pt-6 sm:pt-8 pb-8 sm:pb-12 border-b border-white/10">
         <div className="absolute inset-0 z-0 pointer-events-none">
-          <img src="/images/campus/iaer-building.jpg" alt="IAER Campus Background" className="h-full w-full object-cover opacity-30" />
+          <img src="/images/campus/bba-hero-bg.png" alt="IAER Campus Background" className="h-full w-full object-cover opacity-30" />
           <div className="absolute inset-0 bg-gradient-to-br from-[#143674]/95 via-[#0b1c3a]/80 to-[#143674]/95 mix-blend-multiply" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05)_1px,transparent_1px)] [background-size:24px_24px]" />
         </div>
@@ -249,22 +299,22 @@ export default function BBALandingPage() {
         </div>
 
         <div className="relative z-10">
-          <div data-animate-on-scroll className="relative z-10 mx-auto grid max-w-[1550px] grid-cols-1 gap-3 sm:gap-4 px-4 py-3 sm:py-4 md:grid-cols-12 md:gap-6 md:py-6 transition-all duration-700 ease-out">
-            <div className="flex-1 md:col-span-8 space-y-1.5 sm:space-y-3">
+          <div data-animate-on-scroll className="relative z-10 mx-auto grid max-w-[1550px] grid-cols-1 gap-4 sm:gap-6 px-4 py-4 md:grid-cols-12 md:gap-6 md:py-6 transition-all duration-700 ease-out">
+            <div className="flex-1 md:col-span-7 space-y-3 sm:space-y-4">
               <div className="text-[10px] sm:text-xs font-bold text-accent uppercase tracking-wider mb-2">
                 BBA | General | Global Business | Business Analytics | Sports Management | Aviation, Hospitality & Hospital Management
               </div>
-              <div className="inline-flex items-center gap-1.5 sm:gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-2.5 py-0.5 sm:px-3 sm:py-1 text-[11px] sm:text-xs font-medium text-white shadow-sm">
+              <div className="inline-flex items-center gap-1.5 sm:gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-2.5 py-1 sm:px-3 sm:py-1.5 text-[11px] sm:text-xs font-medium text-white shadow-sm">
                 <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-accent rounded-full animate-pulse" />
                 <span>Best BBA College in Kolkata with Placement & Global Exposure</span>
               </div>
 
-              <div className="space-y-1 sm:space-y-2">
-                <h1 className="text-xl sm:text-4xl lg:text-[3.5rem] font-extrabold tracking-tighter text-white drop-shadow-lg leading-tight sm:leading-[1.1]">
+              <div className="space-y-2 sm:space-y-3">
+                <h1 className="text-xl sm:text-3xl lg:text-[2.75rem] font-extrabold tracking-tighter text-white drop-shadow-lg leading-tight sm:leading-[1.1]">
                   Build a Successful Career in <br className="hidden sm:block" />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-teal-300 to-white">Business, Management & Emerging Industries.</span>
                 </h1>
-                <p className="text-[10px] sm:text-lg lg:text-xl font-medium text-blue-100/90 drop-shadow max-w-full sm:max-w-3xl leading-tight sm:leading-relaxed">
+                <p className="text-xs sm:text-base lg:text-lg font-medium text-blue-100/90 drop-shadow max-w-full sm:max-w-3xl leading-snug sm:leading-relaxed">
                   Looking for BBA admission in Kolkata? Join IAER—one of the best BBA colleges in Kolkata offering multiple industry-focused specializations with strong placement support.
                 </p>
                 <div className="flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-xs font-semibold text-white mt-1 sm:mt-2" aria-label="Student rating">
@@ -275,24 +325,24 @@ export default function BBALandingPage() {
                 </div>
               </div>
 
-              <div className="flex items-center w-full sm:w-auto gap-2 sm:gap-3 mt-4">
-                <Button onClick={onApplyNow} size="sm" className="flex-1 sm:flex-none h-8 sm:h-12 rounded-full bg-accent px-3 sm:px-8 text-[10px] sm:text-base font-bold text-white shadow-[0_0_15px_rgba(247,148,30,0.3)] transition-all hover:-translate-y-0.5 hover:bg-accent/90 flex justify-center items-center">
-                  Apply Now <ArrowRight className="ml-1 sm:ml-2 h-3 w-3 sm:h-5 sm:w-5" />
+              <div className="flex items-center w-full sm:w-auto gap-3 mt-4">
+                <Button onClick={onApplyNow} size="lg" className="flex-1 sm:flex-none h-9 sm:h-12 rounded-full bg-accent px-4 sm:px-10 text-xs sm:text-sm font-bold text-white shadow-[0_0_15px_rgba(247,148,30,0.3)] transition-all hover:-translate-y-0.5 hover:bg-accent/90 flex justify-center items-center">
+                  Apply Now <ArrowRight className="ml-1 sm:ml-2 h-3.5 w-3.5 sm:h-5 sm:w-5" />
                 </Button>
-                <Button onClick={onDownload} variant="outline" size="sm" className="flex-1 sm:flex-none h-8 sm:h-12 rounded-full border border-primary text-primary bg-white/5 hover:bg-primary/10 px-3 sm:px-8 text-[10px] sm:text-base font-bold transition-all flex justify-center items-center">
-                  <Download className="mr-1 sm:mr-2 h-3 w-3 sm:h-5 sm:w-5" /> Brochure
+                <Button onClick={onDownload} variant="outline" size="lg" className="flex-1 sm:flex-none h-9 sm:h-12 rounded-full border border-primary text-primary bg-white/5 hover:bg-primary/10 px-4 sm:px-10 text-xs sm:text-sm font-bold transition-all flex justify-center items-center">
+                  <Download className="mr-1 sm:mr-2 h-3.5 w-3.5 sm:h-5 sm:w-5" /> Brochure
                 </Button>
               </div>
 
-              <div className="mt-3 flex flex-wrap items-center gap-2 sm:mt-6 sm:gap-4">
+              <div className="mt-3 flex flex-wrap items-center gap-2 sm:mt-6 sm:gap-3">
                 {[
                   { label: '6 High-Demand Specializations', icon: Layers },
                   { label: 'Internship from Year 1', icon: Briefcase },
                   { label: 'Industry-Aligned Curriculum', icon: BookOpen },
                   { label: 'Global Exposure Programs', icon: Globe },
                 ].map((b) => (
-                  <div key={b.label} className="flex items-center gap-1 sm:gap-2 rounded-full bg-white/5 border border-white/10 px-2 sm:px-4 py-1 sm:py-2 text-[9px] sm:text-xs font-medium text-white/90 backdrop-blur-sm shadow-inner transition-all hover:bg-white/10 hover:-translate-y-0.5 cursor-default">
-                    <b.icon className="h-2.5 w-2.5 sm:h-4 sm:w-4 text-accent" />
+                  <div key={b.label} className="flex items-center gap-1.5 sm:gap-2 rounded-full bg-white/5 border border-white/10 px-2.5 sm:px-4 py-1.5 sm:py-2 text-[9px] sm:text-xs font-medium text-white/90 backdrop-blur-sm shadow-inner transition-all hover:bg-white/10 hover:-translate-y-0.5 cursor-default">
+                    <b.icon className="h-3 w-3 sm:h-4 sm:w-4 text-accent" />
                     {b.label}
                   </div>
                 ))}
@@ -300,8 +350,8 @@ export default function BBALandingPage() {
 
             </div>
 
-            <div className="flex flex-col md:col-span-4 items-center justify-center gap-2 sm:gap-3 mt-4 md:mt-0">
-              <div className="relative w-full h-[220px] sm:h-[350px] lg:h-[420px] overflow-hidden rounded-2xl shadow-xl border border-white/20 ring-4 ring-white/5">
+            <div className="flex flex-col md:col-span-5 items-center justify-center gap-2 sm:gap-3 mt-4 md:mt-0">
+              <div className="relative w-full h-[240px] sm:h-[340px] lg:h-[400px] overflow-hidden rounded-2xl shadow-xl border border-white/20 ring-4 ring-white/5">
                 {heroImages.map((src, idx) => (
                   <img 
                     key={src}
@@ -611,12 +661,12 @@ export default function BBALandingPage() {
                  <div>
                     <h4 className="text-sm font-bold text-[#143674] mb-3 uppercase tracking-wider flex items-center gap-2"><Briefcase className="w-4 h-4 text-primary" /> Top Recruiters</h4>
                     <div className="flex flex-wrap items-center gap-4 sm:gap-6 bg-slate-50 p-4 rounded-2xl border border-slate-100 justify-center">
-                       <img src="/images/company_logos/Amazon_logo.svg.png" alt="Amazon" className="h-6 sm:h-7 object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
-                       <img src="/images/company_logos/Tata_Consultancy_Services_old_logo.svg.png" alt="TCS" className="h-6 sm:h-7 object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
-                       <img src="/images/company_logos/Infosys_logo.png" alt="Infosys" className="h-6 sm:h-7 object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
-                       <img src="/images/company_logos/Capgemini.png" alt="Capgemini" className="h-6 sm:h-7 object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
-                       <img src="/images/company_logos/deloitte.svg" alt="Deloitte" className="h-5 sm:h-6 object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
-                       <img src="/images/company_logos/Hindustan_Unilever_Logo.svg" alt="HUL" className="h-8 sm:h-10 object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
+                       <img src="/images/company_logos/Amazon_logo.svg.png" alt="Amazon" className="h-6 sm:h-7 object-contain" />
+                       <img src="/images/company_logos/Tata_Consultancy_Services_old_logo.svg.png" alt="TCS" className="h-6 sm:h-7 object-contain" />
+                       <img src="/images/company_logos/Infosys_logo.png" alt="Infosys" className="h-6 sm:h-7 object-contain" />
+                       <img src="/images/company_logos/Capgemini.png" alt="Capgemini" className="h-6 sm:h-7 object-contain" />
+                       <img src="/images/company_logos/deloitte.svg" alt="Deloitte" className="h-5 sm:h-6 object-contain" />
+                       <img src="/images/company_logos/Hindustan_Unilever_Logo.svg" alt="HUL" className="h-8 sm:h-10 object-contain" />
                     </div>
                  </div>
 
@@ -633,17 +683,26 @@ export default function BBALandingPage() {
                  </div>
 
                  {/* Industry Collaborations */}
-                 <div>
-                   <h4 className="text-sm font-bold text-[#143674] mb-3 uppercase tracking-wider flex items-center gap-2"><Building2 className="w-4 h-4 text-primary" /> Industry Collaborations</h4>
-                   <div className="flex flex-wrap gap-2 sm:gap-3 items-center">
-                     {['CII', 'ICC', 'BCC&I', 'MSME', 'NHRD'].map((collab) => (
-                       <span key={collab} className="inline-flex items-center justify-center bg-blue-50 text-[#143674] rounded-lg px-3 py-1.5 text-xs font-bold border border-blue-100 shadow-sm">
-                         {collab}
-                       </span>
-                     ))}
-                     <span className="text-[10px] sm:text-[11px] text-slate-500 italic ml-0 sm:ml-2 border-l-0 sm:border-l border-slate-300 pl-0 sm:pl-3 py-1 w-full sm:w-auto mt-2 sm:mt-0">Ensuring strong industry alignment.</span>
-                   </div>
-                 </div>
+                  <div>
+                    <h4 className="text-sm font-bold text-[#143674] mb-3 uppercase tracking-wider flex items-center gap-2"><Building2 className="w-4 h-4 text-primary" /> Industry Collaborations</h4>
+                    <div className="flex flex-wrap items-center gap-4 sm:gap-6 bg-slate-50 p-4 rounded-2xl border border-slate-100 justify-center">
+                       {[
+                         { src: "/images/affiliations/confederation.png", alt: "CII" },
+                         { src: "/images/affiliations/MSME.png", alt: "MSME" },
+                         { src: "/images/affiliations/NHRD.png", alt: "NHRD" },
+                         { src: "/images/affiliations/ERSC.jpeg", alt: "ERSC" },
+                         { src: "/images/affiliations/NSDC.png", alt: "NSDC" }
+                       ].map((collab, idx) => (
+                          <img 
+                            key={idx} 
+                            src={collab.src} 
+                            alt={collab.alt} 
+                            className="h-8 sm:h-10 object-contain" 
+                            onError={(e) => { e.currentTarget.src = '/images/logos/IAER_ICON.jpg'; }}
+                          />
+                       ))}
+                    </div>
+                  </div>
                </div>
             </div>
           </div>
@@ -716,13 +775,14 @@ export default function BBALandingPage() {
                <div>
                   <h2 className="text-2xl font-bold text-[#143674] mb-4 flex items-center gap-2"><Video className="w-6 h-6 text-accent" /> Campus & Learning Experience</h2>
                   <p className="text-sm text-slate-600 mb-4">Watch How IAER Builds Future Business Leaders</p>
-                  <div className="aspect-video rounded-2xl overflow-hidden bg-slate-900 relative group cursor-pointer" onClick={() => window.open('https://www.youtube.com/watch?v=nH-sSyq_2OM&t=58s', '_blank')}>
-                     <img src="/images/campus/iaer-campus.png" alt="Campus Video" className="w-full h-full object-cover opacity-70 group-hover:opacity-50 transition-opacity" />
-                     <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform">
-                           <MonitorPlay className="w-8 h-8 ml-1" />
-                        </div>
-                     </div>
+                  <div className="aspect-video rounded-2xl overflow-hidden shadow-md">
+                     <iframe
+                        className="w-full h-full border-0"
+                        src="https://www.youtube.com/embed/nH-sSyq_2OM?start=58"
+                        title="Campus Video"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                     ></iframe>
                   </div>
                </div>
 
@@ -818,7 +878,7 @@ export default function BBALandingPage() {
             <Button onClick={onDownload} variant="outline" size="lg" className="w-full sm:w-auto rounded-full border-primary text-primary hover:bg-primary hover:text-white bg-white font-bold px-6 sm:px-8 py-5 text-base shadow-lg">
               <Download className="mr-2 w-5 h-5" /> Download Brochure
             </Button>
-            <a href="tel:+918001110000" className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-full bg-white/10 hover:bg-white/20 text-white font-bold px-8 py-4 transition-colors">
+            <a href="tel:+916292004641" className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-full bg-white/10 hover:bg-white/20 text-white font-bold px-8 py-4 transition-colors">
               <Phone className="w-5 h-5" /> Talk to Experts
             </a>
           </div>
