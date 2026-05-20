@@ -41,15 +41,74 @@ export default function BCALandingPage() {
     return () => clearInterval(timer);
   }, [heroImages.length]);
 
+  useEffect(() => {
+    const btnId = '10d5d69d0bd7a76f17c3173a5d763657';
+    const baseUrl = 'widgets.in8.nopaperforms.com';
+    
+    // Ensure hidden button exists
+    let btn = document.querySelector('.npfWidget-' + btnId);
+    if (!btn) {
+      btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'npfWidgetButton npfWidget-' + btnId;
+      btn.style.display = 'none';
+      btn.textContent = 'Enquire Now!';
+      document.body.appendChild(btn);
+    }
+
+    const initWidget = () => {
+      if (typeof window.NpfWidgetsInit === 'function') {
+        if (!window['npfW' + btnId]) {
+          window['npfW' + btnId] = new window.NpfWidgetsInit({
+            "widgetId": btnId,
+            "baseurl": baseUrl,
+            "formTitle": "Enquiry Form",
+            "titleColor": "#FF0033",
+            "backgroundColor": "#ddd",
+            "iframeHeight": "500px",
+            "buttonbgColor": "#4c79dc",
+            "buttonTextColor": "#FFF"
+          });
+        } else {
+          const trigger = document.querySelector('.npfWidget-' + btnId);
+          if (trigger) {
+            trigger.onclick = () => {
+              try {
+                window['npfW' + btnId].showPopup(btnId, baseUrl);
+              } catch (e) {
+                console.error("Popup trigger error", e);
+              }
+            };
+          }
+        }
+        return true;
+      }
+      return false;
+    };
+
+    if (!initWidget()) {
+      const interval = setInterval(() => {
+        if (initWidget()) {
+          clearInterval(interval);
+        }
+      }, 100);
+      setTimeout(() => clearInterval(interval), 10000);
+    }
+
+    return () => {
+      const trigger = document.querySelector('.npfWidget-' + btnId);
+      if (trigger) {
+        trigger.onclick = null;
+      }
+    };
+  }, []);
+
   const onDownload = () => {
     try {
       if (typeof window.openBrochurePopup === 'function') {
         window.openBrochurePopup();
-      } else if (typeof window.openNpfPopup === 'function') {
-        window.openNpfPopup('29f961a6166cc94d1ae744a39fa1122f');
       } else {
-        const trigger = document.querySelector('.npfWidgetButton');
-        if (trigger) trigger.click();
+        onApplyNow();
       }
     } catch (e) {
       console.error("Popup not found", e);
@@ -57,12 +116,17 @@ export default function BCALandingPage() {
   };
 
   const onApplyNow = () => {
+    const btnId = '10d5d69d0bd7a76f17c3173a5d763657';
+    const baseUrl = 'widgets.in8.nopaperforms.com';
     try {
-      if (typeof window.openNpfPopup === 'function') {
-        window.openNpfPopup('29f961a6166cc94d1ae744a39fa1122f');
+      const widget = window['npfW' + btnId];
+      if (widget && typeof widget.showPopup === 'function') {
+        widget.showPopup(btnId, baseUrl);
       } else {
-        const trigger = document.querySelector('.npfWidgetButton');
-        if (trigger) trigger.click();
+        const trigger = document.querySelector('.npfWidget-' + btnId);
+        if (trigger) {
+          trigger.click();
+        }
       }
     } catch (e) {
       console.error("Popup not found", e);
@@ -217,9 +281,9 @@ export default function BCALandingPage() {
       </header>
 
       {/* --- HERO --- */}
-      <section className="relative overflow-hidden bg-[#143674] pt-4 sm:pt-5 pb-5 sm:pb-8 border-b border-white/10">
+      <section className="relative overflow-hidden bg-[#143674] pt-6 sm:pt-8 pb-8 sm:pb-12 border-b border-white/10">
         <div className="absolute inset-0 z-0 pointer-events-none">
-          <img src="/images/campus/iaer-building.jpg" alt="IAER Campus Background" className="h-full w-full object-cover opacity-30" />
+          <img src="/images/campus/bca-hero-bg.png" alt="IAER Campus Background" className="h-full w-full object-cover opacity-30" />
           <div className="absolute inset-0 bg-gradient-to-br from-[#143674]/95 via-[#0b1c3a]/80 to-[#143674]/95 mix-blend-multiply" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05)_1px,transparent_1px)] [background-size:24px_24px]" />
         </div>
@@ -230,22 +294,22 @@ export default function BCALandingPage() {
         </div>
 
         <div className="relative z-10">
-          <div data-animate-on-scroll className="relative z-10 mx-auto grid max-w-[1550px] grid-cols-1 gap-3 sm:gap-4 px-4 py-3 sm:py-4 md:grid-cols-12 md:gap-6 md:py-6 transition-all duration-700 ease-out">
-            <div className="flex-1 md:col-span-7 space-y-1.5 sm:space-y-3">
+          <div data-animate-on-scroll className="relative z-10 mx-auto grid max-w-[1550px] grid-cols-1 gap-4 sm:gap-6 px-4 py-4 md:grid-cols-12 md:gap-6 md:py-6 transition-all duration-700 ease-out">
+            <div className="flex-1 md:col-span-7 space-y-3 sm:space-y-4">
               <div className="text-[10px] sm:text-xs font-bold text-accent uppercase tracking-wider mb-2">
                 BCA | General | AI & ML | Cyber Security & Data Science
               </div>
-              <div className="inline-flex items-center gap-1.5 sm:gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-2.5 py-0.5 sm:px-3 sm:py-1 text-[11px] sm:text-xs font-medium text-white shadow-sm">
+              <div className="inline-flex items-center gap-1.5 sm:gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-2.5 py-1 sm:px-3 sm:py-1.5 text-[11px] sm:text-xs font-medium text-white shadow-sm">
                 <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-accent rounded-full animate-pulse" />
                 <span>Best BCA College in Kolkata with Placement</span>
               </div>
 
-              <div className="space-y-1 sm:space-y-2">
+              <div className="space-y-2 sm:space-y-3">
                 <h1 className="text-xl sm:text-3xl lg:text-[2.75rem] font-extrabold tracking-tighter text-white drop-shadow-lg leading-tight sm:leading-[1.1]">
                   Build a Future-Proof Tech Career with <br className="hidden sm:block" />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-teal-300 to-white">BCA, AI & Cyber Security at IAER Kolkata</span>
                 </h1>
-                <p className="text-[10px] sm:text-base lg:text-lg font-medium text-blue-100/90 drop-shadow max-w-full sm:max-w-3xl leading-tight sm:leading-relaxed">
+                <p className="text-xs sm:text-base lg:text-lg font-medium text-blue-100/90 drop-shadow max-w-full sm:max-w-3xl leading-snug sm:leading-relaxed">
                   Looking for BCA admission in Kolkata? Join IAER—one of the top BCA colleges in Kolkata offering Artificial Intelligence, Machine Learning, Cyber Security & Data Science programs with strong placement support.
                 </p>
                 <div className="flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-xs font-semibold text-white mt-1 sm:mt-2" aria-label="Student rating">
@@ -256,24 +320,24 @@ export default function BCALandingPage() {
                 </div>
               </div>
 
-              <div className="flex items-center w-full sm:w-auto gap-2 sm:gap-3 mt-4">
-                <Button onClick={onApplyNow} size="sm" className="flex-1 sm:flex-none h-8 sm:h-12 rounded-full bg-accent px-3 sm:px-8 text-[10px] sm:text-base font-bold text-white shadow-[0_0_15px_rgba(247,148,30,0.3)] transition-all hover:-translate-y-0.5 hover:bg-accent/90 flex justify-center items-center">
-                  Apply Now <ArrowRight className="ml-1 sm:ml-2 h-3 w-3 sm:h-5 sm:w-5" />
+              <div className="flex items-center w-full sm:w-auto gap-3 mt-4">
+                <Button onClick={onApplyNow} size="lg" className="flex-1 sm:flex-none h-9 sm:h-12 rounded-full bg-accent px-4 sm:px-10 text-xs sm:text-sm font-bold text-white shadow-[0_0_15px_rgba(247,148,30,0.3)] transition-all hover:-translate-y-0.5 hover:bg-accent/90 flex justify-center items-center">
+                  Apply Now <ArrowRight className="ml-1 sm:ml-2 h-3.5 w-3.5 sm:h-5 sm:w-5" />
                 </Button>
-                <Button onClick={onDownload} variant="outline" size="sm" className="flex-1 sm:flex-none h-8 sm:h-12 rounded-full border border-primary text-primary bg-white/5 hover:bg-primary/10 px-3 sm:px-8 text-[10px] sm:text-base font-bold transition-all flex justify-center items-center">
-                  <Download className="mr-1 sm:mr-2 h-3 w-3 sm:h-5 sm:w-5" /> Brochure
+                <Button onClick={onDownload} variant="outline" size="lg" className="flex-1 sm:flex-none h-9 sm:h-12 rounded-full border border-primary text-primary bg-white/5 hover:bg-primary/10 px-4 sm:px-10 text-xs sm:text-sm font-bold transition-all flex justify-center items-center">
+                  <Download className="mr-1 sm:mr-2 h-3.5 w-3.5 sm:h-5 sm:w-5" /> Brochure
                 </Button>
               </div>
 
-              <div className="mt-3 flex flex-wrap items-center gap-2 sm:mt-6 sm:gap-4">
+              <div className="mt-3 flex flex-wrap items-center gap-2 sm:mt-6 sm:gap-3">
                 {[
                   { label: 'Internship from Year 1', icon: Briefcase },
                   { label: 'Industry-Aligned Curriculum', icon: BookOpen },
                   { label: '350+ Placement Offers', icon: Target },
                   { label: 'Future-Ready Specializations in AI, ML & Data Science', icon: Layers },
                 ].map((b) => (
-                  <div key={b.label} className="flex items-center gap-1 sm:gap-2 rounded-full bg-white/5 border border-white/10 px-2 sm:px-4 py-1 sm:py-2 text-[9px] sm:text-xs font-medium text-white/90 backdrop-blur-sm shadow-inner transition-all hover:bg-white/10 hover:-translate-y-0.5 cursor-default">
-                    <b.icon className="h-2.5 w-2.5 sm:h-4 sm:w-4 text-accent" />
+                  <div key={b.label} className="flex items-center gap-1.5 sm:gap-2 rounded-full bg-white/5 border border-white/10 px-2.5 sm:px-4 py-1.5 sm:py-2 text-[9px] sm:text-xs font-medium text-white/90 backdrop-blur-sm shadow-inner transition-all hover:bg-white/10 hover:-translate-y-0.5 cursor-default">
+                    <b.icon className="h-3 w-3 sm:h-4 sm:w-4 text-accent" />
                     {b.label}
                   </div>
                 ))}
@@ -618,17 +682,26 @@ export default function BCALandingPage() {
                  </div>
 
                  {/* Industry Collaborations */}
-                 <div>
-                   <h4 className="text-sm font-bold text-[#143674] mb-3 uppercase tracking-wider flex items-center gap-2"><Building2 className="w-4 h-4 text-primary" /> Industry Collaborations</h4>
-                   <div className="flex flex-wrap gap-2 sm:gap-3 items-center">
-                     {['CII', 'ICC', 'BCC&I', 'MSME', 'NHRD', 'ERSC'].map((collab) => (
-                       <span key={collab} className="inline-flex items-center justify-center bg-blue-50 text-[#143674] rounded-lg px-3 py-1.5 text-xs font-bold border border-blue-100 shadow-sm">
-                         {collab}
-                       </span>
-                     ))}
-                     <span className="text-[10px] sm:text-[11px] text-slate-500 italic ml-0 sm:ml-2 border-l-0 sm:border-l border-slate-300 pl-0 sm:pl-3 py-1 w-full sm:w-auto mt-2 sm:mt-0">Ensuring strong industry alignment.</span>
-                   </div>
-                 </div>
+                  <div>
+                    <h4 className="text-sm font-bold text-[#143674] mb-3 uppercase tracking-wider flex items-center gap-2"><Building2 className="w-4 h-4 text-primary" /> Industry Collaborations</h4>
+                    <div className="flex flex-wrap items-center gap-4 sm:gap-6 bg-slate-50 p-4 rounded-2xl border border-slate-100 justify-center">
+                       {[
+                         { src: "/images/affiliations/confederation.png", alt: "CII" },
+                         { src: "/images/affiliations/MSME.png", alt: "MSME" },
+                         { src: "/images/affiliations/NHRD.png", alt: "NHRD" },
+                         { src: "/images/affiliations/ERSC.jpeg", alt: "ERSC" },
+                         { src: "/images/affiliations/NSDC.png", alt: "NSDC" }
+                       ].map((collab, idx) => (
+                          <img 
+                            key={idx} 
+                            src={collab.src} 
+                            alt={collab.alt} 
+                            className="h-8 sm:h-10 object-contain" 
+                            onError={(e) => { e.currentTarget.src = '/images/logos/IAER_ICON.jpg'; }}
+                          />
+                       ))}
+                    </div>
+                  </div>
                </div>
             </div>
           </div>

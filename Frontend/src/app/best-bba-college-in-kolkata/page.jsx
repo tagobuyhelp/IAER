@@ -48,6 +48,9 @@ export default function BBALandingPage() {
 
   useEffect(() => {
     const btnId = 'c4af7a13a0ce4880aa5e45e7e28e4d7e';
+    const baseUrl = 'widgets.in8.nopaperforms.com';
+    
+    // Ensure hidden button exists
     let btn = document.querySelector('.npfWidget-' + btnId);
     if (!btn) {
       btn = document.createElement('button');
@@ -58,38 +61,49 @@ export default function BBALandingPage() {
       document.body.appendChild(btn);
     }
 
-    let popScript = document.querySelector('script[src*="npfwpopup.js"]');
-    if (!popScript) {
-      popScript = document.createElement("script");
-      popScript.src = "https://cdn.npfs.co/js/widget/npfwpopup.js";
-      popScript.async = true;
-      document.body.appendChild(popScript);
-    }
-
     const initWidget = () => {
       if (typeof window.NpfWidgetsInit === 'function') {
-        new window.NpfWidgetsInit({
-          "widgetId": "c4af7a13a0ce4880aa5e45e7e28e4d7e",
-          "baseurl": "widgets.nopaperforms.com",
-          "formTitle": "Enquiry Form",
-          "titleColor": "#FF0033",
-          "backgroundColor": "#ddd",
-          "iframeHeight": "500px",
-          "buttonbgColor": "#4c79dc",
-          "buttonTextColor": "#FFF"
-        });
+        if (!window['npfW' + btnId]) {
+          window['npfW' + btnId] = new window.NpfWidgetsInit({
+            "widgetId": btnId,
+            "baseurl": baseUrl,
+            "formTitle": "Enquiry Form",
+            "titleColor": "#FF0033",
+            "backgroundColor": "#ddd",
+            "iframeHeight": "500px",
+            "buttonbgColor": "#4c79dc",
+            "buttonTextColor": "#FFF"
+          });
+        } else {
+          const trigger = document.querySelector('.npfWidget-' + btnId);
+          if (trigger) {
+            trigger.onclick = () => {
+              try {
+                window['npfW' + btnId].showPopup(btnId, baseUrl);
+              } catch (e) {
+                console.error("Popup trigger error", e);
+              }
+            };
+          }
+        }
+        return true;
       }
+      return false;
     };
 
-    if (popScript.complete || typeof window.NpfWidgetsInit === 'function') {
-      initWidget();
-    } else {
-      popScript.addEventListener('load', initWidget);
+    if (!initWidget()) {
+      const interval = setInterval(() => {
+        if (initWidget()) {
+          clearInterval(interval);
+        }
+      }, 100);
+      setTimeout(() => clearInterval(interval), 10000);
     }
 
     return () => {
-      if (btn && btn.parentNode) {
-        btn.parentNode.removeChild(btn);
+      const trigger = document.querySelector('.npfWidget-' + btnId);
+      if (trigger) {
+        trigger.onclick = null;
       }
     };
   }, []);
@@ -107,10 +121,17 @@ export default function BBALandingPage() {
   };
 
   const onApplyNow = () => {
+    const btnId = 'c4af7a13a0ce4880aa5e45e7e28e4d7e';
+    const baseUrl = 'widgets.in8.nopaperforms.com';
     try {
-      const trigger = document.querySelector('.npfWidget-c4af7a13a0ce4880aa5e45e7e28e4d7e');
-      if (trigger) {
-        trigger.click();
+      const widget = window['npfW' + btnId];
+      if (widget && typeof widget.showPopup === 'function') {
+        widget.showPopup(btnId, baseUrl);
+      } else {
+        const trigger = document.querySelector('.npfWidget-' + btnId);
+        if (trigger) {
+          trigger.click();
+        }
       }
     } catch (e) {
       console.error("Popup not found", e);
