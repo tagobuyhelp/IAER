@@ -249,42 +249,14 @@ export default function RootLayout({ children }) {
           `}
         </Script>
 
-        <div className="npf_chatbots" data-w="71289f36cb7f4d1aa57ea9599d67b976"></div>
+        <div className="npf_chatbots" data-w="3c4b3f825de24faa9996d7548d31a0ce" style={{ display: 'none' }}></div>
         <Script id="npf-chatbot-loader" strategy="lazyOnload">
           {`
-            var initChatbot = function() {
-              console.log("[NPF-Chatbot] Initializing loader...");
-              var placeholder = document.querySelector('.npf_chatbots');
-              console.log("[NPF-Chatbot] Placeholder found:", !!placeholder, placeholder ? placeholder.getAttribute('data-w') : "N/A");
-              
-              if (placeholder) {
-                var observer = new MutationObserver(function(mutations) {
-                  console.log("[NPF-Chatbot] DOM mutated! Content added?", placeholder.innerHTML.length > 0);
-                  if (placeholder.innerHTML.length > 0) {
-                    console.log("[NPF-Chatbot] Content snippet:", placeholder.innerHTML.substring(0, 100));
-                  }
-                });
-                observer.observe(placeholder, { childList: true, subtree: true });
-              }
-
-              var s=document.createElement("script");
-              s.type="text/javascript";
-              s.async=true;
-              s.src="https://chatbot.in8.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/f66854412785432ea1d2c2257fe7861f/71289f36cb7f4d1aa57ea9599d67b976";
-              s.onload = function() {
-                console.log("[NPF-Chatbot] Script loaded successfully");
-              };
-              s.onerror = function() {
-                console.error("[NPF-Chatbot] Failed to load script from chatbot.in8.nopaperforms.com");
-              };
-              document.body.appendChild(s);
-            };
-
-            if (document.readyState === 'loading') {
-              document.addEventListener('DOMContentLoaded', initChatbot);
-            } else {
-              initChatbot();
-            }
+            var s=document.createElement("script"); 
+            s.type="text/javascript"; 
+            s.async=true; 
+            s.src="https://chatbot.in1.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/655602525fe21a6b/3c4b3f825de24faa9996d7548d31a0ce"; 
+            document.body.appendChild(s);
           `}
         </Script>
 
