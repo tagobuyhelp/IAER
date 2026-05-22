@@ -128,14 +128,14 @@ export default function RootLayout({ children }) {
               var s=document.createElement("script");
               s.type="text/javascript";
               s.async=true;
-              s.src="https://in8cdn.npfs.co/js/widget/npfwpopup.js";
+              s.src="https://cdn.npfs.co/js/widget/npfwpopup.js";
               s.onload=function(){
                 console.log("[NPF-Widget] Script loaded successfully");
                 try {
-                  if (!document.querySelector('.npfWidget-29f961a6166cc94d1ae744a39fa1122f')) {
+                  if (!document.querySelector('.npfWidget-ee13b8b13cddfc1bfec07deacefd996b')) {
                     var btn = document.createElement('button');
                     btn.type = 'button';
-                    btn.className = 'npfWidgetButton npfWidget-29f961a6166cc94d1ae744a39fa1122f';
+                    btn.className = 'npfWidgetButton npfWidget-ee13b8b13cddfc1bfec07deacefd996b';
                     btn.style.display = 'none';
                     btn.textContent = 'Enquire Now';
                     document.body.appendChild(btn);
@@ -143,34 +143,34 @@ export default function RootLayout({ children }) {
                 } catch (e) {
                   console.error("[NPF-Widget] Error creating button:", e);
                 }
-                window['npfW29f961a6166cc94d1ae744a39fa1122f'] = new NpfWidgetsInit({
-                  widgetId: '29f961a6166cc94d1ae744a39fa1122f',
-                  baseurl: 'widgets.in8.nopaperforms.com',
-                  formTitle: 'Enquiry Form',
+                window['npfWee13b8b13cddfc1bfec07deacefd996b'] = new NpfWidgetsInit({
+                  widgetId: 'ee13b8b13cddfc1bfec07deacefd996b',
+                  baseurl: 'widgets.nopaperforms.com',
+                  formTitle: 'Feedback Form',
                   titleColor: '#FF0033',
                   backgroundColor: '#ddd',
                   iframeHeight: '500px',
-                  buttonbgColor: '#4c79dc',
+                  buttonbgColor: '#ff0000',
                   buttonTextColor: '#FFF'
                 });
                 console.log("[NPF-Widget] NpfWidgetsInit called");
               };
               s.onerror = function() {
-                console.error("[NPF-Widget] Failed to load script from in8cdn.npfs.co");
+                console.error("[NPF-Widget] Failed to load script from cdn.npfs.co");
               };
               document.body.appendChild(s);
             })();
           `}
         </Script>
-
+ 
         {/* Meritto Enquiry Form Widget 2 - POP-UP (emwgts.js) */}
-        <Script src="https://widgets.in8.nopaperforms.com/emwgts.js" strategy="lazyOnload" />
-
+        <Script src="https://widgets.nopaperforms.com/emwgts.js" strategy="lazyOnload" />
+ 
         <Script id="npf-helpers" strategy="lazyOnload">
           {`
             (function(){
               try {
-                var mainId = '29f961a6166cc94d1ae744a39fa1122f';
+                var mainId = 'ee13b8b13cddfc1bfec07deacefd996b';
                 if (!window.__IAER_BROCHURE_WIDGET_ID) {
                   window.__IAER_BROCHURE_WIDGET_ID = mainId;
                 }
@@ -185,23 +185,24 @@ export default function RootLayout({ children }) {
                     document.body.appendChild(btn);
                   } catch (e) {}
                 };
-
+ 
                 if (!window.openNpfPopup) {
                   window.openNpfPopup = function(id){
                     var targetId = id || mainId;
                     ensureTrigger(targetId);
-
+ 
                     try {
                       var trigger = document.querySelector('.npfWidget-' + targetId);
                       if (trigger) trigger.click();
                     } catch (e) {}
-
+ 
                     try {
                       setTimeout(function(){
                         try {
                           var has = !!document.querySelector('iframe[src*="nopaperforms.com"]');
                           if (!has) {
-                            var url = 'https://widgets.in8.nopaperforms.com/widget/' + targetId;
+                            var base = (targetId === 'ee13b8b13cddfc1bfec07deacefd996b') ? 'widgets.nopaperforms.com' : 'widgets.in8.nopaperforms.com';
+                            var url = 'https://' + base + '/widget/' + targetId;
                             var w = 920, h = 700;
                             var left = Math.max(0, (window.innerWidth - w) / 2);
                             var top = Math.max(0, (window.innerHeight - h) / 2);
@@ -214,7 +215,7 @@ export default function RootLayout({ children }) {
                     } catch (e) {}
                   };
                 }
-
+ 
                 if (!window.openBrochurePopup) {
                   window.openBrochurePopup = function(){
                     try {
@@ -229,7 +230,7 @@ export default function RootLayout({ children }) {
                     } catch (e) {}
                   };
                 }
-
+ 
                 // Intercept admission link clicks and open the popup instead
                 document.addEventListener('click', function(e) {
                   try {
@@ -242,7 +243,7 @@ export default function RootLayout({ children }) {
                     }
                   } catch (err) {}
                 });
-
+ 
                 ensureTrigger(mainId);
               } catch (e) {}
             })();
