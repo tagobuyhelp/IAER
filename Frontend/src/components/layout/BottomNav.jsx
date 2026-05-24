@@ -221,15 +221,16 @@ export default function BottomNav() {
             className="inline-flex items-center justify-center px-2.5 py-1 rounded-full text-[10px] sm:text-xs font-semibold bg-white text-[#100902] border border-gray-300 hover:border-accent hover:text-accent transition-colors whitespace-nowrap shrink-0"
           >
             <MessageCircle className="w-3.5 h-3.5 mr-1" />
-            Inquire Now
+            Enquire Now
           </EnquiryPopupButton>
           <Link
             href="https://admission.iaer.ac.in/"
             target="_blank"
+            data-no-intercept="true"
             className="inline-flex items-center justify-center px-2.5 py-1 rounded-full text-[10px] sm:text-xs font-semibold bg-accent hover:bg-accent/90 transition-colors whitespace-nowrap shrink-0"
           >
             <FileText className="w-3.5 h-3.5 mr-1" />
-            Enquire Now
+            Apply Now
           </Link>
         </div>
       </div>
