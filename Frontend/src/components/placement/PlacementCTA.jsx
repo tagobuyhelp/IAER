@@ -35,7 +35,7 @@ export default function PlacementCTA() {
                                 target="_blank"
                                 className="px-6 sm:px-8 h-10 sm:h-11 bg-accent text-white rounded-full font-bold text-sm sm:text-base lg:text-lg hover:bg-accent-dark transition-all shadow-lg shadow-xl flex items-center gap-2"
                             >
-                                Apply Now <ArrowRight className="w-5 h-5" />
+                                Enquire Now <ArrowRight className="w-5 h-5" />
                             </Link>
                             <Link
                                 href="/contact"

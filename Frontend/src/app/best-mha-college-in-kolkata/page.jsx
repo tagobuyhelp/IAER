@@ -46,7 +46,7 @@ export default function MHALandingPage() {
       if (typeof window.openBrochurePopup === 'function') {
         window.openBrochurePopup();
       } else if (typeof window.openNpfPopup === 'function') {
-        window.openNpfPopup('29f961a6166cc94d1ae744a39fa1122f');
+        window.openNpfPopup('ee13b8b13cddfc1bfec07deacefd996b');
       } else {
         const trigger = document.querySelector('.npfWidgetButton');
         if (trigger) trigger.click();
@@ -59,7 +59,7 @@ export default function MHALandingPage() {
   const onApplyNow = () => {
     try {
       if (typeof window.openNpfPopup === 'function') {
-        window.openNpfPopup('29f961a6166cc94d1ae744a39fa1122f');
+        window.openNpfPopup('ee13b8b13cddfc1bfec07deacefd996b');
       } else {
         const trigger = document.querySelector('.npfWidgetButton');
         if (trigger) trigger.click();
@@ -202,7 +202,7 @@ export default function MHALandingPage() {
               <span>6292004641</span>
             </a>
             <Button onClick={onApplyNow} className="ml-2 rounded-full bg-accent px-5 py-2 text-sm font-semibold text-white shadow-lg ring-1 ring-white/10 transition-all hover:-translate-y-0.5 hover:bg-accent/90 hover:shadow-accent/20 flex items-center">
-              Apply Now <ArrowRight className="ml-1.5 h-4 w-4" />
+              Enquire Now <ArrowRight className="ml-1.5 h-4 w-4" />
             </Button>
           </nav>
           
@@ -272,7 +272,7 @@ export default function MHALandingPage() {
 
               <div className="flex items-center w-full sm:w-auto gap-2 sm:gap-3 mt-4">
                 <Button onClick={onApplyNow} size="sm" className="flex-1 sm:flex-none h-8 sm:h-12 rounded-full bg-accent px-3 sm:px-8 text-[10px] sm:text-base font-bold text-white shadow-[0_0_15px_rgba(247,148,30,0.3)] transition-all hover:-translate-y-0.5 hover:bg-accent/90 flex justify-center items-center">
-                  Apply Now <ArrowRight className="ml-1 sm:ml-2 h-3 w-3 sm:h-5 sm:w-5" />
+                  Enquire Now <ArrowRight className="ml-1 sm:ml-2 h-3 w-3 sm:h-5 sm:w-5" />
                 </Button>
                 <Button onClick={onDownload} variant="outline" size="sm" className="flex-1 sm:flex-none h-8 sm:h-12 rounded-full border border-primary text-primary bg-white/5 hover:bg-primary/10 px-3 sm:px-8 text-[10px] sm:text-base font-bold transition-all flex justify-center items-center">
                   <Download className="mr-1 sm:mr-2 h-3 w-3 sm:h-5 sm:w-5" /> Brochure
@@ -953,7 +953,7 @@ export default function MHALandingPage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-10">
             <Button onClick={onApplyNow} size="lg" className="w-full sm:w-auto rounded-full bg-accent hover:bg-accent/90 text-white font-bold px-6 sm:px-8 py-5 text-base shadow-lg flex justify-center items-center">
-              Apply Now <ArrowRight className="ml-2 w-5 h-5" />
+              Enquire Now <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             <Button onClick={onDownload} variant="outline" size="lg" className="w-full sm:w-auto rounded-full border-primary text-primary hover:bg-primary hover:text-white bg-white font-bold px-6 sm:px-8 py-5 text-base shadow-lg">
               <Download className="mr-2 w-5 h-5" /> Download Brochure
@@ -996,7 +996,7 @@ export default function MHALandingPage() {
 
          <div className="flex items-center flex-shrink-0">
             <Button onClick={onApplyNow} className="bg-primary hover:bg-primary/90 text-white font-bold rounded-full px-3 py-2.5 sm:px-5 sm:py-2 text-[11px] sm:text-sm shadow-lg shadow-primary/30 active:scale-95 transition-all whitespace-nowrap flex items-center">
-               Apply Now <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-1 sm:ml-1.5" />
+               Enquire Now <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-1 sm:ml-1.5" />
             </Button>
          </div>
       </div>

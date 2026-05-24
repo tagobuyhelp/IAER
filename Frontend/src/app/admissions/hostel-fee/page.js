@@ -38,7 +38,7 @@ export default function HostelFeePage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-accent text-white font-bold hover:bg-accent/90 transition-colors"
               >
-                Apply Now
+                Enquire Now
               </Link>
               <Link
                 href="/admissions#admissions-fee"

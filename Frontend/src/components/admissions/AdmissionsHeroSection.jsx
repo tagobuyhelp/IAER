@@ -247,7 +247,7 @@ export default function AdmissionsHeroSection() {
                                 target="_blank"
                                 className="px-5 sm:px-8 h-11 sm:h-12 bg-accent hover:bg-accent/90 text-white font-bold rounded-xl transition-all shadow-lg shadow-accent/20 hover:shadow-accent/30 hover:-translate-y-1 text-sm sm:text-base inline-flex items-center"
                             >
-                                Apply Now
+                                Enquire Now
                             </Link>
                             <Link
                                 href="#admissions-overview"

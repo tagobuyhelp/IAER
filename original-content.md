@@ -18,7 +18,7 @@ Affiliated to: MAKAUT
 Approved by: AICTE, NSDC
 
 👉 Admissions Open | Limited Seats Available
-[Apply Now] [Download Brochure] [Talk to Admission Expert]
+[Enquire Now] [Download Brochure] [Talk to Admission Expert]
 
 ABOUT THE PROGRAMS
 
@@ -257,7 +257,7 @@ Start Your Career in Healthcare & Hospital Management Today
 
 📞 Talk to Experts
 📥 Download Brochure
-📝 Apply Now
+📝 Enquire Now
 
 👉 Admissions Open| Limited Seats Available
 

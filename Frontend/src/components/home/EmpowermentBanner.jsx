@@ -65,7 +65,7 @@ function EmpowermentBannerInner() {
             <Link href="https://admission.iaer.ac.in/" target="_blank">
               <span className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/60 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-full transition-all duration-700" />
               <span className="relative inline-flex items-center">
-                Apply Now
+                Enquire Now
                 <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-0.5 transition-transform duration-200" />
               </span>
             </Link>

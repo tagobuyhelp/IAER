@@ -73,7 +73,7 @@ export default function PlacementSection() {
                 className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-sm hover:shadow-lg transition-all duration-300 h-10 px-4 text-sm sm:h-11 sm:px-6 sm:text-base"
               >
                 <Link href="https://admission.iaer.ac.in/" target="_blank">
-                  APPLY NOW <ArrowRight className="ml-2 h-4 w-4" />
+                  ENQUIRE NOW <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button

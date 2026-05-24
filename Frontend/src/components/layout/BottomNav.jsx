@@ -214,7 +214,7 @@ export default function BottomNav() {
               Admissions Open 2026
             </span>
             <span className="hidden sm:inline truncate">
-              Apply now or inquire about IAER programs.
+              Enquire now or inquire about IAER programs.
             </span>
           </div>
           <EnquiryPopupButton
@@ -229,7 +229,7 @@ export default function BottomNav() {
             className="inline-flex items-center justify-center px-2.5 py-1 rounded-full text-[10px] sm:text-xs font-semibold bg-accent hover:bg-accent/90 transition-colors whitespace-nowrap shrink-0"
           >
             <FileText className="w-3.5 h-3.5 mr-1" />
-            Apply Now
+            Enquire Now
           </Link>
         </div>
       </div>

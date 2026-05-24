@@ -76,7 +76,7 @@ export default function ProgramOverviewSection({
           <div className="mt-3 flex flex-col gap-2">
             <Link href="https://admission.iaer.ac.in/" target="_blank" className="block">
               <Button className="w-full bg-accent hover:bg-accent/90 text-white h-10 rounded-xl font-black">
-                Apply Now
+                Enquire Now
               </Button>
             </Link>
             <a
@@ -358,7 +358,7 @@ export default function ProgramOverviewSection({
             <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-3">
               <Link href="https://admission.iaer.ac.in/" target="_blank" className="sm:flex-1">
                 <Button className="w-full bg-accent hover:bg-accent/90 text-white h-11 rounded-xl font-black">
-                  Apply Now
+                  Enquire Now
                 </Button>
               </Link>
               <a

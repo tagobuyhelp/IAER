@@ -143,7 +143,7 @@ export default function HeroSection() {
                 className="flex-1 sm:flex-none h-11 sm:h-12 md:h-14 px-4 sm:px-10 bg-accent hover:bg-accent/90 text-white rounded-full font-bold text-[11px] sm:text-sm md:text-lg shadow-xl shadow-accent/20 transition-all duration-300 hover:-translate-y-1 whitespace-nowrap"
               >
                 <Link href="https://admission.iaer.ac.in/">
-                  APPLY NOW <ArrowRight className="ml-2 w-5 h-5" />
+                  ENQUIRE NOW <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
               <Button

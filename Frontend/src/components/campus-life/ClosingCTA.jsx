@@ -32,7 +32,7 @@ export default function ClosingCTA() {
                             target="_blank"
                             className="inline-flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 bg-accent text-white rounded-xl font-bold text-sm md:text-base hover:bg-accent/90 transition-all hover:scale-105 shadow-lg shadow-accent/25"
                         >
-                            Apply Now <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
+                            Enquire Now <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
                         </Link>
                     </div>
                 </RevealOnScroll>

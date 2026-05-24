@@ -146,7 +146,7 @@ export default function RootLayout({ children }) {
                 window['npfWee13b8b13cddfc1bfec07deacefd996b'] = new NpfWidgetsInit({
                   widgetId: 'ee13b8b13cddfc1bfec07deacefd996b',
                   baseurl: 'widgets.nopaperforms.com',
-                  formTitle: 'Feedback Form',
+                  formTitle: 'Enquire Now',
                   titleColor: '#FF0033',
                   backgroundColor: '#ddd',
                   iframeHeight: '500px',
@@ -236,6 +236,9 @@ export default function RootLayout({ children }) {
                   try {
                     var target = e.target.closest('a');
                     if (target && target.href && (target.href.indexOf('admission.iaer.ac.in') !== -1 || target.href.indexOf('admission.iaer.in') !== -1)) {
+                      if (target.getAttribute('data-no-intercept') === 'true') {
+                        return;
+                      }
                       e.preventDefault();
                       if (typeof window.openNpfPopup === 'function') {
                         window.openNpfPopup(mainId);

@@ -66,7 +66,7 @@ export default function ProgramBottomFeeBar({ fees, phone }) {
             <Link href="https://admission.iaer.ac.in/" target="_blank" className="col-span-2 sm:col-span-1">
               <Button className="w-full bg-accent hover:bg-accent/90 text-[#0b1220] h-10 rounded-xl shadow-lg shadow-black/10 font-black text-[12px] sm:text-sm">
                 <FileText className="w-4 h-4 mr-2" />
-                Apply Now
+                Enquire Now
               </Button>
             </Link>
             <a

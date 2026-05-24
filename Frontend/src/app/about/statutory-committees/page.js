@@ -460,7 +460,7 @@ export default function StatutoryCommitteesPage() {
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link href="https://admission.iaer.ac.in/" target="_blank" rel="noopener noreferrer">
                             <Button size="lg" variant="secondary" className="w-full sm:w-auto font-semibold">
-                                Apply Now <ArrowRight className="ml-2 w-4 h-4" />
+                                Enquire Now <ArrowRight className="ml-2 w-4 h-4" />
                             </Button>
                         </Link>
                         <Link href="/contact">

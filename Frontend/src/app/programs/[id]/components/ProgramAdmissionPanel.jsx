@@ -23,7 +23,7 @@ export default function ProgramAdmissionPanel({ program, cta, admissionSteps }) 
           </div>
 
           <div className="text-lg sm:text-xl md:text-3xl font-black leading-tight">
-            {cta?.heading || 'Apply Now'}
+            {cta?.heading || 'Enquire Now'}
           </div>
 
           {cta?.subheading ? (
@@ -54,7 +54,7 @@ export default function ProgramAdmissionPanel({ program, cta, admissionSteps }) 
           <div className="mt-4 flex flex-col sm:flex-row gap-2.5 sm:gap-3">
             <Link href="https://admission.iaer.ac.in/" target="_blank" className="sm:flex-1">
               <Button className="w-full bg-accent hover:bg-accent/90 text-[#0b1220] h-11 rounded-xl font-black">
-                Apply Now
+                Enquire Now
               </Button>
             </Link>
             <a

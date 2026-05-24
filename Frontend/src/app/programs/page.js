@@ -223,7 +223,7 @@ function ProgramCard({ program, index }) {
           </Button>
           <Button asChild variant="outline" className="flex-1 border-white/15 text-black hover:bg-white/10 rounded-xl">
             <Link href="https://admission.iaer.ac.in/" target="_blank" rel="noreferrer">
-              Apply Now
+              Enquire Now
             </Link>
           </Button>
         </div>

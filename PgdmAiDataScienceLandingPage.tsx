@@ -232,7 +232,7 @@ export function PgdmAiDataScienceLandingPage(): React.JSX.Element {
 
               <div className="flex items-center w-full sm:w-auto gap-2 sm:gap-3 mt-4">
                 <Button onClick={() => window.open('https://admission.imas.ac.in/', '_blank')} size="sm" className="flex-1 sm:flex-none h-8 sm:h-12 rounded-full bg-gradient-to-r from-teal-500 to-blue-600 px-3 sm:px-8 text-[10px] sm:text-base font-bold text-white shadow-[0_0_15px_rgba(20,184,166,0.3)] transition-all hover:-translate-y-0.5 hover:from-teal-400 hover:to-blue-500 flex justify-center items-center">
-                  Apply Now <ExternalLink className="ml-1 sm:ml-2 h-3 w-3 sm:h-5 sm:w-5" />
+                  Enquire Now <ExternalLink className="ml-1 sm:ml-2 h-3 w-3 sm:h-5 sm:w-5" />
                 </Button>
                 <Button onClick={onDownload} variant="outline" size="sm" className="flex-1 sm:flex-none h-8 sm:h-12 rounded-full border border-[#26c1d3] bg-transparent px-3 sm:px-8 text-[10px] sm:text-base font-bold text-[#26c1d3] transition-all hover:bg-[#26c1d3]/10 hover:text-[#26c1d3] flex justify-center items-center">
                   <Download className="mr-1 sm:mr-2 h-3 w-3 sm:h-5 sm:w-5" /> Brochure
@@ -820,7 +820,7 @@ export function PgdmAiDataScienceLandingPage(): React.JSX.Element {
               </div>
               <div className="flex flex-col sm:flex-row gap-2">
                 <Button onClick={() => window.open('https://admission.imas.ac.in/', '_blank')} className="flex-1 rounded-full bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 text-white text-xs font-semibold">
-                  Apply Now <ExternalLink className="ml-1 h-3.5 w-3.5" />
+                  Enquire Now <ExternalLink className="ml-1 h-3.5 w-3.5" />
                 </Button>
                 <Button onClick={onDownload} variant="outline" className="flex-1 rounded-full border-white/30 bg-transparent text-white hover:bg-white/10 text-xs font-semibold">
                   <Download className="mr-1 h-3.5 w-3.5" /> Download Brochure

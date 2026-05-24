@@ -167,7 +167,7 @@ export default function BoardOfGovernorsPage() {
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Button asChild size="lg" className="bg-white text-accent hover:bg-gray-100 px-10 py-6 text-lg rounded-full font-bold shadow-lg">
                             <Link href="https://admission.iaer.ac.in/" target="_blank">
-                                Apply Now <ArrowRight className="ml-2 w-5 h-5" />
+                                Enquire Now <ArrowRight className="ml-2 w-5 h-5" />
                             </Link>
                         </Button>
                         <Button asChild variant="outline" size="lg" className="border-white text-black hover:bg-white/10 px-10 py-6 text-lg rounded-full font-bold">
