@@ -41,31 +41,152 @@ export default function BBABALandingPage() {
     return () => clearInterval(timer);
   }, [heroImages.length]);
 
-  const onDownload = () => {
-    try {
-      if (typeof window.openBrochurePopup === 'function') {
-        window.openBrochurePopup();
-      } else if (typeof window.openNpfPopup === 'function') {
-        window.openNpfPopup('ee13b8b13cddfc1bfec07deacefd996b');
-      } else {
-        const trigger = document.querySelector('.npfWidgetButton');
-        if (trigger) trigger.click();
-      }
-    } catch (e) {
-      console.error("Popup not found", e);
+  useEffect(() => {
+    const btnId = 'd6de2ab7b4be7c22b67d139ea59a12d7';
+    const baseUrl = 'widgets.nopaperforms.com';
+    console.log("[Meritto BBA-BA] Hook mounted. Target widget ID:", btnId);
+    
+    // Ensure hidden button exists
+    let btn = document.querySelector('.npfWidget-' + btnId);
+    if (!btn) {
+      console.log("[Meritto BBA-BA] Creating hidden button element");
+      btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'npfWidgetButton npfWidget-' + btnId;
+      btn.style.display = 'none';
+      btn.textContent = 'Enquire Now!';
+      document.body.appendChild(btn);
+    } else {
+      console.log("[Meritto BBA-BA] Hidden button element already exists in DOM");
     }
+
+    const initWidget = () => {
+      let NpfConstructor = null;
+      try {
+        if (typeof window.NpfWidgetsInit === 'function') {
+          NpfConstructor = window.NpfWidgetsInit;
+        } else if (typeof NpfWidgetsInit === 'function') {
+          NpfConstructor = NpfWidgetsInit;
+        }
+      } catch (err) {}
+
+      console.log("[Meritto BBA-BA] initWidget run. Constructor found:", !!NpfConstructor);
+      if (NpfConstructor) {
+        if (!window['npfW' + btnId]) {
+          console.log("[Meritto BBA-BA] Initializing new NpfWidgetsInit for", btnId);
+          window['npfW' + btnId] = new NpfConstructor({
+            "widgetId": btnId,
+            "baseurl": baseUrl,
+            "formTitle": "Enquiry Form",
+            "titleColor": "#FF0033",
+            "backgroundColor": "#ddd",
+            "iframeHeight": "500px",
+            "buttonbgColor": "#4c79dc",
+            "buttonTextColor": "#FFF"
+          });
+          console.log("[Meritto BBA-BA] NpfWidgetsInit instance created:", window['npfW' + btnId]);
+        } else {
+          console.log("[Meritto BBA-BA] NpfWidgetsInit instance already exists");
+        }
+
+        const trigger = document.querySelector('.npfWidget-' + btnId);
+        if (trigger) {
+          console.log("[Meritto BBA-BA] Binding onclick to trigger button");
+          trigger.onclick = (e) => {
+            console.log("[Meritto BBA-BA] Trigger button clicked!");
+            try {
+              const widget = window['npfW' + btnId];
+              if (widget && typeof widget.showPopup === 'function') {
+                console.log("[Meritto BBA-BA] Calling showPopup via widget instance");
+                widget.showPopup(btnId, baseUrl);
+              } else {
+                console.warn("[Meritto BBA-BA] showPopup function not found on widget. Falling back to default click behavior.");
+              }
+            } catch (err) {
+              console.error("[Meritto BBA-BA] Error inside trigger button onclick:", err);
+            }
+          };
+        } else {
+          console.error("[Meritto BBA-BA] Trigger button not found during onclick binding!");
+        }
+        return true;
+      }
+      return false;
+    };
+
+    if (!initWidget()) {
+      console.log("[Meritto BBA-BA] NpfWidgetsInit not ready yet, setting interval polling...");
+      const interval = setInterval(() => {
+        if (initWidget()) {
+          console.log("[Meritto BBA-BA] Successfully initialized widget via interval polling. Clearing interval.");
+          clearInterval(interval);
+        }
+      }, 100);
+      setTimeout(() => {
+        clearInterval(interval);
+        console.log("[Meritto BBA-BA] Interval polling stopped after 10 seconds.");
+      }, 10000);
+    } else {
+      console.log("[Meritto BBA-BA] Successfully initialized widget immediately.");
+    }
+
+    return () => {
+      console.log("[Meritto BBA-BA] Hook unmounting. Cleaning up trigger onclick.");
+      const trigger = document.querySelector('.npfWidget-' + btnId);
+      if (trigger) {
+        trigger.onclick = null;
+      }
+    };
+  }, []);
+
+  const onDownload = () => {
+    console.log("[Meritto BBA-BA] onDownload function invoked, redirecting to onApplyNow");
+    onApplyNow();
   };
 
   const onApplyNow = () => {
+    const btnId = 'd6de2ab7b4be7c22b67d139ea59a12d7';
+    const baseUrl = 'widgets.nopaperforms.com';
+    console.log("[Meritto BBA-BA] onApplyNow function invoked");
     try {
-      if (typeof window.openNpfPopup === 'function') {
-        window.openNpfPopup('ee13b8b13cddfc1bfec07deacefd996b');
+      const widget = window['npfW' + btnId];
+      console.log("[Meritto BBA-BA] Checked widget instance on window:", widget);
+      if (widget && typeof widget.showPopup === 'function') {
+        console.log("[Meritto BBA-BA] Invoking widget.showPopup directly");
+        widget.showPopup(btnId, baseUrl);
+        
+        setTimeout(() => {
+          const el = document.getElementById("popup-" + btnId);
+          console.log("[Meritto BBA-BA] Diagnostic - popup element:", el);
+          if (el) {
+            console.log("[Meritto BBA-BA] Diagnostic - display style:", el.style.display);
+            console.log("[Meritto BBA-BA] Diagnostic - computed display:", window.getComputedStyle(el).display);
+            console.log("[Meritto BBA-BA] Diagnostic - innerHTML:", el.innerHTML);
+          } else {
+            console.error("[Meritto BBA-BA] Diagnostic - popup element NOT found in DOM by ID!");
+          }
+        }, 200);
       } else {
-        const trigger = document.querySelector('.npfWidgetButton');
-        if (trigger) trigger.click();
+        const trigger = document.querySelector('.npfWidget-' + btnId);
+        console.log("[Meritto BBA-BA] Widget instance not ready, found trigger button:", trigger);
+        if (trigger) {
+          console.log("[Meritto BBA-BA] Clicking trigger button");
+          trigger.click();
+        } else {
+          console.warn("[Meritto BBA-BA] No trigger button found in DOM. Falling back to direct popup window.");
+          const url = `https://${baseUrl}/widget/${btnId}`;
+          const w = 920, h = 700;
+          const left = Math.max(0, (window.innerWidth - w) / 2);
+          const top = Math.max(0, (window.innerHeight - h) / 2);
+          const features = `toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=${w},height=${h},top=${top},left=${left}`;
+          const win = window.open(url, "Enquiry Form", features);
+          if (!win) {
+            window.open(url, "_blank", "noopener,noreferrer");
+          }
+        }
       }
     } catch (e) {
-      console.error("Popup not found", e);
+      console.error("[Meritto BBA-BA] Error inside onApplyNow:", e);
     }
   };
 
@@ -991,8 +1112,8 @@ export default function BBABALandingPage() {
             <Button onClick={onApplyNow} className="bg-[#143674] hover:bg-[#143674]/90 text-white font-bold rounded-full px-2.5 py-2.5 sm:px-5 sm:py-2 text-[10px] sm:text-sm shadow-lg active:scale-95 transition-all whitespace-nowrap flex items-center justify-center">
                Enquire Now
             </Button>
-            <a href="https://admission.iaer.ac.in/" target="_blank" data-no-intercept="true" className="bg-accent hover:bg-accent/90 text-white font-bold rounded-full px-2.5 py-2.5 sm:px-5 sm:py-2 text-[10px] sm:text-sm shadow-lg shadow-accent/30 active:scale-95 transition-all whitespace-nowrap flex items-center justify-center">
-               Apply Now <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-1 sm:ml-1.5" />
+            <a href="tel:+916292004641" className="bg-accent hover:bg-accent/90 text-white font-bold rounded-full px-2.5 py-2.5 sm:px-5 sm:py-2 text-[10px] sm:text-sm shadow-lg shadow-accent/30 active:scale-95 transition-all whitespace-nowrap flex items-center justify-center gap-1">
+               <Phone className="w-3 h-3 sm:w-4 sm:h-4" /> Call Now
             </a>
          </div>
       </div>

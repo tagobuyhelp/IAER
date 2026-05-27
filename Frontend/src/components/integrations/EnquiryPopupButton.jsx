@@ -29,7 +29,7 @@ export function openCenteredPopup(url, title = "Enquiry", w = 900, h = 700) {
     return win;
 }
 
-export default function EnquiryPopupButton({ className = "", label = "Enquire Now", children }) {
+export default function EnquiryPopupButton({ className = "", label = "Enquire Now", children, ...props }) {
     const onClick = useCallback(() => {
         try {
             let trigger = document.querySelector(`.npfWidget-${WIDGET_ID}`);
@@ -57,8 +57,10 @@ export default function EnquiryPopupButton({ className = "", label = "Enquire No
             onClick={onClick}
             className={className}
             aria-label="Open enquiry form"
+            {...props}
         >
             {children || label}
         </button>
     );
 }
+
