@@ -258,11 +258,36 @@ export default function RootLayout({ children }) {
         <div className="npf_chatbots" data-w="3c4b3f825de24faa9996d7548d31a0ce" style={{ display: 'none' }}></div>
         <Script id="npf-chatbot-loader" strategy="lazyOnload">
           {`
-            var s=document.createElement("script"); 
-            s.type="text/javascript"; 
-            s.async=true; 
-            s.src="https://chatbot.in1.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/655602525fe21a6b/3c4b3f825de24faa9996d7548d31a0ce"; 
-            document.body.appendChild(s);
+            (function(){
+              if (typeof window !== 'undefined') {
+                var path = window.location.pathname.replace(/\\/$/, '').toLowerCase();
+                var landingPages = [
+                  '/best-mha-college-in-kolkata',
+                  '/best-mba-college-in-kolkata',
+                  '/best-bmlt-and-hospital-management-college-in-kolkata',
+                  '/best-bca-college-in-kolkata',
+                  '/best-bba-college-in-kolkata',
+                  '/best-bba-business-analytics-college-in-kolkata',
+                  '/best-aviation-and-hospitality-college-in-kolkata'
+                ].map(function(p) { return p.toLowerCase(); });
+                
+                var isLandingPage = landingPages.indexOf(path) !== -1;
+                
+                if (!isLandingPage) {
+                  var s=document.createElement("script"); 
+                  s.type="text/javascript"; 
+                  s.async=true; 
+                  s.src="https://chatbot.in1.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/655602525fe21a6b/3c4b3f825de24faa9996d7548d31a0ce"; 
+                  document.body.appendChild(s);
+                } else {
+                  console.log("[NPF-Chatbot] Chatbot disabled on landing page:", path);
+                  try {
+                    var el = document.querySelector('.npf_chatbots');
+                    if (el) el.remove();
+                  } catch (e) {}
+                }
+              }
+            })();
           `}
         </Script>
 

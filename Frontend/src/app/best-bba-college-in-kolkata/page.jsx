@@ -706,22 +706,23 @@ export default function BBALandingPage() {
                  {/* Industry Collaborations */}
                   <div>
                     <h4 className="text-sm font-bold text-[#143674] mb-3 uppercase tracking-wider flex items-center gap-2"><Building2 className="w-4 h-4 text-primary" /> Industry Collaborations</h4>
-                    <div className="flex flex-wrap items-center gap-4 sm:gap-6 bg-slate-50 p-4 rounded-2xl border border-slate-100 justify-center">
-                       {[
-                         { src: "/images/affiliations/confederation.png", alt: "CII" },
-                         { src: "/images/affiliations/MSME.png", alt: "MSME" },
-                         { src: "/images/affiliations/NHRD.png", alt: "NHRD" },
-                         { src: "/images/affiliations/ERSC.jpeg", alt: "ERSC" },
-                         { src: "/images/affiliations/NSDC.png", alt: "NSDC" }
-                       ].map((collab, idx) => (
+                    <div className="grid grid-cols-3 gap-2.5 sm:flex sm:flex-wrap sm:gap-4 bg-slate-50 p-3 sm:p-4 rounded-2xl border border-slate-100 justify-start items-center">
+                      {[
+                        { src: "/images/affiliations/confederation.png", alt: "CII" },
+                        { src: "/images/affiliations/MSME.png", alt: "MSME" },
+                        { src: "/images/affiliations/NHRD.png", alt: "NHRD" },
+                        { src: "/images/affiliations/ERSC.jpeg", alt: "ERSC" },
+                        { src: "/images/affiliations/NSDC.png", alt: "NSDC" }
+                      ].map((collab, idx) => (
+                        <div key={idx} className="bg-white p-1.5 sm:p-2.5 rounded-xl border border-slate-200/60 shadow-sm flex items-center justify-center h-16 sm:h-16 w-full sm:w-28 transition-all hover:scale-105">
                           <img 
-                            key={idx} 
                             src={collab.src} 
                             alt={collab.alt} 
-                            className="h-8 sm:h-10 object-contain" 
+                            className="max-h-full max-w-full object-contain" 
                             onError={(e) => { e.currentTarget.src = '/images/logos/IAER_ICON.jpg'; }}
                           />
-                       ))}
+                        </div>
+                      ))}
                     </div>
                   </div>
                </div>

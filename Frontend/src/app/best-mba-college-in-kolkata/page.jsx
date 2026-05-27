@@ -647,20 +647,30 @@ export default function MBALandingPage() {
                    </div>
                  </div>
 
-                 {/* Industry Collaborations */}
-                 <div>
-                   <h4 className="text-sm font-bold text-[#143674] mb-3 uppercase tracking-wider flex items-center gap-2"><Building2 className="w-4 h-4 text-primary" /> Industry Collaborations</h4>
-                   <div className="flex flex-wrap gap-2 sm:gap-3 items-center">
-                     {['CII', 'ICC', 'BCC&I', 'MSME', 'NHRD', 'ERSC'].map((collab) => (
-                       <span key={collab} className="inline-flex items-center justify-center bg-blue-50 text-[#143674] rounded-lg px-3 py-1.5 text-xs font-bold border border-blue-100 shadow-sm">
-                         {collab}
-                       </span>
-                     ))}
-                     <span className="text-[10px] sm:text-[11px] text-slate-500 italic ml-0 sm:ml-2 border-l-0 sm:border-l border-slate-300 pl-0 sm:pl-3 py-1 w-full sm:w-auto mt-2 sm:mt-0">Ensuring strong industry alignment.</span>
-                   </div>
-                 </div>
-               </div>
-            </div>
+                  {/* Industry Collaborations */}
+                  <div>
+                    <h4 className="text-sm font-bold text-[#143674] mb-3 uppercase tracking-wider flex items-center gap-2"><Building2 className="w-4 h-4 text-primary" /> Industry Collaborations</h4>
+                    <div className="grid grid-cols-3 gap-2.5 sm:flex sm:flex-wrap sm:gap-4 bg-slate-50 p-3 sm:p-4 rounded-2xl border border-slate-100 justify-start items-center">
+                      {[
+                        { src: "/images/affiliations/confederation.png", alt: "CII" },
+                        { src: "/images/affiliations/MSME.png", alt: "MSME" },
+                        { src: "/images/affiliations/NHRD.png", alt: "NHRD" },
+                        { src: "/images/affiliations/ERSC.jpeg", alt: "ERSC" },
+                        { src: "/images/affiliations/NSDC.png", alt: "NSDC" }
+                      ].map((collab, idx) => (
+                        <div key={idx} className="bg-white p-1.5 sm:p-2.5 rounded-xl border border-slate-200/60 shadow-sm flex items-center justify-center h-16 sm:h-16 w-full sm:w-28 transition-all hover:scale-105">
+                          <img 
+                            src={collab.src} 
+                            alt={collab.alt} 
+                            className="max-h-full max-w-full object-contain" 
+                            onError={(e) => { e.currentTarget.src = '/images/logos/IAER_ICON.jpg'; }}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+             </div>
           </div>
         </div>
       </section>
