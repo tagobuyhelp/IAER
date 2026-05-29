@@ -42,44 +42,72 @@ export default function BCALandingPage() {
   }, [heroImages.length]);
 
   useEffect(() => {
-    const btnId = 'ee13b8b13cddfc1bfec07deacefd996b';
+    const btnId = '10d5d69d0bd7a76f17c3173a5d763657';
     const baseUrl = 'widgets.nopaperforms.com';
+    console.log("[Meritto BCA] Hook mounted. Target widget ID:", btnId);
     
     // Ensure hidden button exists
     let btn = document.querySelector('.npfWidget-' + btnId);
     if (!btn) {
+      console.log("[Meritto BCA] Creating hidden button element");
       btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'npfWidgetButton npfWidget-' + btnId;
       btn.style.display = 'none';
       btn.textContent = 'Enquire Now!';
       document.body.appendChild(btn);
+    } else {
+      console.log("[Meritto BCA] Hidden button element already exists in DOM");
     }
 
     const initWidget = () => {
-      if (typeof window.NpfWidgetsInit === 'function') {
+      let NpfConstructor = null;
+      try {
+        if (typeof window.NpfWidgetsInit === 'function') {
+          NpfConstructor = window.NpfWidgetsInit;
+        } else if (typeof NpfWidgetsInit === 'function') {
+          NpfConstructor = NpfWidgetsInit;
+        }
+      } catch (err) {}
+
+      console.log("[Meritto BCA] initWidget run. Constructor found:", !!NpfConstructor);
+      if (NpfConstructor) {
         if (!window['npfW' + btnId]) {
-          window['npfW' + btnId] = new window.NpfWidgetsInit({
+          console.log("[Meritto BCA] Initializing new NpfWidgetsInit for", btnId);
+          window['npfW' + btnId] = new NpfConstructor({
             "widgetId": btnId,
             "baseurl": baseUrl,
-            "formTitle": "Enquire Now",
+            "formTitle": "Enquiry Form",
             "titleColor": "#FF0033",
             "backgroundColor": "#ddd",
             "iframeHeight": "500px",
-            "buttonbgColor": "#ff0000",
+            "buttonbgColor": "#4c79dc",
             "buttonTextColor": "#FFF"
           });
+          console.log("[Meritto BCA] NpfWidgetsInit instance created:", window['npfW' + btnId]);
         } else {
-          const trigger = document.querySelector('.npfWidget-' + btnId);
-          if (trigger) {
-            trigger.onclick = () => {
-              try {
-                window['npfW' + btnId].showPopup(btnId, baseUrl);
-              } catch (e) {
-                console.error("Popup trigger error", e);
+          console.log("[Meritto BCA] NpfWidgetsInit instance already exists");
+        }
+
+        const trigger = document.querySelector('.npfWidget-' + btnId);
+        if (trigger) {
+          console.log("[Meritto BCA] Binding onclick to trigger button");
+          trigger.onclick = (e) => {
+            console.log("[Meritto BCA] Trigger button clicked!");
+            try {
+              const widget = window['npfW' + btnId];
+              if (widget && typeof widget.showPopup === 'function') {
+                console.log("[Meritto BCA] Calling showPopup via widget instance");
+                widget.showPopup(btnId, baseUrl);
+              } else {
+                console.warn("[Meritto BCA] showPopup function not found on widget. Falling back to default click behavior.");
               }
-            };
-          }
+            } catch (err) {
+              console.error("[Meritto BCA] Error inside trigger button onclick:", err);
+            }
+          };
+        } else {
+          console.error("[Meritto BCA] Trigger button not found during onclick binding!");
         }
         return true;
       }
@@ -87,15 +115,23 @@ export default function BCALandingPage() {
     };
 
     if (!initWidget()) {
+      console.log("[Meritto BCA] NpfWidgetsInit not ready yet, setting interval polling...");
       const interval = setInterval(() => {
         if (initWidget()) {
+          console.log("[Meritto BCA] Successfully initialized widget via interval polling. Clearing interval.");
           clearInterval(interval);
         }
       }, 100);
-      setTimeout(() => clearInterval(interval), 10000);
+      setTimeout(() => {
+        clearInterval(interval);
+        console.log("[Meritto BCA] Interval polling stopped after 10 seconds.");
+      }, 10000);
+    } else {
+      console.log("[Meritto BCA] Successfully initialized widget immediately.");
     }
 
     return () => {
+      console.log("[Meritto BCA] Hook unmounting. Cleaning up trigger onclick.");
       const trigger = document.querySelector('.npfWidget-' + btnId);
       if (trigger) {
         trigger.onclick = null;
@@ -104,32 +140,53 @@ export default function BCALandingPage() {
   }, []);
 
   const onDownload = () => {
-    try {
-      if (typeof window.openBrochurePopup === 'function') {
-        window.openBrochurePopup();
-      } else {
-        onApplyNow();
-      }
-    } catch (e) {
-      console.error("Popup not found", e);
-    }
+    console.log("[Meritto BCA] onDownload function invoked, redirecting to onApplyNow");
+    onApplyNow();
   };
 
   const onApplyNow = () => {
-    const btnId = 'ee13b8b13cddfc1bfec07deacefd996b';
+    const btnId = '10d5d69d0bd7a76f17c3173a5d763657';
     const baseUrl = 'widgets.nopaperforms.com';
+    console.log("[Meritto BCA] onApplyNow function invoked");
     try {
       const widget = window['npfW' + btnId];
+      console.log("[Meritto BCA] Checked widget instance on window:", widget);
       if (widget && typeof widget.showPopup === 'function') {
+        console.log("[Meritto BCA] Invoking widget.showPopup directly");
         widget.showPopup(btnId, baseUrl);
+        
+        setTimeout(() => {
+          const el = document.getElementById("popup-" + btnId);
+          console.log("[Meritto BCA] Diagnostic - popup element:", el);
+          if (el) {
+            console.log("[Meritto BCA] Diagnostic - display style:", el.style.display);
+            console.log("[Meritto BCA] Diagnostic - computed display:", window.getComputedStyle(el).display);
+            console.log("[Meritto BCA] Diagnostic - innerHTML:", el.innerHTML);
+          } else {
+            console.error("[Meritto BCA] Diagnostic - popup element NOT found in DOM by ID!");
+          }
+        }, 200);
       } else {
         const trigger = document.querySelector('.npfWidget-' + btnId);
+        console.log("[Meritto BCA] Widget instance not ready, found trigger button:", trigger);
         if (trigger) {
+          console.log("[Meritto BCA] Clicking trigger button");
           trigger.click();
+        } else {
+          console.warn("[Meritto BCA] No trigger button found in DOM. Falling back to direct popup window.");
+          const url = `https://${baseUrl}/widget/${btnId}`;
+          const w = 920, h = 700;
+          const left = Math.max(0, (window.innerWidth - w) / 2);
+          const top = Math.max(0, (window.innerHeight - h) / 2);
+          const features = `toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=${w},height=${h},top=${top},left=${left}`;
+          const win = window.open(url, 'Enquiry Form', features);
+          if (!win) {
+            window.open(url, '_blank', 'noopener,noreferrer');
+          }
         }
       }
     } catch (e) {
-      console.error("Popup not found", e);
+      console.error("[Meritto BCA] Error invoking popup", e);
     }
   };
 

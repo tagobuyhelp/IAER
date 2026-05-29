@@ -1047,6 +1047,7 @@ export const programs = [
   {
     id: "bba-global-business-kolkata",
     code: "BBA-GB",
+    widgetId: "a1a5292c833c9278ca7606c498897ebf",
     title: "BBA in Global Business – IAER Kolkata",
     subtitle: "Undergraduate Degree I MAKAUT Affiliated I AICTE Approved",
     image: "/images/programs/bba-in-global-business-banner.webp",
@@ -1548,6 +1549,7 @@ export const programs = [
   {
     id: "bba-hospital-management-kolkata",
     code: "BBA-HM",
+    widgetId: "5f74e92b4f492e8e612fc2ca21f5bdd0",
     title: "BBA in Hospital Management – IAER Kolkata",
     subtitle: "Undergraduate Degree I MAKAUT Affiliated I AICTE Approved",
     image: "/images/programs/Bachelor-of-Hospital-Management.webp",
@@ -2403,6 +2405,7 @@ export const programs = [
   {
     id: "bsc-data-science-kolkata",
     code: "BSCDS",
+    widgetId: "387bb313db2bcf961b9ec24aba3d71af",
     title: "B.Sc. in Data Science – IAER Kolkata",
     subtitle: "Undergraduate Degree I MAKAUT Affiliated I AICTE Approved",
     image: "/images/programs/bsc-in-data-science-banner.webp",
@@ -2809,6 +2812,7 @@ export const programs = [
   {
     id: "bmlt-medical-lab-technology-kolkata",
     code: "BMLT",
+    widgetId: "5f74e92b4f492e8e612fc2ca21f5bdd0",
     title: "BMLT – Bachelor of Medical Laboratory Technology – IAER Kolkata",
     subtitle: "Undergraduate Degree I MAKAUT Affiliated I AICTE Approved",
     image: "/images/programs/bsc-in-medical-laboratory-technology-bmlt-banner.webp",
@@ -3227,6 +3231,7 @@ export const programs = [
   {
     id: "post-graduate-diploma-in-management-pgdm",
     code: "PGDM",
+    widgetId: "3958b53341cc9f2a1efd7126074cee70",
     title: "Post Graduate Diploma in Management (PGDM)",
     subtitle: "Postgraduate Program | Industry-Oriented | Career-Focused",
     image: "/images/programs/Post-Graduate-Diploma-in-Management.webp",
@@ -3330,6 +3335,7 @@ export const programs = [
   {
     id: "mba-college-kolkata",
     code: "MBA",
+    widgetId: "3958b53341cc9f2a1efd7126074cee70",
     title: "MBA (Master of Business Administration) – IAER Kolkata",
     subtitle: "Postgraduate Degree | MAKAUT-Affiliated | UGC-Recognised",
     image: "/images/programs/MBA-Global.webp",
@@ -3566,6 +3572,7 @@ export const programs = [
   {
     id: "pgdm-in-ai-and-data-science",
     code: "PGDM-AIADS",
+    widgetId: "3958b53341cc9f2a1efd7126074cee70",
     title: "PGDM in AI & Data Science (PGDM–AIADS)",
     subtitle: "Postgraduate Diploma | Industry-Integrated | Future-Tech Focused",
     image: "/images/programs/PGDM-in-AI-Data-Science.webp",
@@ -3668,6 +3675,7 @@ export const programs = [
   {
     id: "pgdm-ba",
     code: "PGDM-BA",
+    widgetId: "3958b53341cc9f2a1efd7126074cee70",
     title: "PGDM in Business Analytics (PGDM–BA)",
     subtitle: "Postgraduate Diploma | Data-Driven Management | Industry-Focused",
     image: "/images/programs/PGDM-in-Business-Analytics.webp",
@@ -3768,6 +3776,7 @@ export const programs = [
   {
     id: "pgdm-in-fintech",
     code: "PGDM-FT",
+    widgetId: "3958b53341cc9f2a1efd7126074cee70",
     title: "PGDM in FinTech (PGDM–FT)",
     subtitle: "Postgraduate Diploma | Digital Finance | Industry-Integrated",
     image: "/images/programs/PGDM-in-Fintech.webp",
@@ -3868,6 +3877,7 @@ export const programs = [
   {
     id: "pgdm-in-hospital-management-health-administration",
     code: "PGDM-HMHA",
+    widgetId: "3958b53341cc9f2a1efd7126074cee70",
     title: "PGDM in Hospital Management & Health Administration (PGDM–HMHA)",
     subtitle: "Postgraduate Diploma | Healthcare Leadership | Industry-Integrated",
     image: "/images/programs/PGDM-in-Hospital-Management-Health.webp",
@@ -3976,6 +3986,7 @@ export const programs = [
   {
     id: "mha-hospital-management-kolkata",
     code: "MHA",
+    widgetId: "3958b53341cc9f2a1efd7126074cee70",
     title: "Master of Hospital Administration (MHA) – IAER Kolkata",
     subtitle: "Postgraduate Degree Programme | MAKAUT Affiliated",
     image: "/images/programs/master-of-hospital-administration-banner.webp",

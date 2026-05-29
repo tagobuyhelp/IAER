@@ -41,31 +41,140 @@ export default function MBALandingPage() {
     return () => clearInterval(timer);
   }, [heroImages.length]);
 
-  const onDownload = () => {
-    try {
-      if (typeof window.openBrochurePopup === 'function') {
-        window.openBrochurePopup();
-      } else if (typeof window.openNpfPopup === 'function') {
-        window.openNpfPopup('ee13b8b13cddfc1bfec07deacefd996b');
-      } else {
-        const trigger = document.querySelector('.npfWidgetButton');
-        if (trigger) trigger.click();
-      }
-    } catch (e) {
-      console.error("Popup not found", e);
+  useEffect(() => {
+    const btnId = '3958b53341cc9f2a1efd7126074cee70';
+    const baseUrl = 'widgets.nopaperforms.com';
+    console.log("[Meritto MBA] Hook mounted. Target widget ID:", btnId);
+    
+    // Ensure hidden button exists
+    let btn = document.querySelector('.npfWidget-' + btnId);
+    if (!btn) {
+      console.log("[Meritto MBA] Creating hidden button element");
+      btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'npfWidgetButton npfWidget-' + btnId;
+      btn.style.display = 'none';
+      btn.textContent = 'Enquire Now!';
+      document.body.appendChild(btn);
+    } else {
+      console.log("[Meritto MBA] Hidden button element already exists in DOM");
     }
+
+    const initWidget = () => {
+      let NpfConstructor = null;
+      try {
+        if (typeof window.NpfWidgetsInit === 'function') {
+          NpfConstructor = window.NpfWidgetsInit;
+        } else if (typeof NpfWidgetsInit === 'function') {
+          NpfConstructor = NpfWidgetsInit;
+        }
+      } catch (err) {}
+
+      console.log("[Meritto MBA] initWidget run. Constructor found:", !!NpfConstructor);
+      if (NpfConstructor) {
+        if (!window['npfW' + btnId]) {
+          console.log("[Meritto MBA] Initializing new NpfWidgetsInit for", btnId);
+          window['npfW' + btnId] = new NpfConstructor({
+            "widgetId": btnId,
+            "baseurl": baseUrl,
+            "formTitle": "Enquiry Form",
+            "titleColor": "#FF0033",
+            "backgroundColor": "#ddd",
+            "iframeHeight": "500px",
+            "buttonbgColor": "#4c79dc",
+            "buttonTextColor": "#FFF"
+          });
+          console.log("[Meritto MBA] NpfWidgetsInit instance created:", window['npfW' + btnId]);
+        } else {
+          console.log("[Meritto MBA] NpfWidgetsInit instance already exists");
+        }
+
+        const trigger = document.querySelector('.npfWidget-' + btnId);
+        if (trigger) {
+          console.log("[Meritto MBA] Binding onclick to trigger button");
+          trigger.onclick = (e) => {
+            console.log("[Meritto MBA] Trigger button clicked!");
+            try {
+              const widget = window['npfW' + btnId];
+              if (widget && typeof widget.showPopup === 'function') {
+                console.log("[Meritto MBA] Calling showPopup via widget instance");
+                widget.showPopup(btnId, baseUrl);
+              } else {
+                console.warn("[Meritto MBA] showPopup function not found on widget. Falling back to default click behavior.");
+              }
+            } catch (err) {
+              console.error("[Meritto MBA] Error inside trigger button onclick:", err);
+            }
+          };
+        } else {
+          console.error("[Meritto MBA] Trigger button not found during onclick binding!");
+        }
+        return true;
+      }
+      return false;
+    };
+
+    if (!initWidget()) {
+      console.log("[Meritto MBA] NpfWidgetsInit not ready yet, setting interval polling...");
+      const interval = setInterval(() => {
+        if (initWidget()) {
+          console.log("[Meritto MBA] Successfully initialized widget via interval polling. Clearing interval.");
+          clearInterval(interval);
+        }
+      }, 100);
+      setTimeout(() => {
+        clearInterval(interval);
+        console.log("[Meritto MBA] Interval polling stopped after 10 seconds.");
+      }, 10000);
+    } else {
+      console.log("[Meritto MBA] Successfully initialized widget immediately.");
+    }
+
+    return () => {
+      console.log("[Meritto MBA] Hook unmounting. Cleaning up trigger onclick.");
+      const trigger = document.querySelector('.npfWidget-' + btnId);
+      if (trigger) {
+        trigger.onclick = null;
+      }
+    };
+  }, []);
+
+  const onDownload = () => {
+    console.log("[Meritto MBA] onDownload function invoked, redirecting to onApplyNow");
+    onApplyNow();
   };
 
   const onApplyNow = () => {
+    const btnId = '3958b53341cc9f2a1efd7126074cee70';
+    const baseUrl = 'widgets.nopaperforms.com';
+    console.log("[Meritto MBA] onApplyNow function invoked");
     try {
-      if (typeof window.openNpfPopup === 'function') {
-        window.openNpfPopup('ee13b8b13cddfc1bfec07deacefd996b');
+      const widget = window['npfW' + btnId];
+      console.log("[Meritto MBA] Checked widget instance on window:", widget);
+      if (widget && typeof widget.showPopup === 'function') {
+        console.log("[Meritto MBA] Invoking widget.showPopup directly");
+        widget.showPopup(btnId, baseUrl);
       } else {
-        const trigger = document.querySelector('.npfWidgetButton');
-        if (trigger) trigger.click();
+        const trigger = document.querySelector('.npfWidget-' + btnId);
+        console.log("[Meritto MBA] Widget instance not ready, found trigger button:", trigger);
+        if (trigger) {
+          console.log("[Meritto MBA] Clicking trigger button");
+          trigger.click();
+        } else {
+          console.warn("[Meritto MBA] No trigger button found in DOM. Falling back to direct popup window.");
+          const url = `https://${baseUrl}/widget/${btnId}`;
+          const w = 920, h = 700;
+          const left = Math.max(0, (window.innerWidth - w) / 2);
+          const top = Math.max(0, (window.innerHeight - h) / 2);
+          const features = `toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=${w},height=${h},top=${top},left=${left}`;
+          const win = window.open(url, 'Enquiry Form', features);
+          if (!win) {
+            window.open(url, '_blank', 'noopener,noreferrer');
+          }
+        }
       }
     } catch (e) {
-      console.error("Popup not found", e);
+      console.error("[Meritto MBA] Error invoking popup", e);
     }
   };
 

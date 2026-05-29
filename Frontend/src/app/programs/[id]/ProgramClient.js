@@ -47,6 +47,101 @@ export default function ProgramClient({ program }) {
   const admissionSteps = Array.isArray(program?.admission) ? program.admission : [];
 
   useEffect(() => {
+    if (!program.widgetId) return;
+
+    const btnId = program.widgetId;
+    const baseUrl = 'widgets.nopaperforms.com';
+    console.log("[Meritto ProgramClient] Setting up program-specific widget. ID:", btnId);
+
+    // Save previous globals to restore them on unmount
+    const prevActiveWidgetId = window.__IAER_ACTIVE_WIDGET_ID;
+    const prevBrochureWidgetId = window.__IAER_BROCHURE_WIDGET_ID;
+
+    // Set new active widget globals
+    window.__IAER_ACTIVE_WIDGET_ID = btnId;
+    window.__IAER_BROCHURE_WIDGET_ID = btnId;
+
+    // Ensure hidden button exists
+    let btn = document.querySelector('.npfWidget-' + btnId);
+    if (!btn) {
+      console.log("[Meritto ProgramClient] Creating hidden button element");
+      btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'npfWidgetButton npfWidget-' + btnId;
+      btn.style.display = 'none';
+      btn.textContent = 'Enquire Now!';
+      document.body.appendChild(btn);
+    } else {
+      console.log("[Meritto ProgramClient] Hidden button already exists");
+    }
+
+    const initWidget = () => {
+      let NpfConstructor = null;
+      try {
+        if (typeof window.NpfWidgetsInit === 'function') {
+          NpfConstructor = window.NpfWidgetsInit;
+        } else if (typeof NpfWidgetsInit === 'function') {
+          NpfConstructor = NpfWidgetsInit;
+        }
+      } catch (err) {}
+
+      console.log("[Meritto ProgramClient] initWidget run. Constructor found:", !!NpfConstructor);
+      if (NpfConstructor) {
+        if (!window['npfW' + btnId]) {
+          console.log("[Meritto ProgramClient] Initializing new NpfWidgetsInit for", btnId);
+          window['npfW' + btnId] = new NpfConstructor({
+            "widgetId": btnId,
+            "baseurl": baseUrl,
+            "formTitle": "Enquiry Form",
+            "titleColor": "#FF0033",
+            "backgroundColor": "#ddd",
+            "iframeHeight": "500px",
+            "buttonbgColor": "#4c79dc",
+            "buttonTextColor": "#FFF"
+          });
+          console.log("[Meritto ProgramClient] NpfWidgetsInit instance created:", window['npfW' + btnId]);
+        }
+
+        const trigger = document.querySelector('.npfWidget-' + btnId);
+        if (trigger) {
+          trigger.onclick = (e) => {
+            console.log("[Meritto ProgramClient] Trigger button clicked!");
+            try {
+              const widget = window['npfW' + btnId];
+              if (widget && typeof widget.showPopup === 'function') {
+                widget.showPopup(btnId, baseUrl);
+              }
+            } catch (err) {
+              console.error("[Meritto ProgramClient] Error in click:", err);
+            }
+          };
+        }
+        return true;
+      }
+      return false;
+    };
+
+    if (!initWidget()) {
+      const interval = setInterval(() => {
+        if (initWidget()) {
+          clearInterval(interval);
+        }
+      }, 100);
+      setTimeout(() => clearInterval(interval), 10000);
+    }
+
+    return () => {
+      console.log("[Meritto ProgramClient] Restoring widget globals and cleanup");
+      window.__IAER_ACTIVE_WIDGET_ID = prevActiveWidgetId;
+      window.__IAER_BROCHURE_WIDGET_ID = prevBrochureWidgetId;
+      const trigger = document.querySelector('.npfWidget-' + btnId);
+      if (trigger) {
+        trigger.onclick = null;
+      }
+    };
+  }, [program.widgetId]);
+
+  useEffect(() => {
     const ids = ["overview", "curriculum", "careers", "faqs"];
     const els = ids
       .map((id) => document.getElementById(id))

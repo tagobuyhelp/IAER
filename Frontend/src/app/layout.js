@@ -243,7 +243,8 @@ export default function RootLayout({ children }) {
                       }
                       e.preventDefault();
                       if (typeof window.openNpfPopup === 'function') {
-                        window.openNpfPopup(mainId);
+                        var activeId = window.__IAER_ACTIVE_WIDGET_ID || mainId;
+                        window.openNpfPopup(activeId);
                       }
                     }
                   } catch (err) {}
