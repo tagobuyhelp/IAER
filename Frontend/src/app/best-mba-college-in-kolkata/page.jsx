@@ -19,8 +19,8 @@ export default function MBALandingPage() {
   const scroll = (direction) => {
     if (specScrollRef.current) {
       const { scrollLeft, clientWidth } = specScrollRef.current;
-      const scrollTo = direction === 'left' 
-        ? scrollLeft - clientWidth * 0.75 
+      const scrollTo = direction === 'left'
+        ? scrollLeft - clientWidth * 0.75
         : scrollLeft + clientWidth * 0.75;
       specScrollRef.current.scrollTo({ left: scrollTo, behavior: 'smooth' });
     }
@@ -45,7 +45,7 @@ export default function MBALandingPage() {
     const btnId = '3958b53341cc9f2a1efd7126074cee70';
     const baseUrl = 'widgets.nopaperforms.com';
     console.log("[Meritto MBA] Hook mounted. Target widget ID:", btnId);
-    
+
     // Ensure hidden button exists
     let btn = document.querySelector('.npfWidget-' + btnId);
     if (!btn) {
@@ -68,7 +68,7 @@ export default function MBALandingPage() {
         } else if (typeof NpfWidgetsInit === 'function') {
           NpfConstructor = NpfWidgetsInit;
         }
-      } catch (err) {}
+      } catch (err) { }
 
       console.log("[Meritto MBA] initWidget run. Constructor found:", !!NpfConstructor);
       if (NpfConstructor) {
@@ -201,37 +201,37 @@ export default function MBALandingPage() {
   }, []);
 
   const specializations = [
-    { 
-      name: 'Marketing', 
-      icon: Target, 
+    {
+      name: 'Marketing',
+      icon: Target,
       desc: 'Understand how brands grow, how markets function, and how businesses engage customers in today’s digital world.',
       highlights: ['Digital Marketing & Branding', 'Consumer Behavior', 'Sales & Market Strategy'],
       image: '/images/programs/master-of-business-administration-mba-overview.webp'
     },
-    { 
-      name: 'Finance', 
-      icon: Banknote, 
+    {
+      name: 'Finance',
+      icon: Banknote,
       desc: 'Builds a strong understanding of financial systems, investments, and how businesses manage money and growth.',
       highlights: ['Financial Analysis', 'Investment & Banking Concepts', 'Corporate Finance'],
       image: '/images/programs/master-of-business-administration-mba-curriculum.webp'
     },
-    { 
-      name: 'Human Resource (HR)', 
-      icon: Users, 
+    {
+      name: 'Human Resource (HR)',
+      icon: Users,
       desc: 'Focuses on managing people, building teams, and understanding workplace behavior in modern organizations.',
       highlights: ['Talent Management', 'HR Analytics', 'Organizational Behavior'],
       image: '/images/programs/master-of-business-administration-mba-careers.webp'
     },
-    { 
-      name: 'Logistics & Supply Chain', 
-      icon: Globe, 
+    {
+      name: 'Logistics & Supply Chain',
+      icon: Globe,
       desc: 'Focuses on how goods and services move efficiently from production to customers in today’s fast-paced economy.',
       highlights: ['Supply Chain Operations', 'Inventory & Distribution', 'E-commerce Logistics'],
       image: '/images/programs/pgdm-ba-overview.webp'
     },
-    { 
-      name: 'Hospital Management', 
-      icon: Hotel, 
+    {
+      name: 'Hospital Management',
+      icon: Hotel,
       desc: 'Introduces students to the functioning of hospitals and healthcare systems, focusing on management and operations.',
       highlights: ['Hospital Operations', 'Healthcare Systems', 'Patient Management'],
       image: '/images/programs/master-of-hospital-administration-overview.webp'
@@ -240,7 +240,8 @@ export default function MBALandingPage() {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 scroll-smooth font-sans pb-20 sm:pb-0">
-      <style dangerouslySetInnerHTML={{ __html: `
+      <style dangerouslySetInnerHTML={{
+        __html: `
         .animate-fade-in-up {
           animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
@@ -314,7 +315,7 @@ export default function MBALandingPage() {
               Enquire Now <ArrowRight className="ml-1.5 h-4 w-4" />
             </Button>
           </nav>
-          
+
           <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="rounded-md p-2 text-slate-200 transition-colors hover:bg-white/10 lg:hidden" aria-label="Toggle menu">
             {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -346,7 +347,7 @@ export default function MBALandingPage() {
           <div className="absolute inset-0 bg-gradient-to-br from-[#143674]/95 via-[#0b1c3a]/80 to-[#143674]/95 mix-blend-multiply" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05)_1px,transparent_1px)] [background-size:24px_24px]" />
         </div>
-        
+
         <div className="pointer-events-none absolute inset-0 z-0 flex justify-center opacity-30">
           <div className="absolute top-[-20%] left-[-10%] h-[500px] w-[500px] rounded-full bg-primary/40 blur-[100px]" />
           <div className="absolute bottom-[-20%] right-[-10%] h-[400px] w-[400px] rounded-full bg-accent/20 blur-[100px]" />
@@ -407,21 +408,21 @@ export default function MBALandingPage() {
             <div className="flex flex-col md:col-span-5 items-center justify-center gap-2 sm:gap-3 mt-4 md:mt-0">
               <div className="relative w-full h-[240px] sm:h-[340px] lg:h-[400px] overflow-hidden rounded-2xl shadow-xl border border-white/20 ring-4 ring-white/5">
                 {heroImages.map((src, idx) => (
-                  <img 
+                  <img
                     key={src}
-                    src={src} 
+                    src={src}
                     alt={`Highlight ${idx + 1}`}
                     className={`absolute inset-0 w-full h-full object-cover object-top transition-all duration-1000 ease-in-out ${idx === heroImgIdx ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0'}`}
                     onError={(e) => { e.currentTarget.src = '/images/logos/IAER_ICON.jpg'; }}
                   />
                 ))}
-                
+
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none z-20" />
-                
+
                 <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-30">
                   {heroImages.map((_, idx) => (
-                    <button 
-                      key={idx} 
+                    <button
+                      key={idx}
                       onClick={() => setHeroImgIdx(idx)}
                       className={`h-1.5 sm:h-2 rounded-full transition-all duration-300 ${idx === heroImgIdx ? 'w-6 sm:w-8 bg-accent' : 'w-1.5 sm:w-2 bg-white/50 hover:bg-white/80'}`}
                       aria-label={`Go to slide ${idx + 1}`}
@@ -432,24 +433,24 @@ export default function MBALandingPage() {
 
               {/* Marquee */}
               <div className="w-full overflow-hidden rounded-xl bg-white/5 border border-white/10 backdrop-blur-md shadow-inner py-3">
-                 <div className="flex w-max animate-hero-marquee space-x-6 px-4 items-center">
-                   {[...Array(2)].map((_, i) => (
-                     <React.Fragment key={i}>
-                       <span className="inline-flex items-center gap-1.5 text-[11px] lg:text-xs font-semibold text-white/90 whitespace-nowrap">
-                         <Award className="h-3.5 w-3.5 text-accent" /> AICTE Approved
-                       </span>
-                       <span className="inline-flex items-center gap-1.5 text-[11px] lg:text-xs font-semibold text-white/90 whitespace-nowrap">
-                         <Briefcase className="h-3.5 w-3.5 text-primary" /> ₹6.50+ LPA Avg Package
-                       </span>
-                       <span className="inline-flex items-center gap-1.5 text-[11px] lg:text-xs font-semibold text-white/90 whitespace-nowrap">
-                         <Globe className="h-3.5 w-3.5 text-teal-400" /> Corporate Readiness
-                       </span>
-                       <span className="inline-flex items-center gap-1.5 text-[11px] lg:text-xs font-semibold text-white/90 whitespace-nowrap">
-                         <Building2 className="h-3.5 w-3.5 text-blue-400" /> ₹15.20 LPA Highest Package
-                       </span>
-                     </React.Fragment>
-                   ))}
-                 </div>
+                <div className="flex w-max animate-hero-marquee space-x-6 px-4 items-center">
+                  {[...Array(2)].map((_, i) => (
+                    <React.Fragment key={i}>
+                      <span className="inline-flex items-center gap-1.5 text-[11px] lg:text-xs font-semibold text-white/90 whitespace-nowrap">
+                        <Award className="h-3.5 w-3.5 text-accent" /> AICTE Approved
+                      </span>
+                      <span className="inline-flex items-center gap-1.5 text-[11px] lg:text-xs font-semibold text-white/90 whitespace-nowrap">
+                        <Briefcase className="h-3.5 w-3.5 text-primary" /> ₹6.50+ LPA Avg Package
+                      </span>
+                      <span className="inline-flex items-center gap-1.5 text-[11px] lg:text-xs font-semibold text-white/90 whitespace-nowrap">
+                        <Globe className="h-3.5 w-3.5 text-teal-400" /> Corporate Readiness
+                      </span>
+                      <span className="inline-flex items-center gap-1.5 text-[11px] lg:text-xs font-semibold text-white/90 whitespace-nowrap">
+                        <Building2 className="h-3.5 w-3.5 text-blue-400" /> ₹15.20 LPA Highest Package
+                      </span>
+                    </React.Fragment>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -489,7 +490,7 @@ export default function MBALandingPage() {
                     ))}
                   </div>
                 </div>
-                
+
                 <div className="mt-5 bg-gradient-to-br from-[#143674] to-[#0b1c3a] rounded-2xl p-5 shadow-lg relative overflow-hidden group">
                   <div className="absolute -right-4 -bottom-4 w-32 h-32 bg-primary/20 rounded-full blur-3xl opacity-50 group-hover:scale-150 transition-transform duration-700" />
                   <h3 className="text-sm font-bold text-white mb-4 flex items-center gap-2"><Target className="w-4 h-4 text-accent" /> Curriculum Focuses On:</h3>
@@ -527,7 +528,7 @@ export default function MBALandingPage() {
 
           <div className="relative group/slider mt-4">
             {/* Left Scroll Button */}
-            <button 
+            <button
               onClick={() => scroll('left')}
               className="absolute -left-4 lg:-left-6 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full border border-slate-200 bg-white/90 backdrop-blur-sm shadow-xl flex items-center justify-center text-[#143674] hover:bg-[#143674] hover:text-white transition-all duration-300 active:scale-95 md:opacity-0 group-hover/slider:opacity-100 focus:opacity-100 focus:outline-none pointer-events-auto md:flex hidden"
               aria-label="Scroll Left"
@@ -536,7 +537,7 @@ export default function MBALandingPage() {
             </button>
 
             {/* Right Scroll Button */}
-            <button 
+            <button
               onClick={() => scroll('right')}
               className="absolute -right-4 lg:-right-6 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full border border-slate-200 bg-white/90 backdrop-blur-sm shadow-xl flex items-center justify-center text-[#143674] hover:bg-[#143674] hover:text-white transition-all duration-300 active:scale-95 md:opacity-0 group-hover/slider:opacity-100 focus:opacity-100 focus:outline-none pointer-events-auto md:flex hidden"
               aria-label="Scroll Right"
@@ -544,19 +545,19 @@ export default function MBALandingPage() {
               <ArrowRight className="w-5 h-5" />
             </button>
 
-            <div 
+            <div
               ref={specScrollRef}
               className="flex gap-5 overflow-x-auto pb-6 pt-2 px-1 scroll-smooth snap-x snap-mandatory no-scrollbar"
             >
-            {specializations.map((spec) => (
-               <div key={spec.name} className="group flex flex-col flex-shrink-0 w-[290px] sm:w-[350px] snap-start rounded-2xl bg-white shadow-sm ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:ring-primary/30 relative overflow-hidden">
+              {specializations.map((spec) => (
+                <div key={spec.name} className="group flex flex-col flex-shrink-0 w-[290px] sm:w-[350px] snap-start rounded-2xl bg-white shadow-sm ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:ring-primary/30 relative overflow-hidden">
                   <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-teal-400 to-primary transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 z-20" />
-                  
+
                   {/* Card Header Image */}
                   <div className="relative h-56 w-full overflow-hidden bg-slate-100 border-b border-slate-100">
-                    <img 
-                      src={spec.image} 
-                      alt={spec.name} 
+                    <img
+                      src={spec.image}
+                      alt={spec.name}
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                       onError={(e) => { e.currentTarget.src = '/images/logos/IAER_ICON.jpg'; }}
                     />
@@ -567,31 +568,31 @@ export default function MBALandingPage() {
                   </div>
 
                   <div className="p-5 flex flex-col flex-grow">
-                     <h3 className="font-bold text-[#143674] text-base sm:text-lg leading-tight mb-2 group-hover:text-primary transition-colors">{spec.name}</h3>
-                     <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">{spec.desc}</p>
-                     
-                     {spec.highlights && (
-                       <div className="flex flex-wrap gap-1.5 mb-5 flex-grow">
-                         {spec.highlights.map((hl, idx) => (
-                           <span key={idx} className="inline-flex items-center gap-1 bg-slate-50 border border-slate-100 rounded-md px-2 py-1 text-[10px] sm:text-[11px] font-semibold text-slate-600 group-hover:border-blue-100 group-hover:bg-blue-50/50 transition-colors cursor-default">
-                             <CheckCircle className="w-3 h-3 text-primary flex-shrink-0" />
-                             {hl}
-                           </span>
-                         ))}
-                       </div>
-                     )}
-                     
-                     <div className="mt-auto pt-4 border-t border-slate-100 flex justify-between items-center">
-                        <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 group-hover:text-primary transition-colors">Seats Filling Fast</span>
-                        <Button onClick={onApplyNow} size="sm" className="h-8 px-4 text-[10px] sm:text-xs font-bold rounded-full bg-white border border-primary text-primary hover:bg-primary hover:text-white transition-all">
-                           Explore <ArrowRight className="w-3 h-3 ml-1.5" />
-                        </Button>
-                     </div>
+                    <h3 className="font-bold text-[#143674] text-base sm:text-lg leading-tight mb-2 group-hover:text-primary transition-colors">{spec.name}</h3>
+                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">{spec.desc}</p>
+
+                    {spec.highlights && (
+                      <div className="flex flex-wrap gap-1.5 mb-5 flex-grow">
+                        {spec.highlights.map((hl, idx) => (
+                          <span key={idx} className="inline-flex items-center gap-1 bg-slate-50 border border-slate-100 rounded-md px-2 py-1 text-[10px] sm:text-[11px] font-semibold text-slate-600 group-hover:border-blue-100 group-hover:bg-blue-50/50 transition-colors cursor-default">
+                            <CheckCircle className="w-3 h-3 text-primary flex-shrink-0" />
+                            {hl}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+
+                    <div className="mt-auto pt-4 border-t border-slate-100 flex justify-between items-center">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 group-hover:text-primary transition-colors">Seats Filling Fast</span>
+                      <Button onClick={onApplyNow} size="sm" className="h-8 px-4 text-[10px] sm:text-xs font-bold rounded-full bg-white border border-primary text-primary hover:bg-primary hover:text-white transition-all">
+                        Explore <ArrowRight className="w-3 h-3 ml-1.5" />
+                      </Button>
+                    </div>
                   </div>
-               </div>
-            ))}
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
         </div>
       </section>
 
@@ -619,11 +620,11 @@ export default function MBALandingPage() {
           <img src="/images/about/building-image-about-hero.webp" className="w-full h-full object-cover" alt="Background" />
         </div>
         <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#143674]/95 to-[#0b1c3a]/95" />
-        
+
         <div data-animate-on-scroll className="relative z-10 mx-auto max-w-[1550px] px-4 py-8 sm:py-10 text-white">
           <div className="text-center mb-6 sm:mb-8">
-             <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight mb-3">Why IAER</h2>
-             <div className="h-1 w-16 bg-accent mx-auto rounded-full" />
+            <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight mb-3">Why IAER</h2>
+            <div className="h-1 w-16 bg-accent mx-auto rounded-full" />
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4">
@@ -651,7 +652,7 @@ export default function MBALandingPage() {
       <section className="relative bg-[#143674] py-8 sm:py-10 border-b border-white/10 overflow-hidden">
         <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05)_1px,transparent_1px)] [background-size:24px_24px]" />
         <div className="absolute inset-0 bg-gradient-to-br from-[#143674]/95 via-[#0b1c3a]/80 to-[#143674]/95 mix-blend-multiply z-0" />
-        
+
         <div className="relative z-10 mx-auto max-w-[1550px] px-4">
           <div className="text-center mb-6 sm:mb-8">
             <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-accent mb-2 block">Recognized Excellence</span>
@@ -663,24 +664,24 @@ export default function MBALandingPage() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
-               {[
-                 { title: 'Best Innovative IT College in Eastern India', source: '(IT Startup Excellence Awards, 2019)' },
-                 { title: 'Best Emerging e-Business School of the Year', source: '(Virtual Education & Technology Awards, 2020)' },
-                 { title: 'Best Startup Education College in Eastern India', source: '(StartUp & VC Award for Excellence, 2021)' },
-                 { title: 'Top 10 Best College for Data Science in India', source: '(Knowledge Review, 2024)' },
-                 { title: 'Top 10 Best College for Cyber Security in India', source: '(Knowledge Review, 2025)' },
-                 { title: 'Best Emerging Information Technology Award', source: '(Edulite Excellence Award, 2024)' },
-                 { title: 'Best College for Innovation in Eastern India', source: '(Edulite Excellence Award, 2025)' },
-                 { title: 'Excellence in Information Technology Education', source: '(Collegedunia, 2024)' }
-               ].map((ach, i) => (
-                 <div key={i} className="group bg-white/5 border border-white/10 rounded-2xl p-5 hover:bg-white/10 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-accent/10 flex flex-col justify-between backdrop-blur-sm">
-                   <div className="mb-4 bg-white/10 w-10 h-10 rounded-full flex items-center justify-center group-hover:bg-accent group-hover:scale-110 transition-all shadow-inner">
-                     <Award className="w-5 h-5 text-accent group-hover:text-white transition-colors" />
-                   </div>
-                   <h4 className="text-sm sm:text-base font-bold text-white mb-2 leading-snug">{ach.title}</h4>
-                   <p className="text-[10px] sm:text-[11px] text-blue-200/70 font-medium tracking-wide uppercase">{ach.source}</p>
-                 </div>
-               ))}
+            {[
+              { title: 'Best Innovative IT College in Eastern India', source: '(IT Startup Excellence Awards, 2019)' },
+              { title: 'Best Emerging e-Business School of the Year', source: '(Virtual Education & Technology Awards, 2020)' },
+              { title: 'Best Startup Education College in Eastern India', source: '(StartUp & VC Award for Excellence, 2021)' },
+              { title: 'Top 10 Best College for Data Science in India', source: '(Knowledge Review, 2024)' },
+              { title: 'Top 10 Best College for Cyber Security in India', source: '(Knowledge Review, 2025)' },
+              { title: 'Best Emerging Information Technology Award', source: '(Edulite Excellence Award, 2024)' },
+              { title: 'Best College for Innovation in Eastern India', source: '(Edulite Excellence Award, 2025)' },
+              { title: 'Excellence in Information Technology Education', source: '(Collegedunia, 2024)' }
+            ].map((ach, i) => (
+              <div key={i} className="group bg-white/5 border border-white/10 rounded-2xl p-5 hover:bg-white/10 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-accent/10 flex flex-col justify-between backdrop-blur-sm">
+                <div className="mb-4 bg-white/10 w-10 h-10 rounded-full flex items-center justify-center group-hover:bg-accent group-hover:scale-110 transition-all shadow-inner">
+                  <Award className="w-5 h-5 text-accent group-hover:text-white transition-colors" />
+                </div>
+                <h4 className="text-sm sm:text-base font-bold text-white mb-2 leading-snug">{ach.title}</h4>
+                <p className="text-[10px] sm:text-[11px] text-blue-200/70 font-medium tracking-wide uppercase">{ach.source}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -698,349 +699,348 @@ export default function MBALandingPage() {
           </div>
 
           <div className="grid gap-4 sm:gap-5 lg:grid-cols-12">
-            
+
             {/* Left side: Stats (Cols 1-5) */}
             <div className="lg:col-span-5 flex flex-col gap-3 sm:gap-4">
               <div className="relative rounded-3xl bg-gradient-to-br from-[#143674] via-[#0b1c3a] to-[#143674] p-6 sm:p-8 text-white shadow-xl overflow-hidden group min-h-[160px] flex items-center">
-                 <div className="absolute inset-0 bg-[url('/images/about/building-image-about-hero.webp')] bg-cover bg-center opacity-20 mix-blend-overlay group-hover:scale-110 transition-transform duration-700" />
-                 <CircleDollarSign className="absolute -right-4 -bottom-4 w-40 h-40 opacity-10" />
-                 <div className="relative z-10 flex flex-col justify-center w-full">
-                    <div className="text-sm font-medium text-blue-200 mb-1 uppercase tracking-wider">Highest Package</div>
-                    <div className="text-5xl sm:text-6xl font-extrabold drop-shadow-lg text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-200">₹15.20<span className="text-2xl sm:text-3xl text-white/80">LPA</span></div>
-                 </div>
+                <div className="absolute inset-0 bg-[url('/images/about/building-image-about-hero.webp')] bg-cover bg-center opacity-20 mix-blend-overlay group-hover:scale-110 transition-transform duration-700" />
+                <CircleDollarSign className="absolute -right-4 -bottom-4 w-40 h-40 opacity-10" />
+                <div className="relative z-10 flex flex-col justify-center w-full">
+                  <div className="text-sm font-medium text-blue-200 mb-1 uppercase tracking-wider">Highest Package</div>
+                  <div className="text-5xl sm:text-6xl font-extrabold drop-shadow-lg text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-200">₹15.20<span className="text-2xl sm:text-3xl text-white/80">LPA</span></div>
+                </div>
               </div>
-                      <div className="grid grid-cols-3 gap-2 sm:gap-4 flex-grow">
-                 <div className="rounded-2xl bg-white p-3 sm:p-5 ring-1 ring-slate-200 shadow-sm flex flex-col items-center justify-center text-center hover:shadow-md transition-shadow relative overflow-hidden group">
-                   <div className="absolute top-0 left-0 right-0 h-1 bg-primary transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
-                   <div className="text-2xl sm:text-4xl font-extrabold text-[#143674] mb-1">₹6.50+</div>
-                   <div className="text-slate-500 text-[10px] sm:text-xs font-semibold uppercase tracking-wider">LPA Average</div>
-                 </div>
-                 <div className="rounded-2xl bg-white p-3 sm:p-5 ring-1 ring-slate-200 shadow-sm flex flex-col items-center justify-center text-center hover:shadow-md transition-shadow relative overflow-hidden group">
-                   <div className="absolute top-0 left-0 right-0 h-1 bg-accent transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
-                   <div className="text-2xl sm:text-4xl font-extrabold text-[#143674] mb-1">300+</div>
-                   <div className="text-slate-500 text-[10px] sm:text-xs font-semibold uppercase tracking-wider">Placement Offers</div>
-                 </div>
-                 <div className="rounded-2xl bg-white p-3 sm:p-5 ring-1 ring-slate-200 shadow-sm flex flex-col items-center justify-center text-center hover:shadow-md transition-shadow relative overflow-hidden group">
-                   <div className="absolute top-0 left-0 right-0 h-1 bg-teal-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
-                   <div className="text-2xl sm:text-4xl font-extrabold text-[#143674] mb-1">100%</div>
-                   <div className="text-slate-500 text-[10px] sm:text-xs font-semibold uppercase tracking-wider">Internship Opportunities</div>
-                 </div>
+              <div className="grid grid-cols-3 gap-2 sm:gap-4 flex-grow">
+                <div className="rounded-2xl bg-white p-3 sm:p-5 ring-1 ring-slate-200 shadow-sm flex flex-col items-center justify-center text-center hover:shadow-md transition-shadow relative overflow-hidden group">
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-primary transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+                  <div className="text-2xl sm:text-4xl font-extrabold text-[#143674] mb-1">₹6.50+</div>
+                  <div className="text-slate-500 text-[10px] sm:text-xs font-semibold uppercase tracking-wider">LPA Average</div>
+                </div>
+                <div className="rounded-2xl bg-white p-3 sm:p-5 ring-1 ring-slate-200 shadow-sm flex flex-col items-center justify-center text-center hover:shadow-md transition-shadow relative overflow-hidden group">
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-accent transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+                  <div className="text-2xl sm:text-4xl font-extrabold text-[#143674] mb-1">300+</div>
+                  <div className="text-slate-500 text-[10px] sm:text-xs font-semibold uppercase tracking-wider">Placement Offers</div>
+                </div>
+                <div className="rounded-2xl bg-white p-3 sm:p-5 ring-1 ring-slate-200 shadow-sm flex flex-col items-center justify-center text-center hover:shadow-md transition-shadow relative overflow-hidden group">
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-teal-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+                  <div className="text-2xl sm:text-4xl font-extrabold text-[#143674] mb-1">100%</div>
+                  <div className="text-slate-500 text-[10px] sm:text-xs font-semibold uppercase tracking-wider">Internship Opportunities</div>
+                </div>
               </div>
             </div>
 
             {/* Right side: Careers & Recruiters (Cols 6-12) */}
             <div className="lg:col-span-7 flex flex-col gap-3 sm:gap-4">
-               <div className="rounded-3xl bg-white p-5 sm:p-6 ring-1 ring-slate-200 shadow-sm flex-grow flex flex-col gap-5 sm:gap-6">
-                 
-                 {/* Top Recruiters */}
-                 <div>
-                    <h4 className="text-sm font-bold text-[#143674] mb-3 uppercase tracking-wider flex items-center gap-2"><Briefcase className="w-4 h-4 text-primary" /> Top Recruiters</h4>
-                    <div className="flex flex-wrap items-center gap-2 sm:gap-3 bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                       {['IT & Tech Companies', 'BFSI Sector', 'Consulting Firms', 'FMCG & E-commerce'].map((recruiter) => (
-                         <span key={recruiter} className="inline-flex items-center justify-center bg-white text-slate-700 shadow-sm border border-slate-200 rounded-lg px-4 py-2 text-xs sm:text-sm font-bold">
-                           {recruiter}
-                         </span>
-                       ))}
-                    </div>
-                 </div>
+              <div className="rounded-3xl bg-white p-5 sm:p-6 ring-1 ring-slate-200 shadow-sm flex-grow flex flex-col gap-5 sm:gap-6">
 
-                 {/* Career Opportunities */}
-                 <div>
-                   <h4 className="text-sm font-bold text-[#143674] mb-3 uppercase tracking-wider flex items-center gap-2"><Target className="w-4 h-4 text-primary" /> Career Opportunities</h4>
-                   <div className="flex flex-wrap gap-2 sm:gap-2.5">
-                     {['Business Analyst', 'Marketing Manager', 'Financial Analyst', 'HR Manager', 'Supply Chain Manager', 'Healthcare Administrator'].map((role) => (
-                       <span key={role} className="inline-flex items-center gap-1.5 bg-[#143674]/5 text-[#143674] rounded-full px-3 py-1.5 text-[11px] sm:text-xs font-semibold border border-[#143674]/10 hover:bg-[#143674] hover:text-white transition-colors cursor-default">
-                         <CheckCircle className="w-3 h-3" /> {role}
-                       </span>
-                     ))}
-                   </div>
-                 </div>
-
-                  {/* Industry Collaborations */}
-                  <div>
-                    <h4 className="text-sm font-bold text-[#143674] mb-3 uppercase tracking-wider flex items-center gap-2"><Building2 className="w-4 h-4 text-primary" /> Industry Collaborations</h4>
-                    <div className="grid grid-cols-3 gap-2.5 sm:flex sm:flex-wrap sm:gap-4 bg-slate-50 p-3 sm:p-4 rounded-2xl border border-slate-100 justify-start items-center">
-                      {[
-                        { src: "/images/affiliations/confederation.png", alt: "CII" },
-                        { src: "/images/affiliations/MSME.png", alt: "MSME" },
-                        { src: "/images/affiliations/NHRD.png", alt: "NHRD" },
-                        { src: "/images/affiliations/ERSC.jpeg", alt: "ERSC" },
-                        { src: "/images/affiliations/NSDC.png", alt: "NSDC" }
-                      ].map((collab, idx) => (
-                        <div key={idx} className="bg-white p-1.5 sm:p-2.5 rounded-xl border border-slate-200/60 shadow-sm flex items-center justify-center h-16 sm:h-16 w-full sm:w-28 transition-all hover:scale-105">
-                          <img 
-                            src={collab.src} 
-                            alt={collab.alt} 
-                            className="max-h-full max-w-full object-contain" 
-                            onError={(e) => { e.currentTarget.src = '/images/logos/IAER_ICON.jpg'; }}
-                          />
-                        </div>
-                      ))}
-                    </div>
+                {/* Top Recruiters */}
+                <div>
+                  <h4 className="text-sm font-bold text-[#143674] mb-3 uppercase tracking-wider flex items-center gap-2"><Briefcase className="w-4 h-4 text-primary" /> Top Recruiters</h4>
+                  <div className="flex flex-wrap items-center gap-2 sm:gap-3 bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                    {['IT & Tech Companies', 'BFSI Sector', 'Consulting Firms', 'FMCG & E-commerce'].map((recruiter) => (
+                      <span key={recruiter} className="inline-flex items-center justify-center bg-white text-slate-700 shadow-sm border border-slate-200 rounded-lg px-4 py-2 text-xs sm:text-sm font-bold">
+                        {recruiter}
+                      </span>
+                    ))}
                   </div>
                 </div>
-             </div>
+
+                {/* Career Opportunities */}
+                <div>
+                  <h4 className="text-sm font-bold text-[#143674] mb-3 uppercase tracking-wider flex items-center gap-2"><Target className="w-4 h-4 text-primary" /> Career Opportunities</h4>
+                  <div className="flex flex-wrap gap-2 sm:gap-2.5">
+                    {['Business Analyst', 'Marketing Manager', 'Financial Analyst', 'HR Manager', 'Supply Chain Manager', 'Healthcare Administrator'].map((role) => (
+                      <span key={role} className="inline-flex items-center gap-1.5 bg-[#143674]/5 text-[#143674] rounded-full px-3 py-1.5 text-[11px] sm:text-xs font-semibold border border-[#143674]/10 hover:bg-[#143674] hover:text-white transition-colors cursor-default">
+                        <CheckCircle className="w-3 h-3" /> {role}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Industry Collaborations */}
+                <div>
+                  <h4 className="text-sm font-bold text-[#143674] mb-3 uppercase tracking-wider flex items-center gap-2"><Building2 className="w-4 h-4 text-primary" /> Industry Collaborations</h4>
+                  <div className="grid grid-cols-3 gap-2.5 sm:flex sm:flex-wrap sm:gap-4 bg-slate-50 p-3 sm:p-4 rounded-2xl border border-slate-100 justify-start items-center">
+                    {[
+                      { src: "/images/affiliations/confederation.png", alt: "CII" },
+                      { src: "/images/affiliations/MSME.png", alt: "MSME" },
+                      { src: "/images/affiliations/NHRD.png", alt: "NHRD" },
+                      { src: "/images/affiliations/ERSC.jpeg", alt: "ERSC" },
+                      { src: "/images/affiliations/NSDC.png", alt: "NSDC" }
+                    ].map((collab, idx) => (
+                      <div key={idx} className="bg-white p-1.5 sm:p-2.5 rounded-xl border border-slate-200/60 shadow-sm flex items-center justify-center h-16 sm:h-16 w-full sm:w-28 transition-all hover:scale-105">
+                        <img
+                          src={collab.src}
+                          alt={collab.alt}
+                          className="max-h-full max-w-full object-contain"
+                          onError={(e) => { e.currentTarget.src = '/images/logos/IAER_ICON.jpg'; }}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* --- TESTIMONIALS --- */}
       <section className="relative py-8 sm:py-10 bg-white border-b border-slate-200">
-         <div className="mx-auto max-w-[1550px] px-4">
-            <div className="text-center mb-6 sm:mb-8">
-               <h2 className="text-2xl sm:text-3xl font-bold text-[#143674] mb-2">Voices of Success</h2>
-               <div className="h-1 w-16 bg-accent mx-auto rounded-full" />
+        <div className="mx-auto max-w-[1550px] px-4">
+          <div className="text-center mb-6 sm:mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#143674] mb-2">Voices of Success</h2>
+            <div className="h-1 w-16 bg-accent mx-auto rounded-full" />
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Student Testimonials */}
+            <div className="min-w-0">
+              <h3 className="text-lg font-semibold text-[#143674] flex items-center gap-2 mb-4"><GraduationCap className="w-5 h-5 text-primary" /> Student Testimonials</h3>
+              <div className="flex gap-4 overflow-x-auto pb-4 pt-1 snap-x snap-mandatory no-scrollbar">
+                {[
+                  { name: 'Amit Kumar', title: 'Alumni MBA/PGDM – BA 2025', company: 'Business Analyst, KPMG', quote: 'The presentation training and certifications helped me crack interviews and secure placement.' },
+                  { name: 'Priyanka Banik', title: 'Alumni MBA/PGDM- Marketing 2025', company: 'Marketing Executive, PayTM', quote: 'The internship exposure and corporate connect gave me confidence for my career.' }
+                ].map((t, i) => (
+                  <div key={i} className="group relative flex-shrink-0 w-[290px] sm:w-[340px] snap-start bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+                    <Quote className="absolute top-4 right-4 w-12 h-12 text-slate-100 group-hover:text-primary/10 transition-colors" />
+                    <p className="text-sm text-slate-700 italic mb-5 relative z-10 leading-relaxed h-16 line-clamp-3">"{t.quote}"</p>
+                    <div className="flex items-center gap-3 relative z-10">
+                      <img src="/images/logos/IAER_ICON.jpg" alt={t.name} className="w-10 h-10 rounded-full object-cover ring-2 ring-slate-100 group-hover:ring-primary/30 transition-all" />
+                      <div>
+                        <div className="text-sm font-bold text-slate-900">{t.name}</div>
+                        <div className="text-[11px] font-semibold tracking-wider text-slate-500">{t.title}</div>
+                        <div className="text-[11px] font-semibold uppercase tracking-wider text-primary">{t.company}</div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6">
-               {/* Student Testimonials */}
-               <div className="min-w-0">
-                  <h3 className="text-lg font-semibold text-[#143674] flex items-center gap-2 mb-4"><GraduationCap className="w-5 h-5 text-primary" /> Student Testimonials</h3>
-                  <div className="flex gap-4 overflow-x-auto pb-4 pt-1 snap-x snap-mandatory no-scrollbar">
-                     {[
-                       { name: 'Amit Kumar', title: 'Alumni MBA/PGDM – BA 2025', company: 'Business Analyst, KPMG', quote: 'The presentation training and certifications helped me crack interviews and secure placement.' },
-                       { name: 'Priyanka Banik', title: 'Alumni MBA/PGDM- Marketing 2025', company: 'Marketing Executive, PayTM', quote: 'The internship exposure and corporate connect gave me confidence for my career.' }
-                     ].map((t, i) => (
-                       <div key={i} className="group relative flex-shrink-0 w-[290px] sm:w-[340px] snap-start bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
-                          <Quote className="absolute top-4 right-4 w-12 h-12 text-slate-100 group-hover:text-primary/10 transition-colors" />
-                          <p className="text-sm text-slate-700 italic mb-5 relative z-10 leading-relaxed h-16 line-clamp-3">"{t.quote}"</p>
-                          <div className="flex items-center gap-3 relative z-10">
-                             <img src="/images/logos/IAER_ICON.jpg" alt={t.name} className="w-10 h-10 rounded-full object-cover ring-2 ring-slate-100 group-hover:ring-primary/30 transition-all" />
-                             <div>
-                                <div className="text-sm font-bold text-slate-900">{t.name}</div>
-                                <div className="text-[11px] font-semibold tracking-wider text-slate-500">{t.title}</div>
-                                <div className="text-[11px] font-semibold uppercase tracking-wider text-primary">{t.company}</div>
-                             </div>
-                          </div>
-                       </div>
-                     ))}
+            {/* Industry Testimonials */}
+            <div className="min-w-0">
+              <h3 className="text-lg font-semibold text-[#143674] flex items-center gap-2 mb-4"><Briefcase className="w-5 h-5 text-primary" /> Industry Testimonials</h3>
+              <div className="flex gap-4 overflow-x-auto pb-4 pt-1 snap-x snap-mandatory no-scrollbar">
+                {[
+                  { name: 'Mr. Avijit Basu', company: 'NHRD', quote: 'IAER MBA & PGDM students are well-trained and industry-ready.' },
+                  { name: 'Mr. Sounak Sen', company: 'KPMG', quote: 'Their curriculum focuses on real business skills and employability.' }
+                ].map((t, i) => (
+                  <div key={i} className="group relative flex-shrink-0 w-[290px] sm:w-[340px] snap-start bg-gradient-to-br from-blue-50/50 to-white border border-blue-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+                    <Quote className="absolute top-4 right-4 w-12 h-12 text-blue-100 group-hover:text-blue-200/50 transition-colors" />
+                    <p className="text-sm text-slate-700 italic mb-5 relative z-10 leading-relaxed h-16 line-clamp-3">"{t.quote}"</p>
+                    <div className="flex items-center gap-3 relative z-10">
+                      <img src="/images/logos/IAER_ICON.jpg" alt={t.name} className="w-10 h-10 rounded-full object-cover ring-2 ring-blue-100 group-hover:ring-blue-300 transition-all" />
+                      <div>
+                        <div className="text-sm font-bold text-slate-900">{t.name}</div>
+                        <div className="text-[11px] font-semibold uppercase tracking-wider text-blue-600">{t.company}</div>
+                      </div>
+                    </div>
                   </div>
-               </div>
-
-               {/* Industry Testimonials */}
-               <div className="min-w-0">
-                  <h3 className="text-lg font-semibold text-[#143674] flex items-center gap-2 mb-4"><Briefcase className="w-5 h-5 text-primary" /> Industry Testimonials</h3>
-                  <div className="flex gap-4 overflow-x-auto pb-4 pt-1 snap-x snap-mandatory no-scrollbar">
-                     {[
-                       { name: 'Mr. Avijit Basu', company: 'NHRD', quote: 'IAER MBA & PGDM students are well-trained and industry-ready.' },
-                       { name: 'Mr. Sounak Sen', company: 'KPMG', quote: 'Their curriculum focuses on real business skills and employability.' }
-                     ].map((t, i) => (
-                       <div key={i} className="group relative flex-shrink-0 w-[290px] sm:w-[340px] snap-start bg-gradient-to-br from-blue-50/50 to-white border border-blue-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
-                          <Quote className="absolute top-4 right-4 w-12 h-12 text-blue-100 group-hover:text-blue-200/50 transition-colors" />
-                          <p className="text-sm text-slate-700 italic mb-5 relative z-10 leading-relaxed h-16 line-clamp-3">"{t.quote}"</p>
-                          <div className="flex items-center gap-3 relative z-10">
-                             <img src="/images/logos/IAER_ICON.jpg" alt={t.name} className="w-10 h-10 rounded-full object-cover ring-2 ring-blue-100 group-hover:ring-blue-300 transition-all" />
-                             <div>
-                                <div className="text-sm font-bold text-slate-900">{t.name}</div>
-                                <div className="text-[11px] font-semibold uppercase tracking-wider text-blue-600">{t.company}</div>
-                             </div>
-                          </div>
-                       </div>
-                     ))}
-                  </div>
-               </div>
+                ))}
+              </div>
             </div>
-         </div>
+          </div>
+        </div>
       </section>
 
       {/* --- CAMPUS EXPERIENCE & FACILITIES --- */}
       <section id="campus-facilities" className="py-8 sm:py-10 bg-slate-50 border-b border-slate-200">
-         <div className="mx-auto max-w-[1550px] px-4">
-            <div className="grid lg:grid-cols-2 gap-6 sm:gap-8">
-               
-               <div>
-                  <h2 className="text-2xl font-bold text-[#143674] mb-4 flex items-center gap-2"><Video className="w-6 h-6 text-accent" /> Campus & Learning Experience</h2>
-                  <p className="text-sm text-slate-600 mb-4">Watch How IAER Transforms Students into Corporate Professionals</p>
-                  <div className="aspect-video rounded-2xl overflow-hidden shadow-md">
-                     <iframe
-                        className="w-full h-full border-0"
-                        src="https://www.youtube.com/embed/nH-sSyq_2OM?start=58"
-                        title="Campus Video"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                     ></iframe>
-                  </div>
-               </div>
+        <div className="mx-auto max-w-[1550px] px-4">
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8">
 
-               <div className="space-y-6 sm:space-y-8">
-                  <div className="bg-white rounded-3xl p-5 sm:p-6 shadow-sm ring-1 ring-slate-200">
-                     <h2 className="text-lg font-bold text-[#143674] mb-1 flex items-center gap-2"><Hotel className="w-5 h-5 text-primary" /> Hostel & Campus Facilities</h2>
-                     <p className="text-[11px] sm:text-xs text-slate-500 mb-4">Safe and comfortable hostel facilities in Kolkata for students.</p>
-                     <div className="flex flex-wrap gap-2">
-                        {[
-                           { text: 'Separate hostels (Boys & Girls)', icon: Users },
-                           { text: 'Furnished rooms', icon: Hotel },
-                           { text: 'Hygienic food', icon: HeartHandshake },
-                           { text: '24/7 security', icon: ShieldCheck },
-                           { text: 'Wi-Fi enabled campus', icon: Wifi },
-                        ].map((fac, i) => (
-                           <span key={i} className="group inline-flex items-center gap-1.5 bg-slate-50 border border-slate-200 hover:border-primary/50 rounded-full px-3 py-1.5 text-[11px] sm:text-xs font-semibold text-slate-700 hover:bg-blue-50/50 transition-colors cursor-default">
-                              <fac.icon className="w-3.5 h-3.5 text-primary group-hover:scale-110 transition-transform" />
-                              {fac.text}
-                           </span>
-                        ))}
-                     </div>
-                  </div>
-
-                  <div className="bg-gradient-to-br from-blue-50 to-white rounded-3xl p-5 sm:p-6 shadow-sm ring-1 ring-blue-100 relative overflow-hidden group">
-                     <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-700" />
-                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 relative z-10">
-                        <h2 className="text-lg font-bold text-[#143674] flex items-center gap-2"><Banknote className="w-5 h-5 text-primary" /> Scholarships & Loans</h2>
-                        <span className="text-[10px] font-bold text-white bg-primary px-3 py-1 rounded-full w-fit whitespace-nowrap">Study Now, Pay Later</span>
-                     </div>
-                     <div className="flex flex-wrap gap-2 relative z-10">
-                        {[
-                           'Merit-Based Scholarships',
-                           'ICET Scholarships',
-                            'Govt. Schemes',
-                            'Student Credit Card Facility',
-                           'Vidya Lakshmi Education Loan'
-                        ].map((item, i) => (
-                           <span key={i} className="inline-flex items-center gap-1.5 bg-white border border-blue-100 shadow-sm rounded-lg px-3 py-2 text-[11px] sm:text-xs font-bold text-[#143674] hover:shadow-md transition-shadow">
-                              <CheckCircle className="w-3.5 h-3.5 text-accent flex-shrink-0" />
-                              {item}
-                           </span>
-                        ))}
-                     </div>
-                  </div>
-               </div>
+            <div>
+              <h2 className="text-2xl font-bold text-[#143674] mb-4 flex items-center gap-2"><Video className="w-6 h-6 text-accent" /> Campus & Learning Experience</h2>
+              <p className="text-sm text-slate-600 mb-4">Watch How IAER Transforms Students into Corporate Professionals</p>
+              <div className="aspect-video rounded-2xl overflow-hidden shadow-md">
+                <iframe
+                  className="w-full h-full border-0"
+                  src="https://www.youtube.com/embed/nH-sSyq_2OM?start=58"
+                  title="Campus Video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
             </div>
-         </div>
+
+            <div className="space-y-6 sm:space-y-8">
+              <div className="bg-white rounded-3xl p-5 sm:p-6 shadow-sm ring-1 ring-slate-200">
+                <h2 className="text-lg font-bold text-[#143674] mb-1 flex items-center gap-2"><Hotel className="w-5 h-5 text-primary" /> Hostel & Campus Facilities</h2>
+                <p className="text-[11px] sm:text-xs text-slate-500 mb-4">Safe and comfortable hostel facilities in Kolkata for students.</p>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    { text: 'Separate hostels (Boys & Girls)', icon: Users },
+                    { text: 'Furnished rooms', icon: Hotel },
+                    { text: 'Hygienic food', icon: HeartHandshake },
+                    { text: '24/7 security', icon: ShieldCheck },
+                    { text: 'Wi-Fi enabled campus', icon: Wifi },
+                  ].map((fac, i) => (
+                    <span key={i} className="group inline-flex items-center gap-1.5 bg-slate-50 border border-slate-200 hover:border-primary/50 rounded-full px-3 py-1.5 text-[11px] sm:text-xs font-semibold text-slate-700 hover:bg-blue-50/50 transition-colors cursor-default">
+                      <fac.icon className="w-3.5 h-3.5 text-primary group-hover:scale-110 transition-transform" />
+                      {fac.text}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-blue-50 to-white rounded-3xl p-5 sm:p-6 shadow-sm ring-1 ring-blue-100 relative overflow-hidden group">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-700" />
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 relative z-10">
+                  <h2 className="text-lg font-bold text-[#143674] flex items-center gap-2"><Banknote className="w-5 h-5 text-primary" /> Scholarships & Loans</h2>
+                  <span className="text-[10px] font-bold text-white bg-primary px-3 py-1 rounded-full w-fit whitespace-nowrap">Study Now, Pay Later</span>
+                </div>
+                <div className="flex flex-wrap gap-2 relative z-10">
+                  {[
+                    'Merit-Based Scholarships',
+                    'ICET Scholarships',
+                    'Govt. Schemes',
+                    'Student Credit Card Facility',
+                    'Vidya Lakshmi Education Loan'
+                  ].map((item, i) => (
+                    <span key={i} className="inline-flex items-center gap-1.5 bg-white border border-blue-100 shadow-sm rounded-lg px-3 py-2 text-[11px] sm:text-xs font-bold text-[#143674] hover:shadow-md transition-shadow">
+                      <CheckCircle className="w-3.5 h-3.5 text-accent flex-shrink-0" />
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* --- ELIGIBILITY & ADMISSION --- */}
       <section id="eligibility" className="py-12 sm:py-16 bg-slate-50 border-b border-slate-200">
-         <div className="mx-auto max-w-[1550px] px-4">
-            <div className="text-center mb-10 sm:mb-14">
-               <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#0f9f68] mb-2 block">Quick & Simple Admission</span>
-               <h2 className="text-3xl sm:text-5xl font-extrabold text-[#143674] tracking-tight">
-                  Eligibility & <span className="text-[#0f9f68]">Admission Process</span>
-               </h2>
-               <div className="mt-4 h-1.5 w-14 bg-orange-500 mx-auto rounded-full" />
+        <div className="mx-auto max-w-[1550px] px-4">
+          <div className="text-center mb-10 sm:mb-14">
+            <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#0f9f68] mb-2 block">Quick & Simple Admission</span>
+            <h2 className="text-3xl sm:text-5xl font-extrabold text-[#143674] tracking-tight">
+              Eligibility & <span className="text-[#0f9f68]">Admission Process</span>
+            </h2>
+            <div className="mt-4 h-1.5 w-14 bg-orange-500 mx-auto rounded-full" />
+          </div>
+
+          <div className="grid lg:grid-cols-12 gap-6 sm:gap-8 items-stretch">
+            {/* Left Column: Eligibility Criteria Card (3 cols) */}
+            <div className="lg:col-span-3 flex flex-col">
+              <div className="bg-gradient-to-b from-[#0a387c] to-[#042459] text-white rounded-2xl sm:rounded-[2rem] p-5 sm:p-7 flex flex-col justify-between shadow-[0_10px_30px_rgba(4,36,89,0.15)] h-full relative overflow-hidden group">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-3xl -mr-10 -mt-10 group-hover:scale-120 transition-transform duration-500" />
+
+                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-blue-900/60 border border-blue-800/40 flex items-center justify-center mb-4 sm:mb-8 shadow-inner">
+                  <GraduationCap className="w-6 h-6 sm:w-8 sm:h-8 text-orange-500" />
+                </div>
+
+                <div>
+                  <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 tracking-tight">Eligibility Criteria</h3>
+                  <p className="text-blue-100/70 text-xs sm:text-sm leading-relaxed mb-4 sm:mb-8">
+                    Simple and direct admission criteria for aspiring management professionals.
+                  </p>
+
+                  <div className="bg-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-5 border border-white/5 shadow-inner">
+                    <div className="text-[10px] uppercase tracking-wider text-orange-400 font-bold mb-1">Academic Requirement</div>
+                    <div className="text-sm sm:text-[1.1rem] font-bold leading-snug">10+2 from any recognized board</div>
+                  </div>
+                </div>
+
+                <div className="mt-4 sm:mt-8 text-[10px] sm:text-[11px] text-blue-200/50">
+                  * Open to all streams (Science, Commerce, Arts)
+                </div>
+              </div>
             </div>
 
-            <div className="grid lg:grid-cols-12 gap-6 sm:gap-8 items-stretch">
-               {/* Left Column: Eligibility Criteria Card (3 cols) */}
-               <div className="lg:col-span-3 flex flex-col">
-                  <div className="bg-gradient-to-b from-[#0a387c] to-[#042459] text-white rounded-2xl sm:rounded-[2rem] p-5 sm:p-7 flex flex-col justify-between shadow-[0_10px_30px_rgba(4,36,89,0.15)] h-full relative overflow-hidden group">
-                     <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-3xl -mr-10 -mt-10 group-hover:scale-120 transition-transform duration-500" />
-                     
-                     <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-blue-900/60 border border-blue-800/40 flex items-center justify-center mb-4 sm:mb-8 shadow-inner">
-                        <GraduationCap className="w-6 h-6 sm:w-8 sm:h-8 text-orange-500" />
-                     </div>
+            {/* Right Column: Step Cards (9 cols) */}
+            <div className="lg:col-span-9 flex flex-col justify-center">
+              <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 h-full">
+                {[
+                  {
+                    step: '01',
+                    num: '1',
+                    title: 'Apply Online',
+                    desc: 'Fill the quick registration form online.',
+                    colorClass: 'text-blue-500',
+                    bgClass: 'bg-blue-50',
+                    iconColor: 'text-blue-600',
+                    icon: FileText,
+                    dotIdx: 0
+                  },
+                  {
+                    step: '02',
+                    num: '2',
+                    title: 'Get Offer Letter',
+                    desc: 'Receive your official admission offer.',
+                    colorClass: 'text-emerald-500',
+                    bgClass: 'bg-[#e6f7ed]',
+                    iconColor: 'text-[#0f9f68]',
+                    icon: Mail,
+                    dotIdx: 1
+                  },
+                  {
+                    step: '03',
+                    num: '3',
+                    title: 'Pay Enrollment Fee',
+                    desc: 'Secure your seat by paying enrollment fees.',
+                    colorClass: 'text-purple-500',
+                    bgClass: 'bg-[#f3effc]',
+                    iconColor: 'text-purple-600',
+                    icon: CreditCard,
+                    dotIdx: 2
+                  },
+                  {
+                    step: '04',
+                    num: '4',
+                    title: 'Confirm Admission',
+                    desc: 'Complete documentation and welcome aboard!',
+                    colorClass: 'text-orange-500',
+                    bgClass: 'bg-[#fff7ed]',
+                    iconColor: 'text-orange-500',
+                    icon: BadgeCheck,
+                    dotIdx: 3
+                  }
+                ].map((item, i) => (
+                  <div key={i} className="bg-white rounded-2xl sm:rounded-[2rem] p-4 sm:p-7 border border-slate-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-row sm:flex-col items-center sm:text-center text-left relative group overflow-hidden gap-3.5 sm:gap-0">
+                    {/* Step Cards Top Header */}
+                    <div className="w-full flex sm:justify-between items-center sm:mb-6 order-last sm:order-first sm:relative absolute top-4 right-4 justify-end sm:w-auto w-auto">
+                      <span className={`text-sm sm:text-xl font-extrabold ${item.colorClass} sm:block hidden`}>{item.step}</span>
+                      <span className={`w-5 h-5 sm:w-6 sm:h-6 rounded-full ${item.bgClass} ${item.colorClass} font-bold text-[10px] sm:text-xs flex items-center justify-center shadow-sm`}>
+                        {item.num}
+                      </span>
+                    </div>
 
-                     <div>
-                        <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 tracking-tight">Eligibility Criteria</h3>
-                        <p className="text-blue-100/70 text-xs sm:text-sm leading-relaxed mb-4 sm:mb-8">
-                           Simple and direct admission criteria for aspiring management professionals.
-                        </p>
-                        
-                        <div className="bg-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-5 border border-white/5 shadow-inner">
-                           <div className="text-[10px] uppercase tracking-wider text-orange-400 font-bold mb-1">Academic Requirement</div>
-                           <div className="text-sm sm:text-[1.1rem] font-bold leading-snug">10+2 from any recognized board</div>
-                        </div>
-                     </div>
+                    {/* Card Icon Shape */}
+                    <div className={`w-12 h-12 sm:w-20 sm:h-20 rounded-full ${item.bgClass} flex items-center justify-center sm:mb-6 transition-transform duration-500 group-hover:scale-110 shadow-inner flex-shrink-0`}>
+                      <item.icon className={`w-6 h-6 sm:w-9 sm:h-9 ${item.iconColor}`} />
+                    </div>
 
-                     <div className="mt-4 sm:mt-8 text-[10px] sm:text-[11px] text-blue-200/50">
-                        * Open to all streams (Science, Commerce, Arts)
-                     </div>
+                    {/* Title & Description */}
+                    <div className="flex-1 sm:w-full">
+                      <h4 className="font-extrabold text-[#143674] text-sm sm:text-lg mb-0.5 sm:mb-2 tracking-tight group-hover:text-[#0f9f68] transition-colors">{item.title}</h4>
+                      <p className="text-[11px] sm:text-xs text-slate-500 leading-snug sm:leading-relaxed max-w-full sm:max-w-[200px] sm:mx-auto sm:mb-6">{item.desc}</p>
+                    </div>
+
+                    {/* Visual Dots Indicator at the Bottom */}
+                    <div className="sm:flex hidden gap-1.5 mt-auto">
+                      {[0, 1, 2, 3].map((dot) => (
+                        <span
+                          key={dot}
+                          className={`w-2 h-2 rounded-full transition-all duration-300 ${dot === item.dotIdx ? `w-2 ${item.colorClass.replace('text-', 'bg-')}` : 'bg-slate-200'
+                            }`}
+                        />
+                      ))}
+                    </div>
                   </div>
-               </div>
-
-               {/* Right Column: Step Cards (9 cols) */}
-               <div className="lg:col-span-9 flex flex-col justify-center">
-                  <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 h-full">
-                     {[
-                        { 
-                           step: '01', 
-                           num: '1', 
-                           title: 'Apply Online', 
-                           desc: 'Fill the quick registration form online.',
-                           colorClass: 'text-blue-500',
-                           bgClass: 'bg-blue-50',
-                           iconColor: 'text-blue-600',
-                           icon: FileText,
-                           dotIdx: 0
-                        },
-                        { 
-                           step: '02', 
-                           num: '2', 
-                           title: 'Get Offer Letter', 
-                           desc: 'Receive your official admission offer.',
-                           colorClass: 'text-emerald-500',
-                           bgClass: 'bg-[#e6f7ed]',
-                           iconColor: 'text-[#0f9f68]',
-                           icon: Mail,
-                           dotIdx: 1
-                        },
-                        { 
-                           step: '03', 
-                           num: '3', 
-                           title: 'Pay Enrollment Fee', 
-                           desc: 'Secure your seat by paying enrollment fees.',
-                           colorClass: 'text-purple-500',
-                           bgClass: 'bg-[#f3effc]',
-                           iconColor: 'text-purple-600',
-                           icon: CreditCard,
-                           dotIdx: 2
-                        },
-                        { 
-                           step: '04', 
-                           num: '4', 
-                           title: 'Confirm Admission', 
-                           desc: 'Complete documentation and welcome aboard!',
-                           colorClass: 'text-orange-500',
-                           bgClass: 'bg-[#fff7ed]',
-                           iconColor: 'text-orange-500',
-                           icon: BadgeCheck,
-                           dotIdx: 3
-                        }
-                     ].map((item, i) => (
-                        <div key={i} className="bg-white rounded-2xl sm:rounded-[2rem] p-4 sm:p-7 border border-slate-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-row sm:flex-col items-center sm:text-center text-left relative group overflow-hidden gap-3.5 sm:gap-0">
-                           {/* Step Cards Top Header */}
-                           <div className="w-full flex sm:justify-between items-center sm:mb-6 order-last sm:order-first sm:relative absolute top-4 right-4 justify-end sm:w-auto w-auto">
-                              <span className={`text-sm sm:text-xl font-extrabold ${item.colorClass} sm:block hidden`}>{item.step}</span>
-                              <span className={`w-5 h-5 sm:w-6 sm:h-6 rounded-full ${item.bgClass} ${item.colorClass} font-bold text-[10px] sm:text-xs flex items-center justify-center shadow-sm`}>
-                                 {item.num}
-                              </span>
-                           </div>
-
-                           {/* Card Icon Shape */}
-                           <div className={`w-12 h-12 sm:w-20 sm:h-20 rounded-full ${item.bgClass} flex items-center justify-center sm:mb-6 transition-transform duration-500 group-hover:scale-110 shadow-inner flex-shrink-0`}>
-                              <item.icon className={`w-6 h-6 sm:w-9 sm:h-9 ${item.iconColor}`} />
-                           </div>
-
-                           {/* Title & Description */}
-                           <div className="flex-1 sm:w-full">
-                              <h4 className="font-extrabold text-[#143674] text-sm sm:text-lg mb-0.5 sm:mb-2 tracking-tight group-hover:text-[#0f9f68] transition-colors">{item.title}</h4>
-                              <p className="text-[11px] sm:text-xs text-slate-500 leading-snug sm:leading-relaxed max-w-full sm:max-w-[200px] sm:mx-auto sm:mb-6">{item.desc}</p>
-                           </div>
-
-                           {/* Visual Dots Indicator at the Bottom */}
-                           <div className="sm:flex hidden gap-1.5 mt-auto">
-                              {[0, 1, 2, 3].map((dot) => (
-                                 <span 
-                                    key={dot} 
-                                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                                       dot === item.dotIdx ? `w-2 ${item.colorClass.replace('text-', 'bg-')}` : 'bg-slate-200'
-                                    }`} 
-                                 />
-                              ))}
-                           </div>
-                        </div>
-                     ))}
-                  </div>
-               </div>
+                ))}
+              </div>
             </div>
-         </div>
+          </div>
+        </div>
       </section>
 
       {/* --- FAQ --- */}
       <section className="py-8 sm:py-10 bg-white">
         <div className="mx-auto max-w-[1000px] px-4">
           <div className="text-center mb-6 sm:mb-8">
-             <h2 className="text-2xl sm:text-3xl font-bold text-[#143674] mb-2">Frequently Asked Questions</h2>
-             <div className="h-1 w-16 bg-accent mx-auto rounded-full" />
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#143674] mb-2">Frequently Asked Questions</h2>
+            <div className="h-1 w-16 bg-accent mx-auto rounded-full" />
           </div>
           <div className="grid md:grid-cols-2 gap-4">
             {[
@@ -1057,7 +1057,7 @@ export default function MBALandingPage() {
             ].map((faq, i) => (
               <div key={i} className="group bg-white border border-slate-200 hover:border-primary/30 rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-all">
                 <h4 className="text-sm sm:text-base font-bold text-[#143674] mb-2 flex items-start gap-2.5">
-                  <span className="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-primary/10 text-primary font-black text-xs group-hover:bg-primary group-hover:text-white transition-colors">Q</span> 
+                  <span className="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-primary/10 text-primary font-black text-xs group-hover:bg-primary group-hover:text-white transition-colors">Q</span>
                   <span className="mt-0.5 leading-snug">{faq.q}</span>
                 </h4>
                 <p className="text-xs sm:text-sm text-slate-600 pl-8 leading-relaxed">{faq.a}</p>
@@ -1103,30 +1103,30 @@ export default function MBALandingPage() {
 
       {/* --- FLOATING BOTTOM CTA BAR --- */}
       <div className="fixed bottom-0 left-0 right-0 z-[60] bg-white/95 backdrop-blur-lg border-t border-slate-200 shadow-[0_-10px_30px_rgba(0,0,0,0.1)] sm:bottom-6 sm:left-1/2 sm:right-auto sm:-translate-x-1/2 sm:rounded-full sm:border sm:px-3 sm:py-2 flex items-center justify-between px-2 py-2 gap-1.5 sm:gap-3 transition-all duration-300 w-full sm:w-max">
-         <nav className="flex items-center justify-between sm:justify-start gap-1 flex-1 sm:flex-none">
-            {[
-              { name: 'About', href: '#about', icon: BookOpen },
-              { name: 'Programs', href: '#specializations', icon: Target },
-              { name: 'Why Us', href: '#why-iaer', icon: Building2 },
-              { name: 'Placements', href: '#placements', icon: Briefcase }
-            ].map(link => (
-               <a key={link.name} href={link.href} className="flex flex-col sm:flex-row items-center justify-center sm:px-4 sm:py-2 text-slate-500 sm:text-slate-600 hover:text-[#143674] sm:hover:bg-slate-100 rounded-full transition-colors flex-1 sm:flex-none">
-                  <link.icon className="w-5 h-5 sm:hidden mb-0.5" />
-                  <span className="text-[9px] sm:text-sm font-bold sm:font-semibold uppercase sm:capitalize tracking-tighter sm:tracking-normal leading-none text-center">{link.name}</span>
-               </a>
-            ))}
-         </nav>
-
-         <div className="h-8 w-px bg-slate-200 hidden sm:block mx-1" />
-
-         <div className="flex items-center gap-1.5 sm:gap-2 flex-shrink-0">
-            <Button onClick={onApplyNow} className="bg-[#143674] hover:bg-[#143674]/90 text-white font-bold rounded-full px-2.5 py-2.5 sm:px-5 sm:py-2 text-[10px] sm:text-sm shadow-lg active:scale-95 transition-all whitespace-nowrap flex items-center justify-center">
-               Enquire Now
-            </Button>
-            <a href="tel:+916292004641" className="bg-accent hover:bg-accent/90 text-white font-bold rounded-full px-2.5 py-2.5 sm:px-5 sm:py-2 text-[10px] sm:text-sm shadow-lg shadow-accent/30 active:scale-95 transition-all whitespace-nowrap flex items-center justify-center gap-1">
-               <Phone className="w-3 h-3 sm:w-4 sm:h-4" /> Call Now
+        <nav className="flex items-center justify-between sm:justify-start gap-1 flex-1 sm:flex-none">
+          {[
+            { name: 'About', href: '#about', icon: BookOpen },
+            { name: 'Programs', href: '#specializations', icon: Target },
+            { name: 'Why Us', href: '#why-iaer', icon: Building2 },
+            { name: 'Placements', href: '#placements', icon: Briefcase }
+          ].map(link => (
+            <a key={link.name} href={link.href} className="flex flex-col sm:flex-row items-center justify-center sm:px-4 sm:py-2 text-slate-500 sm:text-slate-600 hover:text-[#143674] sm:hover:bg-slate-100 rounded-full transition-colors flex-1 sm:flex-none">
+              <link.icon className="w-5 h-5 sm:hidden mb-0.5" />
+              <span className="text-[9px] sm:text-sm font-bold sm:font-semibold uppercase sm:capitalize tracking-tighter sm:tracking-normal leading-none text-center">{link.name}</span>
             </a>
-         </div>
+          ))}
+        </nav>
+
+        <div className="h-8 w-px bg-slate-200 hidden sm:block mx-1" />
+
+        <div className="flex items-center gap-1.5 sm:gap-2 flex-shrink-0">
+          <Button onClick={onApplyNow} className="bg-[#143674] hover:bg-[#143674]/90 text-white font-bold rounded-full px-2.5 py-2.5 sm:px-5 sm:py-2 text-[10px] sm:text-sm shadow-lg active:scale-95 transition-all whitespace-nowrap flex items-center justify-center">
+            Enquire Now
+          </Button>
+          <a href="tel:+916292004641" className="bg-accent hover:bg-accent/90 text-white font-bold rounded-full px-2.5 py-2.5 sm:px-5 sm:py-2 text-[10px] sm:text-sm shadow-lg shadow-accent/30 active:scale-95 transition-all whitespace-nowrap flex items-center justify-center gap-1">
+            <Phone className="w-3 h-3 sm:w-4 sm:h-4" /> Call Now
+          </a>
+        </div>
       </div>
     </div>
   );

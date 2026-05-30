@@ -28,7 +28,6 @@ export default function BBABALandingPage() {
 
   const [heroImgIdx, setHeroImgIdx] = useState(0);
   const heroImages = [
-    '/images/about/building-image-about-hero.webp',
     '/images/programs/pgdm-ba-overview.webp',
     '/images/programs/bca-in-data-science-cyber-security-overview.webp',
     '/images/programs/bca-in-ai-ml-overview.webp'
@@ -218,42 +217,42 @@ export default function BBABALandingPage() {
       icon: Target, 
       desc: 'Learn how to process and visualize data effectively to uncover business insights.',
       highlights: ['Data Cleaning', 'Visualization Principles', 'Reporting'],
-      image: '/images/programs/pgdm-ba-overview.webp'
+      image: '/images/programs/bba-in-business-analytics-overview.webp'
     },
     { 
       name: 'Excel, Power BI & Tableau', 
       icon: Building2, 
       desc: 'Master the industry standard tools used by analysts to create dynamic dashboards.',
       highlights: ['Advanced Excel', 'Power BI Dashboards', 'Tableau'],
-      image: '/images/programs/bca-in-data-science-cyber-security-overview.webp'
+      image: '/images/programs/bba-in-business-analytics-curriculum.webp'
     },
     { 
       name: 'Business Intelligence Tools', 
       icon: Lightbulb, 
       desc: 'Understand how to leverage BI tools to drive strategic business decisions.',
       highlights: ['BI Strategy', 'Data Warehousing', 'Analytics'],
-      image: '/images/programs/bca-in-ai-ml-overview.webp'
+      image: '/images/programs/bba-in-business-analytics-careers.webp'
     },
     { 
       name: 'Python for Analytics', 
       icon: Globe, 
       desc: 'Gain programming skills in Python to automate analysis and build models.',
       highlights: ['Python Basics', 'Pandas & NumPy', 'Data Manipulation'],
-      image: '/images/programs/pgdm-ba-overview.webp'
+      image: '/images/programs/bba-in-business-analytics-alt-overview.webp'
     },
     { 
       name: 'Statistics for Business', 
       icon: BookOpen, 
       desc: 'Develop a strong foundation in statistical methods used for business analysis.',
       highlights: ['Probability', 'Hypothesis Testing', 'Regression Analysis'],
-      image: '/images/programs/bca-in-data-science-cyber-security-overview.webp'
+      image: '/images/programs/bba-in-business-analytics-alt-curriculum.webp'
     },
     { 
       name: 'Predictive Analytics', 
       icon: ShieldCheck, 
       desc: 'Learn to build predictive models that forecast future trends and behaviors.',
       highlights: ['Predictive Modeling', 'Machine Learning Basics', 'Forecasting'],
-      image: '/images/programs/bca-in-ai-ml-overview.webp'
+      image: '/images/programs/bba-in-business-analytics-alt-careers.webp'
     }
   ];
 
@@ -361,7 +360,7 @@ export default function BBABALandingPage() {
       {/* --- HERO --- */}
       <section className="relative overflow-hidden bg-[#143674] pt-4 sm:pt-5 pb-5 sm:pb-8 border-b border-white/10">
         <div className="absolute inset-0 z-0 pointer-events-none">
-          <img src="/images/campus/iaer-building.jpg" alt="IAER Campus Background" className="h-full w-full object-cover opacity-30" />
+          <img src="/images/programs/bba_ba_hero_bg.png" alt="BBA Business Analytics Program Background" className="h-full w-full object-cover opacity-25" />
           <div className="absolute inset-0 bg-gradient-to-br from-[#143674]/95 via-[#0b1c3a]/80 to-[#143674]/95 mix-blend-multiply" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05)_1px,transparent_1px)] [background-size:24px_24px]" />
         </div>

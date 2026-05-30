@@ -207,7 +207,7 @@ export default function HealthcareLandingPage() {
       desc: 'A leading paramedical course in Kolkata, focused on diagnostics and lab science.',
       learn: ['Clinical Biochemistry', 'Microbiology & Pathology', 'Hematology', 'Diagnostic Lab Technology'],
       roles: ['Medical Lab Technologist', 'Pathology Technician', 'Lab Manager', 'Diagnostic Specialist'],
-      image: '/images/programs/bca-in-data-science-cyber-security-overview.webp'
+      image: '/images/programs/bsc-in-medical-laboratory-technology-bmlt-overview.webp'
     },
     { 
       id: 'bba-hm',
@@ -215,7 +215,7 @@ export default function HealthcareLandingPage() {
       desc: 'A fast-growing healthcare management course after 12th, focused on hospital operations.',
       learn: ['Hospital Operations', 'Healthcare Administration', 'Medical Ethics & Laws', 'Patient Care Management'],
       roles: ['Hospital Administrator', 'Healthcare Manager', 'Operations Executive', 'Clinic Manager'],
-      image: '/images/programs/master-of-hospital-administration-overview.webp'
+      image: '/images/programs/bba-in-hospital-management-overview.webp'
     }
   ];
 
