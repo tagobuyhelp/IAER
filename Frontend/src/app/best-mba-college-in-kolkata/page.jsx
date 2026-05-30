@@ -922,26 +922,26 @@ export default function MBALandingPage() {
             <div className="grid lg:grid-cols-12 gap-6 sm:gap-8 items-stretch">
                {/* Left Column: Eligibility Criteria Card (3 cols) */}
                <div className="lg:col-span-3 flex flex-col">
-                  <div className="bg-gradient-to-b from-[#0a387c] to-[#042459] text-white rounded-[2rem] p-7 flex flex-col justify-between shadow-[0_10px_30px_rgba(4,36,89,0.15)] h-full relative overflow-hidden group">
+                  <div className="bg-gradient-to-b from-[#0a387c] to-[#042459] text-white rounded-2xl sm:rounded-[2rem] p-5 sm:p-7 flex flex-col justify-between shadow-[0_10px_30px_rgba(4,36,89,0.15)] h-full relative overflow-hidden group">
                      <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-3xl -mr-10 -mt-10 group-hover:scale-120 transition-transform duration-500" />
                      
-                     <div className="w-16 h-16 rounded-full bg-blue-900/60 border border-blue-800/40 flex items-center justify-center mb-8 shadow-inner">
-                        <GraduationCap className="w-8 h-8 text-orange-500" />
+                     <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-blue-900/60 border border-blue-800/40 flex items-center justify-center mb-4 sm:mb-8 shadow-inner">
+                        <GraduationCap className="w-6 h-6 sm:w-8 sm:h-8 text-orange-500" />
                      </div>
 
                      <div>
-                        <h3 className="text-2xl font-bold mb-3 tracking-tight">Eligibility Criteria</h3>
-                        <p className="text-blue-100/70 text-xs sm:text-sm leading-relaxed mb-8">
+                        <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 tracking-tight">Eligibility Criteria</h3>
+                        <p className="text-blue-100/70 text-xs sm:text-sm leading-relaxed mb-4 sm:mb-8">
                            Simple and direct admission criteria for aspiring management professionals.
                         </p>
                         
-                        <div className="bg-white/10 rounded-2xl p-5 border border-white/5 shadow-inner">
-                           <div className="text-[10px] uppercase tracking-wider text-orange-400 font-bold mb-1.5">Academic Requirement</div>
-                           <div className="text-base sm:text-[1.1rem] font-bold leading-snug">10+2 from any recognized board</div>
+                        <div className="bg-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-5 border border-white/5 shadow-inner">
+                           <div className="text-[10px] uppercase tracking-wider text-orange-400 font-bold mb-1">Academic Requirement</div>
+                           <div className="text-sm sm:text-[1.1rem] font-bold leading-snug">10+2 from any recognized board</div>
                         </div>
                      </div>
 
-                     <div className="mt-8 text-[11px] text-blue-200/50">
+                     <div className="mt-4 sm:mt-8 text-[10px] sm:text-[11px] text-blue-200/50">
                         * Open to all streams (Science, Commerce, Arts)
                      </div>
                   </div>
@@ -949,7 +949,7 @@ export default function MBALandingPage() {
 
                {/* Right Column: Step Cards (9 cols) */}
                <div className="lg:col-span-9 flex flex-col justify-center">
-                  <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-5 h-full">
+                  <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 h-full">
                      {[
                         { 
                            step: '01', 
@@ -996,26 +996,28 @@ export default function MBALandingPage() {
                            dotIdx: 3
                         }
                      ].map((item, i) => (
-                        <div key={i} className="bg-white rounded-[2rem] p-6 sm:p-7 border border-slate-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center relative group overflow-hidden">
+                        <div key={i} className="bg-white rounded-2xl sm:rounded-[2rem] p-4 sm:p-7 border border-slate-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-row sm:flex-col items-center sm:text-center text-left relative group overflow-hidden gap-3.5 sm:gap-0">
                            {/* Step Cards Top Header */}
-                           <div className="w-full flex justify-between items-center mb-6">
-                              <span className={`text-lg sm:text-xl font-extrabold ${item.colorClass}`}>{item.step}</span>
-                              <span className={`w-6 h-6 rounded-full ${item.bgClass} ${item.colorClass} font-bold text-xs flex items-center justify-center shadow-sm`}>
+                           <div className="w-full flex sm:justify-between items-center sm:mb-6 order-last sm:order-first sm:relative absolute top-4 right-4 justify-end sm:w-auto w-auto">
+                              <span className={`text-sm sm:text-xl font-extrabold ${item.colorClass} sm:block hidden`}>{item.step}</span>
+                              <span className={`w-5 h-5 sm:w-6 sm:h-6 rounded-full ${item.bgClass} ${item.colorClass} font-bold text-[10px] sm:text-xs flex items-center justify-center shadow-sm`}>
                                  {item.num}
                               </span>
                            </div>
 
                            {/* Card Icon Shape */}
-                           <div className={`w-20 h-20 sm:w-22 sm:h-22 rounded-full ${item.bgClass} flex items-center justify-center mb-6 transition-transform duration-500 group-hover:scale-110 shadow-inner`}>
-                              <item.icon className={`w-9 h-9 ${item.iconColor}`} />
+                           <div className={`w-12 h-12 sm:w-20 sm:h-20 rounded-full ${item.bgClass} flex items-center justify-center sm:mb-6 transition-transform duration-500 group-hover:scale-110 shadow-inner flex-shrink-0`}>
+                              <item.icon className={`w-6 h-6 sm:w-9 sm:h-9 ${item.iconColor}`} />
                            </div>
 
                            {/* Title & Description */}
-                           <h4 className="font-extrabold text-[#143674] text-lg mb-2 tracking-tight group-hover:text-[#0f9f68] transition-colors">{item.title}</h4>
-                           <p className="text-xs sm:text-sm text-slate-500 leading-relaxed max-w-[200px] mb-8">{item.desc}</p>
+                           <div className="flex-1 sm:w-full">
+                              <h4 className="font-extrabold text-[#143674] text-sm sm:text-lg mb-0.5 sm:mb-2 tracking-tight group-hover:text-[#0f9f68] transition-colors">{item.title}</h4>
+                              <p className="text-[11px] sm:text-xs text-slate-500 leading-snug sm:leading-relaxed max-w-full sm:max-w-[200px] sm:mx-auto sm:mb-6">{item.desc}</p>
+                           </div>
 
                            {/* Visual Dots Indicator at the Bottom */}
-                           <div className="flex gap-1.5 mt-auto">
+                           <div className="sm:flex hidden gap-1.5 mt-auto">
                               {[0, 1, 2, 3].map((dot) => (
                                  <span 
                                     key={dot} 

@@ -313,7 +313,7 @@ export default function BBALandingPage() {
         <div className="mx-auto flex max-w-[1550px] items-center justify-between px-4 py-3">
           <div className="flex items-center gap-2">
             <Link href="/">
-              <img src="/images/logos/iaer-new-logo-dark-bg-supported.png" alt="IAER Logo" className="h-10 w-auto xl:h-12" />
+              <img src="/images/logos/iaer-new-logo-dark-bg-supported-included-makaut.png" alt="IAER Logo" className="h-10 w-auto xl:h-12" />
             </Link>
           </div>
           <nav className="hidden items-center gap-5 text-sm text-slate-200 lg:flex">
@@ -622,10 +622,10 @@ export default function BBALandingPage() {
 
       {/* --- WHY IAER --- */}
       <section id="why-iaer" className="relative border-b border-slate-200 bg-[#143674] overflow-hidden">
-        <div className="absolute inset-0 z-0 flex opacity-10 saturate-0 mix-blend-screen">
-          <img src="/images/about/building-image-about-hero.webp" className="w-full h-full object-cover" alt="Background" />
-        </div>
         <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#143674]/95 to-[#0b1c3a]/95" />
+        <div className="absolute inset-0 z-0 pointer-events-none opacity-20 mix-blend-overlay">
+          <img src="/images/programs/iaer_features_bg.png" className="w-full h-full object-cover" alt="Features Background" />
+        </div>
         
         <div data-animate-on-scroll className="relative z-10 mx-auto max-w-[1550px] px-4 py-8 sm:py-10 text-white">
           <div className="text-center mb-6 sm:mb-8">
@@ -656,8 +656,11 @@ export default function BBALandingPage() {
 
       {/* --- AWARDS / ACHIEVEMENTS --- */}
       <section className="relative bg-[#143674] py-8 sm:py-10 border-b border-white/10 overflow-hidden">
-        <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05)_1px,transparent_1px)] [background-size:24px_24px]" />
         <div className="absolute inset-0 bg-gradient-to-br from-[#143674]/95 via-[#0b1c3a]/80 to-[#143674]/95 mix-blend-multiply z-0" />
+        <div className="absolute inset-0 z-0 pointer-events-none opacity-25 mix-blend-overlay">
+          <img src="/images/programs/iaer_achievements_bg.png" className="w-full h-full object-cover" alt="Achievements Background" />
+        </div>
+        <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05)_1px,transparent_1px)] [background-size:24px_24px]" />
         
         <div className="relative z-10 mx-auto max-w-[1550px] px-4">
           <div className="text-center mb-6 sm:mb-8">
