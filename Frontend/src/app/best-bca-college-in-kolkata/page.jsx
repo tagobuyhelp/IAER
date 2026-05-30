@@ -287,7 +287,7 @@ export default function BCALandingPage() {
         <div className="mx-auto flex max-w-[1550px] items-center justify-between px-4 py-3">
           <div className="flex items-center gap-2">
             <Link href="/">
-              <img src="/images/logos/iaer-new-logo-dark-bg-supported.png" alt="IAER Logo" className="h-10 w-auto xl:h-12" />
+              <img src="/images/logos/iaer-new-logo-dark-bg-supported-included-makaut.png" alt="IAER Logo" className="h-10 w-auto xl:h-12" />
             </Link>
           </div>
           <nav className="hidden items-center gap-5 text-sm text-slate-200 lg:flex">
