@@ -35,12 +35,7 @@ export default function RightFloatingCTA() {
           <span className="absolute -top-0.5 -right-0.5 w-1.5 h-1.5 bg-green-500 rounded-full animate-ping" />
           <span className="absolute -top-0.5 -right-0.5 w-1.5 h-1.5 bg-green-500 rounded-full" />
         </div>
-        <span 
-          style={{ writingMode: "vertical-rl" }}
-          className="text-[10px] sm:text-[11px] font-black tracking-[0.15em] whitespace-nowrap rotate-180 mt-1"
-        >
-          {formattedPhone}
-        </span>
+        
       </a>
 
       {/* Enquire Now Tab */}
