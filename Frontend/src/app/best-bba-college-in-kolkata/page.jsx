@@ -7,7 +7,7 @@ import {
   Globe, Phone, Star, Trophy, Users, Mail,
   Award, TrendingUp, Lightbulb, Building2, Wifi, HeartHandshake,
   ShieldCheck, Rocket, Landmark, CreditCard,
-  Banknote, ClipboardCheck, School, Hotel, Quote, CircleDollarSign, Target, Video, GraduationCap, MapPin, BarChart, Settings, MonitorPlay, ArrowRight, Menu, X, Facebook, Linkedin, Instagram, Twitter, Youtube, Layers, Search
+  Banknote, ClipboardCheck, School, Hotel, Quote, CircleDollarSign, Target, Video, GraduationCap, MapPin, BarChart, Settings, MonitorPlay, ArrowRight, Menu, X, Layers, Search
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -49,6 +49,7 @@ export default function BBALandingPage() {
   useEffect(() => {
     const btnId = 'c4af7a13a0ce4880aa5e45e7e28e4d7e';
     const baseUrl = 'widgets.nopaperforms.com';
+    window.__IAER_ACTIVE_WIDGET_ID = btnId;
     console.log("[Meritto BBA] Hook mounted. Target widget ID:", btnId);
     
     // Ensure hidden button exists
@@ -137,6 +138,9 @@ export default function BBALandingPage() {
 
     return () => {
       console.log("[Meritto BBA] Hook unmounting. Cleaning up trigger onclick.");
+      if (window.__IAER_ACTIVE_WIDGET_ID === btnId) {
+        window.__IAER_ACTIVE_WIDGET_ID = null;
+      }
       const trigger = document.querySelector('.npfWidget-' + btnId);
       if (trigger) {
         trigger.onclick = null;
@@ -967,13 +971,6 @@ export default function BBALandingPage() {
 
           <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs sm:text-sm text-blue-200/60">
             <p>&copy; {new Date().getFullYear()} IAER. All rights reserved.</p>
-            <div className="flex items-center gap-4">
-              <a href="https://www.facebook.com/iaerindia/" className="hover:text-white transition-colors"><Facebook className="w-5 h-5" /></a>
-              <a href="https://www.instagram.com/iaerindia/" className="hover:text-white transition-colors"><Instagram className="w-5 h-5" /></a>
-              <a href="https://www.linkedin.com/school/iaer/" className="hover:text-white transition-colors"><Linkedin className="w-5 h-5" /></a>
-              <a href="https://x.com/iaerindia" className="hover:text-white transition-colors"><Twitter className="w-5 h-5" /></a>
-              <a href="https://www.youtube.com/channel/UCzVuXEZ6EUykVF0qhHKcdfQ/featured" className="hover:text-white transition-colors"><Youtube className="w-5 h-5" /></a>
-            </div>
           </div>
         </div>
       </footer>

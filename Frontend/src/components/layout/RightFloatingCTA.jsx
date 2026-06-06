@@ -21,6 +21,25 @@ export default function RightFloatingCTA() {
   const phoneNumber = isLandingPage ? "6292004641" : "8001110000";
   const formattedPhone = isLandingPage ? "62920 04641" : "800 111 0000";
 
+  // Map page path to specific widget ID
+  let specificWidgetId = null;
+  if (pathname) {
+    const path = pathname.replace(/\/$/, "").toLowerCase();
+    if (path === "/best-bca-college-in-kolkata") {
+      specificWidgetId = "10d5d69d0bd7a76f17c3173a5d763657";
+    } else if (path === "/best-mba-college-in-kolkata" || path === "/best-mha-college-in-kolkata") {
+      specificWidgetId = "3958b53341cc9f2a1efd7126074cee70";
+    } else if (path === "/best-bmlt-and-hospital-management-college-in-kolkata") {
+      specificWidgetId = "5f74e92b4f492e8e612fc2ca21f5bdd0";
+    } else if (path === "/best-bba-college-in-kolkata") {
+      specificWidgetId = "c4af7a13a0ce4880aa5e45e7e28e4d7e";
+    } else if (path === "/best-bba-business-analytics-college-in-kolkata") {
+      specificWidgetId = "d6de2ab7b4be7c22b67d139ea59a12d7";
+    } else if (path === "/best-aviation-and-hospitality-college-in-kolkata") {
+      specificWidgetId = "801d4b4527d02ba387fb1b8e59abc192";
+    }
+  }
+
   return (
     <div className="fixed right-0 top-1/2 -translate-y-1/2 z-50 flex flex-col bg-[#143674]/95 backdrop-blur-md text-white rounded-l-2xl border-l border-y border-white/20 shadow-[0_15px_50px_rgba(0,0,0,0.4)] w-[42px] sm:w-[48px] overflow-hidden select-none translate-x-1.5 hover:translate-x-0 transition-transform duration-300 ease-out">
       
@@ -40,6 +59,7 @@ export default function RightFloatingCTA() {
 
       {/* Enquire Now Tab */}
       <EnquiryPopupButton 
+        widgetId={specificWidgetId}
         className="group flex flex-col items-center justify-center gap-2 py-6 bg-gradient-to-b from-[#f7941e] to-[#d97706] hover:from-[#ffaa33] hover:to-[#f59e0b] text-white font-extrabold transition-all duration-300 border-t border-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.2)] w-full"
       >
         <MessageSquare className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />

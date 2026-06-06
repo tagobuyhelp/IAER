@@ -29,14 +29,16 @@ export function openCenteredPopup(url, title = "Enquiry", w = 900, h = 700) {
     return win;
 }
 
-export default function EnquiryPopupButton({ className = "", label = "Enquire Now", children, ...props }) {
+export default function EnquiryPopupButton({ className = "", label = "Enquire Now", widgetId, children, ...props }) {
     const onClick = useCallback(() => {
+        const activeWidgetId = widgetId || WIDGET_ID;
+        const activeFormUrl = `https://widgets.nopaperforms.com/widget/${activeWidgetId}`;
         try {
-            let trigger = document.querySelector(`.npfWidget-${WIDGET_ID}`);
+            let trigger = document.querySelector(`.npfWidget-${activeWidgetId}`);
             if (!trigger) {
                 trigger = document.createElement("button");
                 trigger.type = "button";
-                trigger.className = `npfWidgetButton npfWidget-${WIDGET_ID}`;
+                trigger.className = `npfWidgetButton npfWidget-${activeWidgetId}`;
                 trigger.style.display = "none";
                 trigger.textContent = "Enquire Now";
                 document.body.appendChild(trigger);
@@ -46,10 +48,10 @@ export default function EnquiryPopupButton({ className = "", label = "Enquire No
         } catch {}
 
         try {
-            const url = `${FORM_URL}?widgetId=${WIDGET_ID}`;
+            const url = `${activeFormUrl}?widgetId=${activeWidgetId}`;
             openCenteredPopup(url, "Enquiry Form", 920, 700);
         } catch {}
-    }, []);
+    }, [widgetId]);
 
     return (
         <button
