@@ -7,6 +7,8 @@ import EnquiryPopupButton from "../integrations/EnquiryPopupButton";
 export default function RightFloatingCTA() {
   const pathname = usePathname();
   
+  if (pathname === "/thank-you") return null;
+
   // Pages where floating elements should not appear
   const isLandingPage = pathname?.startsWith("/lp") || 
                         pathname === "/best-bba-college-in-kolkata" || 
