@@ -292,9 +292,9 @@ export default function MHALandingPage() {
       <header className="sticky top-0 z-40 border-b border-white/10 bg-[#143674]/95 backdrop-blur shadow-lg">
         <div className="mx-auto flex max-w-[1550px] items-center justify-between px-4 py-3">
                     <div className="flex items-center gap-2">
-            <Link href="/">
+            <div className="cursor-default">
               <img src="/images/logos/iaer-new-logo-dark-bg-supported.png" alt="IAER Logo" className="h-10 w-auto xl:h-12" />
-            </Link>
+            </div>
             
           </div>
           <nav className="hidden items-center gap-5 text-sm text-slate-200 lg:flex">
@@ -874,8 +874,9 @@ export default function MHALandingPage() {
               <p className="text-sm text-slate-600 mb-4">Watch How IAER Builds Future Healthcare Leaders</p>
               <div className="aspect-video rounded-2xl overflow-hidden shadow-md">
                 <iframe
+                         sandbox="allow-scripts allow-same-origin allow-presentation"
                   className="w-full h-full border-0"
-                  src="https://www.youtube.com/embed/qyZN30yzHjU"
+                  src="https://www.youtube.com/embed/qyZN30yzHjU?modestbranding=1&rel=0"
                   title="Campus Video"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
