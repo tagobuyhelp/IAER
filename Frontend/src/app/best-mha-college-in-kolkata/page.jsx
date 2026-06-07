@@ -291,10 +291,11 @@ export default function MHALandingPage() {
       {/* Header */}
       <header className="sticky top-0 z-40 border-b border-white/10 bg-[#143674]/95 backdrop-blur shadow-lg">
         <div className="mx-auto flex max-w-[1550px] items-center justify-between px-4 py-3">
-          <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2">
             <Link href="/">
-              <img src="/images/logos/iaer-new-logo-dark-bg-supported-included-makaut.png" alt="IAER Logo" className="h-10 w-auto xl:h-12" />
+              <img src="/images/logos/iaer-new-logo-dark-bg-supported.png" alt="IAER Logo" className="h-10 w-auto xl:h-12" />
             </Link>
+            
           </div>
           <nav className="hidden items-center gap-5 text-sm text-slate-200 lg:flex">
             {[
@@ -390,6 +391,23 @@ export default function MHALandingPage() {
                 <Button onClick={onDownload} variant="outline" size="sm" className="flex-1 sm:flex-none h-8 sm:h-12 rounded-full border border-primary text-primary bg-white/5 hover:bg-primary/10 px-3 sm:px-8 text-[10px] sm:text-base font-bold transition-all flex justify-center items-center">
                   <Download className="mr-1 sm:mr-2 h-3 w-3 sm:h-5 sm:w-5" /> Brochure
                 </Button>
+              </div>
+              {/* Affiliation & Approval Logos */}
+              <div className="mt-5 sm:mt-6 flex items-center gap-2 sm:gap-4">
+                <div className="flex items-center gap-1.5 sm:gap-3 bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl px-2.5 sm:px-3.5 py-1.5 sm:py-2 hover:bg-white/15 transition-all duration-200">
+                  <img src="/images/affiliations/MAKAUT-aff.png" alt="MAKAUT Affiliation Logo" className="h-7 sm:h-11 w-auto object-contain bg-white/95 p-0.5 sm:p-1 rounded-lg" />
+                  <div className="flex flex-col text-left">
+                    <span className="text-[7px] sm:text-[9px] uppercase tracking-widest text-slate-300 font-bold leading-none">Affiliated to</span>
+                    <span className="text-[10px] sm:text-xs font-black text-white leading-tight mt-0.5">MAKAUT, WB</span>
+                  </div>
+                </div>
+                <div className="flex items-center gap-1.5 sm:gap-3 bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl px-2.5 sm:px-3.5 py-1.5 sm:py-2 hover:bg-white/15 transition-all duration-200">
+                  <img src="/images/affiliations/AICTE-aff.png" alt="AICTE Approval Logo" className="h-7 sm:h-11 w-auto object-contain bg-white/95 p-0.5 sm:p-1 rounded-lg" />
+                  <div className="flex flex-col text-left">
+                    <span className="text-[7px] sm:text-[9px] uppercase tracking-widest text-slate-300 font-bold leading-none">Approved by</span>
+                    <span className="text-[10px] sm:text-xs font-black text-white leading-tight mt-0.5">AICTE, Govt</span>
+                  </div>
+                </div>
               </div>
 
               <div className="mt-3 flex flex-wrap items-center gap-2 sm:mt-6 sm:gap-4">
