@@ -13,7 +13,7 @@ export default function RightFloatingCTA() {
   const isLandingPage = pathname?.startsWith("/lp") || 
                         pathname === "/best-bba-college-in-kolkata" || 
                         pathname === "/best-bca-college-in-kolkata" || 
-                        pathname === "/best-aviation-and-hospitality-college-in-kolkata" || 
+                        pathname === "/best-aviation-and-hospitality-management-college-in-kolkata" || 
                         pathname === "/best-mba-college-in-kolkata" || 
                         pathname === "/best-mha-college-in-kolkata" || 
                         pathname === "/best-bba-business-analytics-college-in-kolkata" || 
@@ -36,8 +36,8 @@ export default function RightFloatingCTA() {
     } else if (path === "/best-bba-college-in-kolkata") {
       specificWidgetId = "c4af7a13a0ce4880aa5e45e7e28e4d7e";
     } else if (path === "/best-bba-business-analytics-college-in-kolkata") {
-      specificWidgetId = "d6de2ab7b4be7c22b67d139ea59a12d7";
-    } else if (path === "/best-aviation-and-hospitality-college-in-kolkata") {
+      specificWidgetId = "7d4ff460d6ea7bd38733efe8071180ad";
+    } else if (path === "/best-aviation-and-hospitality-management-college-in-kolkata") {
       specificWidgetId = "801d4b4527d02ba387fb1b8e59abc192";
     }
   }

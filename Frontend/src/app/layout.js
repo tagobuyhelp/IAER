@@ -111,7 +111,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <RightFloatingCTA />
         {/* <LinkFixer /> */}
 
-
+        {/* Patch iframe sandbox dynamically to allow form submissions (fixes Facebook Pixel sandbox blocks) */}
+        <Script id="iframe-sandbox-patch" strategy="beforeInteractive">
+          {`
+            (function() {
+              try {
+                var originalCreateElement = document.createElement;
+                document.createElement = function(tagName, options) {
+                  var element = originalCreateElement.call(document, tagName, options);
+                  if (tagName && tagName.toLowerCase() === 'iframe') {
+                    var originalSetAttribute = element.setAttribute;
+                    element.setAttribute = function(name, value) {
+                      if (name && name.toLowerCase() === 'sandbox' && value) {
+                        if (!value.includes('allow-forms')) {
+                          value += ' allow-forms';
+                        }
+                      }
+                      originalSetAttribute.call(element, name, value);
+                    };
+                  }
+                  return element;
+                };
+              } catch (e) {
+                console.error("Sandbox patch failed:", e);
+              }
+            })();
+          `}
+        </Script>
 
         {/* Google Analytics 4 */}
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-SBFHMV6C4D" strategy="lazyOnload" />
@@ -205,7 +231,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         try {
                           var has = !!document.querySelector('iframe[src*="nopaperforms.com"]');
                           if (!has) {
-                            var base = (targetId === 'ee13b8b13cddfc1bfec07deacefd996b') ? 'widgets.nopaperforms.com' : 'widgets.in8.nopaperforms.com';
+                            var base = 'widgets.nopaperforms.com';
                             var url = 'https://' + base + '/widget/' + targetId;
                             var w = 920, h = 700;
                             var left = Math.max(0, (window.innerWidth - w) / 2);

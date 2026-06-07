@@ -15,7 +15,7 @@ import {
 } from 'lucide-react';
 
 export default function ThankYouPage() {
-  const whatsappNumber = "+919007030123";
+  const whatsappNumber = "+916292004641";
   const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/\+/g, "")}?text=${encodeURIComponent(
     "Hi, I just submitted an enquiry on the IAER website and would like to connect."
   )}`;

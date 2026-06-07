@@ -2405,7 +2405,7 @@ export const programs = [
   {
     id: "bsc-data-science-kolkata",
     code: "BSCDS",
-    widgetId: "387bb313db2bcf961b9ec24aba3d71af",
+    widgetId: "955eb9372c180bfff22c3a028d3f9e05",
     title: "B.Sc. in Data Science – IAER Kolkata",
     subtitle: "Undergraduate Degree I MAKAUT Affiliated I AICTE Approved",
     image: "/images/programs/bsc-in-data-science-banner.webp",
@@ -2609,6 +2609,7 @@ export const programs = [
   {
     id: "bsc-cyber-security-kolkata",
     code: "BSCCS",
+    widgetId: "955eb9372c180bfff22c3a028d3f9e05",
     title: "B.Sc. in Cyber Security – IAER Kolkata",
     subtitle: "Undergraduate Degree I MAKAUT Affiliated I AICTE Approved",
     image: "/images/programs/B.Sc-in-Cyber-Security.webp",

@@ -41,7 +41,7 @@ export default function BBABALandingPage() {
   }, [heroImages.length]);
 
   useEffect(() => {
-    const btnId = 'd6de2ab7b4be7c22b67d139ea59a12d7';
+    const btnId = '7d4ff460d6ea7bd38733efe8071180ad';
     const baseUrl = 'widgets.nopaperforms.com';
     window.__IAER_ACTIVE_WIDGET_ID = btnId;
     console.log("[Meritto BBA-BA] Hook mounted. Target widget ID:", btnId);
@@ -148,7 +148,7 @@ export default function BBABALandingPage() {
   };
 
   const onApplyNow = () => {
-    const btnId = 'd6de2ab7b4be7c22b67d139ea59a12d7';
+    const btnId = '7d4ff460d6ea7bd38733efe8071180ad';
     const baseUrl = 'widgets.nopaperforms.com';
     console.log("[Meritto BBA-BA] onApplyNow function invoked");
     try {
