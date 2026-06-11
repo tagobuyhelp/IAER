@@ -7,12 +7,13 @@ import {
   Globe, Phone, Star, Trophy, Users, Mail,
   Award, TrendingUp, Lightbulb, Building2, Wifi, HeartHandshake,
   ShieldCheck, Rocket, Landmark, CreditCard,
-  Banknote, ClipboardCheck, School, Hotel, Quote, CircleDollarSign, Target, Video, GraduationCap, MapPin, BarChart, Settings, MonitorPlay, ArrowRight, Menu, X, Layers, Search
+  Banknote, ClipboardCheck, School, Hotel, Quote, CircleDollarSign, Target, Video, GraduationCap, MapPin, BarChart, Settings, MonitorPlay, ArrowRight, Menu, X, Layers, Search, ChevronDown, ChevronUp
 } from 'lucide-react';
 import Link from 'next/link';
 
 export default function BCALandingPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [openFaq, setOpenFaq] = useState(0);
   const marqueeRef = useRef(null);
   const specScrollRef = useRef(null);
 
@@ -450,81 +451,36 @@ export default function BCALandingPage() {
                 </div>
               </div>
 
-              {/* Marquee */}
-              <div className="w-full overflow-hidden rounded-xl bg-white/5 border border-white/10 backdrop-blur-md shadow-inner py-3">
-                 <div className="flex w-max animate-hero-marquee space-x-6 px-4 items-center">
-                   {[...Array(2)].map((_, i) => (
-                     <React.Fragment key={i}>
-                       <span className="inline-flex items-center gap-1.5 text-[11px] lg:text-xs font-semibold text-white/90 whitespace-nowrap">
-                         <Award className="h-3.5 w-3.5 text-accent" /> AICTE Approved
-                       </span>
-                       <span className="inline-flex items-center gap-1.5 text-[11px] lg:text-xs font-semibold text-white/90 whitespace-nowrap">
-                         <Briefcase className="h-3.5 w-3.5 text-primary" /> ₹4.50+ LPA Avg Package
-                       </span>
-                       <span className="inline-flex items-center gap-1.5 text-[11px] lg:text-xs font-semibold text-white/90 whitespace-nowrap">
-                         <Globe className="h-3.5 w-3.5 text-teal-400" /> Global Exposure
-                       </span>
-                       <span className="inline-flex items-center gap-1.5 text-[11px] lg:text-xs font-semibold text-white/90 whitespace-nowrap">
-                         <Building2 className="h-3.5 w-3.5 text-blue-400" /> Affiliated to MAKAUT
-                       </span>
-                     </React.Fragment>
-                   ))}
-                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-
-      {/* --- ABOUT --- */}
-      <section id="about" className="relative border-b border-slate-200 bg-slate-50 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
-        <div data-animate-on-scroll className="mx-auto max-w-[1550px] px-4 py-6 sm:py-8">
-          <div className="grid gap-6 md:grid-cols-2 items-center">
-            <div className="order-2 md:order-1 relative h-[300px] sm:h-[450px] lg:h-[500px] overflow-hidden rounded-3xl shadow-xl ring-1 ring-slate-200 group">
-              <img src="/images/about/building-image-about-hero.webp" alt="IAER Overview" className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 hover:scale-105" onError={(e) => { e.currentTarget.src = '/images/logos/IAER_ICON.jpg'; }} />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent" />
-            </div>
-            <div className="order-1 md:order-2 flex flex-col justify-center">
-              <div className="flex items-center gap-2 mb-3">
-                <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#143674] text-white">
-                  <BookOpen className="h-4 w-4" />
-                </span>
-                <h2 className="text-xl sm:text-2xl font-bold font-sans text-[#143674]">About BCA at IAER</h2>
-              </div>
-              <div className="mb-4 h-1 w-20 rounded-full bg-primary" />
-              <div className="prose prose-sm max-w-none text-slate-700">
-                <p className="leading-relaxed text-base">
-                  IAER is ranked among the best IT colleges in Kolkata, offering BCA courses after 12th designed for real-world careers.
-                  We provide a perfect blend of theoretical knowledge and practical technical learning.
+              {/* Success Stories Marquee */}
+              <div className="w-full mt-2 lg:-ml-4">
+                <p className="text-[10px] font-bold text-blue-200/80 uppercase tracking-widest text-center md:text-left mb-3">
+                  Latest Success Stories of IAER
                 </p>
-
-                <div className="mt-4 text-sm font-medium text-slate-600">
-                  <p className="mb-2 uppercase tracking-widest text-[10px] text-[#143674] font-bold">If you're searching for:</p>
-                  <div className="flex flex-wrap gap-2">
-                    {['BCA course in Kolkata', 'private BCA colleges in Kolkata', 'BCA colleges with internship Kolkata', 'BCA with placement in Kolkata'].map((tag) => (
-                      <span key={tag} className="inline-flex items-center bg-white border border-slate-200 shadow-sm px-3 py-1.5 rounded-full text-[11px] font-semibold text-slate-700 hover:border-primary hover:text-primary transition-colors cursor-default">
-                        <Search className="w-3 h-3 mr-1.5 text-slate-400" /> {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                
-                <div className="mt-5 bg-gradient-to-br from-[#143674] to-[#0b1c3a] rounded-2xl p-5 shadow-lg relative overflow-hidden group">
-                  <div className="absolute -right-4 -bottom-4 w-32 h-32 bg-primary/20 rounded-full blur-3xl opacity-50 group-hover:scale-150 transition-transform duration-700" />
-                  <h3 className="text-sm font-bold text-white mb-4 flex items-center gap-2"><Target className="w-4 h-4 text-accent" /> IAER Provides:</h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 relative z-10">
-                    {[
-                      { label: 'Industry-integrated curriculum' },
-                      { label: 'Project-based learning' },
-                      { label: 'Internship opportunities from early semesters' },
-                      { label: '100% Placement Support' }
-                    ].map((i) => (
-                      <div key={i.label} className="group/item flex items-center gap-2 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 px-3 py-2.5 shadow-sm hover:bg-white/20 transition-all cursor-default hover:-translate-y-0.5">
-                        <CheckCircle className="h-4 w-4 text-accent flex-shrink-0 group-hover/item:scale-110 transition-transform" />
-                        <div className="text-xs sm:text-sm font-semibold text-white/90">{i.label}</div>
-                      </div>
+                <div className="relative flex overflow-hidden w-full group mask-image-linear-gradient">
+                  {/* Fade edges */}
+                  <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-8 bg-gradient-to-r from-[#143674] to-transparent"></div>
+                  <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-8 bg-gradient-to-l from-[#143674] to-transparent"></div>
+                  
+                  <div className="flex w-max animate-hero-marquee space-x-3 px-1 items-center hover:[animation-play-state:paused]">
+                    {[...Array(2)].map((_, i) => (
+                      <React.Fragment key={i}>
+                        {[
+                          { name: 'Arjun M.', company: 'amazon_logo_dark.webp', pic: 'arjun.jpg' },
+                          { name: 'Riya S.', company: 'Infosys_logo.png', pic: 'riya.avif' },
+                          { name: 'Rohan D.', company: 'Tata_Consultancy_Services_old_logo.svg.png', pic: 'rohan.jpg' },
+                        ].map((student, idx) => (
+                          <div key={`${i}-${idx}`} className="flex items-center gap-2.5 bg-white/95 backdrop-blur-sm rounded-xl p-2 pr-4 shadow-[0_4px_15px_rgba(0,0,0,0.1)] border border-white/40 min-w-max transition-transform hover:-translate-y-0.5">
+                            <img src={`/images/students/${student.pic}`} alt={student.name} className="w-10 h-10 rounded-full object-cover shadow-sm border border-slate-100" onError={(e) => { e.currentTarget.src = '/images/logos/IAER_ICON.jpg'; }} />
+                            <div className="flex flex-col justify-center">
+                              <span className="text-xs font-bold text-slate-800 leading-none mb-1">{student.name}</span>
+                              <div className="flex items-center gap-1.5">
+                                <span className="text-[9px] font-medium text-slate-500 uppercase">Placed at</span>
+                                <img src={`/images/company_logos/${student.company}`} alt="Company" className="h-3.5 object-contain" />
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                      </React.Fragment>
                     ))}
                   </div>
                 </div>
@@ -616,77 +572,116 @@ export default function BCALandingPage() {
         </div>
       </section>
 
-      {/* --- WHY IAER --- */}
-      <section id="why-iaer" className="relative border-b border-slate-200 bg-[#143674] overflow-hidden">
-        <div className="absolute inset-0 z-0 flex opacity-10 saturate-0 mix-blend-screen">
-          <img src="/images/about/building-image-about-hero.webp" className="w-full h-full object-cover" alt="Background" />
-        </div>
-        <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#143674]/95 to-[#0b1c3a]/95" />
-        
-        <div data-animate-on-scroll className="relative z-10 mx-auto max-w-[1550px] px-4 py-8 sm:py-10 text-white">
-          <div className="text-center mb-6 sm:mb-8">
-             <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight mb-3">Why IAER</h2>
-             <div className="h-1 w-16 bg-accent mx-auto rounded-full" />
-          </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4">
-            {[
-              { icon: Briefcase, title: 'Internship-Driven Curriculum', desc: 'Top choice for BCA colleges with internship in Kolkata' },
-              { icon: Building2, title: 'Industry Integration', desc: 'Best for students seeking BCA with placement in Kolkata' },
-              { icon: Globe, title: 'Global Exposure', desc: 'International Immersion Programs (Thailand, Malaysia, Vietnam, UAE)' },
-              { icon: Award, title: 'Skill-Based Training', desc: 'Communication + technical expertise' },
-              { icon: Lightbulb, title: 'Startup Ecosystem', desc: 'Mentorship, incubation & funding support' },
-            ].map((item, idx) => (
-              <div key={item.title} className={`group flex flex-col items-center text-center bg-white/5 border border-white/10 p-4 sm:p-5 rounded-2xl backdrop-blur-md hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 hover:border-accent/30 shadow-lg relative overflow-hidden ${idx === 4 ? 'col-span-2 lg:col-span-1' : 'col-span-1'}`}>
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 flex items-center justify-center mb-3 group-hover:scale-110 group-hover:bg-accent/20 transition-all shadow-inner">
-                  <item.icon className="w-5 h-5 text-accent" />
-                </div>
-                <h3 className="text-sm sm:text-base font-bold mb-1.5 text-white leading-tight">{item.title}</h3>
-                <p className="text-[10px] sm:text-xs text-blue-200/80 leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* --- AWARDS / ACHIEVEMENTS --- */}
-      <section className="relative bg-[#143674] py-8 sm:py-10 border-b border-white/10 overflow-hidden">
-        <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05)_1px,transparent_1px)] [background-size:24px_24px]" />
-        <div className="absolute inset-0 bg-gradient-to-br from-[#143674]/95 via-[#0b1c3a]/80 to-[#143674]/95 mix-blend-multiply z-0" />
+      {/* --- UNIFIED: WHY CHOOSE IAER --- */}
+      <section id="why-iaer" className="relative border-b border-slate-200 bg-slate-50 py-10 sm:py-16 overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 z-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
         
         <div className="relative z-10 mx-auto max-w-[1550px] px-4">
-          <div className="text-center mb-6 sm:mb-8">
-            <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-accent mb-2 block">Recognized Excellence</span>
-            <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight flex items-center justify-center gap-3">
-              <Trophy className="h-8 w-8 sm:h-10 sm:w-10 text-accent" />
-              Our Achievements
+          <div className="text-center mb-10 sm:mb-14">
+            <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-[#143674] mb-2 block">Excellence in Education</span>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#143674] tracking-tight">
+              Why Choose <span className="text-primary">IAER</span> for BCA?
             </h2>
-            <div className="mt-4 h-1.5 w-16 bg-accent mx-auto rounded-full" />
+            <div className="mt-4 mx-auto h-1.5 w-16 rounded-full bg-accent" />
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
-               {[
-                 { title: 'Best Innovative IT College in Eastern India', source: '(IT Startup Excellence Awards, 2019)' },
-                 { title: 'Best Emerging e-Business School of the Year', source: '(Virtual Education & Technology Awards, 2020)' },
-                 { title: 'Best Startup Education College in Eastern India', source: '(StartUp & VC Award for Excellence, 2021)' },
-                 { title: 'Top 10 Best College for Data Science in India', source: '(Knowledge Review, 2024)' },
-                 { title: 'Top 10 Best College for Cyber Security in India', source: '(Knowledge Review, 2025)' },
-                 { title: 'Best Emerging Information Technology Award', source: '(Edulite Excellence Award, 2024)' },
-                 { title: 'Best College for Innovation in Eastern India', source: '(Edulite Excellence Award, 2025)' },
-                 { title: 'Excellence in Information Technology Education', source: '(Collegedunia, 2024)' }
-               ].map((ach, i) => (
-                 <div key={i} className="group bg-white/5 border border-white/10 rounded-2xl p-5 hover:bg-white/10 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-accent/10 flex flex-col justify-between backdrop-blur-sm">
-                   <div className="mb-4 bg-white/10 w-10 h-10 rounded-full flex items-center justify-center group-hover:bg-accent group-hover:scale-110 transition-all shadow-inner">
-                     <Award className="w-5 h-5 text-accent group-hover:text-white transition-colors" />
-                   </div>
-                   <h4 className="text-sm sm:text-base font-bold text-white mb-2 leading-snug">{ach.title}</h4>
-                   <p className="text-[10px] sm:text-[11px] text-blue-200/70 font-medium tracking-wide uppercase">{ach.source}</p>
-                 </div>
-               ))}
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start mb-12">
+            
+            {/* Left Column: About & Visuals (Spans 5 cols) */}
+            <div className="lg:col-span-5 flex flex-col gap-5 sm:gap-6">
+              <div className="relative h-[250px] sm:h-[320px] lg:h-[280px] overflow-hidden rounded-3xl shadow-2xl ring-1 ring-slate-200 group">
+                <img src="/images/about/building-image-about-hero.webp" alt="IAER Overview" className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105" onError={(e) => { e.currentTarget.src = '/images/logos/IAER_ICON.jpg'; }} />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#143674]/90 via-[#143674]/20 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 flex items-center gap-2"><BookOpen className="w-6 h-6 text-accent" /> About BCA at IAER</h3>
+                  <p className="text-sm text-blue-100 leading-relaxed">
+                    We provide a perfect blend of theoretical knowledge and practical business learning, preparing students for real-world corporate challenges.
+                  </p>
+                </div>
+              </div>
+
+              {/* Badges */}
+              <div className="bg-white rounded-2xl p-5 shadow-sm border border-slate-200">
+                <h4 className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">Core Pillars</h4>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    { label: 'Practical business learning' },
+                    { label: 'Industry exposure' },
+                    { label: 'Internship-driven curriculum' },
+                    { label: 'Strong placement support' }
+                  ].map((i) => (
+                    <span key={i.label} className="inline-flex items-center bg-blue-50/50 border border-blue-100 text-blue-800 px-3 py-1.5 rounded-full text-[11px] sm:text-xs font-semibold cursor-default hover:bg-blue-100 transition-colors">
+                      <CheckCircle className="w-3.5 h-3.5 mr-1.5 text-primary" /> {i.label}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column: Key Features (Spans 7 cols) */}
+            <div className="lg:col-span-7 grid sm:grid-cols-2 gap-4 sm:gap-5 lg:gap-6 h-full">
+              {[
+                { icon: Briefcase, title: 'Internship-Driven', desc: 'Hands-on experience from early semesters with top corporate partners.' },
+                { icon: Building2, title: 'Industry Integration', desc: 'Real-world business exposure, case studies, & corporate connections.' },
+                { icon: Globe, title: 'Global Exposure', desc: 'International immersion programs in Thailand, Malaysia, Vietnam, & UAE.' },
+                { icon: Award, title: 'Skill Development', desc: 'Focused training on leadership, communication, and problem-solving.' },
+                { icon: Lightbulb, title: 'Startup Ecosystem', desc: 'Mentorship & incubation support for future business entrepreneurs.' },
+              ].map((item, idx) => (
+                <div key={item.title} className={`bg-white border border-slate-200 p-5 rounded-2xl hover:shadow-lg hover:border-primary/30 transition-all duration-300 group flex flex-col justify-center ${idx === 4 ? 'sm:col-span-2' : ''}`}>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 flex-shrink-0 rounded-xl bg-blue-50 flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300 shadow-sm">
+                      <item.icon className="w-6 h-6 text-primary group-hover:text-white transition-colors" />
+                    </div>
+                    <div>
+                      <h4 className="text-base sm:text-lg font-bold text-[#143674] mb-1">{item.title}</h4>
+                      <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
           </div>
+
+          {/* Bottom Banner: Recognized Excellence (Marquee) */}
+          <div className="bg-[#143674] rounded-3xl p-6 sm:p-8 shadow-xl relative overflow-hidden">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.1)_0%,transparent_60%)]" />
+            <div className="flex flex-col sm:flex-row items-center gap-6 relative z-10">
+              <div className="flex-shrink-0 text-center sm:text-left sm:pr-6 sm:border-r sm:border-white/20">
+                <h3 className="text-lg sm:text-xl font-bold text-white flex items-center justify-center sm:justify-start gap-2 mb-1"><Trophy className="w-5 h-5 text-accent" /> Awards &</h3>
+                <p className="text-sm font-medium text-accent">Recognized Excellence</p>
+              </div>
+              
+              <div className="flex-1 w-full overflow-hidden relative">
+                {/* Fade edges */}
+                <div className="absolute top-0 bottom-0 left-0 w-8 bg-gradient-to-r from-[#143674] to-transparent z-10 pointer-events-none" />
+                <div className="absolute top-0 bottom-0 right-0 w-8 bg-gradient-to-l from-[#143674] to-transparent z-10 pointer-events-none" />
+                
+                <div className="flex gap-4 sm:gap-6 overflow-x-auto pb-4 pt-1 snap-x snap-mandatory no-scrollbar">
+                  {[
+                    { title: 'Best Innovative IT College', source: 'Eastern India, 2019' },
+                    { title: 'Best Emerging e-Business School', source: '2020' },
+                    { title: 'Best Startup Education College', source: 'Eastern India, 2021' },
+                    { title: 'Top 10 Best College for Data Science', source: 'India, 2024' },
+                    { title: 'Best Emerging IT Award', source: '2024' },
+                    { title: 'Excellence in IT Education', source: '2024' }
+                  ].map((ach, i) => (
+                    <div key={i} className="flex-shrink-0 snap-start bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl px-4 py-3 min-w-[200px] max-w-[220px]">
+                      <h4 className="text-sm font-bold text-white mb-1 leading-snug line-clamp-2">{ach.title}</h4>
+                      <p className="text-[10px] text-blue-200/70 font-medium uppercase">{ach.source}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+          
         </div>
       </section>
+
+
 
       {/* --- PLACEMENTS --- */}
       <section id="placements" className="relative border-b border-slate-200 bg-slate-50">
@@ -788,64 +783,45 @@ export default function BCALandingPage() {
         </div>
       </section>
 
-      {/* --- TESTIMONIALS --- */}
-      <section className="relative py-8 sm:py-10 bg-white border-b border-slate-200">
-         <div className="mx-auto max-w-[1550px] px-4">
-            <div className="text-center mb-6 sm:mb-8">
-               <h2 className="text-2xl sm:text-3xl font-bold text-[#143674] mb-2">Voices of Success</h2>
-               <div className="h-1 w-16 bg-accent mx-auto rounded-full" />
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-6">
-               {/* Student Testimonials */}
-               <div className="min-w-0">
-                  <h3 className="text-lg font-semibold text-[#143674] flex items-center gap-2 mb-4"><GraduationCap className="w-5 h-5 text-primary" /> Student Testimonials</h3>
-                  <div className="flex gap-4 overflow-x-auto pb-4 pt-1 snap-x snap-mandatory no-scrollbar">
-                     {[
-                       { name: 'Jayesh Sarkar', company: 'QSpiders', quote: 'I was searching for the best BCA college in Kolkata with placement, and IAER gave me both internship and job opportunities.' },
-                       { name: 'Rohit Biswas', company: 'Skynis Technologies', quote: 'Before joining IAER, I wanted a BCA college with strong practical training. With internship support, I secured a job before completing my course.' },
-                       { name: 'Apurva Ganguly', company: 'PwC', quote: 'The BCA AI ML course in Kolkata here helped me build real-world projects and gain confidence in AI tools.' }
-                     ].map((t, i) => (
-                       <div key={i} className="group relative flex-shrink-0 w-[290px] sm:w-[340px] snap-start bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
-                          <Quote className="absolute top-4 right-4 w-12 h-12 text-slate-100 group-hover:text-primary/10 transition-colors" />
-                          <p className="text-sm text-slate-700 italic mb-5 relative z-10 leading-relaxed h-16 line-clamp-3">"{t.quote}"</p>
-                          <div className="flex items-center gap-3 relative z-10">
-                             <img src="/images/logos/IAER_ICON.jpg" alt={t.name} className="w-10 h-10 rounded-full object-cover ring-2 ring-slate-100 group-hover:ring-primary/30 transition-all" />
-                             <div>
-                                <div className="text-sm font-bold text-slate-900">{t.name}</div>
-                                <div className="text-[11px] font-semibold uppercase tracking-wider text-primary">{t.company}</div>
-                             </div>
-                          </div>
-                       </div>
-                     ))}
-                  </div>
-               </div>
-
-               {/* Industry Testimonials */}
-               <div className="min-w-0">
-                  <h3 className="text-lg font-semibold text-[#143674] flex items-center gap-2 mb-4"><Briefcase className="w-5 h-5 text-primary" /> Industry Testimonials</h3>
-                  <div className="flex gap-4 overflow-x-auto pb-4 pt-1 snap-x snap-mandatory no-scrollbar">
-                     {[
-                       { name: 'Meghna Roy Chowdhury', company: 'Skynis Technologies', quote: 'IAER students are well-trained in AI, ML, and cyber security domains.' },
-                       { name: 'T. Ravi Kumar', company: 'Techsoft Information Technologies', quote: 'The curriculum is aligned with industry needs and future technologies.' }
-                     ].map((t, i) => (
-                       <div key={i} className="group relative flex-shrink-0 w-[290px] sm:w-[340px] snap-start bg-gradient-to-br from-blue-50/50 to-white border border-blue-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
-                          <Quote className="absolute top-4 right-4 w-12 h-12 text-blue-100 group-hover:text-blue-200/50 transition-colors" />
-                          <p className="text-sm text-slate-700 italic mb-5 relative z-10 leading-relaxed h-16 line-clamp-3">"{t.quote}"</p>
-                          <div className="flex items-center gap-3 relative z-10">
-                             <img src="/images/logos/IAER_ICON.jpg" alt={t.name} className="w-10 h-10 rounded-full object-cover ring-2 ring-blue-100 group-hover:ring-blue-300 transition-all" />
-                             <div>
-                                <div className="text-sm font-bold text-slate-900">{t.name}</div>
-                                <div className="text-[11px] font-semibold uppercase tracking-wider text-blue-600">{t.company}</div>
-                             </div>
-                          </div>
-                       </div>
-                     ))}
-                  </div>
-               </div>
-            </div>
-         </div>
+ {/* --- VIDEO TESTIMONIALS --- */}
+      <section className="py-10 sm:py-16 bg-[#143674] relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.05)_0%,transparent_50%)]" />
+        <div className="mx-auto max-w-[1550px] px-4 relative z-10">
+          <div className="text-center mb-10 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mb-3">
+              Hear It From Our <span className="text-accent">Students</span>
+            </h2>
+            <p className="text-blue-200 text-sm sm:text-base max-w-2xl mx-auto">Real stories from real students who transformed their careers with IAER.</p>
+            <div className="mt-4 h-1.5 w-16 bg-accent mx-auto rounded-full" />
+          </div>
+          
+          <div className="flex gap-4 sm:gap-6 md:justify-center overflow-x-auto pb-6 pt-2 snap-x snap-mandatory no-scrollbar">
+            {[
+              '5spDhZsFmRw', 'KJijsu0t_GA', '7FDem0S7wZU', 'kUYABnLkRU8', 'VfQW9Ex4DQ0',
+            ].map((id, idx) => (
+              <div 
+                key={idx} 
+                className="group relative flex-shrink-0 w-[160px] sm:w-[200px] md:w-[240px] aspect-[9/16] rounded-2xl overflow-hidden shadow-xl border border-white/10 bg-slate-900 snap-center sm:snap-start"
+              >
+                <iframe
+                  src={`https://www.youtube.com/embed/${id}?modestbranding=1&rel=0&showinfo=0&controls=0&disablekb=1`}
+                  title={`Success Story ${idx + 1}`}
+                  className="absolute inset-0 w-full h-full pointer-events-auto"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  loading="lazy"
+                ></iframe>
+                {/* Transparent overlays to block clicks on top/bottom YouTube branding */}
+                <div className="absolute top-0 left-0 right-0 h-16 bg-transparent z-10" />
+                <div className="absolute bottom-0 left-0 right-0 h-24 bg-transparent z-10" />
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
+
+
 
       {/* --- CAMPUS EXPERIENCE & FACILITIES --- */}
       <section id="campus-facilities" className="py-8 sm:py-10 bg-slate-50 border-b border-slate-200">
@@ -1042,12 +1018,12 @@ export default function BCALandingPage() {
 
       {/* --- FAQ --- */}
       <section className="py-8 sm:py-10 bg-white">
-        <div className="mx-auto max-w-[1000px] px-4">
+        <div className="mx-auto max-w-[800px] px-4">
           <div className="text-center mb-6 sm:mb-8">
              <h2 className="text-2xl sm:text-3xl font-bold text-[#143674] mb-2">Frequently Asked Questions</h2>
              <div className="h-1 w-16 bg-accent mx-auto rounded-full" />
           </div>
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="flex flex-col gap-3">
             {[
               { q: 'Which is the best BCA college in Kolkata?', a: 'IAER is among the top BCA colleges offering AI, ML, Cyber Security & Data Science.' },
               { q: 'What is the scope of BCA AI ML course in Kolkata?', a: 'High demand in AI, automation, and data science industries.' },
@@ -1062,12 +1038,29 @@ export default function BCALandingPage() {
               { q: 'Can I get direct admission in BCA in Kolkata?', a: 'Yes, students can apply directly through IAER.' },
               { q: 'Which is better: BCA or B.Tech for IT careers?', a: 'BCA with AI/ML or Cyber Security specialization offers faster, skill-focused career entry.' }
             ].map((faq, i) => (
-              <div key={i} className="group bg-white border border-slate-200 hover:border-primary/30 rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-all">
-                <h4 className="text-sm sm:text-base font-bold text-[#143674] mb-2 flex items-start gap-2.5">
-                  <span className="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-primary/10 text-primary font-black text-xs group-hover:bg-primary group-hover:text-white transition-colors">Q</span> 
-                  <span className="mt-0.5 leading-snug">{faq.q}</span>
-                </h4>
-                <p className="text-xs sm:text-sm text-slate-600 pl-8 leading-relaxed">{faq.a}</p>
+              <div 
+                key={i} 
+                className={`group bg-white border ${openFaq === i ? 'border-primary shadow-md' : 'border-slate-200 hover:border-primary/30 hover:shadow-sm'} rounded-2xl overflow-hidden transition-all duration-300 cursor-pointer`}
+                onClick={() => setOpenFaq(openFaq === i ? -1 : i)}
+              >
+                <div className="p-4 sm:p-5 flex items-center justify-between gap-4">
+                  <h4 className={`text-sm sm:text-base font-bold ${openFaq === i ? 'text-primary' : 'text-[#143674]'} flex items-start gap-3 transition-colors`}>
+                    <span className={`flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full ${openFaq === i ? 'bg-primary text-white' : 'bg-primary/10 text-primary'} font-black text-xs transition-colors`}>
+                      Q
+                    </span> 
+                    <span className="mt-0.5 leading-snug">{faq.q}</span>
+                  </h4>
+                  <div className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center transition-transform duration-300 ${openFaq === i ? 'bg-primary/10 text-primary rotate-180' : 'text-slate-400 group-hover:text-primary'}`}>
+                    <ChevronDown className="w-4 h-4" />
+                  </div>
+                </div>
+                <div 
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${openFaq === i ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}
+                >
+                  <p className="text-xs sm:text-sm text-slate-600 px-4 sm:px-5 pb-4 sm:pb-5 pl-[3.25rem] leading-relaxed border-t border-slate-50 pt-3">
+                    {faq.a}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -1102,31 +1095,35 @@ export default function BCALandingPage() {
       </footer>
 
       {/* --- FLOATING BOTTOM CTA BAR --- */}
-      <div className="fixed bottom-0 left-0 right-0 z-[60] bg-white/95 backdrop-blur-lg border-t border-slate-200 shadow-[0_-10px_30px_rgba(0,0,0,0.1)] sm:bottom-6 sm:left-1/2 sm:right-auto sm:-translate-x-1/2 sm:rounded-full sm:border sm:px-3 sm:py-2 flex items-center justify-between px-2 py-2 gap-1.5 sm:gap-3 transition-all duration-300 w-full sm:w-max">
-         <nav className="flex items-center justify-between sm:justify-start gap-1 flex-1 sm:flex-none">
-            {[
-              { name: 'About', href: '#about', icon: BookOpen },
-              { name: 'Programs', href: '#specializations', icon: Target },
-              { name: 'Why Us', href: '#why-iaer', icon: Building2 },
-              { name: 'Placements', href: '#placements', icon: Briefcase }
-            ].map(link => (
-               <a key={link.name} href={link.href} className="flex flex-col sm:flex-row items-center justify-center sm:px-4 sm:py-2 text-slate-500 sm:text-slate-600 hover:text-[#143674] sm:hover:bg-slate-100 rounded-full transition-colors flex-1 sm:flex-none">
-                  <link.icon className="w-5 h-5 sm:hidden mb-0.5" />
-                  <span className="text-[9px] sm:text-sm font-bold sm:font-semibold uppercase sm:capitalize tracking-tighter sm:tracking-normal leading-none text-center">{link.name}</span>
-               </a>
-            ))}
-         </nav>
+      <div className="fixed bottom-0 md:bottom-6 left-0 right-0 md:left-1/2 md:right-auto md:-translate-x-1/2 z-[60] w-full md:w-max bg-white/95 backdrop-blur-xl border-t md:border border-slate-200/80 md:rounded-full shadow-[0_-10px_40px_rgba(0,0,0,0.08)] p-1.5 md:p-2 flex items-center justify-between gap-2 transition-all duration-300">
+        
+        {/* Scrollable Navigation Links */}
+        <nav className="flex items-center gap-0.5 sm:gap-1 overflow-x-auto no-scrollbar flex-1 md:flex-none pl-1 pr-2 relative">
+          {[
+            { name: 'Overview', href: '#about', icon: BookOpen },
+            { name: 'Programs', href: '#specializations', icon: Layers },
+            { name: 'Why Us', href: '#why-iaer', icon: Star },
+            { name: 'Placements', href: '#placements', icon: Briefcase },
+            { name: 'Campus', href: '#campus-facilities', icon: Building2 }
+          ].map(link => (
+            <button key={link.name} onClick={() => { document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth' }); }} className="flex items-center gap-1.5 px-3 py-2 rounded-full text-slate-600 hover:text-primary hover:bg-slate-100 transition-colors whitespace-nowrap flex-shrink-0 group">
+              <link.icon className="w-3.5 h-3.5 text-slate-400 group-hover:text-primary transition-colors" />
+              <span className="text-[11px] sm:text-xs font-bold">{link.name}</span>
+            </button>
+          ))}
+        </nav>
 
-         <div className="h-8 w-px bg-slate-200 hidden sm:block mx-1" />
+        <div className="h-6 w-px bg-slate-200 hidden md:block flex-shrink-0" />
 
-         <div className="flex items-center gap-1.5 sm:gap-2 flex-shrink-0">
-            <Button onClick={onApplyNow} className="bg-accent hover:bg-accent/90 text-white font-bold rounded-full px-2.5 py-2.5 sm:px-5 sm:py-2 text-[10px] sm:text-sm shadow-lg shadow-accent/30 active:scale-95 transition-all whitespace-nowrap flex items-center justify-center">
-               Enquire Now
-            </Button>
-            <a href="tel:+916292004641" className="bg-[#143674] hover:bg-[#143674]/90 text-white font-bold rounded-full px-2.5 py-2.5 sm:px-5 sm:py-2 text-[10px] sm:text-sm shadow-lg active:scale-95 transition-all whitespace-nowrap flex items-center justify-center gap-1">
-               <Phone className="w-3 h-3 sm:w-4 sm:h-4" /> Call Now
-            </a>
-         </div>
+        {/* CTA Buttons */}
+        <div className="flex items-center gap-1.5 sm:gap-2 flex-shrink-0 pr-1">
+          <Button onClick={onApplyNow} className="h-9 sm:h-10 bg-accent hover:bg-accent/90 text-white font-extrabold rounded-full px-3 sm:px-5 text-[11px] sm:text-xs shadow-lg shadow-accent/20 active:scale-95 transition-all whitespace-nowrap flex items-center justify-center gap-1.5">
+            <GraduationCap className="w-3.5 h-3.5 hidden sm:block" /> Enquire Now
+          </Button>
+          <a href="tel:+916292004641" className="h-9 sm:h-10 bg-[#143674] hover:bg-[#143674]/90 text-white font-extrabold rounded-full px-3 sm:px-5 text-[11px] sm:text-xs shadow-lg shadow-[#143674]/20 active:scale-95 transition-all flex items-center justify-center gap-1.5 whitespace-nowrap">
+            <Phone className="w-3.5 h-3.5" /> Call Now
+          </a>
+        </div>
       </div>
     </div>
   );
