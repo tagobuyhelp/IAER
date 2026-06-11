@@ -701,7 +701,7 @@ export default function BBALandingPage() {
                 className="group relative flex-shrink-0 w-[160px] sm:w-[200px] md:w-[240px] aspect-[9/16] rounded-2xl overflow-hidden shadow-xl border border-white/10 bg-slate-900 snap-center sm:snap-start"
               >
                 <iframe
-                  src={`https://www.youtube.com/embed/${id}?modestbranding=1&rel=0&showinfo=0`}
+                  src={`https://www.youtube.com/embed/${id}?modestbranding=1&rel=0&showinfo=0&controls=0&disablekb=1`}
                   title={`Success Story ${idx + 1}`}
                   className="absolute inset-0 w-full h-full pointer-events-auto"
                   frameBorder="0"
@@ -709,6 +709,9 @@ export default function BBALandingPage() {
                   allowFullScreen
                   loading="lazy"
                 ></iframe>
+                {/* Transparent overlays to block clicks on top/bottom YouTube branding */}
+                <div className="absolute top-0 left-0 right-0 h-16 bg-transparent z-10" />
+                <div className="absolute bottom-0 left-0 right-0 h-24 bg-transparent z-10" />
               </div>
             ))}
           </div>
