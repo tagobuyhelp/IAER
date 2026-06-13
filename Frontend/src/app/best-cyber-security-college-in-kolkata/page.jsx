@@ -10,6 +10,7 @@ import {
   Banknote, ClipboardCheck, School, Hotel, Quote, CircleDollarSign, Target, Video, GraduationCap, MapPin, BarChart, Settings, MonitorPlay, ArrowRight, Menu, X, Layers, Search, Terminal, Cloud
 } from 'lucide-react';
 import Link from 'next/link';
+import Marquee from "react-fast-marquee";
 
 export default function CyberSecurityLandingPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -288,6 +289,18 @@ export default function CyberSecurityLandingPage() {
         .animate-hero-marquee:hover {
           animation-play-state: paused;
         }
+        @keyframes topbar-marquee {
+          0% { transform: translateX(100%); }
+          100% { transform: translateX(-100%); }
+        }
+        .animate-topbar-marquee {
+          animation: topbar-marquee 15s linear infinite;
+          display: inline-block;
+          white-space: nowrap;
+        }
+        .animate-topbar-marquee:hover {
+          animation-play-state: paused;
+        }
         .no-scrollbar::-webkit-scrollbar {
           display: none;
         }
@@ -302,15 +315,31 @@ export default function CyberSecurityLandingPage() {
         <div className="pointer-events-none absolute inset-0 opacity-20" aria-hidden="true">
           <div className="absolute -left-10 top-0 h-20 w-40 rounded-full bg-emerald-500 blur-2xl" />
         </div>
-        <div className="relative mx-auto flex max-w-[1550px] items-center justify-between px-4 py-2">
-          <p className="flex items-center gap-2 font-medium min-w-0">
-            <CheckCircle className="h-4 w-4 animate-pulse flex-shrink-0 text-emerald-400" />
-            <span className="truncate">Admissions Open 2026 • MAKAUT Affiliated • AICTE Approved</span>
-          </p>
-          <a href="tel:+916292004641" className="hidden items-center gap-1 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs text-emerald-100 hover:bg-emerald-500/20 md:inline-flex transition-colors">
-            <Phone className="h-4 w-4 text-emerald-400" />
-            <span>6292004641</span>
-          </a>
+        <div className="relative mx-auto flex max-w-[1550px] items-center px-4 py-1.5 overflow-hidden">
+          <div className="flex flex-1 overflow-hidden font-bold text-emerald-400 tracking-wide">
+            <Marquee speed={30} autoFill pauseOnHover>
+              <div className="mx-6 md:mx-12">✦</div>
+              <div className="flex items-center uppercase tracking-widest text-[9px] sm:text-[10px]">
+                Admissions Open 2026
+              </div>
+              <div className="mx-6 md:mx-12 text-primary">✦</div>
+              <div className="flex items-center uppercase tracking-widest text-[9px] sm:text-[10px] text-emerald-100">
+                MAKAUT Affiliated
+              </div>
+              <div className="mx-6 md:mx-12">✦</div>
+              <div className="flex items-center uppercase tracking-widest text-[9px] sm:text-[10px] text-cyan-400">
+                AICTE Approved
+              </div>
+              <div className="mx-6 md:mx-12 text-primary">✦</div>
+              <div className="flex items-center uppercase tracking-widest text-[9px] sm:text-[10px] text-emerald-100">
+                100% Placement Assistance
+              </div>
+              <div className="mx-6 md:mx-12">✦</div>
+              <div className="flex items-center uppercase tracking-widest text-[9px] sm:text-[10px]">
+                Eastern India's Best Cyber Security College
+              </div>
+            </Marquee>
+          </div>
         </div>
       </div>
 
@@ -323,7 +352,7 @@ export default function CyberSecurityLandingPage() {
               <img src="/images/logos/iaer-new-logo-dark-bg-supported.png" alt="IAER Logo" className="h-10 w-auto xl:h-12" />
             </div>
           </div>
-          <nav className="hidden items-center gap-5 text-sm text-slate-300 lg:flex">
+          <nav className="hidden items-center gap-6 lg:gap-8 text-base text-slate-300 lg:flex">
             {[
               { href: '#about', icon: BookOpen, label: 'Overview' },
               { href: '#specializations', icon: Layers, label: 'Specializations' },
@@ -331,18 +360,18 @@ export default function CyberSecurityLandingPage() {
               { href: '#placements', icon: Briefcase, label: 'Placements' },
               { href: '#campus-facilities', icon: Building2, label: 'Campus' },
             ].map((l) => (
-              <a key={l.href} href={l.href} className="group relative flex items-center gap-1 rounded-md px-1.5 py-1 transition-colors duration-200 hover:text-emerald-400">
-                <l.icon className="h-4 w-4" />
-                <span>{l.label}</span>
+              <a key={l.href} href={l.href} className="group relative flex items-center gap-1.5 rounded-md px-1.5 py-1 transition-colors duration-200 hover:text-emerald-400">
+                <l.icon className="h-5 w-5" />
+                <span className="font-semibold">{l.label}</span>
                 <span className="pointer-events-none absolute -bottom-1 left-1.5 right-1.5 h-[2px] origin-left scale-x-0 rounded-full bg-emerald-500 transition-transform duration-200 group-hover:scale-x-100" />
               </a>
             ))}
-            <a href="tel:+916292004641" className="ml-1 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-100 hover:bg-emerald-500/20 transition-colors">
-              <Phone className="h-3.5 w-3.5 text-emerald-400" />
+            <a href="tel:+916292004641" className="ml-2 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-sm font-bold text-emerald-100 hover:bg-emerald-500/20 transition-colors">
+              <Phone className="h-4 w-4 text-emerald-400" />
               <span>6292004641</span>
             </a>
-            <Button onClick={onApplyNow} className="ml-2 rounded-full bg-emerald-500 px-5 py-2 text-sm font-bold text-slate-950 shadow-[0_0_15px_rgba(16,185,129,0.4)] ring-1 ring-emerald-400/50 transition-all hover:-translate-y-0.5 hover:bg-emerald-400 hover:shadow-[0_0_25px_rgba(16,185,129,0.6)] flex items-center">
-              Enquire Now <ArrowRight className="ml-1.5 h-4 w-4" />
+            <Button onClick={onApplyNow} className="ml-3 rounded-full bg-emerald-500 px-6 py-2.5 text-base font-bold text-slate-950 shadow-[0_0_15px_rgba(16,185,129,0.4)] ring-1 ring-emerald-400/50 transition-all hover:-translate-y-0.5 hover:bg-emerald-400 hover:shadow-[0_0_25px_rgba(16,185,129,0.6)] flex items-center">
+              Enquire Now <ArrowRight className="ml-1.5 h-5 w-5" />
             </Button>
           </nav>
 
