@@ -33,8 +33,10 @@ export default function RightFloatingCTA() {
       specificWidgetId = "10d5d69d0bd7a76f17c3173a5d763657";
     } else if (path === "/best-mba-college-in-kolkata" || path === "/best-mha-college-in-kolkata") {
       specificWidgetId = "3958b53341cc9f2a1efd7126074cee70";
-    } else if (path === "/best-bmlt-and-hospital-management-college-in-kolkata" || path === "/best-cyber-security-college-in-kolkata" || path === "/best-data-science-college-in-kolkata") {
+    } else if (path === "/best-bmlt-and-hospital-management-college-in-kolkata" || path === "/best-data-science-college-in-kolkata") {
       specificWidgetId = "5f74e92b4f492e8e612fc2ca21f5bdd0";
+    } else if (path === "/best-cyber-security-college-in-kolkata") {
+      specificWidgetId = "387bb313db2bcf961b9ec24aba3d71af";
     } else if (path === "/best-bba-college-in-kolkata") {
       specificWidgetId = "c4af7a13a0ce4880aa5e45e7e28e4d7e";
     } else if (path === "/best-bba-business-analytics-college-in-kolkata") {
