@@ -297,7 +297,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   '/best-bca-college-in-kolkata',
                   '/best-bba-college-in-kolkata',
                   '/best-bba-business-analytics-college-in-kolkata',
-                  '/best-aviation-and-hospitality-college-in-kolkata'
+                  '/best-aviation-and-hospitality-college-in-kolkata',
+                  '/best-cyber-security-college-in-kolkata',
+                  '/best-data-science-college-in-kolkata'
                 ].map(function(p) { return p.toLowerCase(); });
                 
                 var isLandingPage = landingPages.indexOf(path) !== -1;

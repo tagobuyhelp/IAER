@@ -122,7 +122,7 @@
 
 [id^="popup-in-"] .npfTitle,
 [id^="popup-in-"] [class^="npfTitle"] {
-  width: min(640px, calc(100vw - 32px)) !important;
+  width: min(480px, calc(100vw - 32px)) !important;
   margin: 0 auto !important;
   background: linear-gradient(90deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%) !important;
   color: #fff !important;
@@ -161,7 +161,7 @@
 
 [id^="popup-message-"].npfPopup-message,
 [id^="popup-message-"][class*="npfPopup-message"] {
-  width: min(640px, calc(100vw - 32px)) !important;
+  width: min(480px, calc(100vw - 32px)) !important;
   margin: 0 auto !important;
   background: #fff !important;
   border-radius: 0 0 18px 18px !important;
@@ -179,7 +179,7 @@
 [id^="popup-message-"] .npf_wgts iframe {
   display: block !important;
   width: 100% !important;
-  height: 680px !important;
+  height: 520px !important;
   border: 0 !important;
 }
 

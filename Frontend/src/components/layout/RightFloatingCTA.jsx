@@ -17,7 +17,9 @@ export default function RightFloatingCTA() {
                         pathname === "/best-mba-college-in-kolkata" || 
                         pathname === "/best-mha-college-in-kolkata" || 
                         pathname === "/best-bba-business-analytics-college-in-kolkata" || 
-                        pathname === "/best-bmlt-and-hospital-management-college-in-kolkata";
+                        pathname === "/best-bmlt-and-hospital-management-college-in-kolkata" ||
+                        pathname === "/best-cyber-security-college-in-kolkata" ||
+                        pathname === "/best-data-science-college-in-kolkata";
 
   // Dynamic campaign number: use 6292004641 for landing pages, 8001110000 for standard website
   const phoneNumber = isLandingPage ? "6292004641" : "8001110000";
@@ -31,7 +33,7 @@ export default function RightFloatingCTA() {
       specificWidgetId = "10d5d69d0bd7a76f17c3173a5d763657";
     } else if (path === "/best-mba-college-in-kolkata" || path === "/best-mha-college-in-kolkata") {
       specificWidgetId = "3958b53341cc9f2a1efd7126074cee70";
-    } else if (path === "/best-bmlt-and-hospital-management-college-in-kolkata") {
+    } else if (path === "/best-bmlt-and-hospital-management-college-in-kolkata" || path === "/best-cyber-security-college-in-kolkata" || path === "/best-data-science-college-in-kolkata") {
       specificWidgetId = "5f74e92b4f492e8e612fc2ca21f5bdd0";
     } else if (path === "/best-bba-college-in-kolkata") {
       specificWidgetId = "c4af7a13a0ce4880aa5e45e7e28e4d7e";

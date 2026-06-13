@@ -1,265 +1,244 @@
 
-BMLT & BBA Hospital Management
-Best Healthcare & Hospital Management College in Kolkata
+Best Data Science College in Kolkata with Placement
+Build a Future-Proof Career in Data Science, AI & Analytics at IAER Kolkata
 
-Build a High-Growth Career in Healthcare & Hospital Management
+Looking for B.Sc. Data Science admission in Kolkata? Join IAER—one of the top Data Science colleges in Kolkata offering industry-focused education in Data Science, Artificial Intelligence, Machine Learning, Business Analytics, and Big Data Technologies with strong placement support.
 
-Looking for BMLT course in Kolkata or hospital management course after 12th? 
-Join IAER—one of the top healthcare colleges in Kolkata offering medical lab technology and hospital administration programs with strong placement support.
+Program Highlights
+• Internship from Year 1
+• Industry-Aligned Curriculum
+• 350+ Placement Offers
+• AI, Machine Learning & Data Analytics Training
+• Industry Certifications Included
 
-•	Internship in Hospitals & Diagnostic Labs
-•	Industry-Aligned Healthcare Curriculum
-•	Hands-on Practical Training
-•	Strong Placement Support
+₹4.50+ LPA Average Package | ₹12.00+ LPA Highest Package
 
-₹3.50+ LPA Average Package | ₹8.00+ LPA Highest Package
+Affiliated to:
+MAKAUT
 
-Affiliated to: MAKAUT
-Approved by: AICTE, NSDC
+Approved by:
+AICTE, NSDC
 
-👉 Admissions Open | Limited Seats Available
-[Enquire Now] [Download Brochure] [Talk to Admission Expert]
+Admissions Open Now | Limited Seats Available
+[Apply Now] [Download Brochure] [Talk to Admission Expert]
+________________________________________
+ABOUT IAER B.SC. DATA SCIENCE PROGRAM
 
-ABOUT THE PROGRAMS
+Data is transforming every industry—from healthcare and finance to e-commerce and technology. Organizations today need professionals who can collect, analyze, visualize, and interpret data to drive smarter business decisions.
 
-IAER is among the best healthcare colleges in Kolkata, offering career-focused programs in:
-•	BMLT (Medical Laboratory Technology) 
-•	BBA in Hospital Management 
+IAER's B.Sc. in Data Science is designed to prepare students with strong foundations in analytics, programming, artificial intelligence, machine learning, and business intelligence.
 
 If you're searching for:
-•	paramedical courses in Kolkata 
-•	healthcare management degree Kolkata 
-•	medical lab technology course after 12th 
+• B.Sc. Data Science course in Kolkata
+• Best Data Science college in Kolkata
+• Data Science course after 12th
+• Data Analytics degree in West Bengal
+• AI & Data Science course in Kolkata
 
 IAER provides:
-•	Practical lab-based training 
-•	Hospital internships 
-•	Industry exposure 
+• Industry-integrated curriculum
+• Project-based learning
+• Internship opportunities from early semesters
+• Analytics and AI-focused skill development
+________________________________________
+WHAT YOU WILL LEARN
 
-CHOOSE YOUR PROGRAM
+Programming & Technology
+• Python Programming
+• R Programming
+• SQL & Database Management
+• Data Structures
+• Cloud Computing Fundamentals
 
-A.	BMLT (Bachelor in Medical Laboratory Technology)
+Data Science Core
+• Data Analytics
+• Machine Learning
+• Artificial Intelligence
+• Data Mining
+• Predictive Analytics
+• Big Data Technologies
 
-A leading paramedical course in Kolkata, focused on diagnostics and lab science.
+Visualization & Business Intelligence
+• Power BI
+• Tableau
+• Dashboard Development
+• Data Visualization
 
-What You Will Learn:
-•	Clinical Biochemistry 
-•	Microbiology & Pathology 
-•	Hematology 
-•	Diagnostic Lab Technology 
-
-Career Roles:
-•	Medical Lab Technologist 
-•	Pathology Technician 
-•	Lab Manager 
-•	Diagnostic Specialist 
-
-Explore BMLT →
-
-B.	BBA in Hospital Management
-
-A fast-growing healthcare management course after 12th, focused on hospital operations.
-
-What You Will Learn:
-•	Hospital Operations 
-•	Healthcare Administration 
-•	Medical Ethics & Laws 
-•	Patient Care Management 
-
-Career Roles:
-•	Hospital Administrator 
-•	Healthcare Manager 
-•	Operations Executive 
-•	Clinic Manager 
-
-Explore Hospital Management →
-
-
+Mathematics & Statistics
+• Probability & Statistics
+• Statistical Modeling
+• Quantitative Techniques
+• Data Interpretation
+________________________________________
 WHY IAER
 
-Hospital & Lab Internship Training
-Hands-on training in hospitals, diagnostic labs, and healthcare organizations
+Internship-Driven Curriculum
+Hands-on industry exposure through internships, projects, and practical assignments.
 
 Industry Integration
-Curriculum aligned with healthcare industry requirements
-
-Skill Development
-Communication, patient handling & management skills
+Curriculum aligned with the latest requirements of Data Science, AI, and Analytics industries.
 
 Global Exposure
-International immersion programs (Thailand, Malaysia, Vietnam, UAE)
+International Immersion Programs in Thailand, Malaysia, Vietnam, and UAE.
 
-Career Support
-Placement training & recruiter network
+Skill-Based Training
+Technical expertise combined with communication and presentation skills.
 
+Startup & Innovation Ecosystem
+Mentorship, incubation support, and entrepreneurial guidance.
+________________________________________
 AWARDS & RECOGNITIONS
 
-Recognized among top institutions for healthcare & professional education in India
+Recognized among India's leading institutions for innovation, technology, and data-driven education.
+
 Our Achievements
-
-•	Best Innovative IT College in Eastern India
-(IT Startup Excellence Awards, 2019) 
-
-•	Best Emerging e-Business School of the Year
-(Virtual Education & Technology Awards, 2020) 
-
-•	Best Startup Education College in Eastern India
-(StartUp & VC Award for Excellence, 2021) 
-
-•	Top 10 Best College for Data Science in India
-(Knowledge Review, 2024) 
-
-•	Top 10 Best College for Cyber Security in India
-(Knowledge Review, 2025) 
-
-•	Best Emerging Information Technology Award
-(Edulite Excellence Award, 2024) 
-
-•	Best College for Innovation in Eastern India
-(Edulite Excellence Award, 2025) 
-
-•	Excellence in Information Technology Education
-(Collegedunia, 2024) 
-
-
+• Best Innovative IT College in Eastern India
+• Best Emerging e-Business School of the Year
+• Best Startup Education College in Eastern India
+• Top 10 Best College for Data Science in India
+• Best Emerging Information Technology Award
+• Excellence in Information Technology Education
+________________________________________
 INDUSTRY COLLABORATIONS
+Strong industry connect with:
 
-Strong industry connections with:
-•	CII 
-•	ICC 
-•	BCC&I 
-•	MSME 
-•	NHRD 
+• CII
+• ICC
+• BCC&I
+• MSME
+• NHRD
+• ERSC
 
-Ensuring strong industry alignment and career opportunities
-
+Ensuring industry relevance, networking opportunities, internships, and career support.
+________________________________________
 PLACEMENT HIGHLIGHTS
 
-Launch Your Career in Healthcare with Strong Placement Support
-•	₹3.50+ LPA Average Package 
-•	₹8.00+ LPA Highest Package 
-•	Hospital & Lab Internships 
-•	Placement across healthcare sector 
+Launch Your Career with One of the Best Data Science Colleges in Kolkata
+• ₹4.50+ LPA Average Package
+• ₹12.00+ LPA Highest Package
+• 350+ Placement Offers
+• 600+ Internship Opportunities
 
-Top recruiters include:
-•	Hospitals 
-•	Diagnostic Chains 
-•	Healthcare Companies 
-
-
+Career Opportunities
+• Data Analyst
+• Business Analyst
+• Data Scientist
+• Machine Learning Associate
+• Business Intelligence Analyst
+• Research Analyst
+• AI Associate
+• Data Engineer
+________________________________________
 STUDENT TESTIMONIALS
 
-“The BMLT program gave me hands-on lab training and helped me secure a job in a diagnostic center.”
+"IAER helped me gain practical experience through projects and internships, which helped me secure my first analytics role."
 
-Malay Sarkar
-Medical Lab Technologist
-Apollo Diagnostics 
+Sayan Chatterjee
+Placed at TCS
+________________________________________
+"The Data Science curriculum is highly practical and industry-focused. The Power BI and Python training gave me a strong advantage."
 
+Ananya Ghosh
+Placed at PwC
+________________________________________
+"The internship support and faculty mentorship helped me build confidence in analytics and machine learning."
 
-“The hospital management course helped me understand real hospital operations and patient care systems.”
-
-Arnab Pal
-Hospital Operations Executive
-Ankura Hospitals
-
+Arindam Roy
+Placed at Cognizant
+________________________________________
 INDUSTRY TESTIMONIALS
 
-“IAER students are trained with practical healthcare knowledge and are job-ready.”
-
-Subhasish Bhowmick
-Apollo Diagnostics 
-
-
-“Their hospital management students understand real-world operations effectively.”
+"IAER students possess strong analytical and problem-solving skills that are highly relevant for today's data-driven organizations."
+Geeta Shenoy
+Griffon Aeronautics
 
 
-Dr. Avijit Mondal
-Vivacity Multi Speciality Hospital
+"The curriculum reflects the latest trends in Data Science, Artificial Intelligence, and Business Analytics."
 
+
+Sonia Guha
+PWC
 
 
 CAMPUS & LEARNING EXPERIENCE
 
-Video Link : https://www.youtube.com/watch?v=nH-sSyq_2OM&t=58s
+Watch How IAER Prepares Future Data Scientists
+Video Link
+https://www.youtube.com/watch?v=xXNkDR_XO6s
 
-•	Labs & Infrastructure 
-•	Hospital Training 
-•	Student Life 
-•	Practical Learning 
+• Campus Tour
+• Labs & Infrastructure
+• Student Life
+• Industry Exposure
 
 HOSTEL & CAMPUS FACILITIES
 
 IAER provides safe and comfortable hostel facilities in Kolkata for students.
-•	Separate hostels for boys & girls 
-•	Furnished rooms 
-•	Hygienic food 
-•	24/7 security 
-•	Wi-Fi enabled campus 
+• Separate hostels for boys & girls
+• Furnished rooms
+• Hygienic food
+• 24/7 security
+• Wi-Fi enabled campus
 
 ELIGIBILITY & ADMISSION
 
-Eligibility:
+Eligibility
 10+2 from any recognized board
 
-Admission Process:
-1.	Apply Online 
-2.	Get Offer Letter 
-3.	Pay Enrollment Fee 
-4.	Confirm Admission 
-
+Admission Process
+1.	Apply Online
+2.	Get Offer Letter
+3.	Pay Enrollment Fee
+4.	Confirm Admission
 
 SCHOLARSHIPS & LOANS
 
 No Financial Barrier – Study Now, Pay Later Options Available
-•	Merit-Based Scholarships 
-•	Govt. Schemes 
-•	Student Credit Card Facility 
-•	Education Loan Assistance 
+• Merit-Based Scholarships
+• ICET Scholarships
+• Government Scholarship Schemes
+• Student Credit Card Facility
+• Vidya Lakshmi Education Loan
 
 ⚠️ Limited scholarship seats available
+________________________________________
+FAQ
+Q1. Which is the best Data Science college in Kolkata?
+IAER is among the leading Data Science colleges offering AI, Machine Learning, Analytics, and Business Intelligence training.
 
-❓ FAQ
+Q2. Is Data Science a good career after 12th?
+Yes, Data Science is one of the fastest-growing and highest-paying career domains globally.
 
-Q1. Does IAER provide placement support for BMLT and Hospital Management students?
-Yes, IAER provides structured placement support with internships and recruiter access.
+Q3. What skills will I learn in B.Sc. Data Science?
+Students learn Python, SQL, Power BI, Tableau, Machine Learning, AI, and Data Analytics.
 
-Q2. What are the job opportunities after BMLT?
-Medical Lab Technologist, Pathology Technician, Lab Manager.
+Q4. Does IAER provide internship opportunities?
+Yes, students receive internship opportunities from early semesters to gain practical industry experience.
 
-Q3. What are the career options after Hospital Management?
-Hospital Administrator, Healthcare Manager, Operations Executive.
+Q5. What is the average salary after B.Sc. Data Science?
+The average package is ₹4.50+ LPA, with higher opportunities based on specialization and skills.
 
-Q4. Does IAER help with education loans?
-Yes, IAER assists with loan applications and documentation.
-Q5. Can I apply for Student Credit Card Scheme?
-Yes, eligible students can apply for financial support.
+Q6. What are the career opportunities after B.Sc. Data Science?
+Students can pursue careers as Data Analysts, Business Analysts, Data Scientists, AI Associates, and BI Analysts.
 
-Q6. Does IAER provide hostel facilities?
-Yes, safe and comfortable hostels are available.
+Q7. Does IAER provide placement support?
+Yes, IAER provides structured placement assistance and recruiter access.
 
-Q7. What facilities are included in hostel?
-Food, Wi-Fi, security, furnished rooms.
+Q8. Does IAER provide international exposure?
+Yes, international immersion programs are available for eligible students.
 
-Q8. Does IAER offer international programs?
-Yes, international immersion programs are available.
+Q9. Are scholarships available for Data Science students?
+Yes, multiple scholarship opportunities are available based on eligibility.
 
-Q9. What is the benefit of international exposure?
-Improves global knowledge, confidence, and career opportunities.
+Q10. Does IAER help with education loans?
+Yes, IAER assists students with education loan documentation and processing.
+________________________________________
+FINAL CTA
 
-Q10. Are internships included?
-Yes, practical hospital and lab training is part of the program.
-
-Q11. What is the average salary after these courses?
-₹3.5 LPA average with growth opportunities.
-
-
-Start Your Career in Healthcare & Hospital Management Today
-
+Secure Your Seat in One of the Best Data Science Colleges in Kolkata
 📞 Talk to Experts
 📥 Download Brochure
-📝 Enquire Now
+📝 Apply Now
+👉 Admissions Open | Limited Seats | High-Demand Program
+(Add Address & Google Map Here)
 
-👉 Admissions Open| Limited Seats Available
-
-
-Add Address & Map

@@ -45,6 +45,18 @@ export default function AllLandingPages() {
       path: '/best-bmlt-and-hospital-management-college-in-kolkata',
       description: 'High-conversion landing page for BMLT and Hospital Management programs.',
       color: 'from-emerald-500 to-teal-600',
+    },
+    {
+      title: 'Cyber Security Landing Page',
+      path: '/best-cyber-security-college-in-kolkata',
+      description: 'High-conversion landing page for B.Sc. Cyber Security program.',
+      color: 'from-cyan-500 to-blue-600',
+    },
+    {
+      title: 'Data Science Landing Page',
+      path: '/best-data-science-college-in-kolkata',
+      description: 'High-conversion landing page for B.Sc. Data Science program.',
+      color: 'from-teal-500 to-emerald-600',
     }
   ];
 

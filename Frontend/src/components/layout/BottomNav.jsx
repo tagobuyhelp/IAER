@@ -140,7 +140,9 @@ export default function BottomNav() {
                          pathname === "/best-mba-college-in-kolkata" || 
                          pathname === "/best-mha-college-in-kolkata" || 
                          pathname === "/best-bba-business-analytics-college-in-kolkata" || 
-                         pathname === "/best-bmlt-and-hospital-management-college-in-kolkata";
+                         pathname === "/best-bmlt-and-hospital-management-college-in-kolkata" ||
+                        pathname === "/best-cyber-security-college-in-kolkata" ||
+                        pathname === "/best-data-science-college-in-kolkata";
 
   const sections = getSectionsForPath(pathname);
   const [activeSection, setActiveSection] = useState(

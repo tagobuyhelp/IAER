@@ -43,7 +43,7 @@ export default function Header() {
     }, 100);
   };
 
-  if (pathname?.startsWith("/lp") || pathname === "/thank-you" || pathname === "/best-bba-college-in-kolkata" || pathname === "/best-bca-college-in-kolkata" || pathname === "/best-aviation-and-hospitality-college-in-kolkata" || pathname === "/best-mba-college-in-kolkata" || pathname === "/best-mha-college-in-kolkata" || pathname === "/best-bba-business-analytics-college-in-kolkata" || pathname === "/best-bmlt-and-hospital-management-college-in-kolkata") return null;
+  if (pathname?.startsWith("/lp") || pathname === "/thank-you" || pathname === "/best-bba-college-in-kolkata" || pathname === "/best-bca-college-in-kolkata" || pathname === "/best-aviation-and-hospitality-college-in-kolkata" || pathname === "/best-mba-college-in-kolkata" || pathname === "/best-mha-college-in-kolkata" || pathname === "/best-bba-business-analytics-college-in-kolkata" || pathname === "/best-bmlt-and-hospital-management-college-in-kolkata" || pathname === "/best-cyber-security-college-in-kolkata" || pathname === "/best-data-science-college-in-kolkata") return null;
 
   return (
     <>
