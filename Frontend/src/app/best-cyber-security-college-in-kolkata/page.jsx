@@ -7,7 +7,7 @@ import {
   Globe, Phone, Star, Trophy, Users, Mail,
   Award, TrendingUp, Lightbulb, Building2, Wifi, HeartHandshake,
   ShieldCheck, Rocket, Landmark, CreditCard,
-  Banknote, ClipboardCheck, School, Hotel, Quote, CircleDollarSign, Target, Video, GraduationCap, MapPin, BarChart, Settings, MonitorPlay, ArrowRight, Menu, X, Layers, Search, Terminal, Cloud
+  Banknote, ClipboardCheck, School, Hotel, Quote, CircleDollarSign, Target, Video, GraduationCap, MapPin, BarChart, Settings, MonitorPlay, ArrowRight, Menu, X, Layers, Search, Terminal, Cloud, Clock
 } from 'lucide-react';
 import Link from 'next/link';
 import Marquee from "react-fast-marquee";
@@ -527,6 +527,56 @@ export default function CyberSecurityLandingPage() {
         </div>
       </section>
 
+      {/* --- QUICK FACTS / OVERVIEW --- */}
+      <section id="about" className="relative bg-slate-950 py-6 sm:py-10 border-b border-emerald-500/20">
+        <div className="mx-auto max-w-[1550px] px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
+            <div className="bg-slate-900 border border-emerald-500/20 rounded-2xl p-4 sm:p-5 flex flex-col justify-center shadow-[0_0_15px_rgba(16,185,129,0.05)] hover:border-emerald-500/50 transition-colors group">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="p-2 bg-emerald-500/10 rounded-lg group-hover:bg-emerald-500/20 transition-colors">
+                  <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400" />
+                </div>
+                <h3 className="text-[10px] sm:text-[11px] uppercase tracking-widest font-bold text-slate-400">Duration</h3>
+              </div>
+              <p className="text-sm sm:text-base font-semibold text-emerald-100">4 Years</p>
+              <p className="text-[11px] sm:text-xs text-slate-400 mt-1">Undergraduate Degree</p>
+            </div>
+            
+            <div className="bg-slate-900 border border-emerald-500/20 rounded-2xl p-4 sm:p-5 flex flex-col justify-center shadow-[0_0_15px_rgba(16,185,129,0.05)] hover:border-emerald-500/50 transition-colors group">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="p-2 bg-emerald-500/10 rounded-lg group-hover:bg-emerald-500/20 transition-colors">
+                  <GraduationCap className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400" />
+                </div>
+                <h3 className="text-[10px] sm:text-[11px] uppercase tracking-widest font-bold text-slate-400">Eligibility</h3>
+              </div>
+              <p className="text-sm sm:text-base font-semibold text-emerald-100">10+2 (Any Stream)</p>
+              <p className="text-[11px] sm:text-xs text-slate-400 mt-1">From a recognized board</p>
+            </div>
+
+            <div className="bg-slate-900 border border-emerald-500/20 rounded-2xl p-4 sm:p-5 flex flex-col justify-center shadow-[0_0_15px_rgba(16,185,129,0.05)] hover:border-emerald-500/50 transition-colors group">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="p-2 bg-emerald-500/10 rounded-lg group-hover:bg-emerald-500/20 transition-colors">
+                  <Banknote className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400" />
+                </div>
+                <h3 className="text-[10px] sm:text-[11px] uppercase tracking-widest font-bold text-slate-400">Fees & Scholarship</h3>
+              </div>
+              <p className="text-sm sm:text-base font-semibold text-emerald-100">₹4,12,000</p>
+              <p className="text-[11px] sm:text-xs text-slate-400 mt-1">Up to ₹50,000 Scholarship</p>
+            </div>
+
+            <div className="bg-slate-900 border border-emerald-500/20 rounded-2xl p-4 sm:p-5 flex flex-col justify-center shadow-[0_0_15px_rgba(16,185,129,0.05)] hover:border-emerald-500/50 transition-colors group">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="p-2 bg-emerald-500/10 rounded-lg group-hover:bg-emerald-500/20 transition-colors">
+                  <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400" />
+                </div>
+                <h3 className="text-[10px] sm:text-[11px] uppercase tracking-widest font-bold text-slate-400">Learning Mode</h3>
+              </div>
+              <p className="text-sm sm:text-base font-semibold text-emerald-100">On-Campus</p>
+              <p className="text-[11px] sm:text-xs text-slate-400 mt-1">IAER Kolkata</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* --- PLACEMENTS & TOP RECRUITERS --- */}
       <section id="placements" className="relative border-b border-emerald-500/20 bg-slate-900 overflow-hidden py-8 sm:py-12">
