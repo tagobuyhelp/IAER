@@ -425,30 +425,9 @@ export default function BCALandingPage() {
 
             </div>
 
-            <div className="flex flex-col md:col-span-5 items-center justify-center gap-2 mt-4 md:mt-0">
-              <div className="relative w-full h-[240px] sm:h-[340px] lg:h-[400px] overflow-hidden rounded-2xl shadow-xl border border-white/20 ring-4 ring-white/5">
-                {heroImages.map((src, idx) => (
-                  <img 
-                    key={src}
-                    src={src} 
-                    alt={`Highlight ${idx + 1}`}
-                    className={`absolute inset-0 w-full h-full object-cover object-top transition-all duration-1000 ease-in-out ${idx === heroImgIdx ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0'}`}
-                    onError={(e) => { e.currentTarget.src = '/images/logos/IAER_ICON.jpg'; }}
-                  />
-                ))}
-                
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none z-20" />
-                
-                <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-30">
-                  {heroImages.map((_, idx) => (
-                    <button 
-                      key={idx} 
-                      onClick={() => setHeroImgIdx(idx)}
-                      className={`h-1.5 sm:h-2 rounded-full transition-all duration-300 ${idx === heroImgIdx ? 'w-6 sm:w-8 bg-accent' : 'w-1.5 sm:w-2 bg-white/50 hover:bg-white/80'}`}
-                      aria-label={`Go to slide ${idx + 1}`}
-                    />
-                  ))}
-                </div>
+            <div id="enquiry-form-section" className="flex flex-col md:col-span-5 items-center justify-center gap-4 sm:gap-5 mt-4 md:mt-0 w-full relative z-20">
+              <div className="relative w-full max-w-[400px] mx-auto bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-white/20 p-2 sm:p-3 min-h-[420px] overflow-hidden">
+                <div className="npf_wgts" data-height="420px" data-w="10d5d69d0bd7a76f17c3173a5d763657"></div>
               </div>
 
               {/* Success Stories Marquee */}
@@ -471,11 +450,11 @@ export default function BCALandingPage() {
                         ].map((student, idx) => (
                           <div key={`${i}-${idx}`} className="flex items-center gap-2.5 bg-white/95 backdrop-blur-sm rounded-xl p-2 pr-4 shadow-[0_4px_15px_rgba(0,0,0,0.1)] border border-white/40 min-w-max transition-transform hover:-translate-y-0.5">
                             <img src={`/images/students/${student.pic}`} alt={student.name} className="w-10 h-10 rounded-full object-cover shadow-sm border border-slate-100" onError={(e) => { e.currentTarget.src = '/images/logos/IAER_ICON.jpg'; }} />
-                            <div className="flex flex-col justify-center">
-                              <span className="text-xs font-bold text-slate-800 leading-none mb-1">{student.name}</span>
-                              <div className="flex items-center gap-1.5">
-                                <span className="text-[9px] font-medium text-slate-500 uppercase">Placed at</span>
-                                <img src={`/images/company_logos/${student.company}`} alt="Company" className="h-3.5 object-contain" />
+                            <div className="flex flex-col">
+                              <span className="text-[11px] font-extrabold text-[#143674] whitespace-nowrap">{student.name}</span>
+                              <div className="flex items-center gap-1 mt-0.5">
+                                <span className="text-[9px] text-slate-500 font-medium">Placed at</span>
+                                <img src={`/images/company_logos/${student.company}`} alt="Company Logo" className="h-3.5 w-auto object-contain max-w-[50px] transition-all" onError={(e) => e.currentTarget.style.display='none'} />
                               </div>
                             </div>
                           </div>
