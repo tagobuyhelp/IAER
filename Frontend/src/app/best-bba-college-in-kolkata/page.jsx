@@ -396,9 +396,9 @@ export default function BBALandingPage() {
               </div>
 
               <div className="space-y-2 sm:space-y-3">
-                <h1 className="text-xl sm:text-3xl lg:text-[2.75rem] font-extrabold tracking-tighter text-white drop-shadow-lg leading-tight sm:leading-[1.1]">
+                <h1 className="text-2xl sm:text-3xl lg:text-[2.75rem] font-extrabold tracking-tighter text-white drop-shadow-lg leading-tight sm:leading-[1.1]">
                   Build a Successful Career in <br className="hidden sm:block" />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-teal-300 to-white">Business, Management & Emerging Industries.</span>
+                  <span className="text-[2rem] sm:text-4xl lg:text-[3.5rem] font-black block mt-1.5 sm:mt-2 text-transparent bg-clip-text bg-gradient-to-r from-primary via-teal-300 to-white leading-none py-1">BBA Course</span>
                 </h1>
                 <p className="text-xs sm:text-base lg:text-lg font-medium text-blue-100/90 drop-shadow max-w-full sm:max-w-3xl leading-snug sm:leading-relaxed">
                   Looking for BBA admission in Kolkata? Join IAER—one of the best BBA colleges in Kolkata offering multiple industry-focused specializations with strong placement support.

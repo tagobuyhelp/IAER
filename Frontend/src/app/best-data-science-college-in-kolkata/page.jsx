@@ -424,9 +424,9 @@ export default function DataScienceLandingPage() {
               </div>
 
               <div className="space-y-2 sm:space-y-3">
-                <h1 className="text-xl sm:text-3xl lg:text-[2.75rem] font-extrabold tracking-tighter text-white drop-shadow-lg leading-tight sm:leading-[1.1]">
+                <h1 className="text-2xl sm:text-3xl lg:text-[2.75rem] font-extrabold tracking-tighter text-white drop-shadow-lg leading-tight sm:leading-[1.1]">
                   Master the Future of Tech with <br className="hidden sm:block" />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-fuchsia-400 to-violet-200">Advanced Data Science Training.</span>
+                  <span className="text-[2rem] sm:text-4xl lg:text-[3.5rem] font-black block mt-1.5 sm:mt-2 text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-fuchsia-400 to-violet-200 leading-none py-1">B.Sc. Data Science</span>
                 </h1>
                 <p className="text-xs sm:text-base lg:text-lg font-medium text-slate-300 drop-shadow max-w-full sm:max-w-3xl leading-snug sm:leading-relaxed">
                   Looking for B.Sc. Data Science admission in Kolkata? Join IAER—one of the leading Data Science colleges in Kolkata offering industry-focused education in Data Analytics, Machine Learning, Artificial Intelligence, and Big Data with strong placement support.
@@ -467,7 +467,7 @@ export default function DataScienceLandingPage() {
 
               <div className="mt-3 flex flex-nowrap overflow-x-auto no-scrollbar items-center gap-2 sm:mt-6 sm:gap-3 sm:flex-wrap pb-2 w-[calc(100vw-32px)] sm:w-auto -ml-4 pl-4 sm:ml-0 sm:pl-0 pr-4 sm:pr-0">
                 {[
-                  { label: 'Ethical Hacking & Cyber Defense', icon: ShieldCheck },
+                  { label: 'Machine Learning & AI', icon: Target },
                   { label: 'Internship from Year 1', icon: Briefcase },
                   { label: 'Industry-Aligned Curriculum', icon: BookOpen },
                   { label: 'Industry Certifications Included', icon: Award },

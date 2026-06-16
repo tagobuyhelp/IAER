@@ -369,9 +369,9 @@ export default function MHALandingPage() {
               </div>
 
               <div className="space-y-1 sm:space-y-2">
-                <h1 className="text-xl sm:text-3xl lg:text-[2.75rem] font-extrabold tracking-tighter text-white drop-shadow-lg leading-tight sm:leading-[1.1]">
+                <h1 className="text-2xl sm:text-3xl lg:text-[2.75rem] font-extrabold tracking-tighter text-white drop-shadow-lg leading-tight sm:leading-[1.1]">
                   Build a Career in Healthcare Management with <br className="hidden sm:block" />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-teal-300 to-white">MHA in Kolkata</span>
+                  <span className="text-[2rem] sm:text-4xl lg:text-[3.5rem] font-black block mt-1.5 sm:mt-2 text-transparent bg-clip-text bg-gradient-to-r from-primary via-teal-300 to-white leading-none py-1">MHA Course</span>
                 </h1>
                 <p className="text-[10px] sm:text-base lg:text-lg font-medium text-blue-100/90 drop-shadow max-w-full sm:max-w-3xl leading-tight sm:leading-relaxed">
                   Looking for a Master of Hospital Management course in Kolkata? IAER offers one of the top MHA programs with strong placement support and international opportunities.

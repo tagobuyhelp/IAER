@@ -424,9 +424,9 @@ export default function CyberSecurityLandingPage() {
               </div>
 
               <div className="space-y-2 sm:space-y-3">
-                <h1 className="text-xl sm:text-3xl lg:text-[2.75rem] font-extrabold tracking-tighter text-white drop-shadow-lg leading-tight sm:leading-[1.1]">
+                <h1 className="text-2xl sm:text-3xl lg:text-[2.75rem] font-extrabold tracking-tighter text-white drop-shadow-lg leading-tight sm:leading-[1.1]">
                   Protect the Digital World with <br className="hidden sm:block" />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-emerald-200">Advanced Cyber Security Training.</span>
+                  <span className="text-[2rem] sm:text-4xl lg:text-[3.5rem] font-black block mt-1.5 sm:mt-2 text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-emerald-200 leading-none py-1">B.Sc. Cyber Security</span>
                 </h1>
                 <p className="text-xs sm:text-base lg:text-lg font-medium text-slate-300 drop-shadow max-w-full sm:max-w-3xl leading-snug sm:leading-relaxed">
                   Looking for B.Sc. Cyber Security admission in Kolkata? Join IAER—one of the leading Cyber Security colleges in Kolkata offering industry-focused education in Ethical Hacking, Network Security, Digital Forensics, Cloud Security, and Cyber Defense with strong placement support.
