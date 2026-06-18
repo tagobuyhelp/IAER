@@ -1,12 +1,13 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import { ArrowRight, CheckCircle2, Award, Users, GraduationCap } from "lucide-react";
+import React, { useState, useEffect, useRef } from "react";
+import { ArrowRight, Award, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { handleDownloadBrochure } from "@/lib/download";
 import { cn } from "@/lib/utils";
+import Marquee from "react-fast-marquee";
 
 const students = [
   {
@@ -72,15 +73,15 @@ export default function HeroSection() {
   }, [mobileStudentIndex]);
 
   return (
-    <section className="relative min-h-[520px] sm:min-h-[600px] lg:h-[calc(100vh-190px)] max-h-[900px] flex items-center py-4 sm:py-6 md:py-12 lg:py-16 overflow-hidden bg-[#143674]">
+    <section className="relative min-h-[560px] sm:min-h-[580px] lg:h-[calc(100vh-360px)] max-h-[720px] lg:max-h-[540px] flex flex-col justify-center pt-[140px] sm:pt-[150px] lg:pt-[120px] pb-8 sm:pb-10 lg:pb-12 overflow-hidden bg-[#143674] border-b border-white/10">
       {/* Dynamic Background System */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 pointer-events-none">
         {bgImages.map((img, index) => (
           <div
             key={index}
             className={cn(
               "absolute inset-0 transition-all duration-1000 ease-in-out transform",
-              currentBgIndex === index ? "opacity-40 scale-105" : "opacity-0 scale-100"
+              currentBgIndex === index ? "opacity-30 scale-105" : "opacity-0 scale-100"
             )}
           >
             <Image
@@ -93,99 +94,103 @@ export default function HeroSection() {
             />
           </div>
         ))}
-        {/* Overlays for readability and depth */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#143674] via-[#143674]/80 to-transparent z-[1]" />
+        {/* Overlays for premium blue mode */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#143674] via-[#143674]/95 to-[#143674]/60 z-[1]" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#143674] via-transparent to-transparent z-[1]" />
-        <div className="absolute inset-0 backdrop-blur-[2px] z-[0]" />
+        
+        {/* Glow Effects */}
+        <div className="absolute top-[-10%] left-[-10%] h-[500px] w-[500px] rounded-full bg-blue-400/20 blur-[100px] z-[2]" />
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-8 items-center min-w-0">
+      <div className="container mx-auto px-4 relative z-10 flex-1 flex items-center">
+        <div className="grid lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-8 items-center min-w-0 w-full">
           
           {/* Left Content: Information & CTA */}
           <div className={cn(
-            "lg:col-span-7 space-y-3 sm:space-y-4 md:space-y-6 transition-all duration-1000 min-w-0",
+            "lg:col-span-8 space-y-4 sm:space-y-5 transition-all duration-1000 min-w-0",
             isLoaded ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
           )}>
-            <div className="space-y-2.5 sm:space-y-3 md:space-y-4 text-left">
+            <div className="space-y-3 sm:space-y-4 text-left">
               {/* Animated Badge */}
-              <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-md shadow-2xl">
-                <span className="flex h-1.5 w-1.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-accent"></span>
+              <div className="inline-flex items-center gap-2 rounded-full bg-blue-500/10 backdrop-blur-sm border border-blue-400/30 px-3 py-1.5 shadow-sm">
+                <span className="flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400"></span>
                 </span>
-                <span className="text-[9px] sm:text-[10px] md:text-sm font-bold tracking-wide uppercase text-gray-100">
+                <span className="text-[10px] md:text-xs font-bold tracking-wider uppercase text-green-400">
                   Admissions Open 2026-27
                 </span>
               </div>
 
               {/* Main Heading */}
-              <h1 className="text-[28px] sm:text-5xl lg:text-7xl font-extrabold leading-[1.1] tracking-tight text-white lg:px-0">
-                Empowering the <br className="hidden sm:block" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-orange-400 to-accent animate-gradient-x">
+              <h1 className="text-[32px] sm:text-5xl lg:text-[52px] xl:text-[56px] font-extrabold leading-[1.2] tracking-tight text-white lg:px-0 drop-shadow-lg max-w-5xl">
+                Empowering the{" "}
+                <span className="text-orange-400 animate-gradient-x inline-block">
                   Next Generation
-                </span>
-                <br className="hidden sm:block" /> of Global Leaders
+                </span>{" "}
+                <br className="hidden lg:block xl:hidden" />
+                of Global Leaders
               </h1>
 
               {/* Description */}
-              <p className="text-xs sm:text-sm md:text-xl text-gray-300 max-w-xl lg:mx-0 leading-relaxed font-medium lg:px-0">
+              <p className="text-sm sm:text-base md:text-lg text-blue-100/90 max-w-xl lg:mx-0 leading-relaxed font-medium lg:px-0 drop-shadow">
                 IAER Kolkata provides industry-immersive education that bridges the gap between 
                 academic knowledge and professional excellence.
               </p>
             </div>
 
             {/* Action Buttons */}
-            <div className="flex flex-row items-center justify-start gap-2.5 sm:gap-3 pt-1 sm:pt-2 lg:px-0">
+            <div className="flex flex-row items-center justify-start gap-3 sm:gap-4 pt-2 lg:px-0">
               <Button
                 asChild
                 size="lg"
-                className="flex-1 sm:flex-none h-11 sm:h-12 md:h-14 px-4 sm:px-10 bg-accent hover:bg-accent/90 text-white rounded-full font-bold text-[11px] sm:text-sm md:text-lg shadow-xl shadow-accent/20 transition-all duration-300 hover:-translate-y-1 whitespace-nowrap"
+                className="flex-1 sm:flex-none h-11 sm:h-12 md:h-12 px-6 sm:px-10 bg-accent hover:bg-accent/90 text-white rounded-full font-bold text-xs sm:text-sm shadow-xl shadow-accent/20 transition-all duration-300 hover:-translate-y-0.5 whitespace-nowrap"
               >
                 <Link href="https://admission.iaer.ac.in/">
-                  ENQUIRE NOW <ArrowRight className="ml-2 w-5 h-5" />
+                  ENQUIRE NOW <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </Button>
               <Button
                 variant="outline"
                 size="lg"
                 onClick={handleDownloadBrochure}
-                className="flex-1 sm:flex-none h-11 sm:h-12 md:h-14 px-4 sm:px-10 border-white/20 bg-white/5 hover:bg-white/10 text-white rounded-full font-bold text-[11px] sm:text-sm md:text-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 whitespace-nowrap"
+                className="flex-1 sm:flex-none h-11 sm:h-12 md:h-12 px-6 sm:px-10 border border-blue-300/30 bg-white/5 hover:bg-white/10 text-white rounded-full font-bold text-xs sm:text-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 whitespace-nowrap"
               >
                 BROCHURE
               </Button>
             </div>
 
             {/* Trust Markers */}
-            <div className="flex items-center justify-start gap-5 sm:gap-8 pt-4 sm:pt-6 border-t border-white/10 lg:mx-0">
-              <div className="flex items-center gap-2.5 sm:gap-3">
-                <div className="p-2 sm:p-2.5 rounded-lg bg-white/5 text-accent">
+            <div className="flex items-center justify-start gap-6 sm:gap-8 pt-4 sm:pt-6 border-t border-white/10 lg:mx-0">
+              <div className="flex items-center gap-3">
+                <div className="p-2 sm:p-2.5 rounded-lg bg-blue-500/20 text-accent">
                   <Award className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <div className="flex flex-col">
                   <span className="text-xs sm:text-sm font-bold text-white uppercase tracking-wider">Top Ranked</span>
-                  <span className="text-[10px] sm:text-xs text-gray-400">Educational Institute</span>
+                  <span className="text-[10px] sm:text-xs text-blue-200">Educational Institute</span>
                 </div>
               </div>
-              <div className="flex items-center gap-2.5 sm:gap-3">
-                <div className="p-2 sm:p-2.5 rounded-lg bg-white/5 text-accent">
+              <div className="flex items-center gap-3">
+                <div className="p-2 sm:p-2.5 rounded-lg bg-blue-500/20 text-accent">
                   <Users className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <div className="flex flex-col">
                   <span className="text-xs sm:text-sm font-bold text-white uppercase tracking-wider">100% Placement</span>
-                  <span className="text-[10px] sm:text-xs text-gray-400">Assistance Provided</span>
+                  <span className="text-[10px] sm:text-xs text-blue-200">Assistance Provided</span>
                 </div>
               </div>
             </div>
           </div>
 
+          {/* Mobile Success Stories Carousel */}
           <div className={cn(
             "lg:hidden relative transition-all duration-1000 delay-300 min-w-0 w-full overflow-hidden",
             isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           )}>
-            <div className="flex items-center justify-between mb-2 px-1">
+            <div className="flex items-center justify-between mb-3 px-1">
               <div className="text-white font-bold text-sm">Success Stories</div>
-              <div className="text-gray-400 text-[10px]">Swipe</div>
+              <div className="text-blue-200/70 text-[10px]">Swipe</div>
             </div>
             <div
               ref={mobileCarouselRef}
@@ -197,7 +202,7 @@ export default function HeroSection() {
                   data-mobile-student-index={index}
                   className="snap-center shrink-0 w-[230px]"
                 >
-                  <div className="relative h-[200px] rounded-2xl overflow-hidden bg-white">
+                  <div className="relative h-[200px] rounded-2xl overflow-hidden bg-white/10 border border-white/20 shadow-lg backdrop-blur-sm">
                     <Image
                       src={student.image}
                       alt={student.name}
@@ -205,19 +210,19 @@ export default function HeroSection() {
                       className="object-cover"
                       sizes="230px"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
-                    <div className="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-green-600 text-[8px] font-bold text-white tracking-widest uppercase shadow-lg">
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#143674]/90 via-[#143674]/50 to-transparent" />
+                    <div className="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-accent text-[8px] font-bold text-white tracking-widest uppercase shadow-lg">
                       Success
                     </div>
                     <div className="absolute inset-x-0 bottom-0 p-3">
                       <div className="text-white font-bold text-sm leading-tight">
                         {student.name}
                       </div>
-                      <div className="text-white/80 text-[10px] font-semibold uppercase tracking-wide">
+                      <div className="text-blue-200 text-[10px] font-semibold uppercase tracking-wide">
                         {student.course}
                       </div>
                       <div className="mt-2 flex items-center justify-between gap-3">
-                        <div className="relative h-5 w-14 bg-white/90 rounded px-2 overflow-hidden">
+                        <div className="relative h-5 w-14 bg-white rounded px-1.5 overflow-hidden border border-white/30 shadow-sm">
                           <Image
                             src={student.companyLogo}
                             alt="Company"
@@ -244,26 +249,26 @@ export default function HeroSection() {
                   aria-label={`View success story ${i + 1}`}
                   className={cn(
                     "h-1 rounded-full transition-all duration-300",
-                    mobileStudentIndex === i ? "w-6 bg-accent" : "w-2 bg-white/25"
+                    mobileStudentIndex === i ? "w-6 bg-accent" : "w-2 bg-white/30"
                   )}
                 />
               ))}
             </div>
           </div>
 
-          {/* Right Content: Infographic Placement Card */}
+          {/* Right Content: Desktop Infographic Placement Card */}
           <div className={cn(
-            "hidden lg:flex lg:col-span-5 relative transition-all duration-1000 delay-300 mt-2 lg:mt-0 justify-center lg:justify-end",
+            "hidden lg:flex lg:col-span-4 relative transition-all duration-1000 delay-300 mt-2 lg:mt-0 justify-center lg:justify-end",
             isLoaded ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-95"
           )}>
             {/* Background Glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-accent/20 rounded-full blur-[60px] md:blur-[100px] animate-pulse pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-blue-400/20 rounded-full blur-[80px] animate-pulse pointer-events-none" />
             
-            <div className="relative group w-full max-w-[320px] sm:max-w-sm lg:max-w-[450px]">
+            <div className="relative group w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[340px]">
               {/* Main Card */}
-              <div className="bg-white rounded-[1.25rem] md:rounded-[2rem] shadow-2xl relative overflow-hidden transition-all duration-500 hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] mx-4 lg:mx-0">
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-[1.25rem] md:rounded-[1.5rem] shadow-2xl relative overflow-hidden transition-all duration-500 hover:shadow-[0_20px_60px_-15px_rgba(255,255,255,0.1)] mx-4 lg:mx-0">
                 {/* Content Container with Animation */}
-                <div className="relative h-[320px] sm:h-[380px] md:h-[600px]">
+                <div className="relative h-[320px] sm:h-[360px] md:h-[400px] lg:h-[420px]">
                   {students.map((student, index) => (
                     <div
                       key={index}
@@ -282,30 +287,30 @@ export default function HeroSection() {
                           sizes="(max-width: 768px) 320px, 450px"
                         />
                         {/* Overlay Gradient */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#143674] via-[#143674]/60 to-transparent" />
                         
                         {/* Success Badge */}
-                        <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-green-600 text-[8px] md:text-[10px] font-bold text-white tracking-widest uppercase shadow-lg">
+                        <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-accent text-[8px] md:text-[10px] font-bold text-white tracking-widest uppercase shadow-lg">
                           Success Story
                         </div>
                       </div>
 
                       {/* Info Content */}
-                      <div className="flex-1 p-4 md:p-6 flex flex-col justify-between bg-white">
+                      <div className="flex-1 p-4 md:p-6 flex flex-col justify-between bg-gradient-to-b from-[#143674] to-[#0f2a5a] relative z-10 rounded-t-2xl -mt-4">
                         <div>
-                          <h3 className="text-xl md:text-2xl font-black text-gray-900 leading-tight mb-1">
+                          <h3 className="text-xl md:text-2xl font-black text-white leading-tight mb-1">
                             {student.name}
                           </h3>
-                          <p className="text-[10px] md:text-sm text-gray-500 font-bold uppercase tracking-wider mb-3 md:mb-4">
+                          <p className="text-[10px] md:text-sm text-blue-200 font-bold uppercase tracking-wider mb-3 md:mb-4">
                             {student.course}
                           </p>
                         </div>
                         
                         {/* Placed At & Package Row */}
-                        <div className="flex items-center justify-between gap-4 pt-4 border-t border-gray-100">
+                        <div className="flex items-center justify-between gap-4 pt-4 border-t border-white/10">
                           <div className="flex flex-col gap-1">
-                            <span className="text-[8px] md:text-[9px] uppercase tracking-wider text-gray-400 font-bold">Placed At</span>
-                            <div className="relative h-6 md:h-8 w-16 md:w-24 bg-gray-50 rounded px-2 flex items-center justify-center border border-gray-100 shadow-sm">
+                            <span className="text-[8px] md:text-[9px] uppercase tracking-wider text-blue-200/70 font-bold">Placed At</span>
+                            <div className="relative h-6 md:h-8 w-16 md:w-24 bg-white rounded px-2 flex items-center justify-center border border-white/20 shadow-sm">
                               <Image
                                 src={student.companyLogo}
                                 alt="Company"
@@ -316,7 +321,7 @@ export default function HeroSection() {
                             </div>
                           </div>
                           <div className="text-right flex flex-col gap-0.5">
-                            <span className="text-[8px] md:text-[9px] uppercase tracking-wider text-gray-400 font-bold">Package</span>
+                            <span className="text-[8px] md:text-[9px] uppercase tracking-wider text-blue-200/70 font-bold">Package</span>
                             <span className="text-lg md:text-2xl font-black text-accent leading-none">
                               {student.package}
                             </span>
@@ -328,13 +333,13 @@ export default function HeroSection() {
                 </div>
 
                 {/* Navigation Controls (Bottom Bar) */}
-                <div className="absolute bottom-0 left-0 right-0 h-1 flex">
+                <div className="absolute bottom-0 left-0 right-0 h-1 flex z-20">
                   {students.map((_, i) => (
                     <div
                       key={i}
                       className={cn(
                         "flex-1 h-full transition-all duration-300",
-                        currentStudent === i ? "bg-accent" : "bg-gray-100"
+                        currentStudent === i ? "bg-accent" : "bg-white/20"
                       )}
                     />
                   ))}
@@ -342,9 +347,38 @@ export default function HeroSection() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
 
+      {/* Auto Marquee Scrolling Element Under Hero */}
+      <div className="w-full mt-8 lg:mt-12 bg-white backdrop-blur-md border-t border-white/10 py-3 relative z-20 shadow-sm">
+        <div className="container mx-auto px-4 flex flex-col sm:flex-row items-center gap-4">
+          <div className="flex-shrink-0 text-[10px] sm:text-xs font-bold text-black uppercase tracking-widest whitespace-nowrap hidden md:block">
+            Our Students Work At
+          </div>
+          <div className="flex-1 overflow-hidden mask-image-linear-gradient">
+            <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-8 sm:w-16 bg-gradient-to-r from-[#143674] to-transparent"></div>
+            <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-8 sm:w-16 bg-gradient-to-l from-[#143674] to-transparent"></div>
+            
+            <Marquee speed={40} autoFill pauseOnHover className="flex items-center">
+              {[
+                'Amazon_logo.svg.png', 'Infosys_logo.png', 'Tata_Consultancy_Services_old_logo.svg.png', 
+                'Cognizant_logo.png', 'Tech_Mahindra.png', 'Capgemini.png', 'deloitte.svg', 'Accenture.png'
+              ].map((logo, idx) => (
+                <div key={idx} className="mx-4 sm:mx-8">
+                  <img 
+                    src={`/images/company_logos/${logo}`} 
+                    alt="Company Logo" 
+                    className="h-5 sm:h-7 object-contain  hover:opacity-100 transition-opacity duration-300" 
+                    onError={(e) => { e.currentTarget.style.display = 'none'; }} 
+                  />
+                </div>
+              ))}
+            </Marquee>
+          </div>
         </div>
       </div>
     </section>
   );
 }
+

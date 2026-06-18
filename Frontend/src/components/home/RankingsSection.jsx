@@ -21,7 +21,7 @@ export default function RankingsSection() {
   return (
     <section
       ref={ref}
-      className="py-8 sm:py-11 md:py-16 border-t border-primary/40 text-primary-foreground relative overflow-hidden"
+      className="py-8 sm:py-11 md:py-16 border-y border-gray-100 relative overflow-hidden bg-white"
     >
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
@@ -29,10 +29,10 @@ export default function RankingsSection() {
           src="/images/campus/iaer-campus.png"
           alt="IAER Campus Background"
           fill
-          className="object-cover"
+          className="object-cover opacity-50"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/90 to-primary/90" />
+        <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-white/95 to-white/90" />
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -41,19 +41,19 @@ export default function RankingsSection() {
             inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
-          <span className="inline-flex items-center gap-2 text-xs sm:text-[13px] md:text-[14px] font-semibold tracking-wide text-primary-foreground/80 uppercase">
-            <Award className="w-4 h-4 text-accent" />
+          <span className="inline-flex items-center gap-2 text-xs sm:text-[13px] md:text-[14px] font-bold tracking-wide text-teal-700 uppercase bg-teal-50 px-3 py-1.5 rounded-full border border-teal-100 shadow-sm">
+            <Award className="w-4 h-4 text-teal-500" />
             Rankings &amp; Accreditations
           </span>
-          <h2 className="mt-2 text-[22px] sm:text-[24px] md:text-[32px] lg:text-[36px] font-extrabold text-primary-foreground leading-tight">
+          <h2 className="mt-4 text-[22px] sm:text-[24px] md:text-[32px] lg:text-[36px] font-extrabold text-slate-900 leading-tight">
             Proudly Distinguished
           </h2>
-          <p className="mt-2 text-[13px] sm:text-[14px] md:text-[15px] text-primary-foreground/80">
+          <p className="mt-2 text-[13px] sm:text-[14px] md:text-[15px] text-slate-600 font-medium">
             National recognitions and statutory approvals that validate quality and outcomes.
           </p>
-          <div className="mt-3 flex items-center justify-center md:justify-start gap-2">
-            <div className="h-[2px] w-24 md:w-32 rounded-full bg-gradient-to-r from-accent via-primary to-transparent" />
-            <div className="flex items-center gap-1 text-accent/70">
+          <div className="mt-4 flex items-center justify-center md:justify-start gap-2">
+            <div className="h-[3px] w-24 md:w-32 rounded-full bg-gradient-to-r from-teal-400 via-emerald-400 to-transparent" />
+            <div className="flex items-center gap-1 text-teal-400">
               <Sparkles className="w-3 h-3" />
               <Sparkles className="w-3 h-3 opacity-70" />
               <Sparkles className="w-3 h-3 opacity-50" />
@@ -61,25 +61,30 @@ export default function RankingsSection() {
           </div>
         </div>
 
-        <div className="relative mt-4">
-          <div className="pointer-events-none absolute -top-10 right-[-40px] w-44 h-44 rounded-full bg-accent/10 blur-3xl" />
-          <div className="pointer-events-none absolute -bottom-16 left-[-40px] w-64 h-64 bg-dot-grid opacity-40" />
-          <div className="hidden lg:block pointer-events-none absolute inset-y-6 left-1/2 w-px bg-gradient-to-b from-transparent via-primary/40 to-transparent" />
-          <div className="relative bg-[#0a0601]/80 backdrop-blur-sm border border-primary/40 rounded-2xl sm:rounded-3xl p-3 sm:p-4 md:p-6 shadow-sm">
+        <div className="relative mt-6">
+          <div className="pointer-events-none absolute -top-10 right-[-40px] w-44 h-44 rounded-full bg-teal-100/50 blur-[60px]" />
+          <div className="hidden lg:block pointer-events-none absolute inset-y-6 left-1/2 w-px bg-gradient-to-b from-transparent via-gray-200 to-transparent" />
+          
+          <div className="relative bg-white/60 backdrop-blur-xl border border-gray-100 rounded-[1.5rem] sm:rounded-[2rem] p-4 sm:p-5 md:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 items-stretch">
               <div
-                className="relative rounded-2xl p-4 sm:p-5 md:p-6 transition-all duration-700 ease-out border border-primary/25 shadow-sm hover:-translate-y-[3px] hover:border-accent/40 hover:shadow-xl/10"
+                className="relative rounded-[1.25rem] bg-white p-5 sm:p-6 md:p-8 transition-all duration-700 ease-out border border-gray-100 shadow-sm hover:-translate-y-[4px] hover:border-teal-100 hover:shadow-xl group"
                 style={{
                   opacity: inView ? 1 : 0,
                   transform: inView ? "translateY(0) scale-100" : "translateY(18px) scale-95",
                   transitionDelay: inView ? "80ms" : "0ms",
                 }}
               >
-                <h3 className="text-[14px] sm:text-[16px] md:text-[18px] font-bold text-primary-foreground mb-3 sm:mb-4 flex items-center gap-2">
-                  <Medal className="w-5 h-5 text-accent" />
+                <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-teal-50 to-transparent rounded-tr-[1.25rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                
+                <h3 className="text-[15px] sm:text-[17px] md:text-[19px] font-black text-slate-900 mb-4 sm:mb-5 flex items-center gap-2">
+                  <div className="p-2 rounded-lg bg-teal-50 text-teal-600">
+                    <Medal className="w-5 h-5" />
+                  </div>
                   National &amp; Industry Recognitions
                 </h3>
-                <ul className="space-y-2.5 sm:space-y-3 md:space-y-4">
+                
+                <ul className="space-y-3 sm:space-y-4 relative z-10">
                   {[
                     { year: "2019", label: "IT Startup Excellence Award" },
                     { year: "2020", label: "Virtual Education & Technology Award" },
@@ -87,19 +92,19 @@ export default function RankingsSection() {
                   ].map((item, index) => (
                     <li
                       key={item.year}
-                      className="group flex items-center gap-3 rounded-lg px-2 py-1.5 sm:py-2 -mx-2 transition-colors duration-200 hover:bg-primary/5"
+                      className="group/li flex items-center gap-3 rounded-xl px-3 py-2 -mx-3 transition-colors duration-200 hover:bg-gray-50 border border-transparent hover:border-gray-100"
                       style={{
                         opacity: inView ? 1 : 0,
                         transform: inView ? "translateY(0)" : "translateY(10px)",
                         transitionDelay: inView ? `${140 + index * 80}ms` : "0ms",
                       }}
                     >
-                      <span className="inline-flex items-center justify-center min-w-[64px] sm:min-w-[72px] px-2.5 sm:px-3 py-1 rounded-full bg-primary/5 text-[11px] sm:text-[13px] font-semibold text-white gap-1">
+                      <span className="inline-flex items-center justify-center min-w-[64px] sm:min-w-[76px] px-2.5 sm:px-3 py-1.5 rounded-full bg-teal-50 text-[11px] sm:text-[13px] font-bold text-teal-700 gap-1.5 shadow-sm group-hover/li:bg-teal-500 group-hover/li:text-white transition-colors">
                         <Calendar className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                         {item.year}
                       </span>
-                      <Medal className="w-4 h-4 text-accent/80 flex-shrink-0" />
-                      <span className="text-[12px] sm:text-[14px] text-primary-foreground/80 font-medium leading-snug group-hover:text-primary-foreground">
+                      <Medal className="w-4 h-4 text-teal-400 flex-shrink-0" />
+                      <span className="text-[13px] sm:text-[15px] text-slate-600 font-semibold leading-snug group-hover/li:text-teal-700 transition-colors">
                         {item.label}
                       </span>
                     </li>
@@ -108,23 +113,27 @@ export default function RankingsSection() {
               </div>
 
               <div
-                className="relative rounded-2xl p-4 sm:p-5 md:p-6 transition-all duration-700 ease-out border border-primary/25 shadow-sm flex flex-col justify-between hover:-translate-y-[3px] hover:border-accent/40 hover:shadow-xl/10"
+                className="relative rounded-[1.25rem] bg-white p-5 sm:p-6 md:p-8 transition-all duration-700 ease-out border border-gray-100 shadow-sm flex flex-col justify-between hover:-translate-y-[4px] hover:border-teal-100 hover:shadow-xl group"
                 style={{
                   opacity: inView ? 1 : 0,
                   transform: inView ? "translateY(0) scale-100" : "translateY(18px) scale-95",
                   transitionDelay: inView ? "140ms" : "0ms",
                 }}
               >
-                <div className="pointer-events-none absolute -bottom-10 -left-6 w-32 h-32 rounded-full bg-primary/5 blur-3xl" />
-                <div>
-                  <h3 className="text-[14px] sm:text-[16px] md:text-[18px] font-bold text-primary-foreground mb-3 sm:mb-4 flex items-center gap-2">
-                    <ShieldCheck className="w-5 h-5 text-primary" />
+                <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-teal-50 to-transparent rounded-tr-[1.25rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                
+                <div className="relative z-10">
+                  <h3 className="text-[15px] sm:text-[17px] md:text-[19px] font-black text-slate-900 mb-4 sm:mb-5 flex items-center gap-2">
+                    <div className="p-2 rounded-lg bg-emerald-50 text-emerald-600">
+                      <ShieldCheck className="w-5 h-5" />
+                    </div>
                     Affiliation &amp; Approval
                   </h3>
-                  <div className="space-y-3 sm:space-y-4 grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
-                    <div className="group flex items-center justify-between gap-4">
+                  
+                  <div className="space-y-4 sm:space-y-5 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 mt-2">
+                    <div className="group/aff flex items-center justify-between gap-4 p-3 rounded-xl border border-gray-100 hover:border-emerald-100 hover:bg-emerald-50/30 transition-colors">
                       <div className="flex items-center gap-4">
-                        <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-40 md:h-40 rounded-xl bg-primary/5 border border-primary/20 flex items-center justify-center overflow-hidden p-2 sm:p-3 transition-all duration-200 group-hover:scale-[1.03] group-hover:saturate-125">
+                        <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 rounded-xl bg-white border border-gray-100 flex items-center justify-center overflow-hidden p-2 sm:p-3 transition-all duration-300 shadow-sm group-hover/aff:shadow-md group-hover/aff:scale-105">
                           <img
                             src="/images/affiliations/MAKAUT-aff.png"
                             alt="MAKAUT Affiliation"
@@ -132,16 +141,16 @@ export default function RankingsSection() {
                           />
                         </div>
                         <div className="flex-1">
-                          <div className="text-[13px] sm:text-[15px] font-semibold text-primary-foreground">
+                          <div className="text-[14px] sm:text-[16px] font-black text-slate-900">
                             MAKAUT
                           </div>
-                          <div className="text-[12px] sm:text-[13px] text-primary-foreground/80">
+                          <div className="text-[12px] sm:text-[13px] text-slate-500 font-medium">
                             Affiliation
                           </div>
                         </div>
                       </div>
                       <CheckCircle2
-                        className="w-5 h-5 text-emerald-500 transition-transform duration-200 group-hover:scale-110"
+                        className="w-6 h-6 text-emerald-500 transition-transform duration-300 group-hover/aff:scale-110 drop-shadow-sm"
                         style={{
                           opacity: inView ? 1 : 0,
                           transform: inView ? "scale(1)" : "scale(0.8)",
@@ -149,9 +158,9 @@ export default function RankingsSection() {
                         }}
                       />
                     </div>
-                    <div className="group flex items-center justify-between gap-4">
+                    <div className="group/aff flex items-center justify-between gap-4 p-3 rounded-xl border border-gray-100 hover:border-emerald-100 hover:bg-emerald-50/30 transition-colors">
                       <div className="flex items-center gap-4">
-                        <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-36 md:h-36 rounded-xl bg-accent/10 border border-accent/25 flex items-center justify-center overflow-hidden p-2 sm:p-3 transition-all duration-200 group-hover:scale-[1.03] group-hover:saturate-125">
+                        <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 rounded-xl bg-white border border-gray-100 flex items-center justify-center overflow-hidden p-2 sm:p-3 transition-all duration-300 shadow-sm group-hover/aff:shadow-md group-hover/aff:scale-105">
                           <img
                             src="/images/affiliations/AICTE-aff.png"
                             alt="AICTE Affiliation"
@@ -159,16 +168,16 @@ export default function RankingsSection() {
                           />
                         </div>
                         <div className="flex-1">
-                          <div className="text-[13px] sm:text-[15px] font-semibold text-primary-foreground">
+                          <div className="text-[14px] sm:text-[16px] font-black text-slate-900">
                             AICTE
                           </div>
-                          <div className="text-[12px] sm:text-[13px] text-primary-foreground/80">
+                          <div className="text-[12px] sm:text-[13px] text-slate-500 font-medium">
                             Approval
                           </div>
                         </div>
                       </div>
                       <CheckCircle2
-                        className="w-5 h-5 text-emerald-500 transition-transform duration-200 group-hover:scale-110"
+                        className="w-6 h-6 text-emerald-500 transition-transform duration-300 group-hover/aff:scale-110 drop-shadow-sm"
                         style={{
                           opacity: inView ? 1 : 0,
                           transform: inView ? "scale(1)" : "scale(0.8)",
@@ -181,30 +190,30 @@ export default function RankingsSection() {
               </div>
             </div>
 
-            <div className="mt-4 md:mt-6 flex flex-wrap items-center gap-2.5 sm:gap-3 text-[11px] sm:text-[12px] md:text-[13px] text-primary-foreground/80">
-              <div className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-primary/10 border border-primary/35">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
+            <div className="mt-6 md:mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-[11px] sm:text-[12px] md:text-[13px] text-slate-600 font-semibold">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-gray-200 shadow-sm">
+                <CheckCircle2 className="w-4 h-4 text-emerald-500" />
                 <span>AICTE Approved</span>
               </div>
-              <div className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-primary/10 border border-primary/35">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-gray-200 shadow-sm">
+                <CheckCircle2 className="w-4 h-4 text-emerald-500" />
                 <span>MAKAUT Affiliated</span>
               </div>
-              <div className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-primary/10 border border-primary/35">
-                <Medal className="w-3.5 h-3.5 text-accent" />
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-gray-200 shadow-sm">
+                <Medal className="w-4 h-4 text-teal-500" />
                 <span>Awarded 2019–2021</span>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="mt-6 sm:mt-8 md:mt-10 border-t border-primary/40 pt-4 md:pt-5 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-          <p className="text-[12px] sm:text-[13px] md:text-[14px] text-primary-foreground/80">
+        <div className="mt-8 sm:mt-10 md:mt-12 pt-4 md:pt-5 flex flex-col md:flex-row md:items-center md:justify-center gap-4 text-center">
+          <p className="text-[13px] sm:text-[14px] md:text-[15px] text-slate-600 font-medium">
             Detailed certificates, approvals and statutory documents are available for review.
           </p>
           <Link
             href="/about/awards"
-            className="inline-flex items-center justify-center px-3.5 py-2 text-[12px] sm:text-sm font-semibold rounded-full border border-primary/40 text-primary-foreground hover:bg-primary/25 transition-colors"
+            className="inline-flex items-center justify-center px-5 py-2.5 text-[13px] sm:text-sm font-bold rounded-full bg-teal-50 text-teal-700 hover:bg-teal-600 hover:text-white transition-all duration-300 shadow-sm"
           >
             View approvals &amp; documents
           </Link>

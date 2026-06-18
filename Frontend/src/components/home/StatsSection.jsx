@@ -20,9 +20,9 @@ const stats = [
     suffix: "+",
     label: "Faculty",
     description: "Scholars, trainers & domain specialists.",
-    hoverBorder: "hover:border-blue-500/30",
-    hoverShadow: "hover:shadow-blue-500/10",
-    iconColor: "group-hover:text-blue-600",
+    hoverBorder: "hover:border-teal-300",
+    hoverShadow: "hover:shadow-[0_8px_30px_rgb(20,184,166,0.12)]",
+    iconColor: "group-hover:text-teal-600",
   },
   {
     icon: Building2,
@@ -30,9 +30,9 @@ const stats = [
     suffix: "+",
     label: "Industry Collaborations",
     description: "Hospitals, IT, hotels, aviation & corporates.",
-    hoverBorder: "hover:border-indigo-500/30",
-    hoverShadow: "hover:shadow-indigo-500/10",
-    iconColor: "group-hover:text-indigo-600",
+    hoverBorder: "hover:border-emerald-300",
+    hoverShadow: "hover:shadow-[0_8px_30px_rgb(16,185,129,0.12)]",
+    iconColor: "group-hover:text-emerald-600",
   },
   {
     icon: GraduationCap,
@@ -40,9 +40,9 @@ const stats = [
     suffix: "+",
     label: "Alumni",
     description: "Professionals across industries.",
-    hoverBorder: "hover:border-orange-500/30",
-    hoverShadow: "hover:shadow-orange-500/10",
-    iconColor: "group-hover:text-orange-600",
+    hoverBorder: "hover:border-cyan-300",
+    hoverShadow: "hover:shadow-[0_8px_30px_rgb(6,182,212,0.12)]",
+    iconColor: "group-hover:text-cyan-600",
   },
   {
     icon: School,
@@ -50,9 +50,9 @@ const stats = [
     suffix: "+",
     label: "Centers",
     description: "Skill development & practical learning hubs.",
-    hoverBorder: "hover:border-emerald-500/30",
-    hoverShadow: "hover:shadow-emerald-500/10",
-    iconColor: "group-hover:text-emerald-600",
+    hoverBorder: "hover:border-teal-300",
+    hoverShadow: "hover:shadow-[0_8px_30px_rgb(20,184,166,0.12)]",
+    iconColor: "group-hover:text-teal-600",
   },
   {
     icon: Briefcase,
@@ -60,9 +60,9 @@ const stats = [
     suffix: "+",
     label: "Recruitment Companies",
     description: "Internships, OJT & placements.",
-    hoverBorder: "hover:border-cyan-500/30",
-    hoverShadow: "hover:shadow-cyan-500/10",
-    iconColor: "group-hover:text-cyan-600",
+    hoverBorder: "hover:border-emerald-300",
+    hoverShadow: "hover:shadow-[0_8px_30px_rgb(16,185,129,0.12)]",
+    iconColor: "group-hover:text-emerald-600",
   },
 ];
 
@@ -83,46 +83,47 @@ export default function StatsSection() {
   return (
     <section
       ref={ref}
-      className="py-8 sm:py-11 md:py-16 bg-gradient-to-br from-muted/70 via-muted/60 to-background border-y border-border/40"
+      className="py-8 sm:py-11 md:py-16 bg-gray-50 border-b border-gray-100 relative overflow-hidden"
     >
-      <div className="container  mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="relative">
-          <div className="pointer-events-none absolute -top-10 right-[-40px] w-40 h-40 rounded-full bg-accent/10 blur-3xl" />
-          <div className="pointer-events-none absolute -bottom-16 left-[-40px] w-64 h-64 bg-dot-grid opacity-40" />
+          <div className="pointer-events-none absolute -top-10 right-[-40px] w-64 h-64 rounded-full bg-teal-100/50 blur-[80px]" />
+          <div className="pointer-events-none absolute -bottom-16 left-[-40px] w-64 h-64 bg-emerald-100/50 blur-[80px]" />
+          
           <div className="relative grid gap-8 lg:grid-cols-12 items-start">
             <div
               className={`lg:col-span-4 max-w-xl text-left transition-all duration-700 ease-out ${
                 inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             >
-              <span className="inline-flex items-center gap-2 text-xs sm:text-[13px] md:text-sm font-semibold tracking-wider text-muted-foreground uppercase mb-2">
-                <Award className="w-4 h-4 text-accent" />
+              <span className="inline-flex items-center gap-2 text-xs sm:text-[13px] md:text-sm font-bold tracking-wider text-teal-600 uppercase mb-2">
+                <Award className="w-4 h-4 text-teal-600" />
                 An Illustrious Legacy
               </span>
-              <h2 className="text-[24px] sm:text-[26px] md:text-[36px] lg:text-[50px] font-extrabold text-primary leading-tight">
-                We Continue to Build
+              <h2 className="text-[24px] sm:text-[26px] md:text-[36px] lg:text-[50px] font-extrabold text-slate-900 leading-tight">
+                We Continue <br className="hidden md:block"/> to Build
               </h2>
-              <p className="mt-2 sm:mt-3 text-[13px] sm:text-[14px] md:text-[15px] text-muted-foreground">
+              <p className="mt-2 sm:mt-3 text-[13px] sm:text-[14px] md:text-[15px] text-slate-600 font-medium">
                 Trusted outcomes backed by industry partnerships and accreditation.
               </p>
-              <div className="mt-3 sm:mt-4 flex flex-wrap gap-2">
-                <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-background/70 border border-border/60 text-[11px] sm:text-[12px] md:text-[13px] text-muted-foreground">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
+              <div className="mt-4 sm:mt-5 flex flex-wrap gap-2.5">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-teal-100 text-[11px] sm:text-[12px] md:text-[13px] text-teal-800 shadow-sm">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-teal-500" />
                   <span>Industry-linked</span>
                 </div>
-                <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-background/70 border border-border/60 text-[11px] sm:text-[12px] md:text-[13px] text-muted-foreground">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-teal-100 text-[11px] sm:text-[12px] md:text-[13px] text-teal-800 shadow-sm">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-teal-500" />
                   <span>Accredited</span>
                 </div>
-                <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-background/70 border border-border/60 text-[11px] sm:text-[12px] md:text-[13px] text-muted-foreground">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-teal-100 text-[11px] sm:text-[12px] md:text-[13px] text-teal-800 shadow-sm">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-teal-500" />
                   <span>Career-focused</span>
                 </div>
               </div>
             </div>
 
             <div className="lg:col-span-8">
-              <div className="grid grid-cols-6 md:grid-cols-6 gap-2.5 sm:gap-[12px] md:gap-[18px]">
+              <div className="grid grid-cols-6 md:grid-cols-6 gap-3 sm:gap-4 md:gap-5">
                 {stats.map((stat, index) => {
                   const colSpanClass = index < 3 ? "md:col-span-2 col-span-2" : "md:col-span-3 col-span-3";
                   const delay = index * 100;
@@ -132,26 +133,26 @@ export default function StatsSection() {
                   return (
                     <div
                       key={index}
-                      className={`${colSpanClass} group relative bg-card rounded-[16px] sm:rounded-[18px] border border-border/60 p-3 sm:p-[16px] md:p-[22px] transition-all duration-500 ease-out hover:-translate-y-[3px] md:hover:-translate-y-[4px] hover:shadow-[0_8px_24px_-12px_rgba(15,23,42,0.25)] ${stat.hoverBorder} ${stat.hoverShadow} ${
+                      className={`${colSpanClass} group relative bg-white rounded-[16px] sm:rounded-[18px] border border-gray-100 p-4 sm:p-5 md:p-6 transition-all duration-500 ease-out hover:-translate-y-[4px] shadow-sm ${stat.hoverBorder} ${stat.hoverShadow} ${
                         isActive
-                          ? "border-blue-500/30 ring-1 ring-blue-500/20 bg-blue-50/70 md:-translate-y-[2px]"
+                          ? "border-teal-200 ring-1 ring-teal-100 bg-teal-50/30 md:-translate-y-[2px] shadow-md"
                           : ""
                       }`}
                       style={{
-                        opacity: inView ? 1 : 0,
-                        transform: inView ? "translateY(0)" : "translateY(20px)",
-                        transitionDelay: `${delay}ms`,
+                         opacity: inView ? 1 : 0,
+                         transform: inView ? "translateY(0)" : "translateY(20px)",
+                         transitionDelay: `${delay}ms`,
                       }}
                       role="group"
                       aria-selected={isActive ? true : undefined}
                     >
-                      <div className="flex flex-col h-full justify-between">
-                        <div className="mb-2.5 sm:mb-3 md:mb-4 flex items-start justify-between gap-3">
-                          <div className="flex flex-col gap-2">
-                            <div className="inline-flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-primary/5 text-primary group-hover:rotate-1 transition-transform duration-200">
-                              <stat.icon className="w-4 h-4" />
+                      <div className="flex flex-col h-full justify-between relative z-10">
+                        <div className="mb-3 sm:mb-4 md:mb-5 flex items-start justify-between gap-3">
+                          <div className="flex flex-col gap-2.5">
+                            <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-teal-50 text-teal-600 group-hover:rotate-3 group-hover:scale-110 transition-transform duration-300">
+                              <stat.icon className="w-5 h-5 sm:w-6 sm:h-6" />
                             </div>
-                            <span className="text-[22px] sm:text-[25px] md:text-[30px] lg:text-[40px] font-extrabold leading-none text-foreground tracking-tight tabular-nums">
+                            <span className="text-[24px] sm:text-[28px] md:text-[34px] lg:text-[44px] font-black leading-none text-slate-900 tracking-tight tabular-nums mt-1">
                               {shouldAnimate ? (
                                 <CountUp
                                   start={0}
@@ -168,13 +169,13 @@ export default function StatsSection() {
                         </div>
 
                         <div>
-                          <h3 className="text-[13px] sm:text-[14px] md:text-[16px] font-semibold text-foreground/90 mb-1">
+                          <h3 className="text-[13px] sm:text-[14px] md:text-[16px] font-bold text-slate-800 mb-1">
                             {stat.label}
                           </h3>
-                          <p className="text-[12px] sm:text-[13px] md:text-[14px] text-muted-foreground leading-[1.4] line-clamp-2 md:line-clamp-1">
+                          <p className="text-[11px] sm:text-[12px] md:text-[13px] text-slate-500 leading-[1.5] line-clamp-2 md:line-clamp-1 font-medium">
                             {stat.description}
                           </p>
-                          <div className="mt-3 h-[2px] w-2/3 bg-gradient-to-r from-accent/70 to-transparent rounded-full transition-all duration-300 group-hover:w-full" />
+                          <div className="mt-4 h-[2px] w-1/3 bg-gradient-to-r from-teal-100 to-transparent rounded-full transition-all duration-300 group-hover:w-full group-hover:from-teal-400" />
                         </div>
                       </div>
                     </div>
@@ -182,16 +183,6 @@ export default function StatsSection() {
                 })}
               </div>
 
-              <div
-                className={`mt-4 sm:mt-6 flex justify-center md:justify-end transition-all duration-700 ease-out ${
-                  inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-                }`}
-              >
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-background/80 border border-border/60 shadow-sm text-[11px] sm:text-xs md:text-sm text-muted-foreground">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-500" />
-                  <span>Trusted outcomes backed by industry partnerships and accreditation.</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>

@@ -79,17 +79,14 @@ export default function GlobalExperience() {
   }, []);
 
   return (
-    <section className="py-10 sm:py-14 md:py-20 bg-gradient-to-br from-muted/40 via-background to-background relative overflow-hidden">
-      <div className="pointer-events-none absolute -top-24 -right-16 w-72 h-72 rounded-full bg-primary/10 blur-3xl" />
-      <div className="pointer-events-none absolute bottom-[-80px] left-[-40px] w-80 h-80 bg-dot-grid opacity-20" />
-      <div className="pointer-events-none absolute -top-6 right-[10%] w-24 h-24 opacity-70 hidden md:block">
-        
-      </div>
+    <section className="py-10 sm:py-14 md:py-20 bg-gray-50 border-y border-gray-100 relative overflow-hidden">
+      <div className="pointer-events-none absolute -top-24 -right-16 w-72 h-72 rounded-full bg-teal-100/50 blur-[80px]" />
+      <div className="pointer-events-none absolute bottom-[-80px] left-[-40px] w-80 h-80 bg-emerald-100/40 blur-[80px]" />
 
       <div
         ref={headerRef}
         className={cn(
-          "container mx-auto px-4 mb-6 sm:mb-10 md:mb-12 text-center",
+          "container mx-auto px-4 mb-8 sm:mb-10 md:mb-12 text-center relative z-10",
           reduceMotion
             ? "opacity-100 translate-y-0"
             : headerInView
@@ -97,15 +94,15 @@ export default function GlobalExperience() {
               : "opacity-0 translate-y-4"
         )}
       >
-        <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 text-primary px-2.5 py-0.5 sm:px-3 sm:py-1 text-[10px] sm:text-xs font-semibold mb-3">
-          <Sparkles className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
+        <div className="inline-flex items-center gap-2 rounded-full bg-teal-50 text-teal-700 px-3 py-1.5 sm:px-4 sm:py-2 text-[11px] sm:text-xs font-bold mb-4 shadow-sm border border-teal-100">
+          <Sparkles className="h-4 w-4 sm:h-4 sm:w-4 text-teal-500" />
           <span>Global Exposure, Culture & Opportunities</span>
         </div>
-        <h2 className="text-[24px] sm:text-3xl lg:text-5xl font-bold uppercase tracking-tight mb-3 sm:mb-4">
+        <h2 className="text-[24px] sm:text-3xl lg:text-5xl font-black uppercase tracking-tight mb-3 sm:mb-4 text-slate-900 leading-tight">
           Immerse Yourself in a <br />
-          <span className="text-primary">Global Educational Experience</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-500">Global Educational Experience</span>
         </h2>
-        <p className="text-muted-foreground text-[12px] sm:text-base md:text-lg max-w-2xl mx-auto">
+        <p className="text-slate-600 text-[13px] sm:text-base md:text-lg max-w-2xl mx-auto font-medium">
           Join a vibrant community of learners and innovators from around the world.
         </p>
       </div>
@@ -113,7 +110,7 @@ export default function GlobalExperience() {
       <div
         ref={gridRef}
         className={cn(
-          "container mx-auto px-4",
+          "container mx-auto px-4 relative z-10",
           reduceMotion
             ? "opacity-100 translate-y-0"
             : gridInView
@@ -121,14 +118,14 @@ export default function GlobalExperience() {
               : "opacity-0 translate-y-4"
         )}
       >
-        <div className="flex flex-col lg:flex-row h-[440px] sm:h-[520px] lg:h-[600px] gap-2 lg:gap-4 overflow-hidden rounded-2xl">
+        <div className="flex flex-col lg:flex-row h-[440px] sm:h-[520px] lg:h-[600px] gap-2 lg:gap-4 overflow-hidden rounded-[1.5rem] p-2 bg-white border border-gray-100 shadow-xl">
           {experienceItems.map((item) => (
             <div
               key={item.id}
               className={cn(
                 "relative transition-all duration-500 ease-in-out cursor-pointer overflow-hidden rounded-xl",
-                activeId === item.id ? "lg:flex-[4] flex-[4]" : "lg:flex-1 flex-1 hover:flex-[1.2]",
-                "flex flex-col hover:shadow-lg"
+                activeId === item.id ? "lg:flex-[4] flex-[4] shadow-md" : "lg:flex-1 flex-1 hover:flex-[1.2]",
+                "flex flex-col group"
               )}
               onClick={() => setActiveId(item.id)}
               onMouseEnter={() => setActiveId(item.id)}
@@ -138,41 +135,41 @@ export default function GlobalExperience() {
                   src={item.image}
                   alt={item.title}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                   sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-black/80" />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-slate-900/40 to-slate-900/90" />
 
               <div
                 className={cn(
-                  "absolute inset-0 p-4 sm:p-6 md:p-8 flex flex-col justify-end transition-opacity duration-500",
+                  "absolute inset-0 p-5 sm:p-6 md:p-8 flex flex-col justify-end transition-opacity duration-500",
                   activeId === item.id ? "opacity-100 delay-200" : "opacity-0"
                 )}
               >
-                <div className="bg-primary/10 w-fit p-2 sm:p-3 rounded-lg mb-3 sm:mb-4 backdrop-blur-sm border border-white/10">
-                  <item.icon className="h-5 w-5 sm:h-7 sm:w-7 text-white" aria-hidden="true" />
+                <div className="bg-white/20 w-fit p-3 sm:p-4 rounded-xl mb-4 sm:mb-5 backdrop-blur-md border border-white/30 shadow-sm">
+                  <item.icon className="h-6 w-6 sm:h-8 sm:w-8 text-white drop-shadow-md" aria-hidden="true" />
                 </div>
-                <h3 className="text-lg sm:text-2xl md:text-3xl font-bold text-white mb-3 sm:mb-4">{item.title}</h3>
-                <p className="text-white/90 text-[12px] sm:text-sm md:text-lg mb-4 sm:mb-6 max-w-xl">
+                <h3 className="text-xl sm:text-2xl md:text-4xl font-black text-white mb-3 sm:mb-4 leading-tight drop-shadow-md">{item.title}</h3>
+                <p className="text-white/90 text-[13px] sm:text-[15px] md:text-lg mb-5 sm:mb-8 max-w-xl font-medium leading-relaxed drop-shadow-sm">
                   {item.description}
                 </p>
                 <Button
                   variant="default"
-                  className="w-fit bg-accent hover:bg-accent/90 text-accent-foreground shadow-sm hover:shadow-lg transition-all duration-300 h-10 px-4 text-sm sm:h-11 sm:px-6 sm:text-base"
+                  className="w-fit bg-teal-600 hover:bg-teal-700 text-white shadow-lg shadow-teal-600/20 hover:shadow-xl transition-all duration-300 h-10 px-5 text-sm sm:h-12 sm:px-8 sm:text-[15px] font-bold rounded-full"
                 >
-                  VIEW MORE <ArrowRight className="ml-2 h-4 w-4" />
+                  VIEW MORE <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                 </Button>
               </div>
 
               <div
                 className={cn(
-                  "absolute inset-0 flex items-center justify-center transition-opacity duration-300",
+                  "absolute inset-0 flex items-center justify-center transition-opacity duration-300 bg-slate-900/20 group-hover:bg-transparent",
                   activeId === item.id ? "opacity-0 pointer-events-none" : "opacity-100"
                 )}
               >
                 <div className="lg:-rotate-90 whitespace-nowrap">
-                  <h3 className="text-[12px] sm:text-base md:text-xl font-bold text-gray-300 tracking-wider uppercase">
+                  <h3 className="text-[13px] sm:text-base md:text-xl font-black text-white/90 tracking-widest uppercase drop-shadow-md">
                     {item.title}
                   </h3>
                 </div>

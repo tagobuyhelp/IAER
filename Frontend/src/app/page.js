@@ -2,7 +2,6 @@
 
 import { useEffect, useState, useRef } from "react";
 import HeroSection from "@/components/home/HeroSection";
-import QuickNavStrip from "@/components/home/QuickNavStrip";
 import StatsSection from "@/components/home/StatsSection";
 import ProgramsSection from "@/components/home/ProgramsSection";
 import RankingsSection from "@/components/home/RankingsSection";
@@ -18,7 +17,6 @@ import InternationalImmersion from "@/components/home/InternationalImmersion";
 
 const SECTION_IDS = [
   "hero",
-  "quick-nav",
   "stats",
   "programs",
   "rankings",
@@ -83,9 +81,6 @@ export default function Home() {
     <main className="min-h-screen overflow-hidden">
       <section id="hero" data-section-id="hero">
         <HeroSection />
-      </section>
-      <section id="quick-nav" data-section-id="quick-nav">
-        <QuickNavStrip />
       </section>
       <section id="stats" data-section-id="stats">
         <StatsSection />

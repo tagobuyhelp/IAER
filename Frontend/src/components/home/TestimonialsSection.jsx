@@ -13,7 +13,6 @@ const stories = [
     quote:
       "IAER helped me build strong fundamentals and project skills that translated directly into interviews and internships.",
     image: "/images/students/Prayag-Sarkar.jpg",
-    color: "bg-primary/20 border-primary/40",
     category: "IT",
   },
   {
@@ -23,7 +22,6 @@ const stories = [
     quote:
       "The practical exposure, industry visits, and soft-skill training at IAER made me confident and job-ready.",
     image: "/images/students/Joyce-Prerona-Bose.JPG",
-    color: "bg-accent/20 border-accent/40",
     category: "Hospitality & Aviation",
   },
   {
@@ -33,7 +31,6 @@ const stories = [
     quote:
       "From lab sessions to hands-on training, IAER helped me develop real clinical confidence and discipline.",
     image: "/images/students/Wasim-Akram.jpg",
-    color: "bg-emerald-900/40 border-emerald-400/60",
     category: "Healthcare",
   },
   {
@@ -43,7 +40,6 @@ const stories = [
     quote:
       "The assignments and real projects pushed me to learn beyond the syllabus and build a portfolio I could show employers.",
     image: "/images/students/Surajit-Basak.jpg",
-    color: "bg-primary/20 border-primary/40",
     category: "IT",
   },
   {
@@ -53,7 +49,6 @@ const stories = [
     quote:
       "IAER’s training and industry engagement helped me understand how hospitality works in real settings, not just in classrooms.",
     image: "/images/students/Amanjit-Singn.jpg",
-    color: "bg-accent/20 border-accent/40",
     category: "Hospitality & Aviation",
   },
 ];
@@ -94,7 +89,7 @@ export default function TestimonialsSection() {
         left: nextIndex * (cardWidth + 24),
         behavior: "smooth",
       });
-    }, 3500);
+    }, 4000);
     return () => clearInterval(interval);
   }, [inView, reduceMotion, isPaused, activeIndex, filteredStories.length]);
 
@@ -118,20 +113,20 @@ export default function TestimonialsSection() {
   }, [activeCategory]);
 
   return (
-    <section className="py-12 sm:py-16 md:py-24 text-primary-foreground relative overflow-hidden bg-[#0a0601]">
+    <section className="py-12 sm:py-16 md:py-24 text-slate-900 relative overflow-hidden bg-gray-50 border-y border-gray-100">
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/home/iaer-student-success-stories-header.png"
           alt="IAER Student Success Stories Background"
           fill
-          className="object-cover opacity-20"
+          className="object-cover opacity-[0.03] mix-blend-multiply"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0a0601] via-transparent to-green-950/30" />
+        <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-white/80 to-teal-50/50" />
         {/* Success Glows */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-green-600/10 rounded-full blur-[120px] -mr-64 -mt-64" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[100px] -ml-48 -mb-48" />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-teal-100/50 rounded-full blur-[120px] -mr-64 -mt-64" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-emerald-100/40 rounded-full blur-[100px] -ml-48 -mb-48" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -141,13 +136,13 @@ export default function TestimonialsSection() {
         >
           <div className="relative flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
             <div>
-              <span className="text-green-400 font-bold tracking-wider text-[10px] sm:text-sm uppercase mb-2 block">
+              <span className="text-teal-600 font-bold tracking-wider text-[10px] sm:text-sm uppercase mb-2 block">
                 Student Success Stories
               </span>
-              <h2 className="text-[24px] sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary-foreground">
+              <h2 className="text-[24px] sm:text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 leading-tight">
                 Students Speak
               </h2>
-              <p className="text-[12px] sm:text-sm md:text-base text-primary-foreground/80 mt-2 max-w-xl">
+              <p className="text-[12px] sm:text-sm md:text-base text-slate-600 mt-2 max-w-xl font-medium">
                 Real outcomes from real students across disciplines at IAER.
               </p>
             </div>
@@ -156,18 +151,18 @@ export default function TestimonialsSection() {
                 <button
                   key={key}
                   onClick={() => setActiveCategory(key)}
-                  className={`inline-flex items-center gap-2 px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-full border text-[12px] sm:text-sm transition-all ${
+                  className={`inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full border text-[12px] sm:text-sm font-bold transition-all shadow-sm ${
                     activeCategory === key
-                      ? "bg-primary-foreground text-primary border-primary-foreground"
-                      : "bg-primary/20 text-primary-foreground/80 border-primary/40 hover:bg-primary/30"
+                      ? "bg-teal-600 text-white border-teal-600 shadow-teal-600/20 shadow-md"
+                      : "bg-white text-slate-600 border-gray-200 hover:bg-teal-50 hover:border-teal-200 hover:text-teal-700"
                   }`}
                   aria-pressed={activeCategory === key}
                 >
                   <Icon
                     className={`h-4 w-4 ${
                       activeCategory === key
-                        ? "text-primary"
-                        : "text-primary-foreground/80"
+                        ? "text-white"
+                        : "text-slate-400 group-hover:text-teal-500"
                     }`}
                   />
                   <span>{label}</span>
@@ -178,8 +173,7 @@ export default function TestimonialsSection() {
         </div>
 
         <div className="relative">
-          <div className="pointer-events-none absolute -top-10 right-[-40px] w-56 h-56 rounded-full bg-primary/20 blur-3xl" />
-          <div className="pointer-events-none absolute inset-y-6 left-0 w-40 bg-dot-grid opacity-25" />
+          <div className="pointer-events-none absolute -top-10 right-[-40px] w-56 h-56 rounded-full bg-teal-50/50 blur-[60px]" />
 
           <div
             className="relative"
@@ -190,28 +184,28 @@ export default function TestimonialsSection() {
               <button
                 aria-label="Previous testimonial"
                 onClick={() => scrollBy("prev")}
-                className="inline-flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-primary/40 bg-primary/40 hover:bg-primary/60 transition-colors"
+                className="inline-flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-gray-200 bg-white hover:bg-teal-50 hover:border-teal-200 hover:text-teal-700 text-slate-600 transition-all shadow-sm"
               >
-                <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5 text-primary-foreground" />
+                <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5" />
               </button>
               <button
                 aria-label="Next testimonial"
                 onClick={() => scrollBy("next")}
-                className="inline-flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-primary/40 bg-primary/40 hover:bg-primary/60 transition-colors"
+                className="inline-flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-gray-200 bg-white hover:bg-teal-50 hover:border-teal-200 hover:text-teal-700 text-slate-600 transition-all shadow-sm"
               >
-                <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5 text-primary-foreground" />
+                <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5" />
               </button>
             </div>
 
             <div
               ref={scrollerRef}
-              className="flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2 no-scrollbar"
+              className="flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 pt-2 no-scrollbar px-1 sm:px-2"
             >
               {filteredStories.map((story, index) => (
                 <div
                   key={`${story.name}-${index}`}
                   data-card
-                  className={`relative rounded-[1.5rem] sm:rounded-[2rem] border ${story.color} bg-primary/10 backdrop-blur-md overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl snap-start w-[80%] sm:w-[70%] md:w-[360px] shrink-0 group`}
+                  className={`relative rounded-[1.5rem] sm:rounded-[2rem] border border-gray-100 bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(20,184,166,0.15)] hover:border-teal-100 snap-start w-[85%] sm:w-[70%] md:w-[380px] shrink-0 group flex flex-col`}
                   style={{
                     opacity: inView ? 1 : 0,
                     transform: inView && !reduceMotion ? "translateY(0)" : "translateY(8px)",
@@ -225,45 +219,47 @@ export default function TestimonialsSection() {
                       src={story.image}
                       alt={story.name}
                       fill
-                      className=" transition-transform duration-700 group-hover:scale-110"
-                      sizes="(max-width: 640px) 280px, (max-width: 768px) 320px, 360px"
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      sizes="(max-width: 640px) 280px, (max-width: 768px) 320px, 380px"
                     />
                     {/* Overlays */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/30 to-transparent" />
                     
                     {/* Success Icon Overlay */}
-                    <div className="absolute top-3 right-3 sm:top-4 sm:right-4 p-2 rounded-full bg-green-500/20 backdrop-blur-md border border-green-500/30">
-                      <Quote className="h-4 w-4 sm:h-5 sm:w-5 text-green-400 opacity-90" />
+                    <div className="absolute top-4 right-4 p-2.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 shadow-sm">
+                      <Quote className="h-4 w-4 sm:h-5 sm:w-5 text-white drop-shadow-sm" />
                     </div>
 
                     {/* Student Identity on Image */}
-                    <div className="absolute bottom-3 left-4 right-4 sm:bottom-4 sm:left-6 sm:right-6">
-                      <h3 className="font-black text-lg sm:text-xl text-white leading-tight">
+                    <div className="absolute bottom-4 left-5 right-5 sm:bottom-5 sm:left-6 sm:right-6">
+                      <h3 className="font-black text-lg sm:text-2xl text-white leading-tight mb-0.5">
                         {story.name}
                       </h3>
-                      <p className="text-[12px] sm:text-sm font-bold text-green-400 uppercase tracking-wider">
+                      <p className="text-[11px] sm:text-[13px] font-bold text-teal-300 uppercase tracking-wider">
                         {story.course}
                       </p>
                     </div>
                   </div>
 
                   {/* Content Section */}
-                  <div className="p-4 sm:p-6 md:p-8">
-                    <div className="flex items-center justify-between gap-4 mb-3 sm:mb-4">
-                      <span className="inline-flex items-center gap-2 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-green-600 text-[9px] sm:text-[10px] font-black text-white uppercase tracking-widest shadow-lg">
-                        <Sparkles className="w-3 h-3" />
+                  <div className="p-5 sm:p-6 md:p-8 flex-1 flex flex-col relative bg-white">
+                    <div className="absolute top-0 left-6 right-6 h-[1px] bg-gradient-to-r from-transparent via-teal-100 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    
+                    <div className="flex items-center justify-between gap-4 mb-4 sm:mb-5">
+                      <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 text-[9px] sm:text-[11px] font-black text-teal-700 uppercase tracking-widest shadow-sm border border-teal-100">
+                        <Sparkles className="w-3.5 h-3.5 text-teal-500" />
                         {story.highlight}
                       </span>
                       
                       {/* Rating Stars */}
-                      <div className="flex items-center gap-0.5">
+                      <div className="flex items-center gap-1">
                         {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="w-2.5 h-2.5 sm:w-3 sm:h-3 fill-yellow-400 text-yellow-400" />
+                          <Star key={i} className="w-3 h-3 sm:w-3.5 sm:h-3.5 fill-yellow-400 text-yellow-400" />
                         ))}
                       </div>
                     </div>
 
-                    <p className="text-primary-foreground/90 italic leading-relaxed text-[12px] sm:text-sm md:text-base font-medium">
+                    <p className="text-slate-600 leading-relaxed text-[13px] sm:text-[14px] md:text-[15px] font-medium italic flex-grow">
                       "{story.quote}"
                     </p>
                   </div>

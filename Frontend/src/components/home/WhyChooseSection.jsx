@@ -87,13 +87,13 @@ export default function WhyChooseSection() {
     if (!inView || reduceMotion || isPaused) return;
     const interval = setInterval(() => {
       setActiveId(prev => (prev % features.length) + 1);
-    }, 3500);
+    }, 4000);
     return () => clearInterval(interval);
   }, [inView, reduceMotion, isPaused]);
 
   return (
-    <section className="py-10 sm:py-14 md:py-20 bg-background">
-      <div className="container  mx-auto px-4">
+    <section className="py-10 sm:py-14 md:py-20 bg-gray-50 border-y border-gray-100">
+      <div className="container mx-auto px-4">
         <div
           ref={ref}
           className={cn(
@@ -101,29 +101,29 @@ export default function WhyChooseSection() {
             inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           )}
         >
-          <p className="text-[10px] sm:text-sm font-semibold tracking-[0.18em] uppercase text-primary/80 mb-2">
+          <p className="text-[10px] sm:text-sm font-bold tracking-[0.18em] uppercase text-teal-600 mb-2">
             Why Choose IAER
           </p>
-          <h2 className="text-[24px] sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-foreground">
-            A Career-First Learning Experience
+          <h2 className="text-[24px] sm:text-3xl md:text-4xl lg:text-5xl font-black mb-3 text-slate-900 leading-tight">
+            A Career-First <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-500">Learning Experience</span>
           </h2>
-          <p className="text-[12px] sm:text-sm md:text-base text-muted-foreground max-w-2xl">
+          <p className="text-[12px] sm:text-sm md:text-base text-slate-600 max-w-2xl font-medium">
             From industry-linked curricula to global exposure and lifelong networks, IAER is built to move students from classrooms into high-impact careers.
           </p>
         </div>
 
         <div className="relative">
-          <div className="pointer-events-none absolute inset-y-6 left-0 w-40 bg-dot-grid opacity-30" />
-          <div className="pointer-events-none absolute -top-10 right-[-40px] w-56 h-56 rounded-full bg-primary/5 blur-3xl" />
+          <div className="pointer-events-none absolute -top-10 right-[-40px] w-56 h-56 rounded-full bg-teal-100/50 blur-[80px]" />
+          <div className="pointer-events-none absolute bottom-[-40px] left-[-40px] w-64 h-64 bg-emerald-100/40 blur-[80px]" />
 
           <div
             className="relative flex flex-col lg:flex-row gap-6 sm:gap-10 lg:gap-12"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
-            <div className="lg:w-5/12 relative">
-              <div className="hidden lg:block absolute top-0 bottom-0 left-[20px] w-px bg-gradient-to-b from-transparent via-border/80 to-transparent" />
-              <div className="space-y-2">
+            <div className="lg:w-5/12 relative z-10">
+              <div className="hidden lg:block absolute top-0 bottom-0 left-[20px] w-px bg-gradient-to-b from-transparent via-gray-200 to-transparent" />
+              <div className="space-y-3">
                 {features.map((feature, index) => {
                   const isActive = activeId === feature.id;
                   const shouldAnimate = inView && !reduceMotion;
@@ -132,28 +132,32 @@ export default function WhyChooseSection() {
                     <div
                       key={feature.id}
                       className={cn(
-                        "transition-all duration-300",
-                        isActive ? "pb-4" : "pb-2"
+                        "transition-all duration-300 relative",
+                        isActive ? "pb-2" : "pb-0"
                       )}
                       style={{
                         opacity: inView ? 1 : 0,
                         transform: inView ? "translateY(0)" : "translateY(8px)",
-                        transitionDelay: shouldAnimate ? `${index * 80}ms` : "0ms",
+                        transitionDelay: shouldAnimate ? `${index * 60}ms` : "0ms",
                       }}
                     >
                       <button
                         onClick={() => setActiveId(feature.id)}
                         className={cn(
-                          "w-full flex items-center justify-between px-3 py-3 sm:py-4 rounded-2xl border border-border/70 bg-background/80 hover:bg-muted/60 text-left group focus:outline-none transition-all duration-300",
-                          isActive && "border-primary/40 bg-primary/5 shadow-sm"
+                          "w-full flex items-center justify-between px-3 py-3 sm:py-4 rounded-[1.25rem] border text-left group focus:outline-none transition-all duration-300",
+                          isActive 
+                            ? "border-teal-200 bg-white shadow-md shadow-teal-100/50 scale-[1.02] z-10 relative ring-1 ring-teal-100" 
+                            : "border-gray-100 bg-white/50 hover:bg-white hover:border-teal-100 hover:shadow-sm"
                         )}
                       >
                         <div className="flex items-center gap-3 sm:gap-4">
                           <div className="relative flex items-center">
                             <span
                               className={cn(
-                                "inline-flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-full text-[12px] sm:text-sm font-semibold transition-colors border border-border/70 bg-background",
-                                isActive && "bg-primary text-primary-foreground border-primary/60"
+                                "inline-flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-xl text-[12px] sm:text-sm font-bold transition-colors border shadow-sm",
+                                isActive 
+                                  ? "bg-teal-50 text-teal-600 border-teal-100" 
+                                  : "bg-white text-slate-400 border-gray-100 group-hover:text-teal-500"
                               )}
                             >
                               {String(feature.id).padStart(2, "0")}
@@ -162,43 +166,51 @@ export default function WhyChooseSection() {
                           <div>
                             <h3
                               className={cn(
-                                "text-[13px] sm:text-base md:text-lg font-semibold transition-colors",
+                                "text-[13px] sm:text-base md:text-[17px] font-bold transition-colors leading-tight",
                                 isActive
-                                  ? "text-foreground"
-                                  : "text-muted-foreground group-hover:text-foreground"
+                                  ? "text-slate-900"
+                                  : "text-slate-600 group-hover:text-teal-700"
                               )}
                             >
                               {feature.title}
                             </h3>
                             {feature.id === 1 && (
-                              <p className="hidden md:block text-xs text-muted-foreground/80 mt-1">
+                              <p className={cn(
+                                "hidden md:block text-[11px] mt-1 transition-colors",
+                                isActive ? "text-teal-600/70" : "text-slate-400"
+                              )}>
                                 Select to view details
                               </p>
                             )}
                           </div>
                         </div>
-                        <ChevronRight
-                          className={cn(
-                            "h-4 w-4 sm:h-5 sm:w-5 transition-transform duration-300",
-                            isActive ? "rotate-90 text-primary" : "text-muted-foreground"
-                          )}
-                        />
+                        <div className={cn(
+                          "flex items-center justify-center w-6 h-6 rounded-full transition-colors shrink-0",
+                          isActive ? "bg-teal-50 text-teal-600" : "bg-transparent text-gray-300 group-hover:text-teal-400"
+                        )}>
+                          <ChevronRight
+                            className={cn(
+                              "h-4 w-4 transition-transform duration-300",
+                              isActive ? "rotate-90" : ""
+                            )}
+                          />
+                        </div>
                       </button>
 
                       <div
                         className={cn(
-                          "grid transition-all duration-300 ease-in-out overflow-hidden",
+                          "grid transition-all duration-300 ease-in-out overflow-hidden relative z-0",
                           activeId === feature.id
-                            ? "grid-rows-[1fr] opacity-100"
+                            ? "grid-rows-[1fr] opacity-100 mt-2"
                             : "grid-rows-[0fr] opacity-0"
                         )}
                       >
                         <div className="overflow-hidden">
-                          <div className="pl-3 pr-1 pt-2 lg:hidden">
-                            <p className="text-[12px] sm:text-sm text-muted-foreground leading-relaxed mb-3">
+                          <div className="pl-3 pr-1 pb-2 lg:hidden">
+                            <p className="text-[13px] text-slate-600 font-medium leading-relaxed mb-4">
                               {feature.description}
                             </p>
-                            <div className="relative w-full h-36 sm:h-44 rounded-xl overflow-hidden shadow-sm">
+                            <div className="relative w-full h-40 sm:h-48 rounded-2xl overflow-hidden shadow-md border border-gray-100">
                               <Image
                                 src={feature.image}
                                 alt={feature.title}
@@ -215,39 +227,41 @@ export default function WhyChooseSection() {
               </div>
             </div>
 
-            <div className="hidden lg:block lg:w-7/12 relative">
-              <div className="relative h-full bg-muted/40 rounded-3xl overflow-hidden border border-border/60 shadow-sm">
-                <div className="pointer-events-none absolute -top-10 right-[-40px] w-48 h-48 rounded-full bg-primary/10 blur-3xl" />
-                <div className="pointer-events-none absolute bottom-[-40px] left-[-40px] w-64 h-64 bg-dot-grid opacity-30" />
+            <div className="hidden lg:block lg:w-7/12 relative z-10">
+              <div className="relative h-full bg-white rounded-[2rem] overflow-hidden border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-500 hover:shadow-xl">
                 {activeFeature && (
                   <div
                     key={activeFeature.id}
                     className={cn(
-                      "relative h-full flex flex-col px-8 py-8 transition-all duration-300",
+                      "relative h-full flex flex-col p-8 lg:p-10 transition-all duration-500",
                       inView && "opacity-100"
                     )}
                     style={{
-                      transform:
-                        inView && !reduceMotion ? "translateY(0) scale(1)" : "translateY(8px) scale(0.98)",
+                      transform: inView && !reduceMotion ? "translateY(0) scale(1)" : "translateY(12px) scale(0.98)",
                     }}
                   >
-                    <div className="bg-primary/10 w-14 h-14 rounded-xl flex items-center justify-center mb-5">
-                      <activeFeature.icon className="h-7 w-7 text-primary" />
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-teal-50 to-transparent rounded-tr-[2rem] opacity-50 pointer-events-none" />
+                    
+                    <div className="bg-teal-50 border border-teal-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-sm">
+                      <activeFeature.icon className="h-8 w-8 text-teal-600" />
                     </div>
-                    <h3 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
+                    
+                    <h3 className="text-2xl lg:text-3xl font-black mb-4 text-slate-900 leading-tight">
                       {activeFeature.title}
                     </h3>
-                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-5 flex-grow max-w-xl">
+                    
+                    <p className="text-[15px] lg:text-[17px] text-slate-600 font-medium leading-relaxed mb-8 flex-grow max-w-xl">
                       {activeFeature.description}
                     </p>
-                    <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg mt-auto group">
+                    
+                    <div className="relative w-full h-full rounded-[1.5rem] overflow-hidden shadow-lg mt-auto group border border-gray-100/50">
                       <Image
                         src={activeFeature.image}
                         alt={activeFeature.title}
                         fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-105 h-[580px]"
+                        className="object-cover transition-transform duration-700 group-hover:scale-105 h-[580px]"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/10 to-transparent" />
                     </div>
                   </div>
                 )}
