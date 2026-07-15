@@ -96,9 +96,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           ></iframe>
         </noscript>
 
-        {/* NPF Chatbot Placeholder */}
-
-
         <TopBar />
         <Header />
         <main className="flex-grow">
@@ -284,7 +281,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           `}
         </Script>
 
-        <div className="npf_chatbots" data-w="3c4b3f825de24faa9996d7548d31a0ce" style={{ display: 'none' }}></div>
+        <div className="npf_ai_agents" data-w="53d5d6e091c249ef9e6350e3df299180" style={{ display: 'none' }}></div>
         <Script id="npf-chatbot-loader" strategy="lazyOnload">
           {`
             (function(){
@@ -308,12 +305,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   var s=document.createElement("script"); 
                   s.type="text/javascript"; 
                   s.async=true; 
-                  s.src="https://chatbot.in1.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/655602525fe21a6b/3c4b3f825de24faa9996d7548d31a0ce"; 
+                  s.src="https://vr2z1led1w.in1.agent.nopaperforms.com/en-gb/backend/agents/aiagentscpt.js/655602525fe21a6b/53d5d6e091c249ef9e6350e3df299180"; 
                   document.body.appendChild(s);
                 } else {
                   console.log("[NPF-Chatbot] Chatbot disabled on landing page:", path);
                   try {
-                    var el = document.querySelector('.npf_chatbots');
+                    var el = document.querySelector('.npf_ai_agents');
                     if (el) el.remove();
                   } catch (e) {}
                 }

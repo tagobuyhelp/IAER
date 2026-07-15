@@ -21,6 +21,8 @@ export default function LinkFixer() {
             const selectors = [
                 'div.npf_chatbots a[href^="javascript:"]',
                 'div.npf_chatbots a[href="#"]',
+                'div.npf_ai_agents a[href^="javascript:"]',
+                'div.npf_ai_agents a[href="#"]',
                 'div.default-chatbot-indicator a[href^="javascript:"]',
                 'div.default-chatbot-indicator a[href="#"]',
                 // Generic catch-all for other 3rd party widgets if needed
