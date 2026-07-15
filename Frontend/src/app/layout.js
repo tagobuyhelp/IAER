@@ -285,36 +285,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <Script id="npf-chatbot-loader" strategy="lazyOnload">
           {`
             (function(){
-              if (typeof window !== 'undefined') {
-                var path = window.location.pathname.replace(/\\/$/, '').toLowerCase();
-                var landingPages = [
-                  '/best-mha-college-in-kolkata',
-                  '/best-mba-college-in-kolkata',
-                  '/best-bmlt-and-hospital-management-college-in-kolkata',
-                  '/best-bca-college-in-kolkata',
-                  '/best-bba-college-in-kolkata',
-                  '/best-bba-business-analytics-college-in-kolkata',
-                  '/best-aviation-and-hospitality-college-in-kolkata',
-                  '/best-cyber-security-college-in-kolkata',
-                  '/best-data-science-college-in-kolkata'
-                ].map(function(p) { return p.toLowerCase(); });
-                
-                var isLandingPage = landingPages.indexOf(path) !== -1;
-                
-                if (!isLandingPage) {
-                  var s=document.createElement("script"); 
-                  s.type="text/javascript"; 
-                  s.async=true; 
-                  s.src="https://vr2z1led1w.in1.agent.nopaperforms.com/en-gb/backend/agents/aiagentscpt.js/655602525fe21a6b/53d5d6e091c249ef9e6350e3df299180"; 
-                  document.body.appendChild(s);
-                } else {
-                  console.log("[NPF-Chatbot] Chatbot disabled on landing page:", path);
-                  try {
-                    var el = document.querySelector('.npf_ai_agents');
-                    if (el) el.remove();
-                  } catch (e) {}
-                }
-              }
+              var s=document.createElement("script"); 
+              s.type="text/javascript"; 
+              s.async=true; 
+              s.src="https://vr2z1led1w.in1.agent.nopaperforms.com/en-gb/backend/agents/aiagentscpt.js/655602525fe21a6b/53d5d6e091c249ef9e6350e3df299180"; 
+              document.body.appendChild(s);
             })();
           `}
         </Script>
